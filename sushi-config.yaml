@@ -3,30 +3,30 @@
 
 # Package name
 # https://confluence.hl7.org/display/FHIR/NPM+Package+Specification#NPMPackageSpecification-Packagename
-id: ch.fhir.ig.ch-ig
-canonical: http://fhir.ch/ig/ch-ig
-name: CH_IG
-title: "CH IG (R4)"
-description: Implementation Guide CH IG (R4) for ...
+id: ch.fhir.ig.ch-laboratory-report
+canonical: http://fhir.ch/ig/ch-laboratory-report
+name: CH_LABORATORY_REPORT
+title: "CH Laboratory Report (R4)"
+description: FHIR® Implementation Guide for Laboratory Reports in Switzerland
 status: draft
-license: CC-BY-SA-4.0
-copyright: CC-BY-SA-4.0
+license: CC0-1.0
+copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CHE
-date: 2023-05-11
+date: 2023-06-14
 version: 0.1.0
 fhirVersion: 4.0.1
-copyrightYear: 2021+
+copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
 contact:
-  name: HL7 Switzerland
-  telecom:
-    system: url
-    value: https://www.hl7.ch/
+  - name: HL7 Switzerland
+    telecom:
+      - system: url
+        value: https://www.hl7.ch/
 
 dependencies:
-  ch.fhir.ig.ch-core: 3.0.0
+  ch.fhir.ig.ch-core: current
 
 pages:
   index.md:
@@ -50,8 +50,3 @@ menu:
 # FHIR Tools IG: http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 parameters:
   allow-extensible-warnings: true
-
-resources:
-  CodeSystem/ch-ig-example-translation:
-    name: CH IG Example Translation
-    exampleBoolean: false
