@@ -27,6 +27,8 @@ contact:
 
 dependencies:
   ch.fhir.ig.ch-core: current
+  hl7.fhir.eu.laboratory: current
+#  hl7.fhir.uv.extensions.r4: 1.0.0 # see https://chat.fhir.org/#narrow/stream/215610-shorthand/topic/imposeProfile.20extension
 
 pages:
   index.md:
