@@ -1,14 +1,14 @@
-Profile: CHLaboratoryReportDiagnosticReport
+Profile: DiagnosticReportChLab
 Parent: DiagnosticReport
-Id: ch-laboratory-report-diagnosticreport
-Title: "CH Laboratory Report DiagnosticReport"
-Description: "Profile of the DiagnosticReport resource for the representation of a laboratory report."
-* . ^short = "CH Laboratory Report DiagnosticReport"
+Id: DiagnosticReport-ch-lab
+Title: "DiagnosticReport (CH Lab)"
+Description: "This profile constrains the DiagnosticReport resource to represent laboratory test reports in Switzerland."
+* . ^short = "DiagnosticReport (CH Lab)"
 
-* obeys ch-laboratory-report-dr1
+* obeys ch-lab-dr1
 /*
 * extension contains $imposeProfile named imposeProfile 1..*
 * extension[imposeProfile].valueCanonical = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"
 */
 
-* result only Reference(CHLaboratoryReportObservationResult)
+* result only Reference(ObservationResultsLaboratoryChLab)
