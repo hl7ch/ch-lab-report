@@ -10,3 +10,5 @@ Description: "Profile of the DiagnosticReport resource for the representation of
 * extension contains $imposeProfile named imposeProfile 1..*
 * extension[imposeProfile].valueCanonical = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"
 */
+
+* result only Reference(CHLaboratoryReportObservationResult)
