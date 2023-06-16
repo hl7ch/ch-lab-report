@@ -7,3 +7,4 @@ Description: "This profile constrains the Observation resource to represent resu
 
 * obeys ch-lab-obs1
 
+* subject only Reference(PatientChLab)

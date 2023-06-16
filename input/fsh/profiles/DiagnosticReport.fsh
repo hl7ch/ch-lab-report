@@ -11,4 +11,5 @@ Description: "This profile constrains the DiagnosticReport resource to represent
 * extension[imposeProfile].valueCanonical = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"
 */
 
+* subject only Reference(PatientChLab)
 * result only Reference(ObservationResultsLaboratoryChLab)
