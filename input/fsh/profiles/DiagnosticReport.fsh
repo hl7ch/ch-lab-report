@@ -2,7 +2,7 @@ Profile: CHLaboratoryReportDiagnosticReport
 Parent: DiagnosticReport
 Id: ch-laboratory-report-diagnosticreport
 Title: "CH Laboratory Report DiagnosticReport"
-Description: "TBD"
+Description: "Profile of the DiagnosticReport resource for the representation of a laboratory report."
 * . ^short = "CH Laboratory Report DiagnosticReport"
 
 * obeys ch-laboratory-report-dr1
