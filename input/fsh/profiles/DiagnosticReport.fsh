@@ -1,9 +1,9 @@
-Profile: DiagnosticReportChLab
+Profile: ChLabDiagnosticReport
 Parent: DiagnosticReport
-Id: DiagnosticReport-ch-lab
-Title: "DiagnosticReport (CH Lab)"
-Description: "This profile constrains the DiagnosticReport resource to represent laboratory test reports in Switzerland."
-* . ^short = "DiagnosticReport (CH Lab)"
+Id: ch-lab-diagnosticreport
+Title: "DiagnosticReport: Laboratory Report (CH Lab)"
+Description: "This profile constrains the DiagnosticReport resource for the purpose of laboratory test reports in Switzerland."
+* . ^short = "DiagnosticReport: Laboratory Report (CH Lab)"
 
 * obeys ch-lab-dr1
 /*
@@ -11,5 +11,5 @@ Description: "This profile constrains the DiagnosticReport resource to represent
 * extension[imposeProfile].valueCanonical = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"
 */
 
-* subject only Reference(PatientChLab)
-* result only Reference(ObservationResultsLaboratoryChLab)
+* subject only Reference(ChLabPatient)
+* result only Reference(ChLabObservationResultsLaboratory)

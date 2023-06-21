@@ -1,1 +1,4 @@
 == Suppressed Messages ==
+
+# Caused by the underlying CH Core profile
+The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
