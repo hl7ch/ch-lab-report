@@ -7,3 +7,5 @@ Description: "This profile constrains the PractitionerRole resource for the purp
 
 * obeys ch-lab-pr1
 
+* practitioner only Reference(ChLabPractitioner)
+* organization only Reference($ChCoreOrganization)

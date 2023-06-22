@@ -8,3 +8,4 @@ Description: "This profile constrains the Observation resource for the purpose o
 * obeys ch-lab-obs1
 
 * subject only Reference(ChLabPatient)
+* performer only Reference(ChLabPractitionerRole)
