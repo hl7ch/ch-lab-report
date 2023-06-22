@@ -1,9 +1,9 @@
 Profile: ChLabDocument
 Parent: CHCoreDocument
 Id: ch-lab-document
-Title: "CH Lab Bundle: Laboratory Report"
+Title: "CH Lab Document: Laboratory Report"
 Description: "This profile constrains the Bundle resource for the purpose of laboratory test reports in Switzerland."
-* . ^short = "CH Lab Bundle: Laboratory Report"
+* . ^short = "CH Lab Document: Laboratory Report"
 
 * obeys ch-lab-bdl1
 
