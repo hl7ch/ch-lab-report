@@ -12,20 +12,20 @@ Description: "This profile constrains the Bundle resource for the purpose of lab
 * entry ^slicing.rules = #open
 
 * entry contains
-    composition 1..1 and
-    diagnosticReport 1..1 and
-    patient 1..1 and
-    observation 0..* and
-    specimen 0..* and
-    practitionerRole 0..* and
-    practitioner 0..* and
-    organization 0..*
+    Composition 1..1 and
+    DiagnosticReport 1..1 and
+    Patient 1..1 and
+    Observation 0..* and
+    Specimen 0..* and
+    PractitionerRole 0..* and
+    Practitioner 0..* and
+    Organization 0..*
 
-* entry[composition].resource only ChLabComposition
-* entry[diagnosticReport].resource only ChLabDiagnosticReport
-* entry[patient].resource only ChLabPatient
-* entry[observation].resource only ChLabObservationResultsLaboratory
-* entry[specimen].resource only Specimen
-* entry[practitionerRole].resource only ChLabPractitionerRole
-* entry[practitioner].resource only ChLabPractitioner
-* entry[organization].resource only $ChCoreOrganization
+* entry[Composition].resource only ChLabComposition
+* entry[DiagnosticReport].resource only ChLabDiagnosticReport
+* entry[Patient].resource only ChLabPatient
+* entry[Observation].resource only ChLabObservationResultsLaboratory
+* entry[Specimen].resource only Specimen
+* entry[PractitionerRole].resource only ChLabPractitionerRole
+* entry[Practitioner].resource only ChLabPractitioner
+* entry[Organization].resource only $ChCoreOrganization
