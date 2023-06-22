@@ -7,5 +7,7 @@ Description: "This profile constrains the Composition resource for the purpose o
 
 * obeys ch-lab-bdl1
 
+* type = $sct#4241000179101
+
 * subject only Reference(ChLabPatient)
 * author
