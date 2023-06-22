@@ -1,9 +1,9 @@
 Profile: ChLabPractitionerRole
 Parent: CHCorePractitionerRole
 Id: ch-lab-practitionerrole
-Title: "PractitionerRole (CH Lab)"
+Title: "CH Lab PractitionerRole"
 Description: "This profile constrains the PractitionerRole resource for the purpose of laboratory test reports in Switzerland."
-* . ^short = "PractitionerRole (CH Lab)"
+* . ^short = "CH Lab PractitionerRole"
 
 * obeys ch-lab-pr1
 

@@ -1,9 +1,9 @@
 Profile: ChLabObservationResultsLaboratory
 Parent: Observation
 Id: ch-lab-observation-results-laboratory
-Title: "Observation Results: Laboratory (CH Lab)"
+Title: "CH Lab Observation Results: Laboratory"
 Description: "This profile constrains the Observation resource for the purpose of laboratory test reports in Switzerland."
-* . ^short = "Observation Results: Laboratory (CH Lab)"
+* . ^short = "CH Lab Observation Results: Laboratory"
 
 * obeys ch-lab-obs1
 

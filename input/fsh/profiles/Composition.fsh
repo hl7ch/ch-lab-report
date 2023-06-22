@@ -1,9 +1,9 @@
 Profile: ChLabComposition
 Parent: CHCoreComposition
 Id: ch-lab-composition
-Title: "Composition: Laboratory Report (CH Lab)"
+Title: "CH Lab Composition: Laboratory Report"
 Description: "This profile constrains the Composition resource for the purpose of laboratory test reports in Switzerland."
-* . ^short = "Composition: Laboratory Report (CH Lab)"
+* . ^short = "CH Lab Composition: Laboratory Report"
 
 * obeys ch-lab-bdl1
 
