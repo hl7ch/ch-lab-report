@@ -13,3 +13,4 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 
 * subject only Reference(ChLabPatient)
 * result only Reference(ChLabObservationResultsLaboratory)
+* performer
