@@ -14,13 +14,15 @@ Description: "This profile constrains the Bundle resource for the purpose of lab
 * entry contains
     DiagnosticReport 1..1 and
     Observation 0..* and
-    Specimen 0..* 
+    Specimen 0..* and
+    ServiceRequest 0..*
 
 * entry[Composition].resource only ChLabComposition
 * entry[DiagnosticReport].resource only ChLabDiagnosticReport
 * entry[Patient].resource only ChLabPatient
 * entry[Observation].resource only ChLabObservationResultsLaboratory
 * entry[Specimen].resource only ChLabSpecimen
+* entry[ServiceRequest].resource only ChLabServiceRequest
 * entry[PractitionerRole].resource only ChLabPractitionerRole
 * entry[Practitioner].resource only ChLabPractitioner
 * entry[Organization].resource only $ChCoreOrganization
