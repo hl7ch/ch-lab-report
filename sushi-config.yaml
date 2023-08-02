@@ -54,16 +54,17 @@ pages:
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-# menu:
-#  Home: index.html
-#  Case Studies: #casestudies.html
-#      Case Studies English: casestudies-en.html
-#      Case Studies German: casestudies-ge.html
-#      Case Studies French: casestudies-fr.html
-#  Profiles: profiles.html
-#  Terminology: terminology.html
-#  Artifacts: artifacts.html
-#  Changelog: changelog.html
+menu:
+  Table of contents: toc.html
+  Home: index.html
+  Case Studies: #casestudies.html
+    Case Studies English: casestudies-en.html
+    Case Studies German: casestudies-ge.html
+    Case Studies French: casestudies-fr.html
+  Profiles: profiles.html
+  Terminology: terminology.html
+  Artifacts: artifacts.html
+  Changelog: changelog.html
 # Parameters
 # Core FHIR: http://build.fhir.org/codesystem-guide-parameter-code.html
 # FHIR Tools IG: http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
