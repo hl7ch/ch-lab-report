@@ -19,11 +19,13 @@ copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
+  url: https://www.hl7.ch
 contact:
-  - name: HL7 Switzerland
+  - name: Marcel Hanselmann
     telecom:
-      - system: url
-        value: https://www.hl7.ch/
+      - system: email
+        value: laborprojektgruppe@gmail.com
+        use: work
 
 dependencies:
   ch.fhir.ig.ch-core: current
