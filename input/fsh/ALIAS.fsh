@@ -3,6 +3,9 @@ Alias:   $loinc =                       http://loinc.org
 Alias:   $sct =                         http://snomed.info/sct
 Alias:   $v2-0203                     = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   $v2-0371                     = http://terminology.hl7.org/CodeSystem/v2-0371
+Alias:   $v3-ObservationInterpretation =  http://hl7.org/fhir/ValueSet/observation-interpretation
+Alias:   $referencerange-meaning =      http://hl7.org/fhir/ValueSet/referencerange-meaning
+Alias:   $observation-category =        http://terminology.hl7.org/CodeSystem/observation-category
 
 // External Structure Definitions
 Alias:   $imposeProfile =               http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
