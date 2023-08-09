@@ -1,4 +1,4 @@
-# CH Laboratory Report (R4)
+# CH LAB-Report (R4)
 FHIR® Implementation Guide for Laboratory Reports in Switzerland.
 
 * [CI Build](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/master/index.html)
