@@ -12,8 +12,8 @@ The doctor carries out the Blood count and the CRP determination himself by mean
 The results of the sending-in laboratory arrive electronically at the GP's on the same evening and are also entered in the patient's laboratory sheet. By using the present exchange format, this process can be fully automated. After a telephone enquiry by the doctor at the sending laboratory due to a borderline D-dimer result, the information is given that a deep vein thrombosis cannot be ruled out in this situation by means of D-dimer and the patient is therefore called back the next day for a sonography of the legs.
 
 Matching FHIR questionnaire that meets this specification:
-[1-tvt.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-1-tvt.xml.html)
-[1-tvt.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-1-tvt.json.html)
+[1-tvt.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-1-tvt.xml.html)
+[1-tvt.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-1-tvt.json.html)
 
 As it is probably a primary leg vein thrombosis, Dr Eva Erlenmeier from the Pipette laboratory sends feedback to Dr Mustermann with the recommendation to carry out a thrombophilia screening, which includes the following analyses:
 Quick, aPTT, fibrinogen, antithrombin (funct.), thrombin time I 2.5 NIH/ml, APC resistance, D-dimers, protein C, (aPTT method), protein S antigen.
@@ -26,8 +26,8 @@ He prepares a laboratory order to carry out a pertussis PCR on the child's throa
 The mother arrives at the laboratory with her son, where the doctor's order is first to establish the son's identity. Then a pharyngeal swab and a right cubital venepuncture are taken from the child in the laboratory's Blood collection room and passed on to the laboratory together with the Blood smears and the doctor's examination order.
 
 Matching FHIR questionnaire that meets this specification:
-[2-pertussis.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-2-pertussis.xml.html)
-[2-pertussis.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-2-pertussis.json.html)
+[2-pertussis.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-2-pertussis.xml.html)
+[2-pertussis.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-2-pertussis.json.html)
 
 ### Case study 3: Annual gynaecological check-up
 
@@ -45,8 +45,8 @@ Transmission of the order is triggered by the MPA (collection time)
 * Mammography: Order for the Dr. Curie X-ray Institute.
 
 Matching FHIR questionnaire that meets this specification:
-[3-gyn.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-3-gyn.xml.html)
-[3-gyn.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-3-gyn.json.html)
+[3-gyn.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-3-gyn.xml.html)
+[3-gyn.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-3-gyn.json.html)
 
 ### Case study 4: Suspected sepsis
 
@@ -55,8 +55,8 @@ All five samples are further processed in the external laboratory Pipette. There
 An antibiogram is made of all three pathogens detected in the Blood. This shows that the two active substances "amoxicillin+clavulanic acid" and "ceftriaxone" are effective against all three germs. The microbiologist regularly informs Dr Hans Hauser about the various partial results.
 
 Matching FHIR questionnaire corresponding to this specification:
-[4-sepsis.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-4-sepsis.xml.html)
-[4-sepsis.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-4-sepsis.json.html)
+[4-sepsis.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-4-sepsis.xml.html)
+[4-sepsis.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-4-sepsis.json.html)
 
 <!---
 ##################################################################################
@@ -82,8 +82,8 @@ The companies receive a list from the AMV including labels with the affected emp
 [Biological monitoring SUVA]<https://www.suva.ch/de-CH/material/Factsheets/biologisches-monitoring-und-biologische-arbeitsstofftoleranzwerte>
 
 Matching FHIR questionnaire that corresponds to this specification:
-[5-biol-monit.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-5-biol-monit.xml.html)
-[5-biol-monit.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-5-biol-monit.json.html)
+[5-biol-monit.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-5-biol-monit.xml.html)
+[5-biol-monit.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-5-biol-monit.json.html)
 
 ### Case study 6: Suspected Melanoma, order for histopathology examination
 
@@ -95,8 +95,8 @@ Body Site: Back paralumbar left
 The skin sample, including the order form and the dermatoscopic image are sent to the laboratory.
 
 Matching FHIR questionnaire that corresponds to this specification:
-[6-histopath.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-6-histopath.xml.html)
-[6-histopath.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-6-histopath.json.html)
+[6-histopath.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-6-histopath.xml.html)
+[6-histopath.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-6-histopath.json.html)
 
 ### Case study 7: Laboratory test which need confirmation by a referrel laboratory
 

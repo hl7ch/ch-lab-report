@@ -12,8 +12,8 @@ Le médecin effectue lui-même l'hémogramme et la détermination de la CRP à l
 Les résultats du laboratoire expéditeur arrivent électroniquement chez le médecin généraliste le soir même et sont également inscrits sur la fiche de laboratoire du patient. En utilisant le présent format d'échange, ce processus peut être entièrement automatisé. Après une demande téléphonique du médecin du laboratoire d'envoi en raison d'un résultat limite pour les D-dimères, l'information est donnée qu'une thrombose veineuse profonde ne peut être exclue dans cette situation au moyen des D-dimères et le patient est donc rappelé le lendemain pour qu'une échographie des jambes soit effectuée.
 
 Exemple FHIR correspondant qui répond à cette spécification :
-[1-tvt.xml](https://github.com/hl7ch/ch-laboratory-report/tree/master/input/examples/bundle/1-tvt.xml)
-[1-tvt.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-1-tvt.json.html)
+[1-tvt.xml](https://github.com/hl7ch/ch-lab-report/tree/master/input/examples/bundle/1-tvt.xml)
+[1-tvt.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-1-tvt.json.html)
 
 Comme il s'agit d'une thrombose veineuse primaire de la jambe, le Dr Eva Erlenmeier du laboratoire Pipette envoie un retour d'information au Dr Mustermann, lui recommandant d'effectuer un dépistage de la thrombophilie, qui comprend les analyses suivantes :
 Quick, aPTT, fibrinogène, antithrombine (funct.), temps de thrombine I 2,5 NIH/ml, résistance APC, D-dimères, protéine C, (méthode aPTT), protéine S antigène.
@@ -27,8 +27,8 @@ La mère arrive au laboratoire avec son fils, où l'ordre du médecin est d'abor
 
 Questionnaire FHIR correspondant qui répond à cette spécification :
 
-[2-pertussis.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-2-pertussis.xml.html)
-[2-pertussis.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-2-pertussis.json.html)
+[2-pertussis.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-2-pertussis.xml.html)
+[2-pertussis.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-2-pertussis.json.html)
 
 ### Etude des cas 3: Contrôle annuel gynécologique
 
@@ -46,8 +46,8 @@ La transmission de l'ordonnance est déclenchée par l'AMP (heure de prélèveme
 * Mammographie : Commande pour l'Institut de radiologie Dr Curie.
 
 Questionnaire FHIR correspondant qui répond à cette spécification :
-[3-gyn.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-3-gyn.xml.html)
-[3-gyn.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-3-gyn.json.html)
+[3-gyn.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-3-gyn.xml.html)
+[3-gyn.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-3-gyn.json.html)
 
 ### Etude des cas 4: Septicémie suspectée
 
@@ -56,8 +56,8 @@ Les cinq échantillons sont ensuite traités dans la pipette du laboratoire exte
 Un antibiogramme est réalisé pour les trois pathogènes détectés dans le sang. Celui-ci montre que les deux substances actives "amoxicilline+acide clavulanique" et "ceftriaxone" sont efficaces contre les trois germes. Le microbiologiste informe régulièrement le Dr Hans Hauser des différents résultats partiels.
 
 Questionnaire FHIR correspondant à cette spécification:
-[4-sepsis.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-4-sepsis.xml.html)
-[4-sepsis.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-4-sepsis.json.html)
+[4-sepsis.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-4-sepsis.xml.html)
+[4-sepsis.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-4-sepsis.json.html)
 
 ### Etude des cas 5: Commande collective "Surveillance biologique de la SUVA"
 
@@ -72,8 +72,8 @@ Les entreprises reçoivent de l'AMV une liste comprenant des étiquettes avec le
 [Surveillance biologique SUVA]<https://www.suva.ch/de-CH/material/Factsheets/biologisches-monitoring-und-biologische-arbeitsstofftoleranzwerte>
 
 Questionnaire FHIR correspondant à cette spécification:
-[5-biol-monit.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-5-biol-monit.xml.html)
-[5-biol-monit.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-5-biol-monit.json.html)
+[5-biol-monit.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-5-biol-monit.xml.html)
+[5-biol-monit.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-5-biol-monit.json.html)
 
 ### Étude de cas n° 6 : suspicion de mélanome, demande d'examen histopathologique
 
@@ -82,5 +82,5 @@ Une patiente de 45 ans s'est présentée pour un examen régulier de la peau et 
 L'échantillon de peau, le formulaire de commande et l'image dermatoscopique sont envoyés au laboratoire.
 
 Questionnaire FHIR correspondant à cette spécification:
-[6-histopath-mod.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-6-histopath-mod.xml.html)
-[6-histopath-mod.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-6-histopath-mod.json.html)
+[6-histopath-mod.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-6-histopath-mod.xml.html)
+[6-histopath-mod.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-6-histopath-mod.json.html)

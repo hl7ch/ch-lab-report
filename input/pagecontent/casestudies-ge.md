@@ -12,8 +12,8 @@ Der Arzt führt selber das Blutbild und die CRP-Bestimmung mittels Point of care
 Die Resultate des Einsendelabors treffen am gleichen Abend elektronisch beim Hausarzt ein und werden ebenfalls im Laborblatt des Patienten eingetragen. Durch den Einsatz des vorliegenden Austauschformats kann dieser Prozess vollautomatisch erfolgen. Nach telefonischer Rückfrage des Arztes beim Einsendelabor auf Grund eines grenzwertigen D-Dimer-Befundes erfolgt die Auskunft, dass mittels D-Dimer in dieser Situation eine tiefe Venenthrombose nicht ausgeschlossen werden kann und es erfolgt daher eine telefonische Wiedereinbestellung des Patienten am nächsten Tag zur Durchführung einer Sonographie der Beine.
 
 Dazu passendes FHIR Formular, welches dieser Spezifikation entspricht:
-[1-tvt.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-1-tvt.xml.html)
-[1-tvt.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-1-tvt.json.html)
+[1-tvt.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-1-tvt.xml.html)
+[1-tvt.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-1-tvt.json.html)
 
 Da es sich um eine primäre Beinvenenthrombose handelt, sendet Frau Dr. Eva Erlenmeier vom Labor Pipette ein Feedback an Dr. Mustermann, mit der Empfehlung, ein Thrombophilie-Screening durchzuführen, welches folgende Analysen enthält:
 Quick, aPTT, Fibrinogen, Antithrombin (funkt.), Thrombinzeit I 2.5 NIH/ml, APC Resistenz, D-Dimere, Protein C, (aPTT Methode), Protein S-Antigen
@@ -28,8 +28,8 @@ Er erstellt einen Laborauftrag zur Durchführung einer Pertussis-PCR im Rachenab
 Die Mutter findet sich mit ihrem Sohn im Labor ein, wo auf Grund des Untersuchungsauftrages des Arztes vorerst die Identität des Sohnes festgestellt wird. Anschliessend wird im Blutentnahmeraum des Labors beim Kind ein Rachenabstrich sowie eine Venenpunktion cubital rechts durchgeführt und zusammen mit den mitgebrachten Blutausstrichen und dem Untersuchungsauftrag des Arztes ins Labor weitergegeben.
 
 Dazu passendes FHIR Formular, welches dieser Spezifikation entspricht:
-[2-pertussis.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-2-pertussis.xml.html)
-[2-pertussis.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-2-pertussis.json.html)
+[2-pertussis.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-2-pertussis.xml.html)
+[2-pertussis.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-2-pertussis.json.html)
 
 ### Fallbeispiel 3: Gynäkologische Jahreskontrolle
 
@@ -47,8 +47,8 @@ Die Übermittlung des Auftrags wird durch die MPA ausgelöst (Entnahmezeitpunkt)
 * Mammographie: Auftrag für das Röntgeninstitut Dr. Curie, gemäss CH RAD-Order
 
 Dazu passendes FHIR Formular, welches dieser Spezifikation entspricht:
-[3-gyn.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-3-gyn.xml.html)
-[3-gyn.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-3-gyn.json.html)
+[3-gyn.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-3-gyn.xml.html)
+[3-gyn.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-3-gyn.json.html)
 
 ### Fallbeispiel 4: Verdacht auf eine Sepsis
 
@@ -57,8 +57,8 @@ Alle fünf Proben werden im externen Labor Pipette weiter bearbeitet. Dort werde
 Von allen drei im Blut nachgewiesenen Erreger wird ein Antibiogramm erstellt. Dabei zeigt sich, dass die beiden Wirkstoffe “Amoxicillin+Clavulansäure“ und „Ceftriaxon“ bei allen drei Keimen wirksam sind. Der Mikrobiologe informiert Dr. Hans Hauser regelmässig über die verschiedenen Teilresultate.
 
 Dazu passendes FHIR Formular, welches dieser Spezifikation entspricht:
-[4-sepsis.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-4-sepsis.xml.html)
-[4-sepsis.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-4-sepsis.json.html)
+[4-sepsis.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-4-sepsis.xml.html)
+[4-sepsis.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-4-sepsis.json.html)
 
 ### Fallbeispiel 5: Sammelauftrag „Biologisches Monitoring SUVA“
 
@@ -73,8 +73,8 @@ Die Betriebe erhalten von der AMV eine Liste inkl. Etiketten mit den betroffenen
 [Biologisches Monitoring SUVA](https://www.suva.ch/de-CH/material/Factsheets/biologisches-monitoring-und-biologische-arbeitsstofftoleranzwerte)
 
 Dazu passendes FHIR Formular, welches dieser Spezifikation entspricht:
-[5-biol-monit.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-5-biol-monit.xml.html)
-[5-biol-monit.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-5-biol-monit.json.html)
+[5-biol-monit.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-5-biol-monit.xml.html)
+[5-biol-monit.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-5-biol-monit.json.html)
 
 ### Fallbeispiel 6: Verdacht auf Melanom, Anordnung einer histopathologischen Untersuchung
 
@@ -83,5 +83,5 @@ Eine 45-jährige Patientin kam zu ihrer regelmäßigen Hautuntersuchung und es w
 Die Hautprobe wird zusammen mit dem Auftragsformular und dem dermatoskopischen Bild an das Labor gesandt.
 
 Passende FHIR-Formular, das dieser Spezifikation entspricht:
-[6-histopath-mod.xml](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-6-histopath-mod.xml.html)
-[6-histopath-mod.json](https://fhir.ch/ig/ch-laboratory-report/Questionnaire-6-histopath-mod.json.html)
+[6-histopath-mod.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-6-histopath-mod.xml.html)
+[6-histopath-mod.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-6-histopath-mod.json.html)

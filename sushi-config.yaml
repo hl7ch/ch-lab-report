@@ -3,10 +3,10 @@
 
 # Package name
 # https://confluence.hl7.org/display/FHIR/NPM+Package+Specification#NPMPackageSpecification-Packagename
-id: ch.fhir.ig.ch-laboratory-report
-canonical: http://fhir.ch/ig/ch-laboratory-report
-name: CH_LABORATORY_REPORT
-title: "CH Laboratory Report (R4)"
+id: ch.fhir.ig.ch-lab-report
+canonical: http://fhir.ch/ig/ch-lab-report
+name: CH_LAB_REPORT
+title: "CH LAB-Report (R4)"
 description: FHIR® Implementation Guide for Laboratory Reports in Switzerland
 status: draft
 license: CC0-1.0
