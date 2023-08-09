@@ -3,10 +3,10 @@
 
 # Package name
 # https://confluence.hl7.org/display/FHIR/NPM+Package+Specification#NPMPackageSpecification-Packagename
-id: ch.fhir.ig.ch-laboratory-report
-canonical: http://fhir.ch/ig/ch-laboratory-report
-name: CH_LABORATORY_REPORT
-title: "CH Laboratory Report (R4)"
+id: ch.fhir.ig.ch-lab-report
+canonical: http://fhir.ch/ig/ch-lab-report
+name: CH_LAB_REPORT
+title: "CH LAB-Report (R4)"
 description: FHIR® Implementation Guide for Laboratory Reports in Switzerland
 status: draft
 license: CC0-1.0
@@ -19,11 +19,13 @@ copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
+  url: https://www.hl7.ch
 contact:
-  - name: HL7 Switzerland
+  - name: Marcel Hanselmann
     telecom:
-      - system: url
-        value: https://www.hl7.ch/
+      - system: email
+        value: laborprojektgruppe@gmail.com
+        use: work
 
 dependencies:
   ch.fhir.ig.ch-core: current
@@ -33,20 +35,36 @@ dependencies:
 pages:
   index.md:
     title: Home
+  casestudies.md:
+    casestudies-en.md:
+      title: Case Studies in English
+    casestudies-ge.md:
+      title: Case Studies in German
+    casestudies-fr.md:
+      title: Case Studies in French
   profiles.md:
     title: Profiles
   extensions.md:
     title: Extensions
   terminology.md:
     title: Terminology
+  changelog.md:
+    title: Changelog
 
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
+  Table of contents: toc.html
   Home: index.html
+  Case Studies: #casestudies.html
+    Case Studies English: casestudies-en.html
+    Case Studies German: casestudies-ge.html
+    Case Studies French: casestudies-fr.html
   Profiles: profiles.html
-  Extensions: extensions.html
   Terminology: terminology.html
   Artifacts: artifacts.html
-
+  Changelog: changelog.html
 # Parameters
 # Core FHIR: http://build.fhir.org/codesystem-guide-parameter-code.html
 # FHIR Tools IG: http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
