@@ -1,6 +1,7 @@
 // External Code Systems
 Alias:   $loinc =                       http://loinc.org
 Alias:   $sct =                         http://snomed.info/sct
+Alias:   $v2-0074 =                     http://terminology.hl7.org/CodeSystem/v2-0074
 Alias:   $v2-0203                     = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias:   $v2-0371                     = http://terminology.hl7.org/CodeSystem/v2-0371
 Alias:   $v3-ObservationInterpretation =  http://hl7.org/fhir/ValueSet/observation-interpretation
