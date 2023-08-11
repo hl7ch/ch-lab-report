@@ -10,7 +10,6 @@ Usage: #example
 * category[0] = $observation-category#laboratory
 * category[+] = $v2-0074#HM "Hematology"
 * code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
-//* code.coding[+] = urn:oid:1.2.203.24341.11.2.2#2504 "Na (S; látková konc. [mmol/l] spektrofotometrie-FAES)"
 * code.text = "Hematocrit (Bld) [Volume fraction]" // display text
 * subject = Reference(HansGuggindieluft)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
