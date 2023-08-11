@@ -9,6 +9,7 @@ Usage: #example
 * status = #final
 * category[0] = $observation-category#laboratory
 * category[+] = $v2-0074#HM "Hematology"
+* category[+] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
 * code.text = "Hematocrit (Bld) [Volume fraction]" // display text
 * subject = Reference(HansGuggindieluft)

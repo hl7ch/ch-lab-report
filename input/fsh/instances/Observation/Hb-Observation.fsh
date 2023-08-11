@@ -9,6 +9,7 @@ Usage: #example
 * status = #final
 * category[0] = $observation-category#laboratory
 * category[+] = $v2-0074#HM "Hematology"
+* category[+] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
 * subject = Reference(HansGuggindieluft)

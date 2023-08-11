@@ -16,7 +16,7 @@ Usage: #example
 * accessionIdentifier.value = "4e88a-66666-dd888"
 * status = #available
 * type = $sct#119297000 "Blood sample"
-* subject = Reference(Patient/HansGuggindieluft)
+* subject = Reference(HansGuggindieluft)
 * receivedTime = "2020-08-16T16:40:17Z"
 // * request = Reference(Lab) Why the specimen was collected
 * collection.collector = Reference(Practitioner/MarcMustermann)
@@ -35,7 +35,7 @@ Description: "Example for Specimen for Haematological Examination"
 Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood sample"
-* subject = Reference(Patient/HansGuggindieluft)
+* subject = Reference(HansGuggindieluft)
 * collection.collector = Reference(Practitioner/MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
