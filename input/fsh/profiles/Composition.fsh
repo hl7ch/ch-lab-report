@@ -17,7 +17,9 @@ Description: "This profile constrains the Composition resource for the purpose o
 
 Instance: Composition-1-tvt
 InstanceOf: ChLabComposition
-Usage: #inline
+Description: "Example of Composition in the scenario of deep vein thrombosis"
+Usage: #example
+// Usage: #inline
 * id = "4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
