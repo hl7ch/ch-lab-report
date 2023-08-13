@@ -15,8 +15,34 @@ Usage: #example
 * entry[=].resource = Composition-1-tvt
 * entry[+].fullUrl = "urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06"
 * entry[=].resource = DiagnosticReport-1-tvt
-// * entry[+].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"
-// * entry[=].resource = HansGuggindieluft
+* entry[+].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"
+* entry[=].resource = HansGuggindieluft
+* entry[+].fullUrl = "urn:uuid:8903c6a4-6547-437c-8f47-b68cfe959288"
+* entry[=].resource = HbHt-Observation
+* entry[+].fullUrl = "urn:uuid:93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
+* entry[=].resource = Hb-Observation
+* entry[+].fullUrl = "urn:uuid:6329ad78-c886-44f8-9471-3783cc990ff0"
+* entry[=].resource = Ht-Observation
+
+* entry[+].fullUrl = "urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74"
+* entry[=].resource = Blood
+* entry[+].fullUrl = "urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8"
+* entry[=].resource = Blood-coag
+
+* entry[+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"
+* entry[=].resource = MarcMustermannArztpraxis
+
+* entry[+].fullUrl = "urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37"
+* entry[=].resource = MarcMustermann
+* entry[+].fullUrl = "urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052"
+* entry[=].resource = EvaErlenmeyer
+
+* entry[+].fullUrl = "urn:uuid:32c4c990-cedb-4999-998d-bab1d55db49f"
+* entry[=].resource = Arztpraxis
+
+* entry[+].fullUrl = "urn:uuid:84483dc8-81d3-41cc-8d24-10c241279024"
+* entry[=].resource = LaborPipette
+
 // * entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f"
 // * entry[=].resource = HbHt-Observation
 // * entry[+].fullUrl = "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"
@@ -27,8 +53,7 @@ Usage: #example
 Instance: Composition-1-tvt
 InstanceOf: ChLabComposition
 Description: "Example of Composition in the scenario of deep vein thrombosis"
-Usage: #example
-// Usage: #inline
+Usage: #inline
 * id = "3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
@@ -52,12 +77,11 @@ Usage: #example
 Instance: DiagnosticReport-1-tvt
 InstanceOf: ChLabDiagnosticReport
 Description: "Example of DiagnosticReport in the scenario of deep vein thrombosis"
-// Usage: #inline
-Usage: #example
+Usage: #inline
 * id = "03464e4f-12f0-4d50-970d-f522b92a3f06"
-* meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"
+// * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"
 // * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition-1-tvt)
 * status = #final
 * category = $v2-0074#HM "Hematology"
 * code = $loinc#11502-2 "Laboratory report"
@@ -65,3 +89,251 @@ Usage: #example
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer.display = "Dr. Eva Erlenmeyer"
 * result = Reference(HbHt-Observation)
+
+Instance: HansGuggindieluft
+InstanceOf: ChLabPatient
+Title: "Hans Guggindieluft"
+Description: "CH-Core-Patient, refers to 1-tvt"
+Usage: #inline
+* id = "6b8a0365-5022-403b-a5a5-8d8680d701ef"
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: HansGuggindieluft\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111111\n      </p><p><b>name</b>: Hans Guggindieluft \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+* extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
+* extension[=].valueAddress.city = "Zürich"
+* extension[=].valueAddress.country = "Schweiz"
+* extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
+* extension[=].valueAddress.city = "Breitenbach"
+* extension[=].valueAddress.state = "BL"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
+* extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
+* identifier.type = $v2-0203#MR
+* identifier.system = "urn:oid:2.16.756.5.30.999999.1"
+* identifier.value = "012/08.111111"
+* name.family = "Guggindieluft"
+* name.given = "Hans"
+* telecom[0].system = #phone
+* telecom[=].value = "079 979 79 79"
+* telecom[=].use = #home
+* telecom[+].system = #email
+* telecom[=].value = "hans.guggindieluft@example.ch"
+* gender = #male
+* birthDate = "1981-01-01"
+* maritalStatus = $ech-11-maritalstatus#5 "unverheiratet"
+* communication.language = urn:ietf:bcp:47#de-CH
+* communication.language.text = "Deutsch (Schweiz)"
+* communication.preferred = true
+
+Instance: HbHt-Observation
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "HbHt-Observation"
+Description: "Example for Hemoblobine and Hemotocrit panel Observation"
+Usage: #inline
+* id = "8903c6a4-6547-437c-8f47-b68cfe959288"
+
+// * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab" // probably not needed
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $v2-0074#HM "Hematology"
+* category[+] = $loinc#18723-7 "Hematology studies (set)"
+* code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* code.text = "Hemoglobin and Hematocrit panel (Bld)"
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* hasMember = Reference(Hb-Observation)
+* hasMember = Reference(Ht-Observation)
+
+Instance: Hb-Observation
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "Hb-Observation"
+Description: "Example for Hemoblobine Observation"
+Usage: #inline
+* id = "93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
+// * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab" // probably not needed
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $v2-0074#HM "Hematology"
+* category[+] = $loinc#18723-7 "Hematology studies (set)"
+* code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
+* code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+// TODO values
+* valueQuantity = 10.8 'umol/L' "umol/L"
+// * interpretation = $v3-ObservationInterpretation#HH "Critical high"
+* method = $sct#70621000052105 "Spectrophotometric technique (qualifier value)"
+* specimen = Reference(Blood)
+* referenceRange.low.value = 8.7  // women 7.4
+* referenceRange.low.unit = "umol/L"
+* referenceRange.high.value = 11.2    // women 9.9
+* referenceRange.high.unit = "umol/L"
+// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
+
+Instance: Ht-Observation
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "Ht-Observation"
+Description: "Example for Hemocrite Observation"
+Usage: #inline
+* id = "6329ad78-c886-44f8-9471-3783cc990ff0"
+
+// * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab" // probably not needed
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $v2-0074#HM "Hematology"
+* category[+] = $loinc#18723-7 "Hematology studies (set)"
+* code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
+* code.text = "Hematocrit (Bld) [Volume fraction]" // display text
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+// TODO values
+* valueQuantity = 48 '%' "%"
+//* interpretation = $v3-ObservationInterpretation#HH "Critical high"
+* method = $sct#85457002 "Centrifugation (procedure)"
+* specimen = Reference(Blood)
+* referenceRange.low.value = 42   // women 37
+* referenceRange.low.unit = "%"
+* referenceRange.high.value = 50  // women 45
+* referenceRange.high.unit = "%"
+// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
+
+// specimen
+Instance: Blood-coag
+InstanceOf: ChLabSpecimen
+Title: "Blood Sample Coagulation"
+Description: "Example for Specimen for haemostatic Examination"
+Usage: #inline
+* id = "8d38e1bd-dced-45c1-8978-949d6cfd21e8"
+* identifier.value = "48736-55555-75465"
+* accessionIdentifier.value = "4e88a-66666-dd888"
+* status = #available
+* type = $sct#119297000 "Blood sample"
+* subject = Reference(HansGuggindieluft)
+* receivedTime = "2020-08-16T16:40:17Z"
+// * request = Reference(Lab) Why the specimen was collected
+* collection.collector = Reference(MarcMustermann)
+* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* processing.timePeriod.start = "2015-08-16T06:40:17Z" // usually same time as collectedDateTime
+* processing.timePeriod.end = "2015-08-17T06:40:17Z" // when processing should be terminated
+* container.identifier.value = "4e88a-bc987-dd888-00001-bcoag"
+* container.description = "S-Monovette grün"
+* container.type = $sct#702120003 "Blood collection Luer adaptor"
+* container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate"
+
+Instance: Blood
+InstanceOf: ChLabSpecimen
+Title: "Blood Sample"
+Description: "Example for Specimen for Haematological Examination"
+Usage: #inline
+* id = "3a98a13d-cf64-40bb-b7a0-87ef45193a74"
+* status = #available
+* type = $sct#119297000 "Blood sample"
+* subject = Reference(HansGuggindieluft)
+* collection.collector = Reference(MarcMustermann)
+* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
+* container.type = $sct#706053007 "General specimen container (physical object)"
+* note.text = "Specimen is grossly lipemic"
+
+Instance: MarcMustermannArztpraxis
+InstanceOf: ChLabPractitionerRole
+Title: "Marc Mustermann at Arztpraxis"
+Description: "PractitionerRole, refers to 1-tvt"
+Usage: #inline
+* id = "017e8e32-2f3b-4bef-baf1-92c7278a7048"
+* practitioner = Reference(MarcMustermann)
+* organization = Reference(Arztpraxis)
+* code = urn:oid:2.16.840.1.113883.2.9.6.2.7#2211 "Generalist Medical Practitioners"
+
+Instance: MarcMustermann
+InstanceOf: ChLabPractitioner
+Title: "Marc Mustermann"
+Description: "Practitioner, works in Arztpraxis, refers to 1-tvt"
+Usage: #inline
+* id = "e23d6fa1-88bc-497c-a4df-eb3fa60eaa37"
+* identifier[0].system = "urn:oid:2.51.1.3"
+* identifier[=].value = "7601000050700"
+* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+* identifier[=].value = "A123309"
+* name.use = #official
+* name.family = "Mustermann"
+* name.given = "Marc"
+* name.prefix = "Dr. med."
+* name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+* name.prefix.extension.valueCode = #AC
+* telecom[0].system = #phone
+* telecom[=].value = "033 333 22 11"
+* telecom[=].use = #work
+* telecom[+].system = #email
+* telecom[=].value = "marc.mustermann@gruppenpraxis.ch"
+* telecom[=].use = #work
+
+Instance: EvaErlenmeyer
+InstanceOf: ChLabPractitioner
+Title: "Eva Erlenmeyer"
+Description: "Specialist for Laboratory Medicine, works in Labor Pipette"
+Usage: #inline
+* id = "12328339-f7d6-4bb6-80e4-89fd03ce5052"
+* identifier[0].system = "urn:oid:2.51.1.3" // GLN
+* identifier[=].value = "7601000050717"
+* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+* identifier[=].value = "A123315"
+* name.use = #official
+* name.family = "Erlenmeyer"
+* name.given = "Eva"
+* name.prefix = "Dr. med."
+* name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+* name.prefix.extension.valueCode = #AC
+* telecom[0].system = #phone
+* telecom[=].value = "033 444 55 66"
+* telecom[=].use = #work
+* telecom[+].system = #email
+* telecom[=].value = "eva.erlenmeyer@labor-pipette.ch"
+* telecom[=].use = #work
+
+Instance: Arztpraxis
+InstanceOf: CHCoreOrganization
+Title: "Arztpraxis"
+Description: "Practice, refers to 1-tvt, 2-pertussis and 3-gyn"
+Usage: #inline
+* id = "32c4c990-cedb-4999-998d-bab1d55db49f"
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601000235503"
+* name = "Arztpraxis Messen"
+* telecom[0].system = #phone
+* telecom[=].value = "+41555545566"
+* telecom[=].use = #work
+* telecom[+].system = #email
+* telecom[=].value = "info@arztpraxis.ch"
+* telecom[=].use = #work
+* telecom[+].system = #url
+* telecom[=].value = "http://www.arztpraxis.ch"
+* telecom[=].use = #work
+* address.line = "Doktorgasse 2"
+* address.city = "Messen"
+* address.postalCode = "3254"
+* address.country = "CH"
+
+Instance: LaborPipette
+InstanceOf: CHCoreOrganization
+Title: "Labor Pipette"
+Description: "Laboratory Organization, refers to all Storyboards"
+Usage: #inline
+* id = "84483dc8-81d3-41cc-8d24-10c241279024"
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601000234407"
+* name = "Labor Pipette"
+* telecom[0].system = #phone
+* telecom[=].value = "+41223345566"
+* telecom[=].use = #work
+* telecom[+].system = #email
+* telecom[=].value = "info@labor-pipette.ch"
+* telecom[=].use = #work
+* telecom[+].system = #url
+* telecom[=].value = "http://www.labor-pipette.ch"
+* telecom[=].use = #work
+* address.line = "Laborstrasse 23"
+* address.city = "Olten"
+* address.postalCode = "4600"
+* address.country = "CH"
