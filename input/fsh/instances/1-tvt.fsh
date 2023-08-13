@@ -29,6 +29,12 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8"
 * entry[=].resource = Blood-coag
 
+* entry[+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
+* entry[=].resource = Serum
+
+* entry[+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"
+* entry[=].resource = ServiceRequest-1-tvt
+
 * entry[+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"
 * entry[=].resource = MarcMustermannArztpraxis
 
@@ -49,6 +55,10 @@ Usage: #example
 // * entry[=].resource = Inline-Instance-for-BundleLabResultReportPOC-3
 // * entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f"
 // * entry[=].resource = Inline-Instance-for-BundleLabResultReportPOC-4
+
+// ╭────────────── Composition 1-tvt ────────────────────────╮
+// │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer │
+// ╰─────────────────────────────────────────────────────────╯
 
 Instance: Composition-1-tvt
 InstanceOf: ChLabComposition
@@ -74,6 +84,9 @@ Usage: #inline
 * section.code.text = "Hemoglobin and Hematocrit panel (Bld)" // Display name
 * section.entry = Reference(HbHt-Observation)
 
+// ╭──────────── DiagnosticReport 1-tvt ─────────────────────╮
+// │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer │
+// ╰─────────────────────────────────────────────────────────╯
 Instance: DiagnosticReport-1-tvt
 InstanceOf: ChLabDiagnosticReport
 Description: "Example of DiagnosticReport in the scenario of deep vein thrombosis"
@@ -90,6 +103,9 @@ Usage: #inline
 * performer.display = "Dr. Eva Erlenmeyer"
 * result = Reference(HbHt-Observation)
 
+// ╭────────────── Patient 1-tvt ──────────────────────────────╮
+// │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   │
+// ╰───────────────────────────────────────────────────────────╯
 Instance: HansGuggindieluft
 InstanceOf: ChLabPatient
 Title: "Hans Guggindieluft"
@@ -123,6 +139,9 @@ Usage: #inline
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
+// ╭────── Observation 1-tvt ─────────╮
+// │ HbHt-panel, Hb, Ht ,CRP, D-Dimer │
+// ╰──────────────────────────────────╯
 Instance: HbHt-Observation
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "HbHt-Observation"
@@ -133,8 +152,8 @@ Usage: #inline
 // * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab" // probably not needed
 * status = #final
 * category[0] = $observation-category#laboratory
-* category[+] = $v2-0074#HM "Hematology"
-* category[+] = $loinc#18723-7 "Hematology studies (set)"
+// * category[+] = $v2-0074#HM "Hematology"
+// * category[+] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.text = "Hemoglobin and Hematocrit panel (Bld)"
 * subject = Reference(HansGuggindieluft)
@@ -198,7 +217,9 @@ Usage: #inline
 * referenceRange.high.unit = "%"
 // * referenceRange.type = $referencerange-meaning#normal "Normal Range"
 
-// specimen
+// ╭───── specimen 1-tvt ─────╮
+// │ Blood-coag, Blood, Serum │
+// ╰──────────────────────────╯
 Instance: Blood-coag
 InstanceOf: ChLabSpecimen
 Title: "Blood Sample Coagulation"
@@ -235,6 +256,58 @@ Usage: #inline
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
+
+Instance: Serum
+InstanceOf: Specimen
+Title: "Serum Sample"
+Description: "Example for Specimen of Serum from venous blood"
+Usage: #inline
+* id = "9b554309-f9d4-4559-ba81-91659cd11786"
+* identifier.value = "48736-12345-75465"
+* accessionIdentifier.value = "4e88a-12345-dd888"
+* status = #available
+* type = $sct#119364003 "Serum specimen (specimen)"
+* subject = Reference(HansGuggindieluft)
+* collection.collector = Reference(MarcMustermann)
+* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
+* collection.fastingStatusCodeableConcept = $v2-0916#F "Patient was fasting prior to the procedure."
+* container.type = $sct#706053007 "General specimen container (physical object)"
+
+Instance: ServiceRequest-1-tvt
+InstanceOf: ChLabServiceRequestLaboratoryOrder
+Title: "LabOrder Service Request for multiple Tests"
+Description: "Example for Service Request of HbHt-panel, CRP, D-Dimer"
+Usage: #inline
+* id = "9e180157-5a4e-4a8a-8ca9-9b09c2056666"
+* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
+
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PLAC "Placer Identifier"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+
+* status = #active
+* intent = #original-order
+* category = $servicerequest-categories#RequestForLabExam "Anforderung Laboruntersuchung"
+
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Clinical Chemistry Tests ----
+* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+
+// orderDetails: Additional order information, codeableConcept
+
+* priority = #urgent
+* subject = Reference(HansGuggindieluft)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#432805000
+* reasonCode.text = "Suspected deep vein thrombosis (situation)"
+//* insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Blood) "Serum specimen"
 
 Instance: MarcMustermannArztpraxis
 InstanceOf: ChLabPractitionerRole
