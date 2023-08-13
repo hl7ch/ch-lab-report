@@ -2,20 +2,20 @@
 // │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   │
 // ╰────────────────────────────────────────────────────────────╯
 
-// Instance: LabResultReport-1-tvt
-// InstanceOf: ChLabDocument
-// Description: "Example of a Laboratory Report for scenario deep vein thrombosis"
-// Usage: #example
-// * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"
-// * identifier.system = "http://example.org"
-// * identifier.value = "ba91c64b-f30c-4137-a484-34bbba5e8804"
-// * type = #document
-// * timestamp = "2023-03-09T14:30:00+01:00"
-// * entry[0].fullUrl = "urn:uuid:4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"
-// * entry[=].resource = Composition-1-tvt
-// * entry[+].fullUrl = "urn:uuid:3a743273-237a-446a-a8da-9e7521cce614"
-// * entry[=].resource = DiagnosticReport-1-tvt
-// * entry[+].fullUrl = "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"
+Instance: LabResultReport-1-tvt
+InstanceOf: ChLabDocument
+Description: "Example of a Laboratory Report for scenario deep vein thrombosis"
+Usage: #example
+* meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"
+* identifier.system = "http://example.org"
+* identifier.value = "ba91c64b-f30c-4137-a484-34bbba5e8804"
+* type = #document
+* timestamp = "2023-03-09T14:30:00+01:00"
+* entry[0].fullUrl = "urn:uuid:3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
+* entry[=].resource = Composition-1-tvt
+* entry[+].fullUrl = "urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06"
+* entry[=].resource = DiagnosticReport-1-tvt
+// * entry[+].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"
 // * entry[=].resource = HansGuggindieluft
 // * entry[+].fullUrl = "urn:uuid:8bd279af-125a-4318-b461-ba5629b12e7f"
 // * entry[=].resource = HbHt-Observation
@@ -29,7 +29,7 @@ InstanceOf: ChLabComposition
 Description: "Example of Composition in the scenario of deep vein thrombosis"
 Usage: #example
 // Usage: #inline
-* id = "4028a0b8-37fc-4491-a8e7-0f28e6fc59b4"
+* id = "3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
@@ -54,10 +54,10 @@ InstanceOf: ChLabDiagnosticReport
 Description: "Example of DiagnosticReport in the scenario of deep vein thrombosis"
 // Usage: #inline
 Usage: #example
-* id = "3a743273-237a-446a-a8da-9e7521cce614"
+* id = "03464e4f-12f0-4d50-970d-f522b92a3f06"
 * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"
 // * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/4028a0b8-37fc-4491-a8e7-0f28e6fc59b4)
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
 * status = #final
 * category = $v2-0074#HM "Hematology"
 * code = $loinc#11502-2 "Laboratory report"
