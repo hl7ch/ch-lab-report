@@ -14,7 +14,7 @@ Usage: #example
 * entry[0].fullUrl = "urn:uuid:3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 * entry[=].resource = Composition-1-tvt
 * entry[+].fullUrl = "urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06"
-* entry[=].resource = DiagnosticReport-1-tvt
+* entry[=].resource = DiagnosticReport-Hematology
 * entry[+].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"
 * entry[=].resource = HansGuggindieluft
 * entry[+].fullUrl = "urn:uuid:8903c6a4-6547-437c-8f47-b68cfe959288"
@@ -24,6 +24,9 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:6329ad78-c886-44f8-9471-3783cc990ff0"
 * entry[=].resource = Ht-Observation
 
+* entry[+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
+* entry[=].resource = CRP-Observation
+
 * entry[+].fullUrl = "urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74"
 * entry[=].resource = Blood
 * entry[+].fullUrl = "urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8"
@@ -32,7 +35,7 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
 * entry[=].resource = Serum
 
-* entry[+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"
+* entry[+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"  // entry[10]
 * entry[=].resource = ServiceRequest-1-tvt
 
 * entry[+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"
@@ -68,39 +71,54 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
-// * type = $loinc#11502-2 "Laboratory report"
-* subject = Reference(HansGuggindieluft)
+// * type = $loinc#11502-2 "Laboratory report" => type in profile from SNOMED CT
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * date = "2023-03-09T14:30:00+01:00"
-* author = Reference(EvaErlenmeyer)
+* author = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052)
 * author.display = "Dr. Eva Erlenmeyer"
 * title = "Laboratory Report - 10 March, 2023 14:30"
 * confidentiality = #N
 * attester.mode = #legal
 * attester.time = "2020-12-27T14:30:00+01:00"
-* attester.party = Reference(LaborPipette)
-* custodian = Reference(LaborPipette)
-* section.title = "Hemoglobin + Hematocrit panel lab result report"
-* section.code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* section.code.text = "Hemoglobin and Hematocrit panel (Bld)" // Display name
-* section.entry = Reference(HbHt-Observation)
+* attester.party = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) // Who attested the report
+* custodian = Reference(Organization/84483dc8-81d3-41cc-8d24-10c241279024)
+* section.title = "Hematology"
+* section.code = $loinc#18723-7 "Hematology studies (set)" // (exactly)
+* section.entry = Reference(DiagnosticReport/03464e4f-12f0-4d50-970d-f522b92a3f06)
 
-// ╭──────────── DiagnosticReport 1-tvt ─────────────────────╮
+// * section[lab-subsections].title = "Hemoglobin + Hematocrit panel lab result report"
+// * section[lab-subsections].code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+// * section[lab-subsections].code.text = "Hemoglobin and Hematocrit panel (Bld)" // Display name
+// * section[lab-subsections].entry = Reference(HbHt-Observation)
+// * section[lab-subsections].title = "Hemoglobin lab result report"
+// * section[lab-subsections].code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
+// * section[lab-subsections].code.text = "Hemoglobin (Bld) [Mass/Vol]" // Display name
+// * section[lab-subsections].entry = Reference(Hb-Observation)
+// * section[lab-subsections][+].title = "Hematocrit panel lab result report"
+// * section[lab-subsections][=].code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
+// * section[lab-subsections][=].code.text = "Hematocrit (Bld) [Volume fraction]" // Display name
+// * section[lab-subsections][=].entry = Reference(Ht-Observation)
+
+
+// ╭──────────── DiagnosticReport Hematology ────────────────╮
 // │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer │
 // ╰─────────────────────────────────────────────────────────╯
-Instance: DiagnosticReport-1-tvt
+Instance: DiagnosticReport-Hematology
 InstanceOf: ChLabDiagnosticReport
-Description: "Example of DiagnosticReport in the scenario of deep vein thrombosis"
+Description: "Example of DiagnosticReport for Results in the Hematology lab specialty"
 Usage: #inline
 * id = "03464e4f-12f0-4d50-970d-f522b92a3f06"
 // * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"
 // * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition-1-tvt)
+* basedOn = Reference(ServiceRequest/9e180157-5a4e-4a8a-8ca9-9b09c2056666)
 * status = #final
-* category = $v2-0074#HM "Hematology"
+// * category = $v2-0074#HM "Hematology"
 * code = $loinc#11502-2 "Laboratory report"
 * subject = Reference(HansGuggindieluft)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer.display = "Dr. Eva Erlenmeyer"
+* specimen = Reference(Blood)
 * result = Reference(HbHt-Observation)
 
 // ╭────────────── Patient 1-tvt ──────────────────────────────╮
@@ -171,7 +189,7 @@ Usage: #inline
 // * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab" // probably not needed
 * status = #final
 * category[0] = $observation-category#laboratory
-* category[+] = $v2-0074#HM "Hematology"
+//* category[+] = $v2-0074#HM "Hematology"
 * category[+] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
@@ -199,7 +217,7 @@ Usage: #inline
 // * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab" // probably not needed
 * status = #final
 * category[0] = $observation-category#laboratory
-* category[+] = $v2-0074#HM "Hematology"
+// * category[+] = $v2-0074#HM "Hematology"
 * category[+] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
 * code.text = "Hematocrit (Bld) [Volume fraction]" // display text
@@ -216,6 +234,31 @@ Usage: #inline
 * referenceRange.high.value = 50  // women 45
 * referenceRange.high.unit = "%"
 // * referenceRange.type = $referencerange-meaning#normal "Normal Range"
+
+Instance: CRP-Observation
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "CRP-Observation"
+Description: "Example for CRP Observation"
+Usage: #inline
+* id = "c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
+
+// * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab" // probably not needed
+* status = #final
+* category[0] = $observation-category#laboratory
+// * category[+] = $v2-0074#CH "Chemistry"
+* category[+] = $loinc#18719-5 "Chemistry studies (set)"
+* code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* code.text = "CRP [Mass/Vol]" // display name
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeyer"
+// TODO values
+* valueQuantity = 8 'mg/L' "mg/L"
+//* interpretation = $v3-ObservationInterpretation#HH "Critical high"
+* method = $sct#60519005 "Turbidity test, quantitative (procedure)"
+* specimen = Reference(Serum)
+* referenceRange.high.value = 10  // depends on method
+* referenceRange.high.unit = "mg/L"
 
 // ╭───── specimen 1-tvt ─────╮
 // │ Blood-coag, Blood, Serum │
