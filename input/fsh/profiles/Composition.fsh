@@ -10,6 +10,8 @@ Description: "This profile constrains the Composition resource for the purpose o
 * type = $sct#4241000179101 "Laboratory report (record artifact)"
 
 * subject only Reference(ChLabPatient)
+* author only Reference(ChLabPractitionerRole or ChLabPractitioner)
+* custodian only Reference(CHCoreOrganization)
 
 // ╭────────────── instance 1-tvt ──────────────────────────────╮
 // │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   |

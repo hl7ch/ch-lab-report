@@ -3,6 +3,7 @@ Alias:   $loinc =                         http://loinc.org
 Alias:   $sct =                           http://snomed.info/sct
 Alias:   $v2-0074 =                       http://terminology.hl7.org/CodeSystem/v2-0074 // diagnosticServiceSectionId
 Alias:   $v2-0203                     =   http://terminology.hl7.org/CodeSystem/v2-0203 // identifierType
+Alias:   $v2-0360                     =   http://terminology.hl7.org/CodeSystem/v2-0360|2.7 // qualification Code
 Alias:   $v2-0371                     =   http://terminology.hl7.org/CodeSystem/v2-0371 // additivePreservative
 Alias:   $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916 // relevanteClinicalInformation
 Alias:   $v3-ObservationInterpretation =  http://hl7.org/fhir/ValueSet/observation-interpretation
