@@ -24,4 +24,4 @@ Alias:   $administrative-gender         = http://hl7.org/fhir/administrative-gen
 Alias:   $religiousAffiliation          = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 
 // from ch-lab-order
-Alias:  $servicerequest-categories      = http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories
+// Alias:  $servicerequest-categories      = http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories
