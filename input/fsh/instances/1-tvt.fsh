@@ -1,7 +1,3 @@
-// ╭────────────── instance 1-tvt ──────────────────────────────╮
-// │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   │
-// ╰────────────────────────────────────────────────────────────╯
-
 Instance: LabResultReport-1-tvt
 InstanceOf: ChLabDocument
 Description: "Example of a Laboratory Report for scenario deep vein thrombosis"
@@ -75,6 +71,10 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:84483dc8-81d3-41cc-8d24-10c241279024"
 * entry[=].resource = LaborPipette
 
+// ╭────────────── instance 1-tvt ──────────────────────────────╮
+// │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   │
+// ╰────────────────────────────────────────────────────────────╯
+
 // ╭────────────── Composition 1-tvt ────────────────────────╮
 // │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer │
 // ╰─────────────────────────────────────────────────────────╯
@@ -101,7 +101,7 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
-// * type = $loinc#11502-2 "Laboratory report" => type in profile from SNOMED CT
+// * type = $loinc#11502-2 "Laboratory report" => type already defined in profile from SNOMED CT
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * date = "2023-03-09T14:30:00+01:00"
 * author = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052)
@@ -112,9 +112,22 @@ Usage: #inline
 * attester.time = "2020-12-27T14:30:00+01:00"
 * attester.party = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) // Who attested the report
 * custodian = Reference(Organization/84483dc8-81d3-41cc-8d24-10c241279024)
-* section.title = "Hematology"
-* section.code = $loinc#18723-7 "Hematology studies (set)" // (exactly)
-* section.entry = Reference(DiagnosticReport-1-tvt)
+
+* section[0].title = "Hematology"
+* section[=].code = $loinc#18723-7 "Hematology studies (set)" // (exactly)
+* section[=].entry = Reference(DiagnosticReport-1-tvt)
+
+* section[+].title = "Hemoglobin and Hematocrit panel (Bld)"    // Display Name
+* section[=].code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood" // (exactly)
+* section[=].entry = Reference(HbHt-Observation)
+
+* section[+].title = "Hemoglobin (Bld) [Mass/Vol]"    // Display Name
+* section[=].code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood" // (exactly)
+* section[=].entry = Reference(Hb-Observation)
+
+* section[+].title = "Hematocrit (Bld) [Volume fraction]"   // Display Name
+* section[=].code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood" // (exactly)
+* section[=].entry = Reference(Ht-Observation)
 
 // * section[lab-subsections].title = "Hemoglobin + Hematocrit panel lab result report"
 // * section[lab-subsections].code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
@@ -151,6 +164,8 @@ Usage: #inline
 * performer.display = "Dr. Eva Erlenmeyer"
 * specimen = Reference(Blood)
 * result = Reference(HbHt-Observation)
+* result = Reference(Hb-Observation)
+* result = Reference(Ht-Observation)
 
 // ╭────────────── Patient 1-tvt ──────────────────────────────╮
 // │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   │
@@ -371,7 +386,7 @@ Usage: #inline
 * basedOn = Reference(ServiceRequest/e4072da7-a760-47ba-83e7-59796c59a944)
 
 // ---- grouperID, must be repeated in all basedOn SR ----
-* requisition.type = $v2-0074#LAB "Laboratory"
+* requisition.type = $v2-0203#PRN "Provider number"
 * requisition.system = "urn:oid:2.16.756.5.30"
 * requisition.value = "ReqID-1234567"
 
@@ -407,7 +422,7 @@ Usage: #inline
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 
 // ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = $v2-0203#PGN "Placer Group Number"
+* requisition.type = $v2-0203#PRN "Provider number"
 * requisition.system = "urn:oid:2.16.756.5.30"
 * requisition.value = "ReqID-1234567"
 
@@ -434,7 +449,7 @@ Usage: #inline
 
 Instance: ServiceRequest-Ht
 InstanceOf: ChLabServiceRequestLaboratoryOrder
-Title: "LabOrder Service Request for Hematocrit "
+Title: "LabOrder Service Request for Hematocrit"
 Description: "Example for Service Request of Hematocrit in Blood"
 Usage: #inline
 * id = "e4072da7-a760-47ba-83e7-59796c59a944"
@@ -444,7 +459,7 @@ Usage: #inline
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 
 // ---- grouperID, must be repeated in all dependent SR ----
-* requisition.type = $v2-0203#PGN "Placer Group Number"
+* requisition.type = $v2-0203#PRN "Provider number"
 * requisition.system = "urn:oid:2.16.756.5.30"
 * requisition.value = "ReqID-1234567"
 
