@@ -472,6 +472,8 @@ Usage: #inline
 // ---- Clinical Chemistry Tests ----
 * code.coding[0] = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
 
+// * code.coding[0] = $loinc#20570-8 "Hematocrit [Volume Fraction] in Blood"  // new
+
 // orderDetails: Additional order information, codeableConcept
 
 * priority = #urgent
