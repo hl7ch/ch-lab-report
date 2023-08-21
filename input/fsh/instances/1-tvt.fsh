@@ -121,13 +121,13 @@ Usage: #inline
 * section[=].code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood" // (exactly)
 * section[=].entry = Reference(HbHt-Observation)
 
-* section[+].title = "Hemoglobin (Bld) [Mass/Vol]"    // Display Name
-* section[=].code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood" // (exactly)
-* section[=].entry = Reference(Hb-Observation)
-
-* section[+].title = "Hematocrit (Bld) [Volume fraction]"   // Display Name
-* section[=].code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood" // (exactly)
-* section[=].entry = Reference(Ht-Observation)
+// * section[+].title = "Hemoglobin (Bld) [Mass/Vol]"    // Display Name
+// * section[=].code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood" // (exactly)
+// * section[=].entry = Reference(Hb-Observation)
+// 
+// * section[+].title = "Hematocrit (Bld) [Volume fraction]"   // Display Name
+// * section[=].code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood" // (exactly)
+// * section[=].entry = Reference(Ht-Observation)
 
 // * section[lab-subsections].title = "Hemoglobin + Hematocrit panel lab result report"
 // * section[lab-subsections].code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
@@ -152,8 +152,10 @@ Description: "Example of DiagnosticReport for Results in the Hematology lab spec
 Usage: #inline
 * id = "03464e4f-12f0-4d50-970d-f522b92a3f06"
 // * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"
+* extension[DiagnosticReportCompositionR5].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition"
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
 // * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition-1-tvt)
+// * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition-1-tvt)
 // * basedOn = Reference(ServiceRequest/9e180157-5a4e-4a8a-8ca9-9b09c2056666)
 * status = #final
 //* category = $v2-0074#HM "Hematology" // 
