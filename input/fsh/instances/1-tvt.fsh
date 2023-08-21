@@ -374,7 +374,7 @@ Usage: #inline
 Instance: ServiceRequest-HbHt-panel
 InstanceOf: ChLabServiceRequestLaboratoryOrder
 Title: "LabOrder Service Request for Hemoglobine & Hematocrit panel"
-Description: "Example for Service Request of CRP"
+Description: "Example for Service Request of Hemoglobin and Hematocrit"
 Usage: #inline
 * id = "9e180157-5a4e-4a8a-8ca9-9b09c2056666"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
@@ -456,9 +456,9 @@ Usage: #inline
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[=].system = "urn:oid:2.16.756.5.30"
 * identifier[=].value = "123"
-// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 
-// ---- grouperID, must be repeated in all dependent SR ----
+// ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
 * requisition.system = "urn:oid:2.16.756.5.30"
 * requisition.value = "ReqID-1234567"
@@ -472,17 +472,14 @@ Usage: #inline
 // ---- Clinical Chemistry Tests ----
 * code.coding[0] = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
 
-// * code.coding[0] = $loinc#20570-8 "Hematocrit [Volume Fraction] in Blood"  // new
-
 // orderDetails: Additional order information, codeableConcept
-
 * priority = #urgent
 * subject = Reference(HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Serum specimen"
+* specimen[0] = Reference(Blood) "Blood sample"
 
 
 Instance: MarcMustermannArztpraxis
