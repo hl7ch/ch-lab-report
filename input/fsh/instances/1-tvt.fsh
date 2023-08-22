@@ -18,40 +18,40 @@ Usage: #example
 * entry[=].resource = HansGuggindieluft
 
 * entry[+].fullUrl = "urn:uuid:8903c6a4-6547-437c-8f47-b68cfe959288"
-* entry[=].resource = HbHt-Observation
+* entry[=].resource = Observation-HbHt
 
 * entry[+].fullUrl = "urn:uuid:93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
-* entry[=].resource = Hb-Observation
+* entry[=].resource = Observation-Hb
 
 * entry[+].fullUrl = "urn:uuid:6329ad78-c886-44f8-9471-3783cc990ff0"
-* entry[=].resource = Ht-Observation
-// 
-// * entry[+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
-// * entry[=].resource = CRP-Observation
+* entry[=].resource = Observation-Ht
+
+* entry[+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
+* entry[=].resource = Observation-CRP
 
 * entry[+].fullUrl = "urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74"
 * entry[=].resource = Blood
 
-// * entry[+].fullUrl = "urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8"
-// * entry[=].resource = Blood-coag
-// 
-// * entry[+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
-// * entry[=].resource = Serum
+* entry[+].fullUrl = "urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8"
+* entry[=].resource = Blood-coag
+
+* entry[+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
+* entry[=].resource = Serum
 
 * entry[+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"  // entry[10]
 * entry[=].resource = ServiceRequest-HbHt-panel
 
 * entry[=].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
-* entry[=].resource =  ServiceRequest-Hb
+* entry[=].resource = ServiceRequest-Hb
 
 * entry[=].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
 * entry[=].resource = ServiceRequest-Ht
 
-// * entry[=].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
-// * entry[=].resource = ServiceRequest-CRP
+* entry[=].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
+* entry[=].resource = ServiceRequest-CRP
 
-// * entry[=].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
-// * entry[=].resource = ServiceRequest-D-Dimer
+* entry[=].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
+* entry[=].resource = ServiceRequest-D-Dimer
 
 * entry[+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"
 * entry[=].resource = MarcMustermannArztpraxis
@@ -119,28 +119,33 @@ Usage: #inline
 
 * section[+].title = "Hemoglobin and Hematocrit panel (Bld)"    // Display Name
 * section[=].code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood" // (exactly)
-* section[=].entry = Reference(HbHt-Observation)
+* section[=].entry = Reference(Observation-HbHt)
+
+* section[+].title = "CRP [Moles/Vol]"    // Display Name
+* section[=].code = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma" // (exactly)
+* section[=].entry = Reference(Observation-CRP)
+
 
 // * section[+].title = "Hemoglobin (Bld) [Mass/Vol]"    // Display Name
 // * section[=].code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood" // (exactly)
-// * section[=].entry = Reference(Hb-Observation)
+// * section[=].entry = Reference(Observation-Hb)
 // 
 // * section[+].title = "Hematocrit (Bld) [Volume fraction]"   // Display Name
 // * section[=].code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood" // (exactly)
-// * section[=].entry = Reference(Ht-Observation)
+// * section[=].entry = Reference(Observation-Ht)
 
 // * section[lab-subsections].title = "Hemoglobin + Hematocrit panel lab result report"
 // * section[lab-subsections].code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 // * section[lab-subsections].code.text = "Hemoglobin and Hematocrit panel (Bld)" // Display name
-// * section[lab-subsections].entry = Reference(HbHt-Observation)
+// * section[lab-subsections].entry = Reference(HbObservation-Ht)
 // * section[lab-subsections].title = "Hemoglobin lab result report"
 // * section[lab-subsections].code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 // * section[lab-subsections].code.text = "Hemoglobin (Bld) [Mass/Vol]" // Display name
-// * section[lab-subsections].entry = Reference(Hb-Observation)
+// * section[lab-subsections].entry = Reference(Observation-Hb)
 // * section[lab-subsections][+].title = "Hematocrit panel lab result report"
 // * section[lab-subsections][=].code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
 // * section[lab-subsections][=].code.text = "Hematocrit (Bld) [Volume fraction]" // Display name
-// * section[lab-subsections][=].entry = Reference(Ht-Observation)
+// * section[lab-subsections][=].entry = Reference(Observation-Ht)
 
 
 // ╭──────────── DiagnosticReport 1-tvt ─────────────────────╮
@@ -165,9 +170,10 @@ Usage: #inline
 * performer = Reference(EvaErlenmeyerLaborPipette)
 * performer.display = "Dr. Eva Erlenmeyer"
 * specimen = Reference(Blood)
-* result = Reference(HbHt-Observation)
-* result = Reference(Hb-Observation)
-* result = Reference(Ht-Observation)
+* result = Reference(Observation-HbHt)
+* result = Reference(Observation-Hb)
+* result = Reference(Observation-Ht)
+* result = Reference(Observation-CRP)
 
 // ╭────────────── Patient 1-tvt ──────────────────────────────╮
 // │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   │
@@ -208,9 +214,9 @@ Usage: #inline
 // ╭────── Observation 1-tvt ─────────╮
 // │ HbHt-panel, Hb, Ht ,CRP, D-Dimer │
 // ╰──────────────────────────────────╯
-Instance: HbHt-Observation
+Instance: Observation-HbHt
 InstanceOf: ChLabObservationResultsLaboratory
-Title: "HbHt-Observation"
+Title: "Observation-HbHt"
 Description: "Example for Hemoblobine and Hemotocrit panel Observation"
 Usage: #inline
 * id = "8903c6a4-6547-437c-8f47-b68cfe959288"
@@ -219,18 +225,18 @@ Usage: #inline
 * status = #final
 * category[0] = $observation-category#laboratory
 // * category[+] = $v2-0074#HM "Hematology"
-// * category[+] = $loinc#18723-7 "Hematology studies (set)"
+* category[+] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.text = "Hemoglobin and Hematocrit panel (Bld)"
 * subject = Reference(HansGuggindieluft)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
-* hasMember = Reference(Hb-Observation)
-* hasMember = Reference(Ht-Observation)
+* hasMember = Reference(Observation-Hb)
+* hasMember = Reference(Observation-Ht)
 
-Instance: Hb-Observation
+Instance: Observation-Hb
 InstanceOf: ChLabObservationResultsLaboratory
-Title: "Hb-Observation"
+Title: "Observation-Hb"
 Description: "Example for Hemoblobine Observation"
 Usage: #inline
 * id = "93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
@@ -255,7 +261,7 @@ Usage: #inline
 * referenceRange.high.unit = "umol/L"
 // * referenceRange.type = $referencerange-meaning#normal "Normal Range"
 
-Instance: Ht-Observation
+Instance: Observation-Ht
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "Ht-Observation"
 Description: "Example for Hemocrite Observation"
@@ -283,11 +289,9 @@ Usage: #inline
 * referenceRange.high.unit = "%"
 // * referenceRange.type = $referencerange-meaning#normal "Normal Range"
 
-
-/*
-Instance: CRP-Observation
+Instance: Observation-CRP
 InstanceOf: ChLabObservationResultsLaboratory
-Title: "CRP-Observation"
+Title: "Observation-CRP"
 Description: "Example for CRP Observation"
 Usage: #inline
 * id = "c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
@@ -296,7 +300,7 @@ Usage: #inline
 * status = #final
 * category[0] = $observation-category#laboratory
 // * category[+] = $v2-0074#CH "Chemistry"
-* category[+] = $loinc#18719-5 "Chemistry studies (set)"
+* category[+] = $loinc#18719-5 "Chemistry studies (set)"  // lab specialty
 * code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
 * code.text = "CRP [Mass/Vol]" // display name
 * subject = Reference(HansGuggindieluft)
@@ -313,7 +317,6 @@ Usage: #inline
 // ╭───── specimen 1-tvt ─────╮
 // │ Blood-coag, Blood, Serum │
 // ╰──────────────────────────╯
-*/
 
 Instance: Blood
 InstanceOf: ChLabSpecimen
@@ -372,6 +375,7 @@ Usage: #inline
 // ╭── serviceRequest 1-tvt ──╮
 // │ HbHb-panel, CRP, D-Dimer │
 // ╰──────────────────────────╯
+
 
 Instance: ServiceRequest-HbHt-panel
 InstanceOf: ChLabServiceRequestLaboratoryOrder
@@ -483,6 +487,75 @@ Usage: #inline
 //* insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood) "Blood sample"
 
+Instance: ServiceRequest-CRP
+InstanceOf: ChLabServiceRequestLaboratoryOrder
+Title: "LabOrder Service Request for Hemoblobin "
+Description: "Example for Service Request of Hemoglobin Concentration in Blood"
+Usage: #inline
+* id = "8d98f9d1-581b-4495-93aa-4a522fa30a6c"
+* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
+
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PRN "Provider number"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+
+* status = #active
+* intent = #original-order
+* category = $sct#108252007 "Laboratory procedure"
+
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Clinical Chemistry Tests ----
+* code.coding[0] = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+
+// orderDetails: Additional order information, codeableConcept
+
+* priority = #urgent
+* subject = Reference(HansGuggindieluft)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#432805000
+* reasonCode.text = "Suspected deep vein thrombosis (situation)"
+//* insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Blood) "Serum specimen"
+
+Instance: ServiceRequest-D-Dimer
+InstanceOf: ChLabServiceRequestLaboratoryOrder
+Title: "LabOrder Service Request for Hemoblobin "
+Description: "Example for Service Request of Hemoglobin Concentration in Blood"
+Usage: #inline
+* id = "e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
+* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
+
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PRN "Provider number"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+
+* status = #active
+* intent = #original-order
+* category = $sct#108252007 "Laboratory procedure"
+
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Clinical Chemistry Tests ----
+* code.coding[0] = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
+
+// orderDetails: Additional order information, codeableConcept
+
+* priority = #urgent
+* subject = Reference(HansGuggindieluft)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#432805000
+* reasonCode.text = "Suspected deep vein thrombosis (situation)"
+//* insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Blood-coag) "Blood Sample Coagulation"
 
 Instance: MarcMustermannArztpraxis
 InstanceOf: ChLabPractitionerRole
