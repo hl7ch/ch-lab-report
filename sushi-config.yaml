@@ -29,8 +29,8 @@ contact:
 
 dependencies:
   ch.fhir.ig.ch-core: 4.0.0-ballot
+  hl7.fhir.uv.ips: current
   hl7.fhir.eu.laboratory: current
-  hl7.fhir.uv.extensions.r4: 1.0.0 # see https://chat.fhir.org/#narrow/stream/215610-shorthand/topic/imposeProfile.20extension
   hl7.fhir.extensions.r5: 4.0.1
   ch.fhir.ig.ch-lab-order: 2.0.0-ballot
 
