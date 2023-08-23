@@ -29,6 +29,9 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
 * entry[=].resource = Observation-CRP
 
+* entry[+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"
+* entry[=].resource = Observation-D-Dimer
+
 * entry[+].fullUrl = "urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74"
 * entry[=].resource = Blood
 
@@ -125,6 +128,10 @@ Usage: #inline
 * section[=].code = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma" // (exactly)
 * section[=].entry = Reference(Observation-CRP)
 
+* section[+].title = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]"    // Display Name
+* section[=].code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay" // (exactly)
+* section[=].entry = Reference(Observation-D-Dimer)
+
 
 // * section[+].title = "Hemoglobin (Bld) [Mass/Vol]"    // Display Name
 // * section[=].code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood" // (exactly)
@@ -169,11 +176,12 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyerLaborPipette)
 * performer.display = "Dr. Eva Erlenmeyer"
-* specimen = Reference(Blood)
+
 * result = Reference(Observation-HbHt)
 * result = Reference(Observation-Hb)
 * result = Reference(Observation-Ht)
 * result = Reference(Observation-CRP)
+* result = Reference(Observation-D-Dimer)
 
 // ╭────────────── Patient 1-tvt ──────────────────────────────╮
 // │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   │
@@ -220,8 +228,6 @@ Title: "Observation-HbHt"
 Description: "Example for Hemoblobine and Hemotocrit panel Observation"
 Usage: #inline
 * id = "8903c6a4-6547-437c-8f47-b68cfe959288"
-
-// * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab" // probably not needed
 * status = #final
 * category[0] = $observation-category#laboratory
 // * category[+] = $v2-0074#HM "Hematology"
@@ -240,10 +246,9 @@ Title: "Observation-Hb"
 Description: "Example for Hemoblobine Observation"
 Usage: #inline
 * id = "93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
-// * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab" // probably not needed
+
 * status = #final
 * category[0] = $observation-category#laboratory
-//* category[+] = $v2-0074#HM "Hematology"
 * category[+] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
@@ -267,8 +272,6 @@ Title: "Ht-Observation"
 Description: "Example for Hemocrite Observation"
 Usage: #inline
 * id = "6329ad78-c886-44f8-9471-3783cc990ff0"
-
-// * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab" // probably not needed
 * status = #final
 * category[0] = $observation-category#laboratory
 // * category[+] = $v2-0074#HM "Hematology"
@@ -295,8 +298,6 @@ Title: "Observation-CRP"
 Description: "Example for CRP Observation"
 Usage: #inline
 * id = "c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
-
-// * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab" // probably not needed
 * status = #final
 * category[0] = $observation-category#laboratory
 // * category[+] = $v2-0074#CH "Chemistry"
@@ -314,10 +315,32 @@ Usage: #inline
 * referenceRange.high.value = 10  // depends on method
 * referenceRange.high.unit = "mg/L"
 
+Instance: Observation-D-Dimer
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "Observation-D-Dimer"
+Description: "Example for D-Dimer Observation"
+Usage: #inline
+* id = "f30d8df7-474f-401e-b5d4-f690d28d718d"
+* status = #final
+* category[0] = $observation-category#laboratory
+// * category[+] = $v2-0074#CH "Chemistry"
+* category[+] = $loinc#18720-3 "Coagulation studies (set)"  // lab specialty
+* code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
+* code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeyer"
+// TODO values
+* valueQuantity = 8 'mg/L' "mg/L"
+//* interpretation = $v3-ObservationInterpretation#HH "Critical high"
+* method = $sct#414464004 "Immunoassay method (procedure)"
+* specimen = Reference(Blood-coag)
+* referenceRange.high.value = 0.5  // depends on method
+* referenceRange.high.unit = "mg/L"
+
 // ╭───── specimen 1-tvt ─────╮
 // │ Blood-coag, Blood, Serum │
 // ╰──────────────────────────╯
-
 Instance: Blood
 InstanceOf: ChLabSpecimen
 Title: "Blood Sample"

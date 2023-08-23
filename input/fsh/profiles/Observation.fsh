@@ -11,7 +11,11 @@ Description: "This profile constrains the Observation resource for the purpose o
 * performer
 * specimen only Reference(ChLabSpecimen)
 
-// ╭────────────── instance 1-tvt ──────────────────────────────╮
-// │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   |
-// ╰────────────────────────────────────────────────────────────╯
+// ╭───── nested observations ─────────╮
+// │  has value[x]  or has hasMember   │
+// ╰───────────────────────────────────╯
 
+Invariant: singleTest-panel-required
+Description: "must have a value[x] or a hasMember element"
+Expression: "value[x].exists() or hasMember.exists()"
+Severity: #error
