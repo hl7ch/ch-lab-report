@@ -41,14 +41,14 @@ Usage: #example
 // * entry[+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
 // * entry[=].resource = Serum
 
-* entry[+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"  // entry[10]
-* entry[=].resource = ServiceRequest-HbHt-panel
+// * entry[+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"  // entry[10]
+// * entry[=].resource = ServiceRequest-HbHt-panel
 
-* entry[+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
-* entry[=].resource = ServiceRequest-Hb
+// * entry[+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
+// * entry[=].resource = ServiceRequest-Hb
 
-* entry[+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
-* entry[=].resource = ServiceRequest-Ht
+// * entry[+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
+// * entry[=].resource = ServiceRequest-Ht
 
 // * entry[+].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
 // * entry[=].resource = ServiceRequest-CRP
@@ -93,12 +93,12 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report document is based on and fulfills  │
 // ╰────────────────────────────────────────────────────────────────────────────────────────╯
 
-* extension[0].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-* extension[=].valueReference = Reference(ServiceRequest-HbHt-panel)
-* extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-* extension[=].valueReference = Reference(ServiceRequest-Hb)
-* extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-* extension[=].valueReference = Reference(ServiceRequest-Ht)
+// * extension[0].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
+// * extension[=].valueReference = Reference(ServiceRequest-HbHt-panel)
+// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
+// * extension[=].valueReference = Reference(ServiceRequest-Hb)
+// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
+// * extension[=].valueReference = Reference(ServiceRequest-Ht)
 
 * id = "3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -164,9 +164,9 @@ InstanceOf: ChLabDiagnosticReport
 Description: "Example of DiagnosticReport for Results in the Hematology lab specialty"
 Usage: #inline
 * id = "03464e4f-12f0-4d50-970d-f522b92a3f06"
-* extension[DiagnosticReportCompositionR5].url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition"
+* extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
-* basedOn = Reference(ServiceRequest-HbHt-panel)
+// * basedOn = Reference(ServiceRequest-HbHt-panel)
 * status = #final
 //* category = $v2-0074#HM "Hematology" // 
 * code = $loinc#11502-2 "Laboratory report" // NO Lab Study types here
@@ -400,6 +400,7 @@ Usage: #inline
 // ╰──────────────────────────╯
 */
 
+/*
 Instance: ServiceRequest-HbHt-panel
 InstanceOf: ChLabServiceRequestLaboratoryOrder
 Title: "LabOrder Service Request for Hemoglobine & Hematocrit panel"
@@ -437,8 +438,9 @@ Usage: #inline
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood) "Serum specimen"
+*/
 
-
+/*
 Instance: ServiceRequest-Hb
 InstanceOf: ChLabServiceRequestLaboratoryOrder
 Title: "LabOrder Service Request for Hemoblobin "
@@ -473,9 +475,9 @@ Usage: #inline
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood) "Serum specimen"
+*/
 
-
-
+/*
 Instance: ServiceRequest-Ht
 InstanceOf: ChLabServiceRequestLaboratoryOrder
 Title: "LabOrder Service Request for Hematocrit"
@@ -509,6 +511,7 @@ Usage: #inline
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood) "Blood sample"
+*/
 
 /*
 Instance: ServiceRequest-CRP
