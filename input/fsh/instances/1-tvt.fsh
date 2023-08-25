@@ -168,8 +168,8 @@ Usage: #inline
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
 // * basedOn = Reference(ServiceRequest-HbHt-panel)
 * status = #final
-//* category = $v2-0074#HM "Hematology" // 
-* code = $loinc#11502-2 "Laboratory report" // NO Lab Study types here
+// * category = $v2-0074#HM "Hematology" // 
+// * code = $sct#4241000179101 "Laboratory report (record artifact)"  // in profile
 * subject = Reference(HansGuggindieluft)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyerLaborPipette)
