@@ -6,11 +6,15 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 * . ^short = "CH Lab DiagnosticReport: Laboratory Report"
 
 * obeys ch-lab-dr1
-/*
-* extension contains $imposeProfile named imposeProfile 1..*
-* extension[imposeProfile].valueCanonical = "http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab"
-*/
+* extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
+* extension[DiagnosticReportCompositionR5].valueReference 1..1
+* extension[DiagnosticReportCompositionR5].valueReference only Reference(CompositionLabReportEu)
 
 * subject only Reference(ChLabPatient)
 * result only Reference(ChLabObservationResultsLaboratory)
 * performer
+
+// ╭────────────── instance 1-tvt ──────────────────────────────╮
+// │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   |
+// ╰────────────────────────────────────────────────────────────╯
+
