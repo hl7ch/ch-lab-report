@@ -304,7 +304,7 @@ Usage: #inline
 * category[0] = $observation-category#laboratory
 // * category[+] = $v2-0074#CH "Chemistry"
 * category[+] = $loinc#18719-5 "Chemistry studies (set)"  // lab specialty
-* code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma"
+* code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma" // subset of loinc
 * code.text = "CRP [Mass/Vol]" // display name
 * subject = Reference(HansGuggindieluft)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"

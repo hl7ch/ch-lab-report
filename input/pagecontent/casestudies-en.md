@@ -98,7 +98,25 @@ Matching FHIR questionnaire that corresponds to this specification:
 [6-histopath.xml](https://fhir.ch/ig/ch-lab-report/Questionnaire-6-histopath.xml.html)
 [6-histopath.json](https://fhir.ch/ig/ch-lab-report/Questionnaire-6-histopath.json.html)
 
-### Case study 7: Laboratory test which need confirmation by a referrel laboratory
+### Case study 8: Laboratory test with a range of possible results, neonatal screening, Newborn conditions with positive markers [Identifier] in DBS; LOINC 57131-5
+
+<!--- Orphan deseases
+##################################################################################
+### TODO Case study, Set of 10 Results: 
+### - Phenylketonuria (PKU) SCTID: 190687004, LA12520-5 Classic phenylketonuria
+### - Hypothyroidism  SCTID: 40930008
+### - Medium-Chain Acyl-CoA Dehydrogenase deficiency(MCADD) SCTID: 128596003
+### - Congenital Adrenal Hyperplasia (CAH)  SCTID: 237751000
+### - Galactosaemia SCTID: 190745006
+### - Biotinidase Deficiency  SCTID: 8808004
+### - Cystic Fibrosis (CF)  SCTID: 190905008
+### - Glutaric acidemia type 1 (GA1)  SCTID: 22886006 type 2, SCTID: 76175005 type 1
+### - Maple syrup urine disease (MSUD)  SCTID: 27718001
+### - Severe Combined Immunodeficiency (SCID) and severe T-cell lymphopenia SCTID: 1179284005
+####################################################################################
+-->
+
+### Case study 8: Laboratory test which need confirmation by a referrel laboratory
 
 <!---
 ##################################################################################
@@ -106,10 +124,10 @@ Matching FHIR questionnaire that corresponds to this specification:
 ####################################################################################
 -->
 
-### Case study 8: Myeloic neoplasm
+### Case study 9: Myeloic neoplasm
 
 <!---
 ##################################################################################
-### TODO Case study, e.g. molecularpathological test
+### TODO Case study, e.g. molecularpathological test; probably out of scope
 ####################################################################################
 -->
