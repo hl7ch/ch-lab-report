@@ -100,7 +100,7 @@ Matching FHIR questionnaire that corresponds to this specification:
 
 ### Case study 8: Laboratory test with a range of possible results, neonatal screening, Newborn conditions with positive markers [Identifier] in DBS; LOINC 57131-5
 
-<!--- Orphan deseases
+<!--- TODO Orphan deseases 
 ##################################################################################
 ### TODO Case study, Set of 10 Results: 
 ### - Phenylketonuria (PKU) SCTID: 190687004, LA12520-5 Classic phenylketonuria

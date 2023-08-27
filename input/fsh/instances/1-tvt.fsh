@@ -180,8 +180,8 @@ Usage: #inline
 * performer.display = "Dr. Eva Erlenmeyer"
 
 * result = Reference(Observation-HbHt)
-* result = Reference(Observation-Hb)
-* result = Reference(Observation-Ht)
+//* result = Reference(Observation-Hb)
+//* result = Reference(Observation-Ht)
 * result = Reference(Observation-CRP)
 // * result = Reference(Observation-D-Dimer)
 
