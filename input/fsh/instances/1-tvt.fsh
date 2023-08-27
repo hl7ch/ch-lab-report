@@ -29,14 +29,14 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
 * entry[=].resource = Observation-CRP
 
-// * entry[+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"
-// * entry[=].resource = Observation-D-Dimer
+* entry[+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"
+* entry[=].resource = Observation-D-Dimer
 
 * entry[+].fullUrl = "urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74"
 * entry[=].resource = Blood
 
-// * entry[+].fullUrl = "urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8"
-// * entry[=].resource = Blood-coag
+* entry[+].fullUrl = "urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8"
+* entry[=].resource = Blood-coag
 
 * entry[+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
 * entry[=].resource = Serum
@@ -53,8 +53,8 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
 * entry[=].resource = ServiceRequest-CRP
 
-// * entry[+].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
-// * entry[=].resource = ServiceRequest-D-Dimer
+* entry[+].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
+* entry[=].resource = ServiceRequest-D-Dimer
 
 * entry[+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"
 * entry[=].resource = MarcMustermannArztpraxis
@@ -101,8 +101,8 @@ Usage: #inline
 // * extension[=].valueReference = Reference(ServiceRequest-Ht)
 * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
 * extension[=].valueReference = Reference(ServiceRequest-CRP)
-// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-// * extension[=].valueReference = Reference(ServiceRequest-D-Dimer)
+* extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
+* extension[=].valueReference = Reference(ServiceRequest-D-Dimer)
 
 * id = "3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 * identifier.system = "urn:ietf:rfc:3986"
@@ -140,9 +140,9 @@ Usage: #inline
 * section[=].code = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma" // (exactly)
 * section[=].entry = Reference(Observation-CRP)
 
-// * section[+].title = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]"    // Display Name
-// * section[=].code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay" // (exactly)
-// * section[=].entry = Reference(Observation-D-Dimer)
+* section[+].title = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]"    // Display Name
+* section[=].code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay" // (exactly)
+* section[=].entry = Reference(Observation-D-Dimer)
 
 
 
@@ -165,12 +165,14 @@ Usage: #inline
 // ╰─────────────────────────────────────────────────────────╯
 Instance: DiagnosticReport-1-tvt
 InstanceOf: ChLabDiagnosticReport
-Description: "Example of DiagnosticReport for Results in the Hematology lab specialty"
+Description: "Example of DiagnosticReport for sevaral lab results"
 Usage: #inline
 * id = "03464e4f-12f0-4d50-970d-f522b92a3f06"
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
-// * basedOn = Reference(ServiceRequest-HbHt-panel)
+* basedOn[0] = Reference(ServiceRequest-HbHt-panel)
+* basedOn[+] = Reference(ServiceRequest-CRP)
+* basedOn[+] = Reference(ServiceRequest-D-Dimer)
 * status = #final
 // * category = $v2-0074#HM "Hematology" // 
 // * code = $sct#4241000179101 "Laboratory report (record artifact)"  // in profile
@@ -183,7 +185,7 @@ Usage: #inline
 //* result = Reference(Observation-Hb)
 //* result = Reference(Observation-Ht)
 * result = Reference(Observation-CRP)
-// * result = Reference(Observation-D-Dimer)
+* result = Reference(Observation-D-Dimer)
 
 // ╭────────────── Patient 1-tvt ────╮
 // │ Scenario deep vein thrombosis   │
@@ -318,7 +320,6 @@ Usage: #inline
 * referenceRange.high.value = 10  // depends on method
 * referenceRange.high.unit = "mg/L"
 
-/*
 Instance: Observation-D-Dimer
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "Observation-D-Dimer"
@@ -341,7 +342,6 @@ Usage: #inline
 * specimen = Reference(Blood-coag)
 * referenceRange.high.value = 0.5  // depends on method
 * referenceRange.high.unit = "mg/L"
-*/
 
 // ╭───── specimen 1-tvt ─────╮
 // │ Blood-coag, Blood, Serum │
@@ -361,7 +361,6 @@ Usage: #inline
 * container.type = $sct#706053007 "General specimen container (physical object)"
 * note.text = "Specimen is grossly lipemic"
 
-/*
 Instance: Blood-coag
 InstanceOf: ChLabSpecimen
 Title: "Blood Sample Coagulation"
@@ -383,7 +382,6 @@ Usage: #inline
 * container.description = "S-Monovette grün"
 * container.type = $sct#702120003 "Blood collection Luer adaptor"
 * container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate"
-*/
 
 Instance: Serum
 InstanceOf: Specimen
@@ -551,7 +549,6 @@ Usage: #inline
 //* insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood) "Serum specimen"
 
-/*
 Instance: ServiceRequest-D-Dimer
 InstanceOf: ChLabServiceRequestLaboratoryOrder
 Title: "LabOrder Service Request for Hemoblobin "
@@ -586,7 +583,6 @@ Usage: #inline
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood-coag) "Blood Sample Coagulation"
-*/
 
 Instance: MarcMustermannArztpraxis
 InstanceOf: ChLabPractitionerRole
