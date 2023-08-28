@@ -126,22 +126,22 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report document is based on and fulfills  │
 // ╰────────────────────────────────────────────────────────────────────────────────────────╯
 
-* section[0].title = "Hemoglobin and Hematocrit panel (Bld)"    // Display Name
-* section[=].code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood" // (exactly)
+* section[0].title = "Hematology studies (set)"
+* section[=].code  = $loinc#18723-7 
 * section[=].entry = Reference(Observation-HbHt)
-* section[+].title = "Hemoglobin (Bld) [Mass/Vol]"    // Display Name
-* section[=].code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood" // (exactly)
-* section[=].entry = Reference(Observation-Hb)
-* section[+].title = "Hematocrit (Bld) [Volume fraction]"   // Display Name
-* section[=].code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood" // (exactly)
-* section[=].entry = Reference(Observation-Ht)
+* section[=].section[0].title = "Hemoglobin (Bld) [Mass/Vol]"    // Display Name
+* section[=].section[=].code = $loinc#18723-7 "Hematology studies (set)"
+* section[=].section[=].entry = Reference(Observation-Hb)
+* section[=].section[+].title = "Hematocrit (Bld) [Volume fraction]"   // Display Name
+* section[=].section[=].code = $loinc#18723-7 "Hematology studies (set)"
+* section[=].section[=].entry = Reference(Observation-Ht)
 
-* section[+].title = "CRP [Moles/Vol]"    // Display Name
-* section[=].code = $loinc#76485-2 "C reactive protein [Moles/volume] in Serum or Plasma" // (exactly)
+* section[+].title = "Chemistry studies (set)"
+* section[=].code  = $loinc#18719-5
 * section[=].entry = Reference(Observation-CRP)
 
-* section[+].title = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]"    // Display Name
-* section[=].code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay" // (exactly)
+* section[+].title = "Coagulation studies (set)"
+* section[=].code  = $loinc#18720-3
 * section[=].entry = Reference(Observation-D-Dimer)
 
 
