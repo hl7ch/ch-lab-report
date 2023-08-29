@@ -7,7 +7,7 @@ Description: "This profile constrains the Composition resource for the purpose o
 
 * obeys ch-lab-comp1
 
-* type = $loinc#11502-2
+* type = $sct#4241000179101 // Laboratory report (record artifact)
 
 * subject only Reference(ChLabPatient)
 * author only Reference(ChLabPractitionerRole or ChLabPractitioner)
