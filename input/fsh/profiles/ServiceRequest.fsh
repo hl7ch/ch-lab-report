@@ -6,6 +6,11 @@ Description: "This profile constrains the ServiceRequest resource for the purpos
 * . ^short = "CH Lab ServiceRequest: Laboratory Order"
 
 * obeys ch-lab-sr1
-
+* category = $sct#108252007 // Laboratory procedure (procedure)
 * subject only Reference(ChLabPatient)
 * specimen only Reference(ChLabSpecimen)
+
+Invariant: code-or-basedOn-required
+Description: "must have a code for what is beeing requested, or a basedOn element"
+Expression: "code.exists() or basedOn.exists()"
+Severity: #error
