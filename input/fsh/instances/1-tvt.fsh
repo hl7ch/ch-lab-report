@@ -108,7 +108,7 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
-// * type = $loinc#11502-2 "Laboratory report" => type already defined in profile from SNOMED CT
+* type = $loinc#11502-2 "Laboratory report"
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * date = "2023-03-09T14:30:00+01:00"
 * author = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052)
