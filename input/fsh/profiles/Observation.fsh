@@ -15,7 +15,7 @@ Description: "This profile constrains the Observation resource for the purpose o
 // │  has value[x]  or has hasMember   │
 // ╰───────────────────────────────────╯
 
-Invariant: singleTest-panel-required
+Invariant: singleTest-or-panel-required
 Description: "must have a value[x] or a hasMember element"
 Expression: "value[x].exists() or hasMember.exists()"
 Severity: #error
