@@ -6,8 +6,8 @@ Description: "This profile constrains the Composition resource for the purpose o
 * . ^short = "CH Lab Composition: Laboratory Report"
 
 * obeys ch-lab-comp1
-
-* type = $sct#4241000179101 // Laboratory report (record artifact)
+* category = $sct#4241000179101 // Laboratory report (record artifact)
+* type = $loinc#11502-2
 
 * subject only Reference(ChLabPatient)
 * author only Reference(ChLabPractitionerRole or ChLabPractitioner)
