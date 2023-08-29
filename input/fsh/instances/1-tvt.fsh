@@ -427,7 +427,7 @@ Usage: #inline
 
 * status = #active
 * intent = #original-order
-* category = $sct#108252007 "Laboratory procedure"
+// * category = $sct#108252007 "Laboratory procedure"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
@@ -463,7 +463,7 @@ Usage: #inline
 
 * status = #active
 * intent = #original-order
-* category = $sct#108252007 "Laboratory procedure"
+// * category = $sct#108252007 "Laboratory procedure"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
@@ -498,7 +498,7 @@ Usage: #inline
 
 * status = #active
 * intent = #original-order
-* category = $sct#108252007 "Laboratory procedure"
+// * category = $sct#108252007 "Laboratory procedure"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
@@ -532,7 +532,7 @@ Usage: #inline
 
 * status = #active
 * intent = #original-order
-* category = $sct#108252007 "Laboratory procedure"
+// * category = $sct#108252007 "Laboratory procedure"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
@@ -567,7 +567,7 @@ Usage: #inline
 
 * status = #active
 * intent = #original-order
-* category = $sct#108252007 "Laboratory procedure"
+// * category = $sct#108252007 "Laboratory procedure"
 
 // What is being ordered
 // * basedOn = Reference(SR-example)
