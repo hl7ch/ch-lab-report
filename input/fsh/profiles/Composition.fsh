@@ -10,11 +10,11 @@ Description: "This profile constrains the Composition resource for the purpose o
 * type = $loinc#11502-2
 
 * subject only Reference(ChLabPatient)
-* author only Reference(ChLabPractitionerRole or ChLabPractitioner)
+* author only Reference(ChLabPractitionerRole or ChLabPractitioner or CHCoreOrganization)
 * custodian only Reference(CHCoreOrganization)
 
 // ╭────────────── instance 1-tvt ──────────────────────────────╮
-// │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   |
+// │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   │
 // ╰────────────────────────────────────────────────────────────╯
 
 
