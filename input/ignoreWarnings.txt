@@ -7,3 +7,5 @@ The link 'http://hl7.org/fhir/R4/valueset-diagnostic-requests.html' for "here" c
 Found multiple matching profiles for Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef among choices: http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab, http://hl7.org/fhir/StructureDefinition/Patient
 
 Found multiple matching profiles for Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef among choices: http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-animal-eu-lab, http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab, http://hl7.org/fhir/StructureDefinition/Patient
+
+Entry 'urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
