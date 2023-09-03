@@ -676,24 +676,35 @@ Usage: #inline
 * qualification.code = $v2-0360#MD "Doctor of Medicine"
 
 Instance: LaborPipette
-InstanceOf: CHCoreOrganization
+InstanceOf: ChLabOrganization
 Title: "Labor Pipette"
-Description: "Laboratory Organization, refers to all Storyboards"
+Description: "Laboratory Organization executing Laboratory tests and sending Diagnostic Reports"
 Usage: #inline
 * id = "84483dc8-81d3-41cc-8d24-10c241279024"
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000234407"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000234407"
 * name = "Labor Pipette"
-* telecom[0].system = #phone
-* telecom[=].value = "+41223345566"
-* telecom[=].use = #work
-* telecom[+].system = #email
-* telecom[=].value = "info@labor-pipette.ch"
-* telecom[=].use = #work
-* telecom[+].system = #url
-* telecom[=].value = "http://www.labor-pipette.ch"
-* telecom[=].use = #work
+* telecom.system = #phone
+* telecom.value = "+41223345566"
+* telecom.use = #work
 * address.line = "Laborstrasse 23"
 * address.city = "Olten"
+* address.use = #work
 * address.postalCode = "4600"
 * address.country = "CH"
+* contact.name.use = #official
+* contact.name.text = "Dr. Eva Erlenmeyer"
+* contact.name.family = "Erlenmeyer"
+* contact.name.given = "Eva"
+* contact.name.prefix = "Dr. med."
+* contact.telecom.system = #phone
+* contact.telecom.value = "+41334445566"
+* contact.telecom.use = #work
+* contact.telecom.system = #email
+* contact.telecom.value = "eva.erlenmeyer@labor-pipette.ch"
+* contact.address.line[0] = "Laborstrasse 23"
+* contact.address.line[+] = "4. Stock"
+* contact.address.city = "Olten"
+* contact.address.postalCode = "4600"
+* contact.address.country = "CH"
+

@@ -6,6 +6,7 @@ Alias:   $v2-0203                     =   http://terminology.hl7.org/CodeSystem/
 Alias:   $v2-0360                     =   http://terminology.hl7.org/CodeSystem/v2-0360|2.7 // qualification Code
 Alias:   $v2-0371                     =   http://terminology.hl7.org/CodeSystem/v2-0371 // additivePreservative
 Alias:   $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916 // relevanteClinicalInformation
+Alias:   $organization-type             = http://terminology.hl7.org/CodeSystem/organization-type
 Alias:   $v3-ObservationInterpretation =  http://hl7.org/fhir/ValueSet/observation-interpretation
 Alias:   $referencerange-meaning =        http://hl7.org/fhir/ValueSet/referencerange-meaning
 Alias:   $observation-category =          http://terminology.hl7.org/CodeSystem/observation-category
