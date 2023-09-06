@@ -14,7 +14,7 @@ Description: "This profile constrains the Composition resource for the purpose o
 * custodian only Reference(CHCoreOrganization)
 
 // ╭────────────── instance 1-tvt ──────────────────────────────╮
-// │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   |
+// │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   │
 // ╰────────────────────────────────────────────────────────────╯
 
 

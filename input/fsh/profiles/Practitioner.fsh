@@ -12,3 +12,10 @@ Description: "This profile constrains the Practitioner resource for the purpose 
 * address.postalCode 1..
 * address.city 1..
 
+// https://www.fedlex.admin.ch/eli/cc/2015/892/de
+
+// ╭── Meldepflichtige Personen ───────╮
+// │  a. Vorname und Name;             │
+// │  b. Telefon- und Faxnummer;       │
+// │  c. Adresse und E-Mail-Adresse.   │
+// ╰───────────────────────────────────╯
