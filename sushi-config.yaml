@@ -30,7 +30,7 @@ contact:
 dependencies:
   ch.fhir.ig.ch-core: current
   hl7.fhir.uv.ips: current
-  hl7.fhir.eu.laboratory: current
+  hl7.fhir.eu.laboratory: dev
   hl7.fhir.extensions.r5: 4.0.1
   ch.fhir.ig.ch-lab-order: 2.0.0-ballot
 
