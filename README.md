@@ -3,8 +3,8 @@
 FHIR® Implementation Guide for Laboratory Reports in Switzerland.
 
 * [CI Build](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/master/index.html)
-* [CI Build](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/index.html)
-* [CI Build](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/1-tvt/index.html)
+* [CI Build develop](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/index.html)
+* [CI Build 1-tvt](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/1-tvt/index.html)
 
 ## International Scope
 
