@@ -68,8 +68,8 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052"
 * entry[=].resource = EvaErlenmeyer
 
-// * entry[+].fullUrl = "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"
-// * entry[=].resource = EvaErlenmeyerLaborPipette
+* entry[+].fullUrl = "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"
+* entry[=].resource = EvaErlenmeyerLaborPipette
 
 * entry[+].fullUrl = "urn:uuid:84483dc8-81d3-41cc-8d24-10c241279024"
 * entry[=].resource = LaborPipette
@@ -616,6 +616,10 @@ Usage: #inline
 * telecom[+].system = #email
 * telecom[=].value = "marc.mustermann@gruppenpraxis.ch"
 * telecom[=].use = #work
+* address.line = "Doktorgasse 2"
+* address.city = "Messen"
+* address.postalCode = "3254"
+* address.country = "CH"
 * qualification.code = $v2-0360#MD "Doctor of Medicine"
 
 Instance: Arztpraxis
@@ -674,15 +678,19 @@ Usage: #inline
 * telecom[=].value = "eva.erlenmeyer@labor-pipette.ch"
 * telecom[=].use = #work
 * qualification.code = $v2-0360#MD "Doctor of Medicine"
+* address.line = "Laborstrasse 23"
+* address.city = "Olten"
+* address.postalCode = "4600"
+* address.country = "CH"
 
 Instance: LaborPipette
-InstanceOf: CHCoreOrganization
+InstanceOf: ChLabOrganization
 Title: "Labor Pipette"
 Description: "Laboratory Organization, refers to all Storyboards"
 Usage: #inline
 * id = "84483dc8-81d3-41cc-8d24-10c241279024"
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000234407"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000234407"
 * name = "Labor Pipette"
 * telecom[0].system = #phone
 * telecom[=].value = "+41223345566"
