@@ -684,7 +684,7 @@ Usage: #inline
 * address.country = "CH"
 
 Instance: LaborPipette
-InstanceOf: ChLabOrganization
+InstanceOf: CHCoreOrganization
 Title: "Labor Pipette"
 Description: "Laboratory Organization executing Laboratory tests and sending Diagnostic Reports"
 Usage: #inline

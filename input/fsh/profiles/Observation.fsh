@@ -15,7 +15,7 @@ Description: "This profile constrains the Observation resource for the purpose o
 // │  has value[x]  or has hasMember   │
 // ╰───────────────────────────────────╯
 
-/*
+/*  fullfills eu-lab-1!
 Invariant: singleTest-or-panel-required
 Description: "must have a value or a hasMember element"
 Expression: "value.exists() or hasMember.exists()"
