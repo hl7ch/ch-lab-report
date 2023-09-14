@@ -317,6 +317,7 @@ Usage: #inline
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#83611000052104 "Turbidimetry technique (qualifier value)"
 * specimen = Reference(Serum)
+* device = Reference(TestkitCRP)
 * referenceRange.high.value = 10  // depends on method
 * referenceRange.high.unit = "mg/L"
 
