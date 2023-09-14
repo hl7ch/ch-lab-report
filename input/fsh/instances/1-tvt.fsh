@@ -68,8 +68,8 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052"
 * entry[=].resource = EvaErlenmeyer
 
-// * entry[+].fullUrl = "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"
-// * entry[=].resource = EvaErlenmeyerLaborPipette
+* entry[+].fullUrl = "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"
+* entry[=].resource = EvaErlenmeyerLaborPipette
 
 * entry[+].fullUrl = "urn:uuid:84483dc8-81d3-41cc-8d24-10c241279024"
 * entry[=].resource = LaborPipette
@@ -263,7 +263,7 @@ Usage: #inline
 // TODO values
 * valueQuantity = 10.8 'umol/L' "umol/L"
 // * interpretation = $v3-ObservationInterpretation#HH "Critical high"
-* method = $sct#70621000052105 "Spectrophotometric technique (qualifier value)"
+* method = $sct#83561000052101 "Photometry technique (qualifier value)"
 * specimen = Reference(Blood)
 * referenceRange.low.value = 8.7  // women 7.4
 * referenceRange.low.unit = "umol/L"
@@ -289,7 +289,7 @@ Usage: #inline
 // TODO values
 * valueQuantity = 48 '%' "%"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
-* method = $sct#85457002 "Centrifugation (procedure)"
+* method = $sct#703454003 "Centrifugation technique (qualifier value)"
 * specimen = Reference(Blood)
 * referenceRange.low.value = 42   // women 37
 * referenceRange.low.unit = "%"
@@ -315,8 +315,9 @@ Usage: #inline
 // TODO values
 * valueQuantity = 8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
-* method = $sct#60519005 "Turbidity test, quantitative (procedure)"
+* method = $sct#83611000052104 "Turbidimetry technique (qualifier value)"
 * specimen = Reference(Serum)
+* device = Reference(TestkitCRP)
 * referenceRange.high.value = 10  // depends on method
 * referenceRange.high.unit = "mg/L"
 
@@ -338,7 +339,8 @@ Usage: #inline
 // TODO values
 * valueQuantity = 8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
-* method = $sct#414464004 "Immunoassay method (procedure)"
+* method = $sct#726449005 "Immunoassay technique (qualifier value)"
+
 * specimen = Reference(Blood-coag)
 * referenceRange.high.value = 0.5  // depends on method
 * referenceRange.high.unit = "mg/L"
@@ -616,6 +618,10 @@ Usage: #inline
 * telecom[+].system = #email
 * telecom[=].value = "marc.mustermann@gruppenpraxis.ch"
 * telecom[=].use = #work
+* address.line = "Doktorgasse 2"
+* address.city = "Messen"
+* address.postalCode = "3254"
+* address.country = "CH"
 * qualification.code = $v2-0360#MD "Doctor of Medicine"
 
 Instance: Arztpraxis
@@ -674,26 +680,41 @@ Usage: #inline
 * telecom[=].value = "eva.erlenmeyer@labor-pipette.ch"
 * telecom[=].use = #work
 * qualification.code = $v2-0360#MD "Doctor of Medicine"
-
-Instance: LaborPipette
-InstanceOf: CHCoreOrganization
-Title: "Labor Pipette"
-Description: "Laboratory Organization, refers to all Storyboards"
-Usage: #inline
-* id = "84483dc8-81d3-41cc-8d24-10c241279024"
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000234407"
-* name = "Labor Pipette"
-* telecom[0].system = #phone
-* telecom[=].value = "+41223345566"
-* telecom[=].use = #work
-* telecom[+].system = #email
-* telecom[=].value = "info@labor-pipette.ch"
-* telecom[=].use = #work
-* telecom[+].system = #url
-* telecom[=].value = "http://www.labor-pipette.ch"
-* telecom[=].use = #work
 * address.line = "Laborstrasse 23"
 * address.city = "Olten"
 * address.postalCode = "4600"
 * address.country = "CH"
+
+Instance: LaborPipette
+InstanceOf: CHCoreOrganization
+Title: "Labor Pipette"
+Description: "Laboratory Organization executing Laboratory tests and sending Diagnostic Reports"
+Usage: #inline
+* id = "84483dc8-81d3-41cc-8d24-10c241279024"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000234407"
+* name = "Labor Pipette"
+* telecom.system = #phone
+* telecom.value = "+41223345566"
+* telecom.use = #work
+* address.line = "Laborstrasse 23"
+* address.city = "Olten"
+* address.use = #work
+* address.postalCode = "4600"
+* address.country = "CH"
+* contact.name.use = #official
+* contact.name.text = "Dr. Eva Erlenmeyer"
+* contact.name.family = "Erlenmeyer"
+* contact.name.given = "Eva"
+* contact.name.prefix = "Dr. med."
+* contact.telecom.system = #phone
+* contact.telecom.value = "+41334445566"
+* contact.telecom.use = #work
+* contact.telecom.system = #email
+* contact.telecom.value = "eva.erlenmeyer@labor-pipette.ch"
+* contact.address.line[0] = "Laborstrasse 23"
+* contact.address.line[+] = "4. Stock"
+* contact.address.city = "Olten"
+* contact.address.postalCode = "4600"
+* contact.address.country = "CH"
+

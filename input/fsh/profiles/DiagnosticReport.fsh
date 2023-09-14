@@ -12,9 +12,12 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 * category = $sct#4241000179101 // Laboratory report (record artifact)
 * code = $loinc#11502-2 // LABORATORY REPORT.TOTAL
 * code ^short = "Laboratory report"
+* subject 1..
 * subject only Reference(ChLabPatient)
+* result 1..
 * result only Reference(ChLabObservationResultsLaboratory)
-* performer
+* performer 1..
+* performer only Reference(CHCoreOrganization or ChLabPractitioner or ChLabPractitionerRole)
 
 // ╭────────────── instance 1-tvt ──────────────────────────────╮
 // │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   |

@@ -5,7 +5,7 @@ Title: "CH Lab ServiceRequest: Laboratory Order"
 Description: "This profile constrains the ServiceRequest resource for the purpose of laboratory orders in Switzerland."
 * . ^short = "CH Lab ServiceRequest: Laboratory Order"
 
-* obeys ch-lab-sr1
+* obeys ch-lab-sr1 and code-or-basedOn-required
 * category = $sct#108252007 // Laboratory procedure (procedure)
 * subject only Reference(ChLabPatient)
 * specimen only Reference(ChLabSpecimen)

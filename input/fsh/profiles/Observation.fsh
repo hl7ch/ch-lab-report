@@ -8,14 +8,9 @@ Description: "This profile constrains the Observation resource for the purpose o
 * obeys ch-lab-obs1
 
 * subject only Reference(ChLabPatient)
-* performer
+* performer only Reference(ChLabPractitionerRole or ChLabPractitioner or CHCoreOrganization)
 * specimen only Reference(ChLabSpecimen)
 
 // ╭───── nested observations ─────────╮
 // │  has value[x]  or has hasMember   │
 // ╰───────────────────────────────────╯
-
-Invariant: singleTest-or-panel-required
-Description: "must have a value[x] or a hasMember element"
-Expression: "value[x].exists() or hasMember.exists()"
-Severity: #error
