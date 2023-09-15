@@ -7,3 +7,4 @@ Description: "This profile constrains the Patient resource for the purpose of la
 
 * obeys ch-lab-pat1
 
+// * extension contains http://hl7.org/fhir/StructureDefinition/patient-birthPlace named birthPlace 0..1 MS

@@ -175,7 +175,7 @@ Usage: #inline
 * basedOn[+] = Reference(ServiceRequest-D-Dimer)
 * status = #final
 // * category = $v2-0074#HM "Hematology" // 
-* code = $loinc#11502-2 // LABORATORY REPORT.TOTAL
+* code = $sct#4241000179101 "Laboratory report (record artifact)"  // in profile
 * subject = Reference(HansGuggindieluft)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyerLaborPipette)
