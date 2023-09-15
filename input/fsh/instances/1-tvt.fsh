@@ -182,6 +182,7 @@ Usage: #inline
 * performer.display = "Dr. Eva Erlenmeyer"
 
 * result = Reference(Observation-HbHt)
+* result = Reference(Observation-Blood-Cell-Count)
 //* result = Reference(Observation-Hb)
 //* result = Reference(Observation-Ht)
 * result = Reference(Observation-CRP)
@@ -222,6 +223,28 @@ Usage: #inline
 * communication.language = urn:ietf:bcp:47#de-CH
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
+
+// ╭────── Observation Blood Cell Count ─────────╮
+// │ HbHt-panel, Hb, Ht ,CRP, D-Dimer │
+// ╰──────────────────────────────────╯
+Instance: Observation-BloodCellCount
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "Observation-Blood Cell Count"
+Description: "Example for Hemoblobine and Hemotocrit panel Observation"
+Usage: #inline
+* id = "8903c6a4-6547-437c-8f47-b68cfe959288"
+* status = #final
+* category[0] = $observation-category#laboratory
+// * category[+] = $v2-0074#HM "Hematology"
+* category[+] = $loinc#18723-7 "Hematology studies (set)"
+* code = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* code.text = "CBC panel Auto (Bld)"  // Display Name
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+// * specimen  = Reference(Blood) / better to define it in Member
+* hasMember = Reference(Observation-Hb)
+* hasMember = Reference(Observation-Ht)
 
 // ╭────── Observation 1-tvt ─────────╮
 // │ HbHt-panel, Hb, Ht ,CRP, D-Dimer │

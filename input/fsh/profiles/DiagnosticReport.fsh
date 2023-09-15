@@ -23,3 +23,10 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 // │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   |
 // ╰────────────────────────────────────────────────────────────╯
 
+Profile: ChLabCBC
+Parent: ChLabDiagnosticReport
+Id: cbc-diagnosticreport
+Title: "CH Lab DiagnosticReport: Complete Blood Count"
+Description: "This profile constrains the DiagnosticReport resource for the purpose of laboratory blood cell count reports in Switzerland."
+* . ^short = "CH Lab DiagnosticReport: Laboratory Report CBC"
+

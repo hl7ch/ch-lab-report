@@ -14,3 +14,17 @@ Description: "This profile constrains the Observation resource for the purpose o
 // ╭───── nested observations ─────────╮
 // │  has value[x]  or has hasMember   │
 // ╰───────────────────────────────────╯
+
+Profile: ChLabErythrocyteCount
+Parent: ChLabObservationResultsLaboratory
+Id: ch-lab-observation-results-ery
+Title: "CH Lab Observation Results: ErythrocyteCount"
+Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory erythrocyte count in Switzerland."
+* . ^short = "CH Lab Observation Results: Laboratory Erythrocyte Count"
+
+Profile: ChLabLeucocyteCount
+Parent: ChLabObservationResultsLaboratory
+Id: ch-lab-observation-results-leuc
+Title: "CH Lab Observation Results: LeucocyteCount"
+Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory leucocyte count in Switzerland."
+* . ^short = "CH Lab Observation Results: Laboratory Leucocyte Count"
