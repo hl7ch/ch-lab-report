@@ -1,3 +1,4 @@
+/*
 Extension: BirthSexExtension
 Id: example-extension
 Title: "Birth Sex Extension"
@@ -7,3 +8,4 @@ Description: "bla"
 * value[x] only code
 * valueCode 1..1
 * valueCode from BirthSex (required)
+*/
