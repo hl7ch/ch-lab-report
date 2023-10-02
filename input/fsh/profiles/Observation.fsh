@@ -7,6 +7,12 @@ Description: "This profile constrains the Observation resource for the purpose o
 
 * obeys ch-lab-obs1
 
+/*
+* extension contains $observation-r5 named ObservationR5 1..1
+* extension[ObservationR5].valueReference 1..1
+* extension[ObservationR5].valueReference only Reference(ObservationResultsLaboratoryEu)
+*/
+
 * subject only Reference(ChLabPatient)
 * performer only Reference(ChLabPractitionerRole or ChLabPractitioner or CHCoreOrganization)
 * specimen only Reference(ChLabSpecimen)

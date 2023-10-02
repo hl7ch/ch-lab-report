@@ -17,6 +17,7 @@ Alias:   $imposeProfile =                 http://hl7.org/fhir/StructureDefinitio
 Alias:   $dr-eu-lab =                     http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab
 Alias:   $obs-resultslab-eu-lab =         http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab
 Alias:   $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+Alias:   $observation-r5                = http://hl7.org/fhir/5.0/StructureDefinition/Observation
 
 // CH Core Structure Definitions
 // Alias:   $CHCoreOrganization =          http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization
