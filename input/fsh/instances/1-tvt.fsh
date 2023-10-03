@@ -159,7 +159,6 @@ Usage: #inline
 // * section[lab-subsections][=].code.text = "Hematocrit (Bld) [Volume fraction]" // Display name
 // * section[lab-subsections][=].entry = Reference(Observation-Ht)
 
-
 // ╭──────────── DiagnosticReport 1-tvt ─────────────────────╮
 // │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer │
 // ╰─────────────────────────────────────────────────────────╯
@@ -168,8 +167,13 @@ InstanceOf: ChLabDiagnosticReport
 Description: "Example of DiagnosticReport for sevaral lab results"
 Usage: #inline
 * id = "03464e4f-12f0-4d50-970d-f522b92a3f06"
+
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
+
+// * extension[DiagnosticReportResultR5].url = "http://example.com/catalog/ObservationDefinition/"
+* extension[DiagnosticReportResultR5].valueReference = Reference(Observation/8903c6a4-6547-437c-8f47-b68cfe959288)
+
 * basedOn[0] = Reference(ServiceRequest-HbHt-panel)
 * basedOn[+] = Reference(ServiceRequest-CRP)
 * basedOn[+] = Reference(ServiceRequest-D-Dimer)
