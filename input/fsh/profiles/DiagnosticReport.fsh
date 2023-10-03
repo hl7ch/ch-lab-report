@@ -7,13 +7,19 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 
 * obeys ch-lab-dr1
 
-* extension contains $diagnostic-report-observation-r5 named DiagnosticReportObservationR5 1..1
+// ╭─── Extension ───╮
+// │  CompositionR5  │
+// ╰─────────────────╯
+* extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
+* extension[DiagnosticReportCompositionR5]
+  * ^short = "Associated Lab Report Composition"
+  * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnoticReport with the Composition documenting this Laboratory Report."
+  *  valueReference 1..1
+  *  valueReference only Reference(CompositionLabReportEu)
 
-* extension[DiagnosticReportObservationR5]
-  * ^short = "Lab Report Observation"
-  * ^definition = "This extension implements the R5 instantiates Element. It allows to reference an ObservationDefinition for information about normal Range or Method or Devices from a catalog"
-  * valueReference 1..1
-  * valueReference only Reference(ObservationDefinition)
+// ╭─── Extension ───╮
+// │  ObservationR5  │
+// ╰─────────────────╯
 
 * category = $sct#4241000179101 // Laboratory report (record artifact)
 * code = $loinc#11502-2 // LABORATORY REPORT.TOTAL
