@@ -11,6 +11,7 @@ Alias:   $v3-ObservationInterpretation =  http://hl7.org/fhir/ValueSet/observati
 Alias:   $referencerange-meaning =        http://hl7.org/fhir/ValueSet/referencerange-meaning
 Alias:   $observation-category =          http://terminology.hl7.org/CodeSystem/observation-category
 Alias:   $labStudyType =                  http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab
+Alias:   $resource-types             =    http://hl7.org/fhir/fhir-types
 
 // External Structure Definitions
 Alias:   $imposeProfile =                 http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
