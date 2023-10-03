@@ -20,6 +20,14 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 // ╭─── Extension ───╮
 // │  ObservationR5  │
 // ╰─────────────────╯
+* extension contains $diagnostic-report-result-r5 named DiagnosticReportResultR5 0..1 //1..1
+
+* extension[DiagnosticReportResultR5]
+  * ^short = "Lab Report Result"
+  * ^definition = "This extension implements the R5 Result Element. It allows to reference an ObservationDefinition for information about normal Range or Method or Devices from a catalog"
+  * valueReference 0..1 //1..1
+  * valueReference only Reference(ChLabObservationResultsLaboratory)
+
 
 * category = $sct#4241000179101 // Laboratory report (record artifact)
 * code = $loinc#11502-2 // LABORATORY REPORT.TOTAL

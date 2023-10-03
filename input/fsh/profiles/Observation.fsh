@@ -7,11 +7,9 @@ Description: "This profile constrains the Observation resource for the purpose o
 
 * obeys ch-lab-obs1
 
-/*
-* extension contains ObservationInstantiates named instantiates 0..1  //1..1
-* extension[instantiates].valueReference 0..1  //1..1
-* extension[instantiates].valueReference only Reference(Observation)
-*/
+* extension contains $observation-instantiates-r5 named ObservationInstantiates 0..1  //1..1
+* extension[ObservationInstantiates].valueReference 0..1  //1..1
+* extension[ObservationInstantiates].valueReference only Reference(ObservationDefinition)
 
 * subject only Reference(ChLabPatient)
 * performer only Reference(ChLabPractitionerRole or ChLabPractitioner or CHCoreOrganization)
