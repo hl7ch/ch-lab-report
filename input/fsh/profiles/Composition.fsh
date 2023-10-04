@@ -13,9 +13,8 @@ Description: "This profile constrains the Composition resource for the purpose o
 * author only Reference(ChLabPractitionerRole or ChLabPractitioner or CHCoreOrganization)
 * custodian only Reference(CHCoreOrganization)
 
-// ╭────────────── extension ──────────╮
-// │  basedOnOrderOrRequisition        │
-// ╰───────────────────────────────────╯
-
+// ╭──────── extension ──────────╮
+// │  basedOnOrderOrRequisition  │
+// ╰─────────────────────────────╯
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition].valueReference only Reference(ChLabServiceRequestLaboratoryOrder)
