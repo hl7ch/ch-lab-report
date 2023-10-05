@@ -16,5 +16,5 @@ Description: "This profile constrains the Composition resource for the purpose o
 // ╭──────── extension ──────────╮
 // │  basedOnOrderOrRequisition  │
 // ╰─────────────────────────────╯
-* extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
-* extension[basedOn-order-or-requisition].valueReference only Reference(ChLabServiceRequestLaboratoryOrder)
+* extension contains CompositionBasedOnOrderOrRequisition named based-on-order-or-requisition-r5 0..*
+* extension[based-on-order-or-requisition-r5].valueReference only Reference(ChLabServiceRequestLaboratoryOrder)
