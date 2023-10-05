@@ -83,7 +83,7 @@ Usage: #example
 // ╰─────────────────────────────────────────────────────────╯
 
 Instance: Composition-1-tvt
-InstanceOf: ChLabComposition
+InstanceOf: ChLabReportComposition
 Description: "Example of Composition in the scenario of deep vein thrombosis"
 Usage: #inline
 
@@ -93,16 +93,19 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report document is based on and fulfills  │
 // ╰────────────────────────────────────────────────────────────────────────────────────────╯
 
-* extension[0].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-* extension[=].valueReference = Reference(ServiceRequest-HbHt-panel)
+
+//  extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-HbHt-panel)
+
+// * extension[0].url = "http://fhir.ch/ig/ch-lab-report/StructureDefinition/composition-basedOn-order-or-requisition"
+// * extension[=].valueReference = Reference(ServiceRequest-HbHt-panel)
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition" // no dependent SR !!!
 // * extension[=].valueReference = Reference(ServiceRequest-Hb)
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
 // * extension[=].valueReference = Reference(ServiceRequest-Ht)
-* extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-* extension[=].valueReference = Reference(ServiceRequest-CRP)
-* extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-* extension[=].valueReference = Reference(ServiceRequest-D-Dimer)
+// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
+// * extension[=].valueReference = Reference(ServiceRequest-CRP)
+// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
+// * extension[=].valueReference = Reference(ServiceRequest-D-Dimer)
 
 * id = "3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 * identifier.system = "urn:ietf:rfc:3986"

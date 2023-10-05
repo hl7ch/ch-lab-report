@@ -10,6 +10,8 @@ Description: "This profile constrains the ServiceRequest resource for the purpos
 * subject only Reference(ChLabPatient)
 * specimen only Reference(ChLabSpecimen)
 
+* extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
+
 Invariant: code-or-basedOn-required
 Description: "must have a code for what is beeing requested, or a basedOn element"
 Expression: "code.exists() or basedOn.exists()"

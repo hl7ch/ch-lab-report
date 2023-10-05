@@ -1,4 +1,4 @@
-Profile: ChLabComposition
+Profile: ChLabReportComposition
 Parent: CHCoreComposition
 Id: ch-lab-composition
 Title: "CH Lab Composition: Laboratory Report"
@@ -13,8 +13,8 @@ Description: "This profile constrains the Composition resource for the purpose o
 * author only Reference(ChLabPractitionerRole or ChLabPractitioner or CHCoreOrganization)
 * custodian only Reference(CHCoreOrganization)
 
-// ╭────────────── instance 1-tvt ──────────────────────────────╮
-// │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   │
-// ╰────────────────────────────────────────────────────────────╯
-
-
+// ╭──────── extension ──────────╮
+// │  basedOnOrderOrRequisition  │
+// ╰─────────────────────────────╯
+* extension contains CompositionBasedOnOrderOrRequisition named based-on-order-or-requisition-r5 0..*
+* extension[based-on-order-or-requisition-r5].valueReference only Reference(ChLabServiceRequestLaboratoryOrder)
