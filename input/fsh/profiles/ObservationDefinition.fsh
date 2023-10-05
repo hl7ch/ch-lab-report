@@ -1,14 +1,21 @@
-/*
+
 Profile: ChLabObservationDefinition
 Parent: ObservationDefinition
 Id: ch-lab-observation-ActivityDefinition
-Description: "Contains the Identifier for the Test-Kit and the Analyzer"
+Description: "Contains the Identifier for the Test-Kit and the Analyzer, the methods, the ranges"
 
-* extension contains $observationDefinition-r5 named ObservationDefinitionR5 0..1  //1..1
-* extension[ObservationDefinitionR5].valueReference 0..1  //1..1
-* extension[ObservationDefinitionR5].valueReference only Reference(ObservationDefinition)
+// ╭─── Extension ────────╮
+// │  DeviceDefinitionR5  │
+// ╰──────────────────────╯
+* extension contains $observationDefinition-device-r5 named ObservationDefinitionDeviceR5 0..1  //1..1
+* extension[ObservationDefinitionDeviceR5]
+  * ^short = "Associated Lab Report Composition"
+  * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnoticReport with the Composition documenting this Laboratory Report."
+  *  valueReference 0..1  //1..1
+  *  valueReference only Reference(DeviceDefinition)
 
-*/
+
+
 /*
 Instance: b87458ca-b29a-4244-b347-39111caf9ef2
 InstanceOf: ObservationDefinition
