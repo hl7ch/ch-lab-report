@@ -17,11 +17,13 @@ Alias:   $resource-types             =    http://hl7.org/fhir/fhir-types
 Alias:   $imposeProfile =                 http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
 Alias:   $dr-eu-lab =                     http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab
 Alias:   $obs-resultslab-eu-lab =         http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab
-Alias:   $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
 
+// Extensions
+Alias:   $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
+Alias:   $observation-instantiates-r5  =  http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.instantiates[x]
 
 // Alias:   $diagnostic-report-result-r5  =  http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.result
-Alias:   $observation-instantiates-r5  =  http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.instantiates[x]
+
 Alias:   $observationDefinition-device-r5 =  http://hl7.org/fhir/5.0/StructureDefinition/extension-ObservationDefinition.device
 
 // CH Core Structure Definitions

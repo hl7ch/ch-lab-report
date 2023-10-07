@@ -111,7 +111,8 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
-// * type = $sct#4241000179101 "Laboratory report (record artifact)"
+// * type = $loinc#11502-2 "Laboratory report"
+* category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * date = "2023-03-09T14:30:00+01:00"
 * author = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052)
@@ -170,7 +171,8 @@ InstanceOf: ChLabDiagnosticReport
 Description: "Example of DiagnosticReport for sevaral lab results"
 Usage: #inline
 * id = "03464e4f-12f0-4d50-970d-f522b92a3f06"
-
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
 
@@ -181,8 +183,8 @@ Usage: #inline
 * basedOn[+] = Reference(ServiceRequest-CRP)
 * basedOn[+] = Reference(ServiceRequest-D-Dimer)
 * status = #final
-// * category = $v2-0074#HM "Hematology" // 
 // * code = $sct#4241000179101 "Laboratory report (record artifact)"  // in profile
+* category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
 * subject = Reference(HansGuggindieluft)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyerLaborPipette)
