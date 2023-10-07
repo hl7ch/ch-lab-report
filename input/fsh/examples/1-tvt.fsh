@@ -175,7 +175,7 @@ Usage: #inline
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
 
 // * extension[DiagnosticReportResultR5].url = "http://example.com/catalog/ObservationDefinition/"
-* extension[DiagnosticReportResultR5].valueReference = Reference(Observation/8903c6a4-6547-437c-8f47-b68cfe959288)
+// * extension[DiagnosticReportResultR5].valueReference = Reference(Observation/8903c6a4-6547-437c-8f47-b68cfe959288)
 
 * basedOn[0] = Reference(ServiceRequest-HbHt-panel)
 * basedOn[+] = Reference(ServiceRequest-CRP)
