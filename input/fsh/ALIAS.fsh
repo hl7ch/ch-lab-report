@@ -25,6 +25,7 @@ Alias:   $observation-instantiates-r5  =  http://hl7.org/fhir/5.0/StructureDefin
 // Alias:   $diagnostic-report-result-r5  =  http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.result
 
 Alias:   $observationDefinition-device-r5 =  http://hl7.org/fhir/5.0/StructureDefinition/extension-ObservationDefinition.device
+Alias:   $observationDefinition-specimen-r5 =  http://hl7.org/fhir/5.0/StructureDefinition/extension-ObservationDefinition.specimen
 
 // CH Core Structure Definitions
 // Alias:   $CHCoreOrganization =          http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization
