@@ -14,7 +14,8 @@ Description: "This profile constrains the Observation resource for the purpose o
 * extension[observation-instantiates-r5]
   * ^short = "instantiate observationDefinition r5"
   * ^definition = "This extension implements the R5 instantiates[x] element, to link the ch-lab-result to the observationDefinition r5"
-  * valueReference 0..1  //1..1
+  * extension.valueCanonical MS
+  * extension.valueReference MS
   // * valueReference only Reference(ObservationDefinition)
 
 * subject only Reference(ChLabPatient)

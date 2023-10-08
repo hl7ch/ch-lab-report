@@ -10,7 +10,7 @@ Description: "Contains the Identifier for the Test-Kit and the Analyzer, the met
 * extension[ObservationDefinitionSpecimenR5]
   * ^short = "Associated Lab Report SpecimenDefinitions"
   * ^definition = "This extension implements the R5 specimen element. It allow to link this DiagnoticReport with the SpecimenDefinition R5 documenting this Laboratory Report."
-  *  valueReference 1..1
+  *  valueReference 0..1 MS
   *  valueReference only Reference(ChLabSpecimenDefinition)
 
 // ╭─── Extension ────────╮
@@ -22,7 +22,6 @@ Description: "Contains the Identifier for the Test-Kit and the Analyzer, the met
   * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnoticReport with the Composition documenting this Laboratory Report."
   *  valueReference 1..1
   *  valueReference only Reference(ChLabDeviceTestKit or ChLabDeviceDefinition)
-
-* code 1..1
-* method 1..1
+// * code MS
+* method MS // Indicates the mechanism used to perform the observation.
 
