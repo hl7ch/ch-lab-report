@@ -21,7 +21,7 @@ Description: "Contains the Identifier for the Test-Kit and the Analyzer, the met
   * ^short = "Associated Lab Report Devices or DeviceDefinitions"
   * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnoticReport with the Composition documenting this Laboratory Report."
   *  valueReference 1..1
-  *  valueReference only Reference(ChLabDevice or ChLabDeviceDefinition)
+  *  valueReference only Reference(ChLabDeviceTestKit or ChLabDeviceDefinition)
 
 * code 1..1
 * method 1..1
