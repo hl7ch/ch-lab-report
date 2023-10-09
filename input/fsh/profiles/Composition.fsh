@@ -7,7 +7,7 @@ Description: "This profile constrains the Composition resource for the purpose o
 
 * obeys ch-lab-comp1
 * category = $sct#4241000179101 // Laboratory report (record artifact)
-* type = $loinc#11502-2
+* type = $loinc#11502-2 //  "Laboratory report"
 
 * subject only Reference(ChLabPatient)
 * author only Reference(ChLabPractitionerRole or ChLabPractitioner or CHCoreOrganization)
@@ -18,3 +18,6 @@ Description: "This profile constrains the Composition resource for the purpose o
 // ╰─────────────────────────────╯
 * extension contains CompositionBasedOnOrderOrRequisition named based-on-order-or-requisition-r5 0..*
 * extension[based-on-order-or-requisition-r5].valueReference only Reference(ChLabServiceRequestLaboratoryOrder)
+
+// * attester 1..1
+// * useContext 1..1
