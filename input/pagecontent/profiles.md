@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD001 MD033 MD041 -->
+
 ### Resource Profiles
 
 {% include list-profiles.xhtml %}
