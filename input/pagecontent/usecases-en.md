@@ -2,4 +2,4 @@
 
 ### Use Cases english
 
-{% include img.html img="observation.svg" caption="Fig. 6: Resource Overview" width="80%" %}
+{% include img.html img="test.svg" caption="Fig. 6: Resource Overview" width="80%" %}
