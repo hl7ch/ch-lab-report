@@ -1,6 +1,6 @@
-Profile: ChLabDeviceDefinition      // Test-Kit or Analyzer
+Profile: ChLabReportDeviceDefinition  // Test-Kit or Analyzer
 Parent: DeviceDefinition
-Id: ch-lab-device-definition
+Id: ch-lab-report-device-definition
 Description: "Holds udiDeviceIdentifier from Test , regulatoryIdentifier,"
 
 * udiDeviceIdentifier 1..1

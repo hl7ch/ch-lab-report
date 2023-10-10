@@ -1,9 +1,9 @@
 // ╭── Device Profile ────╮
 // │   Device Analyzer    │
 // ╰──────────────────────╯
-Profile: ChLabDeviceTestKit
+Profile: ChLabReportDeviceTestKit
 Parent: Device
-Id: ch-lab-device-test-kit
+Id: ch-lab-report-device-test-kit
 Description: "Holds Laboratory Test-Kit"
 * definition MS
 * udiCarrier 0..1 MS

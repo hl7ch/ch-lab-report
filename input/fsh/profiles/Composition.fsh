@@ -1,6 +1,6 @@
 Profile: ChLabReportComposition
 Parent: CHCoreComposition
-Id: ch-lab-composition
+Id: ch-lab-report-composition
 Title: "CH Lab Composition: Laboratory Report"
 Description: "This profile constrains the Composition resource for the purpose of laboratory test reports in Switzerland."
 * . ^short = "CH Lab Composition: Laboratory Report"
@@ -17,7 +17,7 @@ Description: "This profile constrains the Composition resource for the purpose o
 // │  basedOnOrderOrRequisition  │
 // ╰─────────────────────────────╯
 * extension contains CompositionBasedOnOrderOrRequisition named based-on-order-or-requisition-r5 0..*
-* extension[based-on-order-or-requisition-r5].valueReference only Reference(ChLabServiceRequestLaboratoryOrder)
+* extension[based-on-order-or-requisition-r5].valueReference only Reference(ChLabReportServiceRequest)
 
 // * attester 1..1
 // * useContext 1..1

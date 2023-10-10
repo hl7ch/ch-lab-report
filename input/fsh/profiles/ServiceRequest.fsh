@@ -1,6 +1,6 @@
-Profile: ChLabServiceRequestLaboratoryOrder
+Profile: ChLabReportServiceRequest
 Parent: ServiceRequest
-Id: ch-lab-servicerequest-laboratory-order
+Id: ch-lab-report-servicerequest
 Title: "CH Lab ServiceRequest: Laboratory Order"
 Description: "This profile constrains the ServiceRequest resource for the purpose of laboratory orders in Switzerland."
 * . ^short = "CH Lab ServiceRequest: Laboratory Order"
@@ -8,7 +8,7 @@ Description: "This profile constrains the ServiceRequest resource for the purpos
 * obeys ch-lab-sr1 and code-or-basedOn-required
 * category = $sct#108252007 // Laboratory procedure (procedure)
 * subject only Reference(ChLabPatient)
-* specimen only Reference(ChLabSpecimen)
+* specimen only Reference(ChLabReportSpecimen)
 
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 

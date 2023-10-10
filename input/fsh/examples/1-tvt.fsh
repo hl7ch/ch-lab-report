@@ -1,5 +1,5 @@
 Instance: LabResultReport-1-tvt
-InstanceOf: ChLabDocument
+InstanceOf: ChLabReportDocument
 Description: "Example of a Laboratory Report for scenario deep vein thrombosis"
 Usage: #example
 * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"
@@ -358,7 +358,7 @@ Usage: #inline
 // │ Blood-coag, Blood, Serum │
 // ╰──────────────────────────╯
 Instance: Blood
-InstanceOf: ChLabSpecimen
+InstanceOf: ChLabReportSpecimen
 Title: "Blood Sample"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #inline
@@ -373,7 +373,7 @@ Usage: #inline
 * note.text = "Specimen is grossly lipemic"
 
 Instance: Blood-coag
-InstanceOf: ChLabSpecimen
+InstanceOf: ChLabReportSpecimen
 Title: "Blood Sample Coagulation"
 Description: "Example for Specimen for haemostatic Examination"
 Usage: #inline
@@ -418,7 +418,7 @@ Usage: #inline
 
 
 Instance: ServiceRequest-HbHt-panel
-InstanceOf: ChLabServiceRequestLaboratoryOrder
+InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hemoglobine & Hematocrit panel"
 Description: "Example for Service Request of Hemoglobin and Hematocrit"
 Usage: #inline
@@ -457,7 +457,7 @@ Usage: #inline
 
 
 Instance: ServiceRequest-Hb
-InstanceOf: ChLabServiceRequestLaboratoryOrder
+InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hemoblobin "
 Description: "Example for Service Request of Hemoglobin Concentration in Blood"
 Usage: #inline
@@ -492,7 +492,7 @@ Usage: #inline
 * specimen[0] = Reference(Blood) "Serum specimen"
 
 Instance: ServiceRequest-Ht
-InstanceOf: ChLabServiceRequestLaboratoryOrder
+InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hematocrit"
 Description: "Example for Service Request of Hematocrit in Blood"
 Usage: #inline
@@ -526,7 +526,7 @@ Usage: #inline
 * specimen[0] = Reference(Blood) "Blood sample"
 
 Instance: ServiceRequest-CRP
-InstanceOf: ChLabServiceRequestLaboratoryOrder
+InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hemoblobin "
 Description: "Example for Service Request of Hemoglobin Concentration in Blood"
 Usage: #inline
@@ -561,7 +561,7 @@ Usage: #inline
 * specimen[0] = Reference(Blood) "Serum specimen"
 
 Instance: ServiceRequest-D-Dimer
-InstanceOf: ChLabServiceRequestLaboratoryOrder
+InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hemoblobin "
 Description: "Example for Service Request of Hemoglobin Concentration in Blood"
 Usage: #inline
