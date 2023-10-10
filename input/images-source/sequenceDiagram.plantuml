@@ -1,5 +1,5 @@
 @startuml observation
-title SequeceDiagram
+title SequenceDiagram as example
 hide footbox
 participant "1st actor" as DocumentSource
 participant "2nd actor" as DocumentRecipient
