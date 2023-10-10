@@ -6,4 +6,3 @@ Description: "This profile constrains the Patient resource for the purpose of la
 * . ^short = "CH Lab Patient"
 
 * obeys ch-lab-pat1
-
