@@ -32,18 +32,19 @@ dependencies:
   hl7.fhir.uv.ips: current
   hl7.fhir.eu.laboratory: current
   hl7.fhir.extensions.r5: 4.0.1
-  ch.fhir.ig.ch-lab-order: 2.0.0-ballot
-
+  
 pages:
   index.md:
     title: Home
-  casestudies.md:
-    casestudies-en.md:
-      title: Case Studies in English
-    casestudies-ge.md:
-      title: Case Studies in German
-    casestudies-fr.md:
-      title: Case Studies in French
+  usecases.md:
+    usecases-en.md:
+      title: Use Cases in English
+    usecases-fr.md:
+      title: Use Cases in French
+    usecases-ge.md:
+      title: Use Cases in German
+    usecases-it.md:
+      title: Use Cases in Italian
   profiles.md:
     title: Profiles
   extensions.md:
@@ -60,10 +61,10 @@ pages:
 menu:
   Table of contents: toc.html
   Home: index.html
-  Case Studies: #casestudies.html
-    Case Studies English: casestudies-en.html
-    Case Studies German: casestudies-ge.html
-    Case Studies French: casestudies-fr.html
+  Use Cases: #usecases.html
+    Use Cases English: usecases-en.html
+    Use Cases German: usecases-ge.html
+    Use Cases French: usecases-fr.html
   Profiles: profiles.html
   Terminology: terminology.html
   Artifacts: artifacts.html

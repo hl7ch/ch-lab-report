@@ -1,5 +1,5 @@
 Instance: LabResultReport-1-tvt
-InstanceOf: ChLabDocument
+InstanceOf: ChLabReportDocument
 Description: "Example of a Laboratory Report for scenario deep vein thrombosis"
 Usage: #example
 * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"
@@ -83,7 +83,7 @@ Usage: #example
 // ╰─────────────────────────────────────────────────────────╯
 
 Instance: Composition-1-tvt
-InstanceOf: ChLabComposition
+InstanceOf: ChLabReportComposition
 Description: "Example of Composition in the scenario of deep vein thrombosis"
 Usage: #inline
 
@@ -93,22 +93,26 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report document is based on and fulfills  │
 // ╰────────────────────────────────────────────────────────────────────────────────────────╯
 
-* extension[0].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-* extension[=].valueReference = Reference(ServiceRequest-HbHt-panel)
+
+//  extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-HbHt-panel)
+
+// * extension[0].url = "http://fhir.ch/ig/ch-lab-report/StructureDefinition/composition-basedOn-order-or-requisition"
+// * extension[=].valueReference = Reference(ServiceRequest-HbHt-panel)
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition" // no dependent SR !!!
 // * extension[=].valueReference = Reference(ServiceRequest-Hb)
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
 // * extension[=].valueReference = Reference(ServiceRequest-Ht)
-* extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-* extension[=].valueReference = Reference(ServiceRequest-CRP)
-* extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-* extension[=].valueReference = Reference(ServiceRequest-D-Dimer)
+// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
+// * extension[=].valueReference = Reference(ServiceRequest-CRP)
+// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
+// * extension[=].valueReference = Reference(ServiceRequest-D-Dimer)
 
 * id = "3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
-// * type = $sct#4241000179101 "Laboratory report (record artifact)"
+// * type = $loinc#11502-2 "Laboratory report"
+// * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * date = "2023-03-09T14:30:00+01:00"
 * author = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052)
@@ -159,7 +163,6 @@ Usage: #inline
 // * section[lab-subsections][=].code.text = "Hematocrit (Bld) [Volume fraction]" // Display name
 // * section[lab-subsections][=].entry = Reference(Observation-Ht)
 
-
 // ╭──────────── DiagnosticReport 1-tvt ─────────────────────╮
 // │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer │
 // ╰─────────────────────────────────────────────────────────╯
@@ -168,14 +171,20 @@ InstanceOf: ChLabDiagnosticReport
 Description: "Example of DiagnosticReport for sevaral lab results"
 Usage: #inline
 * id = "03464e4f-12f0-4d50-970d-f522b92a3f06"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
+
+// * extension[DiagnosticReportResultR5].url = "http://example.com/catalog/ObservationDefinition/"
+// * extension[DiagnosticReportResultR5].valueReference = Reference(Observation/8903c6a4-6547-437c-8f47-b68cfe959288)
+
 * basedOn[0] = Reference(ServiceRequest-HbHt-panel)
 * basedOn[+] = Reference(ServiceRequest-CRP)
 * basedOn[+] = Reference(ServiceRequest-D-Dimer)
 * status = #final
-// * category = $v2-0074#HM "Hematology" // 
 // * code = $sct#4241000179101 "Laboratory report (record artifact)"  // in profile
+// * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
 * subject = Reference(HansGuggindieluft)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyerLaborPipette)
@@ -349,7 +358,7 @@ Usage: #inline
 // │ Blood-coag, Blood, Serum │
 // ╰──────────────────────────╯
 Instance: Blood
-InstanceOf: ChLabSpecimen
+InstanceOf: ChLabReportSpecimen
 Title: "Blood Sample"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #inline
@@ -364,7 +373,7 @@ Usage: #inline
 * note.text = "Specimen is grossly lipemic"
 
 Instance: Blood-coag
-InstanceOf: ChLabSpecimen
+InstanceOf: ChLabReportSpecimen
 Title: "Blood Sample Coagulation"
 Description: "Example for Specimen for haemostatic Examination"
 Usage: #inline
@@ -409,7 +418,7 @@ Usage: #inline
 
 
 Instance: ServiceRequest-HbHt-panel
-InstanceOf: ChLabServiceRequestLaboratoryOrder
+InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hemoglobine & Hematocrit panel"
 Description: "Example for Service Request of Hemoglobin and Hematocrit"
 Usage: #inline
@@ -448,7 +457,7 @@ Usage: #inline
 
 
 Instance: ServiceRequest-Hb
-InstanceOf: ChLabServiceRequestLaboratoryOrder
+InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hemoblobin "
 Description: "Example for Service Request of Hemoglobin Concentration in Blood"
 Usage: #inline
@@ -483,7 +492,7 @@ Usage: #inline
 * specimen[0] = Reference(Blood) "Serum specimen"
 
 Instance: ServiceRequest-Ht
-InstanceOf: ChLabServiceRequestLaboratoryOrder
+InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hematocrit"
 Description: "Example for Service Request of Hematocrit in Blood"
 Usage: #inline
@@ -517,7 +526,7 @@ Usage: #inline
 * specimen[0] = Reference(Blood) "Blood sample"
 
 Instance: ServiceRequest-CRP
-InstanceOf: ChLabServiceRequestLaboratoryOrder
+InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hemoblobin "
 Description: "Example for Service Request of Hemoglobin Concentration in Blood"
 Usage: #inline
@@ -552,7 +561,7 @@ Usage: #inline
 * specimen[0] = Reference(Blood) "Serum specimen"
 
 Instance: ServiceRequest-D-Dimer
-InstanceOf: ChLabServiceRequestLaboratoryOrder
+InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hemoblobin "
 Description: "Example for Service Request of Hemoglobin Concentration in Blood"
 Usage: #inline
