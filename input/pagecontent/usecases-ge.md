@@ -53,6 +53,8 @@ Die Patientin Klebsiella Keller, geb. 12. 12. 1975, ist schon seit längerer Zei
 
 * Betrieb (Name, Adresse, Betriebs-Nummer)
 * Anzahl Arbeitnehmende für das Biologische Monitoring
-* durchzuführende Untersuchungen (z.B. Arsen, Blei, Quecksilber, Mandelsäure) Die Betriebe erhalten von der AMV eine Liste inkl. Etiketten mit den betroffenen Arbeitnehmenden. Hier nehmen wir als Beispiel für einen Arbeitnehmer Beat Borer, geb. 6. 6. 1986. Das Labor bedruckt die Auftragsformulare mit der Betriebsnummer und sendet den Betrieben die notwendige Anzahl Urinbecher und Auftragsformulare zu. Im Betrieb werden Auftragsformulare und Urinbecher mit den von der AMV gelieferten Etiketten versehen und an die Arbeitnehmenden abgegeben. Die Proben inkl. Auftragsformular werden vom Betrieb ans Labor gesendet.
+* durchzuführende Untersuchungen (z.B. Arsen, Blei, Quecksilber, Mandelsäure)
+
+Die Betriebe erhalten von der AMV eine Liste inkl. Etiketten mit den betroffenen Arbeitnehmenden. Hier nehmen wir als Beispiel für einen Arbeitnehmer Beat Borer, geb. 6. 6. 1986. Das Labor bedruckt die Auftragsformulare mit der Betriebsnummer und sendet den Betrieben die notwendige Anzahl Urinbecher und Auftragsformulare zu. Im Betrieb werden Auftragsformulare und Urinbecher mit den von der AMV gelieferten Etiketten versehen und an die Arbeitnehmenden abgegeben. Die Proben inkl. Auftragsformular werden vom Betrieb ans Labor gesendet.
 
 Dazu passende FHIR Laborbefunde -> TODO Ergebnisse Labor kommen als 1 Befund auf Repository
