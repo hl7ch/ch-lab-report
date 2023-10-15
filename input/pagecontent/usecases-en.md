@@ -1,5 +1,5 @@
 <!-- markdownlint-disable MD001 MD041 -->
 
-### Use Cases english
+### Diagram
 
-{% include img.html img="test.svg" caption="Fig. 6: Resource Overview" width="80%" %}
+{% include img.html img="Resource Overview.svg" caption="Fig. 6: Resource Overview" width="100%" %}
