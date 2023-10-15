@@ -19,5 +19,7 @@ Description: "This profile constrains the Composition resource for the purpose o
 * extension contains CompositionBasedOnOrderOrRequisition named based-on-order-or-requisition-r5 0..*
 * extension[based-on-order-or-requisition-r5].valueReference only Reference(ChLabReportServiceRequest)
 
-// * attester 1..1
-// * useContext 1..1
+* extension contains InformationRecipient named information-recipient 0..*
+* extension[information-recipient]
+* text ^short = "Narrative text"
+* insert ReportIdentifierRule
