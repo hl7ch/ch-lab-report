@@ -6,6 +6,13 @@ Description: "This profile constrains the Bundle resource for the purpose of lab
 * . ^short = "CH Lab Document: Laboratory Report"
 
 * obeys ch-lab-bdl1
+* obeys one-comp
+* obeys one-dr
+* obeys dr-comp-identifier
+* obeys dr-comp-type
+* obeys dr-comp-category
+* obeys dr-comp-subj
+* obeys dr-comp-enc
 
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
