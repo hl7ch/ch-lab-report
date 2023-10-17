@@ -22,9 +22,9 @@ Description: "Holds Laboratory Test-Kit"
 // ╭── Device Profile ────╮
 // │   Device Analyzer    │
 // ╰──────────────────────╯
-Profile: ChLabDeviceAnalyzer
+Profile: ChLabReportDeviceAnalyzer
 Parent: Device
-Id: ch-lab-device-analyzer
+Id: ch-lab-report-device-analyzer
 Description: "Holds Laboratory Analyzer"
 
 * udiCarrier 0..1 MS

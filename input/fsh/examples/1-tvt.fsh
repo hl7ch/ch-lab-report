@@ -86,6 +86,7 @@ Instance: Composition-1-tvt
 InstanceOf: ChLabReportComposition
 Description: "Example of Composition in the scenario of deep vein thrombosis"
 Usage: #inline
+* id = "3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 
 // ╭────────────── Extension ───────────────────────────────────────────────────────────────╮
 // │ provides a link to the order [(Reference(ServiceRequest)]                              │
@@ -93,9 +94,7 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report document is based on and fulfills  │
 // ╰────────────────────────────────────────────────────────────────────────────────────────╯
 
-
 //  extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-HbHt-panel)
-
 // * extension[0].url = "http://fhir.ch/ig/ch-lab-report/StructureDefinition/composition-basedOn-order-or-requisition"
 // * extension[=].valueReference = Reference(ServiceRequest-HbHt-panel)
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition" // no dependent SR !!!
@@ -107,7 +106,6 @@ Usage: #inline
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
 // * extension[=].valueReference = Reference(ServiceRequest-D-Dimer)
 
-* id = "3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
@@ -131,8 +129,9 @@ Usage: #inline
 // ╰────────────────────────────────────────────────────────────────────────────────────────╯
 
 * section[0].title = "Hematology studies (set)"
-* section[=].code  = $loinc#18723-7 
+* section[=].code  = $loinc#18723-7
 * section[=].entry = Reference(Observation-HbHt)
+
 * section[=].section[0].title = "Hemoglobin (Bld) [Mass/Vol]"    // Display Name
 * section[=].section[=].code = $loinc#18723-7 "Hematology studies (set)"
 * section[=].section[=].entry = Reference(Observation-Hb)
