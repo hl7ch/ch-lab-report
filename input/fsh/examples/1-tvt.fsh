@@ -128,26 +128,32 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report document is based on and fulfills  │
 // ╰────────────────────────────────────────────────────────────────────────────────────────╯
 
-* section[0].title = "Hematology studies (set)"
-* section[=].code  = $loinc#18723-7
-* section[=].entry = Reference(Observation-HbHt)
+* section[0].title = "Laboratory examinations"
+* section[=].code  = $loinc#26436-6 "Laboratory studies (set)"
+* section.code.text = "Laboratory studies"
+// * section[=].entry = Reference(Observation-HbHt)
 
-* section[=].section[0].title = "Hemoglobin (Bld) [Mass/Vol]"    // Display Name
-* section[=].section[=].code = $loinc#18723-7 "Hematology studies (set)"
-* section[=].section[=].entry = Reference(Observation-Hb)
-* section[=].section[+].title = "Hematocrit (Bld) [Volume fraction]"   // Display Name
-* section[=].section[=].code = $loinc#18723-7 "Hematology studies (set)"
-* section[=].section[=].entry = Reference(Observation-Ht)
+* section[=].section[+].title = "Hematology studies (set)"
+* section[=].section[=].code =  $loinc#18723-7
+* section[=].section[=].entry = Reference(Observation-HbHt)
+
+// * section[=].section[0].title = "Hemoglobin (Bld) [Mass/Vol]"    // Display Name
+// * section[=].section[=].code  = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
+// * section[=].section[=].entry = Reference(Observation-Hb)
 
 * section[+].title = "Chemistry studies (set)"
 * section[=].code  = $loinc#18719-5
-* section[=].entry = Reference(Observation-CRP)
+
+* section[=].section[0].title = "Chemistry studies (set)"
+* section[=].section[=].code  = $loinc#18719-5
+* section[=].section[=].entry = Reference(Observation-CRP)
 
 * section[+].title = "Coagulation studies (set)"
 * section[=].code  = $loinc#18720-3
-* section[=].entry = Reference(Observation-D-Dimer)
 
-
+* section[=].section[0].title = "Coagulation studies (set)"
+* section[=].section[=].code  = $loinc#18720-3
+* section[=].section[=].entry = Reference(Observation-D-Dimer)
 
 // * section[lab-subsections].title = "Hemoglobin + Hematocrit panel lab result report"
 // * section[lab-subsections].code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
@@ -189,11 +195,11 @@ Usage: #inline
 * performer = Reference(EvaErlenmeyerLaborPipette)
 * performer.display = "Dr. Eva Erlenmeyer"
 
-* result = Reference(Observation-HbHt)
-//* result = Reference(Observation-Hb)
-//* result = Reference(Observation-Ht)
-* result = Reference(Observation-CRP)
-* result = Reference(Observation-D-Dimer)
+* result[0] = Reference(Observation-HbHt)
+* result[+] = Reference(Observation-Hb)
+* result[+] = Reference(Observation-Ht)
+* result[+] = Reference(Observation-CRP)
+* result[+] = Reference(Observation-D-Dimer)
 
 // ╭────────────── Patient 1-tvt ────╮
 // │ Scenario deep vein thrombosis   │
@@ -259,7 +265,6 @@ Title: "Observation-Hb"
 Description: "Example for Hemoblobine Observation"
 Usage: #inline
 * id = "93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
-
 * status = #final
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18723-7 "Hematology studies (set)"
