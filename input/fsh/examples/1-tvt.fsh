@@ -195,6 +195,10 @@ Usage: #inline
 * performer = Reference(EvaErlenmeyerLaborPipette)
 * performer.display = "Dr. Eva Erlenmeyer"
 
+* specimen[0] = Reference(Blood)
+* specimen[+] = Reference(Blood-coag)
+* specimen[+] = Reference(Serum)
+
 * result[0] = Reference(Observation-HbHt)
 * result[+] = Reference(Observation-Hb)
 * result[+] = Reference(Observation-Ht)
@@ -399,7 +403,7 @@ Usage: #inline
 * container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate"
 
 Instance: Serum
-InstanceOf: Specimen
+InstanceOf: ChLabReportSpecimen
 Title: "Serum Sample"
 Description: "Example for Specimen of Serum from venous blood"
 Usage: #inline

@@ -7,17 +7,6 @@ Description: "This profile constrains the Bundle resource for the purpose of lab
 
 * obeys ch-lab-bdl1
 
-/*
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
-
-* entry ^slicing.discriminator[0].type = #type
-* entry ^slicing.discriminator[0].path = "resource"
-* entry ^slicing.ordered = false
-* entry ^slicing.rules = #open
-*/
-
 * entry contains
     DiagnosticReport 1..1 and
     Observation 0..* and
