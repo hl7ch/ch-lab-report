@@ -11,13 +11,13 @@ Usage: #example
 * entry[Composition].fullUrl = "urn:uuid:3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 * entry[Composition].resource = Composition-1-tvt
 
-* entry[1].fullUrl = "urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06"
-* entry[=].resource = DiagnosticReport-1-tvt
+* entry[DiagnosticReport].fullUrl = "urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06"
+* entry[DiagnosticReport].resource = DiagnosticReport-1-tvt
 
-* entry[+].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"
-* entry[=].resource = HansGuggindieluft
+* entry[Patient].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"
+* entry[Patient].resource = HansGuggindieluft
 
-* entry[+].fullUrl = "urn:uuid:8903c6a4-6547-437c-8f47-b68cfe959288"
+* entry[3].fullUrl = "urn:uuid:8903c6a4-6547-437c-8f47-b68cfe959288"
 * entry[=].resource = Observation-HbHt
 
 * entry[+].fullUrl = "urn:uuid:93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
@@ -88,11 +88,12 @@ Description: "Example of Composition in the scenario of deep vein thrombosis"
 Usage: #inline
 * id = "3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 
-// ╭────────────── Extension ───────────────────────────────────────────────────────────────╮
-// │ provides a link to the order [(Reference(ServiceRequest)]                              │
-// │               or requisition [ServiceRequest.requisition]                              │
-// │ (i.e., 'Request.groupIdentifier')] that this report document is based on and fulfills  │
-// ╰────────────────────────────────────────────────────────────────────────────────────────╯
+// ╭────────────── Extension ────────────────────────────────────╮
+// │ provides a link to the order [(Reference(ServiceRequest)]   │
+// │               or requisition [ServiceRequest.requisition]   │
+// │ (i.e., 'Request.groupIdentifier')] that this report         │
+// │                document is based on and fulfills            │
+// ╰─────────────────────────────────────────────────────────────╯
 
 //  extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-HbHt-panel)
 // * extension[0].url = "http://fhir.ch/ig/ch-lab-report/StructureDefinition/composition-basedOn-order-or-requisition"
