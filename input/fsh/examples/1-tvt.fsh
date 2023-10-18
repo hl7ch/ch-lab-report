@@ -537,8 +537,8 @@ Usage: #inline
 
 Instance: ServiceRequest-CRP
 InstanceOf: ChLabReportServiceRequest
-Title: "LabOrder Service Request for Hemoblobin "
-Description: "Example for Service Request of Hemoglobin Concentration in Blood"
+Title: "LabOrder Service Request for CRP "
+Description: "Example for Service Request of C reactive protein in Serum or Plasma"
 Usage: #inline
 * id = "8d98f9d1-581b-4495-93aa-4a522fa30a6c"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
@@ -572,8 +572,8 @@ Usage: #inline
 
 Instance: ServiceRequest-D-Dimer
 InstanceOf: ChLabReportServiceRequest
-Title: "LabOrder Service Request for Hemoblobin "
-Description: "Example for Service Request of Hemoglobin Concentration in Blood"
+Title: "LabOrder Service Request for D-Dimer "
+Description: "Example for Service Request of Fibrin D-dimer FEU in Blood"
 Usage: #inline
 * id = "e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
