@@ -122,38 +122,24 @@ Usage: #inline
 * attester.party = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) // Who attested the report
 * custodian = Reference(Organization/84483dc8-81d3-41cc-8d24-10c241279024)
 
-// ╭────────────── Composition.sections ──────────────────────────────────────────────────╮
-// │ sections contain all References of Observations                             │
+// ╭────────────── Composition.sections ────────────────────────────────────────────────────╮
+// │            sections contain all References of Observations                             │
 // │               or requisition [ServiceRequest.requisition]                              │
 // │ (i.e., 'Request.groupIdentifier')] that this report document is based on and fulfills  │
 // ╰────────────────────────────────────────────────────────────────────────────────────────╯
 
-* section[0].title = "Laboratory examinations"
-* section[=].code  = $loinc#26436-6 "Laboratory studies (set)"
-* section.code.text = "Laboratory studies"
-// * section[=].entry = Reference(Observation-HbHt)
-
-* section[=].section[+].title = "Hematology studies (set)"
-* section[=].section[=].code =  $loinc#18723-7
-* section[=].section[=].entry = Reference(Observation-HbHt)
-
-// * section[=].section[0].title = "Hemoglobin (Bld) [Mass/Vol]"    // Display Name
-// * section[=].section[=].code  = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
-// * section[=].section[=].entry = Reference(Observation-Hb)
-
-// * section[+].title = "Chemistry studies (set)"
-// * section[=].code  = $loinc#18719-5
-
-* section[=].section[0].title = "Chemistry studies (set)"
-* section[=].section[=].code  = $loinc#18719-5
-* section[=].section[=].entry = Reference(Observation-CRP)
-
-//* section[+].title = "Coagulation studies (set)"
-//* section[=].code  = $loinc#18720-3
-
-* section[=].section[0].title = "Coagulation studies (set)"
-* section[=].section[=].code  = $loinc#18720-3
-* section[=].section[=].entry = Reference(Observation-D-Dimer)
+* section[lab-subsections].title = "Laboratory examinations"
+* section[lab-subsections].code  = $loinc#26436-6 "Laboratory studies (set)"
+* section[lab-subsections].code.text = "Laboratory studies"
+* section[lab-subsections].section[+].title = "Hematology studies (set)"
+* section[lab-subsections].section[=].code =  $loinc#18723-7
+* section[lab-subsections].section[=].entry = Reference(Observation-HbHt)
+* section[lab-subsections].section[0].title = "Chemistry studies (set)"
+* section[lab-subsections].section[=].code  = $loinc#18719-5
+* section[lab-subsections].section[=].entry = Reference(Observation-CRP)
+* section[lab-subsections].section[0].title = "Coagulation studies (set)"
+* section[lab-subsections].section[=].code  = $loinc#18720-3
+* section[lab-subsections].section[=].entry = Reference(Observation-D-Dimer)
 
 // * section[lab-subsections].title = "Hemoglobin + Hematocrit panel lab result report"
 // * section[lab-subsections].code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"

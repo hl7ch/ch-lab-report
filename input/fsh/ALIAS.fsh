@@ -17,6 +17,8 @@ Alias:   $resource-types             =    http://hl7.org/fhir/fhir-types
 Alias:   $imposeProfile =                 http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
 Alias:   $dr-eu-lab =                     http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab
 Alias:   $obs-resultslab-eu-lab =         http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab
+Alias:   $codeableConcept-uv-ips        = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+
 
 // Extensions
 Alias:   $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
