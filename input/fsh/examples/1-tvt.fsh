@@ -8,10 +8,10 @@ Usage: #example
 * type = #document
 * timestamp = "2023-03-09T14:30:00+01:00"
 
-* entry[0].fullUrl = "urn:uuid:3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
-* entry[=].resource = Composition-1-tvt
+* entry[Composition].fullUrl = "urn:uuid:3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
+* entry[Composition].resource = Composition-1-tvt
 
-* entry[+].fullUrl = "urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06"
+* entry[1].fullUrl = "urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06"
 * entry[=].resource = DiagnosticReport-1-tvt
 
 * entry[+].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"

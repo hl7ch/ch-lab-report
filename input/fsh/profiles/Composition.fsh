@@ -61,11 +61,6 @@ Description: "This profile constrains the Composition resource for the purpose o
   * entry 0..0
   * insert SectionCommonRules
   * section 1..
-/*     * code 1..
-    * code only $codeableConcept-uv-ips */
     * insert SectionElementsRules
     * code from LabStudyTypes (preferred)
-/*        * text ^short = "Text summary of the section, for human interpretation."
-    * entry 1..
-    * entry only Reference (ObservationResultsLaboratoryEu)
-    * section 0..0 */
+
