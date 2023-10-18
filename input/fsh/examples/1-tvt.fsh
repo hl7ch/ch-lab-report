@@ -141,15 +141,15 @@ Usage: #inline
 // * section[=].section[=].code  = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 // * section[=].section[=].entry = Reference(Observation-Hb)
 
-* section[+].title = "Chemistry studies (set)"
-* section[=].code  = $loinc#18719-5
+// * section[+].title = "Chemistry studies (set)"
+// * section[=].code  = $loinc#18719-5
 
 * section[=].section[0].title = "Chemistry studies (set)"
 * section[=].section[=].code  = $loinc#18719-5
 * section[=].section[=].entry = Reference(Observation-CRP)
 
-* section[+].title = "Coagulation studies (set)"
-* section[=].code  = $loinc#18720-3
+//* section[+].title = "Coagulation studies (set)"
+//* section[=].code  = $loinc#18720-3
 
 * section[=].section[0].title = "Coagulation studies (set)"
 * section[=].section[=].code  = $loinc#18720-3
