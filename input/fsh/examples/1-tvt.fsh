@@ -17,62 +17,52 @@ Usage: #example
 * entry[Patient].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"
 * entry[Patient].resource = HansGuggindieluft
 
-* entry[3].fullUrl = "urn:uuid:8903c6a4-6547-437c-8f47-b68cfe959288"
-* entry[=].resource = Observation-HbHt
+* entry[Observation][+].fullUrl = "urn:uuid:8903c6a4-6547-437c-8f47-b68cfe959288"
+* entry[Observation][=].resource = Observation-HbHt
+* entry[Observation][+].fullUrl = "urn:uuid:93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
+* entry[Observation][=].resource = Observation-Hb
+* entry[Observation][+].fullUrl = "urn:uuid:6329ad78-c886-44f8-9471-3783cc990ff0"
+* entry[Observation][=].resource = Observation-Ht
+* entry[Observation][+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
+* entry[Observation][=].resource = Observation-CRP
+* entry[Observation][+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"
+* entry[Observation][=].resource = Observation-D-Dimer
 
-* entry[+].fullUrl = "urn:uuid:93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
-* entry[=].resource = Observation-Hb
+* entry[Specimen][+].fullUrl = "urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74"
+* entry[Specimen][=].resource = Blood
+* entry[Specimen][+].fullUrl = "urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8"
+* entry[Specimen][=].resource = Blood-coag
+* entry[Specimen][+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
+* entry[Specimen][=].resource = Serum
 
-* entry[+].fullUrl = "urn:uuid:6329ad78-c886-44f8-9471-3783cc990ff0"
-* entry[=].resource = Observation-Ht
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666" 
+* entry[ServiceRequest][=].resource = ServiceRequest-HbHt-panel
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
+* entry[ServiceRequest][=].resource = ServiceRequest-Hb
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
+* entry[ServiceRequest][=].resource = ServiceRequest-Ht
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
+* entry[ServiceRequest][=].resource = ServiceRequest-CRP
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
+* entry[ServiceRequest][=].resource = ServiceRequest-D-Dimer
 
-* entry[+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
-* entry[=].resource = Observation-CRP
+* entry[PractitionerRole][+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"
+* entry[PractitionerRole][=].resource = MarcMustermannArztpraxis
 
-* entry[+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"
-* entry[=].resource = Observation-D-Dimer
+* entry[Practitioner][+].fullUrl = "urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37"
+* entry[Practitioner][=].resource = MarcMustermann
 
-* entry[+].fullUrl = "urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74"
-* entry[=].resource = Blood
+* entry[Organization][+].fullUrl = "urn:uuid:32c4c990-cedb-4999-998d-bab1d55db49f"
+* entry[Organization][=].resource = Arztpraxis
 
-* entry[+].fullUrl = "urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8"
-* entry[=].resource = Blood-coag
+* entry[Practitioner][+].fullUrl = "urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052"
+* entry[Practitioner][=].resource = EvaErlenmeyer
 
-* entry[+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
-* entry[=].resource = Serum
+* entry[PractitionerRole][+].fullUrl = "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"
+* entry[PractitionerRole][=].resource = EvaErlenmeyerLaborPipette
 
-* entry[+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"  // entry[10]
-* entry[=].resource = ServiceRequest-HbHt-panel
-
-* entry[+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
-* entry[=].resource = ServiceRequest-Hb
-
-* entry[+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
-* entry[=].resource = ServiceRequest-Ht
-
-* entry[+].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
-* entry[=].resource = ServiceRequest-CRP
-
-* entry[+].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
-* entry[=].resource = ServiceRequest-D-Dimer
-
-* entry[+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"
-* entry[=].resource = MarcMustermannArztpraxis
-
-* entry[+].fullUrl = "urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37"
-* entry[=].resource = MarcMustermann
-
-* entry[+].fullUrl = "urn:uuid:32c4c990-cedb-4999-998d-bab1d55db49f"
-* entry[=].resource = Arztpraxis
-
-* entry[+].fullUrl = "urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052"
-* entry[=].resource = EvaErlenmeyer
-
-* entry[+].fullUrl = "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"
-* entry[=].resource = EvaErlenmeyerLaborPipette
-
-* entry[+].fullUrl = "urn:uuid:84483dc8-81d3-41cc-8d24-10c241279024"
-* entry[=].resource = LaborPipette
+* entry[Organization][+].fullUrl = "urn:uuid:84483dc8-81d3-41cc-8d24-10c241279024"
+* entry[Organization][=].resource = LaborPipette
 
 // ╭────────────── instance 1-tvt ──────────────────────────────╮
 // │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   │
