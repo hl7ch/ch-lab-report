@@ -20,12 +20,15 @@ Usage: #example
 * entry[Observation][+].fullUrl = "urn:uuid:0ad0810e-6eb4-11ee-b962-0242ac120002"
 * entry[Observation][=].resource = Observation-CBC
 
-// * entry[Observation][+].fullUrl = "urn:uuid:8903c6a4-6547-437c-8f47-b68cfe959288"
-// * entry[Observation][=].resource = Observation-HbHt
-* entry[Observation][+].fullUrl = "urn:uuid:93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
-* entry[Observation][=].resource = Observation-Hb
-* entry[Observation][+].fullUrl = "urn:uuid:6329ad78-c886-44f8-9471-3783cc990ff0"
-* entry[Observation][=].resource = Observation-Ht
+* entry[Observation][+].fullUrl = "urn:uuid:5c1ceea1-2751-4ddc-afb5-4c28037ba1be"
+* entry[Observation][=].resource = Observation-WBC
+
+* entry[Observation][+].fullUrl = "urn:uuid:04ec7690-a1e8-4fdf-be4f-6c92949e948a"
+* entry[Observation][=].resource = Observation-RBC
+
+// * entry[Observation][+].fullUrl = "urn:uuid:6329ad78-c886-44f8-9471-3783cc990ff0"
+// * entry[Observation][=].resource = Observation-Ht
+
 * entry[Observation][+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
 * entry[Observation][=].resource = Observation-CRP
 * entry[Observation][+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"
@@ -128,10 +131,10 @@ Usage: #inline
 * section[lab-subsections].section[0].title = "Hematology studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#58410-2
 * section[lab-subsections].section[=].entry = Reference(Observation-CBC)
-//  * section[lab-subsections].section[+].title = "Hematology studies (set)"
-//  * section[lab-subsections].section[=].code  = $loinc#18723-7
-//  * section[lab-subsections].section[=].entry = Reference(Observation-HbHt)
-* section[lab-subsections].section[+].title = "Chemistry studies (set)"
+* section[lab-subsections].section[+].title = "Hematology studies (set)"
+// * section[lab-subsections].section[=].code  = $loinc#6690-2
+// * section[lab-subsections].section[=].entry = Reference(Observation-WBC)
+// * section[lab-subsections].section[+].title = "Chemistry studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#18719-5
 * section[lab-subsections].section[=].entry = Reference(Observation-CRP)
 * section[lab-subsections].section[+].title = "Coagulation studies (set)"
@@ -183,9 +186,9 @@ Usage: #inline
 * specimen[+] = Reference(Serum)
 
 * result[0] = Reference(Observation-CBC)
+// * result[+] = Reference(Observation-WBC)
+// * result[+] = Reference(Observation-Ht)
 
-* result[+] = Reference(Observation-Hb)
-* result[+] = Reference(Observation-Ht)
 * result[+] = Reference(Observation-CRP)
 * result[+] = Reference(Observation-D-Dimer)
 
@@ -246,8 +249,8 @@ Usage: #inline
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 
-* hasMember = Reference(Observation-Hb)
-* hasMember = Reference(Observation-Ht)
+* hasMember = Reference(Observation-WBC)
+* hasMember = Reference(Observation-RBC)
 
 /*
 Instance: Observation-HbHt
@@ -269,7 +272,7 @@ Usage: #inline
 * hasMember = Reference(Observation-Hb)
 * hasMember = Reference(Observation-Ht)
 */
-
+/*
 Instance: Observation-Hb
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "Observation-Hb"
@@ -294,32 +297,61 @@ Usage: #inline
 * referenceRange.high.value = 11.2    // women 9.9
 * referenceRange.high.unit = "umol/L"
 // * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-
-Instance: Observation-Ht
+*/
+Instance: Observation-WBC
 InstanceOf: ChLabObservationResultsLaboratory
-Title: "Ht-Observation"
-Description: "Example for Hemocrite Observation"
+Title: "Leukocytes [#/volume] in Blood by Automated count"  // LOINC Long Common Name
+Description: "Leukocytes or white blood cells (WBCs) are immune cells that fight infection, neoplasms and other inflammatory conditions, and mediate allergic responses. There are five types of WBCs normally present in the circulation that are all derived from a similar stem cell in the bone marrow. The five type of WBCs are divided into two groups based on the presence or absence of granules in the cytoplasm. The granulocytes include the neutrophils, basophils and eosinophils. The non-granulocytes include the lymphocytes and the monocytes. The neutrophils fight infection by ingesting and digesting bacteria. Eosinophils and basophils respond to allergic reactions and are capable of ingesting antigen-antibody complexes. Monocytes phagocytose bacteria and release interferon to stimulate the immune system. Lymphocytes are divided into T-cells and B-cells. T-cell immunity is cellular and involves the activation of phagocytes and B-cell immunity uses antibodies to fight infection. Both elevated and low leukocyte counts can be markers of infection and malignancy, and low leukocyte counts are associated with a variety of primary and secondary immunodeficiencies, depending on the WBC type(s) that are out of range. (Mosby's manual of diagnostic and laboratory tests, Kathleen Deska Pagana; Timothy James Pagana, Elsevier St. Louis, Mo ©2010)"  // LOINC Part Description
 Usage: #inline
-* id = "6329ad78-c886-44f8-9471-3783cc990ff0"
+* id = "5c1ceea1-2751-4ddc-afb5-4c28037ba1be"
 * status = #final
 * category[0] = $observation-category#laboratory
-// * category[+] = $v2-0074#HM "Hematology"
 * category[+] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
-* code.text = "Hematocrit (Bld) [Volume fraction]" // display text
+* code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
+* code.text = "WBC Auto (Bld) [#/Vol]" // LOINC Display Name
 * subject = Reference(HansGuggindieluft)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
-// TODO values
-* valueQuantity = 48 '%' "%"
-//* interpretation = $v3-ObservationInterpretation#HH "Critical high"
-* method = $sct#703454003 "Centrifugation technique (qualifier value)"
-* specimen = Reference(Blood)
-* referenceRange.low.value = 42   // women 37
-* referenceRange.low.unit = "%"
-* referenceRange.high.value = 50  // women 45
-* referenceRange.high.unit = "%"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
+
+* valueQuantity = 10 '10*3/uL' "10*3/uL"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.unit = "10*3/uL"
+* referenceRange.low.value = 4.5 
+* referenceRange.low.unit = "10*3/uL"
+* referenceRange.high.value = 11
+* referenceRange.high.unit = "10*3/uL"
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"
+* referenceRange.type.text = "Normal Range"
+
+
+Instance: Observation-RBC
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "Erythrocytes [#/volume] in Blood by Automated count"  // LOINC Long Common Name
+Description: "Erythrocytes or red blood cells (RBCs) are the cells in the circulation that carry oxygen to and remove carbon dioxide from the tissues throughout the body. They are produced in the bone marrow in response to erythropoietin where they transition through six stages over a seven day period. When they are released into the circulation, their nucleus has been extruded and they measure 6-8 microns in diameter. The lifespan of RBCs is about 120 days. When the RBC ages the cell membrane becomes less pliable and tears as they cell travels through the micro vessels of the body. The damaged RBCs are removed from the circulation by the spleen. Variations in number, shape and size of RBCs are indicative of many diseases and disorders. There are many factors that may lead to decreased numbers of RBCs including hemorrhage, hemolysis, iron or vitamin deficiency, marrow failure and more. Larger than normal RBCs may be indicative of liver disease while smaller than normal RBCs are seen in thalassemias and other anemias.(Mosby's manual of diagnostic and laboratory tests, Kathleen Deska Pagana; Timothy James Pagana, Elsevier St. Louis, Mo ©2010)"  // LOINC Part Description
+Usage: #inline
+* id = "04ec7690-a1e8-4fdf-be4f-6c92949e948a"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18723-7 "Hematology studies (set)"
+* code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
+* code.text =  "RBC Auto (Bld) [#/Vol]"  // LOINC Display Name
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* valueQuantity = 4.58 '10*6/uL' "10*6/uL"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.unit = "10*6/uL"
+//* referenceRange.low = 4.1 '10*6/uL' "10*6/uL"
+//* referenceRange.high = 6.1 '10*6/uL' "10*6/uL"
+
+* referenceRange.low.value = 4.1
+* referenceRange.low.unit = "10*6/uL"
+* referenceRange.high.value = 6.1
+* referenceRange.high.unit = "10*6/uL"
+
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"
+* referenceRange.type.text = "Normal Range"
+
 
 Instance: Observation-CRP
 InstanceOf: ChLabObservationResultsLaboratory
