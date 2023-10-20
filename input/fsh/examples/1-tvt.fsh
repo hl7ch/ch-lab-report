@@ -20,8 +20,8 @@ Usage: #example
 * entry[Observation][+].fullUrl = "urn:uuid:0ad0810e-6eb4-11ee-b962-0242ac120002"
 * entry[Observation][=].resource = Observation-CBC
 
-* entry[Observation][+].fullUrl = "urn:uuid:8903c6a4-6547-437c-8f47-b68cfe959288"
-* entry[Observation][=].resource = Observation-HbHt
+// * entry[Observation][+].fullUrl = "urn:uuid:8903c6a4-6547-437c-8f47-b68cfe959288"
+// * entry[Observation][=].resource = Observation-HbHt
 * entry[Observation][+].fullUrl = "urn:uuid:93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
 * entry[Observation][=].resource = Observation-Hb
 * entry[Observation][+].fullUrl = "urn:uuid:6329ad78-c886-44f8-9471-3783cc990ff0"
@@ -128,9 +128,9 @@ Usage: #inline
 * section[lab-subsections].section[0].title = "Hematology studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#58410-2
 * section[lab-subsections].section[=].entry = Reference(Observation-CBC)
-* section[lab-subsections].section[+].title = "Hematology studies (set)"
-* section[lab-subsections].section[=].code  = $loinc#18723-7
-* section[lab-subsections].section[=].entry = Reference(Observation-HbHt)
+//  * section[lab-subsections].section[+].title = "Hematology studies (set)"
+//  * section[lab-subsections].section[=].code  = $loinc#18723-7
+//  * section[lab-subsections].section[=].entry = Reference(Observation-HbHt)
 * section[lab-subsections].section[+].title = "Chemistry studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#18719-5
 * section[lab-subsections].section[=].entry = Reference(Observation-CRP)
@@ -183,7 +183,7 @@ Usage: #inline
 * specimen[+] = Reference(Serum)
 
 * result[0] = Reference(Observation-CBC)
-* result[+] = Reference(Observation-HbHt)
+
 * result[+] = Reference(Observation-Hb)
 * result[+] = Reference(Observation-Ht)
 * result[+] = Reference(Observation-CRP)
@@ -249,6 +249,7 @@ Usage: #inline
 * hasMember = Reference(Observation-Hb)
 * hasMember = Reference(Observation-Ht)
 
+/*
 Instance: Observation-HbHt
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "Observation-HbHt"
@@ -267,6 +268,7 @@ Usage: #inline
 // * specimen  = Reference(Blood) / better to define it in Member
 * hasMember = Reference(Observation-Hb)
 * hasMember = Reference(Observation-Ht)
+*/
 
 Instance: Observation-Hb
 InstanceOf: ChLabObservationResultsLaboratory
