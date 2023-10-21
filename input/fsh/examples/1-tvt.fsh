@@ -8,71 +8,67 @@ Usage: #example
 * type = #document
 * timestamp = "2023-03-09T14:30:00+01:00"
 
-* entry[0].fullUrl = "urn:uuid:3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
-* entry[=].resource = Composition-1-tvt
+* entry[Composition].fullUrl = "urn:uuid:3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
+* entry[Composition].resource = Composition-1-tvt
 
-* entry[+].fullUrl = "urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06"
-* entry[=].resource = DiagnosticReport-1-tvt
+* entry[DiagnosticReport].fullUrl = "urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06"
+* entry[DiagnosticReport].resource = DiagnosticReport-1-tvt
 
-* entry[+].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"
-* entry[=].resource = HansGuggindieluft
+* entry[Patient].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"
+* entry[Patient].resource = HansGuggindieluft
 
-* entry[+].fullUrl = "urn:uuid:8903c6a4-6547-437c-8f47-b68cfe959288"
-* entry[=].resource = Observation-HbHt
+* entry[Observation][+].fullUrl = "urn:uuid:0ad0810e-6eb4-11ee-b962-0242ac120002"
+* entry[Observation][=].resource = Observation-CBC
 
-* entry[+].fullUrl = "urn:uuid:93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
-* entry[=].resource = Observation-Hb
+* entry[Observation][+].fullUrl = "urn:uuid:5c1ceea1-2751-4ddc-afb5-4c28037ba1be"
+* entry[Observation][=].resource = Observation-WBC
 
-* entry[+].fullUrl = "urn:uuid:6329ad78-c886-44f8-9471-3783cc990ff0"
-* entry[=].resource = Observation-Ht
+* entry[Observation][+].fullUrl = "urn:uuid:04ec7690-a1e8-4fdf-be4f-6c92949e948a"
+* entry[Observation][=].resource = Observation-RBC
 
-* entry[+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
-* entry[=].resource = Observation-CRP
+// * entry[Observation][+].fullUrl = "urn:uuid:6329ad78-c886-44f8-9471-3783cc990ff0"
+// * entry[Observation][=].resource = Observation-Ht
 
-* entry[+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"
-* entry[=].resource = Observation-D-Dimer
+* entry[Observation][+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
+* entry[Observation][=].resource = Observation-CRP
+* entry[Observation][+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"
+* entry[Observation][=].resource = Observation-D-Dimer
 
-* entry[+].fullUrl = "urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74"
-* entry[=].resource = Blood
+* entry[Specimen][+].fullUrl = "urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74"
+* entry[Specimen][=].resource = Blood
+* entry[Specimen][+].fullUrl = "urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8"
+* entry[Specimen][=].resource = Blood-coag
+* entry[Specimen][+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
+* entry[Specimen][=].resource = Serum
 
-* entry[+].fullUrl = "urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8"
-* entry[=].resource = Blood-coag
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666" 
+* entry[ServiceRequest][=].resource = ServiceRequest-HbHt-panel
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
+* entry[ServiceRequest][=].resource = ServiceRequest-Hb
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
+* entry[ServiceRequest][=].resource = ServiceRequest-Ht
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
+* entry[ServiceRequest][=].resource = ServiceRequest-CRP
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
+* entry[ServiceRequest][=].resource = ServiceRequest-D-Dimer
 
-* entry[+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
-* entry[=].resource = Serum
+* entry[PractitionerRole][+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"
+* entry[PractitionerRole][=].resource = MarcMustermannArztpraxis
 
-* entry[+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"  // entry[10]
-* entry[=].resource = ServiceRequest-HbHt-panel
+* entry[Practitioner][+].fullUrl = "urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37"
+* entry[Practitioner][=].resource = MarcMustermann
 
-* entry[+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
-* entry[=].resource = ServiceRequest-Hb
+* entry[Organization][+].fullUrl = "urn:uuid:32c4c990-cedb-4999-998d-bab1d55db49f"
+* entry[Organization][=].resource = Arztpraxis
 
-* entry[+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
-* entry[=].resource = ServiceRequest-Ht
+* entry[Practitioner][+].fullUrl = "urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052"
+* entry[Practitioner][=].resource = EvaErlenmeyer
 
-* entry[+].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
-* entry[=].resource = ServiceRequest-CRP
+* entry[PractitionerRole][+].fullUrl = "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"
+* entry[PractitionerRole][=].resource = EvaErlenmeyerLaborPipette
 
-* entry[+].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
-* entry[=].resource = ServiceRequest-D-Dimer
-
-* entry[+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"
-* entry[=].resource = MarcMustermannArztpraxis
-
-* entry[+].fullUrl = "urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37"
-* entry[=].resource = MarcMustermann
-
-* entry[+].fullUrl = "urn:uuid:32c4c990-cedb-4999-998d-bab1d55db49f"
-* entry[=].resource = Arztpraxis
-
-* entry[+].fullUrl = "urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052"
-* entry[=].resource = EvaErlenmeyer
-
-* entry[+].fullUrl = "urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5"
-* entry[=].resource = EvaErlenmeyerLaborPipette
-
-* entry[+].fullUrl = "urn:uuid:84483dc8-81d3-41cc-8d24-10c241279024"
-* entry[=].resource = LaborPipette
+* entry[Organization][+].fullUrl = "urn:uuid:84483dc8-81d3-41cc-8d24-10c241279024"
+* entry[Organization][=].resource = LaborPipette
 
 // ╭────────────── instance 1-tvt ──────────────────────────────╮
 // │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   │
@@ -86,16 +82,16 @@ Instance: Composition-1-tvt
 InstanceOf: ChLabReportComposition
 Description: "Example of Composition in the scenario of deep vein thrombosis"
 Usage: #inline
+* id = "3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 
-// ╭────────────── Extension ───────────────────────────────────────────────────────────────╮
-// │ provides a link to the order [(Reference(ServiceRequest)]                              │
-// │               or requisition [ServiceRequest.requisition]                              │
-// │ (i.e., 'Request.groupIdentifier')] that this report document is based on and fulfills  │
-// ╰────────────────────────────────────────────────────────────────────────────────────────╯
-
+// ╭────────────── Extension ────────────────────────────────────╮
+// │ provides a link to the order [(Reference(ServiceRequest)]   │
+// │               or requisition [ServiceRequest.requisition]   │
+// │ (i.e., 'Request.groupIdentifier')] that this report         │
+// │                document is based on and fulfills            │
+// ╰─────────────────────────────────────────────────────────────╯
 
 //  extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-HbHt-panel)
-
 // * extension[0].url = "http://fhir.ch/ig/ch-lab-report/StructureDefinition/composition-basedOn-order-or-requisition"
 // * extension[=].valueReference = Reference(ServiceRequest-HbHt-panel)
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition" // no dependent SR !!!
@@ -107,7 +103,6 @@ Usage: #inline
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
 // * extension[=].valueReference = Reference(ServiceRequest-D-Dimer)
 
-* id = "3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * status = #final
@@ -124,31 +119,27 @@ Usage: #inline
 * attester.party = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) // Who attested the report
 * custodian = Reference(Organization/84483dc8-81d3-41cc-8d24-10c241279024)
 
-// ╭────────────── Composition.sections ──────────────────────────────────────────────────╮
-// │ sections contain all References of Observations                             │
+// ╭────────────── Composition.sections ────────────────────────────────────────────────────╮
+// │            sections contain all References of Observations                             │
 // │               or requisition [ServiceRequest.requisition]                              │
 // │ (i.e., 'Request.groupIdentifier')] that this report document is based on and fulfills  │
 // ╰────────────────────────────────────────────────────────────────────────────────────────╯
 
-* section[0].title = "Hematology studies (set)"
-* section[=].code  = $loinc#18723-7 
-* section[=].entry = Reference(Observation-HbHt)
-* section[=].section[0].title = "Hemoglobin (Bld) [Mass/Vol]"    // Display Name
-* section[=].section[=].code = $loinc#18723-7 "Hematology studies (set)"
-* section[=].section[=].entry = Reference(Observation-Hb)
-* section[=].section[+].title = "Hematocrit (Bld) [Volume fraction]"   // Display Name
-* section[=].section[=].code = $loinc#18723-7 "Hematology studies (set)"
-* section[=].section[=].entry = Reference(Observation-Ht)
-
-* section[+].title = "Chemistry studies (set)"
-* section[=].code  = $loinc#18719-5
-* section[=].entry = Reference(Observation-CRP)
-
-* section[+].title = "Coagulation studies (set)"
-* section[=].code  = $loinc#18720-3
-* section[=].entry = Reference(Observation-D-Dimer)
-
-
+* section[lab-subsections].title = "Laboratory examinations"
+* section[lab-subsections].code  = $loinc#26436-6 "Laboratory studies (set)"
+* section[lab-subsections].code.text = "Laboratory studies"
+* section[lab-subsections].section[0].title = "Hematology studies (set)"
+* section[lab-subsections].section[=].code  = $loinc#58410-2
+* section[lab-subsections].section[=].entry = Reference(Observation-CBC)
+* section[lab-subsections].section[+].title = "Hematology studies (set)"
+// * section[lab-subsections].section[=].code  = $loinc#6690-2
+// * section[lab-subsections].section[=].entry = Reference(Observation-WBC)
+// * section[lab-subsections].section[+].title = "Chemistry studies (set)"
+* section[lab-subsections].section[=].code  = $loinc#18719-5
+* section[lab-subsections].section[=].entry = Reference(Observation-CRP)
+* section[lab-subsections].section[+].title = "Coagulation studies (set)"
+* section[lab-subsections].section[=].code  = $loinc#18720-3
+* section[lab-subsections].section[=].entry = Reference(Observation-D-Dimer)
 
 // * section[lab-subsections].title = "Hemoglobin + Hematocrit panel lab result report"
 // * section[lab-subsections].code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
@@ -190,11 +181,16 @@ Usage: #inline
 * performer = Reference(EvaErlenmeyerLaborPipette)
 * performer.display = "Dr. Eva Erlenmeyer"
 
-* result = Reference(Observation-HbHt)
-//* result = Reference(Observation-Hb)
-//* result = Reference(Observation-Ht)
-* result = Reference(Observation-CRP)
-* result = Reference(Observation-D-Dimer)
+* specimen[0] = Reference(Blood)
+* specimen[+] = Reference(Blood-coag)
+* specimen[+] = Reference(Serum)
+
+* result[0] = Reference(Observation-CBC)
+// * result[+] = Reference(Observation-WBC)
+// * result[+] = Reference(Observation-Ht)
+
+* result[+] = Reference(Observation-CRP)
+* result[+] = Reference(Observation-D-Dimer)
 
 // ╭────────────── Patient 1-tvt ────╮
 // │ Scenario deep vein thrombosis   │
@@ -207,14 +203,15 @@ Usage: #inline
 * id = "6b8a0365-5022-403b-a5a5-8d8680d701ef"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: HansGuggindieluft\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111111\n      </p><p><b>name</b>: Hans Guggindieluft \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
+/**/
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Zürich"
 * extension[=].valueAddress.country = "Schweiz"
-* extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
-* extension[=].valueAddress.city = "Breitenbach"
-* extension[=].valueAddress.state = "BL"
-* extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
-* extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
+// * extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
+// * extension[=].valueAddress.city = "Breitenbach"
+// * extension[=].valueAddress.state = "BL"
+// * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
+// * extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
 * identifier.type = $v2-0203#MR
 * identifier.system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier.value = "012/08.111111"
@@ -232,9 +229,30 @@ Usage: #inline
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
-// ╭────── Observation 1-tvt ─────────╮
-// │ HbHt-panel, Hb, Ht ,CRP, D-Dimer │
-// ╰──────────────────────────────────╯
+
+// ╭────── Observation 1-tvt ───────────────╮
+// │ CBC, HbHt-panel, Hb, Ht ,CRP, D-Dimer  │
+// ╰────────────────────────────────────────╯
+
+Instance: Observation-CBC
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "CBC panel - Blood by Automated count"
+Description: "This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the methodless version of hemoglobin in this panel."
+Usage: #inline
+* id = "0ad0810e-6eb4-11ee-b962-0242ac120002"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18723-7 "Hematology studies (set)"
+* code = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* code.text = "CBC panel Auto (Bld)" // LOINC Display Name
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+
+* hasMember = Reference(Observation-WBC)
+* hasMember = Reference(Observation-RBC)
+
+/*
 Instance: Observation-HbHt
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "Observation-HbHt"
@@ -253,14 +271,14 @@ Usage: #inline
 // * specimen  = Reference(Blood) / better to define it in Member
 * hasMember = Reference(Observation-Hb)
 * hasMember = Reference(Observation-Ht)
-
+*/
+/*
 Instance: Observation-Hb
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "Observation-Hb"
 Description: "Example for Hemoblobine Observation"
 Usage: #inline
 * id = "93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
-
 * status = #final
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18723-7 "Hematology studies (set)"
@@ -279,32 +297,61 @@ Usage: #inline
 * referenceRange.high.value = 11.2    // women 9.9
 * referenceRange.high.unit = "umol/L"
 // * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-
-Instance: Observation-Ht
+*/
+Instance: Observation-WBC
 InstanceOf: ChLabObservationResultsLaboratory
-Title: "Ht-Observation"
-Description: "Example for Hemocrite Observation"
+Title: "Leukocytes [#/volume] in Blood by Automated count"  // LOINC Long Common Name
+Description: "Leukocytes or white blood cells (WBCs) are immune cells that fight infection, neoplasms and other inflammatory conditions, and mediate allergic responses. There are five types of WBCs normally present in the circulation that are all derived from a similar stem cell in the bone marrow. The five type of WBCs are divided into two groups based on the presence or absence of granules in the cytoplasm. The granulocytes include the neutrophils, basophils and eosinophils. The non-granulocytes include the lymphocytes and the monocytes. The neutrophils fight infection by ingesting and digesting bacteria. Eosinophils and basophils respond to allergic reactions and are capable of ingesting antigen-antibody complexes. Monocytes phagocytose bacteria and release interferon to stimulate the immune system. Lymphocytes are divided into T-cells and B-cells. T-cell immunity is cellular and involves the activation of phagocytes and B-cell immunity uses antibodies to fight infection. Both elevated and low leukocyte counts can be markers of infection and malignancy, and low leukocyte counts are associated with a variety of primary and secondary immunodeficiencies, depending on the WBC type(s) that are out of range. (Mosby's manual of diagnostic and laboratory tests, Kathleen Deska Pagana; Timothy James Pagana, Elsevier St. Louis, Mo ©2010)"  // LOINC Part Description
 Usage: #inline
-* id = "6329ad78-c886-44f8-9471-3783cc990ff0"
+* id = "5c1ceea1-2751-4ddc-afb5-4c28037ba1be"
 * status = #final
 * category[0] = $observation-category#laboratory
-// * category[+] = $v2-0074#HM "Hematology"
 * category[+] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
-* code.text = "Hematocrit (Bld) [Volume fraction]" // display text
+* code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
+* code.text = "WBC Auto (Bld) [#/Vol]" // LOINC Display Name
 * subject = Reference(HansGuggindieluft)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
-// TODO values
-* valueQuantity = 48 '%' "%"
-//* interpretation = $v3-ObservationInterpretation#HH "Critical high"
-* method = $sct#703454003 "Centrifugation technique (qualifier value)"
-* specimen = Reference(Blood)
-* referenceRange.low.value = 42   // women 37
-* referenceRange.low.unit = "%"
-* referenceRange.high.value = 50  // women 45
-* referenceRange.high.unit = "%"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
+
+* valueQuantity = 10 '10*3/uL' "10*3/uL"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.unit = "10*3/uL"
+* referenceRange.low.value = 4.5 
+* referenceRange.low.unit = "10*3/uL"
+* referenceRange.high.value = 11
+* referenceRange.high.unit = "10*3/uL"
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"
+* referenceRange.type.text = "Normal Range"
+
+
+Instance: Observation-RBC
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "Erythrocytes [#/volume] in Blood by Automated count"  // LOINC Long Common Name
+Description: "Erythrocytes or red blood cells (RBCs) are the cells in the circulation that carry oxygen to and remove carbon dioxide from the tissues throughout the body. They are produced in the bone marrow in response to erythropoietin where they transition through six stages over a seven day period. When they are released into the circulation, their nucleus has been extruded and they measure 6-8 microns in diameter. The lifespan of RBCs is about 120 days. When the RBC ages the cell membrane becomes less pliable and tears as they cell travels through the micro vessels of the body. The damaged RBCs are removed from the circulation by the spleen. Variations in number, shape and size of RBCs are indicative of many diseases and disorders. There are many factors that may lead to decreased numbers of RBCs including hemorrhage, hemolysis, iron or vitamin deficiency, marrow failure and more. Larger than normal RBCs may be indicative of liver disease while smaller than normal RBCs are seen in thalassemias and other anemias.(Mosby's manual of diagnostic and laboratory tests, Kathleen Deska Pagana; Timothy James Pagana, Elsevier St. Louis, Mo ©2010)"  // LOINC Part Description
+Usage: #inline
+* id = "04ec7690-a1e8-4fdf-be4f-6c92949e948a"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18723-7 "Hematology studies (set)"
+* code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
+* code.text =  "RBC Auto (Bld) [#/Vol]"  // LOINC Display Name
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* valueQuantity = 4.58 '10*6/uL' "10*6/uL"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.unit = "10*6/uL"
+//* referenceRange.low = 4.1 '10*6/uL' "10*6/uL"
+//* referenceRange.high = 6.1 '10*6/uL' "10*6/uL"
+
+* referenceRange.low.value = 4.1
+* referenceRange.low.unit = "10*6/uL"
+* referenceRange.high.value = 6.1
+* referenceRange.high.unit = "10*6/uL"
+
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"
+* referenceRange.type.text = "Normal Range"
+
 
 Instance: Observation-CRP
 InstanceOf: ChLabObservationResultsLaboratory
@@ -395,7 +442,7 @@ Usage: #inline
 * container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate"
 
 Instance: Serum
-InstanceOf: Specimen
+InstanceOf: ChLabReportSpecimen
 Title: "Serum Sample"
 Description: "Example for Specimen of Serum from venous blood"
 Usage: #inline
@@ -527,8 +574,8 @@ Usage: #inline
 
 Instance: ServiceRequest-CRP
 InstanceOf: ChLabReportServiceRequest
-Title: "LabOrder Service Request for Hemoblobin "
-Description: "Example for Service Request of Hemoglobin Concentration in Blood"
+Title: "LabOrder Service Request for CRP "
+Description: "Example for Service Request of C reactive protein in Serum or Plasma"
 Usage: #inline
 * id = "8d98f9d1-581b-4495-93aa-4a522fa30a6c"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
@@ -562,8 +609,8 @@ Usage: #inline
 
 Instance: ServiceRequest-D-Dimer
 InstanceOf: ChLabReportServiceRequest
-Title: "LabOrder Service Request for Hemoblobin "
-Description: "Example for Service Request of Hemoglobin Concentration in Blood"
+Title: "LabOrder Service Request for D-Dimer "
+Description: "Example for Service Request of Fibrin D-dimer FEU in Blood"
 Usage: #inline
 * id = "e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"

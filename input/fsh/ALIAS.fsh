@@ -7,8 +7,8 @@ Alias:   $v2-0360                     =   http://terminology.hl7.org/CodeSystem/
 Alias:   $v2-0371                     =   http://terminology.hl7.org/CodeSystem/v2-0371 // additivePreservative
 Alias:   $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916 // relevanteClinicalInformation
 Alias:   $organization-type             = http://terminology.hl7.org/CodeSystem/organization-type
+Alias:   $referencerange-meaning     =    http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias:   $v3-ObservationInterpretation =  http://hl7.org/fhir/ValueSet/observation-interpretation
-Alias:   $referencerange-meaning =        http://hl7.org/fhir/ValueSet/referencerange-meaning
 Alias:   $observation-category =          http://terminology.hl7.org/CodeSystem/observation-category
 Alias:   $labStudyType =                  http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab
 Alias:   $resource-types             =    http://hl7.org/fhir/fhir-types
@@ -17,6 +17,8 @@ Alias:   $resource-types             =    http://hl7.org/fhir/fhir-types
 Alias:   $imposeProfile =                 http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
 Alias:   $dr-eu-lab =                     http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab
 Alias:   $obs-resultslab-eu-lab =         http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab
+Alias:   $codeableConcept-uv-ips        = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+
 
 // Extensions
 Alias:   $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
