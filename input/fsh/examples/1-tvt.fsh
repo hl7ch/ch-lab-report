@@ -227,7 +227,7 @@ Usage: #inline
 
 
 // ╭────── Observation 1-tvt ──────────────────────────────────────────────╮
-// │ CBC-panel, WBC, RBC, HGB, HT, MCV, MHC, MCHC, Platelet, CRP, D-Dimer  │
+// │ CBC-panel, WBC, RBC, HGB, HT, MCV, MCH, MCHC, Platelet, CRP, D-Dimer  │
 // ╰───────────────────────────────────────────────────────────────────────╯
 
 Instance: Observation-CBC-panel
@@ -563,13 +563,13 @@ Usage: #inline
 * collection.fastingStatusCodeableConcept = $v2-0916#F "Patient was fasting prior to the procedure."
 * container.type = $sct#706053007 "General specimen container (physical object)"
 
-// ╭── serviceRequest 1-tvt ──╮
-// │ HbHb-panel, CRP, D-Dimer │
-// ╰──────────────────────────╯
+// ╭── serviceRequest 1-tvt ──────────────────────────────────────────────╮
+// │ CBC-panel, WBC, RBC, HGB, HT, MCV, MCH, MCHC, Platelet, CRP, D-Dimer │
+// ╰──────────────────────────────────────────────────────────────────────╯
 Instance: ServiceRequest-CBC-panel
 InstanceOf: ChLabReportServiceRequest
-Title: "LabOrder Service Request for Hemoglobine & Hematocrit panel"
-Description: "Example for Service Request of Hemoglobin and Hematocrit"
+Title: "LabOrder Service Request for CBC panel - Blood by Automated count"
+Description: "Example for Service Request of CBC panel"
 Usage: #inline
 * id = "9e180157-5a4e-4a8a-8ca9-9b09c2056666"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
@@ -577,25 +577,28 @@ Usage: #inline
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 
+// * basedOn[0] = Reference(ServiceRequest-WBC)
+// * basedOn[+] = Reference(ServiceRequest-RBC)
 * basedOn[0] = Reference(ServiceRequest-HGB)
 * basedOn[+] = Reference(ServiceRequest-HT)
+// * basedOn[0] = Reference(ServiceRequest-MCV)
+// * basedOn[+] = Reference(ServiceRequest-MCH)
+// * basedOn[0] = Reference(ServiceRequest-MCHC)
+// * basedOn[+] = Reference(ServiceRequest-Platelet)
 
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
 * requisition.system = "urn:oid:2.16.756.5.30"
 * requisition.value = "ReqID-1234567"
-
 * status = #active
 * intent = #original-order
 // * category = $sct#108252007 "Laboratory procedure"
-
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
 * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 
 // orderDetails: Additional order information, codeableConcept
-
 * priority = #urgent
 * subject = Reference(HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
@@ -604,6 +607,68 @@ Usage: #inline
 //* insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood) "Serum specimen"
 
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Instance: ServiceRequest-WBC
+InstanceOf: ChLabReportServiceRequest
+Title: "LabOrder Service Request for Leukocytes [#/volume] in Blood by Automated count"
+Description: "Example for Service Request of Hemoglobin Concentration in Blood"
+Usage: #inline
+* id = "ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
+* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PRN "Provider number"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+* status = #active
+* intent = #original-order
+// * category = $sct#108252007 "Laboratory procedure"
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Clinical Chemistry Tests ----
+* code.coding[0] = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
+// orderDetails: Additional order information, codeableConcept
+* priority = #urgent
+* subject = Reference(HansGuggindieluft)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#432805000
+* reasonCode.text = "Suspected deep vein thrombosis (situation)"
+//* insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Blood) "Blood specimen"
+
+Instance: ServiceRequest-RBC
+InstanceOf: ChLabReportServiceRequest
+Title: "LabOrder Service Request for Erythrocytes [#/volume] in Blood by Automated count"
+Description: "Example for Service Request of RBC"
+Usage: #inline
+* id = "ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
+* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PRN "Provider number"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+* status = #active
+* intent = #original-order
+// * category = $sct#108252007 "Laboratory procedure"
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Clinical Chemistry Tests ----
+* code.coding[0] = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
+// orderDetails: Additional order information, codeableConcept
+* priority = #urgent
+* subject = Reference(HansGuggindieluft)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#432805000
+* reasonCode.text = "Suspected deep vein thrombosis (situation)"
+//* insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Blood) "Blood specimen"
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Instance: ServiceRequest-HGB
 InstanceOf: ChLabReportServiceRequest
@@ -615,30 +680,25 @@ Usage: #inline
 * identifier[=].system = "urn:oid:2.16.756.5.30"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
-
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
 * requisition.system = "urn:oid:2.16.756.5.30"
 * requisition.value = "ReqID-1234567"
-
 * status = #active
 * intent = #original-order
 // * category = $sct#108252007 "Laboratory procedure"
-
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
 * code.coding[0] = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
-
 // orderDetails: Additional order information, codeableConcept
-
 * priority = #urgent
 * subject = Reference(HansGuggindieluft)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Serum specimen"
+* specimen[0] = Reference(Blood) "Blood specimen"
 
 Instance: ServiceRequest-HT
 InstanceOf: ChLabReportServiceRequest
@@ -650,21 +710,17 @@ Usage: #inline
 * identifier[=].system = "urn:oid:2.16.756.5.30"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
-
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
 * requisition.system = "urn:oid:2.16.756.5.30"
 * requisition.value = "ReqID-1234567"
-
 * status = #active
 * intent = #original-order
 // * category = $sct#108252007 "Laboratory procedure"
-
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
-
+* code.coding[0] = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(HansGuggindieluft)
@@ -672,8 +728,130 @@ Usage: #inline
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Blood sample"
+* specimen[0] = Reference(Blood) "Blood specimen"
 
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Instance: ServiceRequest-MCV
+InstanceOf: ChLabReportServiceRequest
+Title: "LabOrder Service Request for MCV [Entitic volume] by Automated count"
+Description: "Example for Service Request of MCV in Blood"
+Usage: #inline
+* id = "e4072da7-a760-47ba-83e7-59796c59a944"
+* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
+// ---- grouperID, must be repeated in all basedOn SR ----
+* requisition.type = $v2-0203#PRN "Provider number"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+* status = #active
+* intent = #original-order
+// * category = $sct#108252007 "Laboratory procedure"
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Clinical Chemistry Tests ----
+* code.coding[0] = $loinc#787-2 "MCV [Entitic volume] by Automated count"
+// orderDetails: Additional order information, codeableConcept
+* priority = #urgent
+* subject = Reference(HansGuggindieluft)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#432805000
+* reasonCode.text = "Suspected deep vein thrombosis (situation)"
+//* insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Blood) "Blood specimen"
+
+Instance: ServiceRequest-MCH
+InstanceOf: ChLabReportServiceRequest
+Title: "LabOrder Service Request for MCH [Entitic mass] by Automated count"
+Description: "Example for Service Request of MCH in Blood"
+Usage: #inline
+* id = "e4072da7-a760-47ba-83e7-59796c59a944"
+* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
+// ---- grouperID, must be repeated in all basedOn SR ----
+* requisition.type = $v2-0203#PRN "Provider number"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+* status = #active
+* intent = #original-order
+// * category = $sct#108252007 "Laboratory procedure"
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Clinical Chemistry Tests ----
+* code.coding[0] = $loinc#785-6 "MCH [Entitic mass] by Automated count"
+// orderDetails: Additional order information, codeableConcept
+* priority = #urgent
+* subject = Reference(HansGuggindieluft)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#432805000
+* reasonCode.text = "Suspected deep vein thrombosis (situation)"
+//* insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Blood) "Blood specimen"
+
+Instance: ServiceRequest-MCHC
+InstanceOf: ChLabReportServiceRequest
+Title: "LabOrder Service Request for MCHC [Mass/volume] by Automated count"
+Description: "Example for Service Request of MCHC in Blood"
+Usage: #inline
+* id = "e4072da7-a760-47ba-83e7-59796c59a944"
+* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
+// ---- grouperID, must be repeated in all basedOn SR ----
+* requisition.type = $v2-0203#PRN "Provider number"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+* status = #active
+* intent = #original-order
+// * category = $sct#108252007 "Laboratory procedure"
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Clinical Chemistry Tests ----
+* code.coding[0] = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
+// orderDetails: Additional order information, codeableConcept
+* priority = #urgent
+* subject = Reference(HansGuggindieluft)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#432805000
+* reasonCode.text = "Suspected deep vein thrombosis (situation)"
+//* insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Blood) "Blood specimen"
+
+Instance: ServiceRequest-Platelet
+InstanceOf: ChLabReportServiceRequest
+Title: "LabOrder Service Request for Platelets [#/volume] in Blood by Automated count"
+Description: "Example for Service Request of Platelet in Blood"
+Usage: #inline
+* id = "e4072da7-a760-47ba-83e7-59796c59a944"
+* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
+// ---- grouperID, must be repeated in all basedOn SR ----
+* requisition.type = $v2-0203#PRN "Provider number"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+* status = #active
+* intent = #original-order
+// * category = $sct#108252007 "Laboratory procedure"
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Clinical Chemistry Tests ----
+* code.coding[0] = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
+// orderDetails: Additional order information, codeableConcept
+* priority = #urgent
+* subject = Reference(HansGuggindieluft)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#432805000
+* reasonCode.text = "Suspected deep vein thrombosis (situation)"
+//* insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Blood) "Blood specimen"
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Instance: ServiceRequest-CRP
 InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for CRP "
