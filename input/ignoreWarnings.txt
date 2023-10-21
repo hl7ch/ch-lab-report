@@ -1,17 +1,15 @@
 == Suppressed Messages ==
 
 # Caused by the underlying profiles
-The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 Entry 'urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
 Entry 'urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
-
-The link 'http://hl7.org/fhir/R4/valueset-diagnostic-requests.html' for "here" cannot be resolved
-
-Found multiple matching profiles for Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef among choices: http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab, http://hl7.org/fhir/StructureDefinition/Patient
-
-Found multiple matching profiles for Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef among choices: http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-animal-eu-lab, http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab, http://hl7.org/fhir/StructureDefinition/Patient
-
-Entry 'urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+Entry 'urn:uuid:5c1ceea1-2751-4ddc-afb5-4c28037ba1be' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+Entry 'urn:uuid:04ec7690-a1e8-4fdf-be4f-6c92949e948a' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+Entry 'urn:uuid:2565be07-47a0-4cca-926e-a57e1ac96fb8' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+Entry 'urn:uuid:c4d64c0a-aafb-4b41-ae0b-a620b2a6c08c' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+Entry 'urn:uuid:857cfa10-66ea-45ae-b236-e6e03af4be3f' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+Entry 'urn:uuid:3b263f29-44d8-468f-b612-e748442e1845' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+Entry 'urn:uuid:735c9244-497a-420d-b006-15a57be365b1' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
 
 ### TODO remove after Profiling
 The Implementation Guide contains no examples for this profile

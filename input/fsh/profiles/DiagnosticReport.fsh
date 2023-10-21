@@ -17,6 +17,8 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
   *  valueReference 1..1
   *  valueReference only Reference(CompositionLabReportEu)
 
+* basedOn only Reference ( ChLabReportServiceRequest )
+
 // ╭─── Extension ───╮
 // │  ObservationR5  │
 // ╰─────────────────╯
