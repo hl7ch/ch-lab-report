@@ -20,9 +20,10 @@ Usage: #example
 * entry[Patient].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"
 * entry[Patient].resource = HansGuggindieluft
 
+
+////-------------------------------Observation ++++++++++++++++++++++
 * entry[Observation][+].fullUrl = "urn:uuid:0ad0810e-6eb4-11ee-b962-0242ac120002"
 * entry[Observation][=].resource = Observation-CBC-panel
-
 * entry[Observation][+].fullUrl = "urn:uuid:5c1ceea1-2751-4ddc-afb5-4c28037ba1be"
 * entry[Observation][=].resource = Observation-WBC
 * entry[Observation][+].fullUrl = "urn:uuid:04ec7690-a1e8-4fdf-be4f-6c92949e948a"
@@ -33,17 +34,16 @@ Usage: #example
 * entry[Observation][+].fullUrl = "urn:uuid:c4d64c0a-aafb-4b41-ae0b-a620b2a6c08c"
 * entry[Observation][=].resource = Observation-HT
 
+
+
 * entry[Observation][+].fullUrl = "urn:uuid:857cfa10-66ea-45ae-b236-e6e03af4be3f"
 * entry[Observation][=].resource = Observation-MCV
 * entry[Observation][+].fullUrl = "urn:uuid:3b263f29-44d8-468f-b612-e748442e1845"
 * entry[Observation][=].resource = Observation-MCH
-
 * entry[Observation][+].fullUrl = "urn:uuid:735c9244-497a-420d-b006-15a57be365b1"
 * entry[Observation][=].resource = Observation-MCHC
 * entry[Observation][+].fullUrl = "urn:uuid:32a7d6fb-dc8a-4673-8cef-c59c1c5397db"
 * entry[Observation][=].resource = Observation-Platelet
-
-
 * entry[Observation][+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
 * entry[Observation][=].resource = Observation-CRP
 * entry[Observation][+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"
@@ -62,13 +62,21 @@ Usage: #example
 * entry[ServiceRequest][=].resource = ServiceRequest-WBC
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:a64d92bf-8ca8-4e12-ae29-624c70ac0e26"
 * entry[ServiceRequest][=].resource = ServiceRequest-RBC
-
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
 * entry[ServiceRequest][=].resource = ServiceRequest-HGB
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
 * entry[ServiceRequest][=].resource = ServiceRequest-HT
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:6adcf650-19cb-4d58-b27c-3cf52aa32d86"
+* entry[ServiceRequest][=].resource = ServiceRequest-MCV
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:3edb7f4c-e0c8-45c5-aee9-83d326aa61ab"
+* entry[ServiceRequest][=].resource = ServiceRequest-MCH
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:82db46b7-acef-49f4-9456-6e9cbd62a27b"
+* entry[ServiceRequest][=].resource = ServiceRequest-MCHC
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:bfc054ce-704c-11ee-b962-0242ac120002"
+* entry[ServiceRequest][=].resource = ServiceRequest-Platelet
 
+
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
 
 * entry[ServiceRequest][=].resource = ServiceRequest-CRP
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
@@ -252,14 +260,14 @@ Usage: #inline
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 
-* hasMember = Reference(Observation-WBC)
-* hasMember = Reference(Observation-RBC)
-* hasMember = Reference(Observation-HGB)
-* hasMember = Reference(Observation-HT)
-* hasMember = Reference(Observation-MCV)
-* hasMember = Reference(Observation-MCH)
-* hasMember = Reference(Observation-MCHC)
-* hasMember = Reference(Observation-Platelet)
+* hasMember[0] = Reference(Observation-WBC)
+* hasMember[+] = Reference(Observation-RBC)
+* hasMember[+] = Reference(Observation-HGB)
+* hasMember[+] = Reference(Observation-HT)
+* hasMember[+] = Reference(Observation-MCV)
+* hasMember[+] = Reference(Observation-MCH)
+* hasMember[+] = Reference(Observation-MCHC)
+* hasMember[+] = Reference(Observation-Platelet)
 
 Instance: Observation-WBC
 InstanceOf: ChLabObservationResultsLaboratory
@@ -588,10 +596,10 @@ Usage: #inline
 * basedOn[+] = Reference(ServiceRequest-RBC)
 * basedOn[+] = Reference(ServiceRequest-HGB)
 * basedOn[+] = Reference(ServiceRequest-HT)
-// * basedOn[+] = Reference(ServiceRequest-MCV)
-// * basedOn[+] = Reference(ServiceRequest-MCH)
-// * basedOn[+] = Reference(ServiceRequest-MCHC)
-// * basedOn[+] = Reference(ServiceRequest-Platelet)
+* basedOn[+] = Reference(ServiceRequest-MCV)
+* basedOn[+] = Reference(ServiceRequest-MCH)
+* basedOn[+] = Reference(ServiceRequest-MCHC)
+* basedOn[+] = Reference(ServiceRequest-Platelet)
 
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
@@ -614,7 +622,6 @@ Usage: #inline
 //* insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood) "Serum specimen"
 
-// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Instance: ServiceRequest-WBC
 InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Leukocytes [#/volume] in Blood by Automated count"
@@ -674,8 +681,6 @@ Usage: #inline
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood) "Blood specimen"
-
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Instance: ServiceRequest-HGB
 InstanceOf: ChLabReportServiceRequest
@@ -743,7 +748,7 @@ InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for MCV [Entitic volume] by Automated count"
 Description: "Example for Service Request of MCV in Blood"
 Usage: #inline
-* id = "e4072da7-a760-47ba-83e7-59796c59a944"
+* id = "6adcf650-19cb-4d58-b27c-3cf52aa32d86"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[=].system = "urn:oid:2.16.756.5.30"
 * identifier[=].value = "123"
@@ -773,7 +778,7 @@ InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for MCH [Entitic mass] by Automated count"
 Description: "Example for Service Request of MCH in Blood"
 Usage: #inline
-* id = "e4072da7-a760-47ba-83e7-59796c59a944"
+* id = "3edb7f4c-e0c8-45c5-aee9-83d326aa61ab"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[=].system = "urn:oid:2.16.756.5.30"
 * identifier[=].value = "123"
@@ -803,7 +808,7 @@ InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for MCHC [Mass/volume] by Automated count"
 Description: "Example for Service Request of MCHC in Blood"
 Usage: #inline
-* id = "e4072da7-a760-47ba-83e7-59796c59a944"
+* id = "82db46b7-acef-49f4-9456-6e9cbd62a27b"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[=].system = "urn:oid:2.16.756.5.30"
 * identifier[=].value = "123"
@@ -833,7 +838,7 @@ InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Platelets [#/volume] in Blood by Automated count"
 Description: "Example for Service Request of Platelet in Blood"
 Usage: #inline
-* id = "e4072da7-a760-47ba-83e7-59796c59a944"
+* id = "bfc054ce-704c-11ee-b962-0242ac120002"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
 * identifier[=].system = "urn:oid:2.16.756.5.30"
 * identifier[=].value = "123"
