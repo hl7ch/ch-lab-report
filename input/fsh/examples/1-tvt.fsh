@@ -57,11 +57,11 @@ Usage: #example
 * entry[Specimen][=].resource = Serum
 
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666" 
-* entry[ServiceRequest][=].resource = ServiceRequest-HbHt-panel
+* entry[ServiceRequest][=].resource = ServiceRequest-CBC-panel
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
-* entry[ServiceRequest][=].resource = ServiceRequest-Hb
+* entry[ServiceRequest][=].resource = ServiceRequest-HGB
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
-* entry[ServiceRequest][=].resource = ServiceRequest-Ht
+* entry[ServiceRequest][=].resource = ServiceRequest-HT
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
 * entry[ServiceRequest][=].resource = ServiceRequest-CRP
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
@@ -86,7 +86,7 @@ Usage: #example
 * entry[Organization][=].resource = LaborPipette
 
 // ╭────────────── Composition 1-tvt ────────────────────────╮
-// │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer │
+// │ Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer │
 // ╰─────────────────────────────────────────────────────────╯
 
 Instance: Composition-1-tvt
@@ -102,13 +102,13 @@ Usage: #inline
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
 
-//  extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-HbHt-panel)
+//  extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-CBC-panel)
 // * extension[0].url = "http://fhir.ch/ig/ch-lab-report/StructureDefinition/composition-basedOn-order-or-requisition"
-// * extension[=].valueReference = Reference(ServiceRequest-HbHt-panel)
+// * extension[=].valueReference = Reference(ServiceRequest-CBC-panel)
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition" // no dependent SR !!!
-// * extension[=].valueReference = Reference(ServiceRequest-Hb)
+// * extension[=].valueReference = Reference(ServiceRequest-HGB)
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-// * extension[=].valueReference = Reference(ServiceRequest-Ht)
+// * extension[=].valueReference = Reference(ServiceRequest-HT)
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
 // * extension[=].valueReference = Reference(ServiceRequest-CRP)
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
@@ -153,7 +153,7 @@ Usage: #inline
 * section[lab-subsections].section[=].entry = Reference(Observation-D-Dimer)
 
 // ╭──────────── DiagnosticReport 1-tvt ─────────────────────╮
-// │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer │
+// │ Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer │
 // ╰─────────────────────────────────────────────────────────╯
 Instance: DiagnosticReport-1-tvt
 InstanceOf: ChLabDiagnosticReport
@@ -168,7 +168,7 @@ Usage: #inline
 // * extension[DiagnosticReportResultR5].url = "http://example.com/catalog/ObservationDefinition/"
 // * extension[DiagnosticReportResultR5].valueReference = Reference(Observation/8903c6a4-6547-437c-8f47-b68cfe959288)
 
-* basedOn[0] = Reference(ServiceRequest-HbHt-panel)
+* basedOn[0] = Reference(ServiceRequest-CBC-panel)
 * basedOn[+] = Reference(ServiceRequest-CRP)
 * basedOn[+] = Reference(ServiceRequest-D-Dimer)
 * status = #final
@@ -226,9 +226,9 @@ Usage: #inline
 * communication.preferred = true
 
 
-// ╭────── Observation 1-tvt ─────────╮
-// │ CBC-panel, Hb, Ht ,CRP, D-Dimer  │
-// ╰──────────────────────────────────╯
+// ╭────── Observation 1-tvt ──────────────────────────────────────────────╮
+// │ CBC-panel, WBC, RBC, HGB, HT, MCV, MHC, MCHC, Platelet, CRP, D-Dimer  │
+// ╰───────────────────────────────────────────────────────────────────────╯
 
 Instance: Observation-CBC-panel
 InstanceOf: ChLabObservationResultsLaboratory
@@ -254,53 +254,6 @@ Usage: #inline
 * hasMember = Reference(Observation-MCHC)
 * hasMember = Reference(Observation-Platelet)
 
-
-/*
-Instance: Observation-HbHt
-InstanceOf: ChLabObservationResultsLaboratory
-Title: "Observation-HbHt"
-Description: "Example for Hemoblobine and Hemotocrit panel Observation"
-Usage: #inline
-* id = "8903c6a4-6547-437c-8f47-b68cfe959288"
-* status = #final
-* category[0] = $observation-category#laboratory
-// * category[+] = $v2-0074#HM "Hematology"
-* category[+] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* code.text = "Hemoglobin and Hematocrit panel (Bld)"
-* subject = Reference(HansGuggindieluft)
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
-// * specimen  = Reference(Blood) / better to define it in Member
-* hasMember = Reference(Observation-Hb)
-* hasMember = Reference(Observation-Ht)
-*/
-/*
-Instance: Observation-Hb
-InstanceOf: ChLabObservationResultsLaboratory
-Title: "Observation-Hb"
-Description: "Example for Hemoblobine Observation"
-Usage: #inline
-* id = "93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
-* status = #final
-* category[0] = $observation-category#laboratory
-* category[+] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
-* code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
-* subject = Reference(HansGuggindieluft)
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
-// TODO values
-* valueQuantity = 10.8 'umol/L' "umol/L"
-// * interpretation = $v3-ObservationInterpretation#HH "Critical high"
-* method = $sct#83561000052101 "Photometry technique (qualifier value)"
-* specimen = Reference(Blood)
-* referenceRange.low.value = 8.7  // women 7.4
-* referenceRange.low.unit = "umol/L"
-* referenceRange.high.value = 11.2    // women 9.9
-* referenceRange.high.unit = "umol/L"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-*/
 Instance: Observation-WBC
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "Leukocytes [#/volume] in Blood by Automated count"  // LOINC Long Common Name
@@ -455,7 +408,6 @@ Usage: #inline
 * referenceRange.type = $referencerange-meaning#normal "Normal Range"
 * referenceRange.type.text = "Normal Range"
 
-//// =================================================
 Instance: Observation-MCHC
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "MCHC [Mass/volume] by Automated count"   // LOINC Long Common Name
@@ -506,8 +458,6 @@ Usage: #inline
 * referenceRange.type = $referencerange-meaning#normal "Normal Range"
 * referenceRange.type.text = "Normal Range"
 
-
-// ========================================
 Instance: Observation-CRP
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "Observation-CRP"
@@ -616,7 +566,7 @@ Usage: #inline
 // ╭── serviceRequest 1-tvt ──╮
 // │ HbHb-panel, CRP, D-Dimer │
 // ╰──────────────────────────╯
-Instance: ServiceRequest-HbHt-panel
+Instance: ServiceRequest-CBC-panel
 InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hemoglobine & Hematocrit panel"
 Description: "Example for Service Request of Hemoglobin and Hematocrit"
@@ -627,8 +577,8 @@ Usage: #inline
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 
-* basedOn[0] = Reference(ServiceRequest/ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40)
-* basedOn[+] = Reference(ServiceRequest/e4072da7-a760-47ba-83e7-59796c59a944)
+* basedOn[0] = Reference(ServiceRequest-HGB)
+* basedOn[+] = Reference(ServiceRequest-HT)
 
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
@@ -655,7 +605,7 @@ Usage: #inline
 * specimen[0] = Reference(Blood) "Serum specimen"
 
 
-Instance: ServiceRequest-Hb
+Instance: ServiceRequest-HGB
 InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hemoblobin "
 Description: "Example for Service Request of Hemoglobin Concentration in Blood"
@@ -690,7 +640,7 @@ Usage: #inline
 //* insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood) "Serum specimen"
 
-Instance: ServiceRequest-Ht
+Instance: ServiceRequest-HT
 InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hematocrit"
 Description: "Example for Service Request of Hematocrit in Blood"
