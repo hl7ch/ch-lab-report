@@ -501,8 +501,8 @@ Usage: #inline
 * valueQuantity = 8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#726449005 "Immunoassay technique (qualifier value)"
-
 * specimen = Reference(Blood-coag)
+* device = Reference(TestkitD-Dimer)  // Test-Kit
 * referenceRange.high.value = 0.5  // depends on method
 * referenceRange.high.unit = "mg/L"
 
@@ -727,7 +727,6 @@ Usage: #inline
 //* insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood) "Blood specimen"
 
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Instance: ServiceRequest-MCV
 InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for MCV [Entitic volume] by Automated count"

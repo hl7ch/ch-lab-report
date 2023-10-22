@@ -9,6 +9,7 @@ Alias:   $v2-0916                       = http://terminology.hl7.org/CodeSystem/
 Alias:   $organization-type             = http://terminology.hl7.org/CodeSystem/organization-type
 Alias:   $referencerange-meaning     =    http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias:   $v3-ObservationInterpretation =  http://hl7.org/fhir/ValueSet/observation-interpretation
+Alias:   $device-categorie            =   http://hl7.org/fhir/device-category
 Alias:   $observation-category =          http://terminology.hl7.org/CodeSystem/observation-category
 Alias:   $labStudyType =                  http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab
 Alias:   $resource-types             =    http://hl7.org/fhir/fhir-types
