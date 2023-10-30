@@ -220,7 +220,6 @@ Usage: #inline
 * telecom[=].value = "hans.guggindieluft@example.ch"
 * gender = #male
 * birthDate = "1981-01-01"
-// * maritalStatus = $ech-11-maritalstatus#5 "unverheiratet"
 * maritalStatus.coding[0] = $ech-11-maritalstatus#5 "unverheiratet"
 * maritalStatus.coding[+] = $v3-MaritalStatus#U "unmarried"
 * communication.language = urn:ietf:bcp:47#de-CH
