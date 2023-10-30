@@ -15,3 +15,7 @@ HL7 Europe Laboratory Report
 * [Confluence](https://confluence.hl7.org/display/HEU/Laboratory+Report+FHIR+Implementation+Guide)
 * [GitHub Repository](https://github.com/hl7-eu/laboratory)
 * [CI Build](https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html)
+
+## Device Identification in Lab
+
+[Available Options in V2 lab messaging:](https://confluence.hl7.org/display/OO/Device+Identification+in+Lab+messages)

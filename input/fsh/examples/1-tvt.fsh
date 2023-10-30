@@ -20,22 +20,16 @@ Usage: #example
 * entry[Patient].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"
 * entry[Patient].resource = HansGuggindieluft
 
-
-////-------------------------------Observation ++++++++++++++++++++++
 * entry[Observation][+].fullUrl = "urn:uuid:0ad0810e-6eb4-11ee-b962-0242ac120002"
 * entry[Observation][=].resource = Observation-CBC-panel
 * entry[Observation][+].fullUrl = "urn:uuid:5c1ceea1-2751-4ddc-afb5-4c28037ba1be"
 * entry[Observation][=].resource = Observation-WBC
 * entry[Observation][+].fullUrl = "urn:uuid:04ec7690-a1e8-4fdf-be4f-6c92949e948a"
 * entry[Observation][=].resource = Observation-RBC
-
 * entry[Observation][+].fullUrl = "urn:uuid:2565be07-47a0-4cca-926e-a57e1ac96fb8"
 * entry[Observation][=].resource = Observation-HGB
 * entry[Observation][+].fullUrl = "urn:uuid:c4d64c0a-aafb-4b41-ae0b-a620b2a6c08c"
 * entry[Observation][=].resource = Observation-HT
-
-
-
 * entry[Observation][+].fullUrl = "urn:uuid:857cfa10-66ea-45ae-b236-e6e03af4be3f"
 * entry[Observation][=].resource = Observation-MCV
 * entry[Observation][+].fullUrl = "urn:uuid:3b263f29-44d8-468f-b612-e748442e1845"
@@ -74,10 +68,7 @@ Usage: #example
 * entry[ServiceRequest][=].resource = ServiceRequest-MCHC
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:bfc054ce-704c-11ee-b962-0242ac120002"
 * entry[ServiceRequest][=].resource = ServiceRequest-Platelet
-
-
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
-
 * entry[ServiceRequest][=].resource = ServiceRequest-CRP
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
 * entry[ServiceRequest][=].resource = ServiceRequest-D-Dimer
@@ -101,7 +92,7 @@ Usage: #example
 * entry[Organization][=].resource = LaborPipette
 
 // ╭────────────── Composition 1-tvt ────────────────────────╮
-// │ Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer │
+// │ Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer  │
 // ╰─────────────────────────────────────────────────────────╯
 
 Instance: Composition-1-tvt
@@ -117,7 +108,7 @@ Usage: #inline
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
 
-//  extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-CBC-panel)
+// * extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-CBC-panel)
 // * extension[0].url = "http://fhir.ch/ig/ch-lab-report/StructureDefinition/composition-basedOn-order-or-requisition"
 // * extension[=].valueReference = Reference(ServiceRequest-CBC-panel)
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition" // no dependent SR !!!
@@ -157,9 +148,6 @@ Usage: #inline
 * section[lab-subsections].section[0].title = "Hematology studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#58410-2
 * section[lab-subsections].section[=].entry = Reference(Observation-CBC-panel)
-// * section[lab-subsections].section[+].title = "Hematology studies (set)"
-// * section[lab-subsections].section[=].code  = $loinc#6690-2
-// * section[lab-subsections].section[=].entry = Reference(Observation-WBC)
 * section[lab-subsections].section[+].title = "Chemistry studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#18719-5
 * section[lab-subsections].section[=].entry = Reference(Observation-CRP)
@@ -179,9 +167,6 @@ Usage: #inline
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
-
-// * extension[DiagnosticReportResultR5].url = "http://example.com/catalog/ObservationDefinition/"
-// * extension[DiagnosticReportResultR5].valueReference = Reference(Observation/8903c6a4-6547-437c-8f47-b68cfe959288)
 
 * basedOn[0] = Reference(ServiceRequest-CBC-panel)
 * basedOn[+] = Reference(ServiceRequest-CRP)
@@ -235,7 +220,9 @@ Usage: #inline
 * telecom[=].value = "hans.guggindieluft@example.ch"
 * gender = #male
 * birthDate = "1981-01-01"
-* maritalStatus = $ech-11-maritalstatus#5 "unverheiratet"
+// * maritalStatus = $ech-11-maritalstatus#5 "unverheiratet"
+* maritalStatus.coding[0] = $ech-11-maritalstatus#5 "unverheiratet"
+* maritalStatus.coding[+] = $v3-MaritalStatus#U "unmarried"
 * communication.language = urn:ietf:bcp:47#de-CH
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
@@ -516,8 +503,8 @@ Usage: #inline
 * valueQuantity = 8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#726449005 "Immunoassay technique (qualifier value)"
-
 * specimen = Reference(Blood-coag)
+* device = Reference(TestkitD-Dimer)  // Test-Kit
 * referenceRange.high.value = 0.5  // depends on method
 * referenceRange.high.unit = "mg/L"
 
@@ -611,8 +598,8 @@ Usage: #inline
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-
+// * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* code.coding[0] = $loinc#58410-2 "CBC panel - Blood by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(HansGuggindieluft)
@@ -742,7 +729,6 @@ Usage: #inline
 //* insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood) "Blood specimen"
 
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Instance: ServiceRequest-MCV
 InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for MCV [Entitic volume] by Automated count"
@@ -863,7 +849,6 @@ Usage: #inline
 //* insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Blood) "Blood specimen"
 
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Instance: ServiceRequest-CRP
 InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for CRP "
@@ -1065,4 +1050,3 @@ Usage: #inline
 * contact.address.city = "Olten"
 * contact.address.postalCode = "4600"
 * contact.address.country = "CH"
-
