@@ -23,6 +23,22 @@ Usage: #inline
 * entry[Patient].resource = KlebsiellaKeller
 
 //============================================0
+* entry[Observation].fullUrl = "urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d"
+* entry[Observation].resource = Observation-eColi-susc-panel
+
+* entry[Observation].fullUrl = "urn:uuid:9d3394c2-3b7b-4f88-9358-239adbeadba3"
+* entry[Observation].resource = Observation-eColi-carbapenem-susc
+
+* entry[Observation].fullUrl = "urn:uuid:4679fd4c-4ef3-4b91-b17c-8a97a25472fb"
+* entry[Observation].resource = Observation-eColi-ciprofloxacin-susc
+
+* entry[Observation].fullUrl = "urn:uuid:6a68a15a-5477-4d01-bfd6-fe7fa7cb97f8"
+* entry[Observation].resource = Observation-eColi-vancomycin-susc
+
+* entry[Observation].fullUrl = "urn:uuid:28a7f5b7-7ba4-4caf-ac43-80326dcf2cfb"
+* entry[Observation].resource = Observation-eColi-vancomycin-susc
+
+//============================================0
 
 * entry[PractitionerRole][+].fullUrl = "urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f"
 * entry[PractitionerRole][=].resource = HansHauserKantonsspital
@@ -33,6 +49,7 @@ Usage: #inline
 * entry[Organization][+].fullUrl = "urn:uuid:37e198ba-ebae-4438-bf8f-faa42eff82c6"
 * entry[Organization][=].resource = Kantonsspital
 
+/*
 * entry[Practitioner][+].fullUrl = "urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052"
 * entry[Practitioner][=].resource = EvaErlenmeyer
 
@@ -41,7 +58,7 @@ Usage: #inline
 
 * entry[Organization][+].fullUrl = "urn:uuid:152da916-a010-4047-b80a-900e2d55c676"
 * entry[Organization][=].resource = LaborPipette
-
+*/
 
 
 
@@ -99,15 +116,15 @@ Usage: #inline
 * section[lab-subsections].title = "Laboratory examinations"
 * section[lab-subsections].code  = $loinc#26436-6 "Laboratory studies (set)"
 * section[lab-subsections].code.text = "Laboratory studies"
-* section[lab-subsections].section[0].title = "Hematology studies (set)"
-* section[lab-subsections].section[=].code  = $loinc#58410-2
-* section[lab-subsections].section[=].entry = Reference(Observation-CBC-panel)
-* section[lab-subsections].section[+].title = "Chemistry studies (set)"
-* section[lab-subsections].section[=].code  = $loinc#18719-5
-* section[lab-subsections].section[=].entry = Reference(Observation-CRP)
-* section[lab-subsections].section[+].title = "Coagulation studies (set)"
-* section[lab-subsections].section[=].code  = $loinc#18720-3
-* section[lab-subsections].section[=].entry = Reference(Observation-D-Dimer)
+* section[lab-subsections].section[0].title = "Microbiology studies (set)"
+* section[lab-subsections].section[=].code  = $loinc#18725-2
+* section[lab-subsections].section[=].entry = Reference(Observation-eColi-susc-panel)
+//* section[lab-subsections].section[+].title = "Chemistry studies (set)"
+//* section[lab-subsections].section[=].code  = $loinc#18719-5
+//* section[lab-subsections].section[=].entry = Reference(Observation-CRP)
+//* section[lab-subsections].section[+].title = "Coagulation studies (set)"
+//* section[lab-subsections].section[=].code  = $loinc#18720-3
+//* section[lab-subsections].section[=].entry = Reference(Observation-D-Dimer)
 
 // ╭──────────── DiagnosticReport 5-sepsis ──────────────────╮
 // │ Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer  │
@@ -142,7 +159,7 @@ Usage: #inline
 // * result[+] = Reference(Observation-D-Dimer)
 
 
-// ╭────── Patient 5-sepsi ────╮
+// ╭────── Patient 5-sepsis ────╮
 // │ Scenario suspected sepsis │
 // ╰───────────────────────────╯
 Instance: KlebsiellaKeller
@@ -179,13 +196,107 @@ Usage: #inline
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
-// ╭────── Observation 4-sepis ────────────────────────────────────────────╮
-// │ Results  │
+// ╭────── Observation 4-sepsis e. coli ───────────────────────────────────╮
+// │ Results  4 susceptibility Panel                                         │
 // ╰───────────────────────────────────────────────────────────────────────╯
+Instance: Observation-eColi-susc-panel
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "24f1a039-5146-4e51-8c07-dfd94bc7370d"
+* status = #final
+
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18769-0 "Microbial susceptibility tests Set"
+
+* code = $loinc#29576-6 "Bacterial susceptibility panel"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* hasMember[+] = Reference(Observation/24f1a039-5146-4e51-8c07-dfd94bc7370d)
+* hasMember[+] = Reference(Observation/9d3394c2-3b7b-4f88-9358-239adbeadba3)
+* hasMember[+] = Reference(Observation/4679fd4c-4ef3-4b91-b17c-8a97a25472fb)
+* hasMember[+] = Reference(Observation/6a68a15a-5477-4d01-bfd6-fe7fa7cb97f8)
+
+
+Instance: Observation-eColi-carbapenem-susc
+InstanceOf: ObservationResultsLaboratoryEu
+Usage: #inline
+* id = "24f1a039-5146-4e51-8c07-dfd94bc7370d"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18769-0 "microbial susceptibility tests set"
+
+* code = $loinc#88462-7 "Carbapenem [Susceptibility]"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueQuantity.value = 2
+* valueQuantity.comparator = #<=
+* valueQuantity.code = #1
+* valueQuantity.system = $ucum
+* interpretation = $obs-interpretation#S "Susceptible"
+
+Instance: Observation-eColi-ciprofloxacin-susc
+InstanceOf: ObservationResultsLaboratoryEu
+Usage: #inline
+* id = "9d3394c2-3b7b-4f88-9358-239adbeadba3"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18769-0 "microbial susceptibility tests set"
+
+* code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueQuantity.value = 4
+* valueQuantity.comparator = #>
+* valueQuantity.code = #1
+* valueQuantity.system = $ucum
+* interpretation = $obs-interpretation#R "Resistant"
+
+Instance: Observation-eColi-neomycin-susc
+InstanceOf: ObservationResultsLaboratoryEu
+Usage: #inline
+* id = "4679fd4c-4ef3-4b91-b17c-8a97a25472fb"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18769-0 "microbial susceptibility tests set"
+
+* code = $loinc#18953-0 "Neomycin [Susceptibility]"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueQuantity.value = 0.5
+* valueQuantity.code = #1
+* valueQuantity.system = $ucum
+* interpretation = $obs-interpretation#S "Susceptible"
+
+Instance: Observation-eColi-vancomycin-susc
+InstanceOf: ObservationResultsLaboratoryEu
+Usage: #inline
+* id = "28a7f5b7-7ba4-4caf-ac43-80326dcf2cfb"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18769-0 "microbial susceptibility tests set"
+
+* code = $loinc#19000-9 "Vancomycin [Susceptibility]"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* performer = Reference(EvaErlenmeyer)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer[+].display = "Eva Erlenmeier"
+* valueQuantity.value = 1
+* valueQuantity.comparator = #<=
+* valueQuantity.code = #1
+* valueQuantity.system = $ucum
+* interpretation = $obs-interpretation#S "Susceptible"
 
 
 
-// ╭────── PractitionerRole 4-sepis ────────────────────────────────────────────╮
+// ╭────── PractitionerRole 4-sepsis ────────────────────────────────────────────╮
 // │    Hans Hauser Kantonsspital  │
 // ╰───────────────────────────────────────────────────────────────────────╯
 Instance: HansHauserKantonsspital

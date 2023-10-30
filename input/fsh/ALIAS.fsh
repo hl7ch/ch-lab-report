@@ -14,12 +14,14 @@ Alias:   $device-categorie            =   http://hl7.org/fhir/device-category
 Alias:   $observation-category =          http://terminology.hl7.org/CodeSystem/observation-category
 Alias:   $labStudyType =                  http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab
 Alias:   $resource-types             =    http://hl7.org/fhir/fhir-types
-
+Alias:   $ucum                        =   http://unitsofmeasure.org
+Alias:   $observation-category        =   http://terminology.hl7.org/CodeSystem/observation-category
 // External Structure Definitions
 Alias:   $imposeProfile =                 http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
 Alias:   $dr-eu-lab =                     http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab
 Alias:   $obs-resultslab-eu-lab =         http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab
 Alias:   $codeableConcept-uv-ips        = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+Alias:   $obs-interpretation            = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 
 
 // Extensions
