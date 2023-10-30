@@ -108,7 +108,7 @@ Usage: #inline
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
 
-//  extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-CBC-panel)
+// * extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-CBC-panel)
 // * extension[0].url = "http://fhir.ch/ig/ch-lab-report/StructureDefinition/composition-basedOn-order-or-requisition"
 // * extension[=].valueReference = Reference(ServiceRequest-CBC-panel)
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition" // no dependent SR !!!
@@ -220,7 +220,9 @@ Usage: #inline
 * telecom[=].value = "hans.guggindieluft@example.ch"
 * gender = #male
 * birthDate = "1981-01-01"
-* maritalStatus = $ech-11-maritalstatus#5 "unverheiratet"
+// * maritalStatus = $ech-11-maritalstatus#5 "unverheiratet"
+* maritalStatus.coding[0] = $ech-11-maritalstatus#5 "unverheiratet"
+* maritalStatus.coding[+] = $v3-MaritalStatus#U "unmarried"
 * communication.language = urn:ietf:bcp:47#de-CH
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
@@ -596,8 +598,8 @@ Usage: #inline
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-
+// * code.coding[0] = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* code.coding[0] = $loinc#58410-2 "CBC panel - Blood by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(HansGuggindieluft)
