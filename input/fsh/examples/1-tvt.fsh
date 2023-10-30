@@ -1050,4 +1050,3 @@ Usage: #inline
 * contact.address.city = "Olten"
 * contact.address.postalCode = "4600"
 * contact.address.country = "CH"
-
