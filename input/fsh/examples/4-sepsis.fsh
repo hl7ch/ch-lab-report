@@ -35,6 +35,19 @@ Usage: #inline
 * entry[Observation].fullUrl = "urn:uuid:cd376843-9c66-4e63-b403-9299bd6c4fc2"
 * entry[Observation].resource = Observation-kPneumoniae-quant
 
+* entry[Observation].fullUrl = "urn:uuid:ae61519b-b7b4-4bfc-a7a9-f272130a2300"
+* entry[Observation].resource = Observation-eColi
+
+* entry[Observation].fullUrl = "urn:uuid:e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
+* entry[Observation].resource = Observation-eColi-quant
+
+* entry[Observation].fullUrl = "urn:uuid:e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
+* entry[Observation].resource = Observation-strepMitis
+
+* entry[Observation].fullUrl = "urn:uuid:ae61519b-b7b4-4bfc-a7a9-f272130a2300"
+* entry[Observation].resource = Observation-strepMitis-quant
+
+
 
 //================== susceptibility tests ==========================0
 * entry[Observation].fullUrl = "urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d"
@@ -135,9 +148,17 @@ Usage: #inline
 * section[lab-subsections].section[=].code  = $loinc#87969-2
 * section[lab-subsections].section[=].entry = Reference(Observation-gram-stain)
 
-* section[lab-subsections].section[0].title = "Microbiology studies (set)"
-* section[lab-subsections].section[=].code  = $loinc#18725-2
+* section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
+* section[lab-subsections].section[=].code  = $loinc#29576-6
+* section[lab-subsections].section[=].entry = Reference(Observation-kPneumoniae-susc-panel)
+
+* section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
+* section[lab-subsections].section[=].code  = $loinc#29576-6
 * section[lab-subsections].section[=].entry = Reference(Observation-eColi-susc-panel)
+
+* section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
+* section[lab-subsections].section[=].code  = $loinc#29576-6
+* section[lab-subsections].section[=].entry = Reference(Observation-strepMitis-susc-panel)
 
 
 // ╭──────────── DiagnosticReport 5-sepsis ──────────────────╮
@@ -173,7 +194,7 @@ Usage: #inline
 // * result[+] = Reference(Observation-D-Dimer)
 
 
-// ╭────── Patient 5-sepsis ────╮
+// ╭───── Patient 5-sepsis ────╮
 // │ Scenario suspected sepsis │
 // ╰───────────────────────────╯
 Instance: KlebsiellaKeller
@@ -228,7 +249,7 @@ Usage: #inline
 * performer[+].display = "Eva Erlenmeier"
 * hasMember[+] = Reference(Observation/1097929f-890e-4e27-a31d-58599f3e2479) // Observation-wbc
 * hasMember[+] = Reference(Observation/fcf220c3-7f3e-44f8-b669-48552a20fa0a) // Observation-kPneumoniae
-//* hasMember[+] = Reference(Observation/331d513e-a57f-4464-9eec-25533aeb6d06) // Observation-eColi
+* hasMember[+] = Reference(Observation/331d513e-a57f-4464-9eec-25533aeb6d06) // Observation-eColi
 //* hasMember[+] = Reference(Observation/331d513e-a57f-4464-9eec-25533aeb6d06) // Observation-strepMitis
 
 Instance: Observation-wbc
@@ -273,6 +294,70 @@ Usage: #inline
 * valueCodeableConcept = $sct#441614007 "Present + out of +++"
 * valueCodeableConcept.text = "+"
 
+Instance: Observation-eColi
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "ae61519b-b7b4-4bfc-a7a9-f272130a2300"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
+* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
+* hasMember[+] = Reference(Observation/e6ce8504-dadb-49c9-a997-a8ed4c7cba24) // Observation-eColi-quant
+
+Instance: Observation-eColi-quant
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* code.text = "Observed Quantity"
+* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+// * valueCodeableConcept = $sct#441614007 "Present + out of +++"
+// * valueCodeableConcept.text = "+"
+* valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
+* valueCodeableConcept.text = "++"
+
+
+Instance: Observation-strepMitis
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "ae61519b-b7b4-4bfc-a7a9-f272130a2300"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
+* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
+* hasMember[+] = Reference(Observation/e6ce8504-dadb-49c9-a997-a8ed4c7cba24) // Observation-strepMitis-quant
+
+Instance: Observation-strepMitis-quant
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* code.text = "Observed Quantity"
+* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+// * valueCodeableConcept = $sct#441614007 "Present + out of +++"
+// * valueCodeableConcept.text = "+"
+* valueCodeableConcept = $sct#2667000 "Absent"
+* valueCodeableConcept.text = "None observed"
+
+
+
+
 // ╭────── Observation 4-sepsis e. coli ───────────────────────────────────╮
 // │ Results: susceptibility Panel with 4 susceptibility observations      │
 // ╰───────────────────────────────────────────────────────────────────────╯
@@ -284,7 +369,7 @@ Usage: #inline
 * status = #final
 
 * category[0] = $observation-category#laboratory
-* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* category[+] = $loinc#29576-6 "Bacterial susceptibility panel"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -302,7 +387,7 @@ Usage: #inline
 * id = "24f1a039-5146-4e51-8c07-dfd94bc7370d"
 * status = #final
 * category[0] = $observation-category#laboratory
-* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* category[+] = $loinc#29576-6 "Bacterial susceptibility panel"
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -320,7 +405,7 @@ Usage: #inline
 * id = "9d3394c2-3b7b-4f88-9358-239adbeadba3"
 * status = #final
 * category[0] = $observation-category#laboratory
-* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* category[+] = $loinc#29576-6 "Bacterial susceptibility panel"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -338,7 +423,7 @@ Usage: #inline
 * id = "4679fd4c-4ef3-4b91-b17c-8a97a25472fb"
 * status = #final
 * category[0] = $observation-category#laboratory
-* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* category[+] = $loinc#29576-6 "Bacterial susceptibility panel"
 * code = $loinc#18953-0 "Neomycin [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -355,7 +440,7 @@ Usage: #inline
 * id = "28a7f5b7-7ba4-4caf-ac43-80326dcf2cfb"
 * status = #final
 * category[0] = $observation-category#laboratory
-* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* category[+] = $loinc#29576-6 "Bacterial susceptibility panel"
 * code = $loinc#19000-9 "Vancomycin [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * performer = Reference(EvaErlenmeyer)
