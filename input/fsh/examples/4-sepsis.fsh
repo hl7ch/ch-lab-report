@@ -197,7 +197,7 @@ Usage: #inline
 * communication.preferred = true
 
 // ╭────── Observation 4-sepsis e. coli ───────────────────────────────────╮
-// │ Results  4 susceptibility Panel                                         │
+// │ Results: susceptibility Panel with 4 susceptibility observations      │
 // ╰───────────────────────────────────────────────────────────────────────╯
 Instance: Observation-eColi-susc-panel
 InstanceOf: ChLabObservationResultsLaboratory
@@ -226,7 +226,6 @@ Usage: #inline
 * status = #final
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18769-0 "microbial susceptibility tests set"
-
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -245,7 +244,6 @@ Usage: #inline
 * status = #final
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18769-0 "microbial susceptibility tests set"
-
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -264,7 +262,6 @@ Usage: #inline
 * status = #final
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18769-0 "microbial susceptibility tests set"
-
 * code = $loinc#18953-0 "Neomycin [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -282,7 +279,6 @@ Usage: #inline
 * status = #final
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18769-0 "microbial susceptibility tests set"
-
 * code = $loinc#19000-9 "Vancomycin [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * performer = Reference(EvaErlenmeyer)
@@ -296,7 +292,7 @@ Usage: #inline
 
 
 
-// ╭────── PractitionerRole 4-sepsis ────────────────────────────────────────────╮
+// ╭────── PractitionerRole 4-sepsis ──────────────────────────────────────╮
 // │    Hans Hauser Kantonsspital  │
 // ╰───────────────────────────────────────────────────────────────────────╯
 Instance: HansHauserKantonsspital
