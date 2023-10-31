@@ -189,9 +189,10 @@ Usage: #inline
 // * specimen[+] = Reference(Blood-coag)
 // * specimen[+] = Reference(Serum)
 
-* result[0] = Reference(Observation-CBC-panel)  // no dependent observations!
-// * result[+] = Reference(Observation-CRP)
-// * result[+] = Reference(Observation-D-Dimer)
+* result[0] = Reference(Observation-gram-stain)  // no dependent observations!
+* result[+] = Reference(Observation-kPneumoniae-susc-panel)
+* result[+] = Reference(Observation-eColi-susc-panel)
+* result[+] = Reference(Observation-strepMitis-susc-panel)
 
 
 // ╭───── Patient 5-sepsis ────╮
@@ -250,7 +251,7 @@ Usage: #inline
 * hasMember[+] = Reference(Observation/1097929f-890e-4e27-a31d-58599f3e2479) // Observation-wbc
 * hasMember[+] = Reference(Observation/fcf220c3-7f3e-44f8-b669-48552a20fa0a) // Observation-kPneumoniae
 * hasMember[+] = Reference(Observation/331d513e-a57f-4464-9eec-25533aeb6d06) // Observation-eColi
-//* hasMember[+] = Reference(Observation/331d513e-a57f-4464-9eec-25533aeb6d06) // Observation-strepMitis
+* hasMember[+] = Reference(Observation/e6ce8504-dadb-49c9-a997-a8ed4c7cba24) // Observation-strepMitis
 
 Instance: Observation-wbc
 InstanceOf: ChLabObservationResultsLaboratory
