@@ -3,7 +3,7 @@
 // │  aerobic + anaerobic, Interval 30', Urine                 │
 // │  Found: K. pneumoniae, E. coli, Strept. mitis             │
 // ╰───────────────────────────────────────────────────────────╯
-Instance: LabResultReport-5-sepsis
+Instance: LabResultReport-4-sepsis
 InstanceOf: ChLabReportDocument
 Description: "Example of a Laboratory Report for suspected sepsis"
 Usage: #inline
@@ -14,10 +14,10 @@ Usage: #inline
 * timestamp = "2023-03-09T14:30:00+01:00"
 
 * entry[Composition].fullUrl = "urn:uuid:832c053d-e0a0-4467-9f85-4bde09b825af"
-* entry[Composition].resource = Composition-5-sepsis
+* entry[Composition].resource = Composition-4-sepsis
 
 * entry[DiagnosticReport].fullUrl = "urn:uuid:1e56bbe9-ee25-45db-a887-987090f89810"
-* entry[DiagnosticReport].resource = DiagnosticReport-5-sepsis
+* entry[DiagnosticReport].resource = DiagnosticReport-4-sepsis
 
 * entry[Patient].fullUrl = "urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b"
 * entry[Patient].resource = KlebsiellaKeller
@@ -89,11 +89,11 @@ Usage: #inline
 
 
 
-// ╭────────────── Composition 5-sepsis ─────────────────────╮
+// ╭────────────── Composition 4-sepsis ─────────────────────╮
 // │ Scenario deep vein thrombosis: Microbiological results  │
 // ╰─────────────────────────────────────────────────────────╯
 
-Instance: Composition-5-sepsis
+Instance: Composition-4-sepsis
 InstanceOf: ChLabReportComposition
 Description: "Example of Composition in the scenario of deep vein thrombosis"
 Usage: #inline
@@ -161,10 +161,10 @@ Usage: #inline
 * section[lab-subsections].section[=].entry = Reference(Observation-strepMitis-susc-panel)
 
 
-// ╭──────────── DiagnosticReport 5-sepsis ──────────────────╮
+// ╭──────────── DiagnosticReport 4-sepsis ──────────────────╮
 // │ Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer  │
 // ╰─────────────────────────────────────────────────────────╯
-Instance: DiagnosticReport-5-sepsis
+Instance: DiagnosticReport-4-sepsis
 InstanceOf: ChLabDiagnosticReport
 Description: "Example of DiagnosticReport for several lab results"
 Usage: #inline
@@ -195,7 +195,7 @@ Usage: #inline
 * result[+] = Reference(Observation-strepMitis-susc-panel)
 
 
-// ╭───── Patient 5-sepsis ────╮
+// ╭───── Patient 4-sepsis ────╮
 // │ Scenario suspected sepsis │
 // ╰───────────────────────────╯
 Instance: KlebsiellaKeller
@@ -232,9 +232,9 @@ Usage: #inline
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
-// ╭────── Observation 4-sepsis e. coli ──────────────────────╮
-// │      Gram stain: wbc, kPneumoniae, eColi, strepMitis     │
-// ╰──────────────────────────────────────────────────────────╯
+// ╭────── Observation 4-sepsis ────────────────────────╮
+// │  Gram stain: wbc, kPneumoniae, eColi, strepMitis   │
+// ╰────────────────────────────────────────────────────╯
 
 Instance: Observation-gram-stain
 InstanceOf: ChLabObservationResultsLaboratory
@@ -325,7 +325,6 @@ Usage: #inline
 * valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
 * valueCodeableConcept.text = "++"
 
-
 Instance: Observation-strepMitis
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
@@ -356,12 +355,17 @@ Usage: #inline
 * valueCodeableConcept = $sct#2667000 "Absent"
 * valueCodeableConcept.text = "None observed"
 
+// ╭────── Observation 4-sepsis kPneumoniae ───────────────────────────╮
+// │ Results: susceptibility Panel with 4 susceptibility observations  │
+// ╰───────────────────────────────────────────────────────────────────╯
 
+// Here comes Instance: Observation-kPneumoniae-susc-panel
+// InstanceOf: ChLabObservationResultsLaboratory
+// Usage: #inline
 
-
-// ╭────── Observation 4-sepsis e. coli ───────────────────────────────────╮
-// │ Results: susceptibility Panel with 4 susceptibility observations      │
-// ╰───────────────────────────────────────────────────────────────────────╯
+// ╭────── Observation 4-sepsis eColi ─────────────────────────────────╮
+// │ Results: susceptibility Panel with 4 susceptibility observations  │
+// ╰───────────────────────────────────────────────────────────────────╯
 
 Instance: Observation-eColi-susc-panel
 InstanceOf: ChLabObservationResultsLaboratory
@@ -380,7 +384,6 @@ Usage: #inline
 * hasMember[+] = Reference(Observation/9d3394c2-3b7b-4f88-9358-239adbeadba3)
 * hasMember[+] = Reference(Observation/4679fd4c-4ef3-4b91-b17c-8a97a25472fb)
 * hasMember[+] = Reference(Observation/6a68a15a-5477-4d01-bfd6-fe7fa7cb97f8)
-
 
 Instance: Observation-eColi-carbapenem-susc
 InstanceOf: ChLabObservationResultsLaboratory
