@@ -15,14 +15,24 @@ Usage: #inline
 
 * entry[Composition].fullUrl = "urn:uuid:832c053d-e0a0-4467-9f85-4bde09b825af"
 * entry[Composition].resource = Composition-4-sepsis
-
 * entry[DiagnosticReport].fullUrl = "urn:uuid:1e56bbe9-ee25-45db-a887-987090f89810"
 * entry[DiagnosticReport].resource = DiagnosticReport-4-sepsis
 
 * entry[Patient].fullUrl = "urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b"
 * entry[Patient].resource = KatarinaKeller
 
-//================== gram stain ==========================0
+//================== serviceRequest ==========================0
+
+* entry[ServiceRequest].fullUrl = "urn:uuid:58155c90-ae24-4093-8054-13370e29b3a5"
+* entry[ServiceRequest].resource = ServiceRequest-gram-stain
+
+* entry[ServiceRequest].fullUrl = "urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8"
+* entry[ServiceRequest].resource = ServiceRequest-aerobe-culture
+
+* entry[ServiceRequest].fullUrl = "urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b"
+* entry[ServiceRequest].resource = ServiceRequest-anaerobe-culture
+
+//================== Observations gram Stain ==========================0
 * entry[Observation].fullUrl = "urn:uuid:09cebdc4-7ecd-4164-bdda-6a8207d1f2be"
 * entry[Observation].resource = Observation-gram-stain
 
@@ -30,40 +40,38 @@ Usage: #inline
 * entry[Observation].resource = Observation-wbc
 
 * entry[Observation].fullUrl = "urn:uuid:4679fd4c-4ef3-4b91-b17c-8a97a25472fb"
-* entry[Observation].resource = Observation-kPneumoniae
+* entry[Observation].resource = Observation-org-1
 
 * entry[Observation].fullUrl = "urn:uuid:cd376843-9c66-4e63-b403-9299bd6c4fc2"
-* entry[Observation].resource = Observation-kPneumoniae-quant
+* entry[Observation].resource = Observation-org-1-quant
 
 * entry[Observation].fullUrl = "urn:uuid:ae61519b-b7b4-4bfc-a7a9-f272130a2300"
-* entry[Observation].resource = Observation-eColi
+* entry[Observation].resource = Observation-org-2
 
 * entry[Observation].fullUrl = "urn:uuid:e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
-* entry[Observation].resource = Observation-eColi-quant
+* entry[Observation].resource = Observation-org-2-quant
 
 * entry[Observation].fullUrl = "urn:uuid:e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
-* entry[Observation].resource = Observation-strepMitis
+* entry[Observation].resource = Observation-org-3
 
 * entry[Observation].fullUrl = "urn:uuid:ae61519b-b7b4-4bfc-a7a9-f272130a2300"
-* entry[Observation].resource = Observation-strepMitis-quant
+* entry[Observation].resource = Observation-org-3-quant
 
-
-
-//================== susceptibility tests ==========================0
+//================== Observations susceptibility tests =====================0
 * entry[Observation].fullUrl = "urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d"
-* entry[Observation].resource = Observation-eColi-susc-panel
+* entry[Observation].resource = Observation-org-2-susc-panel
 
 * entry[Observation].fullUrl = "urn:uuid:9d3394c2-3b7b-4f88-9358-239adbeadba3"
-* entry[Observation].resource = Observation-eColi-carbapenem-susc
+* entry[Observation].resource = Observation-org-2-carbapenem-susc
 
 * entry[Observation].fullUrl = "urn:uuid:4679fd4c-4ef3-4b91-b17c-8a97a25472fb"
-* entry[Observation].resource = Observation-eColi-ciprofloxacin-susc
+* entry[Observation].resource = Observation-org-2-ciprofloxacin-susc
 
 * entry[Observation].fullUrl = "urn:uuid:6a68a15a-5477-4d01-bfd6-fe7fa7cb97f8"
-* entry[Observation].resource = Observation-eColi-vancomycin-susc
+* entry[Observation].resource = Observation-org-2-vancomycin-susc
 
 * entry[Observation].fullUrl = "urn:uuid:28a7f5b7-7ba4-4caf-ac43-80326dcf2cfb"
-* entry[Observation].resource = Observation-eColi-vancomycin-susc
+* entry[Observation].resource = Observation-org-2-vancomycin-susc
 
 //=============== practitioner, organization =============================0
 
@@ -148,17 +156,25 @@ Usage: #inline
 * section[lab-subsections].section[=].code  = $loinc#87969-2
 * section[lab-subsections].section[=].entry = Reference(Observation-gram-stain)
 
-* section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
-* section[lab-subsections].section[=].code  = $loinc#29576-6
-* section[lab-subsections].section[=].entry = Reference(Observation-kPneumoniae-susc-panel)
+* section[lab-subsections].section[+].title = "Aerobic culture technique (qualifier value)"
+* section[lab-subsections].section[=].code  = $sct#703750006
+* section[lab-subsections].section[=].entry = Reference(Observation-aerobe-culture)
+
+* section[lab-subsections].section[+].title = "Anaerobic culture technique (qualifier value)"
+* section[lab-subsections].section[=].code  = $sct#703751005
+* section[lab-subsections].section[=].entry = Reference(Observation-anaerobe-culture)
 
 * section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
 * section[lab-subsections].section[=].code  = $loinc#29576-6
-* section[lab-subsections].section[=].entry = Reference(Observation-eColi-susc-panel)
+* section[lab-subsections].section[=].entry = Reference(Observation-org-1-susc-panel)
 
 * section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
 * section[lab-subsections].section[=].code  = $loinc#29576-6
-* section[lab-subsections].section[=].entry = Reference(Observation-strepMitis-susc-panel)
+* section[lab-subsections].section[=].entry = Reference(Observation-org-2-susc-panel)
+
+* section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
+* section[lab-subsections].section[=].code  = $loinc#29576-6
+* section[lab-subsections].section[=].entry = Reference(Observation-org-3-susc-panel)
 
 
 // ╭──────────── DiagnosticReport 4-sepsis ──────────────────╮
@@ -174,13 +190,13 @@ Usage: #inline
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/832c053d-e0a0-4467-9f85-4bde09b825af)
 
-* basedOn[0] = Reference(ServiceRequest-CBC-panel)
-* basedOn[+] = Reference(ServiceRequest-CRP)
-* basedOn[+] = Reference(ServiceRequest-D-Dimer)
+* basedOn[0] = Reference(ServiceRequest-gram-stain)
+* basedOn[+] = Reference(ServiceRequest-aerobe-culture)
+* basedOn[+] = Reference(ServiceRequest-anaerobe-culture)
 * status = #final
 // * code = $sct#4241000179101 "Laboratory report (record artifact)"  // in profile
 // * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(KatarinaKeller)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyerLaborPipette)
 * performer.display = "Dr. Eva Erlenmeyer"
@@ -190,9 +206,9 @@ Usage: #inline
 // * specimen[+] = Reference(Serum)
 
 * result[0] = Reference(Observation-gram-stain)  // no dependent observations!
-* result[+] = Reference(Observation-kPneumoniae-susc-panel)
-* result[+] = Reference(Observation-eColi-susc-panel)
-* result[+] = Reference(Observation-strepMitis-susc-panel)
+* result[+] = Reference(Observation-org-1-susc-panel)
+* result[+] = Reference(Observation-org-2-susc-panel)
+* result[+] = Reference(Observation-org-3-susc-panel)
 
 
 // ╭───── Patient 4-sepsis ────╮
@@ -232,10 +248,9 @@ Usage: #inline
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
-// ╭────── Observation 4-sepsis ────────────────────────╮
-// │  Gram stain: wbc, kPneumoniae, eColi, strepMitis   │
+// ╭────── 4-sepsis Observation gram stain ─────────────╮
+// │  Gram stain: wbc, org-1, org-2, org-3   │
 // ╰────────────────────────────────────────────────────╯
-
 Instance: Observation-gram-stain
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
@@ -243,15 +258,16 @@ Usage: #inline
 * status = #final
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
-* code.text = "Gram Stain"
+* code.text = "Microscopic observation Gram stain Nom (Bld)"  // Display Name
+* code = $loinc#87969-2 "Microscopic observation [Identifier] in Blood by Gram stain"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer)
 * performer[+].display = "Eva Erlenmeier"
-* hasMember[+] = Reference(Observation/1097929f-890e-4e27-a31d-58599f3e2479) // Observation-wbc
-* hasMember[+] = Reference(Observation/fcf220c3-7f3e-44f8-b669-48552a20fa0a) // Observation-kPneumoniae
-* hasMember[+] = Reference(Observation/331d513e-a57f-4464-9eec-25533aeb6d06) // Observation-eColi
-* hasMember[+] = Reference(Observation/e6ce8504-dadb-49c9-a997-a8ed4c7cba24) // Observation-strepMitis
+* hasMember[+] = Reference(Observation/c0393c7c-bc8a-47d2-a1a9-d4e1f87c6449) // Observation-wbc
+* hasMember[+] = Reference(Observation/4679fd4c-4ef3-4b91-b17c-8a97a25472fb) // Observation-org-1
+* hasMember[+] = Reference(Observation/ae61519b-b7b4-4bfc-a7a9-f272130a2300) // Observation-org-2
+* hasMember[+] = Reference(Observation/e6ce8504-dadb-49c9-a997-a8ed4c7cba24) // Observation-org-3
 
 Instance: Observation-wbc
 InstanceOf: ChLabObservationResultsLaboratory
@@ -267,7 +283,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#2667000 "Absent"
 * valueCodeableConcept.text = "None observed"
 
-Instance: Observation-kPneumoniae
+Instance: Observation-org-1
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "4679fd4c-4ef3-4b91-b17c-8a97a25472fb"
@@ -279,9 +295,9 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 * valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
-* hasMember[+] = Reference(Observation/2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e) // Observation-kPneumoniae-quant
+* hasMember[+] = Reference(Observation/2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e) // Observation-org-1-quant
 
-Instance: Observation-kPneumoniae-quant
+Instance: Observation-org-1-quant
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "cd376843-9c66-4e63-b403-9299bd6c4fc2"
@@ -295,7 +311,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#441614007 "Present + out of +++"
 * valueCodeableConcept.text = "+"
 
-Instance: Observation-eColi
+Instance: Observation-org-2
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "ae61519b-b7b4-4bfc-a7a9-f272130a2300"
@@ -307,9 +323,9 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 * valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
-* hasMember[+] = Reference(Observation/e6ce8504-dadb-49c9-a997-a8ed4c7cba24) // Observation-eColi-quant
+* hasMember[+] = Reference(Observation/e6ce8504-dadb-49c9-a997-a8ed4c7cba24) // Observation-org-2-quant
 
-Instance: Observation-eColi-quant
+Instance: Observation-org-2-quant
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
@@ -325,7 +341,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
 * valueCodeableConcept.text = "++"
 
-Instance: Observation-strepMitis
+Instance: Observation-org-3
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "ae61519b-b7b4-4bfc-a7a9-f272130a2300"
@@ -337,9 +353,9 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 * valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
-* hasMember[+] = Reference(Observation/e6ce8504-dadb-49c9-a997-a8ed4c7cba24) // Observation-strepMitis-quant
+* hasMember[+] = Reference(Observation/e6ce8504-dadb-49c9-a997-a8ed4c7cba24) // Observation-org-3-quant
 
-Instance: Observation-strepMitis-quant
+Instance: Observation-org-3-quant
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
@@ -355,19 +371,63 @@ Usage: #inline
 * valueCodeableConcept = $sct#2667000 "Absent"
 * valueCodeableConcept.text = "None observed"
 
-// ╭────── Observation 4-sepsis kPneumoniae ───────────────────────────╮
+
+// ╭────── 4-sepsis Observation aerobe-culture ─────────╮
+// │  Aerobe Culture: org-1, org-2, org-3    │
+// ╰────────────────────────────────────────────────────╯
+Instance: Observation-aerobe-culture
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "09cebdc4-7ecd-4164-bdda-6a8207d1f2be"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* code.text = "Bacteria identified Aer cx Nom (Bld)" // Display Name
+* code = $loinc#17928-3 "Bacteria identified in Blood by Aerobe culture"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+
+* hasMember[+] = Reference(Observation/fcf220c3-xxxx-44f8-b669-48552a20fa0a) // Observation-aerobe-culture-org-1
+* hasMember[+] = Reference(Observation/331d513e-xxxx-4464-9eec-25533aeb6d06) // Observation-aerobe-culture-org-2
+* hasMember[+] = Reference(Observation/e6ce8504-xxxx-49c9-a997-a8ed4c7cba24) // Observation-aerobe-culture-org-3
+
+// ╭────── 4-sepsis Observation anaerobe-culture ───────╮
+// │  Anaerobe Culture: org-1, org-2, org-3  │
+// ╰────────────────────────────────────────────────────╯
+Instance: Observation-anaerobe-culture
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "09cebdc4-7ecd-4164-bdda-6a8207d1f2be"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* code.text = "Bacteria identified Anaer cx Nom (Bld)" // Display Name
+* code = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+
+* hasMember[+] = Reference(Observation/fcf220c3-xxxx-44f8-b669-48552a20fa0a) // Observation-anaerobe-culture-org-1
+* hasMember[+] = Reference(Observation/331d513e-xxxx-4464-9eec-25533aeb6d06) // Observation-anaerobe-culture-org-2
+* hasMember[+] = Reference(Observation/e6ce8504-xxxx-49c9-a997-a8ed4c7cba24) // Observation-anaerobe-culture-org-3
+
+
+// ╭────── Observation 4-sepsis org-1 ───────────────────────────╮
 // │ Results: susceptibility Panel with 4 susceptibility observations  │
 // ╰───────────────────────────────────────────────────────────────────╯
 
-// Here comes Instance: Observation-kPneumoniae-susc-panel
+// Here comes Instance: Observation-org-1-susc-panel
 // InstanceOf: ChLabObservationResultsLaboratory
 // Usage: #inline
 
-// ╭────── Observation 4-sepsis eColi ─────────────────────────────────╮
+// ╭────── Observation 4-sepsis org-2 ─────────────────────────────────╮
 // │ Results: susceptibility Panel with 4 susceptibility observations  │
 // ╰───────────────────────────────────────────────────────────────────╯
 
-Instance: Observation-eColi-susc-panel
+Instance: Observation-org-2-susc-panel
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "24f1a039-5146-4e51-8c07-dfd94bc7370d"
@@ -385,7 +445,7 @@ Usage: #inline
 * hasMember[+] = Reference(Observation/4679fd4c-4ef3-4b91-b17c-8a97a25472fb)
 * hasMember[+] = Reference(Observation/6a68a15a-5477-4d01-bfd6-fe7fa7cb97f8)
 
-Instance: Observation-eColi-carbapenem-susc
+Instance: Observation-org-2-carbapenem-susc
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "24f1a039-5146-4e51-8c07-dfd94bc7370d"
@@ -403,7 +463,7 @@ Usage: #inline
 * valueQuantity.system = $ucum
 * interpretation = $obs-interpretation#S "Susceptible"
 
-Instance: Observation-eColi-ciprofloxacin-susc
+Instance: Observation-org-2-ciprofloxacin-susc
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "9d3394c2-3b7b-4f88-9358-239adbeadba3"
@@ -421,7 +481,7 @@ Usage: #inline
 * valueQuantity.system = $ucum
 * interpretation = $obs-interpretation#R "Resistant"
 
-Instance: Observation-eColi-neomycin-susc
+Instance: Observation-org-2-neomycin-susc
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "4679fd4c-4ef3-4b91-b17c-8a97a25472fb"
@@ -438,7 +498,7 @@ Usage: #inline
 * valueQuantity.system = $ucum
 * interpretation = $obs-interpretation#S "Susceptible"
 
-Instance: Observation-eColi-vancomycin-susc
+Instance: Observation-org-2-vancomycin-susc
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "28a7f5b7-7ba4-4caf-ac43-80326dcf2cfb"
@@ -517,75 +577,96 @@ Usage: #inline
 * address.postalCode = "8000"
 * address.country = "Schweiz"
 
-/*
-Instance: EvaErlenmeyerLaborPipette
-InstanceOf: ChLabPractitionerRole
-Title: "Marc Mustermann at Arztpraxis"
-Description: "PractitionerRole, refers to 1-tvt"
-Usage: #inline
-* id = "017e8e32-2f3b-4bef-baf1-92c7278a7048"
-* practitioner = Reference(EvaErlenmeyer)
-* organization = Reference(LaborPipette)
-* code = urn:oid:2.16.840.1.113883.2.9.6.2.7#3212	 "Medical and Pathology Laboratory Technicians"
+// ╭────── ServiceRequest 4-sepsis ────────────────────────────────────────────────────────────╮
+// │  Microbiological Organism Identification: Gram stain, aerobic culture, anaerobic culture  │
+// ╰───────────────────────────────────────────────────────────────────────────────────────────╯
 
-Instance: EvaErlenmeyer
-InstanceOf: ChLabPractitioner
-Title: "Eva Erlenmeyer"
-Description: "Specialist for Laboratory Medicine, works in Labor Pipette"
+Instance: ServiceRequest-gram-stain
+InstanceOf: ChLabReportServiceRequest
+Title: "LabOrder Service Request for microscopic bacterial identification in Blood"
+Description: "Example for Service Request for Gram Stain of blood specimen"
 Usage: #inline
-* id = "12328339-f7d6-4bb6-80e4-89fd03ce5052"
-* identifier[0].system = "urn:oid:2.51.1.3" // GLN
-* identifier[=].value = "7601000050717"
-* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[=].value = "A123315"
-* name.use = #official
-* name.family = "Erlenmeyer"
-* name.given = "Eva"
-* name.prefix = "Dr. med."
-* name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
-* name.prefix.extension.valueCode = #AC
-* telecom[0].system = #phone
-* telecom[=].value = "033 444 55 66"
-* telecom[=].use = #work
-* telecom[+].system = #email
-* telecom[=].value = "eva.erlenmeyer@labor-pipette.ch"
-* telecom[=].use = #work
-* qualification.code = $v2-0360#MD "Doctor of Medicine"
-* address.line = "Laborstrasse 23"
-* address.city = "Olten"
-* address.postalCode = "4600"
-* address.country = "CH"
+* id = "58155c90-ae24-4093-8054-13370e29b3a5"
+* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PRN "Provider number"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+* status = #active
+* intent = #original-order
+// * category = $sct#108252007 "Laboratory procedure"
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Clinical Chemistry Tests ----
+* code.coding[0] = $loinc#87969-2 "Microscopic observation [Identifier] in Blood by Gram stain"
+// orderDetails: Additional order information, codeableConcept
+* priority = #urgent
+* subject = Reference(KatarinaKeller)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#238150007
+* reasonCode.text = "Sepsis syndrome (disorder)"
+//* insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Blood) "Blood specimen"
 
-Instance: LaborPipette
-InstanceOf: CHCoreOrganization
-Title: "Labor Pipette"
-Description: "Laboratory Organization executing Laboratory tests and sending Diagnostic Reports"
+Instance: ServiceRequest-aerobe-culture
+InstanceOf: ChLabReportServiceRequest
+Title: "LabOrder Service Request for bacterial identification by aerobic culture in Blood"
+Description: "Example for Service Request for aerobic culture of blood specimen"
 Usage: #inline
-* id = "152da916-a010-4047-b80a-900e2d55c676"
-* identifier[GLN].system = "urn:oid:2.51.1.3"
-* identifier[GLN].value = "7601000234407"
-* name = "Labor Pipette"
-* telecom.system = #phone
-* telecom.value = "+41223345566"
-* telecom.use = #work
-* address.line = "Laborstrasse 23"
-* address.city = "Olten"
-* address.use = #work
-* address.postalCode = "4600"
-* address.country = "CH"
-* contact.name.use = #official
-* contact.name.text = "Dr. Eva Erlenmeyer"
-* contact.name.family = "Erlenmeyer"
-* contact.name.given = "Eva"
-* contact.name.prefix = "Dr. med."
-* contact.telecom.system = #phone
-* contact.telecom.value = "+41334445566"
-* contact.telecom.use = #work
-* contact.telecom.system = #email
-* contact.telecom.value = "eva.erlenmeyer@labor-pipette.ch"
-* contact.address.line[0] = "Laborstrasse 23"
-* contact.address.line[+] = "4. Stock"
-* contact.address.city = "Olten"
-* contact.address.postalCode = "4600"
-* contact.address.country = "CH"
-*/
+* id = "a168c88a-f2c1-43d1-9dd7-611a64cd7be8"
+* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PRN "Provider number"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+* status = #active
+* intent = #original-order
+// * category = $sct#108252007 "Laboratory procedure"
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Clinical Chemistry Tests ----
+* code.coding[0] = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
+// orderDetails: Additional order information, codeableConcept
+* priority = #urgent
+* subject = Reference(KatarinaKeller)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#238150007
+* reasonCode.text = "Sepsis syndrome (disorder)"
+//* insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Blood) "Blood specimen"
+
+Instance: ServiceRequest-anaerobe-culture
+InstanceOf: ChLabReportServiceRequest
+Title: "LabOrder Service Request for bacterial identification by anaerobic culture in Blood"
+Description: "Example for Service Request for anaerobic culture of blood specimen"
+Usage: #inline
+* id = "6bb29a10-2313-48b9-96ba-e903d0ae3c2b"
+* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PRN "Provider number"
+* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.value = "ReqID-1234567"
+* status = #active
+* intent = #original-order
+// * category = $sct#108252007 "Laboratory procedure"
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Clinical Chemistry Tests ----
+* code.coding[0] = $loinc#87969-2 "Microscopic observation [Identifier] in Blood by Gram stain"
+// orderDetails: Additional order information, codeableConcept
+* priority = #urgent
+* subject = Reference(KatarinaKeller)
+* requester = Reference(MarcMustermannArztpraxis)
+* reasonCode = $sct#238150007
+* reasonCode.text = "Sepsis syndrome (disorder)"
+//* insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Blood) "Blood specimen"
