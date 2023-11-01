@@ -57,6 +57,34 @@ Usage: #inline
 * entry[Observation].fullUrl = "urn:uuid:ae61519b-b7b4-4bfc-a7a9-f272130a2300"
 * entry[Observation].resource = Observation-org-3-quant
 
+//================== Observations anaerobe culture ==========================0
+* entry[Observation].fullUrl = "urn:uuid:cea62faa-60b7-442b-b76a-da70ed2d92b1"
+* entry[Observation].resource = Observation-anaerobe-culture
+
+* entry[Observation].fullUrl = "urn:uuid:f89631cb-e973-4ba0-9f48-29b9472b9363"
+* entry[Observation].resource = Observation-anaerobe-culture-org-1
+
+* entry[Observation].fullUrl = "urn:uuid:5c774433-62ad-4d21-b230-6de2d138a02d"
+* entry[Observation].resource = Observation-anaerobe-culture-org-2
+
+* entry[Observation].fullUrl = "urn:uuid:296e1564-39d6-497b-9b40-e60f884dd5e4"
+* entry[Observation].resource = Observation-anaerobe-culture-org-3
+
+//================== Observations aerobe culture ==========================0
+/*
+* entry[Observation].fullUrl = "urn:uuid:3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb"
+* entry[Observation].resource = Observation-aerobe-culture
+
+* entry[Observation].fullUrl = "urn:uuid:8b07a6b9-fefd-4ee5-87e1-04cdc4a15327"
+* entry[Observation].resource = Observation-aerobe-culture-org-1
+
+* entry[Observation].fullUrl = "urn:uuid:dc20d7a8-a2ec-4291-b70e-b3049ea05cf3"
+* entry[Observation].resource = Observation-aerobe-culture-org-2
+
+* entry[Observation].fullUrl = "urn:uuid:230f9ed4-0ab0-456e-9161-f1c290e24c92"
+* entry[Observation].resource = Observation-aerobe-culture-org-3
+*/
+
 //================== Observations susceptibility tests =====================0
 * entry[Observation].fullUrl = "urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d"
 * entry[Observation].resource = Observation-org-2-susc-panel
@@ -248,9 +276,9 @@ Usage: #inline
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
-// ╭────── 4-sepsis Observation gram stain ─────────────╮
+// ╭──── 4-sepsis Observation gram stain ────╮
 // │  Gram stain: wbc, org-1, org-2, org-3   │
-// ╰────────────────────────────────────────────────────╯
+// ╰─────────────────────────────────────────╯
 Instance: Observation-gram-stain
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
@@ -295,7 +323,7 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 * valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
-* hasMember[+] = Reference(Observation/2cecbd1e-4695-46dc-adf8-3ed3b95c0c1e) // Observation-org-1-quant
+* hasMember[+] = Reference(Observation/cd376843-9c66-4e63-b403-9299bd6c4fc2) // Observation-org-1-quant
 
 Instance: Observation-org-1-quant
 InstanceOf: ChLabObservationResultsLaboratory
@@ -344,7 +372,7 @@ Usage: #inline
 Instance: Observation-org-3
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "ae61519b-b7b4-4bfc-a7a9-f272130a2300"
+* id = "e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
 * status = #final
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
@@ -353,12 +381,12 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 * valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
-* hasMember[+] = Reference(Observation/e6ce8504-dadb-49c9-a997-a8ed4c7cba24) // Observation-org-3-quant
+* hasMember[+] = Reference(Observation/ae61519b-b7b4-4bfc-a7a9-f272130a2300) // Observation-org-3-quant
 
 Instance: Observation-org-3-quant
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
+* id = "ae61519b-b7b4-4bfc-a7a9-f272130a2300"
 * status = #final
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
@@ -393,13 +421,13 @@ Usage: #inline
 * hasMember[+] = Reference(Observation/331d513e-xxxx-4464-9eec-25533aeb6d06) // Observation-aerobe-culture-org-2
 * hasMember[+] = Reference(Observation/e6ce8504-xxxx-49c9-a997-a8ed4c7cba24) // Observation-aerobe-culture-org-3
 
-// ╭────── 4-sepsis Observation anaerobe-culture ───────╮
-// │  Anaerobe Culture: org-1, org-2, org-3  │
-// ╰────────────────────────────────────────────────────╯
+// ╭── 4-sepsis Observation anaerobe-culture ───╮
+// │  Anaerobe Culture: org-1, org-2, org-3     │
+// ╰────────────────────────────────────────────╯
 Instance: Observation-anaerobe-culture
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "09cebdc4-7ecd-4164-bdda-6a8207d1f2be"
+* id = "cea62faa-60b7-442b-b76a-da70ed2d92b1"
 * status = #final
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
@@ -410,9 +438,62 @@ Usage: #inline
 * performer = Reference(EvaErlenmeyer)
 * performer[+].display = "Eva Erlenmeier"
 
-* hasMember[+] = Reference(Observation/fcf220c3-xxxx-44f8-b669-48552a20fa0a) // Observation-anaerobe-culture-org-1
-* hasMember[+] = Reference(Observation/331d513e-xxxx-4464-9eec-25533aeb6d06) // Observation-anaerobe-culture-org-2
-* hasMember[+] = Reference(Observation/e6ce8504-xxxx-49c9-a997-a8ed4c7cba24) // Observation-anaerobe-culture-org-3
+* hasMember[+] = Reference(Observation/f89631cb-e973-4ba0-9f48-29b9472b9363) // Observation-anaerobe-culture-org-1
+* hasMember[+] = Reference(Observation/5c774433-62ad-4d21-b230-6de2d138a02d) // Observation-anaerobe-culture-org-2
+* hasMember[+] = Reference(Observation/296e1564-39d6-497b-9b40-e60f884dd5e4) // Observation-anaerobe-culture-org-3
+
+Instance: Observation-anaerobe-culture-org-1
+InstanceOf: ObservationResultsLaboratoryEu
+Usage: #inline
+* id = "f89631cb-e973-4ba0-9f48-29b9472b9363"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
+* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueCodeableConcept = $sct#3092008 "Staphylococcus aureus"
+* hasMember[+] = Reference(Observation/758d2270-xxxx-4a8f-872f-b3fbaef209fa) // Inline-Observation-org-id1-growth
+* hasMember[+] = Reference(Observation/61f8e930-xxxx-41ab-9448-0d1dc74925df) // Inline-Observation-org-id1-susc-panel
+
+Instance: Observation-anaerobe-culture-org-2
+InstanceOf: ObservationResultsLaboratoryEu
+Usage: #inline
+* id = "5c774433-62ad-4d21-b230-6de2d138a02d"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* code.text = "Microorganism Growth"
+* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
+* valueCodeableConcept.text = "++"
+
+Instance: Observation-anaerobe-culture-org-3
+InstanceOf: ObservationResultsLaboratoryEu
+Usage: #inline
+* id = "296e1564-39d6-497b-9b40-e60f884dd5e4"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#29576-6 "Bacterial susceptibility panel"
+* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* hasMember[+] = Reference(Observation/85230b86-xxxx-4faf-a750-d5fa82520ce9)
+* hasMember[+] = Reference(Observation/1fb64f47-xxxx-43ae-a119-c3b4c3367829)
+* hasMember[+] = Reference(Observation/af249f79-xxxx-4533-9935-d19ab7043724)
+* hasMember[+] = Reference(Observation/a4469ca9-xxxx-4c58-853a-44cea24484b8)
+
+
+// ╭── 4-sepsis Observation aerobe-culture ───╮
+// │  Anaerobe Culture: org-1, org-2, org-3     │
+// ╰────────────────────────────────────────────╯
 
 
 // ╭────── Observation 4-sepsis org-1 ───────────────────────────╮
