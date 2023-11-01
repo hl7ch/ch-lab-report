@@ -70,6 +70,15 @@ Usage: #inline
 * entry[Observation].fullUrl = "urn:uuid:531337e5-48ec-4ed7-a81f-d30d16b3d7cb"
 * entry[Observation].resource = Observation-anaerobe-culture-org-1-susc-panel
 
+* entry[Observation].fullUrl = "urn:uuid:29638352-e934-4d5f-9b09-74221f2cf89f"
+* entry[Observation].resource = Observation-org-1-amoxi-clav
+
+* entry[Observation].fullUrl = "urn:uuid:ded8aa43-732c-4cf5-b89c-7860676daf6c"
+* entry[Observation].resource = Observation-org-1-ciprofloxacin
+
+* entry[Observation].fullUrl = "urn:uuid:3453e04d-7bba-45bf-83f9-616c5c18bcfc"
+* entry[Observation].resource = Observation-org-1-ceftriaxone
+
 /*
 * entry[Observation].fullUrl = "urn:uuid:5c774433-62ad-4d21-b230-6de2d138a02d"
 * entry[Observation].resource = Observation-anaerobe-culture-org-2
@@ -469,10 +478,64 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer)
 * performer[+].display = "Eva Erlenmeier"
-* hasMember[+] = Reference(Observation/85230b86-xxxx-4faf-a750-d5fa82520ce9)
-* hasMember[+] = Reference(Observation/1fb64f47-xxxx-43ae-a119-c3b4c3367829)
-* hasMember[+] = Reference(Observation/af249f79-xxxx-4533-9935-d19ab7043724)
-* hasMember[+] = Reference(Observation/a4469ca9-xxxx-4c58-853a-44cea24484b8)
+* hasMember[+] = Reference(Observation/29638352-e934-4d5f-9b09-74221f2cf89f)  // Observation-org-1-amoxi-clav
+* hasMember[+] = Reference(Observation/ded8aa43-732c-4cf5-b89c-7860676daf6c)  // Observation-org-1-ciprofloxacin
+* hasMember[+] = Reference(Observation/3453e04d-7bba-45bf-83f9-616c5c18bcfc)  // Observation-org-1-ceftriaxone
+
+Instance: Observation-org-1-amoxi-clav
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "29638352-e934-4d5f-9b09-74221f2cf89f"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#29576-6 "Bacterial susceptibility panel"
+* code = $loinc#18862-3 "Amoxicillin+Clavulanate [Susceptibility]"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueQuantity.value = 2
+* valueQuantity.comparator = #<=
+* valueQuantity.code = #1
+* valueQuantity.system = $ucum
+* interpretation = $obs-interpretation#S "Susceptible"
+
+Instance: Observation-org-1-ciprofloxacin
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "ded8aa43-732c-4cf5-b89c-7860676daf6c"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#29576-6 "Bacterial susceptibility panel"
+* code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueQuantity.value = 4
+* valueQuantity.comparator = #>
+* valueQuantity.code = #1
+* valueQuantity.system = $ucum
+* interpretation = $obs-interpretation#R "Resistant"
+
+Instance: Observation-org-1-ceftriaxone
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "3453e04d-7bba-45bf-83f9-616c5c18bcfc"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#29576-6 "Bacterial susceptibility panel"
+* code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueQuantity.value = 0.5
+* valueQuantity.code = #1
+* valueQuantity.system = $ucum
+* interpretation = $obs-interpretation#S "Susceptible"
+
+
 
 // ╭────── 4-sepsis Observation aerobe-culture ─────────╮
 // │  Aerobe Culture: org-1, org-2, org-3    │
@@ -497,15 +560,15 @@ Usage: #inline
 
 
 
-// ╭────── Observation 4-sepsis org-1 ───────────────────────────╮
-// │ Results: susceptibility Panel with 4 susceptibility observations  │
+// ╭────── 4-sepsis Observation org-1 susc ────────────────────────────╮
+// │ Results: susceptibility Panel with 3 susceptibility observations  │
 // ╰───────────────────────────────────────────────────────────────────╯
 
 // Here comes Instance: Observation-org-1-susc-panel
 // InstanceOf: ChLabObservationResultsLaboratory
 // Usage: #inline
 
-// ╭────── Observation 4-sepsis org-2 ─────────────────────────────────╮
+// ╭────── 4-sepsis Observation org-2 susc ────────────────────────────╮
 // │ Results: susceptibility Panel with 4 susceptibility observations  │
 // ╰───────────────────────────────────────────────────────────────────╯
 
@@ -598,6 +661,9 @@ Usage: #inline
 * valueQuantity.system = $ucum
 * interpretation = $obs-interpretation#S "Susceptible"
 
+// ╭────── 4-sepsis Observation org-3 susc ────────────────────────────╮
+// │ Results: susceptibility Panel with 3 susceptibility observations  │
+// ╰───────────────────────────────────────────────────────────────────╯
 
 
 // ╭────── PractitionerRole 4-sepsis ──────────────────────────────────────╮
