@@ -515,9 +515,9 @@ Description: "Example for CRP Observation"
 Usage: #inline
 * id = "c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
 * status = #final
-* category[0] = $observation-category#laboratory
+* category[laboratory] = $observation-category#laboratory
 // * category[+] = $v2-0074#CH "Chemistry"
-* category[+] = $loinc#18719-5 "Chemistry studies (set)"  // lab specialty
+* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"  // lab specialty
 * code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma" // subset of loinc
 * code.text = "CRP [Mass/Vol]" // display name
 * subject = Reference(HansGuggindieluft)
