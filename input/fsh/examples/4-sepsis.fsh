@@ -205,8 +205,8 @@ Usage: #inline
 * id = "24f1a039-5146-4e51-8c07-dfd94bc7370d"
 * status = #final
 
-* category[0] = $observation-category#laboratory
-* category[+] = $loinc#18769-0 "Microbial susceptibility tests Set"
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18769-0 "Microbial susceptibility tests Set"
 
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
@@ -224,8 +224,8 @@ InstanceOf: ObservationResultsLaboratoryEu
 Usage: #inline
 * id = "24f1a039-5146-4e51-8c07-dfd94bc7370d"
 * status = #final
-* category[0] = $observation-category#laboratory
-* category[+] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
@@ -243,8 +243,8 @@ InstanceOf: ObservationResultsLaboratoryEu
 Usage: #inline
 * id = "9d3394c2-3b7b-4f88-9358-239adbeadba3"
 * status = #final
-* category[0] = $observation-category#laboratory
-* category[+] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
@@ -262,8 +262,8 @@ InstanceOf: ObservationResultsLaboratoryEu
 Usage: #inline
 * id = "4679fd4c-4ef3-4b91-b17c-8a97a25472fb"
 * status = #final
-* category[0] = $observation-category#laboratory
-* category[+] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#18953-0 "Neomycin [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
@@ -280,8 +280,8 @@ InstanceOf: ObservationResultsLaboratoryEu
 Usage: #inline
 * id = "28a7f5b7-7ba4-4caf-ac43-80326dcf2cfb"
 * status = #final
-* category[0] = $observation-category#laboratory
-* category[+] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#19000-9 "Vancomycin [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
