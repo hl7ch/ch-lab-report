@@ -1,3 +1,6 @@
+// ╭────────────── instance 1-tvt ──────────────────────────────╮
+// │  Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer   │
+// ╰────────────────────────────────────────────────────────────╯
 Instance: LabResultReport-1-tvt
 InstanceOf: ChLabReportDocument
 Description: "Example of a Laboratory Report for scenario deep vein thrombosis"
@@ -18,16 +21,28 @@ Usage: #example
 * entry[Patient].resource = HansGuggindieluft
 
 * entry[Observation][+].fullUrl = "urn:uuid:0ad0810e-6eb4-11ee-b962-0242ac120002"
-* entry[Observation][=].resource = Observation-CBC
+* entry[Observation][=].resource = Observation-CBC-panel
 
 * entry[Observation][+].fullUrl = "urn:uuid:5c1ceea1-2751-4ddc-afb5-4c28037ba1be"
 * entry[Observation][=].resource = Observation-WBC
-
 * entry[Observation][+].fullUrl = "urn:uuid:04ec7690-a1e8-4fdf-be4f-6c92949e948a"
 * entry[Observation][=].resource = Observation-RBC
 
-// * entry[Observation][+].fullUrl = "urn:uuid:6329ad78-c886-44f8-9471-3783cc990ff0"
-// * entry[Observation][=].resource = Observation-Ht
+* entry[Observation][+].fullUrl = "urn:uuid:2565be07-47a0-4cca-926e-a57e1ac96fb8"
+* entry[Observation][=].resource = Observation-HGB
+* entry[Observation][+].fullUrl = "urn:uuid:c4d64c0a-aafb-4b41-ae0b-a620b2a6c08c"
+* entry[Observation][=].resource = Observation-HT
+
+* entry[Observation][+].fullUrl = "urn:uuid:857cfa10-66ea-45ae-b236-e6e03af4be3f"
+* entry[Observation][=].resource = Observation-MCV
+* entry[Observation][+].fullUrl = "urn:uuid:3b263f29-44d8-468f-b612-e748442e1845"
+* entry[Observation][=].resource = Observation-MCH
+
+* entry[Observation][+].fullUrl = "urn:uuid:735c9244-497a-420d-b006-15a57be365b1"
+* entry[Observation][=].resource = Observation-MCHC
+* entry[Observation][+].fullUrl = "urn:uuid:32a7d6fb-dc8a-4673-8cef-c59c1c5397db"
+* entry[Observation][=].resource = Observation-Platelet
+
 
 * entry[Observation][+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
 * entry[Observation][=].resource = Observation-CRP
@@ -69,10 +84,6 @@ Usage: #example
 
 * entry[Organization][+].fullUrl = "urn:uuid:84483dc8-81d3-41cc-8d24-10c241279024"
 * entry[Organization][=].resource = LaborPipette
-
-// ╭────────────── instance 1-tvt ──────────────────────────────╮
-// │  Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer   │
-// ╰────────────────────────────────────────────────────────────╯
 
 // ╭────────────── Composition 1-tvt ────────────────────────╮
 // │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer │
@@ -130,29 +141,16 @@ Usage: #inline
 * section[lab-subsections].code.text = "Laboratory studies"
 * section[lab-subsections].section[0].title = "Hematology studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#58410-2
-* section[lab-subsections].section[=].entry = Reference(Observation-CBC)
-* section[lab-subsections].section[+].title = "Hematology studies (set)"
+* section[lab-subsections].section[=].entry = Reference(Observation-CBC-panel)
+// * section[lab-subsections].section[+].title = "Hematology studies (set)"
 // * section[lab-subsections].section[=].code  = $loinc#6690-2
 // * section[lab-subsections].section[=].entry = Reference(Observation-WBC)
-// * section[lab-subsections].section[+].title = "Chemistry studies (set)"
+* section[lab-subsections].section[+].title = "Chemistry studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#18719-5
 * section[lab-subsections].section[=].entry = Reference(Observation-CRP)
 * section[lab-subsections].section[+].title = "Coagulation studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#18720-3
 * section[lab-subsections].section[=].entry = Reference(Observation-D-Dimer)
-
-// * section[lab-subsections].title = "Hemoglobin + Hematocrit panel lab result report"
-// * section[lab-subsections].code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-// * section[lab-subsections].code.text = "Hemoglobin and Hematocrit panel (Bld)" // Display name
-// * section[lab-subsections].entry = Reference(HbObservation-Ht)
-// * section[lab-subsections].title = "Hemoglobin lab result report"
-// * section[lab-subsections].code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
-// * section[lab-subsections].code.text = "Hemoglobin (Bld) [Mass/Vol]" // Display name
-// * section[lab-subsections].entry = Reference(Observation-Hb)
-// * section[lab-subsections][+].title = "Hematocrit panel lab result report"
-// * section[lab-subsections][=].code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
-// * section[lab-subsections][=].code.text = "Hematocrit (Bld) [Volume fraction]" // Display name
-// * section[lab-subsections][=].entry = Reference(Observation-Ht)
 
 // ╭──────────── DiagnosticReport 1-tvt ─────────────────────╮
 // │ Scenario deep vein thrombosis: HbHt-panel, CRP, D-Dimer │
@@ -185,10 +183,8 @@ Usage: #inline
 * specimen[+] = Reference(Blood-coag)
 * specimen[+] = Reference(Serum)
 
-* result[0] = Reference(Observation-CBC)
-// * result[+] = Reference(Observation-WBC)
-// * result[+] = Reference(Observation-Ht)
-
+* result[0] = Reference(Observation-CBC-panel)
+// no dependent observations!
 * result[+] = Reference(Observation-CRP)
 * result[+] = Reference(Observation-D-Dimer)
 
@@ -230,19 +226,19 @@ Usage: #inline
 * communication.preferred = true
 
 
-// ╭────── Observation 1-tvt ───────────────╮
-// │ CBC, HbHt-panel, Hb, Ht ,CRP, D-Dimer  │
-// ╰────────────────────────────────────────╯
+// ╭────── Observation 1-tvt ─────────╮
+// │ CBC-panel, Hb, Ht ,CRP, D-Dimer  │
+// ╰──────────────────────────────────╯
 
-Instance: Observation-CBC
+Instance: Observation-CBC-panel
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "CBC panel - Blood by Automated count"
 Description: "This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the methodless version of hemoglobin in this panel."
 Usage: #inline
 * id = "0ad0810e-6eb4-11ee-b962-0242ac120002"
 * status = #final
-* category[0] = $observation-category#laboratory
-* category[+] = $loinc#18723-7 "Hematology studies (set)"
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.text = "CBC panel Auto (Bld)" // LOINC Display Name
 * subject = Reference(HansGuggindieluft)
@@ -251,6 +247,13 @@ Usage: #inline
 
 * hasMember = Reference(Observation-WBC)
 * hasMember = Reference(Observation-RBC)
+* hasMember = Reference(Observation-HGB)
+* hasMember = Reference(Observation-HT)
+* hasMember = Reference(Observation-MCV)
+* hasMember = Reference(Observation-MCH)
+* hasMember = Reference(Observation-MCHC)
+* hasMember = Reference(Observation-Platelet)
+
 
 /*
 Instance: Observation-HbHt
@@ -260,9 +263,9 @@ Description: "Example for Hemoblobine and Hemotocrit panel Observation"
 Usage: #inline
 * id = "8903c6a4-6547-437c-8f47-b68cfe959288"
 * status = #final
-* category[0] = $observation-category#laboratory
-// * category[+] = $v2-0074#HM "Hematology"
-* category[+] = $loinc#18723-7 "Hematology studies (set)"
+* category[laboratory] = $observation-category#laboratory
+// * category[studyType] = $v2-0074#HM "Hematology"
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.text = "Hemoglobin and Hematocrit panel (Bld)"
 * subject = Reference(HansGuggindieluft)
@@ -280,8 +283,8 @@ Description: "Example for Hemoblobine Observation"
 Usage: #inline
 * id = "93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
 * status = #final
-* category[0] = $observation-category#laboratory
-* category[+] = $loinc#18723-7 "Hematology studies (set)"
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
 * subject = Reference(HansGuggindieluft)
@@ -305,8 +308,8 @@ Description: "Leukocytes or white blood cells (WBCs) are immune cells that fight
 Usage: #inline
 * id = "5c1ceea1-2751-4ddc-afb5-4c28037ba1be"
 * status = #final
-* category[0] = $observation-category#laboratory
-* category[+] = $loinc#18723-7 "Hematology studies (set)"
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
 * code.text = "WBC Auto (Bld) [#/Vol]" // LOINC Display Name
 * subject = Reference(HansGuggindieluft)
@@ -331,8 +334,8 @@ Description: "Erythrocytes or red blood cells (RBCs) are the cells in the circul
 Usage: #inline
 * id = "04ec7690-a1e8-4fdf-be4f-6c92949e948a"
 * status = #final
-* category[0] = $observation-category#laboratory
-* category[+] = $loinc#18723-7 "Hematology studies (set)"
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 * code.text =  "RBC Auto (Bld) [#/Vol]"  // LOINC Display Name
 * subject = Reference(HansGuggindieluft)
@@ -352,7 +355,159 @@ Usage: #inline
 * referenceRange.type = $referencerange-meaning#normal "Normal Range"
 * referenceRange.type.text = "Normal Range"
 
+Instance: Observation-HGB
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "Hemoglobin [Mass/volume] in Blood" //// LOINC Long Common Name
+Description: "This is the the code included in the CBC auto. It is NOT obtained via the automated counting but uses a chemistry method just like most other hemoglobins."
+Usage: #inline
+* id = "2565be07-47a0-4cca-926e-a57e1ac96fb8"
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+* code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
+* code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+// TODO values
+* valueQuantity = 10.8 'umol/L' "umol/L"
+// * interpretation = $v3-ObservationInterpretation#HH "Critical high"
+* method = $sct#83561000052101 "Photometry technique (qualifier value)"
+* specimen = Reference(Blood)
+* referenceRange.low.value = 8.7  // women 7.4
+* referenceRange.low.unit = "umol/L"
+* referenceRange.high.value = 11.2    // women 9.9
+* referenceRange.high.unit = "umol/L"
+// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
 
+Instance: Observation-HT
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "Hematocrit [Volume Fraction] of Blood by Automated count"   // LOINC Long Common Name
+Description: "The volume of packed red blood cells in a blood sample. The volume is measured by centrifugation in a tube with graduated markings, or with automated blood cell counters. It is an indicator of erythrocyte status in disease. For example, in anemia the volume is low and in polycythemia it is high."
+Usage: #inline
+* id = "c4d64c0a-aafb-4b41-ae0b-a620b2a6c08c"
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+* code = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
+* code.text = "Hematocrit Auto (Bld) [Volume fraction]" // LOINC Display Name
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+// TODO values
+* valueQuantity = 43 '%' "%"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.unit = "%"
+* referenceRange.low.value = 38
+* referenceRange.low.unit = "%"
+* referenceRange.high.value = 46
+* referenceRange.high.unit = "%"
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"
+* referenceRange.type.text = "Normal Range"
+
+Instance: Observation-MCV
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "MCV [Entitic volume] by Automated count"   // LOINC Long Common Name
+Description: "The volume of packed red blood cells in a blood sample. The volume is measured by centrifugation in a tube with graduated markings, or with automated blood cell counters. It is an indicator of erythrocyte status in disease. For example, in anemia the volume is low and in polycythemia it is high."
+Usage: #inline
+* id = "857cfa10-66ea-45ae-b236-e6e03af4be3f"
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+* code = $loinc#787-2 "MCV [Entitic volume] by Automated count"
+* code.text = "MCV Auto (RBC) [Entitic vol]" // LOINC Display Name
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+// TODO values
+* valueQuantity = 85 'fL' "fL"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.unit = "fL"
+* referenceRange.low.value = 82.4
+* referenceRange.low.unit = "fL"
+* referenceRange.high.value = 87.3
+* referenceRange.high.unit = "fL"
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"
+* referenceRange.type.text = "Normal Range"
+
+Instance: Observation-MCH
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "MCH [Entitic mass] by Automated count"   // LOINC Long Common Name
+Description: "The mean corpuscular hemoglobin, or 'mean cell hemoglobin' (MCH), is the average mass of hemoglobin per red blood cell in a blood sample. It is decreased in hypochromic anemias, and increased in hyperchromic anemias. MCH is obtained by dividing the total mass of hemoglobin by the number of red blood cells in a volume of blood."
+Usage: #inline
+* id = "3b263f29-44d8-468f-b612-e748442e1845"
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+* code = $loinc#785-6 "MCH [Entitic mass] by Automated count"
+* code.text = "MCH Auto (RBC) [Entitic mass]" // LOINC Display Name
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+// TODO values
+* valueQuantity = 30 'pg' "pg"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.unit = "pg"
+* referenceRange.low.value = 38
+* referenceRange.low.unit = "pg"
+* referenceRange.high.value = 46
+* referenceRange.high.unit = "pg"
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"
+* referenceRange.type.text = "Normal Range"
+
+//// =================================================
+Instance: Observation-MCHC
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "MCHC [Mass/volume] by Automated count"   // LOINC Long Common Name
+Description: "The mean corpuscular hemoglobin concentration, or MCHC, is a measure of the concentration of hemoglobin in a given volume of packed red blood cell. It is reported as part of a standard complete blood count."
+Usage: #inline
+* id = "735c9244-497a-420d-b006-15a57be365b1"
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+* code = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
+* code.text = "MCHC Auto (RBC) [Mass/Vol]" // LOINC Display Name
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+// TODO values
+* valueQuantity = 34.7 'g/dL' "g/dL"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.unit = "g/dL"
+* referenceRange.low.value = 30
+* referenceRange.low.unit = "g/dL"
+* referenceRange.high.value = 34
+* referenceRange.high.unit = "g/dL"
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"
+* referenceRange.type.text = "Normal Range"
+
+Instance: Observation-Platelet
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "Platelets [#/volume] in Blood by Automated count"   // LOINC Long Common Name
+Description: "Platelets are miniature fragments of cytoplasm that break off of megakaryocytes. Their primary function is to inhibit excessive hemorrhage after blood vessel injury. Platelets cling to the damaged part of the blood vessel where they become activated, recruit other platelets to the site, and begin the cascade of physical and chemical events that lead to clot formation. Activated platelets secrete cytokines, chemokines, and growth factors, all which play a role in thrombus development.When activated, platelets stimulate monocytes and neutrophils to leave the blood vessel and enter the tissue. PMID: 27226790 The normal range of platelets is 150,000 to 450,000 platelets/uL. Lower than normal platelet counts can lead to increased bleeding and is caused by a number of factors including: chemotherapy, autoimmune disorders and some medications. Increased platelets can cause hypercoagulation due to cancer, anemia, spleen removal and some medications.[MedlinePlus Encyclopedia:003647]"
+Usage: #inline
+* id = "32a7d6fb-dc8a-4673-8cef-c59c1c5397db"
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+* code = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
+* code.text = "Platelets Auto (Bld) [#/Vol]" // LOINC Display Name
+* subject = Reference(HansGuggindieluft)
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+// TODO values
+* valueQuantity = 200 '10*3/uL' "10*3/uL"
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.unit = "10*3/uL"
+* referenceRange.low.value = 150
+* referenceRange.low.unit = "10*3/uL"
+* referenceRange.high.value = 450
+* referenceRange.high.unit = "10*3/uL"
+* referenceRange.type = $referencerange-meaning#normal "Normal Range"
+* referenceRange.type.text = "Normal Range"
+
+
+// ========================================
 Instance: Observation-CRP
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "Observation-CRP"
@@ -360,9 +515,9 @@ Description: "Example for CRP Observation"
 Usage: #inline
 * id = "c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
 * status = #final
-* category[0] = $observation-category#laboratory
-// * category[+] = $v2-0074#CH "Chemistry"
-* category[+] = $loinc#18719-5 "Chemistry studies (set)"  // lab specialty
+* category[laboratory] = $observation-category#laboratory
+// * category[studyType] = $v2-0074#CH "Chemistry"
+* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"  // lab specialty
 * code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma" // subset of loinc
 * code.text = "CRP [Mass/Vol]" // display name
 * subject = Reference(HansGuggindieluft)
@@ -384,9 +539,9 @@ Description: "Example for D-Dimer Observation"
 Usage: #inline
 * id = "f30d8df7-474f-401e-b5d4-f690d28d718d"
 * status = #final
-* category[0] = $observation-category#laboratory
-// * category[+] = $v2-0074#CH "Chemistry"
-* category[+] = $loinc#18720-3 "Coagulation studies (set)"  // lab specialty
+* category[laboratory] = $observation-category#laboratory
+// * category[studyType] = $v2-0074#CH "Chemistry"
+* category[studyType] = $loinc#18720-3 "Coagulation studies (set)"  // lab specialty
 * code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
 * subject = Reference(HansGuggindieluft)
@@ -461,9 +616,6 @@ Usage: #inline
 // ╭── serviceRequest 1-tvt ──╮
 // │ HbHb-panel, CRP, D-Dimer │
 // ╰──────────────────────────╯
-
-
-
 Instance: ServiceRequest-HbHt-panel
 InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for Hemoglobine & Hematocrit panel"

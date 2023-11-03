@@ -17,6 +17,18 @@ Description: "This profile constrains the Observation resource for the purpose o
   * valueReference 0..1  //1..1
 // * valueReference only Reference(ObservationDefinition)
 
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^definition = "A code that classifies the general type of observation being made. In this profile, fixed to \"laboratory\"."
+* category ^comment = "\"laboratory\" includes laboratory medicine and pathology"
+* category contains laboratory 1..1
+* category[laboratory] = $observation-category#laboratory
+* category contains studyType 0..*
+* category[studyType] from LabStudyTypesEuVs
+* category contains specialty 0..*
+* category[specialty] from LabSpecialtyEuVs
+
 * subject only Reference(ChLabPatient)
 * performer only Reference(ChLabPractitionerRole or ChLabPractitioner or CHCoreOrganization)
 * specimen only Reference(ChLabReportSpecimen)
