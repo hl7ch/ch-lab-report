@@ -141,7 +141,7 @@ Usage: #inline
 */
 
 // ╭────────────── Composition 4-sepsis ─────────────────────╮
-// │ Scenario deep vein thrombosis: Microbiological results  │
+// │      Scenario sepis: Microbiological results            │
 // ╰─────────────────────────────────────────────────────────╯
 
 Instance: Composition-4-sepsis
@@ -244,11 +244,11 @@ Usage: #inline
 * performer = Reference(EvaErlenmeyerLaborPipette)
 * performer.display = "Dr. Eva Erlenmeyer"
 
-* specimen[0] = Reference(Blood-anaerob-0-min)
-* specimen[+] = Reference(Blood-anaerob-30-min)
-// * specimen[+] = Reference(Blood-aerob-0-min)
-// * specimen[+] = Reference(Blood-aerob-30-min)
-// * specimen[+] = Reference(Urine)
+* specimen[0] = Reference(Specimen/4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
+* specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
+* specimen[+] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
+* specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
+* specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Urine
 
 * result[0] = Reference(Observation-gram-stain)  // no dependent observations!
 * result[+] = Reference(Observation-anaerobe-culture)
@@ -293,9 +293,9 @@ Usage: #inline
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
 
-// ╭──── 4-sepsis Specimen blood  ───────────╮
-// │  Culture anaerob, after 0 and 30 min.   │
-// ╰─────────────────────────────────────────╯
+// ╭──── 4-sepsis Specimen blood  ──────────────────────────────╮
+// │  Culture anaerob, Fuchsia top Bottle, after 0 and 30 min.  │
+// ╰────────────────────────────────────────────────────────────╯
 Instance: Blood-anaerob-0-min // TODO must be adapted !!!!!
 InstanceOf: Specimen
 Usage: #inline
@@ -318,23 +318,15 @@ Usage: #inline
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
 * collection.bodySite.text = "Right median cubital vein"
 * container.identifier.value = "48736-15394-75465"
-* container.description = "Green Gel tube"
-* container.type.text = "Vacutainer"
+* container.description = "Anaerobic Culture Glass Bootle"
+* container.type.text = "Orange top Bottle"
 * container.capacity.value = 10
 * container.capacity.unit = "mL"
 * container.specimenQuantity.value = 6
 * container.specimenQuantity.unit = "mL"
 * container.additiveReference = Reference(hep)
-* note.text = "Specimen is grossly lipemic"
+* note.text = "ok"
 
-Instance: hep
-InstanceOf: Substance
-Usage: #inline
-* code = $v3-EntityCode#HEPL  // Additive Heparin/Lithium
-
-// ╭──── 4-sepsis Specimen blood  ───────────╮
-// │   Culture aerob, after 0 and 30 min.    │
-// ╰─────────────────────────────────────────╯
 Instance: Blood-anaerob-30-min // TODO must be adapted !!!!!
 InstanceOf: Specimen
 Usage: #inline
@@ -357,18 +349,113 @@ Usage: #inline
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
 * collection.bodySite.text = "Right median cubital vein"
 * container.identifier.value = "48736-15394-75465"
-* container.description = "Green Gel tube"
-* container.type.text = "Vacutainer"
+* container.description = "Anaerobic Culture Glass Bootle"
+* container.type.text = "Orange top Bottle"
 * container.capacity.value = 10
 * container.capacity.unit = "mL"
 * container.specimenQuantity.value = 6
 * container.specimenQuantity.unit = "mL"
 * container.additiveReference = Reference(hep)
-* note.text = "Specimen is grossly lipemic"
-// ╭──── 4-sepsis Specimen urine  ───────────╮
-// │      Direct Microskopy and Culture      │
-// ╰─────────────────────────────────────────╯
+* note.text = "ok"
+Instance: hep
+InstanceOf: Substance
+Usage: #inline
+* code = $v3-EntityCode#HEPL  // Additive Heparin/Lithium
 
+// ╭──── 4-sepsis Specimen blood  ────────────────────────────╮
+// │   Culture aerob, Blue top Bottle, after 0 and 30 min.    │
+// ╰──────────────────────────────────────────────────────────╯
+Instance: Blood-aerob-0-min // TODO must be adapted !!!!!
+InstanceOf: Specimen
+Usage: #inline
+* id = "7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2" // -> is valuable
+* contained = hep
+* identifier.system = "http://ehr.acme.org/identifiers/collections"
+* identifier.value = "23234352356"
+* accessionIdentifier.system = "http://lab.acme.org/specimens/2011"
+* accessionIdentifier.value = "X352356"
+* status = #available
+* type = $sct#122555007 "Venous blood specimen"
+* subject = Reference(Patient/KatarinaKeller) "Katarina Keller"
+* receivedTime = "2011-03-04T07:03:00Z"
+* request = Reference(ServiceRequest/ServiceRequest-anaerobe-culture)
+* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collectedDateTime = "2011-05-30T06:15:00Z"
+* collection.quantity.value = 6
+* collection.quantity.unit = "mL"
+* collection.method = $v2-0488#LNV
+* collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
+* collection.bodySite.text = "Right median cubital vein"
+* container.identifier.value = "48736-15394-75465"
+* container.description = "Aerobic Culture Glass Bootle"
+* container.type.text = "Green top Bottle"
+* container.capacity.value = 10
+* container.capacity.unit = "mL"
+* container.specimenQuantity.value = 6
+* container.specimenQuantity.unit = "mL"
+* container.additiveReference = Reference(hep)
+* note.text = "ok"
+
+Instance: Blood-aerob-30-min // TODO must be adapted !!!!!
+InstanceOf: Specimen
+Usage: #inline
+* id = "b0871e3b-f378-4f07-90ff-f08a20e42c02" // -> is valuable
+* contained = hep
+* identifier.system = "http://ehr.acme.org/identifiers/collections"
+* identifier.value = "23234352356"
+* accessionIdentifier.system = "http://lab.acme.org/specimens/2011"
+* accessionIdentifier.value = "X352356"
+* status = #available
+* type = $sct#122555007 "Venous blood specimen"
+* subject = Reference(Patient/KatarinaKeller) "Katarina Keller"
+* receivedTime = "2011-03-04T07:03:00Z"
+* request = Reference(ServiceRequest/ServiceRequest-anaerobe-culture)
+* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collectedDateTime = "2011-05-30T06:15:00Z"
+* collection.quantity.value = 6
+* collection.quantity.unit = "mL"
+* collection.method = $v2-0488#LNV
+* collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
+* collection.bodySite.text = "Right median cubital vein"
+* container.identifier.value = "48736-15394-75465"
+* container.description = "Aerobic Culture Glass Bootle"
+* container.type.text = "Green top Bottle"
+* container.capacity.value = 10
+* container.capacity.unit = "mL"
+* container.specimenQuantity.value = 6
+* container.specimenQuantity.unit = "mL"
+* container.additiveReference = Reference(hep)
+* note.text = "ok"
+
+// ╭──── 4-sepsis Specimen urine  ───────────╮
+// │      Direct Microscopy and Culture      │
+// ╰─────────────────────────────────────────╯
+Instance: Urine-sample // TODO must be adapted !!!!!
+InstanceOf: Specimen
+Usage: #inline
+* id = "b0871e3b-f378-4f07-90ff-f08a20e42c02" // -> is valuable
+* contained = hep
+* identifier.system = "http://ehr.acme.org/identifiers/collections"
+* identifier.value = "23234352356"
+* accessionIdentifier.system = "http://lab.acme.org/specimens/2011"
+* accessionIdentifier.value = "X352356"
+* status = #available
+* type = $sct#122575003 "Urine specimen (specimen)"
+* subject = Reference(Patient/KatarinaKeller) "Katarina Keller"
+* receivedTime = "2011-03-04T07:03:00Z"
+* request = Reference(ServiceRequest/ServiceRequest-anaerobe-culture)
+* collection.collector = Reference(Practitioner/HansHauser)
+* collection.collectedDateTime = "2011-05-30T06:15:00Z"
+* collection.quantity.value = 60
+* collection.quantity.unit = "mL"
+* container.identifier.value = "48736-15394-75465"
+* container.description = "Urine container"
+* container.type.text = "White cap sterile Urine container"
+* container.capacity.value = 60
+* container.capacity.unit = "mL"
+* container.specimenQuantity.value = 60
+* container.specimenQuantity.unit = "mL"
+* note.text = "ok"
 
 
 // ╭──── 4-sepsis Observation gram stain ────╮
@@ -837,7 +924,11 @@ Usage: #inline
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Blood specimen"
+* specimen[0] = Reference(Specimen/4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
+* specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
+* specimen[+] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
+* specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
+* specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Urine
 
 Instance: ServiceRequest-aerobe-culture
 InstanceOf: ChLabReportServiceRequest
@@ -867,8 +958,8 @@ Usage: #inline
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood-aerob-0-min)
-* specimen[0] = Reference(Blood-aerob-30-min)
+* specimen[+] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
+* specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
 
 Instance: ServiceRequest-anaerobe-culture
 InstanceOf: ChLabReportServiceRequest
@@ -898,5 +989,5 @@ Usage: #inline
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood-anaerob-0-min)
-* specimen[0] = Reference(Blood-anaerob-30-min)
+* specimen[0] = Reference(Specimen/4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
+* specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
