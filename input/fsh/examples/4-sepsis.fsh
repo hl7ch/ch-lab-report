@@ -252,8 +252,8 @@ Usage: #inline
 
 * result[0] = Reference(Observation-gram-stain)  // no dependent observations!
 * result[+] = Reference(Observation-anaerobe-culture)
-// * result[+] = Reference(Observation-aerobe-culture)
-// * result[+] = Reference(Observation-org-3-susc-panel)
+* result[+] = Reference(Observation-aerobe-culture)
+* result[+] = Reference(Observation/0c1b30c6-9a41-4c59-a403-531654214754)  //  Observation-urine-culture
 
 
 // ╭───── 4-sepsis Patient ────╮
@@ -487,7 +487,7 @@ Usage: #inline
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#72163-9 "Leukocytes [Presence] in Specimen by Gram stain"
-* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 * valueCodeableConcept = $sct#2667000 "Absent"
@@ -501,7 +501,7 @@ Usage: #inline
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
-* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 * valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
@@ -515,7 +515,7 @@ Usage: #inline
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Observed Quantity"
-* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 * valueCodeableConcept = $sct#441614007 "Present + out of +++"
@@ -529,7 +529,7 @@ Usage: #inline
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
-* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 * valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
@@ -543,7 +543,7 @@ Usage: #inline
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Observed Quantity"
-* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 // * valueCodeableConcept = $sct#441614007 "Present + out of +++"
@@ -559,7 +559,7 @@ Usage: #inline
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
-* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 * valueCodeableConcept = $sct#59206002 "Gram-positive coccus (organism)"
@@ -573,7 +573,7 @@ Usage: #inline
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Observed Quantity"
-* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 // * valueCodeableConcept = $sct#441614007 "Present + out of +++"
@@ -610,7 +610,7 @@ Usage: #inline
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
-* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer)
 * performer[+].display = "Eva Erlenmeier"
@@ -626,7 +626,7 @@ Usage: #inline
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
-* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer)
 * performer[+].display = "Eva Erlenmeier"
@@ -641,7 +641,7 @@ Usage: #inline
 * category[0] = $observation-category#laboratory
 * category[+] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
-* subject = Reference(Patient/5bb42c3f-56fb-4bbc-b939-73910a6cce3b)
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer)
 * performer[+].display = "Eva Erlenmeier"
@@ -831,6 +831,26 @@ Usage: #inline
 // ╭────── 4-sepsis Observation org-3 susc ────────────────────────────╮
 // │ Results: susceptibility Panel with 3 susceptibility observations  │
 // ╰───────────────────────────────────────────────────────────────────╯
+
+
+// ╭── 4-sepsis Observation urine-culture ──╮
+// │  Urine Culture                         │
+// ╰────────────────────────────────────────╯
+Instance: Observation-urine-culture
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "0c1b30c6-9a41-4c59-a403-531654214754"
+* status = #final
+* category[0] = $observation-category#laboratory
+* category[+] = $loinc#18725-2 "Microbiology studies (set)"
+* code.text = "Observed Quantity"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+// * valueCodeableConcept = $sct#441614007 "Present + out of +++"
+// * valueCodeableConcept.text = "+"
+* valueCodeableConcept = $sct#2667000 "Absent"
+* valueCodeableConcept.text = "None observed"
 
 
 // ╭────── PractitionerRole 4-sepsis ──────────────────────────────────────╮
