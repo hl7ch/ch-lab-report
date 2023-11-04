@@ -83,7 +83,7 @@ Usage: #inline
 * entry[Observation].resource = Observation-org-1-ceftriaxone
 
     // org-2
-* entry[Observation].fullUrl = "urn:uuid:0c1b30c6-9a41-4c59-a403-531654214754"
+* entry[Observation].fullUrl = "urn:uuid:5c774433-62ad-4d21-b230-6de2d138a02d"
 * entry[Observation].resource = Observation-anaerobe-culture-org-2
 
 * entry[Observation].fullUrl = "urn:uuid:17a2d960-c34a-4276-be4a-e1e679fcf415"
@@ -102,31 +102,24 @@ Usage: #inline
 * entry[Observation].resource = Observation-org-2-ceftriaxone
 
     // org-3
-* entry[Observation].fullUrl = "urn:uuid:44be12e7-4edc-4a0a-8aa6-5db65bbb9974"
-* entry[Observation].resource = Observation-anaerobe-culture-org-3
-
-* entry[Observation].fullUrl = "urn:uuid:039a8af9-3b25-439e-9214-83b1d67fb68f"
-* entry[Observation].resource = Observation-anaerobe-culture-org-3-growth
-
-* entry[Observation].fullUrl = "urn:uuid:f9776903-346f-4c10-9bfb-32de924b7df2"
-* entry[Observation].resource = Observation-anaerobe-culture-org-3-susc-panel
-
-* entry[Observation].fullUrl = "urn:uuid:1ab15539-85e1-4117-9688-a80ac2c8ca5c"
-* entry[Observation].resource = Observation-org-3-amoxi-clav
-
-* entry[Observation].fullUrl = "urn:uuid:c3451213-bc35-4932-943f-06b767072836"
-* entry[Observation].resource = Observation-org-3-ciprofloxacin
-
-* entry[Observation].fullUrl = "urn:uuid:de14bcee-49d5-47eb-a37e-a2c7d863cc4d"
-* entry[Observation].resource = Observation-org-3-ceftriaxone
-
-/*
-* entry[Observation].fullUrl = "urn:uuid:5c774433-62ad-4d21-b230-6de2d138a02d"
-* entry[Observation].resource = Observation-anaerobe-culture-org-2
-
 * entry[Observation].fullUrl = "urn:uuid:296e1564-39d6-497b-9b40-e60f884dd5e4"
 * entry[Observation].resource = Observation-anaerobe-culture-org-3
-*/
+
+* entry[Observation].fullUrl = "urn:uuid:8c885526-b6ed-4f99-bcc1-d294d79e0c7c"
+* entry[Observation].resource = Observation-anaerobe-culture-org-3-growth
+
+* entry[Observation].fullUrl = "urn:uuid:8c8b2f58-4cc1-4c21-8a92-e65ce31e60b1"
+* entry[Observation].resource = Observation-anaerobe-culture-org-3-susc-panel
+
+* entry[Observation].fullUrl = "urn:uuid:6dbb348d-3ce5-451a-b7db-77c2e4d27bb3"
+* entry[Observation].resource = Observation-org-3-amoxi-clav
+
+* entry[Observation].fullUrl = "urn:uuid:eda9070d-cd59-45b3-a1fc-b79cc479c562"
+* entry[Observation].resource = Observation-org-3-ciprofloxacin
+
+* entry[Observation].fullUrl = "urn:uuid:ad7dd57d-69c4-493f-bf4e-b919664757ba"
+* entry[Observation].resource = Observation-org-3-ceftriaxone
+
 
 //================== Observations aerobe culture ==========================0
 /*
@@ -759,7 +752,7 @@ Usage: #inline
 Instance: Observation-anaerobe-culture-org-2
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "0c1b30c6-9a41-4c59-a403-531654214754"
+* id = "5c774433-62ad-4d21-b230-6de2d138a02d"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
@@ -866,7 +859,7 @@ Usage: #inline
 Instance: Observation-anaerobe-culture-org-3
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "44be12e7-4edc-4a0a-8aa6-5db65bbb9974"
+* id = "296e1564-39d6-497b-9b40-e60f884dd5e4"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
@@ -876,14 +869,14 @@ Usage: #inline
 * performer = Reference(EvaErlenmeyer)
 * performer[+].display = "Eva Erlenmeier"
 * valueCodeableConcept = $sct#112283007 "Escherichia coli (organism)"
-* hasMember[+] = Reference(Observation/039a8af9-3b25-439e-9214-83b1d67fb68f) // Observation-anaerobe-culture-org-3-growth
+* hasMember[+] = Reference(Observation/8c885526-b6ed-4f99-bcc1-d294d79e0c7c) // Observation-anaerobe-culture-org-3-growth
 * hasMember[+] = Reference(Observation/8c8b2f58-4cc1-4c21-8a92-e65ce31e60b1) // Observation-anaerobe-culture-org-3-susc-panel
 
         // -------------- org-3-growth --------------------
 Instance: Observation-anaerobe-culture-org-3-growth
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "039a8af9-3b25-439e-9214-83b1d67fb68f"
+* id = "8c885526-b6ed-4f99-bcc1-d294d79e0c7c"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
@@ -899,7 +892,7 @@ Usage: #inline
 Instance: Observation-anaerobe-culture-org-3-susc-panel
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "f9776903-346f-4c10-9bfb-32de924b7df2"
+* id = "8c8b2f58-4cc1-4c21-8a92-e65ce31e60b1"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
@@ -908,14 +901,14 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer)
 * performer[+].display = "Eva Erlenmeier"
-* hasMember[+] = Reference(Observation/1ab15539-85e1-4117-9688-a80ac2c8ca5c)  // Observation-org-3-amoxi-clav
-* hasMember[+] = Reference(Observation/c3451213-bc35-4932-943f-06b767072836)  // Observation-org-3-ciprofloxacin
-* hasMember[+] = Reference(Observation/de14bcee-49d5-47eb-a37e-a2c7d863cc4d)  // Observation-org-3-ceftriaxone
+* hasMember[+] = Reference(Observation/6dbb348d-3ce5-451a-b7db-77c2e4d27bb3)  // Observation-org-3-amoxi-clav
+* hasMember[+] = Reference(Observation/eda9070d-cd59-45b3-a1fc-b79cc479c562)  // Observation-org-3-ciprofloxacin
+* hasMember[+] = Reference(Observation/ad7dd57d-69c4-493f-bf4e-b919664757ba)  // Observation-org-3-ceftriaxone
 
 Instance: Observation-org-3-amoxi-clav
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "1ab15539-85e1-4117-9688-a80ac2c8ca5c"
+* id = "6dbb348d-3ce5-451a-b7db-77c2e4d27bb3"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
@@ -934,7 +927,7 @@ Usage: #inline
 Instance: Observation-org-3-ciprofloxacin
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "c3451213-bc35-4932-943f-06b767072836"
+* id = "eda9070d-cd59-45b3-a1fc-b79cc479c562"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
@@ -953,7 +946,7 @@ Usage: #inline
 Instance: Observation-org-3-ceftriaxone
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "de14bcee-49d5-47eb-a37e-a2c7d863cc4d"
+* id = "ad7dd57d-69c4-493f-bf4e-b919664757ba"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#29576-6 "Bacterial susceptibility panel"
