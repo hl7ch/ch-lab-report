@@ -233,9 +233,9 @@ Usage: #inline
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/832c053d-e0a0-4467-9f85-4bde09b825af)
 
-* basedOn[0] = Reference(ServiceRequest-gram-stain)
-* basedOn[+] = Reference(ServiceRequest-aerobe-culture)
-* basedOn[+] = Reference(ServiceRequest-anaerobe-culture)
+* basedOn[0] = Reference(ServiceRequest/58155c90-ae24-4093-8054-13370e29b3a5)  //  ServiceRequest-gram-stain
+* basedOn[+] = Reference(ServiceRequest/a168c88a-f2c1-43d1-9dd7-611a64cd7be8)  //  ServiceRequest-aerobe-culture
+* basedOn[+] = Reference(ServiceRequest/6bb29a10-2313-48b9-96ba-e903d0ae3c2b)  //  ServiceRequest-anaerobe-culture
 * status = #final
 // * code = $sct#4241000179101 "Laboratory report (record artifact)"  // in profile
 // * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
@@ -250,14 +250,14 @@ Usage: #inline
 * specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
 * specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Urine
 
-* result[0] = Reference(Observation-gram-stain)  // no dependent observations!
-* result[+] = Reference(Observation-anaerobe-culture)
-* result[+] = Reference(Observation-aerobe-culture)
-* result[+] = Reference(Observation/0c1b30c6-9a41-4c59-a403-531654214754)  //  Observation-urine-culture
+* result[0] = Reference(Observation/09cebdc4-7ecd-4164-bdda-6a8207d1f2be)  // Observation-gram-stain
+* result[+] = Reference(Observation/cea62faa-60b7-442b-b76a-da70ed2d92b1)  // Observation-anaerobe-culture
+* result[+] = Reference(Observation/09cebdc4-7ecd-4164-bdda-6a8207d1f2be)  // Observation-aerobe-culture
+* result[+] = Reference(Observation/0c1b30c6-9a41-4c59-a403-531654214754)  // Observation-urine-culture
 
 
 // ╭───── 4-sepsis Patient ────╮
-// │ Scenario suspected sepsis │
+// │       Katarina Keller     │
 // ╰───────────────────────────╯
 Instance: KatarinaKeller
 InstanceOf: CHCorePatient
@@ -606,7 +606,7 @@ Usage: #inline
 * hasMember[+] = Reference(Observation/296e1564-39d6-497b-9b40-e60f884dd5e4) // Observation-anaerobe-culture-org-3
 
 Instance: Observation-anaerobe-culture-org-1
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "f89631cb-e973-4ba0-9f48-29b9472b9363"
 * status = #final
@@ -622,7 +622,7 @@ Usage: #inline
 * hasMember[+] = Reference(Observation/531337e5-48ec-4ed7-a81f-d30d16b3d7cb) // Observation-anaerobe-culture-org-1-susc-panel
 
 Instance: Observation-anaerobe-culture-org-1-growth
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "17a2d960-c34a-4276-be4a-e1e679fcf415"
 * status = #final
@@ -637,7 +637,7 @@ Usage: #inline
 * valueCodeableConcept.text = "++"
 
 Instance: Observation-anaerobe-culture-org-1-susc-panel
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "531337e5-48ec-4ed7-a81f-d30d16b3d7cb"
 * status = #final
@@ -707,10 +707,8 @@ Usage: #inline
 * valueQuantity.system = $ucum
 * interpretation = $obs-interpretation#S "Susceptible"
 
-
-
 // ╭────── 4-sepsis Observation aerobe-culture ─────────╮
-// │  Aerobe Culture: org-1, org-2, org-3    │
+// │       Aerobe Culture: org-1, org-2, org-3          │
 // ╰────────────────────────────────────────────────────╯
 Instance: Observation-aerobe-culture
 InstanceOf: ChLabObservationResultsLaboratory
@@ -726,11 +724,57 @@ Usage: #inline
 * performer = Reference(EvaErlenmeyer)
 * performer[+].display = "Eva Erlenmeier"
 
-* hasMember[+] = Reference(Observation/fcf220c3-xxxx-44f8-b669-48552a20fa0a) // Observation-aerobe-culture-org-1
-* hasMember[+] = Reference(Observation/331d513e-xxxx-4464-9eec-25533aeb6d06) // Observation-aerobe-culture-org-2
-* hasMember[+] = Reference(Observation/e6ce8504-xxxx-49c9-a997-a8ed4c7cba24) // Observation-aerobe-culture-org-3
+* hasMember[+] = Reference(Observation/8a353d28-df1d-4869-945d-c44ae04e22f3) // Observation-aerobe-culture-org-1
+* hasMember[+] = Reference(Observation/0c1b30c6-9a41-4c59-a403-531654214754) // Observation-aerobe-culture-org-2
+* hasMember[+] = Reference(Observation/a495aa05-8f97-4d5c-b085-c5fbac261d6b) // Observation-aerobe-culture-org-3
 
+Instance: Observation-aerobe-culture-org-1
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "8a353d28-df1d-4869-945d-c44ae04e22f3"
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueCodeableConcept = $sct#56415008 "Klebsiella pneumoniae (organism)"
+* hasMember[+] = Reference(Observation/17a2d960-xxxx-4276-be4a-e1e679fcf415) // Observation-aerobe-culture-org-1-growth
+* hasMember[+] = Reference(Observation/531337e5-xxxx-4ed7-a81f-d30d16b3d7cb) // Observation-aerobe-culture-org-1-susc-panel
 
+Instance: Observation-aerobe-culture-org-2
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "0c1b30c6-9a41-4c59-a403-531654214754"
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueCodeableConcept = $sct#112283007 "Escherichia coli (organism)"
+* hasMember[+] = Reference(Observation/17a2d960-xxxx-4276-be4a-e1e679fcf415) // Observation-aerobe-culture-org-1-growth
+* hasMember[+] = Reference(Observation/531337e5-xxxxx-4ed7-a81f-d30d16b3d7cb) // Observation-aerobe-culture-org-1-susc-panel
+
+Instance: Observation-aerobe-culture-org-3
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "a495aa05-8f97-4d5c-b085-c5fbac261d6b"
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueCodeableConcept = $sct#57997003 "Streptococcus mitis (organism)"
+* hasMember[+] = Reference(Observation/17a2d960-xxxx-4276-be4a-e1e679fcf415) // Observation-aerobe-culture-org-1-growth
+* hasMember[+] = Reference(Observation/531337e5-xxxx-4ed7-a81f-d30d16b3d7cb) // Observation-aerobe-culture-org-1-susc-panel
 
 // ╭────── 4-sepsis Observation org-1 susc ────────────────────────────╮
 // │ Results: susceptibility Panel with 3 susceptibility observations  │
@@ -977,7 +1021,7 @@ Usage: #inline
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
+* code.coding[0] = $loinc#17928-3 "Bacteria identified in Blood by Aerobe culture"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(KatarinaKeller)
@@ -985,7 +1029,7 @@ Usage: #inline
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[+] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
+* specimen[0] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
 * specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
 
 Instance: ServiceRequest-anaerobe-culture
@@ -1008,7 +1052,7 @@ Usage: #inline
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#87969-2 "Microscopic observation [Identifier] in Blood by Gram stain"
+* code.coding[0] = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(KatarinaKeller)
