@@ -561,7 +561,7 @@ Usage: #inline
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeyer"
 // TODO values
-* valueQuantity = 8 'mg/L' "mg/L"
+* valueQuantity = 1.8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#726449005 "Immunoassay technique (qualifier value)"
 * specimen = Reference(Blood-coag)
@@ -968,7 +968,7 @@ Usage: #inline
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
+* code.coding[0] = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
 
 // orderDetails: Additional order information, codeableConcept
 
