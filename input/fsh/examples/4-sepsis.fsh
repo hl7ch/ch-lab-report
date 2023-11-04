@@ -120,23 +120,31 @@ Usage: #inline
 * entry[Observation].fullUrl = "urn:uuid:ad7dd57d-69c4-493f-bf4e-b919664757ba"
 * entry[Observation].resource = Observation-org-3-ceftriaxone
 
-
 //================== Observations aerobe culture ==========================0
-/*
 * entry[Observation].fullUrl = "urn:uuid:3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb"
 * entry[Observation].resource = Observation-aerobe-culture
 
 * entry[Observation].fullUrl = "urn:uuid:8b07a6b9-fefd-4ee5-87e1-04cdc4a15327"
 * entry[Observation].resource = Observation-aerobe-culture-org-1
 
+* entry[Observation].fullUrl = "urn:uuid:f251d8b4-54fb-4060-89fe-f17e54874124"
+* entry[Observation].resource = Observation-aerobe-culture-org-1-growth
+
 * entry[Observation].fullUrl = "urn:uuid:dc20d7a8-a2ec-4291-b70e-b3049ea05cf3"
 * entry[Observation].resource = Observation-aerobe-culture-org-2
 
+* entry[Observation].fullUrl = "urn:uuid:e548aa0e-1662-4fda-838a-aa7d169ae44f"
+* entry[Observation].resource = Observation-aerobe-culture-org-2-growth
+
 * entry[Observation].fullUrl = "urn:uuid:230f9ed4-0ab0-456e-9161-f1c290e24c92"
 * entry[Observation].resource = Observation-aerobe-culture-org-3
-*/
+
+* entry[Observation].fullUrl = "urn:uuid:1c453ab3-8e39-4530-a581-d3f87e1459fc"
+* entry[Observation].resource = Observation-aerobe-culture-org-3-growth
+
 
 //================== Observations susceptibility tests =====================0
+/*
 * entry[Observation].fullUrl = "urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d"
 * entry[Observation].resource = Observation-org-2-susc-panel
 
@@ -151,9 +159,9 @@ Usage: #inline
 
 * entry[Observation].fullUrl = "urn:uuid:28a7f5b7-7ba4-4caf-ac43-80326dcf2cfb"
 * entry[Observation].resource = Observation-org-2-vancomycin-susc
+*/
 
 //=============== practitioner, organization =============================0
-
 * entry[PractitionerRole][+].fullUrl = "urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f"
 * entry[PractitionerRole][=].resource = HansHauserKantonsspital
 
@@ -964,6 +972,11 @@ Usage: #inline
 // │  Anaerobe Culture: org-1, org-2, org-3     │
 // │  -> each: growth, susc panel               │
 // ╰────────────────────────────────────────────╯
+
+    // ╭── 4-sepsis Observation aerobe-culture-org-1 ───────────╮
+    // │  aerobe-culture-org-1 org-1-growth, org-1-susc-panel   │
+    // ╰────────────────────────────────────────────────────────╯
+
 Instance: Observation-aerobe-culture
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
@@ -978,14 +991,14 @@ Usage: #inline
 * performer = Reference(EvaErlenmeyer)
 * performer[+].display = "Eva Erlenmeier"
 
-* hasMember[+] = Reference(Observation/8a353d28-df1d-4869-945d-c44ae04e22f3) // Observation-aerobe-culture-org-1
-* hasMember[+] = Reference(Observation/0c1b30c6-9a41-4c59-a403-531654214754) // Observation-aerobe-culture-org-2
-* hasMember[+] = Reference(Observation/a495aa05-8f97-4d5c-b085-c5fbac261d6b) // Observation-aerobe-culture-org-3
+* hasMember[+] = Reference(Observation/8b07a6b9-fefd-4ee5-87e1-04cdc4a15327) // Observation-aerobe-culture-org-1
+* hasMember[+] = Reference(Observation/dc20d7a8-a2ec-4291-b70e-b3049ea05cf3) // Observation-aerobe-culture-org-2
+* hasMember[+] = Reference(Observation/230f9ed4-0ab0-456e-9161-f1c290e24c92) // Observation-aerobe-culture-org-3
 
 Instance: Observation-aerobe-culture-org-1
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "8a353d28-df1d-4869-945d-c44ae04e22f3"
+* id = "8b07a6b9-fefd-4ee5-87e1-04cdc4a15327"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
@@ -996,16 +1009,28 @@ Usage: #inline
 * performer[+].display = "Eva Erlenmeier"
 * valueCodeableConcept = $sct#56415008 "Klebsiella pneumoniae (organism)"
 * hasMember[+] = Reference(Observation/17a2d960-xxxx-4276-be4a-e1e679fcf415) // Observation-aerobe-culture-org-1-growth
-* hasMember[+] = Reference(Observation/531337e5-xxxx-4ed7-a81f-d30d16b3d7cb) // Observation-aerobe-culture-org-1-susc-panel
+// * hasMember[+] = Reference(Observation/531337e5-xxxx-4ed7-a81f-d30d16b3d7cb) // Observation-aerobe-culture-org-1-susc-panel
 
-// ╭── 4-sepsis Observation aerobe-culture ─────────╮
-// │ Anaerobe Culture: org-3-growth, org-3-susc-panel │
-// ╰──────────────────────────────────────────────────╯
+Instance: Observation-aerobe-culture-org-1-growth
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "f251d8b4-54fb-4060-89fe-f17e54874124"
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code.text = "Microorganism Growth"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
+* valueCodeableConcept.text = "++"
+
 
 Instance: Observation-aerobe-culture-org-2
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "0c1b30c6-9a41-4c59-a403-531654214754"
+* id = "dc20d7a8-a2ec-4291-b70e-b3049ea05cf3"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
@@ -1015,8 +1040,55 @@ Usage: #inline
 * performer = Reference(EvaErlenmeyer)
 * performer[+].display = "Eva Erlenmeier"
 * valueCodeableConcept = $sct#112283007 "Escherichia coli (organism)"
-* hasMember[+] = Reference(Observation/17a2d960-xxxx-4276-be4a-e1e679fcf415) // Observation-aerobe-culture-org-2-growth
-* hasMember[+] = Reference(Observation/531337e5-xxxxx-4ed7-a81f-d30d16b3d7cb) // Observation-aerobe-culture-org-2-susc-panel
+* hasMember[+] = Reference(Observation/e548aa0e-1662-4fda-838a-aa7d169ae44f) // Observation-aerobe-culture-org-2-growth
+// * hasMember[+] = Reference(Observation/531337e5-xxxxx-4ed7-a81f-d30d16b3d7cb) // Observation-aerobe-culture-org-2-susc-panel
+
+Instance: Observation-aerobe-culture-org-2-growth
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "e548aa0e-1662-4fda-838a-aa7d169ae44f"
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code.text = "Microorganism Growth"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
+* valueCodeableConcept.text = "++"
+
+
+Instance: Observation-aerobe-culture-org-3
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "230f9ed4-0ab0-456e-9161-f1c290e24c92"
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueCodeableConcept = $sct#112283007 "Escherichia coli (organism)"
+* hasMember[+] = Reference(Observation/1c453ab3-8e39-4530-a581-d3f87e1459fc) // Observation-aerobe-culture-org-2-growth
+// * hasMember[+] = Reference(Observation/531337e5-xxxxx-4ed7-a81f-d30d16b3d7cb) // Observation-aerobe-culture-org-2-susc-panel
+
+Instance: Observation-aerobe-culture-org-3-growth
+InstanceOf: ChLabObservationResultsLaboratory
+Usage: #inline
+* id = "1c453ab3-8e39-4530-a581-d3f87e1459fc"
+* status = #final
+* category[laboratory] = $observation-category#laboratory
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* code.text = "Microorganism Growth"
+* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* effectiveDateTime = "2022-10-25T13:35:00+01:00"
+* performer = Reference(EvaErlenmeyer)
+* performer[+].display = "Eva Erlenmeier"
+* valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
+* valueCodeableConcept.text = "++"
 
 
 // ╭────── 4-sepsis Observation org-1 susc ────────────────────────────╮
@@ -1031,6 +1103,7 @@ Usage: #inline
 // │ Results: susceptibility Panel with 4 susceptibility observations  │
 // ╰───────────────────────────────────────────────────────────────────╯
 
+/*
 Instance: Observation-org-2-susc-panel
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
@@ -1120,11 +1193,10 @@ Usage: #inline
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
 * interpretation = $obs-interpretation#S "Susceptible"
-
+*/
 // ╭────── 4-sepsis Observation org-3 susc ────────────────────────────╮
 // │ Results: susceptibility Panel with 3 susceptibility observations  │
 // ╰───────────────────────────────────────────────────────────────────╯
-
 
 // ╭── 4-sepsis Observation urine-culture ──╮
 // │  Urine Culture                         │
@@ -1140,10 +1212,10 @@ Usage: #inline
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
-// * valueCodeableConcept = $sct#441614007 "Present + out of +++"
-// * valueCodeableConcept.text = "+"
-* valueCodeableConcept = $sct#2667000 "Absent"
-* valueCodeableConcept.text = "None observed"
+* valueCodeableConcept = $sct#441614007 "Present + out of +++"
+* valueCodeableConcept.text = "+"
+// * valueCodeableConcept = $sct#2667000 "Absent"
+// * valueCodeableConcept.text = "None observed"
 
 // ╭────── PractitionerRole 4-sepsis ──────────────────────────────────────╮
 // │ Hans Hauser: CHCorePractitionerRole CHCoreOrganization: Kantonsspital │
