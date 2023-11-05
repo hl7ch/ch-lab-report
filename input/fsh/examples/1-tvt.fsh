@@ -662,7 +662,7 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -692,7 +692,7 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -722,7 +722,7 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -752,7 +752,7 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -782,7 +782,7 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -812,7 +812,7 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -842,7 +842,7 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -872,7 +872,7 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -902,7 +902,7 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -937,7 +937,7 @@ Usage: #inline
 
 * priority = #urgent
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -972,7 +972,7 @@ Usage: #inline
 
 * priority = #urgent
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(MarcMustermannArztpraxis)
+* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
