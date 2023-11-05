@@ -64,6 +64,7 @@ Usage: #inline
 * entry[Observation].fullUrl = "urn:uuid:17a2d960-c34a-4276-be4a-e1e679fcf415"
 * entry[Observation].resource = Observation-anaerobe-culture-org-1-growth
 
+    // org-1-susc-panel
 * entry[Observation].fullUrl = "urn:uuid:531337e5-48ec-4ed7-a81f-d30d16b3d7cb"
 * entry[Observation].resource = Observation-anaerobe-culture-org-1-susc-panel
 
@@ -76,13 +77,14 @@ Usage: #inline
 * entry[Observation].fullUrl = "urn:uuid:3453e04d-7bba-45bf-83f9-616c5c18bcfc"
 * entry[Observation].resource = Observation-org-1-ceftriaxone
 
-    // org-2
+  // org-2
 * entry[Observation].fullUrl = "urn:uuid:5c774433-62ad-4d21-b230-6de2d138a02d"
 * entry[Observation].resource = Observation-anaerobe-culture-org-2
 
 * entry[Observation].fullUrl = "urn:uuid:17a2d960-c34a-4276-be4a-e1e679fcf415"
 * entry[Observation].resource = Observation-anaerobe-culture-org-2-growth
 
+    // org-2-susc-panel
 * entry[Observation].fullUrl = "urn:uuid:531337e5-48ec-4ed7-a81f-d30d16b3d7cb"
 * entry[Observation].resource = Observation-anaerobe-culture-org-2-susc-panel
 
@@ -102,6 +104,7 @@ Usage: #inline
 * entry[Observation].fullUrl = "urn:uuid:8c885526-b6ed-4f99-bcc1-d294d79e0c7c"
 * entry[Observation].resource = Observation-anaerobe-culture-org-3-growth
 
+    // org-3-susc-panel
 * entry[Observation].fullUrl = "urn:uuid:8c8b2f58-4cc1-4c21-8a92-e65ce31e60b1"
 * entry[Observation].resource = Observation-anaerobe-culture-org-3-susc-panel
 
@@ -136,6 +139,9 @@ Usage: #inline
 * entry[Observation].fullUrl = "urn:uuid:1c453ab3-8e39-4530-a581-d3f87e1459fc"
 * entry[Observation].resource = Observation-aerobe-culture-org-3-growth
 
+//================== Observations urine-culture ==========================0
+* entry[Observation].fullUrl = "urn:uuid:0c1b30c6-9a41-4c59-a403-531654214754"
+* entry[Observation].resource = Observation-urine-culture
 
 //================== Observations susceptibility tests =====================0
 /*
@@ -298,7 +304,7 @@ Usage: #inline
 
 * result[0] = Reference(Observation/09cebdc4-7ecd-4164-bdda-6a8207d1f2be)  // Observation-gram-stain
 * result[+] = Reference(Observation/cea62faa-60b7-442b-b76a-da70ed2d92b1)  // Observation-anaerobe-culture
-* result[+] = Reference(Observation/09cebdc4-7ecd-4164-bdda-6a8207d1f2be)  // Observation-aerobe-culture
+* result[+] = Reference(Observation/3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb)  // Observation-aerobe-culture
 * result[+] = Reference(Observation/0c1b30c6-9a41-4c59-a403-531654214754)  // Observation-urine-culture
 
 
@@ -476,10 +482,10 @@ Usage: #inline
 // ╭──── 4-sepsis Specimen urine  ───────────╮
 // │      Direct Microscopy and Culture      │
 // ╰─────────────────────────────────────────╯
-Instance: Urine-sample // TODO must be adapted !!!!!
+Instance: Urine-sample
 InstanceOf: Specimen
 Usage: #inline
-* id = "b0871e3b-f378-4f07-90ff-f08a20e42c02" // -> is valuable
+* id = "77ed2f36-b4b1-42da-bc57-563e293c04e8" 
 * contained = hep
 * identifier.system = "http://ehr.acme.org/identifiers/collections"
 * identifier.value = "23234352356"
