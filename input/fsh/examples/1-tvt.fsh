@@ -1,9 +1,3 @@
-// ╭────────────── instance 1-tvt ──────────────────────────────╮
-// │  Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer   │
-// ╰────────────────────────────────────────────────────────────╯
-// ╭────────────── instance 1-tvt ──────────────────────────────╮
-// │  Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer   │
-// ╰────────────────────────────────────────────────────────────╯
 Instance: LabResultReport-1-tvt
 InstanceOf: ChLabReportDocument
 Description: "Example of a Laboratory Report for scenario deep vein thrombosis"
@@ -14,51 +8,20 @@ Usage: #example
 * type = #document
 * timestamp = "2023-03-09T14:30:00+01:00"
 
+// ╭────────────── instance 1-tvt ─────────────────────────────╮
+// │  Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer   │
+// ╰───────────────────────────────────────────────────────────╯
+
 * entry[Composition].fullUrl = "urn:uuid:3dd8d097-67d0-4e39-aa68-5ab6fc13169c"
 * entry[Composition].resource = Composition-1-tvt
-
 * entry[DiagnosticReport].fullUrl = "urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06"
 * entry[DiagnosticReport].resource = DiagnosticReport-1-tvt
 
+//================== Patient ==========================0
 * entry[Patient].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"
 * entry[Patient].resource = HansGuggindieluft
 
-* entry[Observation][+].fullUrl = "urn:uuid:0ad0810e-6eb4-11ee-b962-0242ac120002"
-* entry[Observation][=].resource = Observation-CBC-panel
-
-* entry[Observation][+].fullUrl = "urn:uuid:5c1ceea1-2751-4ddc-afb5-4c28037ba1be"
-* entry[Observation][=].resource = Observation-WBC
-* entry[Observation][+].fullUrl = "urn:uuid:04ec7690-a1e8-4fdf-be4f-6c92949e948a"
-* entry[Observation][=].resource = Observation-RBC
-
-* entry[Observation][+].fullUrl = "urn:uuid:2565be07-47a0-4cca-926e-a57e1ac96fb8"
-* entry[Observation][=].resource = Observation-HGB
-* entry[Observation][+].fullUrl = "urn:uuid:c4d64c0a-aafb-4b41-ae0b-a620b2a6c08c"
-* entry[Observation][=].resource = Observation-HT
-
-* entry[Observation][+].fullUrl = "urn:uuid:857cfa10-66ea-45ae-b236-e6e03af4be3f"
-* entry[Observation][=].resource = Observation-MCV
-* entry[Observation][+].fullUrl = "urn:uuid:3b263f29-44d8-468f-b612-e748442e1845"
-* entry[Observation][=].resource = Observation-MCH
-
-* entry[Observation][+].fullUrl = "urn:uuid:735c9244-497a-420d-b006-15a57be365b1"
-* entry[Observation][=].resource = Observation-MCHC
-* entry[Observation][+].fullUrl = "urn:uuid:32a7d6fb-dc8a-4673-8cef-c59c1c5397db"
-* entry[Observation][=].resource = Observation-Platelet
-
-
-* entry[Observation][+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
-* entry[Observation][=].resource = Observation-CRP
-* entry[Observation][+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"
-* entry[Observation][=].resource = Observation-D-Dimer
-
-* entry[Specimen][+].fullUrl = "urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74"
-* entry[Specimen][=].resource = Blood
-* entry[Specimen][+].fullUrl = "urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8"
-* entry[Specimen][=].resource = Blood-coag
-* entry[Specimen][+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
-* entry[Specimen][=].resource = Serum
-
+//================== serviceRequest ==========================0
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666" 
 * entry[ServiceRequest][=].resource = ServiceRequest-CBC-panel
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f"
@@ -82,6 +45,41 @@ Usage: #example
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
 * entry[ServiceRequest][=].resource = ServiceRequest-D-Dimer
 
+//================== Observations CBC, CRP, D-Dimer ==========================0
+* entry[Observation][+].fullUrl = "urn:uuid:0ad0810e-6eb4-11ee-b962-0242ac120002"
+* entry[Observation][=].resource = Observation-CBC-panel
+* entry[Observation][+].fullUrl = "urn:uuid:5c1ceea1-2751-4ddc-afb5-4c28037ba1be"
+* entry[Observation][=].resource = Observation-WBC
+* entry[Observation][+].fullUrl = "urn:uuid:04ec7690-a1e8-4fdf-be4f-6c92949e948a"
+* entry[Observation][=].resource = Observation-RBC
+* entry[Observation][+].fullUrl = "urn:uuid:2565be07-47a0-4cca-926e-a57e1ac96fb8"
+* entry[Observation][=].resource = Observation-HGB
+* entry[Observation][+].fullUrl = "urn:uuid:c4d64c0a-aafb-4b41-ae0b-a620b2a6c08c"
+* entry[Observation][=].resource = Observation-HT
+* entry[Observation][+].fullUrl = "urn:uuid:857cfa10-66ea-45ae-b236-e6e03af4be3f"
+* entry[Observation][=].resource = Observation-MCV
+* entry[Observation][+].fullUrl = "urn:uuid:3b263f29-44d8-468f-b612-e748442e1845"
+* entry[Observation][=].resource = Observation-MCH
+* entry[Observation][+].fullUrl = "urn:uuid:735c9244-497a-420d-b006-15a57be365b1"
+* entry[Observation][=].resource = Observation-MCHC
+* entry[Observation][+].fullUrl = "urn:uuid:32a7d6fb-dc8a-4673-8cef-c59c1c5397db"
+* entry[Observation][=].resource = Observation-Platelet
+
+* entry[Observation][+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
+* entry[Observation][=].resource = Observation-CRP
+
+* entry[Observation][+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"
+* entry[Observation][=].resource = Observation-D-Dimer
+
+//================== Specimen ==========================0
+* entry[Specimen][+].fullUrl = "urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74"
+* entry[Specimen][=].resource = Blood
+* entry[Specimen][+].fullUrl = "urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8"
+* entry[Specimen][=].resource = Blood-coag
+* entry[Specimen][+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
+* entry[Specimen][=].resource = Serum
+
+//=============== practitioner, organization =============================0
 * entry[PractitionerRole][+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"
 * entry[PractitionerRole][=].resource = MarcMustermannArztpraxis
 

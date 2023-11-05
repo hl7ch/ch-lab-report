@@ -1,4 +1,3 @@
-
 Instance: LabResultReport-4-sepsis
 InstanceOf: ChLabReportDocument
 Description: "Example of a Laboratory Report for suspected sepsis"
@@ -11,7 +10,7 @@ Usage: #inline
 
 // ╭────────────── example 4-sepsis  ─────────────────────────────────────╮
 // │ Scenario Suspected sepsis: 4 samples for Blood culture,              │
-// │ aerobic + anaerobic, Interval 30', Urine                             │
+// │ aerobic + anaerobic, Interval 30', Urine-sample                             │
 // │ Found: org-1 = K. pneumoniae, org-2 = E. coli, org-3 = Strept. mitis │
 // ╰──────────────────────────────────────────────────────────────────────╯
 
@@ -27,10 +26,8 @@ Usage: #inline
 //================== serviceRequest ==========================0
 * entry[ServiceRequest].fullUrl = "urn:uuid:58155c90-ae24-4093-8054-13370e29b3a5"
 * entry[ServiceRequest].resource = ServiceRequest-gram-stain
-
 * entry[ServiceRequest].fullUrl = "urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8"
 * entry[ServiceRequest].resource = ServiceRequest-aerobe-culture
-
 * entry[ServiceRequest].fullUrl = "urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b"
 * entry[ServiceRequest].resource = ServiceRequest-anaerobe-culture
 
@@ -43,19 +40,16 @@ Usage: #inline
 
 * entry[Observation].fullUrl = "urn:uuid:4679fd4c-4ef3-4b91-b17c-8a97a25472fb"
 * entry[Observation].resource = Observation-org-1
-
 * entry[Observation].fullUrl = "urn:uuid:cd376843-9c66-4e63-b403-9299bd6c4fc2"
 * entry[Observation].resource = Observation-org-1-quant
 
 * entry[Observation].fullUrl = "urn:uuid:ae61519b-b7b4-4bfc-a7a9-f272130a2300"
 * entry[Observation].resource = Observation-org-2
-
 * entry[Observation].fullUrl = "urn:uuid:e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
 * entry[Observation].resource = Observation-org-2-quant
 
 * entry[Observation].fullUrl = "urn:uuid:e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
 * entry[Observation].resource = Observation-org-3
-
 * entry[Observation].fullUrl = "urn:uuid:ae61519b-b7b4-4bfc-a7a9-f272130a2300"
 * entry[Observation].resource = Observation-org-3-quant
 
@@ -160,6 +154,17 @@ Usage: #inline
 * entry[Observation].fullUrl = "urn:uuid:28a7f5b7-7ba4-4caf-ac43-80326dcf2cfb"
 * entry[Observation].resource = Observation-org-2-vancomycin-susc
 */
+//================== Specimen ==========================0
+* entry[Specimen][+].fullUrl = "urn:uuid:4fcf2138-6def-4b6e-beaa-35ee09d9cba8"
+* entry[Specimen][=].resource = Blood-anaerob-0-min
+* entry[Specimen][+].fullUrl = "urn:uuid:4b37cb2b-b9fe-4742-aacd-b03259d3035a"
+* entry[Specimen][=].resource = Blood-anaerob-30-min
+* entry[Specimen][+].fullUrl = "urn:uuid:7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2"
+* entry[Specimen][=].resource = Blood-anaerob-0-min
+* entry[Specimen][+].fullUrl = "urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02"
+* entry[Specimen][=].resource = Blood-aerob-30-min
+* entry[Specimen][+].fullUrl = "urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8"
+* entry[Specimen][=].resource = Urine-sample
 
 //=============== practitioner, organization =============================0
 * entry[PractitionerRole][+].fullUrl = "urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f"
@@ -289,7 +294,7 @@ Usage: #inline
 * specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
 * specimen[+] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
 * specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
-* specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Urine
+* specimen[+] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
 
 * result[0] = Reference(Observation/09cebdc4-7ecd-4164-bdda-6a8207d1f2be)  // Observation-gram-stain
 * result[+] = Reference(Observation/cea62faa-60b7-442b-b76a-da70ed2d92b1)  // Observation-anaerobe-culture
@@ -1312,7 +1317,7 @@ Usage: #inline
 * specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
 * specimen[+] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
 * specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
-* specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Urine
+* specimen[+] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine
 
 Instance: ServiceRequest-anaerobe-culture
 InstanceOf: ChLabReportServiceRequest

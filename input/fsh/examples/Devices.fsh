@@ -29,7 +29,7 @@ Usage: #example
 * lotNumber = "lot.112233"
 * serialNumber = "06882382" // REF
 * deviceName
-  * name = "Eurolyser CRP Test Kit"
+  * name = "Roche CARDIAC D-Dimer"  // Fake Name !
   * type = #udi-label-name
 
 
