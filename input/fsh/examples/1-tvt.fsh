@@ -184,7 +184,7 @@ Usage: #inline
 * status = #final
 // * code = $sct#4241000179101 "Laboratory report (record artifact)"  // in profile
 // * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(EvaErlenmeyerLaborPipette)
 * performer.display = "Dr. Eva Erlenmeyer"
@@ -252,7 +252,7 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.text = "CBC panel Auto (Bld)" // LOINC Display Name
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 
@@ -279,7 +279,7 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.text = "Hemoglobin and Hematocrit panel (Bld)"
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 // * specimen  = Reference(Blood) / better to define it in Member
@@ -298,7 +298,7 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 // TODO values
@@ -323,7 +323,7 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
 * code.text = "WBC Auto (Bld) [#/Vol]" // LOINC Display Name
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 
@@ -349,7 +349,7 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 * code.text =  "RBC Auto (Bld) [#/Vol]"  // LOINC Display Name
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 * valueQuantity = 4.58 '10*6/uL' "10*6/uL"
@@ -377,7 +377,7 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 // TODO values
@@ -402,7 +402,7 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
 * code.text = "Hematocrit Auto (Bld) [Volume fraction]" // LOINC Display Name
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 // TODO values
@@ -427,7 +427,7 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#787-2 "MCV [Entitic volume] by Automated count"
 * code.text = "MCV Auto (RBC) [Entitic vol]" // LOINC Display Name
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 // TODO values
@@ -452,7 +452,7 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#785-6 "MCH [Entitic mass] by Automated count"
 * code.text = "MCH Auto (RBC) [Entitic mass]" // LOINC Display Name
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 // TODO values
@@ -478,7 +478,7 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
 * code.text = "MCHC Auto (RBC) [Mass/Vol]" // LOINC Display Name
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 // TODO values
@@ -503,7 +503,7 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
 * code.text = "Platelets Auto (Bld) [#/Vol]" // LOINC Display Name
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
 // TODO values
@@ -531,7 +531,7 @@ Usage: #inline
 * category[studyType] = $loinc#18719-5 "Chemistry studies (set)"  // lab specialty
 * code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma" // subset of loinc
 * code.text = "CRP [Mass/Vol]" // display name
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeyer"
 // TODO values
@@ -555,7 +555,7 @@ Usage: #inline
 * category[studyType] = $loinc#18720-3 "Coagulation studies (set)"  // lab specialty
 * code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(EvaErlenmeyer) "Eva Erlenmeyer"
 // TODO values
@@ -578,7 +578,7 @@ Usage: #inline
 * id = "3a98a13d-cf64-40bb-b7a0-87ef45193a74"
 * status = #available
 * type = $sct#119297000 "Blood sample"
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * collection.collector = Reference(MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
@@ -595,7 +595,7 @@ Usage: #inline
 * accessionIdentifier.value = "4e88a-66666-dd888"
 * status = #available
 * type = $sct#119297000 "Blood sample"
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * receivedTime = "2020-08-16T16:40:17Z"
 // * request = Reference(Lab) Why the specimen was collected
 * collection.collector = Reference(MarcMustermann)
@@ -617,7 +617,7 @@ Usage: #inline
 * accessionIdentifier.value = "4e88a-12345-dd888"
 * status = #available
 * type = $sct#119364003 "Serum specimen (specimen)"
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * collection.collector = Reference(MarcMustermann)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
@@ -661,7 +661,7 @@ Usage: #inline
 * code.coding[0] = $loinc#58410-2 "CBC panel - Blood by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
@@ -691,7 +691,7 @@ Usage: #inline
 * code.coding[0] = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
@@ -721,7 +721,7 @@ Usage: #inline
 * code.coding[0] = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
@@ -751,7 +751,7 @@ Usage: #inline
 * code.coding[0] = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
@@ -781,7 +781,7 @@ Usage: #inline
 * code.coding[0] = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
@@ -811,7 +811,7 @@ Usage: #inline
 * code.coding[0] = $loinc#787-2 "MCV [Entitic volume] by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
@@ -841,7 +841,7 @@ Usage: #inline
 * code.coding[0] = $loinc#785-6 "MCH [Entitic mass] by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
@@ -871,7 +871,7 @@ Usage: #inline
 * code.coding[0] = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
@@ -901,7 +901,7 @@ Usage: #inline
 * code.coding[0] = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
@@ -936,7 +936,7 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
@@ -971,7 +971,7 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 
 * priority = #urgent
-* subject = Reference(HansGuggindieluft)
+* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * requester = Reference(MarcMustermannArztpraxis)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
