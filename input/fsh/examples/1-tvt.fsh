@@ -186,7 +186,7 @@ Usage: #inline
 // * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(EvaErlenmeyerLaborPipette)
+* performer = Reference(PractitionerRole/8472931c-fbd0-437b-9ed1-4f66472c78b5)
 * performer.display = "Dr. Eva Erlenmeyer"
 
 * specimen[0] = Reference(Blood)
@@ -254,7 +254,7 @@ Usage: #inline
 * code.text = "CBC panel Auto (Bld)" // LOINC Display Name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 
 * hasMember = Reference(Observation-WBC)
 * hasMember = Reference(Observation-RBC)
@@ -281,7 +281,7 @@ Usage: #inline
 * code.text = "Hemoglobin and Hematocrit panel (Bld)"
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // * specimen  = Reference(Blood) / better to define it in Member
 * hasMember = Reference(Observation-Hb)
 * hasMember = Reference(Observation-Ht)
@@ -300,7 +300,7 @@ Usage: #inline
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 10.8 'umol/L' "umol/L"
 // * interpretation = $v3-ObservationInterpretation#HH "Critical high"
@@ -325,7 +325,7 @@ Usage: #inline
 * code.text = "WBC Auto (Bld) [#/Vol]" // LOINC Display Name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 
 * valueQuantity = 10 '10*3/uL' "10*3/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -351,7 +351,7 @@ Usage: #inline
 * code.text =  "RBC Auto (Bld) [#/Vol]"  // LOINC Display Name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 * valueQuantity = 4.58 '10*6/uL' "10*6/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "10*6/uL"
@@ -379,7 +379,7 @@ Usage: #inline
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 10.8 'umol/L' "umol/L"
 // * interpretation = $v3-ObservationInterpretation#HH "Critical high"
@@ -404,7 +404,7 @@ Usage: #inline
 * code.text = "Hematocrit Auto (Bld) [Volume fraction]" // LOINC Display Name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 43 '%' "%"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -429,7 +429,7 @@ Usage: #inline
 * code.text = "MCV Auto (RBC) [Entitic vol]" // LOINC Display Name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 85 'fL' "fL"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -454,7 +454,7 @@ Usage: #inline
 * code.text = "MCH Auto (RBC) [Entitic mass]" // LOINC Display Name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 30 'pg' "pg"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -480,7 +480,7 @@ Usage: #inline
 * code.text = "MCHC Auto (RBC) [Mass/Vol]" // LOINC Display Name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 34.7 'g/dL' "g/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -505,7 +505,7 @@ Usage: #inline
 * code.text = "Platelets Auto (Bld) [#/Vol]" // LOINC Display Name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeier"
+* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 200 '10*3/uL' "10*3/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -533,7 +533,7 @@ Usage: #inline
 * code.text = "CRP [Mass/Vol]" // display name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeyer"
+* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
@@ -557,7 +557,7 @@ Usage: #inline
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(EvaErlenmeyer) "Eva Erlenmeyer"
+* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 1.8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
@@ -579,7 +579,7 @@ Usage: #inline
 * status = #available
 * type = $sct#119297000 "Blood sample"
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* collection.collector = Reference(MarcMustermann)
+* collection.collector = Reference(Practitioner/e23d6fa1-88bc-497c-a4df-eb3fa60eaa37)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
 * container.type = $sct#706053007 "General specimen container (physical object)"
@@ -598,7 +598,7 @@ Usage: #inline
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * receivedTime = "2020-08-16T16:40:17Z"
 // * request = Reference(Lab) Why the specimen was collected
-* collection.collector = Reference(MarcMustermann)
+* collection.collector = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * processing.timePeriod.start = "2015-08-16T06:40:17Z" // usually same time as collectedDateTime
 * processing.timePeriod.end = "2015-08-17T06:40:17Z" // when processing should be terminated
@@ -618,7 +618,7 @@ Usage: #inline
 * status = #available
 * type = $sct#119364003 "Serum specimen (specimen)"
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* collection.collector = Reference(MarcMustermann)
+* collection.collector = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
 * collection.fastingStatusCodeableConcept = $v2-0916#F "Patient was fasting prior to the procedure."
@@ -984,8 +984,8 @@ Title: "Marc Mustermann at Arztpraxis"
 Description: "PractitionerRole, refers to 1-tvt"
 Usage: #inline
 * id = "017e8e32-2f3b-4bef-baf1-92c7278a7048"
-* practitioner = Reference(MarcMustermann)
-* organization = Reference(Arztpraxis)
+* practitioner = Reference(Practitioner/e23d6fa1-88bc-497c-a4df-eb3fa60eaa37)
+* organization = Reference(Organization/32c4c990-cedb-4999-998d-bab1d55db49f)
 * code = urn:oid:2.16.840.1.113883.2.9.6.2.7#2211 "Generalist Medical Practitioners"
 
 Instance: MarcMustermann
@@ -1044,9 +1044,9 @@ InstanceOf: ChLabPractitionerRole
 Title: "Marc Mustermann at Arztpraxis"
 Description: "PractitionerRole, refers to 1-tvt"
 Usage: #inline
-* id = "017e8e32-2f3b-4bef-baf1-92c7278a7048"
-* practitioner = Reference(EvaErlenmeyer)
-* organization = Reference(LaborPipette)
+* id = "8472931c-fbd0-437b-9ed1-4f66472c78b5"
+* practitioner = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052)
+* organization = Reference(Organization/84483dc8-81d3-41cc-8d24-10c241279024)
 * code = urn:oid:2.16.840.1.113883.2.9.6.2.7#3212	 "Medical and Pathology Laboratory Technicians"
 
 Instance: EvaErlenmeyer
