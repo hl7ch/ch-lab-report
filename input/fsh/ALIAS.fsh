@@ -9,6 +9,7 @@ Alias:   $v2-0488                     =   http://terminology.hl7.org/CodeSystem/
 Alias:   $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916 // relevanteClinicalInformation
 Alias:   $organization-type             = http://terminology.hl7.org/CodeSystem/organization-type
 Alias:   $referencerange-meaning     =    http://terminology.hl7.org/CodeSystem/referencerange-meaning
+Alias:   $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias:   $v3-ObservationInterpretation =  http://hl7.org/fhir/ValueSet/observation-interpretation
 Alias:   $v3-MaritalStatus            =   http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
 Alias:   $v3-EntityCode               =   http://terminology.hl7.org/CodeSystem/v3-EntityCode // Entity the instance represents, e.g. a blood collection tube

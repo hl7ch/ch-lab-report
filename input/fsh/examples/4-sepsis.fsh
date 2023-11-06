@@ -25,15 +25,14 @@ Usage: #example
 
 //================== serviceRequest ==========================0
 
-// * entry[ServiceRequest][+].fullUrl = "urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7"
-// * entry[ServiceRequest][=].resource = ServiceRequest-gram-stain
-// * entry[ServiceRequest][+].fullUrl = "urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b"
-// * entry[ServiceRequest][=].resource = ServiceRequest-anaerobe-culture
-// * entry[ServiceRequest][+].fullUrl = "urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8"
-// * entry[ServiceRequest][=].resource = ServiceRequest-aerobe-culture
-// * entry[ServiceRequest][+].fullUrl = "urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e"
-// * entry[ServiceRequest][=].resource = ServiceRequest-urine-culture
-
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7"
+* entry[ServiceRequest][=].resource = ServiceRequest-gram-stain
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b"
+* entry[ServiceRequest][=].resource = ServiceRequest-anaerobe-culture
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8"
+* entry[ServiceRequest][=].resource = ServiceRequest-aerobe-culture
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e"
+* entry[ServiceRequest][=].resource = ServiceRequest-urine-culture
 
 //================== Observations gram Stain ==========================0
 
@@ -128,8 +127,8 @@ Usage: #example
 
 //================== Observations urine-culture ==========================0
 
-// * entry[Observation][+].fullUrl = "urn:uuid:0c1b30c6-9a41-4c59-a403-531654214754"
-// * entry[Observation][=].resource = Observation-urine-culture
+* entry[Observation][+].fullUrl = "urn:uuid:0c1b30c6-9a41-4c59-a403-531654214754"
+* entry[Observation][=].resource = Observation-urine-culture
 
 //================== Observations susceptibility tests =====================0
 
@@ -155,8 +154,8 @@ Usage: #example
 * entry[Specimen][+].fullUrl = "urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02"
 * entry[Specimen][=].resource = Blood-aerob-30-min
 
-//* entry[Specimen][+].fullUrl = "urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8"
-//* entry[Specimen][=].resource = Urine-sample
+* entry[Specimen][+].fullUrl = "urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8"
+* entry[Specimen][=].resource = Urine-sample
 
 //=============== practitioner, organization =============================0
 * entry[PractitionerRole][+].fullUrl = "urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f"
@@ -211,6 +210,8 @@ Usage: #inline
 * status = #final
 // * type = $loinc#11502-2 "Laboratory report"
 // * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
+* type = http://loinc.org#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
+* type.text = "Laborbefunde"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * date = "2023-03-09T14:30:00+01:00"
 * author = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052)
@@ -266,20 +267,20 @@ InstanceOf: ChLabDiagnosticReport
 Description: "Example of DiagnosticReport for several lab results"
 Usage: #inline
 * id = "1e56bbe9-ee25-45db-a887-987090f89810"
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/832c053d-e0a0-4467-9f85-4bde09b825af)
 
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 
-// * basedOn[0] = Reference(ServiceRequest/21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
+// * basedOn[+] = Reference(ServiceRequest/21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
 // * basedOn[+] = Reference(ServiceRequest/6bb29a10-2313-48b9-96ba-e903d0ae3c2b)  //  ServiceRequest-anaerobe-culture
 // * basedOn[+] = Reference(ServiceRequest/a168c88a-f2c1-43d1-9dd7-611a64cd7be8)  //  ServiceRequest-aerobe-culture
 // * basedOn[+] = Reference(ServiceRequest/fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)  //  ServiceRequest-urine-culture
 
 * status = #final
-// * code = $sct#4241000179101 "Laboratory report (record artifact)"  // in profile
-// * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
+* code = http://loinc.org#11502-2 "Laboratory report"
+* code.text = "Referto di laboratorio"
 * subject = Reference(KatarinaKeller)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsenLaborGantenbein)
@@ -290,7 +291,7 @@ Usage: #inline
 * specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
 * specimen[+] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
 * specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
-// * specimen[+] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
+* specimen[+] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
 
 * result[+] = Reference(Observation/a335d2df-6f77-4ae8-bb6e-f7086fd25de0)  // Observation-gram-stain
 * result[+] = Reference(Observation/cea62faa-60b7-442b-b76a-da70ed2d92b1)  // Observation-anaerobe-culture
@@ -334,6 +335,22 @@ Usage: #inline
 * communication.language = urn:ietf:bcp:47#de-CH
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
+
+Instance: HealthInsuranceCard
+InstanceOf: Coverage
+Title: "Health Insurance Card"
+Description: "Example for Insurance"
+Usage: #inline
+* id = "4f3d1a62-714d-4709-beca-313694eae916"
+* identifier.system = "http://ehic.com/insurer/123456789/member"
+* identifier.value = "A123456780"
+* status = #active
+* type = $v3-ActCode#EHCPOL "extended healthcare"
+* subscriber = Reference(KatarinaKeller)
+* beneficiary = Reference(KatarinaKeller)
+* period.end = "2012-03-17"
+* payor.identifier.system = "http://ehic.com/insurer"
+* payor.identifier.value = "123456789"
 
 // ╭──── 4-sepsis Specimen blood  ──────────────────────────────╮
 // │  Culture anaerob, Fuchsia top Bottle, after 0 and 30 min.  │
@@ -1249,12 +1266,12 @@ Usage: #inline
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
-* insurance = Reference(HealthInsuranceCard)
+// * insurance = Reference(HealthInsuranceCard)
 * specimen[+] = Reference(Specimen/4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
 * specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
 * specimen[+] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
 * specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
-// * specimen[+] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
+* specimen[+] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
 
 Instance: ServiceRequest-anaerobe-culture
 InstanceOf: ChLabReportServiceRequest
@@ -1283,9 +1300,9 @@ Usage: #inline
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
-//* insurance = Reference(HealthInsuranceCard)
-// specimen[0] = Reference(Specimen/4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
-// specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
+// * insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Specimen/4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
+* specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
 
 Instance: ServiceRequest-aerobe-culture
 InstanceOf: ChLabReportServiceRequest
@@ -1314,7 +1331,7 @@ Usage: #inline
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
-// * insurance = Reference(HealthInsuranceCard)
+// // * insurance = Reference(HealthInsuranceCard)
 // * specimen[0] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
 // * specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
 
@@ -1345,8 +1362,8 @@ Usage: #inline
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
-// * insurance = Reference(HealthInsuranceCard)
-// * specimen[0] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
+// // * insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
 
 // ╭────── PractitionerRole 4-sepsis ──────────────────────────────────────╮
 // │ Hans Hauser: CHCorePractitionerRole CHCoreOrganization: Kantonsspital │
