@@ -229,7 +229,7 @@ Usage: #inline
 // ╰────────────────────────────────────────────────────────────────────────────────────────╯
 
 * section[lab-subsections].title = "Bacterial Aerobic & Anaerobic Culture & Susceptibility"
-* section[lab-subsections].code  = $loinc##18725-2 "Microbiology studies (set)"
+* section[lab-subsections].code  = $loinc#18725-2 "Microbiology studies (set)"
 * section[lab-subsections].code.text = "Mikrobiologische Untersuchungen:Komplex:-:^Patient:Set:"  // Language variants: de-DE
 
 * section[lab-subsections].section[+].title = "Microscopic observation [Identifier] in Blood by Gram stain"
