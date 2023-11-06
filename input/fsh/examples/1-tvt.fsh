@@ -1039,6 +1039,7 @@ Usage: #inline
 * address.postalCode = "3254"
 * address.country = "CH"
 
+// ------ Laboratory Practitioner and Organization
 Instance: EvaErlenmeyerLaborPipette
 InstanceOf: ChLabPractitionerRole
 Title: "Marc Mustermann at Arztpraxis"
