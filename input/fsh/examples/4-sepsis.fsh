@@ -273,10 +273,10 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 
-// * basedOn[+] = Reference(ServiceRequest/21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
-// * basedOn[+] = Reference(ServiceRequest/6bb29a10-2313-48b9-96ba-e903d0ae3c2b)  //  ServiceRequest-anaerobe-culture
-// * basedOn[+] = Reference(ServiceRequest/a168c88a-f2c1-43d1-9dd7-611a64cd7be8)  //  ServiceRequest-aerobe-culture
-// * basedOn[+] = Reference(ServiceRequest/fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)  //  ServiceRequest-urine-culture
+* basedOn[+] = Reference(ServiceRequest/21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
+* basedOn[+] = Reference(ServiceRequest/6bb29a10-2313-48b9-96ba-e903d0ae3c2b)  //  ServiceRequest-anaerobe-culture
+* basedOn[+] = Reference(ServiceRequest/a168c88a-f2c1-43d1-9dd7-611a64cd7be8)  //  ServiceRequest-aerobe-culture
+* basedOn[+] = Reference(ServiceRequest/fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)  //  ServiceRequest-urine-culture
 
 * status = #final
 * code = http://loinc.org#11502-2 "Laboratory report"
@@ -296,7 +296,13 @@ Usage: #inline
 * result[+] = Reference(Observation/a335d2df-6f77-4ae8-bb6e-f7086fd25de0)  // Observation-gram-stain
 * result[+] = Reference(Observation/cea62faa-60b7-442b-b76a-da70ed2d92b1)  // Observation-anaerobe-culture
 * result[+] = Reference(Observation/3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb)  // Observation-aerobe-culture
-// * result[+] = Reference(Observation/0c1b30c6-9a41-4c59-a403-531654214754)  // Observation-urine-culture
+* result[+] = Reference(Observation/0c1b30c6-9a41-4c59-a403-531654214754)  // Observation-urine-culture
+
+* result[+] = Reference(Observation/20e798b7-ef0d-4d22-9099-35219d264dac)  // Observation-org-1
+* result[+] = Reference(Observation/ae61519b-b7b4-4bfc-a7a9-f272130a2300)  // Observation-org-2
+* result[+] = Reference(Observation/a07e93cc-5908-4ed1-9678-afc61ef9fd9e)  // Observation-org-3
+
+
 
 
 // ╭───── 4-sepsis Patient ────╮
@@ -1331,7 +1337,7 @@ Usage: #inline
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
-// // * insurance = Reference(HealthInsuranceCard)
+// * insurance = Reference(HealthInsuranceCard)
 // * specimen[0] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
 // * specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
 
@@ -1362,7 +1368,7 @@ Usage: #inline
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
-// // * insurance = Reference(HealthInsuranceCard)
+// * insurance = Reference(HealthInsuranceCard)
 * specimen[0] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
 
 // ╭────── PractitionerRole 4-sepsis ──────────────────────────────────────╮
