@@ -49,7 +49,7 @@ Usage: #example
 * entry[Observation][=].resource = Observation-org-2
 * entry[Observation][+].fullUrl = "urn:uuid:e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
 * entry[Observation][=].resource = Observation-org-2-quant
-* entry[Observation][+].fullUrl = "urn:uuid:4f24af8e-00ae-417e-a87c-1c9a012b5e03"
+* entry[Observation][+].fullUrl = "urn:uuid:a07e93cc-5908-4ed1-9678-afc61ef9fd9e"
 * entry[Observation][=].resource = Observation-org-3
 * entry[Observation][+].fullUrl = "urn:uuid:b564768f-937f-4132-a2eb-91efcf59b952"
 * entry[Observation][=].resource = Observation-org-3-quant
@@ -60,7 +60,7 @@ Usage: #example
 * entry[Observation][=].resource = Observation-anaerobe-culture
 
   // org-1
-* entry[Observation][+].fullUrl = "urn:uuid:f89631cb-e973-4ba0-9f48-29b9472b9363"
+* entry[Observation][+].fullUrl = "urn:uuid:f89631cb-e973-4ba0-9f48-29b9472b9363" // entry[10]
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-1
 * entry[Observation][+].fullUrl = "urn:uuid:17a2d960-c34a-4276-be4a-e1e679fcf415"
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-1-growth
@@ -85,21 +85,21 @@ Usage: #example
     // org-2-susc-panel
 * entry[Observation][+].fullUrl = "urn:uuid:531337e5-48ec-4ed7-a81f-d30d16b3d7cb"
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-2-susc-panel
-* entry[Observation][+].fullUrl = "urn:uuid:29638352-e934-4d5f-9b09-74221f2cf89f"
+* entry[Observation][+].fullUrl = "urn:uuid:4f24af8e-00ae-417e-a87c-1c9a012b5e03"
 * entry[Observation][=].resource = Observation-org-2-amoxi-clav
-* entry[Observation][+].fullUrl = "urn:uuid:ded8aa43-732c-4cf5-b89c-7860676daf6c"
+* entry[Observation][+].fullUrl = "urn:uuid:1f94a3ab-1c83-4ac5-afec-75fabdf79da4" // entry[20]
 * entry[Observation][=].resource = Observation-org-2-ciprofloxacin
-* entry[Observation][+].fullUrl = "urn:uuid:3453e04d-7bba-45bf-83f9-616c5c18bcfc"
+* entry[Observation][+].fullUrl = "urn:uuid:020c3f3d-a77b-42fa-a10a-c63ee7a5bd0f" //  entry[21]
 * entry[Observation][=].resource = Observation-org-2-ceftriaxone
 
     // org-3
-* entry[Observation][+].fullUrl = "urn:uuid:296e1564-39d6-497b-9b40-e60f884dd5e4"
+* entry[Observation][+].fullUrl = "urn:uuid:296e1564-39d6-497b-9b40-e60f884dd5e4" //  entry[22]
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-3
 * entry[Observation][+].fullUrl = "urn:uuid:8c885526-b6ed-4f99-bcc1-d294d79e0c7c"
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-3-growth
 
     // org-3-susc-panel
-* entry[Observation][+].fullUrl = "urn:uuid:8c8b2f58-4cc1-4c21-8a92-e65ce31e60b1"
+* entry[Observation][+].fullUrl = "urn:uuid:8c8b2f58-4cc1-4c21-8a92-e65ce31e60b1" // entry[23]
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-3-susc-panel
 * entry[Observation][+].fullUrl = "urn:uuid:6dbb348d-3ce5-451a-b7db-77c2e4d27bb3"
 * entry[Observation][=].resource = Observation-org-3-amoxi-clav
@@ -128,8 +128,8 @@ Usage: #example
 
 //================== Observations urine-culture ==========================0
 
-* entry[Observation][+].fullUrl = "urn:uuid:0c1b30c6-9a41-4c59-a403-531654214754"
-* entry[Observation][=].resource = Observation-urine-culture
+// * entry[Observation][+].fullUrl = "urn:uuid:0c1b30c6-9a41-4c59-a403-531654214754"
+// * entry[Observation][=].resource = Observation-urine-culture
 
 //================== Observations susceptibility tests =====================0
 
@@ -155,8 +155,8 @@ Usage: #example
 * entry[Specimen][+].fullUrl = "urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02"
 * entry[Specimen][=].resource = Blood-aerob-30-min
 
-* entry[Specimen][+].fullUrl = "urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8"
-* entry[Specimen][=].resource = Urine-sample
+//* entry[Specimen][+].fullUrl = "urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8"
+//* entry[Specimen][=].resource = Urine-sample
 
 //=============== practitioner, organization =============================0
 * entry[PractitionerRole][+].fullUrl = "urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f"
@@ -290,12 +290,12 @@ Usage: #inline
 * specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
 * specimen[+] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
 * specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
-* specimen[+] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
+// * specimen[+] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
 
 * result[+] = Reference(Observation/a335d2df-6f77-4ae8-bb6e-f7086fd25de0)  // Observation-gram-stain
 * result[+] = Reference(Observation/cea62faa-60b7-442b-b76a-da70ed2d92b1)  // Observation-anaerobe-culture
 * result[+] = Reference(Observation/3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb)  // Observation-aerobe-culture
-* result[+] = Reference(Observation/0c1b30c6-9a41-4c59-a403-531654214754)  // Observation-urine-culture
+// * result[+] = Reference(Observation/0c1b30c6-9a41-4c59-a403-531654214754)  // Observation-urine-culture
 
 
 // ╭───── 4-sepsis Patient ────╮
@@ -342,7 +342,7 @@ Instance: Blood-anaerob-0-min // TODO must be adapted !!!!!
 InstanceOf: Specimen
 Usage: #inline
 * id = "4fcf2138-6def-4b6e-beaa-35ee09d9cba8" // -> is valuable
-* contained = hep
+// * contained = hep
 * identifier.system = "http://ehr.acme.org/identifiers/collections"
 * identifier.value = "23234352356"
 * accessionIdentifier.system = "http://lab.acme.org/specimens/2011"
@@ -366,14 +366,14 @@ Usage: #inline
 * container.capacity.unit = "mL"
 * container.specimenQuantity.value = 6
 * container.specimenQuantity.unit = "mL"
-* container.additiveReference = Reference(hep)
+//* container.additiveReference = Reference(hep)
 * note.text = "ok"
 
 Instance: Blood-anaerob-30-min // TODO must be adapted !!!!!
 InstanceOf: Specimen
 Usage: #inline
 * id = "4b37cb2b-b9fe-4742-aacd-b03259d3035a" // -> is valuable
-* contained = hep
+// * contained = hep
 * identifier.system = "http://ehr.acme.org/identifiers/collections"
 * identifier.value = "23234352356"
 * accessionIdentifier.system = "http://lab.acme.org/specimens/2011"
@@ -397,8 +397,9 @@ Usage: #inline
 * container.capacity.unit = "mL"
 * container.specimenQuantity.value = 6
 * container.specimenQuantity.unit = "mL"
-* container.additiveReference = Reference(hep)
+// * container.additiveReference = Reference(hep)
 * note.text = "ok"
+
 Instance: hep
 InstanceOf: Substance
 Usage: #inline
@@ -411,7 +412,7 @@ Instance: Blood-aerob-0-min // TODO must be adapted !!!!!
 InstanceOf: Specimen
 Usage: #inline
 * id = "7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2" // -> is valuable
-* contained = hep
+// * contained = hep
 * identifier.system = "http://ehr.acme.org/identifiers/collections"
 * identifier.value = "23234352356"
 * accessionIdentifier.system = "http://lab.acme.org/specimens/2011"
@@ -435,14 +436,14 @@ Usage: #inline
 * container.capacity.unit = "mL"
 * container.specimenQuantity.value = 6
 * container.specimenQuantity.unit = "mL"
-* container.additiveReference = Reference(hep)
+// * container.additiveReference = Reference(hep)
 * note.text = "ok"
 
 Instance: Blood-aerob-30-min // TODO must be adapted !!!!!
 InstanceOf: Specimen
 Usage: #inline
 * id = "b0871e3b-f378-4f07-90ff-f08a20e42c02" // -> is valuable
-* contained = hep
+// * contained = hep
 * identifier.system = "http://ehr.acme.org/identifiers/collections"
 * identifier.value = "23234352356"
 * accessionIdentifier.system = "http://lab.acme.org/specimens/2011"
@@ -466,7 +467,7 @@ Usage: #inline
 * container.capacity.unit = "mL"
 * container.specimenQuantity.value = 6
 * container.specimenQuantity.unit = "mL"
-* container.additiveReference = Reference(hep)
+// * container.additiveReference = Reference(hep)
 * note.text = "ok"
 
 // ╭──── 4-sepsis Specimen urine  ───────────╮
@@ -476,7 +477,7 @@ Instance: Urine-sample
 InstanceOf: Specimen
 Usage: #inline
 * id = "77ed2f36-b4b1-42da-bc57-563e293c04e8" 
-* contained = hep
+// * contained = hep
 * identifier.system = "http://ehr.acme.org/identifiers/collections"
 * identifier.value = "23234352356"
 * accessionIdentifier.system = "http://lab.acme.org/specimens/2011"
@@ -598,7 +599,7 @@ Usage: #inline
 Instance: Observation-org-3
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "4f24af8e-00ae-417e-a87c-1c9a012b5e03"
+* id = "a07e93cc-5908-4ed1-9678-afc61ef9fd9e"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
@@ -803,14 +804,14 @@ Usage: #inline
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
-* hasMember[+] = Reference(Observation/b96df600-e743-4b2f-acbf-6c297c39e0b4)  // Observation-org-2-amoxi-clav
-* hasMember[+] = Reference(Observation/a043e08e-4a94-409a-b2d2-16550db69cea)  // Observation-org-2-ciprofloxacin
-* hasMember[+] = Reference(Observation/d07278fd-efbb-481e-855d-81feefc858bd)  // Observation-org-2-ceftriaxone
+* hasMember[+] = Reference(Observation/4f24af8e-00ae-417e-a87c-1c9a012b5e03)  // Observation-org-2-amoxi-clav
+* hasMember[+] = Reference(Observation/1f94a3ab-1c83-4ac5-afec-75fabdf79da4)  // Observation-org-2-ciprofloxacin
+* hasMember[+] = Reference(Observation/020c3f3d-a77b-42fa-a10a-c63ee7a5bd0f)  // Observation-org-2-ceftriaxone
 
 Instance: Observation-org-2-amoxi-clav
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "b96df600-e743-4b2f-acbf-6c297c39e0b4"
+* id = "4f24af8e-00ae-417e-a87c-1c9a012b5e03"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
@@ -829,7 +830,7 @@ Usage: #inline
 Instance: Observation-org-2-ciprofloxacin
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "a043e08e-4a94-409a-b2d2-16550db69cea"
+* id = "1f94a3ab-1c83-4ac5-afec-75fabdf79da4"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
@@ -848,7 +849,7 @@ Usage: #inline
 Instance: Observation-org-2-ceftriaxone
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
-* id = "d07278fd-efbb-481e-855d-81feefc858bd"
+* id = "020c3f3d-a77b-42fa-a10a-c63ee7a5bd0f"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#29576-6 "Bacterial susceptibility panel"
@@ -1283,8 +1284,8 @@ Usage: #inline
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
 //* insurance = Reference(HealthInsuranceCard)
-//* specimen[0] = Reference(Specimen/4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
-//* specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
+// specimen[0] = Reference(Specimen/4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
+// specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
 
 Instance: ServiceRequest-aerobe-culture
 InstanceOf: ChLabReportServiceRequest
@@ -1344,8 +1345,8 @@ Usage: #inline
 * requester = Reference(HansHauserKantonsspital)
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
-//* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
+// * insurance = Reference(HealthInsuranceCard)
+// * specimen[0] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
 
 // ╭────── PractitionerRole 4-sepsis ──────────────────────────────────────╮
 // │ Hans Hauser: CHCorePractitionerRole CHCoreOrganization: Kantonsspital │
