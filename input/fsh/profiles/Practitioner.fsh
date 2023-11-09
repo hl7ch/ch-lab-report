@@ -6,7 +6,8 @@ Description: "This profile constrains the Practitioner resource for the purpose 
 * . ^short = "CH Lab Practitioner"
 
 * obeys ch-lab-pract1
-* identifier[GLN] 1..
+
+* identifier[GLN] 0..1
 * name 1..
 // * address 1..
 // * address.postalCode 1..
