@@ -373,7 +373,7 @@ Usage: #inline
 * status = #available
 * type = $sct#122555007 "Venous blood specimen"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
-* receivedTime = "2011-03-04T07:03:00Z"
+* receivedTime = "2023-11-09T07:30:00Z"
 //* request = Reference(ServiceRequest/6bb29a10-2313-48b9-96ba-e903d0ae3c2b)
 * collection.collector = Reference(Practitioner/a7d5a837-288d-4234-923c-c9cb5b6f55a1) // Hans Hauser
 * collection.collectedDateTime = "2011-05-30T06:15:00Z"
@@ -404,7 +404,7 @@ Usage: #inline
 * status = #available
 * type = $sct#122555007 "Venous blood specimen"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
-* receivedTime = "2011-03-04T07:03:00Z"
+* receivedTime = "2023-11-09T06:45:00Z"
 // * request = Reference(ServiceRequest/6bb29a10-2313-48b9-96ba-e903d0ae3c2b)
 * collection.collector = Reference(Practitioner/a7d5a837-288d-4234-923c-c9cb5b6f55a1)
 * collection.collectedDateTime = "2011-05-30T06:15:00Z"
@@ -443,7 +443,7 @@ Usage: #inline
 * status = #available
 * type = $sct#122555007 "Venous blood specimen"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
-* receivedTime = "2011-03-04T07:03:00Z"
+* receivedTime = "2023-11-09T07:30:00Z"
 // * request = Reference(ServiceRequest/a168c88a-f2c1-43d1-9dd7-611a64cd7be8)
 * collection.collector = Reference(Practitioner/a7d5a837-288d-4234-923c-c9cb5b6f55a1)
 * collection.collectedDateTime = "2011-05-30T06:15:00Z"
@@ -474,10 +474,10 @@ Usage: #inline
 * status = #available
 * type = $sct#122555007 "Venous blood specimen"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
-* receivedTime = "2011-03-04T07:03:00Z"
+* receivedTime = "2023-11-09T07:30:00Z"
 // * request = Reference(ServiceRequest/a168c88a-f2c1-43d1-9dd7-611a64cd7be8)
 * collection.collector = Reference(Practitioner/a7d5a837-288d-4234-923c-c9cb5b6f55a1)
-* collection.collectedDateTime = "2011-05-30T06:15:00Z"
+* collection.collectedDateTime = "2011-05-30T06:45:00Z"
 * collection.quantity.value = 6
 * collection.quantity.unit = "mL"
 * collection.method = $v2-0488#LNV
@@ -508,7 +508,7 @@ Usage: #inline
 * status = #available
 * type = $sct#122575003 "Urine specimen (specimen)"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
-* receivedTime = "2011-03-04T07:03:00Z"
+* receivedTime = "2023-11-09T07:30:00Z"
 // * request = Reference(ServiceRequest/fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)
 * collection.collector = Reference(Practitioner/a7d5a837-288d-4234-923c-c9cb5b6f55a1)
 * collection.collectedDateTime = "2011-05-30T06:15:00Z"
