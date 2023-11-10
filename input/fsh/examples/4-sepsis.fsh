@@ -302,9 +302,6 @@ Usage: #inline
 * result[+] = Reference(Observation/ae61519b-b7b4-4bfc-a7a9-f272130a2300)  // Observation-org-2
 * result[+] = Reference(Observation/a07e93cc-5908-4ed1-9678-afc61ef9fd9e)  // Observation-org-3
 
-
-
-
 // ╭───── 4-sepsis Patient ────╮
 // │       Katarina Keller     │
 // ╰───────────────────────────╯
@@ -358,9 +355,18 @@ Usage: #inline
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
 
-// ╭──── 4-sepsis Specimen blood  ──────────────────────────────╮
-// │  Culture anaerob, Fuchsia top Bottle, after 0 and 30 min.  │
-// ╰────────────────────────────────────────────────────────────╯
+// ########### S P E C I M E N ################
+// #############################################
+// ╭──── 4-sepsis Specimen  ─────────────────────╮
+// │ Blood-anaerob: collection 0 min and 30 min, │
+// │ Blood-aerob: collection 0 min and 30 min ,  │
+// │ Urin-sample                                 │
+// ╰─────────────────────────────────────────────╯
+
+    // ╭──── 4-sepsis Specimen blood  ────────────────────────────╮
+    // │ Culture anaerob, Orange top Bottle, after 0 and 30 min.  │
+    // ╰──────────────────────────────────────────────────────────╯
+
 Instance: Blood-anaerob-0-min // TODO must be adapted !!!!!
 InstanceOf: Specimen
 Usage: #inline
@@ -454,7 +460,7 @@ Usage: #inline
 * collection.bodySite.text = "Right median cubital vein"
 * container.identifier.value = "48736-15394-75465"
 * container.description = "Aerobic Culture Glass Bootle"
-* container.type.text = "Green top Bottle"
+* container.type.text = "Blue top Bottle"
 * container.capacity.value = 10
 * container.capacity.unit = "mL"
 * container.specimenQuantity.value = 6
@@ -485,7 +491,7 @@ Usage: #inline
 * collection.bodySite.text = "Right median cubital vein"
 * container.identifier.value = "48736-15394-75465"
 * container.description = "Aerobic Culture Glass Bootle"
-* container.type.text = "Green top Bottle"
+* container.type.text = "Blue top Bottle"
 * container.capacity.value = 10
 * container.capacity.unit = "mL"
 * container.specimenQuantity.value = 6
@@ -516,7 +522,7 @@ Usage: #inline
 * collection.quantity.unit = "mL"
 * container.identifier.value = "48736-15394-75465"
 * container.description = "Urine container"
-* container.type.text = "White cap sterile Urine container"
+* container.type.text = "Red cap sterile Urine container"
 * container.capacity.value = 60
 * container.capacity.unit = "mL"
 * container.specimenQuantity.value = 60
