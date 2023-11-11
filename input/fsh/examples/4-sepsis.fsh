@@ -280,7 +280,7 @@ Usage: #inline
 
 * status = #final
 * code = http://loinc.org#11502-2 "Laboratory report"
-* code.text = "Referto di laboratorio"
+* code.text = "Laborbericht"
 * subject = Reference(KatarinaKeller)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsenLaborGantenbein)
