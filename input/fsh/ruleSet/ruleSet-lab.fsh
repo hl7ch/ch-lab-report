@@ -10,7 +10,7 @@ RuleSet: NoSubSectionsRules
 * section ^mustSupport = false
 
 RuleSet: SectionElementsRules
-* code from LabStudyTypesEuVs (preferred)
+* code from ChLabReportStudyTypes (preferred)
 * text ^short = "Text summary of the section, for human interpretation."
 * entry only Reference (ChLabObservationResultsLaboratory)
 // * entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)

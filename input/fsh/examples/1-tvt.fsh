@@ -22,7 +22,7 @@ Usage: #example
 * entry[Patient].resource = HansGuggindieluft
 
 //================== serviceRequest ==========================0
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666" 
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666" // entry[3]
 * entry[ServiceRequest][=].resource = ServiceRequest-CBC-panel
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f"
 * entry[ServiceRequest][=].resource = ServiceRequest-WBC
@@ -36,7 +36,7 @@ Usage: #example
 * entry[ServiceRequest][=].resource = ServiceRequest-MCV
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:3edb7f4c-e0c8-45c5-aee9-83d326aa61ab"
 * entry[ServiceRequest][=].resource = ServiceRequest-MCH
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:82db46b7-acef-49f4-9456-6e9cbd62a27b"
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:82db46b7-acef-49f4-9456-6e9cbd62a27b"  // entry[10]
 * entry[ServiceRequest][=].resource = ServiceRequest-MCHC
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:bfc054ce-704c-11ee-b962-0242ac120002"
 * entry[ServiceRequest][=].resource = ServiceRequest-Platelet
@@ -58,7 +58,7 @@ Usage: #example
 * entry[Observation][=].resource = Observation-HT
 * entry[Observation][+].fullUrl = "urn:uuid:857cfa10-66ea-45ae-b236-e6e03af4be3f"
 * entry[Observation][=].resource = Observation-MCV
-* entry[Observation][+].fullUrl = "urn:uuid:3b263f29-44d8-468f-b612-e748442e1845"
+* entry[Observation][+].fullUrl = "urn:uuid:3b263f29-44d8-468f-b612-e748442e1845" // entry[20]
 * entry[Observation][=].resource = Observation-MCH
 * entry[Observation][+].fullUrl = "urn:uuid:735c9244-497a-420d-b006-15a57be365b1"
 * entry[Observation][=].resource = Observation-MCHC
@@ -68,7 +68,7 @@ Usage: #example
 * entry[Observation][+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
 * entry[Observation][=].resource = Observation-CRP
 
-* entry[Observation][+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"
+* entry[Observation][+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"   // entry[24]
 * entry[Observation][=].resource = Observation-D-Dimer
 
 //================== Specimen ==========================0
@@ -132,6 +132,8 @@ Usage: #inline
 * status = #final
 // * type = $loinc#11502-2 "Laboratory report"
 // * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
+* type = http://loinc.org#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
+* type.text = "Laborbefunde"
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * date = "2023-03-09T14:30:00+01:00"
 * author = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052)
@@ -173,10 +175,11 @@ InstanceOf: ChLabDiagnosticReport
 Description: "Example of DiagnosticReport for sevaral lab results"
 Usage: #inline
 * id = "03464e4f-12f0-4d50-970d-f522b92a3f06"
-* identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
+
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 
 * basedOn[0] = Reference(ServiceRequest-CBC-panel)
 * basedOn[+] = Reference(ServiceRequest-CRP)
@@ -551,8 +554,8 @@ Usage: #inline
 * id = "f30d8df7-474f-401e-b5d4-f690d28d718d"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
-// * category[studyType] = $v2-0074#CH "Chemistry"
-* category[studyType] = $loinc#18720-3 "Coagulation studies (set)"  // lab specialty
+// * category[studyType] = $loinc#18720-3 "Coagulation studies (set)"  // lab specialty
+// * category[specialty] = $sct#708193002 "Coagulation service (qualifier value)"
 * code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)

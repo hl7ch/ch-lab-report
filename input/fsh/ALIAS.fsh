@@ -16,6 +16,7 @@ Alias:   $v3-EntityCode               =   http://terminology.hl7.org/CodeSystem/
 Alias:   $device-categorie            =   http://hl7.org/fhir/device-category
 Alias:   $observation-category =          http://terminology.hl7.org/CodeSystem/observation-category
 Alias:   $labStudyType =                  http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab
+// Alias:   $labStudyType =                  http://fhir.ch/ig/ch-lab-order/ValueSet/ChLabReportStudyTypes
 Alias:   $resource-types             =    http://hl7.org/fhir/fhir-types
 Alias:   $ucum                        =   http://unitsofmeasure.org
 Alias:   $observation-category        =   http://terminology.hl7.org/CodeSystem/observation-category
