@@ -4,7 +4,7 @@ Description: "Example of a Laboratory Report for suspected sepsis"
 Usage: #example
 * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"
 * identifier.system = "http://example.org"
-* identifier.value = "ba91c64b-f30c-4137-a484-34bbba5e8804"
+* identifier.value = "07436e49-5e49-4b72-95cd-13a3921b880f"
 * type = #document
 * timestamp = "2023-03-09T14:30:00+01:00"
 
@@ -206,7 +206,7 @@ Usage: #inline
 // * extension[=].valueReference = Reference(ServiceRequest-D-Dimer)
 
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
+* identifier.value = "urn:uuid:e980231f-0bb0-4a6a-84d2-6bcba4f7cd65"
 * status = #final
 // * type = $loinc#11502-2 "Laboratory report"
 // * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
@@ -271,7 +271,7 @@ Usage: #inline
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/832c053d-e0a0-4467-9f85-4bde09b825af)
 
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
+* identifier.value = "urn:uuid:e980231f-0bb0-4a6a-84d2-6bcba4f7cd65"
 
 * basedOn[+] = Reference(ServiceRequest/21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
 * basedOn[+] = Reference(ServiceRequest/6bb29a10-2313-48b9-96ba-e903d0ae3c2b)  //  ServiceRequest-anaerobe-culture
