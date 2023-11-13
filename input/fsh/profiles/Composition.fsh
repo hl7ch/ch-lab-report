@@ -57,11 +57,11 @@ Description: "This profile constrains the Composition resource for the purpose o
   * ^short = "Variant 2: EU Laboratory Report section with one to many subsections Laboratory Report Item"
   * ^definition = """Variant 2: With this option, this top level section doesn't include NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding sub-sections which contains the Lab Report Data Entry."""
 // * code only $codeableConcept-uv-ips
-  * code from LabStudyTypes (preferred)
+  * code from ChLabReportStudyTypes (preferred)
   * text 0..0
   * entry 0..0
   * insert SectionCommonRules
   * section 1..
     * insert SectionElementsRules
-    * code from LabStudyTypes (preferred)
+    * code from ChLabReportStudyTypes (preferred)
 

@@ -721,6 +721,7 @@ Usage: #inline
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -774,7 +775,8 @@ Usage: #inline
 * id = "9a0233a6-4f0a-4022-9b4c-9a43c83e343e"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#29576-6 "Bacterial susceptibility panel"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -828,6 +830,7 @@ Usage: #inline
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -881,7 +884,8 @@ Usage: #inline
 * id = "020c3f3d-a77b-42fa-a10a-c63ee7a5bd0f"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#29576-6 "Bacterial susceptibility panel"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -935,6 +939,7 @@ Usage: #inline
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -970,7 +975,6 @@ Usage: #inline
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
-
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -988,7 +992,8 @@ Usage: #inline
 * id = "ad7dd57d-69c4-493f-bf4e-b919664757ba"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#29576-6 "Bacterial susceptibility panel"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -1137,9 +1142,10 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "24f1a039-5146-4e51-8c07-dfd94bc7370d"
 * status = #final
-
 * category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#29576-6 "Bacterial susceptibility panel"
+
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -1156,8 +1162,10 @@ Usage: #inline
 * id = "9d3394c2-3b7b-4f88-9358-239adbeadba3"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#29576-6 "Bacterial susceptibility panel"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
+
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
@@ -1174,7 +1182,8 @@ Usage: #inline
 * id = "4679fd4c-4ef3-4b91-b17c-8a97a25472fb"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#29576-6 "Bacterial susceptibility panel"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -1192,7 +1201,8 @@ Usage: #inline
 * id = "6a68a15a-5477-4d01-bfd6-fe7fa7cb97f8"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+* category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18953-0 "Neomycin [Susceptibility]"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -1236,7 +1246,8 @@ Usage: #inline
 * status = #final
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
-* code.text = "Observed Quantity"
+* category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
+* code = $sct#117011000 "Quantitative urine culture (procedure)"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen) "Beat Bunsen"

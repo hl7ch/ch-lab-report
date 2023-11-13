@@ -25,7 +25,7 @@ Description: "This profile constrains the Observation resource for the purpose o
 * category contains laboratory 1..1
 * category[laboratory] = $observation-category#laboratory
 * category contains studyType 0..*
-* category[studyType] from LabStudyTypesEuVs
+* category[studyType] from ChLabReportStudyTypes
 * category contains specialty 0..*
 * category[specialty] from LabSpecialtyEuVs
 
