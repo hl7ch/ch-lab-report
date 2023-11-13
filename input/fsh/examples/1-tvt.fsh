@@ -556,6 +556,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 // * category[studyType] = $v2-0074#CH "Chemistry"
 * category[studyType] = $loinc#18720-3 "Coagulation studies (set)"  // lab specialty
+* category[specialty] = $sct#708193002 "Coagulation service (qualifier value)"
 * code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
 * subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)

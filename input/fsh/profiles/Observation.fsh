@@ -17,7 +17,7 @@ Description: "This profile constrains the Observation resource for the purpose o
   * valueReference 0..1  //1..1
 // * valueReference only Reference(ObservationDefinition)
 
-* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^definition = "A code that classifies the general type of observation being made. In this profile, fixed to \"laboratory\"."
