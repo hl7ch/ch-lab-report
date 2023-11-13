@@ -538,7 +538,7 @@ Usage: #inline
 * id = "a335d2df-6f77-4ae8-bb6e-f7086fd25de0"
 * status = #final
 * category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
+// * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microscopic observation Gram stain Nom (Bld)"  // Display Name
 * code = $loinc#87969-2 "Microscopic observation [Identifier] in Blood by Gram stain"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
