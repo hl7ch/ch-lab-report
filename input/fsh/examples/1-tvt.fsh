@@ -258,7 +258,7 @@ Usage: #inline
 * code.text = "CBC panel Auto (Bld)" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 
 * hasMember = Reference(Observation-WBC)
 * hasMember = Reference(Observation-RBC)
@@ -285,7 +285,7 @@ Usage: #inline
 * code.text = "Hemoglobin and Hematocrit panel (Bld)"
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // * specimen  = Reference(Blood) / better to define it in Member
 * hasMember = Reference(Observation-Hb)
 * hasMember = Reference(Observation-Ht)
@@ -304,7 +304,7 @@ Usage: #inline
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 10.8 'umol/L' "umol/L"
 // * interpretation = $v3-ObservationInterpretation#HH "Critical high"
@@ -329,7 +329,7 @@ Usage: #inline
 * code.text = "WBC Auto (Bld) [#/Vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 
 * valueQuantity = 10 '10*3/uL' "10*3/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -355,7 +355,7 @@ Usage: #inline
 * code.text =  "RBC Auto (Bld) [#/Vol]"  // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 * valueQuantity = 4.58 '10*6/uL' "10*6/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "10*6/uL"
@@ -383,7 +383,7 @@ Usage: #inline
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 10.8 'umol/L' "umol/L"
 // * interpretation = $v3-ObservationInterpretation#HH "Critical high"
@@ -408,7 +408,7 @@ Usage: #inline
 * code.text = "Hematocrit Auto (Bld) [Volume fraction]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 43 '%' "%"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -433,7 +433,7 @@ Usage: #inline
 * code.text = "MCV Auto (RBC) [Entitic vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 85 'fL' "fL"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -458,7 +458,7 @@ Usage: #inline
 * code.text = "MCH Auto (RBC) [Entitic mass]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 30 'pg' "pg"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -484,7 +484,7 @@ Usage: #inline
 * code.text = "MCHC Auto (RBC) [Mass/Vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 34.7 'g/dL' "g/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -509,7 +509,7 @@ Usage: #inline
 * code.text = "Platelets Auto (Bld) [#/Vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 200 '10*3/uL' "10*3/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
