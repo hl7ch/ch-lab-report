@@ -21,30 +21,6 @@ Usage: #example
 * entry[Patient].fullUrl = "urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef"
 * entry[Patient].resource = HansGuggindieluft
 
-//================== serviceRequest ==========================0
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666" // entry[3]
-* entry[ServiceRequest][=].resource = ServiceRequest-CBC-panel
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f"
-* entry[ServiceRequest][=].resource = ServiceRequest-WBC
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:a64d92bf-8ca8-4e12-ae29-624c70ac0e26"
-* entry[ServiceRequest][=].resource = ServiceRequest-RBC
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
-* entry[ServiceRequest][=].resource = ServiceRequest-HGB
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
-* entry[ServiceRequest][=].resource = ServiceRequest-HT
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:6adcf650-19cb-4d58-b27c-3cf52aa32d86"
-* entry[ServiceRequest][=].resource = ServiceRequest-MCV
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:3edb7f4c-e0c8-45c5-aee9-83d326aa61ab"
-* entry[ServiceRequest][=].resource = ServiceRequest-MCH
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:82db46b7-acef-49f4-9456-6e9cbd62a27b"  // entry[10]
-* entry[ServiceRequest][=].resource = ServiceRequest-MCHC
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:bfc054ce-704c-11ee-b962-0242ac120002"
-* entry[ServiceRequest][=].resource = ServiceRequest-Platelet
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
-* entry[ServiceRequest][=].resource = ServiceRequest-CRP
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
-* entry[ServiceRequest][=].resource = ServiceRequest-D-Dimer
-
 //================== Observations CBC, CRP, D-Dimer ==========================0
 * entry[Observation][+].fullUrl = "urn:uuid:0ad0810e-6eb4-11ee-b962-0242ac120002"
 * entry[Observation][=].resource = Observation-CBC-panel
@@ -78,6 +54,30 @@ Usage: #example
 * entry[Specimen][=].resource = Blood-coag
 * entry[Specimen][+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
 * entry[Specimen][=].resource = Serum
+
+//================== serviceRequest ==========================0
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666" // entry[3]
+* entry[ServiceRequest][=].resource = ServiceRequest-CBC-panel
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f"
+* entry[ServiceRequest][=].resource = ServiceRequest-WBC
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:a64d92bf-8ca8-4e12-ae29-624c70ac0e26"
+* entry[ServiceRequest][=].resource = ServiceRequest-RBC
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
+* entry[ServiceRequest][=].resource = ServiceRequest-HGB
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
+* entry[ServiceRequest][=].resource = ServiceRequest-HT
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:6adcf650-19cb-4d58-b27c-3cf52aa32d86"
+* entry[ServiceRequest][=].resource = ServiceRequest-MCV
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:3edb7f4c-e0c8-45c5-aee9-83d326aa61ab"
+* entry[ServiceRequest][=].resource = ServiceRequest-MCH
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:82db46b7-acef-49f4-9456-6e9cbd62a27b"  // entry[10]
+* entry[ServiceRequest][=].resource = ServiceRequest-MCHC
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:bfc054ce-704c-11ee-b962-0242ac120002"
+* entry[ServiceRequest][=].resource = ServiceRequest-Platelet
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c"
+* entry[ServiceRequest][=].resource = ServiceRequest-CRP
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
+* entry[ServiceRequest][=].resource = ServiceRequest-D-Dimer
 
 //=============== practitioner, organization =============================0
 * entry[PractitionerRole][+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"
