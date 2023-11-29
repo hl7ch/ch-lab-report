@@ -134,16 +134,16 @@ Usage: #inline
 // * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
 * type = http://loinc.org#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
 * type.text = "Laborbefunde"
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * date = "2023-03-09T14:30:00+01:00"
-* author = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052)
+* author = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
 * author.display = "Dr. Eva Erlenmeyer"
 * title = "Laboratory Report - 10 March, 2023 14:30"
 * confidentiality = #N
 * attester.mode = #legal
 * attester.time = "2020-12-27T14:30:00+01:00"
-* attester.party = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) // Who attested the report
-* custodian = Reference(Organization/84483dc8-81d3-41cc-8d24-10c241279024)
+* attester.party = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) // Who attested the report
+* custodian = Reference(urn:uuid:84483dc8-81d3-41cc-8d24-10c241279024)
 
 // ╭────────────── Composition.sections ────────────────────────────────────────────────────╮
 // │            sections contain all References of Observations                             │
@@ -168,7 +168,7 @@ Usage: #inline
 * section[lab-subsections].section[=].entry = Reference(Observation-D-Dimer)
 
 // ╭──────────── DiagnosticReport 1-tvt ─────────────────────╮
-// │ Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer │
+// │  Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer │
 // ╰─────────────────────────────────────────────────────────╯
 Instance: DiagnosticReport-1-tvt
 InstanceOf: ChLabDiagnosticReport
@@ -176,7 +176,7 @@ Description: "Example of DiagnosticReport for sevaral lab results"
 Usage: #inline
 * id = "03464e4f-12f0-4d50-970d-f522b92a3f06"
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
 
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
@@ -185,11 +185,12 @@ Usage: #inline
 * basedOn[+] = Reference(ServiceRequest-CRP)
 * basedOn[+] = Reference(ServiceRequest-D-Dimer)
 * status = #final
-// * code = $sct#4241000179101 "Laboratory report (record artifact)"  // in profile
+// * code = * code = $loinc#11502-2 // LABORATORY REPORT.TOTAL  // in profile
+//
 // * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(PractitionerRole/8472931c-fbd0-437b-9ed1-4f66472c78b5)
+* performer = Reference(urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5)
 * performer.display = "Dr. Eva Erlenmeyer"
 
 * specimen[0] = Reference(Blood)
@@ -255,9 +256,9 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.text = "CBC panel Auto (Bld)" // LOINC Display Name
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 
 * hasMember = Reference(Observation-WBC)
 * hasMember = Reference(Observation-RBC)
@@ -282,9 +283,9 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
 * code.text = "Hemoglobin and Hematocrit panel (Bld)"
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // * specimen  = Reference(Blood) / better to define it in Member
 * hasMember = Reference(Observation-Hb)
 * hasMember = Reference(Observation-Ht)
@@ -301,9 +302,9 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 10.8 'umol/L' "umol/L"
 // * interpretation = $v3-ObservationInterpretation#HH "Critical high"
@@ -326,9 +327,9 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
 * code.text = "WBC Auto (Bld) [#/Vol]" // LOINC Display Name
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 
 * valueQuantity = 10 '10*3/uL' "10*3/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -352,9 +353,9 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 * code.text =  "RBC Auto (Bld) [#/Vol]"  // LOINC Display Name
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 * valueQuantity = 4.58 '10*6/uL' "10*6/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "10*6/uL"
@@ -380,9 +381,9 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 10.8 'umol/L' "umol/L"
 // * interpretation = $v3-ObservationInterpretation#HH "Critical high"
@@ -405,9 +406,9 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
 * code.text = "Hematocrit Auto (Bld) [Volume fraction]" // LOINC Display Name
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 43 '%' "%"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -430,9 +431,9 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#787-2 "MCV [Entitic volume] by Automated count"
 * code.text = "MCV Auto (RBC) [Entitic vol]" // LOINC Display Name
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 85 'fL' "fL"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -455,9 +456,9 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#785-6 "MCH [Entitic mass] by Automated count"
 * code.text = "MCH Auto (RBC) [Entitic mass]" // LOINC Display Name
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 30 'pg' "pg"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -481,9 +482,9 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
 * code.text = "MCHC Auto (RBC) [Mass/Vol]" // LOINC Display Name
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 34.7 'g/dL' "g/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -506,9 +507,9 @@ Usage: #inline
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
 * code.text = "Platelets Auto (Bld) [#/Vol]" // LOINC Display Name
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeier"
 // TODO values
 * valueQuantity = 200 '10*3/uL' "10*3/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -534,9 +535,9 @@ Usage: #inline
 * category[studyType] = $loinc#18719-5 "Chemistry studies (set)"  // lab specialty
 * code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma" // subset of loinc
 * code.text = "CRP [Mass/Vol]" // display name
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
@@ -558,9 +559,9 @@ Usage: #inline
 // * category[specialty] = $sct#708193002 "Coagulation service (qualifier value)"
 * code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 1.8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
@@ -581,8 +582,8 @@ Usage: #inline
 * id = "3a98a13d-cf64-40bb-b7a0-87ef45193a74"
 * status = #available
 * type = $sct#119297000 "Blood sample"
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* collection.collector = Reference(Practitioner/e23d6fa1-88bc-497c-a4df-eb3fa60eaa37)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* collection.collector = Reference(urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
 * container.type = $sct#706053007 "General specimen container (physical object)"
@@ -598,10 +599,10 @@ Usage: #inline
 * accessionIdentifier.value = "4e88a-66666-dd888"
 * status = #available
 * type = $sct#119297000 "Blood sample"
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * receivedTime = "2020-08-16T16:40:17Z"
 // * request = Reference(Lab) Why the specimen was collected
-* collection.collector = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
+* collection.collector = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * processing.timePeriod.start = "2015-08-16T06:40:17Z" // usually same time as collectedDateTime
 * processing.timePeriod.end = "2015-08-17T06:40:17Z" // when processing should be terminated
@@ -620,8 +621,8 @@ Usage: #inline
 * accessionIdentifier.value = "4e88a-12345-dd888"
 * status = #available
 * type = $sct#119364003 "Serum specimen (specimen)"
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* collection.collector = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* collection.collector = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
 * collection.fastingStatusCodeableConcept = $v2-0916#F "Patient was fasting prior to the procedure."
@@ -664,8 +665,8 @@ Usage: #inline
 * code.coding[0] = $loinc#58410-2 "CBC panel - Blood by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* requester = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -694,8 +695,8 @@ Usage: #inline
 * code.coding[0] = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* requester = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -724,8 +725,8 @@ Usage: #inline
 * code.coding[0] = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* requester = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -754,8 +755,8 @@ Usage: #inline
 * code.coding[0] = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* requester = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -784,8 +785,8 @@ Usage: #inline
 * code.coding[0] = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* requester = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -814,8 +815,8 @@ Usage: #inline
 * code.coding[0] = $loinc#787-2 "MCV [Entitic volume] by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* requester = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -844,8 +845,8 @@ Usage: #inline
 * code.coding[0] = $loinc#785-6 "MCH [Entitic mass] by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* requester = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -874,8 +875,8 @@ Usage: #inline
 * code.coding[0] = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* requester = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -904,8 +905,8 @@ Usage: #inline
 * code.coding[0] = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* requester = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -939,8 +940,8 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 
 * priority = #urgent
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* requester = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -974,8 +975,8 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 
 * priority = #urgent
-* subject = Reference(Patient/6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* requester = Reference(PractitionerRole/017e8e32-2f3b-4bef-baf1-92c7278a7048)
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+* requester = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
@@ -987,8 +988,8 @@ Title: "Marc Mustermann at Arztpraxis"
 Description: "PractitionerRole, refers to 1-tvt"
 Usage: #inline
 * id = "017e8e32-2f3b-4bef-baf1-92c7278a7048"
-* practitioner = Reference(Practitioner/e23d6fa1-88bc-497c-a4df-eb3fa60eaa37)
-* organization = Reference(Organization/32c4c990-cedb-4999-998d-bab1d55db49f)
+* practitioner = Reference(urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37)
+* organization = Reference(urn:uuid:32c4c990-cedb-4999-998d-bab1d55db49f)
 * code = urn:oid:2.16.840.1.113883.2.9.6.2.7#2211 "Generalist Medical Practitioners"
 
 Instance: MarcMustermann
@@ -1049,8 +1050,8 @@ Title: "Marc Mustermann at Arztpraxis"
 Description: "PractitionerRole, refers to 1-tvt"
 Usage: #inline
 * id = "8472931c-fbd0-437b-9ed1-4f66472c78b5"
-* practitioner = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* organization = Reference(Organization/84483dc8-81d3-41cc-8d24-10c241279024)
+* practitioner = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
+* organization = Reference(urn:uuid:84483dc8-81d3-41cc-8d24-10c241279024)
 * code = urn:oid:2.16.840.1.113883.2.9.6.2.7#3212	 "Medical and Pathology Laboratory Technicians"
 
 Instance: EvaErlenmeyer

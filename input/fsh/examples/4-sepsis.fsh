@@ -212,16 +212,16 @@ Usage: #inline
 // * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
 * type = http://loinc.org#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
 * type.text = "Laborbefunde"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * date = "2023-03-09T14:30:00+01:00"
-* author = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052)
+* author = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
 * author.display = "Dr. Beat Bunsen"
 * title = "Laboratory Report - 10 March, 2023 14:30"
 * confidentiality = #N
 * attester.mode = #legal
 * attester.time = "2020-12-27T14:30:00+01:00"
-* attester.party = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052) // Who attested the report
-* custodian = Reference(Organization/17742f1f-ba4f-423c-b6de-463409f20431)
+* attester.party = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) // Who attested the report
+* custodian = Reference(urn:uuid:17742f1f-ba4f-423c-b6de-463409f20431)
 
 // ╭────────────── Composition.sections ────────────────────────────────────────────────────╮
 // │            sections contain all References of Observations                             │
@@ -268,20 +268,20 @@ Description: "Example of DiagnosticReport for several lab results"
 Usage: #inline
 * id = "1e56bbe9-ee25-45db-a887-987090f89810"
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(Composition/832c053d-e0a0-4467-9f85-4bde09b825af)
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:832c053d-e0a0-4467-9f85-4bde09b825af)
 
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:e980231f-0bb0-4a6a-84d2-6bcba4f7cd65"
 
-* basedOn[+] = Reference(ServiceRequest/21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
-* basedOn[+] = Reference(ServiceRequest/6bb29a10-2313-48b9-96ba-e903d0ae3c2b)  //  ServiceRequest-anaerobe-culture
-* basedOn[+] = Reference(ServiceRequest/a168c88a-f2c1-43d1-9dd7-611a64cd7be8)  //  ServiceRequest-aerobe-culture
-* basedOn[+] = Reference(ServiceRequest/fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)  //  ServiceRequest-urine-culture
+* basedOn[+] = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
+* basedOn[+] = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b)  //  ServiceRequest-anaerobe-culture
+* basedOn[+] = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8)  //  ServiceRequest-aerobe-culture
+* basedOn[+] = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)  //  ServiceRequest-urine-culture
 
 * status = #final
 * code = http://loinc.org#11502-2 "Laboratory report"
 * code.text = "Laborbericht"
-* subject = Reference(KatarinaKeller)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsenLaborGantenbein)
 * performer.display = "Dr. Beat Bunsen"
@@ -378,10 +378,10 @@ Usage: #inline
 * accessionIdentifier.value = "X352356"
 * status = #available
 * type = $sct#122555007 "Venous blood specimen"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * receivedTime = "2023-11-09T07:30:00Z"
-//* request = Reference(ServiceRequest/6bb29a10-2313-48b9-96ba-e903d0ae3c2b)
-* collection.collector = Reference(Practitioner/a7d5a837-288d-4234-923c-c9cb5b6f55a1) // Hans Hauser
+//* request = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b)
+* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1) // Hans Hauser
 * collection.collectedDateTime = "2011-05-30T06:15:00Z"
 * collection.quantity.value = 6
 * collection.quantity.unit = "mL"
@@ -409,10 +409,10 @@ Usage: #inline
 * accessionIdentifier.value = "X352356"
 * status = #available
 * type = $sct#122555007 "Venous blood specimen"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * receivedTime = "2023-11-09T06:45:00Z"
-// * request = Reference(ServiceRequest/6bb29a10-2313-48b9-96ba-e903d0ae3c2b)
-* collection.collector = Reference(Practitioner/a7d5a837-288d-4234-923c-c9cb5b6f55a1)
+// * request = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b)
+* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1)
 * collection.collectedDateTime = "2011-05-30T06:15:00Z"
 * collection.quantity.value = 6
 * collection.quantity.unit = "mL"
@@ -448,10 +448,10 @@ Usage: #inline
 * accessionIdentifier.value = "X352356"
 * status = #available
 * type = $sct#122555007 "Venous blood specimen"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * receivedTime = "2023-11-09T07:30:00Z"
-// * request = Reference(ServiceRequest/a168c88a-f2c1-43d1-9dd7-611a64cd7be8)
-* collection.collector = Reference(Practitioner/a7d5a837-288d-4234-923c-c9cb5b6f55a1)
+// * request = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8)
+* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1)
 * collection.collectedDateTime = "2011-05-30T06:15:00Z"
 * collection.quantity.value = 6
 * collection.quantity.unit = "mL"
@@ -479,10 +479,10 @@ Usage: #inline
 * accessionIdentifier.value = "X352356"
 * status = #available
 * type = $sct#122555007 "Venous blood specimen"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * receivedTime = "2023-11-09T07:30:00Z"
-// * request = Reference(ServiceRequest/a168c88a-f2c1-43d1-9dd7-611a64cd7be8)
-* collection.collector = Reference(Practitioner/a7d5a837-288d-4234-923c-c9cb5b6f55a1)
+// * request = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8)
+* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1)
 * collection.collectedDateTime = "2011-05-30T06:45:00Z"
 * collection.quantity.value = 6
 * collection.quantity.unit = "mL"
@@ -513,10 +513,10 @@ Usage: #inline
 * accessionIdentifier.value = "X352356"
 * status = #available
 * type = $sct#122575003 "Urine specimen (specimen)"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * receivedTime = "2023-11-09T07:30:00Z"
-// * request = Reference(ServiceRequest/fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)
-* collection.collector = Reference(Practitioner/a7d5a837-288d-4234-923c-c9cb5b6f55a1)
+// * request = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)
+* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1)
 * collection.collectedDateTime = "2011-05-30T06:15:00Z"
 * collection.quantity.value = 60
 * collection.quantity.unit = "mL"
@@ -541,7 +541,7 @@ Usage: #inline
 // * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microscopic observation Gram stain Nom (Bld)"  // Display Name
 * code = $loinc#87969-2 "Microscopic observation [Identifier] in Blood by Gram stain"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -561,7 +561,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#72163-9 "Leukocytes [Presence] in Specimen by Gram stain"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen) "Beat Bunsen"
 * valueCodeableConcept = $sct#2667000 "Absent"
@@ -575,7 +575,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen) "Beat Bunsen"
 * valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
@@ -589,7 +589,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Observed Quantity"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen) "Beat Bunsen"
 * valueCodeableConcept = $sct#441614007 "Present + out of +++"
@@ -603,7 +603,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen) "Beat Bunsen"
 * valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
@@ -617,7 +617,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Observed Quantity"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen) "Beat Bunsen"
 // * valueCodeableConcept = $sct#441614007 "Present + out of +++"
@@ -633,7 +633,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen) "Beat Bunsen"
 * valueCodeableConcept = $sct#59206002 "Gram-positive coccus (organism)"
@@ -647,7 +647,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Observed Quantity"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen) "Beat Bunsen"
 // * valueCodeableConcept = $sct#441614007 "Present + out of +++"
@@ -669,7 +669,7 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Bacteria identified Anaer cx Nom (Bld)" // Display Name
 * code = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -689,7 +689,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -706,7 +706,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 // * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -723,7 +723,7 @@ Usage: #inline
 // * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -740,7 +740,7 @@ Usage: #inline
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#18862-3 "Amoxicillin+Clavulanate [Susceptibility]"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -759,7 +759,7 @@ Usage: #inline
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -778,7 +778,7 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -798,7 +798,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -815,7 +815,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -832,7 +832,7 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -849,7 +849,7 @@ Usage: #inline
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -868,7 +868,7 @@ Usage: #inline
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -887,7 +887,7 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -907,7 +907,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -924,7 +924,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -941,7 +941,7 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -958,7 +958,7 @@ Usage: #inline
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -976,7 +976,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -995,7 +995,7 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -1022,7 +1022,7 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Bacteria identified Aer cx Nom (Bld)" // Display Name
 * code = $loinc#17928-3 "Bacteria identified in Blood by Aerobe culture"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -1039,7 +1039,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -1055,7 +1055,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -1071,7 +1071,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -1087,7 +1087,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -1103,7 +1103,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -1119,7 +1119,7 @@ Usage: #inline
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -1147,7 +1147,7 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -1166,7 +1166,7 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
 
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -1185,7 +1185,7 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -1204,7 +1204,7 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18953-0 "Neomycin [Susceptibility]"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen)
 * performer[+].display = "Beat Bunsen"
@@ -1222,7 +1222,7 @@ Usage: #inline
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#19000-9 "Vancomycin [Susceptibility]"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * performer = Reference(BeatBunsen)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer[+].display = "Beat Bunsen"
@@ -1248,7 +1248,7 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $sct#117011000 "Quantitative urine culture (procedure)"
-* subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(BeatBunsen) "Beat Bunsen"
 * valueCodeableConcept = $sct#441614007 "Present + out of +++"
@@ -1398,8 +1398,8 @@ Title: "Beat Bunsen at Labor Gantenbein"
 Description: "PractitionerRole, refers to 1-tvt"
 Usage: #inline
 * id = "10b95d3c-5402-4631-a404-e0d7e74c9a8f"
-* practitioner = Reference(Practitioner/a7d5a837-288d-4234-923c-c9cb5b6f55a1)
-* organization = Reference(Organization/37e198ba-ebae-4438-bf8f-faa42eff82c6)
+* practitioner = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1)
+* organization = Reference(urn:uuid:37e198ba-ebae-4438-bf8f-faa42eff82c6)
 * code = urn:oid:2.16.840.1.113883.2.9.6.2.7#3212	 "Medical and Pathology Laboratory Technicians"
 
 Instance: HansHauser
@@ -1458,8 +1458,8 @@ Title: "Beat Bunsen at Labor Gantenbein"
 Description: "PractitionerRole, refers to 1-tvt"
 Usage: #inline
 * id = "06929c8b-9fb9-43fe-b12c-439fd470be59"
-* practitioner = Reference(Practitioner/12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* organization = Reference(Organization/17742f1f-ba4f-423c-b6de-463409f20431)
+* practitioner = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
+* organization = Reference(urn:uuid:17742f1f-ba4f-423c-b6de-463409f20431)
 * code = urn:oid:2.16.840.1.113883.2.9.6.2.7#3212	 "Medical and Pathology Laboratory Technicians"
 
 Instance: BeatBunsen
