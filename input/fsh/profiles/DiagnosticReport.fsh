@@ -15,7 +15,7 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
   * ^short = "Associated Lab Report Composition"
   * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnoticReport with the Composition documenting this Laboratory Report."
   *  valueReference 1..1
-  *  valueReference only Reference(CompositionLabReportEu)
+  *  valueReference only Reference(ChLabReportComposition)
 
 * basedOn only Reference (ChLabReportServiceRequest)
 
