@@ -156,16 +156,16 @@ Usage: #inline
 * section[lab-subsections].code.text = "Laboratory studies"
 * section[lab-subsections].section[0].title = "Hematology studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#58410-2
-* section[lab-subsections].section[=].entry = Reference(Observation-CBC-panel)
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:0ad0810e-6eb4-11ee-b962-0242ac120002) // Observation-CBC-panel
 // * section[lab-subsections].section[+].title = "Hematology studies (set)"
 // * section[lab-subsections].section[=].code  = $loinc#6690-2
 // * section[lab-subsections].section[=].entry = Reference(Observation-WBC)
 * section[lab-subsections].section[+].title = "Chemistry studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#18719-5
-* section[lab-subsections].section[=].entry = Reference(Observation-CRP)
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c) // Observation-CRP
 * section[lab-subsections].section[+].title = "Coagulation studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#18720-3
-* section[lab-subsections].section[=].entry = Reference(Observation-D-Dimer)
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d) // Observation-D-Dimer
 
 // ╭──────────── DiagnosticReport 1-tvt ─────────────────────╮
 // │  Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer │
@@ -181,9 +181,9 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 
-* basedOn[0] = Reference(ServiceRequest-CBC-panel)
-* basedOn[+] = Reference(ServiceRequest-CRP)
-* basedOn[+] = Reference(ServiceRequest-D-Dimer)
+* basedOn[0] = Reference(urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666)  // ServiceRequest-CBC-panel
+* basedOn[+] = Reference(urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c)  // ServiceRequest-CRP
+* basedOn[+] = Reference(urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14)  // ServiceRequest-D-Dimer
 * status = #final
 // * code = * code = $loinc#11502-2 // LABORATORY REPORT.TOTAL  // in profile
 //
