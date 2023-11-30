@@ -269,53 +269,6 @@ Usage: #inline
 * hasMember = Reference(urn:uuid:735c9244-497a-420d-b006-15a57be365b1) // Observation-MCHC
 * hasMember = Reference(urn:uuid:32a7d6fb-dc8a-4673-8cef-c59c1c5397db) // Observation-Platelet
 
-
-/*
-Instance: Observation-HbHt
-InstanceOf: ChLabObservationResultsLaboratory
-Title: "Observation-HbHt"
-Description: "Example for Hemoblobine and Hemotocrit panel Observation"
-Usage: #inline
-* id = "8903c6a4-6547-437c-8f47-b68cfe959288"
-* status = #final
-* category[laboratory] = $observation-category#laboratory
-// * category[studyType] = $v2-0074#HM "Hematology"
-* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
-* code.text = "Hemoglobin and Hematocrit panel (Bld)"
-* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// * specimen  = Reference(Blood) / better to define it in Member
-* hasMember = Reference(Observation-Hb)
-* hasMember = Reference(Observation-Ht)
-*/
-/*
-Instance: Observation-Hb
-InstanceOf: ChLabObservationResultsLaboratory
-Title: "Observation-Hb"
-Description: "Example for Hemoblobine Observation"
-Usage: #inline
-* id = "93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
-* status = #final
-* category[laboratory] = $observation-category#laboratory
-* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
-* code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
-* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
-* valueQuantity = 10.8 'umol/L' "umol/L"
-// * interpretation = $v3-ObservationInterpretation#HH "Critical high"
-* method = $sct#83561000052101 "Photometry technique (qualifier value)"
-* specimen = Reference(Blood)
-* referenceRange.low.value = 8.7  // women 7.4
-* referenceRange.low.unit = "umol/L"
-* referenceRange.high.value = 11.2    // women 9.9
-* referenceRange.high.unit = "umol/L"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-*/
 Instance: Observation-WBC
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "Leukocytes [#/volume] in Blood by Automated count"  // LOINC Long Common Name
@@ -388,7 +341,7 @@ Usage: #inline
 * valueQuantity = 10.8 'umol/L' "umol/L"
 // * interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#83561000052101 "Photometry technique (qualifier value)"
-* specimen = Reference(Blood)
+* specimen = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74)
 * referenceRange.low.value = 8.7  // women 7.4
 * referenceRange.low.unit = "umol/L"
 * referenceRange.high.value = 11.2    // women 9.9
@@ -542,7 +495,7 @@ Usage: #inline
 * valueQuantity = 8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#83611000052104 "Turbidimetry technique (qualifier value)"
-* specimen = Reference(Serum)
+* specimen = Reference(urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786)
 * device = Reference(TestkitCRP)
 * referenceRange.high.value = 10  // depends on method
 * referenceRange.high.unit = "mg/L"
@@ -566,7 +519,7 @@ Usage: #inline
 * valueQuantity = 1.8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#726449005 "Immunoassay technique (qualifier value)"
-* specimen = Reference(Blood-coag)
+* specimen = Reference(urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8)
 * device = Reference(TestkitD-Dimer)  // Test-Kit
 * referenceRange.high.value = 0.5  // depends on method
 * referenceRange.high.unit = "mg/L"
@@ -642,14 +595,14 @@ Usage: #inline
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 
-* basedOn[0] = Reference(ServiceRequest-WBC)
-* basedOn[+] = Reference(ServiceRequest-RBC)
-* basedOn[+] = Reference(ServiceRequest-HGB)
-* basedOn[+] = Reference(ServiceRequest-HT)
-* basedOn[+] = Reference(ServiceRequest-MCV)
-* basedOn[+] = Reference(ServiceRequest-MCH)
-* basedOn[+] = Reference(ServiceRequest-MCHC)
-* basedOn[+] = Reference(ServiceRequest-Platelet)
+* basedOn[0] = Reference(urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f)  // ServiceRequest-WBC
+* basedOn[+] = Reference(urn:uuid:a64d92bf-8ca8-4e12-ae29-624c70ac0e26)  // ServiceRequest-RBC
+* basedOn[+] = Reference(urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40)  // ServiceRequest-HGB
+* basedOn[+] = Reference(urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944)  // ServiceRequest-HT
+* basedOn[+] = Reference(urn:uuid:6adcf650-19cb-4d58-b27c-3cf52aa32d86)  // ServiceRequest-MCV
+* basedOn[+] = Reference(urn:uuid:3edb7f4c-e0c8-45c5-aee9-83d326aa61ab)  // ServiceRequest-MCH
+* basedOn[+] = Reference(urn:uuid:82db46b7-acef-49f4-9456-6e9cbd62a27b)  // ServiceRequest-MCHC
+* basedOn[+] = Reference(urn:uuid:bfc054ce-704c-11ee-b962-0242ac120002)  // ServiceRequest-Platelet
 
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
@@ -670,7 +623,7 @@ Usage: #inline
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Serum specimen"
+* specimen[0] = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Serum specimen"
 
 Instance: ServiceRequest-WBC
 InstanceOf: ChLabReportServiceRequest
@@ -700,7 +653,7 @@ Usage: #inline
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Blood specimen"
+* specimen[0] = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood specimen"
 
 Instance: ServiceRequest-RBC
 InstanceOf: ChLabReportServiceRequest
@@ -730,7 +683,7 @@ Usage: #inline
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Blood specimen"
+* specimen[0] = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood specimen"
 
 Instance: ServiceRequest-HGB
 InstanceOf: ChLabReportServiceRequest
@@ -760,7 +713,7 @@ Usage: #inline
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Blood specimen"
+* specimen[0] = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood specimen"
 
 Instance: ServiceRequest-HT
 InstanceOf: ChLabReportServiceRequest
@@ -790,7 +743,7 @@ Usage: #inline
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Blood specimen"
+* specimen[0] = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood specimen"
 
 Instance: ServiceRequest-MCV
 InstanceOf: ChLabReportServiceRequest
@@ -820,7 +773,7 @@ Usage: #inline
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Blood specimen"
+* specimen[0] = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood specimen"
 
 Instance: ServiceRequest-MCH
 InstanceOf: ChLabReportServiceRequest
@@ -850,7 +803,7 @@ Usage: #inline
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Blood specimen"
+* specimen[0] = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood specimen"
 
 Instance: ServiceRequest-MCHC
 InstanceOf: ChLabReportServiceRequest
@@ -880,7 +833,7 @@ Usage: #inline
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Blood specimen"
+* specimen[0] = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood specimen"
 
 Instance: ServiceRequest-Platelet
 InstanceOf: ChLabReportServiceRequest
@@ -910,7 +863,7 @@ Usage: #inline
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Blood specimen"
+* specimen[0] = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood specimen"
 
 Instance: ServiceRequest-CRP
 InstanceOf: ChLabReportServiceRequest
@@ -945,7 +898,7 @@ Usage: #inline
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood) "Serum specimen"
+* specimen[0] = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Serum specimen"
 
 Instance: ServiceRequest-D-Dimer
 InstanceOf: ChLabReportServiceRequest
@@ -980,7 +933,7 @@ Usage: #inline
 * reasonCode = $sct#432805000
 * reasonCode.text = "Suspected deep vein thrombosis (situation)"
 //* insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Blood-coag) "Blood Sample Coagulation"
+* specimen[0] = Reference(urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8) "Blood Sample Coagulation"
 
 Instance: MarcMustermannArztpraxis
 InstanceOf: ChLabPractitionerRole
