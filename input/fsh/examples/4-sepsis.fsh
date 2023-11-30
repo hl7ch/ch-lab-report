@@ -211,8 +211,8 @@ Usage: #inline
 
 * status = #final
 // * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
-* type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
-* type.text = "Laboratory Report"
+// * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
+// * type.text = "Laboratory Report"
 
 // Composition Subject must be same as in DiagnosticReport
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -284,8 +284,8 @@ Usage: #inline
 * basedOn[+] = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)  //  ServiceRequest-urine-culture
 
 * status = #final
-* code = $loinc#11502-2 "Laboratory report"
-* code.text = "Laboratory Report"
+// * code = $loinc#11502-2 "Laboratory report"
+// * code.text = "Laboratory Report"
 
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
