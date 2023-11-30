@@ -260,14 +260,14 @@ Usage: #inline
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 
-* hasMember = Reference(Observation-WBC)
-* hasMember = Reference(Observation-RBC)
-* hasMember = Reference(Observation-HGB)
-* hasMember = Reference(Observation-HT)
-* hasMember = Reference(Observation-MCV)
-* hasMember = Reference(Observation-MCH)
-* hasMember = Reference(Observation-MCHC)
-* hasMember = Reference(Observation-Platelet)
+* hasMember = Reference(urn:uuid:5c1ceea1-2751-4ddc-afb5-4c28037ba1be) // Observation-WBC
+* hasMember = Reference(urn:uuid:04ec7690-a1e8-4fdf-be4f-6c92949e948a) // Observation-RBC
+* hasMember = Reference(urn:uuid:2565be07-47a0-4cca-926e-a57e1ac96fb8) // Observation-HGB
+* hasMember = Reference(urn:uuid:c4d64c0a-aafb-4b41-ae0b-a620b2a6c08c) // Observation-HT
+* hasMember = Reference(urn:uuid:857cfa10-66ea-45ae-b236-e6e03af4be3f) // Observation-MCV
+* hasMember = Reference(urn:uuid:3b263f29-44d8-468f-b612-e748442e1845) // Observation-MCH
+* hasMember = Reference(urn:uuid:735c9244-497a-420d-b006-15a57be365b1) // Observation-MCHC
+* hasMember = Reference(urn:uuid:32a7d6fb-dc8a-4673-8cef-c59c1c5397db) // Observation-Platelet
 
 
 /*
