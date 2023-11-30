@@ -193,14 +193,14 @@ Usage: #inline
 * performer = Reference(urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5)
 * performer.display = "Dr. Eva Erlenmeyer"
 
-* specimen[0] = Reference(Blood)
-* specimen[+] = Reference(Blood-coag)
-* specimen[+] = Reference(Serum)
+* specimen[0] = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) // Blood
+* specimen[+] = Reference(urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8) // Blood-coag
+* specimen[+] = Reference(urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786) // Serum
 
-* result[0] = Reference(Observation-CBC-panel)
+* result[0] = Reference(urn:uuid:0ad0810e-6eb4-11ee-b962-0242ac120002) // Observation-CBC-panel
 // no dependent observations!
-* result[+] = Reference(Observation-CRP)
-* result[+] = Reference(Observation-D-Dimer)
+* result[+] = Reference(urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c) // Observation-CRP
+* result[+] = Reference(urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d) // Observation-D-Dimer
 
 // ╭────────────── Patient 1-tvt ────╮
 // │ Scenario deep vein thrombosis   │
