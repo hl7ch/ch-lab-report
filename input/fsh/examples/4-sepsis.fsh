@@ -159,7 +159,7 @@ Usage: #example
 
 //=============== practitioner, organization =============================0
 * entry[PractitionerRole][+].fullUrl = "urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f"
-* entry[PractitionerRole][=].resource = HansHauserKantonsspital
+* entry[PractitionerRole][=].resource = urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f
 
 * entry[Practitioner][+].fullUrl = "urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1"
 * entry[Practitioner][=].resource = HansHauser
@@ -287,11 +287,11 @@ Usage: #inline
 * performer.display = "Dr. Beat Bunsen"
 
 
-* specimen[0] = Reference(Specimen/4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
-* specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
-* specimen[+] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
-* specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
-* specimen[+] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
+* specimen[0] = Reference(urn:uuid:4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
+* specimen[+] = Reference(urn:uuid:4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
+* specimen[+] = Reference(urn:uuid:7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
+* specimen[+] = Reference(urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
+* specimen[+] = Reference(urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
 
 * result[+] = Reference(urn:uuid:a335d2df-6f77-4ae8-bb6e-f7086fd25de0)  // Observation-gram-stain
 * result[+] = Reference(urn:uuid:cea62faa-60b7-442b-b76a-da70ed2d92b1)  // Observation-anaerobe-culture
@@ -1286,15 +1286,15 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
-* requester = Reference(HansHauserKantonsspital)
+* requester = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f)  // urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
 // * insurance = Reference(HealthInsuranceCard)
-* specimen[+] = Reference(Specimen/4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
-* specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
-* specimen[+] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
-* specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
-* specimen[+] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
+* specimen[+] = Reference(urn:uuid:4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
+* specimen[+] = Reference(urn:uuid:4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
+* specimen[+] = Reference(urn:uuid:7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
+* specimen[+] = Reference(urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
+* specimen[+] = Reference(urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
 
 Instance: ServiceRequest-anaerobe-culture
 InstanceOf: ChLabReportServiceRequest
@@ -1320,12 +1320,12 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
-* requester = Reference(HansHauserKantonsspital)
+* requester = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f)
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
 // * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Specimen/4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
-* specimen[+] = Reference(Specimen/4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
+* specimen[0] = Reference(urn:uuid:4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
+* specimen[+] = Reference(urn:uuid:4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
 
 Instance: ServiceRequest-aerobe-culture
 InstanceOf: ChLabReportServiceRequest
@@ -1351,12 +1351,12 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
-* requester = Reference(HansHauserKantonsspital)
+* requester = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f)
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
 // * insurance = Reference(HealthInsuranceCard)
-// * specimen[0] = Reference(Specimen/7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
-// * specimen[+] = Reference(Specimen/b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
+// * specimen[0] = Reference(urn:uuid:7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
+// * specimen[+] = Reference(urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
 
 Instance: ServiceRequest-urine-culture
 InstanceOf: ChLabReportServiceRequest
@@ -1382,17 +1382,17 @@ Usage: #inline
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
-* requester = Reference(HansHauserKantonsspital)
+* requester = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f)
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
 // * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(Specimen/77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
+* specimen[0] = Reference(urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
 
 // ╭────── PractitionerRole 4-sepsis ──────────────────────────────────────╮
 // │ Hans Hauser: CHCorePractitionerRole CHCoreOrganization: Kantonsspital │
 // ╰───────────────────────────────────────────────────────────────────────╯
 
-Instance: HansHauserKantonsspital
+Instance: urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f
 InstanceOf: ChLabPractitionerRole
 Title: "Beat Bunsen at Labor Gantenbein"
 Description: "PractitionerRole, refers to 1-tvt"
