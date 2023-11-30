@@ -159,7 +159,7 @@ Usage: #example
 
 //=============== practitioner, organization =============================0
 * entry[PractitionerRole][+].fullUrl = "urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f"
-* entry[PractitionerRole][=].resource = urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f
+* entry[PractitionerRole][=].resource = HansHauserKantonsspital
 
 * entry[Practitioner][+].fullUrl = "urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1"
 * entry[Practitioner][=].resource = HansHauser
@@ -205,14 +205,18 @@ Usage: #inline
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
 // * extension[=].valueReference = Reference(ServiceRequest-D-Dimer)
 
+// Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:e980231f-0bb0-4a6a-84d2-6bcba4f7cd65"
+* identifier.value = "urn:uuid:07436e49-5e49-4b72-95cd-13a3921b880f"
+
 * status = #final
-// * type = $loinc#11502-2 "Laboratory report"
 // * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
-* type = http://loinc.org#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
-* type.text = "Laborbefunde"
+* type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
+* type.text = "Laboratory Report"
+
+// Composition Subject must be same as in DiagnosticReport
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+
 * date = "2023-03-09T14:30:00+01:00"
 * author = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
 * author.display = "Dr. Beat Bunsen"
@@ -251,12 +255,12 @@ Usage: #inline
 
 * section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
 * section[lab-subsections].section[=].code  = $loinc#29576-6
-* section[lab-subsections].section[=].entry = Reference(Observation-org-2-susc-panel)
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d)
 
 
 * section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
 * section[lab-subsections].section[=].code  = $loinc#29576-6
-* section[lab-subsections].section[=].entry = Reference(Observation-org-2-susc-panel)
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d)
 
 
 // ╭──────────── DiagnosticReport 4-sepsis ──────────────────╮
@@ -270,8 +274,9 @@ Usage: #inline
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:832c053d-e0a0-4467-9f85-4bde09b825af)
 
+// must be same identifier as in Composition
 * identifier.system = "urn:ietf:rfc:3986"
-* identifier.value = "urn:uuid:e980231f-0bb0-4a6a-84d2-6bcba4f7cd65"
+* identifier.value = "urn:uuid:07436e49-5e49-4b72-95cd-13a3921b880f"
 
 * basedOn[+] = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
 * basedOn[+] = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b)  //  ServiceRequest-anaerobe-culture
@@ -279,11 +284,12 @@ Usage: #inline
 * basedOn[+] = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)  //  ServiceRequest-urine-culture
 
 * status = #final
-* code = http://loinc.org#11502-2 "Laboratory report"
-* code.text = "Laborbericht"
+* code = $loinc#11502-2 "Laboratory report"
+* code.text = "Laboratory Report"
+
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(BeatBunsenLaborGantenbein)
+* performer = Reference(urn:uuid:06929c8b-9fb9-43fe-b12c-439fd470be59)
 * performer.display = "Dr. Beat Bunsen"
 
 
@@ -1392,10 +1398,10 @@ Usage: #inline
 // │ Hans Hauser: CHCorePractitionerRole CHCoreOrganization: Kantonsspital │
 // ╰───────────────────────────────────────────────────────────────────────╯
 
-Instance: urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f
+Instance: HansHauserKantonsspital
 InstanceOf: ChLabPractitionerRole
-Title: "Beat Bunsen at Labor Gantenbein"
-Description: "PractitionerRole, refers to 1-tvt"
+Title: "Hans Hauser at Kantonsspital"
+Description: "PractitionerRole, refers to 4-sepsis"
 Usage: #inline
 * id = "10b95d3c-5402-4631-a404-e0d7e74c9a8f"
 * practitioner = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1)

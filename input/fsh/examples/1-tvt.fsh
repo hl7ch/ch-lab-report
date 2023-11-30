@@ -127,14 +127,18 @@ Usage: #inline
 // * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
 // * extension[=].valueReference = Reference(ServiceRequest-D-Dimer)
 
+// Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
+
 * status = #final
-// * type = $loinc#11502-2 "Laboratory report"
 // * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
-* type = http://loinc.org#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
-* type.text = "Laborbefunde"
+* type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
+* type.text = "Laboratory report"
+
+// Composition Subject must be same as in DiagnosticReport
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
+
 * date = "2023-03-09T14:30:00+01:00"
 * author = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
 * author.display = "Dr. Eva Erlenmeyer"
