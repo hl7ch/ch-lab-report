@@ -243,15 +243,15 @@ Usage: #inline
 
 * section[lab-subsections].section[+].title = "Anaerobic culture technique (qualifier value)"
 * section[lab-subsections].section[=].code  = $sct#703751005
-* section[lab-subsections].section[=].entry = Reference(cea62faa-60b7-442b-b76a-da70ed2d92b1) // Observation-anaerobe-culture
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:cea62faa-60b7-442b-b76a-da70ed2d92b1) // Observation-anaerobe-culture
 
 * section[lab-subsections].section[+].title = "Aerobic culture technique (qualifier value)"
 * section[lab-subsections].section[=].code  = $sct#703750006
-* section[lab-subsections].section[=].entry = Reference(3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb) // Observation-aerobe-culture
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb) // Observation-aerobe-culture
 
 * section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
 * section[lab-subsections].section[=].code  = $loinc#29576-6
-* section[lab-subsections].section[=].entry = Reference(531337e5-48ec-4ed7-a81f-d30d16b3d7cb)  // Observation-anaerobe-culture-org-1-susc-panel
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:531337e5-48ec-4ed7-a81f-d30d16b3d7cb)  // Observation-anaerobe-culture-org-1-susc-panel
 
 * section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
 * section[lab-subsections].section[=].code  = $loinc#29576-6
