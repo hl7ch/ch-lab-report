@@ -5,7 +5,7 @@ Title: "CH Lab Document: Laboratory Report"
 Description: "This profile constrains the Bundle resource for the purpose of laboratory test reports in Switzerland."
 * . ^short = "CH Lab Document: Laboratory Report"
 
-// * obeys ch-lab-bdl1
+* obeys ch-lab-bdl1
 
 * entry contains
     DiagnosticReport 1..1 and
