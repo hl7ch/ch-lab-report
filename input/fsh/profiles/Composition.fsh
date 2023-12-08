@@ -7,7 +7,24 @@ Description: "This profile constrains the Composition resource for the purpose o
 * . ^short = "CH Lab Composition: Laboratory Report"
 
 * obeys ch-lab-comp1
-* category = $sct#4241000179101 // Laboratory report (record artifact)
+
+// * category = $sct#4241000179101 // Laboratory report (record artifact)
+* category ..* MS
+* category only CodeableConcept
+* category ^slicing.discriminator[+].type = #value
+* category ^slicing.discriminator[=].path = "coding.code"
+* category ^slicing.discriminator[+].type = #value
+* category ^slicing.discriminator[=].path = "coding.system"
+* category ^slicing.rules = #open
+* category ^slicing.description = "Slice value for category code"
+* category ^slicing.ordered = false
+* category contains CategoryCode 1..1
+* category[CategoryCode].coding.system 1..1
+* category[CategoryCode].coding.system only uri
+* category[CategoryCode].coding.system = $sct (exactly)
+* category[CategoryCode].coding.code 1..1
+* category[CategoryCode].coding.code only code
+* category[CategoryCode].coding.code = #4241000179101
 * type = $loinc#11502-2 //  "Laboratory report"
 
 * subject only Reference(ChLabPatient)

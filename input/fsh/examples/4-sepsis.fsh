@@ -210,7 +210,7 @@ Usage: #inline
 * identifier.value = "urn:uuid:07436e49-5e49-4b72-95cd-13a3921b880f"
 
 * status = #final
-// * category = $sct#4241000179101 // Laboratory report (record artifact), but it is already in the profile !!
+* category = $sct#4241000179101
 // * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
 // * type.text = "Laboratory Report"
 
@@ -284,6 +284,8 @@ Usage: #inline
 * basedOn[+] = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)  //  ServiceRequest-urine-culture
 
 * status = #final
+
+* category = $sct#4241000179101
 // * code = $loinc#11502-2 "Laboratory report"
 // * code.text = "Laboratory Report"
 

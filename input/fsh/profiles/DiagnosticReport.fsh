@@ -32,7 +32,39 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
   * valueReference only Reference(ChLabObservationResultsLaboratory)
 */
 
-* category = $sct#4241000179101 // Laboratory report (record artifact)
+// * category = $sct#4241000179101 // Laboratory report (record artifact)
+* category ..* MS
+* category only CodeableConcept
+* category ^slicing.discriminator[+].type = #value
+* category ^slicing.discriminator[=].path = "coding.code"
+* category ^slicing.discriminator[+].type = #value
+* category ^slicing.discriminator[=].path = "coding.system"
+* category ^slicing.rules = #open
+* category ^slicing.description = "Slice value for category code"
+* category ^slicing.ordered = false
+* category contains CategoryCode 1..1
+* category[CategoryCode].coding.system 1..1
+* category[CategoryCode].coding.system only uri
+* category[CategoryCode].coding.system = $sct (exactly)
+* category[CategoryCode].coding.code 1..1
+* category[CategoryCode].coding.code only code
+* category[CategoryCode].coding.code = #4241000179101
+
+* code.coding ^slicing.discriminator[0].type = #value
+* code.coding ^slicing.discriminator[=].path = "code"
+* code.coding ^slicing.discriminator[+].type = #value
+* code.coding ^slicing.discriminator[=].path = "system"
+* code.coding ^slicing.ordered = false
+* code.coding ^slicing.rules = #open
+* code.coding contains CodeCode 1..1
+* code.coding[CodeCode].system 1..1
+* code.coding[CodeCode].system only uri
+* code.coding[CodeCode].system = "http://loinc.org" (exactly)
+* code.coding[CodeCode].code 1..1
+* code.coding[CodeCode].code only code
+* code.coding[CodeCode].code = #11502-2 (exactly)
+
+
 * code = $loinc#11502-2 // LABORATORY REPORT.TOTAL
 * code ^short = "Laboratory report"
 * subject 1..
