@@ -33,6 +33,7 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 */
 
 // * category = $sct#4241000179101 // Laboratory report (record artifact)
+/*
 * category ..* MS
 * category only CodeableConcept
 * category ^slicing.discriminator[+].type = #value
@@ -49,6 +50,26 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 * category[CategoryCode].coding.code 1..1
 * category[CategoryCode].coding.code only code
 * category[CategoryCode].coding.code = #4241000179101
+*/
+
+* category /* obeys labRpt-category */
+  * ^short = "Report Category"
+  * ^definition = "Specifies the Report Category: usually Laboratory"
+  * ^comment = "DiagnosticReport.category and Composition.category shall be aligned"
+* category only $CodeableConcept-uv-ips
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category ^definition = "A code that classifies this laboratory report."
+* category contains studyType 0..*
+* category[studyType] only $CodeableConcept-uv-ips
+* category[studyType] from LabStudyTypesEuVs
+* category[studyType] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
+* category contains specialty 0..*
+* category[specialty] only $CodeableConcept-uv-ips
+* category[specialty] from LabSpecialtyEuVs
+* category[specialty] ^short = "The way of grouping of the test results into clinically meaningful groups (e.g. liver test; minerals; glucose profiles)"
+
 
 * code.coding ^slicing.discriminator[0].type = #value
 * code.coding ^slicing.discriminator[=].path = "code"
