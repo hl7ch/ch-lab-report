@@ -210,8 +210,8 @@ Usage: #inline
 * identifier.value = "urn:uuid:07436e49-5e49-4b72-95cd-13a3921b880f"
 
 * status = #final
-* category = $sct#4241000179101
-// * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
+* category[specialty] = $sct#408454008 "Clinical microbiology"
+* type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
 // * type.text = "Laboratory Report"
 
 // Composition Subject must be same as in DiagnosticReport
@@ -285,8 +285,8 @@ Usage: #inline
 
 * status = #final
 
-* category = $sct#4241000179101
-// * code = $loinc#11502-2 "Laboratory report"
+* category[specialty] = $sct#408454008 "Clinical microbiology"
+* code = $loinc#11502-2 "Laboratory report"
 // * code.text = "Laboratory Report"
 
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -545,7 +545,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "a335d2df-6f77-4ae8-bb6e-f7086fd25de0"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 // * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microscopic observation Gram stain Nom (Bld)"  // Display Name
 * code = $loinc#87969-2 "Microscopic observation [Identifier] in Blood by Gram stain"
@@ -558,15 +558,15 @@ Usage: #inline
 * hasMember[+] = Reference(urn:uuid:ae61519b-b7b4-4bfc-a7a9-f272130a2300) // Observation-org-2 -> Escherichia coli
 * hasMember[+] = Reference(urn:uuid:e6ce8504-dadb-49c9-a997-a8ed4c7cba24) // Observation-org-3 -> Streptococcus mitis
 
-// * category[laboratory] = $observation-category#laboratory
-// * category[studyType] = $loinc#18769-0 "Microbial susceptibility tests Set"
+* category[specialty] = $sct#408454008 "Clinical microbiology"
+* category[studyType] = $loinc#18769-0 "Microbial susceptibility tests Set"
 
 Instance: Observation-wbc
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "c0393c7c-bc8a-47d2-a1a9-d4e1f87c6449"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#72163-9 "Leukocytes [Presence] in Specimen by Gram stain"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -580,7 +580,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "20e798b7-ef0d-4d22-9099-35219d264dac"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -594,7 +594,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "cd376843-9c66-4e63-b403-9299bd6c4fc2"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Observed Quantity"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -608,7 +608,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "ae61519b-b7b4-4bfc-a7a9-f272130a2300"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -622,7 +622,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "e6ce8504-dadb-49c9-a997-a8ed4c7cba24"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Observed Quantity"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -638,7 +638,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "a07e93cc-5908-4ed1-9678-afc61ef9fd9e"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -652,7 +652,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "b564768f-937f-4132-a2eb-91efcf59b952"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Observed Quantity"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -673,7 +673,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "cea62faa-60b7-442b-b76a-da70ed2d92b1"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Bacteria identified Anaer cx Nom (Bld)" // Display Name
 * code = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
@@ -694,7 +694,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "f89631cb-e973-4ba0-9f48-29b9472b9363"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -711,7 +711,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "17a2d960-c34a-4276-be4a-e1e679fcf415"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 // * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -727,7 +727,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "3f40981d-f233-4315-b5c2-d6092d29ea95"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 // * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
@@ -744,7 +744,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "af017871-32df-4823-972c-daa256db7eb0"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#18862-3 "Amoxicillin+Clavulanate [Susceptibility]"
@@ -763,7 +763,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "5aa9b3c0-1057-48c2-ac73-b682fd8b9107"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
@@ -782,7 +782,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "9a0233a6-4f0a-4022-9b4c-9a43c83e343e"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
@@ -803,7 +803,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "5c774433-62ad-4d21-b230-6de2d138a02d"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -820,7 +820,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "a4191434-87f5-4455-a3fd-e857fea50ea5"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -836,7 +836,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "531337e5-48ec-4ed7-a81f-d30d16b3d7cb"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
@@ -853,7 +853,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "4f24af8e-00ae-417e-a87c-1c9a012b5e03"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
@@ -872,7 +872,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "1f94a3ab-1c83-4ac5-afec-75fabdf79da4"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
@@ -891,7 +891,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "020c3f3d-a77b-42fa-a10a-c63ee7a5bd0f"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
@@ -912,7 +912,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "296e1564-39d6-497b-9b40-e60f884dd5e4"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -929,7 +929,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "8c885526-b6ed-4f99-bcc1-d294d79e0c7c"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -945,7 +945,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "8c8b2f58-4cc1-4c21-8a92-e65ce31e60b1"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
@@ -962,7 +962,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "6dbb348d-3ce5-451a-b7db-77c2e4d27bb3"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
@@ -981,7 +981,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "eda9070d-cd59-45b3-a1fc-b79cc479c562"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -999,7 +999,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "ad7dd57d-69c4-493f-bf4e-b919664757ba"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
@@ -1026,7 +1026,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Bacteria identified Aer cx Nom (Bld)" // Display Name
 * code = $loinc#17928-3 "Bacteria identified in Blood by Aerobe culture"
@@ -1044,7 +1044,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "8b07a6b9-fefd-4ee5-87e1-04cdc4a15327"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -1060,7 +1060,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "f251d8b4-54fb-4060-89fe-f17e54874124"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -1076,7 +1076,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "dc20d7a8-a2ec-4291-b70e-b3049ea05cf3"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -1092,7 +1092,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "e548aa0e-1662-4fda-838a-aa7d169ae44f"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -1108,7 +1108,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "230f9ed4-0ab0-456e-9161-f1c290e24c92"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -1124,7 +1124,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "1c453ab3-8e39-4530-a581-d3f87e1459fc"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -1150,7 +1150,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "24f1a039-5146-4e51-8c07-dfd94bc7370d"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
@@ -1169,7 +1169,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "9d3394c2-3b7b-4f88-9358-239adbeadba3"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 // * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
@@ -1189,7 +1189,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "4679fd4c-4ef3-4b91-b17c-8a97a25472fb"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
@@ -1208,7 +1208,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "6a68a15a-5477-4d01-bfd6-fe7fa7cb97f8"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#18953-0 "Neomycin [Susceptibility]"
@@ -1226,7 +1226,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "28a7f5b7-7ba4-4caf-ac43-80326dcf2cfb"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 // * category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
 
 * code = $loinc#19000-9 "Vancomycin [Susceptibility]"
@@ -1252,7 +1252,7 @@ InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "0c1b30c6-9a41-4c59-a403-531654214754"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $sct#117011000 "Quantitative urine culture (procedure)"

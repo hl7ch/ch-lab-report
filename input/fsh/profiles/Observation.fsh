@@ -17,6 +17,7 @@ Description: "This profile constrains the Observation resource for the purpose o
   * valueReference 0..1  //1..1
 // * valueReference only Reference(ObservationDefinition)
 
+* category only $CodeableConcept-uv-ips
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
@@ -25,9 +26,14 @@ Description: "This profile constrains the Observation resource for the purpose o
 * category contains laboratory 1..1
 * category[laboratory] = $observation-category#laboratory
 * category contains studyType 0..*
-* category[studyType] from http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab
+* category[studyType] only $CodeableConcept-uv-ips
+* category[studyType] from LabStudyTypesEuVs
+* category[studyType] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
 * category contains specialty 0..*
-* category[specialty] from http://hl7.eu/fhir/laboratory/ValueSet/lab-specialty-eu-lab
+* category[specialty] only $CodeableConcept-uv-ips
+* category[specialty] from LabSpecialtyEuVs
+* category[specialty] ^short = "The way of grouping of the test results into clinically meaningful groups (e.g. liver test; minerals; glucose profiles)"
+
 
 * subject only Reference(ChLabPatient)
 * performer only Reference(ChLabPractitionerRole or ChLabPractitioner or CHCoreOrganization)

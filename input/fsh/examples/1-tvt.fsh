@@ -256,7 +256,8 @@ Description: "This panel is the traditional hemogram plus platelet count which m
 Usage: #inline
 * id = "0ad0810e-6eb4-11ee-b962-0242ac120002"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+
+* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.text = "CBC panel Auto (Bld)" // LOINC Display Name
@@ -280,7 +281,8 @@ Description: "Leukocytes or white blood cells (WBCs) are immune cells that fight
 Usage: #inline
 * id = "5c1ceea1-2751-4ddc-afb5-4c28037ba1be"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+
+* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
 * code.text = "WBC Auto (Bld) [#/Vol]" // LOINC Display Name
@@ -306,7 +308,8 @@ Description: "Erythrocytes or red blood cells (RBCs) are the cells in the circul
 Usage: #inline
 * id = "04ec7690-a1e8-4fdf-be4f-6c92949e948a"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+
+* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 * code.text =  "RBC Auto (Bld) [#/Vol]"  // LOINC Display Name
@@ -334,7 +337,7 @@ Description: "This is the the code included in the CBC auto. It is NOT obtained 
 Usage: #inline
 * id = "2565be07-47a0-4cca-926e-a57e1ac96fb8"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
@@ -359,7 +362,8 @@ Description: "The volume of packed red blood cells in a blood sample. The volume
 Usage: #inline
 * id = "c4d64c0a-aafb-4b41-ae0b-a620b2a6c08c"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+
+* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
 * code.text = "Hematocrit Auto (Bld) [Volume fraction]" // LOINC Display Name
@@ -384,7 +388,8 @@ Description: "The volume of packed red blood cells in a blood sample. The volume
 Usage: #inline
 * id = "857cfa10-66ea-45ae-b236-e6e03af4be3f"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+
+* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#787-2 "MCV [Entitic volume] by Automated count"
 * code.text = "MCV Auto (RBC) [Entitic vol]" // LOINC Display Name
@@ -409,7 +414,8 @@ Description: "The mean corpuscular hemoglobin, or 'mean cell hemoglobin' (MCH), 
 Usage: #inline
 * id = "3b263f29-44d8-468f-b612-e748442e1845"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+
+* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#785-6 "MCH [Entitic mass] by Automated count"
 * code.text = "MCH Auto (RBC) [Entitic mass]" // LOINC Display Name
@@ -435,7 +441,8 @@ Description: "The mean corpuscular hemoglobin concentration, or MCHC, is a measu
 Usage: #inline
 * id = "735c9244-497a-420d-b006-15a57be365b1"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+
+* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
 * code.text = "MCHC Auto (RBC) [Mass/Vol]" // LOINC Display Name
@@ -460,7 +467,8 @@ Description: "Platelets are miniature fragments of cytoplasm that break off of m
 Usage: #inline
 * id = "32a7d6fb-dc8a-4673-8cef-c59c1c5397db"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
+
+* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
 * code.text = "Platelets Auto (Bld) [#/Vol]" // LOINC Display Name
@@ -487,9 +495,11 @@ Description: "Example for CRP Observation"
 Usage: #inline
 * id = "c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
-// * category[studyType] = $v2-0074#CH "Chemistry"
-* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"  // lab specialty
+
+* category[specialty] = $sct#394596001
+* category[specialty].text = "Chemical pathology"
+* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
+* category[studyType].text = "Chemistry studies (set)"
 * code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma" // subset of loinc
 * code.text = "CRP [Mass/Vol]" // display name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
@@ -511,9 +521,9 @@ Description: "Example for D-Dimer Observation"
 Usage: #inline
 * id = "f30d8df7-474f-401e-b5d4-f690d28d718d"
 * status = #final
-* category[laboratory] = $observation-category#laboratory
-// * category[studyType] = $loinc#18720-3 "Coagulation studies (set)"  // lab specialty
-// * category[specialty] = $sct#708193002 "Coagulation service (qualifier value)"
+
+* category[specialty] = $sct#708193002 "Coagulation service (qualifier value)"
+* category[studyType] = $loinc#18720-3 "Coagulation studies (set)" 
 * code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
