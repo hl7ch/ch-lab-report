@@ -132,7 +132,7 @@ Usage: #inline
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 
 * status = #final
-* category = $sct#4241000179101
+// * category = $sct#4241000179101
 * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
 * type.text = "Laboratory report"
 
@@ -191,7 +191,7 @@ Usage: #inline
 * status = #final
 // * code = * code = $loinc#11502-2 // LABORATORY REPORT.TOTAL  // in profile
 //
-* category = $sct#4241000179101
+// * category = $sct#4241000179101
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5)
