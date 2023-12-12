@@ -7,8 +7,9 @@ Description: "This profile constrains the Composition resource for the purpose o
 * . ^short = "CH Lab Composition: Laboratory Report"
 
 * obeys ch-lab-comp1
-* category = $sct#4241000179101 // Laboratory report (record artifact)
-* type = $loinc#11502-2 //  "Laboratory report"
+
+// * category = $sct#4241000179101 // Laboratory report (record artifact)
+* insert ReportCategoryRule
 
 * subject only Reference(ChLabPatient)
 * author only Reference(ChLabPractitionerRole or ChLabPractitioner or CHCoreOrganization)
@@ -59,11 +60,11 @@ Description: "This profile constrains the Composition resource for the purpose o
   * ^short = "Variant 2: EU Laboratory Report section with one to many subsections Laboratory Report Item"
   * ^definition = """Variant 2: With this option, this top level section doesn't include NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding sub-sections which contains the Lab Report Data Entry."""
 // * code only $codeableConcept-uv-ips
-  * code from ChLabReportStudyTypes (preferred)
+  * code from LabStudyTypesEuVs (preferred)
   * text 0..0
   * entry 0..0
   * insert SectionCommonRules
   * section 1..
     * insert SectionElementsRules
-    * code from ChLabReportStudyTypes (preferred)
+    * code from LabStudyTypesEuVs (preferred)
 
