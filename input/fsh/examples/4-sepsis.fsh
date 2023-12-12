@@ -277,7 +277,6 @@ Usage: #inline
 * basedOn[+] = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)  //  ServiceRequest-urine-culture
 
 * status = #final
-
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#11502-2 "Laboratory report"
 // * code.text = "Laboratory Report"

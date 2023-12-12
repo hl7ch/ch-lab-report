@@ -132,7 +132,7 @@ Usage: #inline
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 
 * status = #final
-// * category = $sct#4241000179101
+* category[specialty] = $sct#394915009 "General pathology (specialty) (qualifier value)"
 * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
 * type.text = "Laboratory report"
 
@@ -182,16 +182,18 @@ Usage: #inline
 * extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:3dd8d097-67d0-4e39-aa68-5ab6fc13169c)
 
+// must be same identifier as in Composition
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
 
 * basedOn[0] = Reference(urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666)  // ServiceRequest-CBC-panel
 * basedOn[+] = Reference(urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c)  // ServiceRequest-CRP
 * basedOn[+] = Reference(urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14)  // ServiceRequest-D-Dimer
+
 * status = #final
-// * code = * code = $loinc#11502-2 // LABORATORY REPORT.TOTAL  // in profile
-//
-// * category = $sct#4241000179101
+* category[specialty] = $sct#394915009 "General pathology (specialty) (qualifier value)"
+* code = $loinc#11502-2 "Laboratory report"
+
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(urn:uuid:8472931c-fbd0-437b-9ed1-4f66472c78b5)
