@@ -279,7 +279,6 @@ Usage: #inline
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * code = $loinc#11502-2 "Laboratory report"
-// * code.text = "Laboratory Report"
 
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -717,7 +716,7 @@ Usage: #inline
 * id = "3f40981d-f233-4315-b5c2-d6092d29ea95"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "Microbial susceptibility tests Set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -733,7 +732,7 @@ Usage: #inline
 * id = "af017871-32df-4823-972c-daa256db7eb0"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18862-3 "Amoxicillin+Clavulanate [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -751,7 +750,7 @@ Usage: #inline
 * id = "5aa9b3c0-1057-48c2-ac73-b682fd8b9107"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -769,7 +768,7 @@ Usage: #inline
 * id = "9a0233a6-4f0a-4022-9b4c-9a43c83e343e"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "Microbial susceptibility tests Set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -822,7 +821,7 @@ Usage: #inline
 * id = "531337e5-48ec-4ed7-a81f-d30d16b3d7cb"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "Microbial susceptibility tests Set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -838,7 +837,7 @@ Usage: #inline
 * id = "4f24af8e-00ae-417e-a87c-1c9a012b5e03"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -856,7 +855,7 @@ Usage: #inline
 * id = "1f94a3ab-1c83-4ac5-afec-75fabdf79da4"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -874,7 +873,7 @@ Usage: #inline
 * id = "020c3f3d-a77b-42fa-a10a-c63ee7a5bd0f"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -927,7 +926,7 @@ Usage: #inline
 * id = "8c8b2f58-4cc1-4c21-8a92-e65ce31e60b1"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -943,7 +942,7 @@ Usage: #inline
 * id = "6dbb348d-3ce5-451a-b7db-77c2e4d27bb3"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -961,7 +960,7 @@ Usage: #inline
 * id = "eda9070d-cd59-45b3-a1fc-b79cc479c562"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -979,7 +978,7 @@ Usage: #inline
 * id = "ad7dd57d-69c4-493f-bf4e-b919664757ba"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -1146,7 +1145,7 @@ Usage: #inline
 * id = "9d3394c2-3b7b-4f88-9358-239adbeadba3"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[studyType].text = "Mikrobielle Empfindlichkeits-Untersuchungen:Empfindlichkeit (Mikroorganismen):Zeitpunkt:^Patient:Set:"
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -1165,7 +1164,7 @@ Usage: #inline
 * id = "4679fd4c-4ef3-4b91-b17c-8a97a25472fb"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[studyType].text = "Mikrobielle Empfindlichkeits-Untersuchungen:Empfindlichkeit (Mikroorganismen):Zeitpunkt:^Patient:Set:"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
@@ -1184,7 +1183,7 @@ Usage: #inline
 * id = "6a68a15a-5477-4d01-bfd6-fe7fa7cb97f8"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "Microbial susceptibility tests Set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18953-0 "Neomycin [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
@@ -1201,7 +1200,7 @@ Usage: #inline
 * id = "28a7f5b7-7ba4-4caf-ac43-80326dcf2cfb"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
-* category[studyType] = $loinc#18769-0 "microbial susceptibility tests set"
+* category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#19000-9 "Vancomycin [Susceptibility]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)

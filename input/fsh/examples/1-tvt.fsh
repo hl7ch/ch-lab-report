@@ -34,9 +34,9 @@ Usage: #example
 * entry[Observation][=].resource = Observation-HT
 * entry[Observation][+].fullUrl = "urn:uuid:857cfa10-66ea-45ae-b236-e6e03af4be3f"
 * entry[Observation][=].resource = Observation-MCV
-* entry[Observation][+].fullUrl = "urn:uuid:3b263f29-44d8-468f-b612-e748442e1845" // entry[20]
+* entry[Observation][+].fullUrl = "urn:uuid:3b263f29-44d8-468f-b612-e748442e1845"
 * entry[Observation][=].resource = Observation-MCH
-* entry[Observation][+].fullUrl = "urn:uuid:735c9244-497a-420d-b006-15a57be365b1"
+* entry[Observation][+].fullUrl = "urn:uuid:735c9244-497a-420d-b006-15a57be365b1" // entry[10]
 * entry[Observation][=].resource = Observation-MCHC
 * entry[Observation][+].fullUrl = "urn:uuid:32a7d6fb-dc8a-4673-8cef-c59c1c5397db"
 * entry[Observation][=].resource = Observation-Platelet
@@ -44,7 +44,7 @@ Usage: #example
 * entry[Observation][+].fullUrl = "urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c"
 * entry[Observation][=].resource = Observation-CRP
 
-* entry[Observation][+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"   // entry[24]
+* entry[Observation][+].fullUrl = "urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d"
 * entry[Observation][=].resource = Observation-D-Dimer
 
 //================== Specimen ==========================0
@@ -56,13 +56,13 @@ Usage: #example
 * entry[Specimen][=].resource = Serum
 
 //================== serviceRequest ==========================0
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666" // entry[3]
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"
 * entry[ServiceRequest][=].resource = ServiceRequest-CBC-panel
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f"
 * entry[ServiceRequest][=].resource = ServiceRequest-WBC
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:a64d92bf-8ca8-4e12-ae29-624c70ac0e26"
 * entry[ServiceRequest][=].resource = ServiceRequest-RBC
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"   // entry[24]
 * entry[ServiceRequest][=].resource = ServiceRequest-HGB
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
 * entry[ServiceRequest][=].resource = ServiceRequest-HT
@@ -524,8 +524,8 @@ Usage: #inline
 * id = "f30d8df7-474f-401e-b5d4-f690d28d718d"
 * status = #final
 
-* category[specialty] = $sct#708193002 "Coagulation service (qualifier value)"
-* category[studyType] = $loinc#18720-3 "Coagulation studies (set)" 
+* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)" // since Coagulation studies are not in the VS
 * code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
