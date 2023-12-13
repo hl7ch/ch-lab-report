@@ -6,7 +6,7 @@ Description: "This profile constrains the ServiceRequest resource for the purpos
 * . ^short = "CH Lab ServiceRequest: Laboratory Order"
 
 * obeys ch-lab-sr1 and code-or-basedOn-required
-* category = $sct#108252007 // Laboratory procedure (procedure)
+// * category = $sct#108252007 // Laboratory procedure (procedure)
 * subject only Reference(ChLabPatient)
 * specimen only Reference(ChLabReportSpecimen)
 
