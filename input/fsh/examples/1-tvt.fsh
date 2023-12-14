@@ -55,14 +55,20 @@ Usage: #example
 * entry[Specimen][+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
 * entry[Specimen][=].resource = Serum
 
+//================== Device/TestKit ==========================0
+* entry[Device][+].fullUrl = "urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794"
+* entry[Device][=].resource = TestkitCRP
+* entry[Device][+].fullUrl = "urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066"
+* entry[Device][=].resource = TestkitD-Dimer
+
 //================== serviceRequest ==========================0
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"
 * entry[ServiceRequest][=].resource = ServiceRequest-CBC-panel
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f"
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f"   // entry[20]
 * entry[ServiceRequest][=].resource = ServiceRequest-WBC
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:a64d92bf-8ca8-4e12-ae29-624c70ac0e26"
 * entry[ServiceRequest][=].resource = ServiceRequest-RBC
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"   // entry[24]
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"   // entry[22]
 * entry[ServiceRequest][=].resource = ServiceRequest-HGB
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
 * entry[ServiceRequest][=].resource = ServiceRequest-HT
@@ -70,7 +76,7 @@ Usage: #example
 * entry[ServiceRequest][=].resource = ServiceRequest-MCV
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:3edb7f4c-e0c8-45c5-aee9-83d326aa61ab"
 * entry[ServiceRequest][=].resource = ServiceRequest-MCH
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:82db46b7-acef-49f4-9456-6e9cbd62a27b"  // entry[10]
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:82db46b7-acef-49f4-9456-6e9cbd62a27b"  // entry[26]
 * entry[ServiceRequest][=].resource = ServiceRequest-MCHC
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:bfc054ce-704c-11ee-b962-0242ac120002"
 * entry[ServiceRequest][=].resource = ServiceRequest-Platelet
@@ -80,7 +86,7 @@ Usage: #example
 * entry[ServiceRequest][=].resource = ServiceRequest-D-Dimer
 
 //=============== practitioner, organization =============================0
-* entry[PractitionerRole][+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"
+* entry[PractitionerRole][+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"   // entry[30]
 * entry[PractitionerRole][=].resource = MarcMustermannArztpraxis
 
 * entry[Practitioner][+].fullUrl = "urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37"
@@ -512,7 +518,7 @@ Usage: #inline
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#83611000052104 "Turbidimetry technique (qualifier value)"
 * specimen = Reference(urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786)
-* device = Reference(TestkitCRP)
+* device = Reference(urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794)    //  TestkitCRP
 * referenceRange.high.value = 10  // depends on method
 * referenceRange.high.unit = "mg/L"
 
@@ -536,7 +542,7 @@ Usage: #inline
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#726449005 "Immunoassay technique (qualifier value)"
 * specimen = Reference(urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8)
-* device = Reference(TestkitD-Dimer)  // Test-Kit
+* device = Reference(urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066)  // TestkitD-Dimer
 * referenceRange.high.value = 0.5  // depends on method
 * referenceRange.high.unit = "mg/L"
 
