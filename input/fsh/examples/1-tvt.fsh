@@ -120,7 +120,7 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report         │
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
-
+// * basedOn-order-or-requistition.value as Reference = Reference(urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666)
 // * extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-CBC-panel)
 // * extension[0].url = "http://fhir.ch/ig/ch-lab-report/StructureDefinition/composition-basedOn-order-or-requisition"
 // * extension[=].valueReference = Reference(urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666)   // ServiceRequest-CBC-panel
@@ -1001,8 +1001,8 @@ Title: "Arztpraxis"
 Description: "Practice, refers to 1-tvt, 2-pertussis and 3-gyn"
 Usage: #inline
 * id = "32c4c990-cedb-4999-998d-bab1d55db49f"
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000235503"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000235503"
 * name = "Arztpraxis Messen"
 * telecom[0].system = #phone
 * telecom[=].value = "+41555545566"
@@ -1035,10 +1035,10 @@ Title: "Eva Erlenmeyer"
 Description: "Specialist for Laboratory Medicine, works in Labor Pipette"
 Usage: #inline
 * id = "12328339-f7d6-4bb6-80e4-89fd03ce5052"
-* identifier[0].system = "urn:oid:2.51.1.3" // GLN
-* identifier[=].value = "7601000050717"
-* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[=].value = "A123315"
+* identifier[GLN].system = "urn:oid:2.51.1.3" // GLN
+* identifier[GLN].value = "7601000050717"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+* identifier[ZSR].value = "A123315"
 * name.use = #official
 * name.family = "Erlenmeyer"
 * name.given = "Eva"

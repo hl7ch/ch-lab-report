@@ -1387,10 +1387,10 @@ Title: "Hans Hauser"
 Description: "Practitioner, Senior Physician at Kantonsspital, refers to 4-sepsis"
 Usage: #inline
 * id = "a7d5a837-288d-4234-923c-c9cb5b6f55a1"
-* identifier[0].system = "urn:oid:2.51.1.3"
-* identifier[=].value = "7601000050700"
-* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[=].value = "A123313"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000050700"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[ZSR].value = "A123313"
 * name.use = #official
 * name.family = "Hauser"
 * name.given = "Hans"
@@ -1410,8 +1410,8 @@ Title: "Kantonsspital"
 Description: "Example for Hospital"
 Usage: #inline
 * id = "37e198ba-ebae-4438-bf8f-faa42eff82c6"
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000235503"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000235503"
 * name = "Kantonsspital Zug"
 * telecom[0].system = #phone
 * telecom[=].value = "+41 45 334 55 66"
@@ -1447,10 +1447,10 @@ Title: "Beat Bunsen"
 Description: "Specialist for Laboratory Medicine, works in Labor Pipette"
 Usage: #inline
 * id = "12328339-f7d6-4bb6-80e4-89fd03ce5052"
-* identifier[0].system = "urn:oid:2.51.1.3" // GLN
-* identifier[=].value = "7601000050717"
-* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[=].value = "A123316"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000050717"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[ZSR].value = "A123316"
 * name.use = #official
 * name.family = "Bunsen"
 * name.given = "Beat"
