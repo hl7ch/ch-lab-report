@@ -10,7 +10,6 @@ The DiagnosticReport status decides the Use Case
 
 {% include img.html img="DiagnosticReport_state.png" caption="Fig. 2: DiagnosticReport state machine diagram" width="50%" %}
 
-
 #### Laboratory Report Scenarios
 
 ##### Complete Laboratory Report

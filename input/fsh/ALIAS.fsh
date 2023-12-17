@@ -29,6 +29,7 @@ Alias:   $obs-interpretation            = http://terminology.hl7.org/CodeSystem/
 
 
 // Extensions
+Alias:   $information-recipient         = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias:   $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
 Alias:   $observation-instantiates-r5  =  http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.instantiates[x]
 
