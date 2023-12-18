@@ -6,9 +6,9 @@
 
 ### Use Cases from HL7 Europe Laboratory Report
 
-The DiagnosticReport status decides the Use Case
+The DiagnosticReport status decides the Use Case. [ValueSet URL](http://hl7.org/fhir/diagnostic-report-status)
 
-{% include img.html img="DiagnosticReport_state.png" caption="Fig. 2: DiagnosticReport state machine diagram" width="50%" %}
+{% include img.html img="DiagnosticReport_state.png" caption="Fig. 2: DiagnosticReport state machine diagram" width="100%" %}
 
 #### Laboratory Report Scenarios
 
@@ -28,3 +28,15 @@ This usually occurs when some of the results are known to be produced later, but
 In such cases:
 
 * the report status should be set to _“preliminary”_ or _“partial”_
+
+##### Appended Laboratory Report
+
+As described in the example 1-tvt the practitioner Marc Mustermann may request further request for coagulation tests from the same sample of citrate tubes after having received the confirmation of a deep vein thrombose. After the fullfillment of these request the laboratory may send an additional laboratory report. Subsequent to being final, the report will be modified by adding new content. The existing content is unchanged.
+
+* In this case the Laboratory Report status is set to _"appended"_.
+
+##### Cancelled Laboratory Report
+
+The report is unavailable because the measurement was not started or not completed (also sometimes called "aborted").
+
+* In this case the Laboratory Report status is set to _"cancelled"_.
