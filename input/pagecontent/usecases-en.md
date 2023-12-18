@@ -8,7 +8,7 @@
 
 The DiagnosticReport status decides the Use Case. [ValueSet URL](http://hl7.org/fhir/diagnostic-report-status)
 
-{% include img.html img="DiagnosticReport_state.png" caption="Fig. 2: DiagnosticReport state machine diagram" width="100%" %}
+{% include img.html img="DiagnosticReport_state.png" caption="Fig. 2: DiagnosticReport state machine diagram" width="60%" %}
 
 #### Laboratory Report Scenarios
 
