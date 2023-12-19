@@ -55,14 +55,20 @@ Usage: #example
 * entry[Specimen][+].fullUrl = "urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786"
 * entry[Specimen][=].resource = Serum
 
+//================== Device/TestKit ==========================0
+* entry[Device][+].fullUrl = "urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794"
+* entry[Device][=].resource = TestkitCRP
+* entry[Device][+].fullUrl = "urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066"
+* entry[Device][=].resource = TestkitD-Dimer
+
 //================== serviceRequest ==========================0
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"
 * entry[ServiceRequest][=].resource = ServiceRequest-CBC-panel
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f"
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f"   // entry[20]
 * entry[ServiceRequest][=].resource = ServiceRequest-WBC
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:a64d92bf-8ca8-4e12-ae29-624c70ac0e26"
 * entry[ServiceRequest][=].resource = ServiceRequest-RBC
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"   // entry[24]
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"   // entry[22]
 * entry[ServiceRequest][=].resource = ServiceRequest-HGB
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
 * entry[ServiceRequest][=].resource = ServiceRequest-HT
@@ -70,7 +76,7 @@ Usage: #example
 * entry[ServiceRequest][=].resource = ServiceRequest-MCV
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:3edb7f4c-e0c8-45c5-aee9-83d326aa61ab"
 * entry[ServiceRequest][=].resource = ServiceRequest-MCH
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:82db46b7-acef-49f4-9456-6e9cbd62a27b"  // entry[10]
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:82db46b7-acef-49f4-9456-6e9cbd62a27b"  // entry[26]
 * entry[ServiceRequest][=].resource = ServiceRequest-MCHC
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:bfc054ce-704c-11ee-b962-0242ac120002"
 * entry[ServiceRequest][=].resource = ServiceRequest-Platelet
@@ -80,7 +86,7 @@ Usage: #example
 * entry[ServiceRequest][=].resource = ServiceRequest-D-Dimer
 
 //=============== practitioner, organization =============================0
-* entry[PractitionerRole][+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"
+* entry[PractitionerRole][+].fullUrl = "urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048"   // entry[30]
 * entry[PractitionerRole][=].resource = MarcMustermannArztpraxis
 
 * entry[Practitioner][+].fullUrl = "urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37"
@@ -115,21 +121,15 @@ Usage: #inline
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
 
-// * extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-CBC-panel)
-// * extension[0].url = "http://fhir.ch/ig/ch-lab-report/StructureDefinition/composition-basedOn-order-or-requisition"
-// * extension[=].valueReference = Reference(ServiceRequest-CBC-panel)
-// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition" // no dependent SR !!!
-// * extension[=].valueReference = Reference(ServiceRequest-HGB)
-// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-// * extension[=].valueReference = Reference(ServiceRequest-HT)
-// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-// * extension[=].valueReference = Reference(ServiceRequest-CRP)
-// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-// * extension[=].valueReference = Reference(ServiceRequest-D-Dimer)
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666)  //  ServiceRequest-CBC-panel
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c)   //  ServiceRequest-CRP
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14)   //  ServiceRequest-D-Dimer
 
 // Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:3f69e0a5-2177-4540-baab-7a5d0877428f"
+* text.status = #additional
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study 1</div><div>      <h3>Suspicion of deep vein thrombosis</h3>      <p>A patient, Tobias Timmermann, presents to Dr. med. Marc Mustermann at the Olten group practice on 09.03.2016. He verbally identifies himself via his master data as   Tobias Timmermann, 01.01.1984. He reports unclear leg pain in the left lower leg as well as simultaneously occurring respiratory pain and cough. The doctor carries out the anamnesis and physical examination and prescribes the following laboratory parameters:       </p>        <ul>            <li>Blood cell count incl. differentiation</li>            <li>CRP</li>            <li>D-dimer</li>        </ul>      <p>        The doctor carries out the Blood count and the CRP determination himself by means of point of care diagnostics, the D-dimer diagnostics is prescribed as quantitative diagnostics in an external sending laboratory. To obtain the sample, a Blood sample is taken lying down (1 EDTA tube, 2 citrate tubes of 5 ml). The order is transmitted to the external laboratory and the sample is sent to the external dispatch laboratory by courier ordered by telephone. The results of the internal point of care diagnostics (Blood count and CRP) are entered in the patient`s laboratory sheet in the doctor`s office software (manually or via locally installed electronic interfaces). A prescription is therefore issued by the doctor to the patient for self-administration of an anti-thrombotic agent. The results of the sending-in laboratory arrive electronically at the GP`s on the same evening and are also entered in the patient`s laboratory sheet. By using the present exchange format, this process can be fully automated. After a telephone enquiry by the doctor at the sending laboratory due to a borderline D-dimer result, the information is given that a deep vein thrombosis cannot be ruled out in this situation by means of D-dimer and the patient is therefore called back the next day for a sonography of the legs.      </p>         <p>As it is probably a primary leg vein thrombosis, Dr Eva Erlenmeier from the Pipette laboratory sends feedback to Dr Mustermann with the recommendation to carry out a    thrombophilia screening, which includes the following analyses: Quick, aPTT, fibrinogen, antithrombin (funct.), thrombin time I 2.5 NIH/ml, APC resistance, D-dimers, protein C, (aPTT method), protein S antigen. The analyses can be carried out directly from the samples of the citrate tubes sent along.      </p>  </div></div>"
 
 * status = #final
 * category[specialty] = $sct#394915009 "General pathology (specialty) (qualifier value)"
@@ -512,7 +512,7 @@ Usage: #inline
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#83611000052104 "Turbidimetry technique (qualifier value)"
 * specimen = Reference(urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786)
-* device = Reference(TestkitCRP)
+* device = Reference(urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794)    //  TestkitCRP
 * referenceRange.high.value = 10  // depends on method
 * referenceRange.high.unit = "mg/L"
 
@@ -536,7 +536,7 @@ Usage: #inline
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#726449005 "Immunoassay technique (qualifier value)"
 * specimen = Reference(urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8)
-* device = Reference(TestkitD-Dimer)  // Test-Kit
+* device = Reference(urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066)  // TestkitD-Dimer
 * referenceRange.high.value = 0.5  // depends on method
 * referenceRange.high.unit = "mg/L"
 
@@ -995,8 +995,8 @@ Title: "Arztpraxis"
 Description: "Practice, refers to 1-tvt, 2-pertussis and 3-gyn"
 Usage: #inline
 * id = "32c4c990-cedb-4999-998d-bab1d55db49f"
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000235503"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000235503"
 * name = "Arztpraxis Messen"
 * telecom[0].system = #phone
 * telecom[=].value = "+41555545566"
@@ -1029,10 +1029,10 @@ Title: "Eva Erlenmeyer"
 Description: "Specialist for Laboratory Medicine, works in Labor Pipette"
 Usage: #inline
 * id = "12328339-f7d6-4bb6-80e4-89fd03ce5052"
-* identifier[0].system = "urn:oid:2.51.1.3" // GLN
-* identifier[=].value = "7601000050717"
-* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[=].value = "A123315"
+* identifier[GLN].system = "urn:oid:2.51.1.3" // GLN
+* identifier[GLN].value = "7601000050717"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
+* identifier[ZSR].value = "A123315"
 * name.use = #official
 * name.family = "Erlenmeyer"
 * name.given = "Eva"

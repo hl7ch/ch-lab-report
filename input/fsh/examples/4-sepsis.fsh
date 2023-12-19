@@ -186,22 +186,17 @@ Usage: #inline
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
 
-// * extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequest-CBC-panel)
-// * extension[0].url = "http://fhir.ch/ig/ch-lab-report/StructureDefinition/composition-basedOn-order-or-requisition"
-// * extension[=].valueReference = Reference(ServiceRequest-CBC-panel)
-// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition" // no dependent SR !!!
-// * extension[=].valueReference = Reference(ServiceRequest-HGB)
-// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-// * extension[=].valueReference = Reference(ServiceRequest-HT)
-// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-// * extension[=].valueReference = Reference(ServiceRequest-CRP)
-// * extension[+].url = "http://hl7.eu/fhir/laboratory/StructureDefinition/composition-basedOn-order-or-requisition"
-// * extension[=].valueReference = Reference(ServiceRequest-D-Dimer)
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b)   //  ServiceRequest-anaerobe-culture
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8)   //  ServiceRequest-aerobe-culture
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)   //  ServiceRequest-urine-culture
+
 
 // Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:07436e49-5e49-4b72-95cd-13a3921b880f"
-
+* text.status = #additional
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Laboratory Order</div><div><h3>Case study 4: Suspected sepsis</h3>      <p>The patient Sara Speckmann, born 12. 12. 1975, has been in the Cantonal Hospital for some time. Last night her general condition deteriorated massively. As there is a suspicion of sepsis, the senior physician in charge, Dr Hans Hauser, orders Blood to be taken from her in the morning for a Blood culture. 30 minutes later, another aerobic and an anaerobic Blood culture is taken, as well as a urine sample. All five samples are further processed in the external laboratory Pipette. There, germs are detected in all materials and then identified by mass spectrometry. The pathogens “Klebsiella pneumoniae” and “Escherichia coli” were detected in the four Blood culture bottles, and the bacterium “Streptococcus mitis” was also detected in one aerobic bottle. The germ identified in the urine sample is normally not pathogenic. An antibiogram is made of all three pathogens detected in the Blood. This shows that the two active substances “amoxicillin+clavulanic acid” and “ceftriaxone” are effective against all three germs. The microbiologist regularly informs Dr Hans Hauser about the various partial results.       </p>         </div></div>"
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology (qualifier value)"
 * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
@@ -1387,10 +1382,10 @@ Title: "Hans Hauser"
 Description: "Practitioner, Senior Physician at Kantonsspital, refers to 4-sepsis"
 Usage: #inline
 * id = "a7d5a837-288d-4234-923c-c9cb5b6f55a1"
-* identifier[0].system = "urn:oid:2.51.1.3"
-* identifier[=].value = "7601000050700"
-* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[=].value = "A123313"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000050700"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[ZSR].value = "A123313"
 * name.use = #official
 * name.family = "Hauser"
 * name.given = "Hans"
@@ -1410,8 +1405,8 @@ Title: "Kantonsspital"
 Description: "Example for Hospital"
 Usage: #inline
 * id = "37e198ba-ebae-4438-bf8f-faa42eff82c6"
-* identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000235503"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000235503"
 * name = "Kantonsspital Zug"
 * telecom[0].system = #phone
 * telecom[=].value = "+41 45 334 55 66"
@@ -1447,10 +1442,10 @@ Title: "Beat Bunsen"
 Description: "Specialist for Laboratory Medicine, works in Labor Pipette"
 Usage: #inline
 * id = "12328339-f7d6-4bb6-80e4-89fd03ce5052"
-* identifier[0].system = "urn:oid:2.51.1.3" // GLN
-* identifier[=].value = "7601000050717"
-* identifier[+].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[=].value = "A123316"
+* identifier[GLN].system = "urn:oid:2.51.1.3"
+* identifier[GLN].value = "7601000050717"
+* identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
+* identifier[ZSR].value = "A123316"
 * name.use = #official
 * name.family = "Bunsen"
 * name.given = "Beat"

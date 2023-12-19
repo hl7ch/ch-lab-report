@@ -45,6 +45,8 @@ pages:
       title: Use Cases in German
     usecases-it.md:
       title: Use Cases in Italian
+  document.md:
+    title: Document
   profiles.md:
     title: Profiles
   extensions.md:
@@ -65,6 +67,7 @@ menu:
     Use Cases English: usecases-en.html
     Use Cases German: usecases-ge.html
     Use Cases French: usecases-fr.html
+  Document: document.html
   Profiles: profiles.html
   Terminology: terminology.html
   Artifacts: artifacts.html
