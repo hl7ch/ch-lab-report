@@ -8,4 +8,6 @@ This exchange format is defined as a [document type](https://www.hl7.org/fhir/do
 
 * **Profile**: [CH LAB-Report](StructureDefinition-ch-lab-report-document.html)
 
-* **Example**: CH LAB-Report Document ([XML](Bundle-LabResultReport-1-tvt.xml.html), [JSON](Bundle-LabResultReport-1-tvt.json.html))
+* **Example tiefe Venenthrombose**: CH LAB-Report Document ([XML](Bundle-LabResultReport-1-tvt.xml.html), [JSON](Bundle-LabResultReport-1-tvt.json.html))
+
+* **Example Sepsis**: CH LAB-Report Document ([XML](Bundle-LabResultReport-4-sepsis.xml.html), [JSON](Bundle-LabResultReport-4-sepsis.json.html))
