@@ -39,12 +39,12 @@ pages:
   usecases.md:
     usecases-en.md:
       title: Use Cases in English
-    usecases-fr.md:
-      title: Use Cases in French
-    usecases-ge.md:
-      title: Use Cases in German
-    usecases-it.md:
-      title: Use Cases in Italian
+    ##usecases-fr.md:
+    ##  title: Use Cases in French
+    ##usecases-ge.md:
+    ##  title: Use Cases in German
+    ##usecases-it.md:
+    ##  title: Use Cases in Italian
   document.md:
     title: Document
   profiles.md:
@@ -65,8 +65,8 @@ menu:
   Home: index.html
   Use Cases: #usecases.html
     Use Cases English: usecases-en.html
-    Use Cases German: usecases-ge.html
-    Use Cases French: usecases-fr.html
+    ##Use Cases German: usecases-ge.html
+    ##Use Cases French: usecases-fr.html
   Document: document.html
   Profiles: profiles.html
   Terminology: terminology.html
