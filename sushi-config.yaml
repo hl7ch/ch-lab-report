@@ -8,15 +8,15 @@ canonical: http://fhir.ch/ig/ch-lab-report
 name: CH_LAB_REPORT
 title: "CH LAB-Report (R4)"
 description: FHIR® Implementation Guide for Laboratory Reports in Switzerland
-status: draft
+status: active
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CHE
-date: 2023-06-14
+date: 2023-12-20
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2023+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
   url: https://www.hl7.ch
@@ -28,10 +28,11 @@ contact:
         use: work
 
 dependencies:
-  ch.fhir.ig.ch-core: current
+  ch.fhir.ig.ch-core: 4.0.0
   hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.eu.laboratory: 0.1.0-ballot
   hl7.fhir.extensions.r5: 4.0.1
+  hl7.terminology: 5.4.0
   
 pages:
   index.md:
