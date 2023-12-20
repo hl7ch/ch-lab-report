@@ -7,5 +7,5 @@
     "sequence" : "DSTU 1",
     "desc" : "HL7 Switzerland DSTU 1",
     "changes" : "changelog.html",
-    "first": true
+    "first": false
   }
