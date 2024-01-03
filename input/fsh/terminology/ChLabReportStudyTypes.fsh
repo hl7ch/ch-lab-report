@@ -1,5 +1,5 @@
-ValueSet: LabStudyTypesEuVs
-Id: ch-lab-report-lab-study-types
+ValueSet: ChLabReportStudyTypes
+Id: ch-lab-report-study-types
 Title: "Lab Study Types in Switzerland"
 Description: "This value set includes the codes for the lab specialties."
 * ^status = #active
