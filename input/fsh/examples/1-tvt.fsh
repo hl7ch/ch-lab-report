@@ -525,7 +525,7 @@ Usage: #inline
 * status = #final
 
 * category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
-* category[studyType] = $loinc#18720-3 "Coagulation studies (set)"
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
