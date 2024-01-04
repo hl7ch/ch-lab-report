@@ -64,11 +64,11 @@ Usage: #example
 //================== serviceRequest ==========================0
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"
 * entry[ServiceRequest][=].resource = ServiceRequest-CBC-panel
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f"   // entry[20]
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f"   // entry[18]
 * entry[ServiceRequest][=].resource = ServiceRequest-WBC
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:a64d92bf-8ca8-4e12-ae29-624c70ac0e26"
 * entry[ServiceRequest][=].resource = ServiceRequest-RBC
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"   // entry[22]
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"   // entry[20]
 * entry[ServiceRequest][=].resource = ServiceRequest-HGB
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
 * entry[ServiceRequest][=].resource = ServiceRequest-HT
@@ -223,11 +223,11 @@ Usage: #inline
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Zürich"
 * extension[=].valueAddress.country = "Schweiz"
-// * extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
-// * extension[=].valueAddress.city = "Breitenbach"
-// * extension[=].valueAddress.state = "BL"
-// * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
-// * extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
+* extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
+* extension[=].valueAddress.city = "Breitenbach"
+* extension[=].valueAddress.state = "BL"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
+* extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
 * identifier.type = $v2-0203#MR
 * identifier.system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier.value = "012/08.111111"

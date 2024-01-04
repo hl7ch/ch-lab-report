@@ -20,14 +20,14 @@ Description: "This profile constrains the Composition resource for the purpose o
 // │  InformationRecipient       │
 // ╰─────────────────────────────╯
 
+// * extension contains ChLabCompositionVersionNumber named versionNumber 0..*
+// * extension[versionNumber].valueString only string
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition].valueReference only Reference(ChLabReportServiceRequest)
 
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(ChLabPractitioner or Device or ChLabPatient or RelatedPerson or ChLabPractitionerRole or CHCoreOrganization)
 
-// * extension contains InformationRecipient named information-recipient 0..*
-// * extension[information-recipient]
 // * text ^short = "Narrative text"
 * insert ReportIdentifierRule
 
