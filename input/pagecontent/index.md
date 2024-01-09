@@ -21,7 +21,7 @@ This implementation guide specifies the exchange format for the comprehensive an
 * Laboratory Information: Include details about the laboratory that performed the analysis, such as the name, address, and contact information.
 * Authorised Signatures: Include the signatures or electronic authentication of the laboratory personnel responsible for conducting and validating the tests.
 
-#### Test Data
+#### Laboratory Analytic-Test Data
 
 * Specimen Information: Specification of the preanalytic conditions, the type of specimen collected for analysis. This could include details like the date and time of collection.
 * Test Request Details: Information about the tests requested are provided by the requester. It includes the name of the test, mostly in form of a code, the reason for the test, and any specific instructions given.
