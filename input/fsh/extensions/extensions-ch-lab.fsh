@@ -19,4 +19,3 @@ Description: "This extension provides a reference that this observation is an in
 * value[x] only Reference (ChLabObservationDefinition)
 // * instantiatesReference only Reference (ObservationDefinition)
 // * instantiatesCanonical only 
-

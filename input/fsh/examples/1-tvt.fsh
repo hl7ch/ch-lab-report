@@ -56,19 +56,19 @@ Usage: #example
 * entry[Specimen][=].resource = Serum
 
 //================== Device/TestKit ==========================0
-* entry[Device][+].fullUrl = "urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794"
-* entry[Device][=].resource = TestkitCRP
-* entry[Device][+].fullUrl = "urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066"
-* entry[Device][=].resource = TestkitD-Dimer
+// * entry[Device][+].fullUrl = "urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794"
+// * entry[Device][=].resource = TestkitCRP
+// * entry[Device][+].fullUrl = "urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066"
+// * entry[Device][=].resource = TestkitD-Dimer
 
 //================== serviceRequest ==========================0
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"
 * entry[ServiceRequest][=].resource = ServiceRequest-CBC-panel
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f"   // entry[20]
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:1dcc636a-cc10-450d-9748-cfd760e2668f"   // entry[18]
 * entry[ServiceRequest][=].resource = ServiceRequest-WBC
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:a64d92bf-8ca8-4e12-ae29-624c70ac0e26"
 * entry[ServiceRequest][=].resource = ServiceRequest-RBC
-* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"   // entry[22]
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"   // entry[20]
 * entry[ServiceRequest][=].resource = ServiceRequest-HGB
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:e4072da7-a760-47ba-83e7-59796c59a944"
 * entry[ServiceRequest][=].resource = ServiceRequest-HT
@@ -223,11 +223,11 @@ Usage: #inline
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Zürich"
 * extension[=].valueAddress.country = "Schweiz"
-// * extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
-// * extension[=].valueAddress.city = "Breitenbach"
-// * extension[=].valueAddress.state = "BL"
-// * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
-// * extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
+* extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
+* extension[=].valueAddress.city = "Breitenbach"
+* extension[=].valueAddress.state = "BL"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
+* extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
 * identifier.type = $v2-0203#MR
 * identifier.system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier.value = "012/08.111111"
@@ -512,7 +512,7 @@ Usage: #inline
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#83611000052104 "Turbidimetry technique (qualifier value)"
 * specimen = Reference(urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786)
-* device = Reference(urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794)    //  TestkitCRP
+// * device = Reference(urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794)    //  TestkitCRP
 * referenceRange.high.value = 10  // depends on method
 * referenceRange.high.unit = "mg/L"
 
@@ -525,7 +525,7 @@ Usage: #inline
 * status = #final
 
 * category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
-* category[studyType] = $loinc#18723-7 "Hematology studies (set)" // since Coagulation studies are not in the VS
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
@@ -536,7 +536,7 @@ Usage: #inline
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#726449005 "Immunoassay technique (qualifier value)"
 * specimen = Reference(urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8)
-* device = Reference(urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066)  // TestkitD-Dimer
+// * device = Reference(urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066)  // TestkitD-Dimer
 * referenceRange.high.value = 0.5  // depends on method
 * referenceRange.high.unit = "mg/L"
 
