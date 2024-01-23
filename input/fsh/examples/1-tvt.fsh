@@ -132,9 +132,9 @@ Usage: #inline
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study 1</div><div>      <h3>Suspicion of deep vein thrombosis</h3>      <p>A patient, Tobias Timmermann, presents to Dr. med. Marc Mustermann at the Olten group practice on 09.03.2016. He verbally identifies himself via his master data as   Tobias Timmermann, 01.01.1984. He reports unclear leg pain in the left lower leg as well as simultaneously occurring respiratory pain and cough. The doctor carries out the anamnesis and physical examination and prescribes the following laboratory parameters:       </p>        <ul>            <li>Blood cell count incl. differentiation</li>            <li>CRP</li>            <li>D-dimer</li>        </ul>      <p>        The doctor carries out the Blood count and the CRP determination himself by means of point of care diagnostics, the D-dimer diagnostics is prescribed as quantitative diagnostics in an external sending laboratory. To obtain the sample, a Blood sample is taken lying down (1 EDTA tube, 2 citrate tubes of 5 ml). The order is transmitted to the external laboratory and the sample is sent to the external dispatch laboratory by courier ordered by telephone. The results of the internal point of care diagnostics (Blood count and CRP) are entered in the patient`s laboratory sheet in the doctor`s office software (manually or via locally installed electronic interfaces). A prescription is therefore issued by the doctor to the patient for self-administration of an anti-thrombotic agent. The results of the sending-in laboratory arrive electronically at the GP`s on the same evening and are also entered in the patient`s laboratory sheet. By using the present exchange format, this process can be fully automated. After a telephone enquiry by the doctor at the sending laboratory due to a borderline D-dimer result, the information is given that a deep vein thrombosis cannot be ruled out in this situation by means of D-dimer and the patient is therefore called back the next day for a sonography of the legs.      </p>         <p>As it is probably a primary leg vein thrombosis, Dr Eva Erlenmeier from the Pipette laboratory sends feedback to Dr Mustermann with the recommendation to carry out a    thrombophilia screening, which includes the following analyses: Quick, aPTT, fibrinogen, antithrombin (funct.), thrombin time I 2.5 NIH/ml, APC resistance, D-dimers, protein C, (aPTT method), protein S antigen. The analyses can be carried out directly from the samples of the citrate tubes sent along.      </p>  </div></div>"
 
 * status = #final
-* category[specialty] = $sct#394915009 "General pathology (specialty) (qualifier value)"
 * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
-* type.text = "Laboratory report"
+* category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
+// * category[specialty] = $sct#394915009 "General pathology"
 
 // Composition Subject must be same as in DiagnosticReport
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
@@ -191,7 +191,8 @@ Usage: #inline
 * basedOn[+] = Reference(urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14)  // ServiceRequest-D-Dimer
 
 * status = #final
-* category[specialty] = $sct#394915009 "General pathology (specialty) (qualifier value)"
+* category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
+// * category[specialty] = $sct#394915009 "General pathology"
 * code = $loinc#11502-2 "Laboratory report"
 
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
@@ -259,7 +260,7 @@ Usage: #inline
 * id = "0ad0810e-6eb4-11ee-b962-0242ac120002"
 * status = #final
 
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.text = "CBC panel Auto (Bld)" // LOINC Display Name
@@ -284,7 +285,7 @@ Usage: #inline
 * id = "5c1ceea1-2751-4ddc-afb5-4c28037ba1be"
 * status = #final
 
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
 * code.text = "WBC Auto (Bld) [#/Vol]" // LOINC Display Name
@@ -311,7 +312,7 @@ Usage: #inline
 * id = "04ec7690-a1e8-4fdf-be4f-6c92949e948a"
 * status = #final
 
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 * code.text =  "RBC Auto (Bld) [#/Vol]"  // LOINC Display Name
@@ -339,7 +340,7 @@ Description: "This is the the code included in the CBC auto. It is NOT obtained 
 Usage: #inline
 * id = "2565be07-47a0-4cca-926e-a57e1ac96fb8"
 * status = #final
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
@@ -365,7 +366,7 @@ Usage: #inline
 * id = "c4d64c0a-aafb-4b41-ae0b-a620b2a6c08c"
 * status = #final
 
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
 * code.text = "Hematocrit Auto (Bld) [Volume fraction]" // LOINC Display Name
@@ -391,7 +392,7 @@ Usage: #inline
 * id = "857cfa10-66ea-45ae-b236-e6e03af4be3f"
 * status = #final
 
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#787-2 "MCV [Entitic volume] by Automated count"
 * code.text = "MCV Auto (RBC) [Entitic vol]" // LOINC Display Name
@@ -417,7 +418,7 @@ Usage: #inline
 * id = "3b263f29-44d8-468f-b612-e748442e1845"
 * status = #final
 
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#785-6 "MCH [Entitic mass] by Automated count"
 * code.text = "MCH Auto (RBC) [Entitic mass]" // LOINC Display Name
@@ -444,7 +445,7 @@ Usage: #inline
 * id = "735c9244-497a-420d-b006-15a57be365b1"
 * status = #final
 
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
 * code.text = "MCHC Auto (RBC) [Mass/Vol]" // LOINC Display Name
@@ -470,7 +471,7 @@ Usage: #inline
 * id = "32a7d6fb-dc8a-4673-8cef-c59c1c5397db"
 * status = #final
 
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
 * code.text = "Platelets Auto (Bld) [#/Vol]" // LOINC Display Name
@@ -524,7 +525,7 @@ Usage: #inline
 * id = "f30d8df7-474f-401e-b5d4-f690d28d718d"
 * status = #final
 
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
@@ -550,12 +551,12 @@ Description: "Example for Specimen for Haematological Examination"
 Usage: #inline
 * id = "3a98a13d-cf64-40bb-b7a0-87ef45193a74"
 * status = #available
-* type = $sct#119297000 "Blood sample"
+* type = $sct#119297000 "Blood specimen"
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * collection.collector = Reference(urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
-* container.type = $sct#706053007 "General specimen container (physical object)"
+* container.type = $sct#706053007 "General specimen container"
 * note.text = "Specimen is grossly lipemic"
 
 Instance: Blood-coag
@@ -567,7 +568,7 @@ Usage: #inline
 * identifier.value = "48736-55555-75465"
 * accessionIdentifier.value = "4e88a-66666-dd888"
 * status = #available
-* type = $sct#119297000 "Blood sample"
+* type = $sct#119297000 "Blood specimen"
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * receivedTime = "2020-08-16T16:40:17Z"
 // * request = Reference(Lab) Why the specimen was collected
@@ -589,13 +590,13 @@ Usage: #inline
 * identifier.value = "48736-12345-75465"
 * accessionIdentifier.value = "4e88a-12345-dd888"
 * status = #available
-* type = $sct#119364003 "Serum specimen (specimen)"
+* type = $sct#119364003 "Serum specimen"
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
 * collection.collector = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
 * collection.fastingStatusCodeableConcept = $v2-0916#F "Patient was fasting prior to the procedure."
-* container.type = $sct#706053007 "General specimen container (physical object)"
+* container.type = $sct#706053007 "General specimen container"
 
 // ╭── serviceRequest 1-tvt ──────────────────────────────────────────────╮
 // │ CBC-panel, WBC, RBC, HGB, HT, MCV, MCH, MCHC, Platelet, CRP, D-Dimer │

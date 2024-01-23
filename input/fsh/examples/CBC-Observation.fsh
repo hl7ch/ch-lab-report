@@ -6,7 +6,7 @@ Usage: #inline
 // * id = "93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
 
 * status = #final
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 * code.text = "RBC Auto (Bld) [#/Vol]" // LOINC Display Name
@@ -31,7 +31,7 @@ Usage: #inline
 // * id = "93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
 
 * status = #final
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
 * code.text = "WBC Auto (Bld) [#/Vol]" // LOINC Display Name
@@ -58,7 +58,7 @@ Usage: #inline
 // * id = "93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
 
 * status = #final
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
 * code.text = "Hematocrit Auto (Bld) [Volume fraction]" // LOINC Display Name
@@ -83,7 +83,7 @@ Usage: #inline
 // * id = "93e87cd5-a3eb-4767-b0e7-9e01a11a4784"
 
 * status = #final
-* category[specialty] = $sct#394916005 "Hematopathology (specialty) (qualifier value)"
+* category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
