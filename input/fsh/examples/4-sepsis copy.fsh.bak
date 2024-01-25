@@ -508,7 +508,7 @@ Usage: #inline
 * accessionIdentifier.system = "http://lab.acme.org/specimens/2011"
 * accessionIdentifier.value = "X352356"
 * status = #available
-* type = $sct#122575003 "Urine specimen (specimen)"
+* type = $sct#122575003 "Urine specimen"
 * subject = Reference(Patient/14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * receivedTime = "2011-03-04T07:03:00Z"
 // * request = Reference(ServiceRequest/fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)
