@@ -78,7 +78,7 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 * performer 1..
 * performer only Reference(CHCoreOrganization or ChLabPractitioner or ChLabPractitionerRole)
 
-// ╭────────────── instance 1-tvt ──────────────────────────────╮
-// │  Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer   |
-// ╰────────────────────────────────────────────────────────────╯
+// ╭────────────── instance 1-tvt ─────────────────────────────╮
+// │  Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer   │
+// ╰───────────────────────────────────────────────────────────╯
 
