@@ -5,7 +5,7 @@ Title: "CH Lab DiagnosticReport: Laboratory Report"
 Description: "This profile constrains the DiagnosticReport resource for the purpose of laboratory test reports in Switzerland."
 * . ^short = "CH Lab DiagnosticReport: Laboratory Report"
 
-* obeys ch-lab-dr1
+* ^extension[$imposeProfile].valueCanonical = Canonical(DiagnosticReportLabEu)
 
 // ╭─── Extension ───╮
 // │  CompositionR5  │

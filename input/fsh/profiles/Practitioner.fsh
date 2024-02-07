@@ -4,8 +4,7 @@ Id: ch-lab-practitioner
 Title: "CH Lab Practitioner"
 Description: "This profile constrains the Practitioner resource for the purpose of laboratory test reports in Switzerland."
 * . ^short = "CH Lab Practitioner"
-
-* obeys ch-lab-pract1
+* ^extension[$imposeProfile].valueCanonical = Canonical(PractitionerEu)
 
 * identifier[GLN] 0..1
 * name 1..

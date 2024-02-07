@@ -4,8 +4,9 @@ Id: ch-lab-report-servicerequest
 Title: "CH Lab ServiceRequest: Laboratory Order"
 Description: "This profile constrains the ServiceRequest resource for the purpose of laboratory orders in Switzerland."
 * . ^short = "CH Lab ServiceRequest: Laboratory Order"
+* ^extension[$imposeProfile].valueCanonical = Canonical(ServiceRequestLabEu)
+* obeys code-or-basedOn-required
 
-* obeys ch-lab-sr1 and code-or-basedOn-required
 // * category = $sct#108252007 // Laboratory procedure (procedure)
 * subject only Reference(ChLabPatient)
 * specimen only Reference(ChLabReportSpecimen)
