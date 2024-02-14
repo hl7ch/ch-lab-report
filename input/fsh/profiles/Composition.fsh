@@ -5,8 +5,7 @@ Id: ch-lab-report-composition
 Title: "CH Lab Composition: Laboratory Report"
 Description: "This profile constrains the Composition resource for the purpose of laboratory test reports in Switzerland."
 * . ^short = "CH Lab Composition: Laboratory Report"
-
-* obeys ch-lab-comp1
+* ^extension[$imposeProfile].valueCanonical = Canonical(CompositionLabReportEu)
 
 // * category = $sct#4241000179101 // Laboratory report (record artifact)
 * insert ReportCategoryRule

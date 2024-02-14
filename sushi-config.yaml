@@ -28,7 +28,7 @@ contact:
         use: work
 
 dependencies:
-  ch.fhir.ig.ch-core: 4.0.1
+  ch.fhir.ig.ch-core: current
   hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.eu.laboratory: 0.1.0-ballot
   hl7.fhir.extensions.r5: 4.0.1

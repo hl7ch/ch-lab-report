@@ -1,3 +1,5 @@
+Alias: $imposeProfile =                 http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
+
 // External Code Systems
 Alias:   $loinc =                         http://loinc.org
 Alias:   $sct =                           http://snomed.info/sct

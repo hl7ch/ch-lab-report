@@ -5,7 +5,7 @@ Title: "CH Lab Observation Results: Laboratory"
 Description: "This profile constrains the Observation resource for the purpose of laboratory test reports in Switzerland."
 * . ^short = "CH Lab Observation Results: Laboratory"
 
-* obeys ch-lab-obs1
+* ^extension[$imposeProfile].valueCanonical = Canonical(ObservationResultsLaboratoryEu)
 
 // ╭── extension ObservationInstantiatesR5 ──╮
 // │  Instantiates ObservationDefinitionR5   │
