@@ -172,7 +172,6 @@ Usage: #example
 // ╭────────────── Composition 4-sepsis ─────────────────────╮
 // │      Scenario sepis: Microbiological results            │
 // ╰─────────────────────────────────────────────────────────╯
-
 Instance: Composition-4-sepsis
 InstanceOf: ChLabReportComposition
 Description: "Example of Composition in the scenario of deep vein thrombosis"
@@ -185,10 +184,12 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report         │
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
+
 * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
 * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b)   //  ServiceRequest-anaerobe-culture
 * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8)   //  ServiceRequest-aerobe-culture
 * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)   //  ServiceRequest-urine-culture
+
 
 // Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
@@ -307,9 +308,9 @@ Usage: #inline
 * id = "14fbf29b-5dac-483e-b543-15031f12344b"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: KatarinaKeller\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111114\n      </p><p><b>name</b>: Katarina Keller\n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Dec 12, 1975\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
-* extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
-* extension[=].valueAddress.city = "Aarau"
-* extension[=].valueAddress.country = "Schweiz"
+// * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
+// * extension[=].valueAddress.city = "Aarau"
+// * extension[=].valueAddress.country = "Schweiz"
 // * extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
 // * extension[=].valueAddress.city = "Lenzburg"
 // * extension[=].valueAddress.state = "AG"
