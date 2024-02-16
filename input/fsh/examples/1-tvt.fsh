@@ -576,8 +576,9 @@ Usage: #inline
 * processing.timePeriod.end = "2015-08-17T06:40:17Z" // when processing should be terminated
 * container.identifier.value = "4e88a-bc987-dd888-00001-bcoag"
 * container.description = "S-Monovette grün"
-* container.type = $sct#702120003 "Blood collection Luer adaptor"
-* container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate"
+* container.type = $sct#702296009 "Non-evacuated blood collection tube, sodium citrate (physical object)"
+// Specimen.container.additive[x]: max allowed = 0, but found 1 => is container.type
+// * container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate" 
 
 Instance: Serum
 InstanceOf: ChLabReportSpecimen

@@ -8,6 +8,9 @@ fsh-generated/**
 # jar files
 *.jar
 
+# backup files
+*.bak
+
 # editing files and folders
 .vscode/**
 input/images-source/**
