@@ -4,7 +4,7 @@ Description: "Example of a Laboratory Report for scenario deep vein thrombosis"
 Usage: #example
 * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"
 * identifier.system = "http://example.org"
-* identifier.value = "ba91c64b-f30c-4137-a484-34bbba5e8804"
+* identifier.value = "e65fa2fa-c130-4097-9848-486ee61f58df"
 * type = #document
 * timestamp = "2023-03-09T14:30:00+01:00"
 
@@ -121,11 +121,9 @@ Usage: #inline
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
 
-// * extension[versionNumber].valueString = "v1"
-// * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666)  //  ServiceRequest-CBC-panel
-// * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c)   //  ServiceRequest-CRP
-// * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14)   //  ServiceRequest-D-Dimer
-// * extension[information-recipient] = Reference(urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37)
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666)  //  ServiceRequest-CBC-panel
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c)   //  ServiceRequest-CRP
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14)   //  ServiceRequest-D-Dimer
 
 // Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
@@ -135,12 +133,11 @@ Usage: #inline
 
 * status = #final
 * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
-* category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
+// * category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
 // * category[specialty] = $sct#394915009 "General pathology"
 
 // Composition Subject must be same as in DiagnosticReport
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
-
 * date = "2023-03-09T14:30:00+01:00"
 * author = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
 * author.display = "Dr. Eva Erlenmeyer"
@@ -193,7 +190,7 @@ Usage: #inline
 * basedOn[+] = Reference(urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14)  // ServiceRequest-D-Dimer
 
 * status = #final
-* category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
+// * category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
 // * category[specialty] = $sct#394915009 "General pathology"
 * code = $loinc#11502-2 "Laboratory report"
 
@@ -579,8 +576,9 @@ Usage: #inline
 * processing.timePeriod.end = "2015-08-17T06:40:17Z" // when processing should be terminated
 * container.identifier.value = "4e88a-bc987-dd888-00001-bcoag"
 * container.description = "S-Monovette grün"
-* container.type = $sct#702120003 "Blood collection Luer adaptor"
-* container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate"
+* container.type = $sct#702296009 "Non-evacuated blood collection tube, sodium citrate (physical object)"
+// Specimen.container.additive[x]: max allowed = 0, but found 1 => is container.type
+// * container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate" 
 
 Instance: Serum
 InstanceOf: ChLabReportSpecimen

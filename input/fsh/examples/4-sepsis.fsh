@@ -172,7 +172,6 @@ Usage: #example
 // ╭────────────── Composition 4-sepsis ─────────────────────╮
 // │      Scenario sepis: Microbiological results            │
 // ╰─────────────────────────────────────────────────────────╯
-
 Instance: Composition-4-sepsis
 InstanceOf: ChLabReportComposition
 Description: "Example of Composition in the scenario of deep vein thrombosis"
@@ -186,10 +185,10 @@ Usage: #inline
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
 
-// * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
-// * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b)   //  ServiceRequest-anaerobe-culture
-// * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8)   //  ServiceRequest-aerobe-culture
-// * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)   //  ServiceRequest-urine-culture
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b)   //  ServiceRequest-anaerobe-culture
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8)   //  ServiceRequest-aerobe-culture
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)   //  ServiceRequest-urine-culture
 
 
 // Composition Identifier must be same as in DiagnosticReport
@@ -205,7 +204,6 @@ Usage: #inline
 
 // Composition Subject must be same as in DiagnosticReport
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
-
 * date = "2023-03-09T14:30:00+01:00"
 * author = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
 * author.display = "Dr. Beat Bunsen"
