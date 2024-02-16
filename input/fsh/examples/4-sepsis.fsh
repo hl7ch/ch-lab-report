@@ -172,7 +172,6 @@ Usage: #example
 // ╭────────────── Composition 4-sepsis ─────────────────────╮
 // │      Scenario sepis: Microbiological results            │
 // ╰─────────────────────────────────────────────────────────╯
-
 Instance: Composition-4-sepsis
 InstanceOf: ChLabReportComposition
 Description: "Example of Composition in the scenario of deep vein thrombosis"
@@ -205,7 +204,6 @@ Usage: #inline
 
 // Composition Subject must be same as in DiagnosticReport
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
-
 * date = "2023-03-09T14:30:00+01:00"
 * author = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
 * author.display = "Dr. Beat Bunsen"
@@ -310,9 +308,9 @@ Usage: #inline
 * id = "14fbf29b-5dac-483e-b543-15031f12344b"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: KatarinaKeller\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111114\n      </p><p><b>name</b>: Katarina Keller\n      </p><p><b>gender</b>: FEMALE\n      </p><p><b>birthDate</b>: Dec 12, 1975\n      </p><p><b>maritalStatus</b>: verheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '2' = '2', given as 'verheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
-* extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
-* extension[=].valueAddress.city = "Aarau"
-* extension[=].valueAddress.country = "Schweiz"
+// * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
+// * extension[=].valueAddress.city = "Aarau"
+// * extension[=].valueAddress.country = "Schweiz"
 // * extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
 // * extension[=].valueAddress.city = "Lenzburg"
 // * extension[=].valueAddress.state = "AG"

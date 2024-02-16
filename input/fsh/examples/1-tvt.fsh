@@ -4,7 +4,7 @@ Description: "Example of a Laboratory Report for scenario deep vein thrombosis"
 Usage: #example
 * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"
 * identifier.system = "http://example.org"
-* identifier.value = "ba91c64b-f30c-4137-a484-34bbba5e8804"
+* identifier.value = "e65fa2fa-c130-4097-9848-486ee61f58df"
 * type = #document
 * timestamp = "2023-03-09T14:30:00+01:00"
 
@@ -133,12 +133,11 @@ Usage: #inline
 
 * status = #final
 * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
-* category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
+// * category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
 // * category[specialty] = $sct#394915009 "General pathology"
 
 // Composition Subject must be same as in DiagnosticReport
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef)
-
 * date = "2023-03-09T14:30:00+01:00"
 * author = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
 * author.display = "Dr. Eva Erlenmeyer"
@@ -191,7 +190,7 @@ Usage: #inline
 * basedOn[+] = Reference(urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14)  // ServiceRequest-D-Dimer
 
 * status = #final
-* category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
+// * category[studyType] = $loinc#26436-6 "Laboratory studies (set)"
 // * category[specialty] = $sct#394915009 "General pathology"
 * code = $loinc#11502-2 "Laboratory report"
 
@@ -220,15 +219,14 @@ Usage: #inline
 * id = "6b8a0365-5022-403b-a5a5-8d8680d701ef"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>id</b>: HansGuggindieluft\n      </p><p><b>meta</b>: \n      </p><p><b>identifier</b>: 012/08.111111\n      </p><p><b>name</b>: Hans Guggindieluft \n      </p><p><b>gender</b>: MALE\n      </p><p><b>birthDate</b>: Jan 01, 1981\n      </p><p><b>maritalStatus</b>: unverheiratet \n        <span style=\"background: LightGoldenRodYellow\">(Details : {$ech-11-maritalstatus code '5' = '5', given as 'unverheiratet'})</span></p><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td><td><b>Preferred</b></td></tr><tr><td>*</td><td>Deutsch (Schweiz) \n            <span style=\"background: LightGoldenRodYellow\">(Details : {urn:ietf:bcp:47 code 'de-CH' = 'German (Region=Schweiz))</span></td><td>true</td></tr></table></div>"
-/**/
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Zürich"
 * extension[=].valueAddress.country = "Schweiz"
-* extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
-* extension[=].valueAddress.city = "Breitenbach"
-* extension[=].valueAddress.state = "BL"
-* extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
-* extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
+// * extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
+// * extension[=].valueAddress.city = "Breitenbach"
+// * extension[=].valueAddress.state = "BL"
+// * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
+// * extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
 * identifier.type = $v2-0203#MR
 * identifier.system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier.value = "012/08.111111"
@@ -578,8 +576,9 @@ Usage: #inline
 * processing.timePeriod.end = "2015-08-17T06:40:17Z" // when processing should be terminated
 * container.identifier.value = "4e88a-bc987-dd888-00001-bcoag"
 * container.description = "S-Monovette grün"
-* container.type = $sct#702120003 "Blood collection Luer adaptor"
-* container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate"
+* container.type = $sct#702296009 "Non-evacuated blood collection tube, sodium citrate (physical object)"
+// Specimen.container.additive[x]: max allowed = 0, but found 1 => is container.type
+// * container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate" 
 
 Instance: Serum
 InstanceOf: ChLabReportSpecimen
