@@ -11,8 +11,9 @@ Alias: $organization-type             = http://terminology.hl7.org/CodeSystem/or
 Alias: $referencerange-meaning        = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $v3-ObservationInterpretation  = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+// Alias: $v3-ParticipationType          = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $v3-MaritalStatus              = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
-Alias: $v3-EntityCode                 = http://terminology.hl7.org/CodeSystem/v3-EntityCode // Entity the instance represents, e.g. a blood collection tube
+Alias: $v3-EntityCode                 = http://terminology.hl7.org/CodeSystem/v3-EntityCode // Entity the instancerepresents, e.g. a blood collection tube
 Alias: $device-categorie              = http://hl7.org/fhir/device-category
 Alias: $observation-category          = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $labStudyType                  = http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab
@@ -31,18 +32,21 @@ Alias: $imposeProfile                 = http://hl7.org/fhir/StructureDefinition/
 // Extensions
 Alias: $information-recipient         = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $diagnostic-report-composition-r5  = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
+Alias: $event-performerFunction       = http://hl7.org/fhir/StructureDefinition/event-performerFunction
 Alias: $observation-instantiates-r5   = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.instantiates[x]
+Alias: $observation-triggeredBy-r5    = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $specimen-feature-r5           = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature
 Alias: $specimen-feature-type-r5      = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature.type
 Alias: $observationDefinition-device-r5   = http://hl7.org/fhir/5.0/StructureDefinition/extension-ObservationDefinition.device
 Alias: $observationDefinition-specimen-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ObservationDefinition.specimen
+Alias: $workflow-supportingInfo       = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
 // Alias:   $diagnostic-report-result-r5  =  http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.result
 
 // CH Core Structure Definitions
 // Alias:   $CHCoreOrganization =          http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization
-Alias:   $ech-11-maritalstatus          = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
-Alias:   $administrative-gender         = http://hl7.org/fhir/administrative-gender
-Alias:   $religiousAffiliation          = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
+Alias: $ech-11-maritalstatus          = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
+Alias: $administrative-gender         = http://hl7.org/fhir/administrative-gender
+Alias: $religiousAffiliation          = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 
 // from ch-lab-order
 // Alias:  $servicerequest-categories      = http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories
