@@ -79,4 +79,4 @@ That's why it is important to explicitly include informaiton about measurement m
 * issued ^short = "Date/Time this result was made available"
 
 * subject only Reference(ChLabPatient)
-* specimen only Reference(ChLabReportSpecimen)
+* specimen only Reference(ChLabSpecimen)

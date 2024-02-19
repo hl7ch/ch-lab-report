@@ -1,10 +1,14 @@
-Profile: ChLabReportSpecimen
+Profile: ChLabSpecimen // Should be convenient in CH LAB-Order too
 Parent: Specimen
-Title: "CH LAB-Report Specimen"
-Id: ch-lab-report-specimen
+Title: "CH LAB-Specimen"
+Id: ch-lab-specimen
 Description: "This profile constrains the Specimen resource for the purpose of laboratory test reports in Switzerland."
 * . ^short = "CH Lab Specimen: Laboratory"
 * ^extension[$imposeProfile].valueCanonical = Canonical(SpecimenEu)
+
+* insert SetFmmandStatusRule ( 2, trial-use)
+* . ^short = "Laboratory Specimen"
+* . ^definition = "Laboratory specimen"
 
 * extension contains $specimen-feature-type-r5 named SpecimenFeatureTypeR5 0..*
 * extension[SpecimenFeatureTypeR5].valueCodeableConcept
@@ -13,6 +17,13 @@ Description: "This profile constrains the Specimen resource for the purpose of l
 
 * type from LabSpecimenTypesEuVs (preferred)
 * type 1..1
+  * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type."
+* parent only Reference(ChLabSpecimen)
+* request
+  * ^short = "Why the specimen was collected."
+  * ^comment = """If the specimen information are known when the order is created then the ServiceRequest.specimen should be used.
+If the ServiceRequest can be updated when the specimen is collected then the ServiceRequest.specimen or the Specimen.request could be used.
+Otherwise the relationship is recorded in the Specimen.request element"""
 
 //=== COMMENTED UNTIL https://chat.fhir.org/#narrow/stream/215610-shorthand/topic/Issue.20with.20Specimen.2Ecollection.2Edevice.20R5.20extension IS NOT RESOLVED
 

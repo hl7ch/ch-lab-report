@@ -9,7 +9,7 @@ Description: "This profile constrains the ServiceRequest resource for the purpos
 
 // * category = $sct#108252007 // Laboratory procedure (procedure)
 * subject only Reference(ChLabPatient)
-* specimen only Reference(ChLabReportSpecimen)
+* specimen only Reference(ChLabSpecimen)
 
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 

@@ -543,7 +543,7 @@ Usage: #inline
 // │ Blood-coag, Blood, Serum │
 // ╰──────────────────────────╯
 Instance: Blood
-InstanceOf: ChLabReportSpecimen
+InstanceOf: ChLabSpecimen
 Title: "Blood Sample"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #inline
@@ -558,7 +558,7 @@ Usage: #inline
 * note.text = "Specimen is grossly lipemic"
 
 Instance: Blood-coag
-InstanceOf: ChLabReportSpecimen
+InstanceOf: ChLabSpecimen
 Title: "Blood Sample Coagulation"
 Description: "Example for Specimen for haemostatic Examination"
 Usage: #inline
@@ -581,7 +581,7 @@ Usage: #inline
 // * container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate" 
 
 Instance: Serum
-InstanceOf: ChLabReportSpecimen
+InstanceOf: ChLabSpecimen
 Title: "Serum Sample"
 Description: "Example for Specimen of Serum from venous blood"
 Usage: #inline
