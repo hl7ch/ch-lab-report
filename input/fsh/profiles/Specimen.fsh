@@ -17,7 +17,7 @@ Description: "This profile constrains the Specimen resource for the purpose of l
 
 * type from LabSpecimenTypesEuVs (preferred)
 * type 1..1
-  * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type."
+  * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite is present it shall be coherent with the type."
 * parent only Reference(ChLabSpecimen)
 * request
   * ^short = "Why the specimen was collected."
@@ -25,18 +25,21 @@ Description: "This profile constrains the Specimen resource for the purpose of l
 If the ServiceRequest can be updated when the specimen is collected then the ServiceRequest.specimen or the Specimen.request could be used.
 Otherwise the relationship is recorded in the Specimen.request element"""
 
-//=== COMMENTED UNTIL https://chat.fhir.org/#narrow/stream/215610-shorthand/topic/Issue.20with.20Specimen.2Ecollection.2Edevice.20R5.20extension IS NOT RESOLVED
+// ╭────────────── collection, container, processing  ───────────────────────╮
+// │ Additives are no more element of container, but Reference to processing │
+// ╰─────────────────────────────────────────────────────────────────────────╯
 
-/*
-* collection.extension contains $specimen-collection-device-r5 named SpecimenCollectionDeviceR5 0..1
-* collection.extension[SpecimenCollectionDeviceR5]
-*/
-
-* collection.bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
-
-
+* collection
+  * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
+    * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type"
+  * extension contains $bodySite named bodySite 0..1
+  * extension[bodySite].valueReference only Reference(BodyStructureEuLab)
 * processing.additive only Reference(Substance or SpecimenAdditiveSubstance)
-* container.type from LabSpecimenContainerEu (preferred)
+* container
+  * type from LabSpecimenContainerEu (preferred)
+  * additive[x] 0..0
+  * extension contains $specimen-container-device-r5 named device 0..1
+  * extension[device].valueReference only Reference(Device)
 
 // ----------------------------------------
 

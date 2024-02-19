@@ -208,7 +208,7 @@ Usage: #inline
 * result[+] = Reference(urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c) // Observation-CRP
 * result[+] = Reference(urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d) // Observation-D-Dimer
 
-// ╭────────────── Patient 1-tvt ────╮
+// ╭──────── Patient 1-tvt ──────────╮
 // │ Scenario deep vein thrombosis   │
 // ╰─────────────────────────────────╯
 Instance: HansGuggindieluft

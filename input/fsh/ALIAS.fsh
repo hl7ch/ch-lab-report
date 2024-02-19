@@ -30,11 +30,14 @@ Alias: $obs-interpretation            = http://terminology.hl7.org/CodeSystem/v3
 Alias: $imposeProfile                 = http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
 
 // Extensions
+Alias: $bodySite                      = http://hl7.org/fhir/StructureDefinition/bodySite
+// Alias: $bodySite-reference            = http://hl7.org/fhir/StructureDefinition/bodySite
 Alias: $information-recipient         = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $diagnostic-report-composition-r5  = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
 Alias: $event-performerFunction       = http://hl7.org/fhir/StructureDefinition/event-performerFunction
 Alias: $observation-instantiates-r5   = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.instantiates[x]
 Alias: $observation-triggeredBy-r5    = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
+Alias: $specimen-container-device-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.container.device
 Alias: $specimen-feature-r5           = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature
 Alias: $specimen-feature-type-r5      = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature.type
 Alias: $observationDefinition-device-r5   = http://hl7.org/fhir/5.0/StructureDefinition/extension-ObservationDefinition.device
