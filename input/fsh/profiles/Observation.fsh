@@ -10,12 +10,15 @@ Description: "This profile constrains the Observation resource for the purpose o
 // ╭── extension ObservationInstantiatesR5 ──╮
 // │  Instantiates ObservationDefinitionR5   │
 // ╰─────────────────────────────────────────╯
-* extension contains ObservationInstantiatesR5 named observation-instantiates-r5 0..1  //1..1
-* extension[observation-instantiates-r5]
-  * ^short = "instantiate observationDefinition r5"
-  * ^definition = "This extension implements the R5 instantiates[x] element, to link the ch-lab-result to the observationDefinition r5"
-  * valueReference 0..1  //1..1
-// * valueReference only Reference(ObservationDefinition)
+* insert SetFmmandStatusRule ( 2, trial-use)
+* ^experimental = false
+* ^purpose = "This profile constrains the Observation resource to represent a laboratory in vitro diagnostic test or panel/study. In case of a panel/study, the results of the panel appear as sub-observations. In this case this top-level Observation acts as a grouper of all the observations belonging to the panel or study.  The top-level observation may carry a conclusion in the value element and or a global interpretation by the producer of the study, in the comment element."
+* insert ObservationResultsEu
+// * obeys eu-lab-1
+// * obeys eu-lab-2
+* . ^short = "Laboratory result for a simple test or for a panel/study"
+* . ^definition = "This observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and references the atomic results of the study as \"has-member\" child observations"
+* . ^comment = "Represents either a lab simple observation or the group of observations produced by a laboratory study."
 
 // * extension contains $observation-analysis-time named analysis-time 0..1
 * extension contains $workflow-supportingInfo named supportingInfo 0..*
@@ -28,10 +31,8 @@ Description: "This profile constrains the Observation resource for the purpose o
 * extension contains ObservationCertifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..*
 
 * extension contains DeviceLabTestKit named labTestKit 0..*
-* extension[labTestKit].valueReference 
   * ^short = "Laboratory Test Kit"
   * ^definition = """The laboratory test kit used for this test."""
-
 
 * category only $CodeableConcept-uv-ips
 * category ^slicing.discriminator.type = #pattern

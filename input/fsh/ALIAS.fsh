@@ -21,13 +21,17 @@ Alias: $resource-types                = http://hl7.org/fhir/fhir-types
 Alias: $ucum                          = http://unitsofmeasure.org
 Alias: $observation-category          = http://terminology.hl7.org/CodeSystem/observation-category
 
-// External Structure Definitions
+// Value Sets
+Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips
+
+// External Profiles
+Alias: $ext-data-absent-reason        = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $imposeProfile                 = http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
 Alias: $dr-eu-lab                     = http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab
 Alias: $obs-resultslab-eu-lab         = http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab
 Alias: $CodeableConcept-uv-ips        = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 Alias: $obs-interpretation            = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
-Alias: $imposeProfile                 = http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
+Alias: $Range-uv-ips                  = http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips
 
 // Extensions
 Alias: $bodySite                      = http://hl7.org/fhir/StructureDefinition/bodySite
@@ -42,6 +46,7 @@ Alias: $specimen-feature-r5           = http://hl7.org/fhir/5.0/StructureDefinit
 Alias: $specimen-feature-type-r5      = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature.type
 Alias: $observationDefinition-device-r5   = http://hl7.org/fhir/5.0/StructureDefinition/extension-ObservationDefinition.device
 Alias: $observationDefinition-specimen-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ObservationDefinition.specimen
+Alias: $observation-value-r5          = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
 Alias: $workflow-supportingInfo       = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
 // Alias:   $diagnostic-report-result-r5  =  http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.result
 
