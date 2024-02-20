@@ -58,7 +58,7 @@ Description: "This profile constrains the Observation resource for the purpose o
 * code ^comment = "In the context of this Observation-laboratory-uv-ips profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
 * performer 1..
 //* performer only Reference(PractitionerRoleEu or PractitionerEu or OrganizationUvIps or CareTeam or PatientEuLab or RelatedPerson)
-* performer only Reference(ChLabPractitionerRole or ChLabPractitioner or ChLabOrganization)
+* performer only Reference(ChLabPractitionerRole or ChLabPractitioner or CHCoreOrganization)
 // * performer.extension contains $event-performerFunction named performerFunction 0..*
 // * performer.extension[performerFunction] = $v3-ParticipationType#RESP
 

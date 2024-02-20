@@ -13,7 +13,7 @@ RuleSet: ObservationResultsEu
 * effective[x].extension contains $ext-data-absent-reason named data-absent-reason 0..1
 * effective[x].extension[data-absent-reason] ^short = "effective[x] absence reason"
 * effective[x].extension[data-absent-reason] ^definition = "Provides a reason why the effectiveTime is missing."
-* performer only Reference(ChLabPractitioner or ChLabPractitionerRole or ChLabOrganization or CareTeam or PatientEuLab or RelatedPerson)
+* performer only Reference(ChLabPractitioner or ChLabPractitionerRole or CHCoreOrganization or CareTeam or PatientEuLab or RelatedPerson)
 // * value[x] MS
 // removed circular reference
 // * hasMember only Reference(ObservationResultsEu or Observation or QuestionnaireResponse or MolecularSequence)
