@@ -4,28 +4,49 @@ RuleSet: ReportIdentifierRule
   * ^definition = "Identifiers assigned to this Laboratory Report by the performer or other systems. It shall be common to several report versions"
   * ^comment = "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
 
-//--------------------------------------------
-RuleSet: NoSubSectionsRules
-* section ..0
-* section ^mustSupport = false
+// ╭──────────────── Section rules ─────────────────────────────╮
+// │  SectionCommonRules, SectionComRules, SectionElementsRules │
+// │  NoSubSectionsRules, SectionEntrySliceComRules             │
+// ╰────────────────────────────────────────────────────────────╯
+
+RuleSet: SectionCommonRules
+* section.title 1..
+* section.code 1..
+
+RuleSet: SectionComRules (short, def, code)
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* ^extension[0].valueString = "Section"
+* ^short = "{short}"
+* ^definition = "{def}"
+* title 1..
+* code 1..
+* code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+* code = {code} (exactly)
+* text 1..
+* text only Narrative
+* emptyReason ..0
+* emptyReason ^mustSupport = false
 
 RuleSet: SectionElementsRules
 * code from LabStudyTypesEuVs (preferred)
 * text ^short = "Text summary of the section, for human interpretation."
 * entry only Reference (ChLabObservationResultsLaboratory)
-// * entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)
-// * entry ^comment = "The DiagnosticReport referred in the entry SHALL NOT be that representing the whole Laboratory Report"
 * entry 1..
 * section ..0
 
-RuleSet: SectionCommonRules
-* section.title 1..
-* section.code 1..
-//* section.code only $codeableConcept-uv-ips
+RuleSet: NoSubSectionsRules
+* section ..0
+* section ^mustSupport = false
 
-/* Invariant: labRpt-category
-Description: "DiagnosticReport.category and Composition.category shall be aligned"
-Severity:    #warning */
+RuleSet: SectionEntrySliceComRules (short, def)
+* entry ^slicing.discriminator[0].type = #type
+* entry ^slicing.discriminator[0].path = "resolve()"
+* entry ^slicing.ordered = false
+* entry ^slicing.rules = #open
+* entry ^short = "{short}"
+* entry ^definition = "{def}"
+
+//--------------------------------------------
 
 RuleSet: ReportCategoryRule
 * category /* obeys labRpt-category */
@@ -45,3 +66,20 @@ RuleSet: ReportCategoryRule
 * category[specialty] only $CodeableConcept-uv-ips
 * category[specialty] from LabSpecialtyEuVs
 * category[specialty] ^short = "The way of grouping of the test results into clinically meaningful groups (e.g. liver test; minerals; glucose profiles)"
+
+// ╭──────────────── FMM FHIR Maturity Levels ──────────────────────╮
+// │  FMM 1..6  https://build.fhir.org/versions.html#maturity       │
+// │  SetFmmandStatusRule, SetFmmandStatusRuleInstance              │
+// │  standard status: informative, draft, trial-use, normative, ...│
+// │  http://hl7.org/fhir/ValueSet/standards-status                 │
+// ╰────────────────────────────────────────────────────────────────╯
+
+RuleSet: SetFmmandStatusRule ( fmm, status )
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
+
+
+RuleSet: SetFmmandStatusRuleInstance ( fmm, status )
+// Rule to be used for Instances
+* extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}
+* extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}

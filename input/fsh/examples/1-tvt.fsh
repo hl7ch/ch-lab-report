@@ -208,7 +208,7 @@ Usage: #inline
 * result[+] = Reference(urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c) // Observation-CRP
 * result[+] = Reference(urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d) // Observation-D-Dimer
 
-// ╭────────────── Patient 1-tvt ────╮
+// ╭──────── Patient 1-tvt ──────────╮
 // │ Scenario deep vein thrombosis   │
 // ╰─────────────────────────────────╯
 Instance: HansGuggindieluft
@@ -543,7 +543,7 @@ Usage: #inline
 // │ Blood-coag, Blood, Serum │
 // ╰──────────────────────────╯
 Instance: Blood
-InstanceOf: ChLabReportSpecimen
+InstanceOf: ChLabSpecimen
 Title: "Blood Sample"
 Description: "Example for Specimen for Haematological Examination"
 Usage: #inline
@@ -558,7 +558,7 @@ Usage: #inline
 * note.text = "Specimen is grossly lipemic"
 
 Instance: Blood-coag
-InstanceOf: ChLabReportSpecimen
+InstanceOf: ChLabSpecimen
 Title: "Blood Sample Coagulation"
 Description: "Example for Specimen for haemostatic Examination"
 Usage: #inline
@@ -581,7 +581,7 @@ Usage: #inline
 // * container.additiveCodeableConcept = $v2-0371#C38 "3.8% Citrate" 
 
 Instance: Serum
-InstanceOf: ChLabReportSpecimen
+InstanceOf: ChLabSpecimen
 Title: "Serum Sample"
 Description: "Example for Specimen of Serum from venous blood"
 Usage: #inline

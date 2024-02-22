@@ -16,9 +16,9 @@ Description: "This profile constrains the Bundle resource for the purpose of lab
 * entry[DiagnosticReport].resource only ChLabDiagnosticReport
 * entry[Patient].resource only ChLabPatient
 * entry[Observation].resource only ChLabObservationResultsLaboratory
-* entry[Specimen].resource only ChLabReportSpecimen
+* entry[Specimen].resource only ChLabSpecimen
 * entry[ServiceRequest].resource only ChLabReportServiceRequest
 * entry[PractitionerRole].resource only ChLabPractitionerRole
 * entry[Practitioner].resource only ChLabPractitioner
-* entry[Organization].resource only CHCoreOrganization
+// * entry[Organization].resource only CHCoreOrganization
 

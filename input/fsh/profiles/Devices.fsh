@@ -3,6 +3,7 @@
 // ╰──────────────────────╯
 Profile: ChLabReportDeviceTestKit
 Parent: Device
+Title: "Ch Lab Report Device TestKit"
 Id: ch-lab-report-device-test-kit
 Description: "Holds Laboratory Test-Kit"
 * definition MS
@@ -26,6 +27,7 @@ Description: "Holds Laboratory Test-Kit"
 // ╰──────────────────────╯
 Profile: ChLabReportDeviceAnalyzer
 Parent: Device
+Title: "Ch LabReport Device Analyzer"
 Id: ch-lab-report-device-analyzer
 Description: "Holds Laboratory Analyzer"
 
@@ -41,3 +43,8 @@ Description: "Holds Laboratory Analyzer"
 
 // * category = $device-categorie#in-vitro	"Tests done on samples such as blood or tissue that have been taken from the human body."
 * type = $sct#30234008 "Medical laboratory analyzer, device (physical object)"
+
+/* 
+For further examples look at
+https://github.com/hl7-eu/laboratory/blob/master/input/fsh/examples/lab_report/Observation-result-ratio-example.fsh
+*/

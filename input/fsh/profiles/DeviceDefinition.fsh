@@ -1,5 +1,6 @@
 Profile: ChLabReportDeviceDefinition  // Test-Kit or Analyzer
 Parent: DeviceDefinition
+Title: "Ch Lab Report Device Definition"
 Id: ch-lab-report-device-definition
 Description: "Holds udiDeviceIdentifier from Test , regulatoryIdentifier,"
 

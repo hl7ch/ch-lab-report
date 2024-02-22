@@ -1,5 +1,6 @@
 Profile: ChLabObservationDefinition
 Parent: ObservationDefinition
+Title: "Ch Lab ObservationDefinition"
 Id: ch-lab-observation-ActivityDefinition
 Description: "Contains the Identifier for the Test-Kit and the Analyzer, the methods, the ranges"
 
@@ -11,7 +12,7 @@ Description: "Contains the Identifier for the Test-Kit and the Analyzer, the met
   * ^short = "Associated Lab Report SpecimenDefinitions"
   * ^definition = "This extension implements the R5 specimen element. It allow to link this DiagnoticReport with the SpecimenDefinition R5 documenting this Laboratory Report."
   *  valueReference 0..1 MS
-  *  valueReference only Reference(ChLabReportSpecimenDefinition)
+  *  valueReference only Reference(ChLabSpecimenDefinition)
 
 // ╭─── Extension ────────╮
 // │  DeviceDefinitionR5  │

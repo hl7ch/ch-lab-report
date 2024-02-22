@@ -27,6 +27,14 @@ Description: "This profile constrains the Composition resource for the purpose o
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(ChLabPractitioner or Device or ChLabPatient or RelatedPerson or ChLabPractitionerRole or CHCoreOrganization)
 
+* extension contains DiagnosticReportReference named diagnosticReport-reference 0..1
+* extension[diagnosticReport-reference].valueReference only Reference(ChLabDiagnosticReport)
+* extension[diagnosticReport-reference].valueReference 1..1
+* extension[diagnosticReport-reference].valueReference.reference 1..
+
+  * ^comment = """Added to the FHIR R4 guide to strctly conform with the R4 rules for document bundle resources inclusion.
+  Using this extension implies to accept a circular reference Composition to/from  DiagnosticReport"""
+
 // * text ^short = "Narrative text"
 * insert ReportIdentifierRule
 
@@ -60,7 +68,7 @@ Description: "This profile constrains the Composition resource for the purpose o
 * section[lab-subsections]
   * ^short = "Variant 2: EU Laboratory Report section with one to many subsections Laboratory Report Item"
   * ^definition = """Variant 2: With this option, this top level section doesn't include NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding sub-sections which contains the Lab Report Data Entry."""
-// * code only $codeableConcept-uv-ips
+  // * code only $CodeableConcept-uv-ips
   * code from LabStudyTypesEuVs (preferred)
   * text 0..0
   * entry 0..0
