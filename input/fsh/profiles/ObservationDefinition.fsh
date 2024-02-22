@@ -1,5 +1,6 @@
 Profile: ChLabObservationDefinition
 Parent: ObservationDefinition
+Title: "Ch Lab ObservationDefinition"
 Id: ch-lab-observation-ActivityDefinition
 Description: "Contains the Identifier for the Test-Kit and the Analyzer, the methods, the ranges"
 

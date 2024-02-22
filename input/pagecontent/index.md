@@ -54,7 +54,15 @@ This implementation guide contains and references intellectual property owned by
 
 {% include cross-version-analysis.xhtml %}
 
-### Dependency Table
+### Dependencies
+
+#### Dependency Overview
+
+This overview illustrates the relevant dependencies of CH ELM to the [Swiss implementation guides](https://fhir.ch/) and the [European laboratory project](https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html).
+
+{% include img.html img="Dependency Overview.png" caption="Fig. 1: Dependency Overview" width="40%" %}
+
+#### Dependency Table
 
 {% include dependency-table.xhtml %}
 
