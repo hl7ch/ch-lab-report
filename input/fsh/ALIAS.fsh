@@ -35,7 +35,7 @@ Alias: $Range-uv-ips                  = http://hl7.org/fhir/uv/ips/StructureDefi
 
 // Extensions
 Alias: $bodySite                      = http://hl7.org/fhir/StructureDefinition/bodySite
-// Alias: $bodySite-reference            = http://hl7.org/fhir/StructureDefinition/bodySite
+Alias: $cd-version-number             = http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
 Alias: $information-recipient         = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $diagnostic-report-composition-r5  = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
 Alias: $event-performerFunction       = http://hl7.org/fhir/StructureDefinition/event-performerFunction

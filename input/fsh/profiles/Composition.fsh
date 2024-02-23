@@ -4,23 +4,18 @@ Parent: CHCoreComposition
 Id: ch-lab-report-composition
 Title: "CH Lab Composition: Laboratory Report"
 Description: "This profile constrains the Composition resource for the purpose of laboratory test reports in Switzerland."
-* . ^short = "CH Lab Composition: Laboratory Report"
-* ^extension[$imposeProfile].valueCanonical = Canonical(CompositionLabReportEu)
-
-// * category = $sct#4241000179101 // Laboratory report (record artifact)
-* insert ReportCategoryRule
-
-* subject only Reference(ChLabPatient)
-* author only Reference(ChLabPractitionerRole or ChLabPractitioner or CHCoreOrganization)
-* custodian only Reference(CHCoreOrganization)
+* insert SetFmmandStatusRule ( 2, trial-use)
+* . ^short = "Laboratory Report composition"
+* . ^definition = "Laboratory Report composition.
+\r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 
 // ╭──────── extensions ─────────╮
 // │  basedOnOrderOrRequisition  │
 // │  InformationRecipient       │
 // ╰─────────────────────────────╯
-
-// * extension contains ChLabCompositionVersionNumber named versionNumber 0..*
-// * extension[versionNumber].valueString only string
+* ^extension[$imposeProfile].valueCanonical = Canonical(CompositionLabReportEu)
+* extension contains $cd-version-number named versionNumber 0..*
+* extension[versionNumber].valueString only string
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition].valueReference only Reference(ChLabReportServiceRequest)
 
@@ -32,6 +27,13 @@ Description: "This profile constrains the Composition resource for the purpose o
 * extension[diagnosticReport-reference].valueReference 1..1
 * extension[diagnosticReport-reference].valueReference.reference 1..
 
+// * category = $sct#4241000179101 // Laboratory report (record artifact)
+* insert ReportCategoryRule
+
+* subject only Reference(ChLabPatient)
+* author only Reference(ChLabPractitionerRole or ChLabPractitioner or CHCoreOrganization)
+* custodian only Reference(CHCoreOrganization)
+
   * ^comment = """Added to the FHIR R4 guide to strctly conform with the R4 rules for document bundle resources inclusion.
   Using this extension implies to accept a circular reference Composition to/from  DiagnosticReport"""
 
@@ -39,7 +41,7 @@ Description: "This profile constrains the Composition resource for the purpose o
 * insert ReportIdentifierRule
 
 // ╭──────── sections ───────────────╮
-// │     Common rules                │
+// │ Common rules for all sections   │
 // ╰─────────────────────────────────╯
 * section 1..
   * ^slicing.discriminator[+].type = #exists
