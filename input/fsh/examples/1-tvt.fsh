@@ -148,11 +148,12 @@ Usage: #inline
 * attester.party = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) // Who attested the report
 * custodian = Reference(urn:uuid:84483dc8-81d3-41cc-8d24-10c241279024)
 
-// ╭────────────── Composition.sections ────────────────────────────────────────────────────╮
-// │            sections contain all References of Observations                             │
-// │               or requisition [ServiceRequest.requisition]                              │
-// │ (i.e., 'Request.groupIdentifier')] that this report document is based on and fulfills  │
-// ╰────────────────────────────────────────────────────────────────────────────────────────╯
+// ╭────────────── Composition.sections ─────────────────╮
+// │ sections contain all References of Observations     │
+// │ or requisition [ServiceRequest.requisition]         │
+// │ (i.e., 'Request.groupIdentifier')]                  │
+// │ that this report document is based on and fulfills  │
+// ╰─────────────────────────────────────────────────────╯
 
 * section[lab-subsections].title = "Laboratory examinations"
 * section[lab-subsections].code  = $loinc#26436-6 "Laboratory studies (set)"
