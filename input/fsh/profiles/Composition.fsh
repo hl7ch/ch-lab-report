@@ -54,23 +54,23 @@ Description: "This profile constrains the Composition resource for the purpose o
 
 * insert SectionCommonRules
 
-// ╭──────── sections ───────────────╮
-// │     single Section 0..1         │
-// ╰─────────────────────────────────╯
+// ╭────── sections ─────────╮
+// │  single Section 0..1    │
+// ╰─────────────────────────╯
 * section contains lab-no-subsections ..* // check if ..1 or ..*
 * section[lab-no-subsections]
   * ^short = "Variant 1: EU Laboratory Report section with entries and no sub-sections"
   * ^definition = """Variant 1: With this option, all laboratory report data entries are provided in the top level sections and no sub-sections are allowed."""
   * insert SectionElementsRules
 
-// ╭──────── sections ────────────────────────╮
-// │     structured Sections  0 .. 1          │
-// ╰──────────────────────────────────────────╯
+// ╭────── sections ────────────────╮
+// │  structured Sections  0 .. 1   │
+// ╰────────────────────────────────╯
 * section contains lab-subsections ..* // check if ..1 or ..*
 * section[lab-subsections]
   * ^short = "Variant 2: EU Laboratory Report section with one to many subsections Laboratory Report Item"
   * ^definition = """Variant 2: With this option, this top level section doesn't include NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding sub-sections which contains the Lab Report Data Entry."""
-  // * code only $CodeableConcept-uv-ips
+  * code only $CodeableConcept-uv-ips
   * code from LabStudyTypesEuVs (preferred)
   * text 0..0
   * entry 0..0
