@@ -184,7 +184,7 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report         │
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
-
+* extension[versionNumber].valueString = "V1"
 * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
 * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b)   //  ServiceRequest-anaerobe-culture
 * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8)   //  ServiceRequest-aerobe-culture

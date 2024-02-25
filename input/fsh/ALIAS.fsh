@@ -2,6 +2,7 @@
 Alias: $loinc                         = http://loinc.org
 Alias: $sct                           = http://snomed.info/sct
 Alias: $v2-0074                       = http://terminology.hl7.org/CodeSystem/v2-0074 // diagnosticServiceSectionId, ca
+Alias: $v2-0131                       = http://terminology.hl7.org/CodeSystem/v2-0131
 Alias: $v2-0203                       = http://terminology.hl7.org/CodeSystem/v2-0203 // identifierType
 Alias: $v2-0360                       = http://terminology.hl7.org/CodeSystem/v2-0360 // qualification Code
 Alias: $v2-0371                       = http://terminology.hl7.org/CodeSystem/v2-0371 // additivePreservative
@@ -14,6 +15,7 @@ Alias: $v3-ObservationInterpretation  = http://terminology.hl7.org/CodeSystem/v3
 // Alias: $v3-ParticipationType          = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $v3-MaritalStatus              = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
 Alias: $v3-EntityCode                 = http://terminology.hl7.org/CodeSystem/v3-EntityCode // Entity the instancerepresents, e.g. a blood collection tube
+Alias: $v3-RoleCode                   = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $device-categorie              = http://hl7.org/fhir/device-category
 Alias: $observation-category          = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $labStudyType                  = http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab
