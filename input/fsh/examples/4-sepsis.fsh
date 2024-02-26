@@ -203,15 +203,15 @@ Usage: #inline
 // * type.text = "Laboratory Report"
 
 // Composition Subject must be same as in DiagnosticReport
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * date = "2023-03-09T14:30:00+01:00"
-* author = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
+* author = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
 * author.display = "Dr. Beat Bunsen"
 * title = "Laboratory Report - 10 March, 2023 14:30"
 * confidentiality = #N
 * attester.mode = #legal
 * attester.time = "2020-12-27T14:30:00+01:00"
-* attester.party = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) // Who attested the report
+* attester.party = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner" // Who attested the report
 * custodian = Reference(urn:uuid:17742f1f-ba4f-423c-b6de-463409f20431)
 
 // ╭────────────── Composition.sections ────────────────────────────────────────────────────╮
@@ -226,28 +226,27 @@ Usage: #inline
 
 * section[lab-subsections].section[+].title = "Microscopic observation [Identifier] in Blood by Gram stain"
 * section[lab-subsections].section[=].code  = $loinc#87969-2
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:a335d2df-6f77-4ae8-bb6e-f7086fd25de0) // Observation-gram-stain
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:a335d2df-6f77-4ae8-bb6e-f7086fd25de0) "Observation-gram-stain"
 
 * section[lab-subsections].section[+].title = "Anaerobic culture technique (qualifier value)"
 * section[lab-subsections].section[=].code  = $sct#703751005
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:cea62faa-60b7-442b-b76a-da70ed2d92b1) // Observation-anaerobe-culture
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:cea62faa-60b7-442b-b76a-da70ed2d92b1) "Observation-anaerobe-culture"
 
 * section[lab-subsections].section[+].title = "Aerobic culture technique (qualifier value)"
 * section[lab-subsections].section[=].code  = $sct#703750006
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb) // Observation-aerobe-culture
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb) "Observation-aerobe-culture"
 
 * section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
 * section[lab-subsections].section[=].code  = $loinc#29576-6
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:531337e5-48ec-4ed7-a81f-d30d16b3d7cb)  // Observation-anaerobe-culture-org-1-susc-panel
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:531337e5-48ec-4ed7-a81f-d30d16b3d7cb) "Observation-anaerobe-culture-org-1-susc-panel"
 
 * section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
 * section[lab-subsections].section[=].code  = $loinc#29576-6
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d)
-
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:531337e5-48ec-4ed7-a81f-d30d16b3d7cb) "Observation-anaerobe-culture-org-2-susc-panel"
 
 * section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
 * section[lab-subsections].section[=].code  = $loinc#29576-6
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d)
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:8c8b2f58-4cc1-4c21-8a92-e65ce31e60b1) "Observation-anaerobe-culture-org-3-susc-panel"
 
 
 // ╭──────────── DiagnosticReport 4-sepsis ──────────────────╮
@@ -265,10 +264,10 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:07436e49-5e49-4b72-95cd-13a3921b880f"
 
-* basedOn[+] = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
-* basedOn[+] = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b)  //  ServiceRequest-anaerobe-culture
-* basedOn[+] = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8)  //  ServiceRequest-aerobe-culture
-* basedOn[+] = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)  //  ServiceRequest-urine-culture
+* basedOn[+] = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7) "ServiceRequest-gram-stain"
+* basedOn[+] = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b) "ServiceRequest-anaerobe-culture"
+* basedOn[+] = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8) "ServiceRequest-aerobe-culture"
+* basedOn[+] = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e) "ServiceRequest-urine-culture"
 
 * status = #final
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
@@ -276,26 +275,26 @@ Usage: #inline
 
 * code = $loinc#11502-2 "Laboratory report"
 
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
 * performer = Reference(urn:uuid:06929c8b-9fb9-43fe-b12c-439fd470be59)
 * performer.display = "Dr. Beat Bunsen"
 
 
-* specimen[0] = Reference(urn:uuid:4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
-* specimen[+] = Reference(urn:uuid:4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
-* specimen[+] = Reference(urn:uuid:7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
-* specimen[+] = Reference(urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
-* specimen[+] = Reference(urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
+* specimen[0] = Reference(urn:uuid:4fcf2138-6def-4b6e-beaa-35ee09d9cba8) "Blood-anaerob-0-min"
+* specimen[+] = Reference(urn:uuid:4b37cb2b-b9fe-4742-aacd-b03259d3035a) "Blood-anaerob-30-min"
+* specimen[+] = Reference(urn:uuid:7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2) "Blood-aerob-0-min"
+* specimen[+] = Reference(urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02) "Blood-aerob-30-min"
+* specimen[+] = Reference(urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8) "Urine-sample"
 
-* result[+] = Reference(urn:uuid:a335d2df-6f77-4ae8-bb6e-f7086fd25de0)  // Observation-gram-stain
-* result[+] = Reference(urn:uuid:cea62faa-60b7-442b-b76a-da70ed2d92b1)  // Observation-anaerobe-culture
-* result[+] = Reference(urn:uuid:3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb)  // Observation-aerobe-culture
-* result[+] = Reference(urn:uuid:0c1b30c6-9a41-4c59-a403-531654214754)  // Observation-urine-culture
+* result[+] = Reference(urn:uuid:a335d2df-6f77-4ae8-bb6e-f7086fd25de0) "Observation-gram-stain"
+* result[+] = Reference(urn:uuid:cea62faa-60b7-442b-b76a-da70ed2d92b1) "Observation-anaerobe-culture"
+* result[+] = Reference(urn:uuid:3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb) "Observation-aerobe-culture"
+* result[+] = Reference(urn:uuid:0c1b30c6-9a41-4c59-a403-531654214754) "Observation-urine-culture"
 
-* result[+] = Reference(urn:uuid:20e798b7-ef0d-4d22-9099-35219d264dac)  // Observation-org-1
-* result[+] = Reference(urn:uuid:ae61519b-b7b4-4bfc-a7a9-f272130a2300)  // Observation-org-2
-* result[+] = Reference(urn:uuid:a07e93cc-5908-4ed1-9678-afc61ef9fd9e)  // Observation-org-3
+* result[+] = Reference(urn:uuid:20e798b7-ef0d-4d22-9099-35219d264dac) "Observation-org-1"
+* result[+] = Reference(urn:uuid:ae61519b-b7b4-4bfc-a7a9-f272130a2300) "Observation-org-2"
+* result[+] = Reference(urn:uuid:a07e93cc-5908-4ed1-9678-afc61ef9fd9e) "Observation-org-3"
 
 // ╭──── 4-sepsis Patient ────╮
 // │      Katarina Keller     │
@@ -344,8 +343,8 @@ Usage: #inline
 * identifier.value = "A123456780"
 * status = #active
 * type = $v3-ActCode#EHCPOL "extended healthcare"
-* subscriber = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
-* beneficiary = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subscriber = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
+* beneficiary = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * period.end = "2012-03-17"
 * payor.identifier.system = "http://ehic.com/insurer"
 * payor.identifier.value = "123456789"
@@ -376,7 +375,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * receivedTime = "2023-11-09T07:30:00Z"
 //* request = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b)
-* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1) // Hans Hauser
+* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1) "Hans Hauser, practitioner"
 * collection.collectedDateTime = "2011-05-30T06:15:00Z"
 * collection.quantity.value = 6
 * collection.quantity.unit = "mL"
@@ -407,7 +406,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * receivedTime = "2023-11-09T06:45:00Z"
 // * request = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b)
-* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1)
+* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1) "Hans Hauser, practitioner"
 * collection.collectedDateTime = "2011-05-30T06:15:00Z"
 * collection.quantity.value = 6
 * collection.quantity.unit = "mL"
@@ -446,7 +445,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * receivedTime = "2023-11-09T07:30:00Z"
 // * request = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8)
-* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1)
+* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1) "Hans Hauser, practitioner"
 * collection.collectedDateTime = "2011-05-30T06:15:00Z"
 * collection.quantity.value = 6
 * collection.quantity.unit = "mL"
@@ -477,7 +476,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * receivedTime = "2023-11-09T07:30:00Z"
 // * request = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8)
-* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1)
+* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1) "Hans Hauser, practitioner"
 * collection.collectedDateTime = "2011-05-30T06:45:00Z"
 * collection.quantity.value = 6
 * collection.quantity.unit = "mL"
@@ -511,7 +510,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * receivedTime = "2023-11-09T07:30:00Z"
 // * request = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)
-* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1)
+* collection.collector = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1) "Hans Hauser, practitioner"
 * collection.collectedDateTime = "2011-05-30T06:15:00Z"
 * collection.quantity.value = 60
 * collection.quantity.unit = "mL"
@@ -536,14 +535,14 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microscopic observation Gram stain Nom (Bld)"  // Display Name
 * code = $loinc#87969-2 "Microscopic observation [Identifier] in Blood by Gram stain"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
-* hasMember[+] = Reference(urn:uuid:c0393c7c-bc8a-47d2-a1a9-d4e1f87c6449) // Observation-wbc
-* hasMember[+] = Reference(urn:uuid:4679fd4c-4ef3-4b91-b17c-8a97a25472fb) // Observation-org-1 -> Klebsiella pneumoniae
-* hasMember[+] = Reference(urn:uuid:ae61519b-b7b4-4bfc-a7a9-f272130a2300) // Observation-org-2 -> Escherichia coli
-* hasMember[+] = Reference(urn:uuid:e6ce8504-dadb-49c9-a997-a8ed4c7cba24) // Observation-org-3 -> Streptococcus mitis
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
+* hasMember[+] = Reference(urn:uuid:c0393c7c-bc8a-47d2-a1a9-d4e1f87c6449) "Observation-wbc"
+* hasMember[+] = Reference(urn:uuid:4679fd4c-4ef3-4b91-b17c-8a97a25472fb) "Observation-org-1 -> Klebsiella pneumoniae"
+* hasMember[+] = Reference(urn:uuid:ae61519b-b7b4-4bfc-a7a9-f272130a2300) "Observation-org-2 -> Escherichia coli"
+* hasMember[+] = Reference(urn:uuid:e6ce8504-dadb-49c9-a997-a8ed4c7cba24) "Observation-org-3 -> Streptococcus mitis"
 
 Instance: Observation-wbc
 InstanceOf: ChLabObservationResultsLaboratory
@@ -553,9 +552,9 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#72163-9 "Leukocytes [Presence] in Specimen by Gram stain"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#2667000 "Absent"
 * valueCodeableConcept.text = "None observed"
 
@@ -567,11 +566,11 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
-* hasMember[+] = Reference(urn:uuid:cd376843-9c66-4e63-b403-9299bd6c4fc2) // Observation-org-1-quant
+* hasMember[+] = Reference(urn:uuid:cd376843-9c66-4e63-b403-9299bd6c4fc2) "Observation-org-1-quant"
 
 Instance: Observation-org-1-quant
 InstanceOf: ChLabObservationResultsLaboratory
@@ -581,9 +580,9 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Observed Quantity"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#441614007 "Present + out of +++"
 * valueCodeableConcept.text = "+"
 
@@ -595,11 +594,11 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#87172008 "Gram-negative bacillus (organism)"
-* hasMember[+] = Reference(urn:uuid:e6ce8504-dadb-49c9-a997-a8ed4c7cba24) // Observation-org-2-quant
+* hasMember[+] = Reference(urn:uuid:e6ce8504-dadb-49c9-a997-a8ed4c7cba24) "Observation-org-2-quant"
 
 Instance: Observation-org-2-quant
 InstanceOf: ChLabObservationResultsLaboratory
@@ -609,9 +608,9 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Observed Quantity"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
 // * valueCodeableConcept = $sct#441614007 "Present + out of +++"
 // * valueCodeableConcept.text = "+"
 * valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
@@ -625,11 +624,11 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#664-3 "Microscopic observation [Identifier] in Specimen by Gram stain"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#59206002 "Gram-positive coccus (organism)"
-* hasMember[+] = Reference(urn:uuid:b564768f-937f-4132-a2eb-91efcf59b952) // Observation-org-3-quant
+* hasMember[+] = Reference(urn:uuid:b564768f-937f-4132-a2eb-91efcf59b952) "Observation-org-3-quant"
 
 Instance: Observation-org-3-quant
 InstanceOf: ChLabObservationResultsLaboratory
@@ -639,9 +638,9 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Observed Quantity"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
 // * valueCodeableConcept = $sct#441614007 "Present + out of +++"
 // * valueCodeableConcept.text = "+"
 * valueCodeableConcept = $sct#2667000 "Absent"
@@ -661,14 +660,14 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Bacteria identified Anaer cx Nom (Bld)" // Display Name
 * code = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 
-* hasMember[+] = Reference(urn:uuid:f89631cb-e973-4ba0-9f48-29b9472b9363) // Observation-anaerobe-culture-org-1
-* hasMember[+] = Reference(urn:uuid:5c774433-62ad-4d21-b230-6de2d138a02d) // Observation-anaerobe-culture-org-2
-* hasMember[+] = Reference(urn:uuid:296e1564-39d6-497b-9b40-e60f884dd5e4) // Observation-anaerobe-culture-org-3
+* hasMember[+] = Reference(urn:uuid:f89631cb-e973-4ba0-9f48-29b9472b9363) "Observation-anaerobe-culture-org-1"
+* hasMember[+] = Reference(urn:uuid:5c774433-62ad-4d21-b230-6de2d138a02d) "Observation-anaerobe-culture-org-2"
+* hasMember[+] = Reference(urn:uuid:296e1564-39d6-497b-9b40-e60f884dd5e4) "Observation-anaerobe-culture-org-3"
 
     // ╭── 4-sepsis Observation anaerobe-culture-org-1 ─────────╮
     // │  anaerobe-culture-org-1 org-1-growth, org-1-susc-panel │
@@ -681,13 +680,13 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#56415008 "Klebsiella pneumoniae (organism)"
-* hasMember[+] = Reference(urn:uuid:17a2d960-c34a-4276-be4a-e1e679fcf415) // Observation-anaerobe-culture-org-1-growth
-* hasMember[+] = Reference(urn:uuid:3f40981d-f233-4315-b5c2-d6092d29ea95) // Observation-anaerobe-culture-org-1-susc-panel
+* hasMember[+] = Reference(urn:uuid:17a2d960-c34a-4276-be4a-e1e679fcf415) "Observation-anaerobe-culture-org-1-growth"
+* hasMember[+] = Reference(urn:uuid:3f40981d-f233-4315-b5c2-d6092d29ea95) "Observation-anaerobe-culture-org-1-susc-panel"
 
 // -------------- org-1-growth --------------------
 Instance: Observation-anaerobe-culture-org-1-growth
@@ -698,10 +697,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
 * valueCodeableConcept.text = "++"
 
@@ -714,13 +713,13 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
-* hasMember[+] = Reference(urn:uuid:af017871-32df-4823-972c-daa256db7eb0)  // Observation-org-1-amoxi-clav
-* hasMember[+] = Reference(urn:uuid:5aa9b3c0-1057-48c2-ac73-b682fd8b9107)  // Observation-org-1-ciprofloxacin
-* hasMember[+] = Reference(urn:uuid:9a0233a6-4f0a-4022-9b4c-9a43c83e343e)  // Observation-org-1-ceftriaxone
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
+* hasMember[+] = Reference(urn:uuid:af017871-32df-4823-972c-daa256db7eb0) "Observation-org-1-amoxi-clav"
+* hasMember[+] = Reference(urn:uuid:5aa9b3c0-1057-48c2-ac73-b682fd8b9107) "Observation-org-1-ciprofloxacin"
+* hasMember[+] = Reference(urn:uuid:9a0233a6-4f0a-4022-9b4c-9a43c83e343e) "Observation-org-1-ceftriaxone"
 
 Instance: Observation-org-1-amoxi-clav
 InstanceOf: ChLabObservationResultsLaboratory
@@ -730,10 +729,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18862-3 "Amoxicillin+Clavulanate [Susceptibility]"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueQuantity.value = 2
 * valueQuantity.comparator = #<=
 * valueQuantity.code = #1
@@ -748,10 +747,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueQuantity.value = 4
 * valueQuantity.comparator = #>
 * valueQuantity.code = #1
@@ -766,10 +765,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueQuantity.value = 0.5
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
@@ -786,10 +785,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#112283007 "Escherichia coli (organism)"
 * hasMember[+] = Reference(urn:uuid:a4191434-87f5-4455-a3fd-e857fea50ea5) // Observation-aerobe-culture-org-2-growth
 * hasMember[+] = Reference(urn:uuid:531337e5-48ec-4ed7-a81f-d30d16b3d7cb) // Observation-aerobe-culture-org-2-susc-panel
@@ -803,10 +802,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
 * valueCodeableConcept.text = "++"
 
@@ -819,10 +818,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * hasMember[+] = Reference(urn:uuid:4f24af8e-00ae-417e-a87c-1c9a012b5e03)  // Observation-org-2-amoxi-clav
 * hasMember[+] = Reference(urn:uuid:1f94a3ab-1c83-4ac5-afec-75fabdf79da4)  // Observation-org-2-ciprofloxacin
 * hasMember[+] = Reference(urn:uuid:020c3f3d-a77b-42fa-a10a-c63ee7a5bd0f)  // Observation-org-2-ceftriaxone
@@ -835,10 +834,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueQuantity.value = 2
 * valueQuantity.comparator = #<=
 * valueQuantity.code = #1
@@ -853,10 +852,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueQuantity.value = 4
 * valueQuantity.comparator = #>
 * valueQuantity.code = #1
@@ -871,10 +870,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueQuantity.value = 0.5
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
@@ -891,10 +890,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#112283007 "Escherichia coli (organism)"
 * hasMember[+] = Reference(urn:uuid:8c885526-b6ed-4f99-bcc1-d294d79e0c7c) // Observation-anaerobe-culture-org-3-growth
 * hasMember[+] = Reference(urn:uuid:8c8b2f58-4cc1-4c21-8a92-e65ce31e60b1) // Observation-anaerobe-culture-org-3-susc-panel
@@ -908,10 +907,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
 * valueCodeableConcept.text = "++"
 
@@ -924,10 +923,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * hasMember[+] = Reference(urn:uuid:6dbb348d-3ce5-451a-b7db-77c2e4d27bb3)  // Observation-org-3-amoxi-clav
 * hasMember[+] = Reference(urn:uuid:eda9070d-cd59-45b3-a1fc-b79cc479c562)  // Observation-org-3-ciprofloxacin
 * hasMember[+] = Reference(urn:uuid:ad7dd57d-69c4-493f-bf4e-b919664757ba)  // Observation-org-3-ceftriaxone
@@ -940,10 +939,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueQuantity.value = 2
 * valueQuantity.comparator = #<=
 * valueQuantity.code = #1
@@ -958,10 +957,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueQuantity.value = 4
 * valueQuantity.comparator = #>
 * valueQuantity.code = #1
@@ -976,10 +975,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18895-3 "cefTRIAXone [Susceptibility]"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueQuantity.value = 0.5
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
@@ -1003,10 +1002,10 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Bacteria identified Aer cx Nom (Bld)" // Display Name
 * code = $loinc#17928-3 "Bacteria identified in Blood by Aerobe culture"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 
 * hasMember[+] = Reference(urn:uuid:8b07a6b9-fefd-4ee5-87e1-04cdc4a15327) // Observation-aerobe-culture-org-1
 * hasMember[+] = Reference(urn:uuid:dc20d7a8-a2ec-4291-b70e-b3049ea05cf3) // Observation-aerobe-culture-org-2
@@ -1020,10 +1019,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#56415008 "Klebsiella pneumoniae (organism)"
 * hasMember[+] = Reference(urn:uuid:f251d8b4-54fb-4060-89fe-f17e54874124) // Observation-aerobe-culture-org-1-growth
 // * hasMember[+] = Reference(urn:uuid:531337e5-xxxx-4ed7-a81f-d30d16b3d7cb) // Observation-aerobe-culture-org-1-susc-panel
@@ -1036,10 +1035,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
 * valueCodeableConcept.text = "++"
 
@@ -1052,10 +1051,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#112283007 "Escherichia coli (organism)"
 * hasMember[+] = Reference(urn:uuid:e548aa0e-1662-4fda-838a-aa7d169ae44f) // Observation-aerobe-culture-org-2-growth
 // * hasMember[+] = Reference(urn:uuid:531337e5-xxxxx-4ed7-a81f-d30d16b3d7cb) // Observation-aerobe-culture-org-2-susc-panel
@@ -1068,10 +1067,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
 * valueCodeableConcept.text = "++"
 
@@ -1084,12 +1083,12 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#634-6 "Bacteria identified in Specimen by Aerobe culture"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#112283007 "Escherichia coli (organism)"
-* hasMember[+] = Reference(urn:uuid:1c453ab3-8e39-4530-a581-d3f87e1459fc) // Observation-aerobe-culture-org-2-growth
+* hasMember[+] = Reference(urn:uuid:1c453ab3-8e39-4530-a581-d3f87e1459fc) "Observation-aerobe-culture-org-2-growth"
 // * hasMember[+] = Reference(urn:uuid:531337e5-xxxxx-4ed7-a81f-d30d16b3d7cb) // Observation-aerobe-culture-org-2-susc-panel
 
 Instance: Observation-aerobe-culture-org-3-growth
@@ -1100,10 +1099,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code.text = "Microorganism Growth"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#441517005 "Present ++ out of +++"
 * valueCodeableConcept.text = "++"
 
@@ -1126,14 +1125,14 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#29576-6 "Bacterial susceptibility panel"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
-* hasMember[+] = Reference(urn:uuid:9d3394c2-3b7b-4f88-9358-239adbeadba3)  // Observation-org-2-carbapenem-susc
-* hasMember[+] = Reference(urn:uuid:4679fd4c-4ef3-4b91-b17c-8a97a25472fb)  // Observation-org-2-ciprofloxacin-susc
-* hasMember[+] = Reference(urn:uuid:6a68a15a-5477-4d01-bfd6-fe7fa7cb97f8)  // Observation-org-2-neomycin-susc
-* hasMember[+] = Reference(urn:uuid:28a7f5b7-7ba4-4caf-ac43-80326dcf2cfb)  // Observation-org-2-vancomycin-susc
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
+* hasMember[+] = Reference(urn:uuid:9d3394c2-3b7b-4f88-9358-239adbeadba3) "Observation-org-2-carbapenem-susc"
+* hasMember[+] = Reference(urn:uuid:4679fd4c-4ef3-4b91-b17c-8a97a25472fb) "Observation-org-2-ciprofloxacin-susc"
+* hasMember[+] = Reference(urn:uuid:6a68a15a-5477-4d01-bfd6-fe7fa7cb97f8) "Observation-org-2-neomycin-susc"
+* hasMember[+] = Reference(urn:uuid:28a7f5b7-7ba4-4caf-ac43-80326dcf2cfb) "Observation-org-2-vancomycin-susc"
 
 Instance: Observation-org-2-carbapenem-susc
 InstanceOf: ChLabObservationResultsLaboratory
@@ -1144,10 +1143,10 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[studyType].text = "Mikrobielle Empfindlichkeits-Untersuchungen:Empfindlichkeit (Mikroorganismen):Zeitpunkt:^Patient:Set:"
 * code = $loinc#88462-7 "Carbapenem [Susceptibility]"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueQuantity.value = 2
 * valueQuantity.comparator = #<=
 * valueQuantity.code = #1
@@ -1163,10 +1162,10 @@ Usage: #inline
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * category[studyType].text = "Mikrobielle Empfindlichkeits-Untersuchungen:Empfindlichkeit (Mikroorganismen):Zeitpunkt:^Patient:Set:"
 * code = $loinc#18906-8 "Ciprofloxacin [Susceptibility]"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueQuantity.value = 4
 * valueQuantity.comparator = #>
 * valueQuantity.code = #1
@@ -1181,10 +1180,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#18953-0 "Neomycin [Susceptibility]"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
-* performer[+].display = "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueQuantity.value = 0.5
 * valueQuantity.code = #1
 * valueQuantity.system = $ucum
@@ -1198,10 +1197,10 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $loinc#19000-9 "Vancomycin [Susceptibility]"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer[+].display = "Beat Bunsen"
+* performer[+].display = "Beat Bunsen, practitioner"
 * valueQuantity.value = 1
 * valueQuantity.comparator = #<=
 * valueQuantity.code = #1
@@ -1223,9 +1222,9 @@ Usage: #inline
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
 * code = $sct#117011000 "Quantitative urine culture (procedure)"
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2022-10-25T13:35:00+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#441614007 "Present + out of +++"
 * valueCodeableConcept.text = "+"
 // * valueCodeableConcept = $sct#2667000 "Absent"
@@ -1260,16 +1259,16 @@ Usage: #inline
 * code.coding[0] = $loinc#87969-2 "Microscopic observation [Identifier] in Blood by Gram stain"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * requester = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f)  // urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
 // * insurance = Reference(HealthInsuranceCard)
-* specimen[+] = Reference(urn:uuid:4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
-* specimen[+] = Reference(urn:uuid:4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
-* specimen[+] = Reference(urn:uuid:7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
-* specimen[+] = Reference(urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
-* specimen[+] = Reference(urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
+* specimen[+] = Reference(urn:uuid:4fcf2138-6def-4b6e-beaa-35ee09d9cba8) "Blood-anaerob-0-min"
+* specimen[+] = Reference(urn:uuid:4b37cb2b-b9fe-4742-aacd-b03259d3035a) "Blood-anaerob-30-min"
+* specimen[+] = Reference(urn:uuid:7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2) "Blood-aerob-0-min"
+* specimen[+] = Reference(urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02) "Blood-aerob-30-min"
+* specimen[+] = Reference(urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8) "Urine-sample"
 
 Instance: ServiceRequest-anaerobe-culture
 InstanceOf: ChLabReportServiceRequest
@@ -1294,13 +1293,13 @@ Usage: #inline
 * code.coding[0] = $loinc#17934-1 "Bacteria identified in Blood by Anaerobe culture"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * requester = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f)
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
 // * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(urn:uuid:4fcf2138-6def-4b6e-beaa-35ee09d9cba8)  //  Blood-anaerob-0-min
-* specimen[+] = Reference(urn:uuid:4b37cb2b-b9fe-4742-aacd-b03259d3035a)  //  Blood-anaerob-30-min
+* specimen[0] = Reference(urn:uuid:4fcf2138-6def-4b6e-beaa-35ee09d9cba8) "Blood-anaerob-0-min"
+* specimen[+] = Reference(urn:uuid:4b37cb2b-b9fe-4742-aacd-b03259d3035a) "Blood-anaerob-30-min"
 
 Instance: ServiceRequest-aerobe-culture
 InstanceOf: ChLabReportServiceRequest
@@ -1325,13 +1324,13 @@ Usage: #inline
 * code.coding[0] = $loinc#17928-3 "Bacteria identified in Blood by Aerobe culture"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * requester = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f)
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
 // * insurance = Reference(HealthInsuranceCard)
-// * specimen[0] = Reference(urn:uuid:7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2)  //  Blood-aerob-0-min
-// * specimen[+] = Reference(urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02)  //  Blood-aerob-30-min
+// * specimen[0] = Reference(urn:uuid:7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2) "Blood-aerob-0-min"
+// * specimen[+] = Reference(urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02) "Blood-aerob-30-min"
 
 Instance: ServiceRequest-urine-culture
 InstanceOf: ChLabReportServiceRequest
@@ -1356,12 +1355,12 @@ Usage: #inline
 * code.coding[0] = $loinc#17928-3 "Bacteria identified in Blood by Aerobe culture"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
-* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b)
-* requester = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f)
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
+* requester = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f) "Hans Hauser at Kantonsspital"
 * reasonCode = $sct#238150007
 * reasonCode.text = "Sepsis syndrome (disorder)"
 // * insurance = Reference(HealthInsuranceCard)
-* specimen[0] = Reference(urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8)  //  Urine-sample
+* specimen[0] = Reference(urn:uuid:77ed2f36-b4b1-42da-bc57-563e293c04e8) "Urine-sample"
 
 // ╭────── PractitionerRole 4-sepsis ──────────────────────────────────────╮
 // │ Hans Hauser: CHCorePractitionerRole CHCoreOrganization: Kantonsspital │
@@ -1373,8 +1372,8 @@ Title: "Hans Hauser at Kantonsspital"
 Description: "PractitionerRole, refers to 4-sepsis"
 Usage: #inline
 * id = "10b95d3c-5402-4631-a404-e0d7e74c9a8f"
-* practitioner = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1)
-* organization = Reference(urn:uuid:37e198ba-ebae-4438-bf8f-faa42eff82c6)
+* practitioner = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1) "Hans Hauser, practitioner"
+* organization = Reference(urn:uuid:37e198ba-ebae-4438-bf8f-faa42eff82c6) "Kantonsspital"
 * code = urn:oid:2.16.840.1.113883.2.9.6.2.7#3212	 "Medical and Pathology Laboratory Technicians"
 
 Instance: HansHauser
@@ -1433,13 +1432,13 @@ Title: "Beat Bunsen at Labor Gantenbein"
 Description: "PractitionerRole, refers to 1-tvt"
 Usage: #inline
 * id = "06929c8b-9fb9-43fe-b12c-439fd470be59"
-* practitioner = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052)
+* practitioner = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
 * organization = Reference(urn:uuid:17742f1f-ba4f-423c-b6de-463409f20431)
 * code = urn:oid:2.16.840.1.113883.2.9.6.2.7#3212	 "Medical and Pathology Laboratory Technicians"
 
 Instance: BeatBunsen
 InstanceOf: ChLabPractitioner
-Title: "Beat Bunsen"
+Title: "Beat Bunsen, practitioner"
 Description: "Specialist for Laboratory Medicine, works in Labor Pipette"
 Usage: #inline
 * id = "12328339-f7d6-4bb6-80e4-89fd03ce5052"
