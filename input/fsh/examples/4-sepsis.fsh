@@ -185,10 +185,10 @@ Usage: #inline
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
 * extension[versionNumber].valueString = "V1"
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7)  //  ServiceRequest-gram-stain
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b)   //  ServiceRequest-anaerobe-culture
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8)   //  ServiceRequest-aerobe-culture
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e)   //  ServiceRequest-urine-culture
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7) "ServiceRequest-gram-stain"
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b) "ServiceRequest-anaerobe-culture"
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8) "ServiceRequest-aerobe-culture"
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e) "ServiceRequest-urine-culture"
 
 
 // Composition Identifier must be same as in DiagnosticReport
@@ -297,9 +297,9 @@ Usage: #inline
 * result[+] = Reference(urn:uuid:ae61519b-b7b4-4bfc-a7a9-f272130a2300)  // Observation-org-2
 * result[+] = Reference(urn:uuid:a07e93cc-5908-4ed1-9678-afc61ef9fd9e)  // Observation-org-3
 
-// ╭───── 4-sepsis Patient ────╮
-// │       Katarina Keller     │
-// ╰───────────────────────────╯
+// ╭──── 4-sepsis Patient ────╮
+// │      Katarina Keller     │
+// ╰──────────────────────────╯
 Instance: KatarinaKeller
 InstanceOf: CHCorePatient
 Title: "Katarina Keller"

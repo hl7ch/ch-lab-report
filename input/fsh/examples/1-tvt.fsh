@@ -159,6 +159,7 @@ Usage: #inline
 * section[lab-subsections].title = "Laboratory examinations"
 * section[lab-subsections].code  = $loinc#26436-6 "Laboratory studies (set)"
 * section[lab-subsections].code.text = "Laboratory studies"
+
 * section[lab-subsections].section[0].title = "Hematology studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#58410-2
 * section[lab-subsections].section[=].entry = Reference(urn:uuid:0ad0810e-6eb4-11ee-b962-0242ac120002) "Observation-CBC-panel"
@@ -168,6 +169,7 @@ Usage: #inline
 * section[lab-subsections].section[+].title = "Chemistry studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#18719-5
 * section[lab-subsections].section[=].entry = Reference(urn:uuid:c0eeeb40-77ed-46f3-b8d6-5fdac0a61f7c) "Observation-CRP"
+
 * section[lab-subsections].section[+].title = "Coagulation studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#18720-3
 * section[lab-subsections].section[=].entry = Reference(urn:uuid:f30d8df7-474f-401e-b5d4-f690d28d718d) "Observation-D-Dimer"
