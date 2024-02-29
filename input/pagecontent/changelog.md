@@ -1,9 +1,16 @@
+<!-- markdownlint-disable MD041 -->
+
 All significant changes to this FHIR implementation guide will be documented on this page.
 
 ### STU 1 Sequence - v1.0.0-ballot
+
 * [#48](https://github.com/hl7ch/ch-lab-report/issues/48): Exchange the conformsTo rules with the imposeProfile extension
 * [#49](https://github.com/hl7ch/ch-lab-report/issues/49): Add the FHIR flame to the IG header
 
 ### DSTU 1 Sequence - v0.1.1 (2023-12-28)
+
 * [#270](https://github.com/hl7ch/ch-core/issues/270): Technical correction for invalid package
 
+### publisher note
+
+* reduce cardinality versionNumber of composition to 1
