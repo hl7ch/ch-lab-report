@@ -14,7 +14,7 @@ Description: "This profile constrains the Composition resource for the purpose o
 // │  InformationRecipient       │
 // ╰─────────────────────────────╯
 * ^extension[$imposeProfile].valueCanonical = Canonical(CompositionLabReportEu)
-* extension contains $cd-version-number named versionNumber 0..*
+* extension contains $cd-version-number named versionNumber 0..1
 * extension[versionNumber].valueString only string
 * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition].valueReference only Reference(ChLabReportServiceRequest)
