@@ -173,7 +173,8 @@ Usage: #example
 // │      Scenario sepis: Microbiological results            │
 // ╰─────────────────────────────────────────────────────────╯
 Instance: Composition-4-sepsis
-InstanceOf: ChLabReportComposition
+// InstanceOf: ChLabReportComposition
+InstanceOf: CompositionLabReportEu
 Description: "Example of Composition in the scenario of deep vein thrombosis"
 Usage: #inline
 * id = "832c053d-e0a0-4467-9f85-4bde09b825af"
@@ -190,12 +191,17 @@ Usage: #inline
 * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8) "ServiceRequest-aerobe-culture"
 * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e) "ServiceRequest-urine-culture"
 
+* extension[information-recipient][+].valueReference = Reference(urn:uuid:a7d5a837-288d-4234-923c-c9cb5b6f55a1) "HansHauser"
+* extension[information-recipient][+].valueReference = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "KatarinaKeller"
+
+* extension[diagnosticReport-reference].valueReference = Reference(urn:uuid:1e56bbe9-ee25-45db-a887-987090f89810) "CH LAB-Report Diagnostic Report Sepsis"
+
 
 // Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:07436e49-5e49-4b72-95cd-13a3921b880f"
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study</div><div><h3>Case study 4: Suspected sepsis</h3>      <p>The patient Katarina Keller, born 12. 12. 1975, has been in the Cantonal Hospital for some time. Last night her general condition deteriorated massively. As there is a suspicion of sepsis, the senior physician in charge, Dr Hans Hauser, orders Blood to be taken from her in the morning for a Blood culture. 30 minutes later, another aerobic and an anaerobic Blood culture is taken, as well as a urine sample. All five samples are further processed in the external laboratory Pipette. There, the laboratory practitioner Dr. Beat Bundes initates the further Tests. Germs are detected in all materials and then identified by gram stain and culture. The pathogens “Klebsiella pneumoniae” and “Escherichia coli” were detected in the four Blood culture bottles, and the bacterium “Streptococcus mitis” was also detected in one aerobic bottle. The germ identified in the urine sample is normally not pathogenic. An antibiogram is made of all three pathogens detected in the Blood. This shows that the two active substances “amoxicillin+clavulanic acid” and “ceftriaxone” are effective against all three germs. The microbiologist regularly informs Dr Hans Hauser about the various partial results.       </p>         </div></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study</div><div><h3>Case study 4: Suspected sepsis</h3>      <p>The patient Katarina Keller, born 12. 12. 1975, has been in the Cantonal Hospital for some time. Last night her general condition deteriorated massively. As there is a suspicion of sepsis, the senior physician in charge, Dr Hans Hauser, orders Blood to be taken from her in the morning for a Blood culture. 30 minutes later, another aerobic and an anaerobic Blood culture is taken, as well as a urine sample. All five samples are further processed in the external laboratory Pipette. There, the laboratory practitioner Dr. Beat Bunsen initates the further Tests. Germs are detected in all materials and then identified by gram stain and culture. The pathogens “Klebsiella pneumoniae” and “Escherichia coli” were detected in the four Blood culture bottles, and the bacterium “Streptococcus mitis” was also detected in one aerobic bottle. The germ identified in the urine sample is normally not pathogenic. An antibiogram is made of all three pathogens detected in the Blood. This shows that the two active substances “amoxicillin+clavulanic acid” and “ceftriaxone” are effective against all three germs. The microbiologist regularly informs Dr Hans Hauser about the various partial results.       </p>         </div></div>"
 * status = #final
 * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
@@ -254,6 +260,7 @@ Usage: #inline
 // ╰─────────────────────────────────────────────────────────╯
 Instance: DiagnosticReport-4-sepsis
 InstanceOf: ChLabDiagnosticReport
+Title: "CH LAB Diagnostic Report Sepsis"
 Description: "Example of DiagnosticReport for several lab results"
 Usage: #inline
 * id = "1e56bbe9-ee25-45db-a887-987090f89810"
