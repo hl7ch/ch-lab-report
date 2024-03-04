@@ -36,6 +36,7 @@ Alias: $obs-interpretation            = http://terminology.hl7.org/CodeSystem/v3
 Alias: $Range-uv-ips                  = http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips
 
 // Extensions
+Alias: $basedOn-order-or-requisition  = http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
 Alias: $bodySite                      = http://hl7.org/fhir/StructureDefinition/bodySite
 // Alias: $cd-version-number             = http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
 // Alias: $information-recipient         = http://hl7.eu/fhir/StructureDefinition/information-recipient
