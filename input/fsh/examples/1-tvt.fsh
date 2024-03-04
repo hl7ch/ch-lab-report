@@ -121,10 +121,14 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report         │
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
-* extension[versionNumber].valueString = "V1"
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666) "ServiceRequest-CBC-panel"
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c) "ServiceRequest-CRP"
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14) "ServiceRequest-D-Dimer"
+* extension[versionNumber].valueString = "V1" // 0
+
+* extension[information-recipient][+].valueReference = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "MarcMustermannArztpraxis"  //  1
+* extension[information-recipient][+].valueReference = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"        //  2
+
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666) "ServiceRequest-CBC-panel" //  3
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c) "ServiceRequest-CRP"       //  4
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14) "ServiceRequest-D-Dimer"   //  5
 
 // Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
