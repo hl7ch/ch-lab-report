@@ -81,3 +81,19 @@ Description: "This profile constrains the Composition resource for the purpose o
     * insert SectionElementsRules
     * code from LabStudyTypesEuVs (preferred)
 
+// ╭────── sections ────────────────╮
+// │  Annotation section  0 .. 1    │
+// ╰────────────────────────────────╯
+* section contains annotations ..* // check if ..1 or ..*
+* section[annotations]
+  * ^short = "Annotation comment"
+  * ^definition = """Narrative expression of comments accompanying the report, such as suggestions for evaluation, technical notes from the laboratory, etc.
+
+Examples:
+Suggestion: This result should be evaluated in relation to the patient's medical history and clinical condition.
+Technical note: A list of accredited examination(s) is available at www.laboratory.com. """
+
+  * code = http://loinc.org#48767-8
+  * text 1..
+  * entry 0..0
+  * section 0..0
