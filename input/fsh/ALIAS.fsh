@@ -1,6 +1,7 @@
 // External Code Systems
 Alias: $loinc                         = http://loinc.org
 Alias: $sct                           = http://snomed.info/sct
+Alias: $m49.htm                       = http://unstats.un.org/unsd/methods/m49/m49.htm
 Alias: $v2-0074                       = http://terminology.hl7.org/CodeSystem/v2-0074 // diagnosticServiceSectionId, ca
 Alias: $v2-0131                       = http://terminology.hl7.org/CodeSystem/v2-0131
 Alias: $v2-0203                       = http://terminology.hl7.org/CodeSystem/v2-0203 // identifierType
@@ -18,21 +19,23 @@ Alias: $v3-EntityCode                 = http://terminology.hl7.org/CodeSystem/v3
 Alias: $v3-RoleCode                   = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $device-categorie              = http://hl7.org/fhir/device-category
 Alias: $observation-category          = http://terminology.hl7.org/CodeSystem/observation-category
-Alias: $labStudyType                  = http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab
 Alias: $resource-types                = http://hl7.org/fhir/fhir-types
 Alias: $ucum                          = http://unitsofmeasure.org
 Alias: $observation-category          = http://terminology.hl7.org/CodeSystem/observation-category
 
 // Value Sets
+// Alias: $labStudyType                  = http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab
 Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips
 
 // External Profiles
+Alias: $CodeableConcept-uv-ips        = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 Alias: $ext-data-absent-reason        = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $imposeProfile                 = http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
 Alias: $dr-eu-lab                     = http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab
 Alias: $obs-resultslab-eu-lab         = http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab
 Alias: $CodeableConcept-uv-ips        = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 Alias: $obs-interpretation            = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
+Alias: $Patient-animal-eu-lab         = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-animal-eu-lab
 Alias: $Range-uv-ips                  = http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips
 
 // Extensions
@@ -40,7 +43,7 @@ Alias: $basedOn-order-or-requisition  = http://hl7.eu/fhir/StructureDefinition/c
 Alias: $bodySite                      = http://hl7.org/fhir/StructureDefinition/bodySite
 // Alias: $cd-version-number             = http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
 // Alias: $information-recipient         = http://hl7.eu/fhir/StructureDefinition/information-recipient
-Alias: $diagnostic-report-composition-r5  = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
+Alias: $extension-DiagnosticReport.composition  = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
 Alias: $event-performerFunction       = http://hl7.org/fhir/StructureDefinition/event-performerFunction
 Alias: $observation-instantiates-r5   = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.instantiates[x]
 Alias: $observation-triggeredBy-r5    = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
