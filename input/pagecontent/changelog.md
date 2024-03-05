@@ -14,3 +14,4 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### publisher note: <http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber>
 
 * reduce cardinality versionNumber of composition to 0..1
+* align DiagnosticReport and Composition to EU Laboratory
