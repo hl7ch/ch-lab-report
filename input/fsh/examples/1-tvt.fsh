@@ -242,6 +242,7 @@ Usage: #inline
 * identifier.type = $v2-0203#MR
 * identifier.system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier.value = "012/08.111111"
+* name.text = "Hans Guggindieluft"
 * name.family = "Guggindieluft"
 * name.given = "Hans"
 * telecom[0].system = #phone
@@ -334,8 +335,6 @@ Usage: #inline
 * valueQuantity = 4.58 '10*6/uL' "10*6/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "10*6/uL"
-//* referenceRange.low = 4.1 '10*6/uL' "10*6/uL"
-//* referenceRange.high = 6.1 '10*6/uL' "10*6/uL"
 
 * referenceRange.low.value = 4.1
 * referenceRange.low.unit = "10*6/uL"
@@ -359,11 +358,11 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* method = $sct#83561000052101 "Photometry technique (qualifier value)"
+* specimen = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood sammple"
 // TODO values
 * valueQuantity = 10.8 'umol/L' "umol/L"
 // * interpretation = $v3-ObservationInterpretation#HH "Critical high"
-* method = $sct#83561000052101 "Photometry technique (qualifier value)"
-* specimen = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74)
 * referenceRange.low.value = 8.7  // women 7.4
 * referenceRange.low.unit = "umol/L"
 * referenceRange.high.value = 11.2    // women 9.9
@@ -386,6 +385,7 @@ Usage: #inline
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
+* specimen = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood sammple"
 * valueQuantity = 43 '%' "%"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "%"
@@ -501,7 +501,6 @@ Usage: #inline
 * referenceRange.type = $referencerange-meaning#normal "Normal Range"
 * referenceRange.type.text = "Normal Range"
 
-
 // ========================================
 Instance: Observation-CRP
 InstanceOf: ChLabObservationResultsLaboratory
@@ -525,7 +524,7 @@ Usage: #inline
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#83611000052104 "Turbidimetry technique (qualifier value)"
 * specimen = Reference(urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786) "Serum Sample"
-* device = Reference(urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794) "TestkitCRP"
+* device = Reference(urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794) "Afinion™ CRP Test"
 * referenceRange.high.value = 10  // depends on method
 * referenceRange.high.unit = "mg/L"
 
@@ -546,15 +545,15 @@ Usage: #inline
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 1.8 'mg/L' "mg/L"
-//* interpretation = $v3-ObservationInterpretation#HH "Critical high"
+* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#726449005 "Immunoassay technique (qualifier value)"
 * specimen = Reference(urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8) "Blood Sample Coagulation"
-* device = Reference(urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066)  // TestkitD-Dimer
+* device = Reference(urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066) "Roche CARDIAC D-Dimer Testkit"
 * referenceRange.high.value = 0.5  // depends on method
 * referenceRange.high.unit = "mg/L"
 
 // ╭───── specimen 1-tvt ─────╮
-// │ Blood-coag, Blood, Serum │
+// │ Blood, Blood-coag, Serum │
 // ╰──────────────────────────╯
 Instance: Blood
 InstanceOf: ChLabSpecimen
