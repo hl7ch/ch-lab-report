@@ -1,6 +1,7 @@
 // External Code Systems
 Alias: $loinc                         = http://loinc.org
 Alias: $sct                           = http://snomed.info/sct
+Alias: $m49.htm                       = http://unstats.un.org/unsd/methods/m49/m49.htm
 Alias: $v2-0074                       = http://terminology.hl7.org/CodeSystem/v2-0074 // diagnosticServiceSectionId, ca
 Alias: $v2-0131                       = http://terminology.hl7.org/CodeSystem/v2-0131
 Alias: $v2-0203                       = http://terminology.hl7.org/CodeSystem/v2-0203 // identifierType
@@ -40,7 +41,7 @@ Alias: $basedOn-order-or-requisition  = http://hl7.eu/fhir/StructureDefinition/c
 Alias: $bodySite                      = http://hl7.org/fhir/StructureDefinition/bodySite
 // Alias: $cd-version-number             = http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
 // Alias: $information-recipient         = http://hl7.eu/fhir/StructureDefinition/information-recipient
-Alias: $diagnostic-report-composition-r5  = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
+Alias: $extension-DiagnosticReport.composition  = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
 Alias: $event-performerFunction       = http://hl7.org/fhir/StructureDefinition/event-performerFunction
 Alias: $observation-instantiates-r5   = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.instantiates[x]
 Alias: $observation-triggeredBy-r5    = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy

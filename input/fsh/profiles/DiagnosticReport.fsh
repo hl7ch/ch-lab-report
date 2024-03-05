@@ -1,7 +1,7 @@
-Profile: ChLabDiagnosticReport
+Profile: ChLabDiagnosticReport_old
 Parent: DiagnosticReport
-Id: ch-lab-diagnosticreport
-Title: "CH Lab DiagnosticReport: Laboratory Report"
+Id: ch-lab-diagnosticreport-OLD
+Title: "CH Lab DiagnosticReport OLD: Laboratory Report"
 Description: "This profile constrains the DiagnosticReport resource for the purpose of laboratory test reports in Switzerland."
 * . ^short = "CH Lab DiagnosticReport: Laboratory Report"
 
@@ -10,7 +10,7 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 // ╭─── Extension ───╮
 // │  CompositionR5  │
 // ╰─────────────────╯
-* extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
+* extension contains $extension-DiagnosticReport.composition named DiagnosticReportCompositionR5 1..1
 * extension[DiagnosticReportCompositionR5]
   * ^short = "Associated Lab Report Composition"
   * ^definition = "This extension implements the R5 composition element. It allow to link this DiagnoticReport with the Composition documenting this Laboratory Report."

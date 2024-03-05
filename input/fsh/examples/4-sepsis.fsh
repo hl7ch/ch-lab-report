@@ -260,7 +260,7 @@ InstanceOf: ChLabDiagnosticReport
 Description: "Example of DiagnosticReport for several lab results"
 Usage: #inline
 * id = "1e56bbe9-ee25-45db-a887-987090f89810"
-* extension[DiagnosticReportCompositionR5].url = $diagnostic-report-composition-r5
+* extension[DiagnosticReportCompositionR5].url = $extension-DiagnosticReport.composition
 * extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:832c053d-e0a0-4467-9f85-4bde09b825af)
 
 // must be same identifier as in Composition
