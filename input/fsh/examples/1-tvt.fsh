@@ -57,10 +57,12 @@ Usage: #example
 * entry[Specimen][=].resource = Serum
 
 //================== Device/TestKit ==========================0
-// * entry[Device][+].fullUrl = "urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794"
-// * entry[Device][=].resource = TestkitCRP
-// * entry[Device][+].fullUrl = "urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066"
-// * entry[Device][=].resource = TestkitD-Dimer
+* entry[Device][+].fullUrl = "urn:uuid:3b9c6849-cf71-45e9-9d88-31f7879342f0"
+* entry[Device][=].resource = XP-300
+* entry[Device][+].fullUrl = "urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794"
+* entry[Device][=].resource = TestkitCRP
+* entry[Device][+].fullUrl = "urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066"
+* entry[Device][=].resource = TestkitD-Dimer
 
 //================== serviceRequest ==========================0
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666"
@@ -275,15 +277,17 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* specimen = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood Sample"
+* device = Reference(urn:uuid:3b9c6849-cf71-45e9-9d88-31f7879342f0) "Sysmex XP-300"
 
-* hasMember = Reference(urn:uuid:5c1ceea1-2751-4ddc-afb5-4c28037ba1be) "Observation-WBC"
-* hasMember = Reference(urn:uuid:04ec7690-a1e8-4fdf-be4f-6c92949e948a) "Observation-RBC"
-* hasMember = Reference(urn:uuid:2565be07-47a0-4cca-926e-a57e1ac96fb8) "Observation-HGB"
-* hasMember = Reference(urn:uuid:c4d64c0a-aafb-4b41-ae0b-a620b2a6c08c) "Observation-HT"
-* hasMember = Reference(urn:uuid:857cfa10-66ea-45ae-b236-e6e03af4be3f) "Observation-MCV"
-* hasMember = Reference(urn:uuid:3b263f29-44d8-468f-b612-e748442e1845) "Observation-MCH"
-* hasMember = Reference(urn:uuid:735c9244-497a-420d-b006-15a57be365b1) "Observation-MCHC"
-* hasMember = Reference(urn:uuid:32a7d6fb-dc8a-4673-8cef-c59c1c5397db) "Observation-Platelet"
+* hasMember[+] = Reference(urn:uuid:5c1ceea1-2751-4ddc-afb5-4c28037ba1be) "Observation-WBC"
+* hasMember[+] = Reference(urn:uuid:04ec7690-a1e8-4fdf-be4f-6c92949e948a) "Observation-RBC"
+* hasMember[+] = Reference(urn:uuid:2565be07-47a0-4cca-926e-a57e1ac96fb8) "Observation-HGB"
+* hasMember[+] = Reference(urn:uuid:c4d64c0a-aafb-4b41-ae0b-a620b2a6c08c) "Observation-HT"
+* hasMember[+] = Reference(urn:uuid:857cfa10-66ea-45ae-b236-e6e03af4be3f) "Observation-MCV"
+* hasMember[+] = Reference(urn:uuid:3b263f29-44d8-468f-b612-e748442e1845) "Observation-MCH"
+* hasMember[+] = Reference(urn:uuid:735c9244-497a-420d-b006-15a57be365b1) "Observation-MCHC"
+* hasMember[+] = Reference(urn:uuid:32a7d6fb-dc8a-4673-8cef-c59c1c5397db) "Observation-Platelet"
 
 Instance: Observation-WBC
 InstanceOf: ChLabObservationResultsLaboratory
@@ -520,8 +524,8 @@ Usage: #inline
 * valueQuantity = 8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#83611000052104 "Turbidimetry technique (qualifier value)"
-* specimen = Reference(urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786)
-// * device = Reference(urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794)    //  TestkitCRP
+* specimen = Reference(urn:uuid:9b554309-f9d4-4559-ba81-91659cd11786) "Serum Sample"
+* device = Reference(urn:uuid:729d1c62-051e-4e3a-80d4-06f861b2a794) "TestkitCRP"
 * referenceRange.high.value = 10  // depends on method
 * referenceRange.high.unit = "mg/L"
 
@@ -545,7 +549,7 @@ Usage: #inline
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#726449005 "Immunoassay technique (qualifier value)"
 * specimen = Reference(urn:uuid:8d38e1bd-dced-45c1-8978-949d6cfd21e8) "Blood Sample Coagulation"
-// * device = Reference(urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066)  // TestkitD-Dimer
+* device = Reference(urn:uuid:523fa1b9-f24d-4ae6-aa98-92d7f57b2066)  // TestkitD-Dimer
 * referenceRange.high.value = 0.5  // depends on method
 * referenceRange.high.unit = "mg/L"
 
@@ -1093,3 +1097,61 @@ Usage: #inline
 * contact.address.city = "Olten"
 * contact.address.postalCode = "4600"
 * contact.address.country = "CH"
+
+// ╭────────────── Sysmex XP-300  ────────────────────────╮
+// │  automated 3-part differential haematology analyser  │
+// │             LIS (additional LAN port)                │
+// ╰──────────────────────────────────────────────────────╯
+Instance: XP-300
+InstanceOf: ChLabReportDeviceAnalyzer
+Title: "Sysmex XP-300"
+Description: "Example of a Hematology Analyzer"
+Usage: #example
+* id = "3b9c6849-cf71-45e9-9d88-31f7879342f0"
+* identifier.system = "http://www.labor-gantenbein.ch/devices/id"
+* identifier.value = "345675"
+* udiCarrier 
+  * deviceIdentifier = "040156300936045" // Unique device identifier (UDI) assigned to device label or package, same as GTIN. Fake Number !
+* status = #active
+* manufacturer = "Sysmex"
+* lotNumber = "lot.112233"
+* serialNumber = "06882382" // REF
+* deviceName
+  * name = "XP-300"
+  * type = #udi-label-name
+
+Instance: TestkitCRP
+InstanceOf: ChLabReportDeviceTestKit
+Title: "Afinion™ CRP Test"
+Description: "Example of a laboratory Testkit"
+Usage: #example
+* id = "729d1c62-051e-4e3a-80d4-06f861b2a794"
+* identifier.system = "http://www.labor-gantenbein.ch/devices/id"
+* identifier.value = "345675"
+* udiCarrier 
+  * deviceIdentifier = "040156300936045" // Unique device identifier (UDI) assigned to device label or package, same as GTIN. Fake Number !
+* status = #active
+* manufacturer = "Abbott"
+* lotNumber = "lot.112233"
+* serialNumber = "1116787" // REF
+* deviceName
+  * name = "Afinion™ CRP"
+  * type = #udi-label-name
+
+Instance: TestkitD-Dimer
+InstanceOf: ChLabReportDeviceTestKit
+Title: "Roche CARDIAC D-Dimer Testkit"
+Description: "Example of a laboratory Testkit"
+Usage: #example
+* id = "523fa1b9-f24d-4ae6-aa98-92d7f57b2066"
+* identifier.system = "http://www.labor-gantenbein.ch/devices/id"
+* identifier.value = "345675"
+* udiCarrier 
+  * deviceIdentifier = "040156300936045" // Unique device identifier (UDI) assigned to device label or package, same as GTIN. Fake Number !
+* status = #active
+* manufacturer = "Roche"
+* lotNumber = "lot.112233"
+* serialNumber = "06882382" // REF
+* deviceName
+  * name = "Roche CARDIAC D-Dimer"  // Fake Name !
+  * type = #udi-label-name
