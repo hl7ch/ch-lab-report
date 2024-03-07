@@ -257,6 +257,7 @@ Usage: #inline
 * communication.language = urn:ietf:bcp:47#de-CH
 * communication.language.text = "Deutsch (Schweiz)"
 * communication.preferred = true
+* generalPractitioner = Reference(urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37) "Dr. med. Marc Mustermann"
 
 
 // ╭────── Observation 1-tvt ──────────────────────────────────────────────╮
@@ -265,6 +266,7 @@ Usage: #inline
 
 Instance: Observation-CBC-panel
 InstanceOf: ChLabObservationResultsLaboratory
+// InstanceOf: ChLabCBC  // Own CPC Profile
 Title: "CBC panel - Blood by Automated count"
 Description: "This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the methodless version of hemoglobin in this panel."
 Usage: #inline
@@ -564,7 +566,7 @@ Usage: #inline
 * status = #available
 * type = $sct#119297000 "Blood specimen"
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* collection.collector = Reference(urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37) "Marc Mustermann"
+* collection.collector = Reference(urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37) "Dr. med. Marc Mustermann"
 * collection.collectedDateTime = "2015-08-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
 * container.type = $sct#706053007 "General specimen container"
@@ -970,7 +972,7 @@ Title: "Marc Mustermann at Arztpraxis"
 Description: "PractitionerRole, refers to 1-tvt"
 Usage: #inline
 * id = "017e8e32-2f3b-4bef-baf1-92c7278a7048"
-* practitioner = Reference(urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37) "Marc Mustermann"
+* practitioner = Reference(urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37) "Dr. med. Marc Mustermann"
 * organization = Reference(urn:uuid:32c4c990-cedb-4999-998d-bab1d55db49f)
 * code = urn:oid:2.16.840.1.113883.2.9.6.2.7#2211 "Generalist Medical Practitioners"
 

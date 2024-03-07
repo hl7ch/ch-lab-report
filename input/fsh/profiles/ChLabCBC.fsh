@@ -2,7 +2,6 @@
 // │  WBC, RBC, HGB, HT, MCV, MCH, MCHC, Platelets etc.  │
 // ╰─────────────────────────────────────────────────────╯
 
-
 Profile: ChLabCBC
 Parent: ChLabDiagnosticReport
 Id: diagnosticreport-cbc
