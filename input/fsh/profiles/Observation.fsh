@@ -7,9 +7,6 @@ Description: "This profile constrains the Observation resource for the purpose o
 
 * ^extension[$imposeProfile].valueCanonical = Canonical(ObservationResultsLaboratoryEu)
 
-// ╭── extension ObservationInstantiatesR5 ──╮
-// │  Instantiates ObservationDefinitionR5   │
-// ╰─────────────────────────────────────────╯
 * insert SetFmmandStatusRule ( 2, trial-use)
 * ^experimental = false
 * ^purpose = "This profile constrains the Observation resource to represent a laboratory in vitro diagnostic test or panel/study. In case of a panel/study, the results of the panel appear as sub-observations. In this case this top-level Observation acts as a grouper of all the observations belonging to the panel or study.  The top-level observation may carry a conclusion in the value element and or a global interpretation by the producer of the study, in the comment element."
@@ -20,19 +17,22 @@ Description: "This profile constrains the Observation resource for the purpose o
 * . ^definition = "This observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and references the atomic results of the study as \"has-member\" child observations"
 * . ^comment = "Represents either a lab simple observation or the group of observations produced by a laboratory study."
 
-// * extension contains $observation-analysis-time named analysis-time 0..1
-* extension contains $workflow-supportingInfo named supportingInfo 0..*
-
-* extension contains $observation-triggeredBy-r5 named triggeredBy-r5 0..*
+// ╭── extension ObservationInstantiatesR5 ──╮
+// │  Instantiates ObservationDefinitionR5   │
+// ╰─────────────────────────────────────────╯
+* extension ^short = "Laboratory Test Kit"
+* extension ^definition = "The laboratory test kit used for this test."
+* extension contains
+    SupportingInfo named supportingInfo 0..* and
+    $observation.triggeredBy named triggeredBy-r5 0..* and
+    $observation-certifiedRefMaterialCodeable named certifiedRefMaterialCodeable 0..* and
+    $observation-certifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..* and
+    $observation-deviceLabTestKit named labTestKit 0..* and
+    $extension-Observation.value[x] named value-r5 0..1
 * extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."
-* extension[triggeredBy-r5].extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
-
-* extension contains ObservationCertifiedRefMaterialCodeable named certifiedRefMaterialCodeable 0..*
-* extension contains ObservationCertifiedRefMaterialIdentifer named certifiedRefMaterialIdentifer 0..*
-
-* extension contains DeviceLabTestKit named labTestKit 0..*
-  * ^short = "Laboratory Test Kit"
-  * ^definition = """The laboratory test kit used for this test."""
+* extension[triggeredBy-r5].extension[type] ^short = "The type of trigger"
+* extension[value-r5] ^short = "only for result of type Attachment"
+* extension[value-r5].value[x] only Attachment
 
 * category only $CodeableConcept-uv-ips
 * category ^slicing.discriminator.type = #pattern

@@ -44,16 +44,19 @@ Alias: $bodySite                      = http://hl7.org/fhir/StructureDefinition/
 // Alias: $cd-version-number             = http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
 // Alias: $information-recipient         = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $extension-DiagnosticReport.composition  = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
+Alias: $observation.triggeredBy = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $event-performerFunction       = http://hl7.org/fhir/StructureDefinition/event-performerFunction
+Alias: $observation-certifiedRefMaterialCodeable = http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialCodeable
+Alias: $observation-certifiedRefMaterialIdentifer = http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialIdentifer
+Alias: $observation-deviceLabTestKit = http://hl7.eu/fhir/laboratory/StructureDefinition/observation-deviceLabTestKit
 Alias: $observation-instantiates-r5   = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.instantiates[x]
-Alias: $observation-triggeredBy-r5    = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $specimen-container-device-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.container.device
 Alias: $specimen-feature-r5           = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature
 Alias: $specimen-feature-type-r5      = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.feature.type
 Alias: $observationDefinition-device-r5   = http://hl7.org/fhir/5.0/StructureDefinition/extension-ObservationDefinition.device
 Alias: $observationDefinition-specimen-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ObservationDefinition.specimen
 Alias: $observation-value-r5          = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
-Alias: $workflow-supportingInfo       = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
+// Alias: $supportingInfo       = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
 // Alias:   $diagnostic-report-result-r5  =  http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.result
 
 // CH Core Structure Definitions
@@ -64,3 +67,6 @@ Alias: $religiousAffiliation          = http://terminology.hl7.org/CodeSystem/v3
 
 // from ch-lab-order
 // Alias:  $servicerequest-categories      = http://fhir.ch/ig/ch-lab-order/CodeSystem/ch-lab-order-servicerequest-categories
+
+
+Alias: $extension-Observation.value[x] = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
