@@ -1,3 +1,4 @@
+/*
 Instance: ErythrocyteCount
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "RBC Auto (Bld) [#/Vol]"   // Display name
@@ -99,3 +100,5 @@ Usage: #inline
 // * referenceRange.low.unit = "umol/L"
 // * referenceRange.high.value = 11.2    // women 9.9
 // * referenceRange.high.unit = "umol/L"
+
+*/

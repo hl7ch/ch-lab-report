@@ -1,18 +1,5 @@
 /*
-Profile: ChLabReportServiceRequest
-Parent: ServiceRequest
-Id: ch-lab-report-servicerequest
-Title: "CH Lab ServiceRequest: Laboratory Order"
-Description: "This profile constrains the ServiceRequest resource for the purpose of laboratory orders in Switzerland."
-* . ^short = "CH Lab ServiceRequest: Laboratory Order"
-* ^extension[$imposeProfile].valueCanonical = Canonical(ServiceRequestLabEu)
-* obeys code-or-basedOn-required
-
-// * category = $sct#108252007 // Laboratory procedure (procedure)
-* subject only Reference(ChLabPatient)
-* specimen only Reference(ChLabSpecimen)
-
-* extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
+has to be compared with SR from CH LAB-Order
 */
 
 Profile: ChLabReportServiceRequest
@@ -20,8 +7,8 @@ Parent: ServiceRequest
 Id: ch-lab-report-servicerequest
 Title: "CH Lab ServiceRequest: Laboratory Order"
 Description: "This profile constrains the ServiceRequest resource for the purpose of laboratory orders in Switzerland."
-* . ^short = "CH Lab ServiceRequest: Laboratory Order"
-* . ^definition = "Laboratory Order composition."
+
+* insert SetFmmandStatusRule ( 2, trial-use)
 
 * identifier 1..
 * code from LabOrderCodesEuVs (preferred)

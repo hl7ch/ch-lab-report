@@ -1,16 +1,3 @@
-// Alias: $m49.htm = http://unstats.un.org/unsd/methods/m49/m49.htm
-// Alias: $extension-DiagnosticReport.composition = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
-// Alias: $Composition-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab
-// Alias: $ServiceRequest-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/ServiceRequest-eu-lab
-// Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-// Alias: $Patient-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab
-// Alias: $Patient-animal-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-animal-eu-lab
-// Alias: $Specimen-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Specimen-eu-lab
-// Alias: $Observation-resultslab-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab
-// Alias: $lab-studyType-eu-lab = http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab
-// Alias: $lab-specialty-eu-lab = http://hl7.eu/fhir/laboratory/ValueSet/lab-specialty-eu-lab
-// Alias: $lab-reportType-eu-lab = http://hl7.eu/fhir/laboratory/ValueSet/lab-reportType-eu-lab
-
 Profile: ChLabDiagnosticReport
 Parent: DiagnosticReport
 Id: ch-lab-diagnosticreport
@@ -75,9 +62,11 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 * encounter ^definition = "The healthcare event (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about."
 * encounter ^comment = "This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests).\n\n  DiagnosticReport and Composition SHALL have the same encounter."
 * effective[x] ^short = "Clinically relevant time/time-period for report."
+
 * performer ^short = "Responsible Diagnostic Service."
 * performer ^comment = "If a DiagnosticReport.resultsInterpreter exists this is expected to be a Composition.author; otherwise a DiagnosticReport.performer should be an author."
 * resultsInterpreter ^comment = "If a DiagnosticReport.resultsInterpreter exists this is expected to be a Composition.author; otherwise a DiagnosticReport.performer should be an author."
+
 // * specimen only Reference($Specimen-eu-lab)
 * specimen only Reference(ChLabSpecimen)
 * specimen ^short = "Specimens this report is based on."

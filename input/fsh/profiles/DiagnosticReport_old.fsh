@@ -50,7 +50,6 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 * category[CategoryCode].coding.code 1..1
 * category[CategoryCode].coding.code only code
 * category[CategoryCode].coding.code = #4241000179101
-*/
 
 * insert ReportCategoryRule
 
@@ -76,9 +75,10 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 * result 1..
 * result only Reference(ChLabObservationResultsLaboratory)
 * performer 1..
-* performer only Reference(CHCoreOrganization or ChLabPractitioner or ChLabPractitionerRole)
+* performer only Reference(CHCoreOrganization or ChLabPractitioner or ChLabPractitionerRole or CareTeam or ChLabPatient or RelatedPerson)
 
 // ╭────────────── instance 1-tvt ─────────────────────────────╮
 // │  Scenario deep vein thrombosis: CBC-panel, CRP, D-Dimer   │
 // ╰───────────────────────────────────────────────────────────╯
 
+*/

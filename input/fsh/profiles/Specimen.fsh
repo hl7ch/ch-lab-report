@@ -3,17 +3,17 @@ Parent: Specimen
 Title: "CH LAB-Specimen"
 Id: ch-lab-specimen
 Description: "This profile constrains the Specimen resource for the purpose of laboratory test reports in Switzerland."
-* . ^short = "CH Lab Specimen: Laboratory"
+
 * ^extension[$imposeProfile].valueCanonical = Canonical(SpecimenEu)
 
 * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Specimen"
 * . ^definition = "Laboratory specimen"
 
-* extension contains $specimen-feature-type-r5 named SpecimenFeatureTypeR5 0..*
-* extension[SpecimenFeatureTypeR5].valueCodeableConcept
+// * extension contains $specimen-feature-type-r5 named SpecimenFeatureTypeR5 0..*
+// * extension[SpecimenFeatureTypeR5].valueCodeableConcept
 
-* subject only Reference ( ChLabPatient or PatientAnimalEu or Group  or Device or Substance or Location)
+* subject only Reference(ChLabPatient or PatientAnimalEu or Group  or Device or Substance or Location)
 
 * type from LabSpecimenTypesEuVs (preferred)
 * type 1..1
