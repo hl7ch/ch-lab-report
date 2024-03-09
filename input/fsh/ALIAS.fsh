@@ -26,6 +26,7 @@ Alias: $observation-category          = http://terminology.hl7.org/CodeSystem/ob
 
 // Value Sets
 Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips
+Alias: $results-laboratory-observations-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-observations-uv-ips
 Alias: $lab-studyType-eu-lab          = http://hl7.eu/fhir/laboratory/ValueSet/lab-studyType-eu-lab
 Alias: $lab-specialty-eu-lab          = http://hl7.eu/fhir/laboratory/ValueSet/lab-specialty-eu-lab
 Alias: $lab-obsCode-eu-lab            = http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab

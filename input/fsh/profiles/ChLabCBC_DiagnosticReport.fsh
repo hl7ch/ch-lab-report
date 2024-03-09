@@ -2,7 +2,7 @@
 // │  WBC, RBC, HGB, HT, MCV, MCH, MCHC, Platelets etc.  │
 // ╰─────────────────────────────────────────────────────╯
 
-Profile: ChLabCBC
+Profile: ChLabCBC_DiagnosticReport
 Parent: ChLabDiagnosticReport
 Id: diagnosticreport-cbc
 Title: "CBC panel - Blood by Automated count"   // LOINC long common name
