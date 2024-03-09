@@ -5,7 +5,7 @@
 Profile: ChLabCBC_DiagnosticReport
 Parent: ChLabDiagnosticReport
 Id: diagnosticreport-cbc
-Title: "CBC panel - Blood by Automated count"   // LOINC long common name
+Title: "CBC panel - Blood by Automated count, Diagnostic Report"   // LOINC long common name
 Description: "This panel is the traditional hemogram plus platelet count which must now be reported with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the methodless version of hemoglobin in this panel." 
 * . ^short = "CBC panel Auto (Bld)"  // Display Name
 * . ^definition = "Complete blood count panel"    // Component

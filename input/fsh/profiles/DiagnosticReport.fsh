@@ -3,20 +3,13 @@ Parent: DiagnosticReport
 Id: ch-lab-diagnosticreport
 Title: "CH Lab DiagnosticReport: Laboratory Report"
 Description: "This profile constrains the DiagnosticReport resource for the purpose of laboratory test reports in Switzerland."
-* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
-* ^extension[=].valueInteger = 2
-* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
-* ^extension[=].valueCode = #trial-use
-* ^version = "0.2.0-ci"
-// * ^status = #draft
-* ^publisher = "HL7 Europe"
-* ^contact.name = "HL7 Europe"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://hl7.eu"
-* ^jurisdiction = $m49.htm#150 "Europe"
-* ^copyright = "Used by permission of HL7 Europe, all rights reserved Creative Commons License"
-* . ^short = "Laboratory Report DiagnosticReport"
+* . ^short = "CH Lab DiagnosticReport: Laboratory Report"
 * . ^definition = "Laboratory Report DiagnosticReport"
+* ^extension[$imposeProfile].valueCanonical = Canonical(DiagnosticReportLabEu)
+
+// ╭─── Extension ───╮
+// │  CompositionR5  │
+// ╰─────────────────╯
 * extension contains $extension-DiagnosticReport.composition named DiagnosticReportCompositionR5 1..1
 * extension[DiagnosticReportCompositionR5] ^short = "Associated Lab Report Composition"
 * extension[DiagnosticReportCompositionR5] ^definition = "This extension implements the R5 composition element. It allow to link this DiagnosticReport with the Composition documenting this Laboratory Report."
