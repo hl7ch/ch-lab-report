@@ -267,8 +267,8 @@ Usage: #inline
 Instance: Observation-CBC-panel
 InstanceOf: ChLabObservationResultsLaboratory
 // InstanceOf: ChLabCBC  // Own CPC Profile
-Title: "CBC panel - Blood by Automated count"
-Description: "This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the methodless version of hemoglobin in this panel."
+Title: "CBC panel - Blood by Automated count 1-tvt"
+Description: "This panel is the traditional hemogram plus platelet count which must now be reported with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the methodless version of hemoglobin in this panel."
 Usage: #inline
 * id = "0ad0810e-6eb4-11ee-b962-0242ac120002"
 * status = #final
@@ -311,6 +311,7 @@ Usage: #inline
 * valueQuantity = 10 '10*3/uL' "10*3/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "10*3/uL"
+* method = $sct#702659008 "Automated count technique (qualifier value)"
 * referenceRange.low.value = 4.5 
 * referenceRange.low.unit = "10*3/uL"
 * referenceRange.high.value = 11
@@ -334,10 +335,11 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+
 * valueQuantity = 4.58 '10*6/uL' "10*6/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "10*6/uL"
-
+* method = $sct#702659008 "Automated count technique (qualifier value)"
 * referenceRange.low.value = 4.1
 * referenceRange.low.unit = "10*6/uL"
 * referenceRange.high.value = 6.1
@@ -477,6 +479,7 @@ Usage: #inline
 * referenceRange.type = $referencerange-meaning#normal "Normal Range"
 * referenceRange.type.text = "Normal Range"
 
+// =============== Thrombocyte Count =======================
 Instance: Observation-Platelet
 InstanceOf: ChLabObservationResultsLaboratory
 Title: "Platelets [#/volume] in Blood by Automated count"   // LOINC Long Common Name
@@ -1112,7 +1115,7 @@ Usage: #example
 * identifier.system = "http://www.labor-gantenbein.ch/devices/id"
 * identifier.value = "345675"
 * udiCarrier 
-  * deviceIdentifier = "040156300936045" // Unique device identifier (UDI) assigned to device label or package, same as GTIN. Fake Number !
+  * deviceIdentifier = "AN040156300934000" // Unique device identifier (UDI) assigned to device label or package, same as GTIN. Fake Number !
 * status = #active
 * manufacturer = "Sysmex"
 * lotNumber = "lot.112233"
@@ -1130,7 +1133,7 @@ Usage: #example
 * identifier.system = "http://www.labor-gantenbein.ch/devices/id"
 * identifier.value = "345675"
 * udiCarrier 
-  * deviceIdentifier = "040156300936045" // Unique device identifier (UDI) assigned to device label or package, same as GTIN. Fake Number !
+  * deviceIdentifier = "TK040156300936001" // Unique device identifier (UDI) assigned to device label or package, same as GTIN. Fake Number !
 * status = #active
 * manufacturer = "Abbott"
 * lotNumber = "lot.112233"
@@ -1148,7 +1151,7 @@ Usage: #example
 * identifier.system = "http://www.labor-gantenbein.ch/devices/id"
 * identifier.value = "345675"
 * udiCarrier 
-  * deviceIdentifier = "040156300936045" // Unique device identifier (UDI) assigned to device label or package, same as GTIN. Fake Number !
+  * deviceIdentifier = "TK040156300936002" // Unique device identifier (UDI) assigned to device label or package, same as GTIN. Fake Number !
 * status = #active
 * manufacturer = "Roche"
 * lotNumber = "lot.112233"

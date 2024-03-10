@@ -1,23 +1,25 @@
-Profile: ChLabCBC_Observation
+/*
+Profile: ChLabCBCPanelObsSt
 Parent: ChLabObservationResultsLaboratory
-Id: ChLabCBC-Observation
-Title: "CBC panel - Blood by Automated count, Observation"   // LOINC long common name
+Id: ChLabCBC-panel-obs-st
+Title: "CBC panel - Blood by Automated count, Observation Container"   // LOINC long common name
 Description: """This profile constrains the ChLabObservationResultsLaboratory profile to represent results produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project."""
 
 * ^publisher = "HL7 Switzerland"
 * ^contact.name = "HL7 Switzerland"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7.ch"
-* ^jurisdiction = $m49.htm#150 "Switzerland"
+* ^jurisdiction = $m49.htm#756 "Switzerland"
 * ^purpose = "This profile constrains the ChLabObservationResultsLaboratory profile to represent results produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project."
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 
-* hasMember ..12
+* hasMember ..0
+
 * hasMember ^slicing.discriminator.type = #value
 * hasMember ^slicing.discriminator.path = "resolve().hasMember"
 * hasMember ^slicing.rules = #closed
 * hasMember ^slicing.description = ""
-* hasMember ^slicing.ordered = true
+* hasMember ^slicing.ordered = false
 * hasMember contains
   WhiteBloodCell 1..1 MS and
   RedBloodCellCount 1..1 MS and
@@ -79,3 +81,4 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 * hasMember[PlateletMeanVolume] only Reference(ChLabPlateletMeanVolume)
 * hasMember[PlateletMeanVolume] ^label = "Label"
 * hasMember[PlateletMeanVolume] ^short = "Platelet Mean Volume"
+*/

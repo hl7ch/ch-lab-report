@@ -17,6 +17,7 @@ Alias: $v3-ParticipationType          = http://terminology.hl7.org/CodeSystem/v3
 Alias: $v3-MaritalStatus              = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
 Alias: $v3-EntityCode                 = http://terminology.hl7.org/CodeSystem/v3-EntityCode // Entity the instancerepresents, e.g. a blood collection tube
 Alias: $v3-ParticipationType          = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+Alias: $v3-ReligiousAffiliation       = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 Alias: $v3-RoleCode                   = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $device-categorie              = http://hl7.org/fhir/device-category
 Alias: $observation-category          = http://terminology.hl7.org/CodeSystem/observation-category
