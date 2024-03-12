@@ -3,17 +3,17 @@ Parent: Specimen
 Title: "CH LAB-Specimen"
 Id: ch-lab-specimen
 Description: "This profile constrains the Specimen resource for the purpose of laboratory test reports in Switzerland."
-* . ^short = "CH Lab Specimen: Laboratory"
+
 * ^extension[$imposeProfile].valueCanonical = Canonical(SpecimenEu)
 
 * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Specimen"
 * . ^definition = "Laboratory specimen"
 
-* extension contains $specimen-feature-type-r5 named SpecimenFeatureTypeR5 0..*
-* extension[SpecimenFeatureTypeR5].valueCodeableConcept
+// * extension contains $specimen-feature-type-r5 named SpecimenFeatureTypeR5 0..*
+// * extension[SpecimenFeatureTypeR5].valueCodeableConcept
 
-* subject only Reference ( ChLabPatient or PatientAnimalEu or Group  or Device or Substance or Location)
+* subject only Reference(ChLabPatient or PatientAnimalEu or Group  or Device or Substance or Location)
 
 * type from LabSpecimenTypesEuVs (preferred)
 * type 1..1
@@ -32,7 +32,7 @@ Otherwise the relationship is recorded in the Specimen.request element"""
 * collection
   * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
     * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type"
-  * extension contains $bodySite named bodySite 0..1
+  * extension contains BodyStructureReference named bodySite 0..1
   * extension[bodySite].valueReference only Reference(BodyStructureEuLab)
 * processing.additive only Reference(Substance or SpecimenAdditiveSubstance)
 * container
