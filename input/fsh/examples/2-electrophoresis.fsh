@@ -170,9 +170,6 @@ Usage: #inline
 * performer.display = "Dr. Eva Erlenmeyer"
 * specimen = Reference(urn:uuid:6a631174-aac8-4cff-bb94-12af4b181ad9) "Serum-2-electrophoresis"
 * result = Reference(urn:uuid:f36365f1-4b7e-4458-99af-d950b8608ea7) "Observation-2-electrophoresis-panel"
-// * media.comment = "Protein-Elektrophorese: Serum"
-// * media.link = Reference(urn:uuid:19ca50e3-fef9-494c-856c-881a59c7bfed) "Electrophoresis"
-// * conclusion = "some comment"
 
 // ╭────── Patient 2-electrophoresis ──────────╮
 // │       GarfieldTestpatient                 │
