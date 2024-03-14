@@ -20,5 +20,4 @@ Description: "This profile constrains the Bundle resource for the purpose of lab
 * entry[ServiceRequest].resource only ChLabReportServiceRequest
 * entry[PractitionerRole].resource only ChLabPractitionerRole
 * entry[Practitioner].resource only ChLabPractitioner
-// * entry[Organization].resource only CHCoreOrganization
 
