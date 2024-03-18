@@ -66,4 +66,7 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 * result only Reference(ChLabObservationResultsLaboratory)
 * result ^short = "results"
 * imagingStudy ..0
+* media 0..*
+* media.comment 0..1
+* media.link 1..1
 * presentedForm ^short = "Entire report as issued (pdf recommended)"
