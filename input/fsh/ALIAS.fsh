@@ -16,6 +16,7 @@ Alias: $v3-ObservationInterpretation  = http://terminology.hl7.org/CodeSystem/v3
 Alias: $v3-ParticipationType          = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $v3-MaritalStatus              = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
 Alias: $v3-EntityCode                 = http://terminology.hl7.org/CodeSystem/v3-EntityCode // Entity the instancerepresents, e.g. a blood collection tube
+Alias: $media-type                    = http://terminology.hl7.org/CodeSystem/media-type
 Alias: $v3-ParticipationType          = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $v3-ReligiousAffiliation       = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 Alias: $v3-RoleCode                   = http://terminology.hl7.org/CodeSystem/v3-RoleCode
@@ -32,6 +33,7 @@ Alias: $lab-studyType-eu-lab          = http://hl7.eu/fhir/laboratory/ValueSet/l
 Alias: $lab-specialty-eu-lab          = http://hl7.eu/fhir/laboratory/ValueSet/lab-specialty-eu-lab
 Alias: $lab-obsCode-eu-lab            = http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab
 Alias: $lab-technique-eu-lab          = http://hl7.eu/fhir/laboratory/ValueSet/lab-technique-eu-lab
+
 
 // External Profiles
 Alias: $CodeableConcept-uv-ips        = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
