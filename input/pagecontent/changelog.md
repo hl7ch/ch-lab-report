@@ -16,3 +16,6 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 * reduce cardinality versionNumber of composition to 0..1
 * align DiagnosticReport and Composition to EU Laboratory
+* align Observation to EU Laboratory
+* use Devices on examples
+* use presentedForm to add base 64 encoded PDF
