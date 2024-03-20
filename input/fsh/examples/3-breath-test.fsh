@@ -71,7 +71,7 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:075e3f2d-7ed8-4b6e-a3bb-9b784f5006c0"
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Scenario Lactose Test</div><div>      <h3>3-breath-test</h3>      <p>A patient, Emil Emmenegger, presents to Dr. med. Theo Tillmann at the Olten group practice on 09.03.2016. He complains of abdominal pain, which often occurs after consuming milk or milk products. He is referred to the laboratory Schildknecht, where Dr. med. Katrin Klauser performs a breath test with lactose provocation.</p>  </div></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case Study Breath Test</div><div>      <h3>3-breath-test</h3>      <p>A patient, Emil Emmenegger, presents to Dr. med. Theo Tillmann at the Olten group practice on 09.03.2016. He complains of abdominal pain, which often occurs after consuming milk or milk products. He is referred to the laboratory Schildknecht, where Dr. med. Katrin Klauser performs a breath test with lactose provocation.</p>  </div></div>"
 
 * status = #final
 * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code

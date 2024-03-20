@@ -111,7 +111,7 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:075e3f2d-7ed8-4b6e-a3bb-9b784f5006c0"
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study 1</div><div>      <h3>Electrophoresis</h3>      <p>A patient, Garfield Testpatient, presents to Dr. med. Marc Mustermann at the Olten group practice on 09.03.2016. He complains of coughing, shortness of breath and shows an enlarged liver; look for Alpha-1-antitrypsin deficiency</p>  </div></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study 2 Electrophoresis</div><div>      <h3>Electrophoresis</h3>      <p>A patient, Garfield Testpatient, presents to Dr. med. Marc Mustermann at the Olten group practice on 09.03.2016. He complains of coughing, shortness of breath and shows an enlarged liver; look for Alpha-1-antitrypsin deficiency</p>  </div></div>"
 
 * status = #final
 * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
