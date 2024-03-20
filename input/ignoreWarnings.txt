@@ -13,6 +13,7 @@ Entry 'urn:uuid:735c9244-497a-420d-b006-15a57be365b1' isn't reachable by travers
 Entry 'urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
 Entry 'urn:uuid:5679723c-4fae-4ba7-9f09-5438a827bfda' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
 Entry 'urn:uuid:6cf06200-6760-4fdc-a1ea-3ed7aff4ebe9' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+Entry 'urn:uuid:aa659dd8-28be-4c7e-ab27-286c5beff53c' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
 
 # TODO remove after Profiling
 The Implementation Guide contains no examples for this profile
