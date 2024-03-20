@@ -49,9 +49,12 @@ Usage: #example
 * entry[Organization][+].fullUrl = "urn:uuid:8030393e-d1c2-409f-841b-0c3af4e68494"
 * entry[Organization][=].resource = LaborSchildknecht
 
+* entry[Organization][+].fullUrl = "urn:uuid:b2b5e406-02d0-46de-85bb-561fe37040bb"
+* entry[Organization][=].resource = BreathTracker-SC
+
 Instance: Composition-3-breath-test
 InstanceOf: ChLabReportComposition
-Description: "Example of Composition in the scenario protein electrophoresis"
+Description: "Example of Composition in the scenario breath test"
 Usage: #inline
 * id = "1c437141-1784-4c8f-8f69-6deaea948a4d"
 
@@ -68,7 +71,7 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:075e3f2d-7ed8-4b6e-a3bb-9b784f5006c0"
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Scenario Lactose Test</div><div>      <h3>3-breath-test</h3>      <p>A patient, Emil Emmenegger, presents to Dr. med. Katrin Klauser at the Olten group practice on 09.03.2016. He complains of abdominal pain, which often occurs after consuming milk or milk products.</p>  </div></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Scenario Lactose Test</div><div>      <h3>3-breath-test</h3>      <p>A patient, Emil Emmenegger, presents to Dr. med. Theo Tillmann at the Olten group practice on 09.03.2016. He complains of abdominal pain, which often occurs after consuming milk or milk products. He is referred to the laboratory Schildknecht, where Dr. med. Katrin Klauser performs a breath test with lactose provocation.</p>  </div></div>"
 
 * status = #final
 * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
@@ -177,8 +180,8 @@ Usage: #inline
 
 Instance: Observation-3-breath-test
 InstanceOf: ChLabObservationResultsLaboratory
-Title: "Protein electrophoresis panel - Serum or Plasma"
-Description: "The protein concentration that is reported in electrophoresis is the same as that reported routinely."
+Title: "H2-CH4 breath Test"
+Description: "When ingested sugars are not completely absorbed, bacteria within the large bowel produce hydrogen and/or methane gas that will be detected in the breath test. The poor absorption of an orally ingested sugar is indicated by amounts larger than normal and above baseline levels of exhaled hydrogen or methane in your breath."
 Usage: #inline
 * id = "f36365f1-4b7e-4458-99af-d950b8608ea7"
 * status = #final
@@ -203,7 +206,7 @@ Usage: #inline
 // * referenceRange.high.unit = "[ppm]"
 // * referenceRange.type = $referencerange-meaning#normal "Normal Range"
 // * referenceRange.type.text = "Normal Range"
-// * device = Reference(urn:uuid:d1fcb5ca-99bc-435f-947d-53481453ef25) "Protein-Electrophoresis-System"
+* device = Reference(urn:uuid:b2b5e406-02d0-46de-85bb-561fe37040bb) "Breath-Test System"
 
 // ╭─── Component ──╮
 // │    Hydrogen    │
@@ -482,3 +485,22 @@ Usage: #inline
 * contact.address.city = "Olten"
 * contact.address.postalCode = "4600"
 * contact.address.country = "CH"
+
+// ╭─── device 3-breath test ─────╮
+// │     BreathTracker           │
+// ╰──────────────────────────────╯
+Instance: BreathTracker-SC
+InstanceOf: Device
+Title: "Breath-Test System"
+Description: "Example for Breath analyzing Device"
+Usage: #inline
+* id = "b2b5e406-02d0-46de-85bb-561fe37040bb"
+* identifier.system = "http://www.labor-schildknecht.ch/devices/id"
+* identifier.value = "345888"
+* status = #active
+* manufacturer = "QuinTron Instrument Company"
+* lotNumber = "lot.5432"
+* serialNumber = "889977" // REF
+* deviceName
+  * name = "QuinTron BreathTracker SC Analyzer"
+  * type = #udi-label-name
