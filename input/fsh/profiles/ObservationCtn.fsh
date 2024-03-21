@@ -24,6 +24,8 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 * hasMember ^slicing.description = ""
 * hasMember ^slicing.ordered = true
 * hasMember only Reference(ChLabObservationPanel or ChLabObservationSingleTest)
+* value[x] ..0
+* component ..0
 
 Profile: ChLabObservationSingleTest
 Parent: ChLabObservationResultsLaboratory
@@ -39,3 +41,4 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 * ^purpose = "This profile constrains the ChLabObservationResultsLaboratory profile to represent a single Test result or a component for the  HL7 Swiss project."
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 * hasMember ..0
+
