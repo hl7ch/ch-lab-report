@@ -1,6 +1,6 @@
 // ╭───────  profiles for CBC observations ──────╮
-// │  Container for all Single Tests of CBC      │
-// │         automated count                     │
+// │     CBC Panel and CBC Single Tests          │
+// │         observation profiles                │
 // ╰─────────────────────────────────────────────╯
 
 Profile: ChLabCBCPanelObsCtn
