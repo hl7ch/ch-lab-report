@@ -30,7 +30,7 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 Profile: ChLabObservationSingleTest
 Parent: ChLabObservationResultsLaboratory
 Id: ChLab-observation-single-test
-Title: "CBC Single Test - Blood by Automated count, Observation" 
+Title: "CH LAB-Observation - Single Test" 
 Description: """This profile constrains the ChLabObservationResultsLaboratory profile to represent a panel or battery of laboratory test results for the  HL7 Swiss project."""
 
 * ^publisher = "HL7 Switzerland"
@@ -42,3 +42,4 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 * hasMember ..0
 
+// must contain: value[x] or component or data absent reason -> Invariant: eu-lab-1

@@ -39,9 +39,11 @@ Description: "This profile constrains the Observation resource for the purpose o
 * category ^definition = "A code that classifies the general type of observation being made. In this profile, fixed to \"laboratory\"."
 * category ^comment = "\"laboratory\" includes laboratory medicine and pathology"
 * category contains
+//    grouper 0..1 and
     laboratory 1..1 and
     studyType 0..* and
     specialty 0..*
+// * category[grouper] = "isPanel" or "isSingleTest"
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] from $lab-studyType-eu-lab (required)
 * category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
