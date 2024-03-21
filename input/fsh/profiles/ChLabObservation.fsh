@@ -31,7 +31,7 @@ Profile: ChLabObservationSingleTest
 Parent: ChLabObservationResultsLaboratory
 Id: ChLab-observation-single-test
 Title: "CH LAB-Observation - Single Test" 
-Description: """This profile constrains the ChLabObservationResultsLaboratory profile to represent a panel or battery of laboratory test results for the  HL7 Swiss project."""
+Description: """This profile constrains the ChLabObservationResultsLaboratory profile to represent single test results for the  HL7 Swiss project."""
 
 * ^publisher = "HL7 Switzerland"
 * ^contact.name = "HL7 Switzerland"
