@@ -2,7 +2,6 @@
 // │  Container for singleTests Observations     │
 // │          or panel Observations              │
 // ╰─────────────────────────────────────────────╯
-
 Profile: ChLabObservationPanel
 Parent: ChLabObservationResultsLaboratory
 Id: ChLab-observation-panel
