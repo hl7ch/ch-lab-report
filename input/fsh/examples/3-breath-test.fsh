@@ -195,17 +195,10 @@ Usage: #inline
 * performer = Reference(urn:uuid:49f8e829-1242-47a9-b958-32be38d09e5b) "Katrin Klauser"
 * specimen = Reference(urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10) "Gas-3-breath-test"
 
-// ---- TODO values!!
-// * valueQuantity = 5 '[ppm]' "[ppm]"
-// * valueQuantity.system = "http://unitsofmeasure.org"
-// * valueQuantity.unit = "[ppm]"
+// ---- TODO SNOMED CT has no concept 'Hydrogen breath test (qualifier value)'
+
+// * 443661003 "Hydrogen breath test using lactose (procedure)"
 * method = $sct#252233000 "Hydrogen breath test (procedure)"
-// * referenceRange.low.value = 4.5 
-// * referenceRange.low.unit = "[ppm]"
-// * referenceRange.high.value = 11
-// * referenceRange.high.unit = "[ppm]"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-// * referenceRange.type.text = "Normal Range"
 * device = Reference(urn:uuid:b2b5e406-02d0-46de-85bb-561fe37040bb) "Breath-Test System"
 
 // ╭─── Component ──╮
