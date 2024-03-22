@@ -6,7 +6,7 @@ Profile: ChLabObservationPanel
 Parent: ChLabObservationResultsLaboratory
 Id: ChLab-observation-panel
 Title: "CH LAB-Observation - Panel"
-Description: """This profile constrains the ChLabObservationResultsLaboratory profile to represent a panel or battery of laboratory test results for the  HL7 Swiss project."""
+Description: """This profile constrains the ChLabObservationResultsLaboratory profile to represent only a panel / battery of laboratory test results for the HL7 Swiss project. The top-level observation contains only further observations-panels and observations-single-tests in the hasMember element. The observation-panels may carry a conclusion in the note element and/or a global interpretation by the producer of the study, in the interpretation element; value[x] and component elements are not allowed"""
 
 * ^publisher = "HL7 Switzerland"
 * ^contact.name = "HL7 Switzerland"
@@ -25,20 +25,5 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 * hasMember only Reference(ChLabObservationPanel or ChLabObservationSingleTest)
 * value[x] ..0
 * component ..0
-
-Profile: ChLabObservationSingleTest
-Parent: ChLabObservationResultsLaboratory
-Id: ChLab-observation-single-test
-Title: "CH LAB-Observation - Single Test" 
-Description: """This profile constrains the ChLabObservationResultsLaboratory profile to represent single test results for the  HL7 Swiss project."""
-
-* ^publisher = "HL7 Switzerland"
-* ^contact.name = "HL7 Switzerland"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://hl7.ch"
-* ^jurisdiction = $m49.htm#756 "Switzerland"
-* ^purpose = "This profile constrains the ChLabObservationResultsLaboratory profile to represent a single Test result or a component for the  HL7 Swiss project."
-* ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
-* hasMember ..0
-
-// must contain: value[x] or component or data absent reason -> Invariant: eu-lab-1
+* interpretation MS
+* note MS
