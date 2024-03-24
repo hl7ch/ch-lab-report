@@ -23,7 +23,14 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 * hasMember ^slicing.description = ""
 * hasMember ^slicing.ordered = true
 * hasMember only Reference(ChLabObservationPanel or ChLabObservationSingleTest)
-* value[x] ..0
+* valueString ..0
+* valueRange ..0
+* valueRatio ..0
+* valueTime ..0
+* valueDateTime ..0
+* valuePeriod ..0
+* valueQuantity ..0
+* valueCodeableConcept ..0
 * component ..0
 * interpretation MS
 * note MS
