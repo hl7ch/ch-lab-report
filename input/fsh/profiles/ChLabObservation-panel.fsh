@@ -1,7 +1,8 @@
-// ╭─────  profiles for grouper observations ────╮
+// ╭─────  profile for grouped observations ─────╮
 // │  Container for singleTests Observations     │
 // │         and panel Observations              │
 // ╰─────────────────────────────────────────────╯
+
 Profile: ChLabObservationPanel
 Parent: ChLabObservationResultsLaboratory
 Id: ChLab-observation-panel
@@ -23,6 +24,7 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 * hasMember ^slicing.description = ""
 * hasMember ^slicing.ordered = true
 * hasMember only Reference(ChLabObservationPanel or ChLabObservationSingleTest)
+// set all x from value[x] to 0 to avoid sushi warning
 * valueString ..0
 * valueRange ..0
 * valueRatio ..0
