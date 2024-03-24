@@ -20,7 +20,7 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 * hasMember 1..*
 * hasMember ^slicing.discriminator.type = #value
 * hasMember ^slicing.discriminator.path = "resolve().hasMember"
-* hasMember ^slicing.rules = #closed
+* hasMember ^slicing.rules = #open
 * hasMember ^slicing.description = ""
 * hasMember ^slicing.ordered = true
 * hasMember only Reference(ChLabObservationPanel or ChLabObservationSingleTest)
