@@ -76,13 +76,14 @@ Id: ch-lab-albumin-urine
 Title: "CH Lab Observation Results: Albumin Urine"
 Description: "This profile constrains the ChLabObservationSingleTest profile determine the concentration of albumin in urine."
 * . ^short = "CH Lab Observation Results: Albumin Urine"
+// * labTestKit only Reference(Combur_Test)  // may be substituted with other Stripe tests
 * code = $loinc#1754-1 "Albumin [Mass/volume] in Urine"
 * code.text = "Albumin (U) [Mass/Vol]"
   * ^short = "LOINC Display Name"
 * method = $sct#702660003 "Test strip technique (qualifier value)"
 
 
-Instance: Combur_Test
+Instance: Combur_Test // must be linked in porfile above
 InstanceOf: ChLabReportDeviceTestKit
 Title: "Combur Urin Test Streifen"
 Description: "Example of a laboratory Testkit"
