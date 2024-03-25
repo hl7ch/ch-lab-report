@@ -1,7 +1,7 @@
-// ╭──────  profiles for Renal insufficiency ──────╮
-// │     RI Panel and RI Single Tests          │
-// │         observation profiles                │
-// ╰─────────────────────────────────────────────╯
+// ╭──  profiles for Renal insufficiency ──╮
+// │     RI Panel and RI Single Tests      │
+// │         observation profiles          │
+// ╰───────────────────────────────────────╯
 
 Profile: ChLabObservationRIPanel
 Parent: ChLabObservationPanel
@@ -18,7 +18,7 @@ Description: """This panel collects the lab results in relation to renal insufie
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 
 * code = $sct#723188008 "Renal insufficiency (disorder)"
-* code.text = "CBC panel Auto (Bld)" // LOINC Display Name
+* code.text = "Collection of Laboratory results in relation to renal insufficiency" // 
 * hasMember ..12
 * hasMember ^slicing.discriminator.type = #value
 * hasMember ^slicing.discriminator.path = "resolve().hasMember"
@@ -29,12 +29,12 @@ Description: """This panel collects the lab results in relation to renal insufie
   CKD-EPI 1..1 MS and // CKD-EPI for eGFR
   AlbuminUrine 1..1 MS 
 
-* hasMember[CKD-EPI] only Reference(ChLabCKD_EPI)
+* hasMember[CKD-EPI] only Reference(ChLabObservationCKD_EPI)
 * hasMember[CKD-EPI] ^label = "Label"
 * hasMember[CKD-EPI] ^short = "CKD-EPI"
 
 
-* hasMember[AlbuminUrine] only Reference(ChLabAlbuminUrine)
+* hasMember[AlbuminUrine] only Reference(ChLabObservationAlbuminUrine)
 * hasMember[AlbuminUrine] ^label = "Label"
 * hasMember[AlbuminUrine] ^short = "Albumin Urine"
 
@@ -42,7 +42,7 @@ Description: """This panel collects the lab results in relation to renal insufie
 // │  Profiles for renal insufficiency Single Tests   │
 // ╰──────────────────────────────────────────────────╯
 
-Profile: ChLabRISingleTest
+Profile: ChLabObservationRISingleTest
 Parent: ChLabObservationSingleTest
 Id: ChLabRI-single-test
 Title: "Renal insufficiency Single Test" 
@@ -59,8 +59,8 @@ Description: """This profile constrains the ChLabObservationSingleTest profile t
 * category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
 * hasMember ..0
 
-Profile: ChLabCKD_EPI
-Parent: ChLabRISingleTest
+Profile: ChLabObservationCKD_EPI
+Parent: ChLabObservationRISingleTest
 Id: ch-lab-ckd-epi
 Title: "CH Lab Observation Results: CKD-EPI"
 Description: "This profile constrains the ChLabObservationSingleTest profile to estimate GFR."
@@ -68,10 +68,10 @@ Description: "This profile constrains the ChLabObservationSingleTest profile to 
 * code = $loinc#62238-1 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
 * code.text = "GFR/1.73 sq M.predicted CKD-EPI (S/P/Bld) [Vol rate/Area]" // LOINC Display Name
   * ^short = "LOINC Display Name"
-// * method = $sct#702659008 "Automated count technique (qualifier value)"
+* method = $sct#702873001 "Calculation technique (qualifier value)"
 
-Profile: ChLabAlbuminUrine
-Parent: ChLabRISingleTest
+Profile: ChLabObservationAlbuminUrine
+Parent: ChLabObservationRISingleTest
 Id: ch-lab-albumin-urine
 Title: "CH Lab Observation Results: Albumin Urine"
 Description: "This profile constrains the ChLabObservationSingleTest profile determine the concentration of albumin in urine."
@@ -79,4 +79,23 @@ Description: "This profile constrains the ChLabObservationSingleTest profile det
 * code = $loinc#1754-1 "Albumin [Mass/volume] in Urine"
 * code.text = "Albumin (U) [Mass/Vol]"
   * ^short = "LOINC Display Name"
-// * method = $sct#702659008 "Automated count technique (qualifier value)"
+* method = $sct#702660003 "Test strip technique (qualifier value)"
+
+
+Instance: Combur_Test
+InstanceOf: ChLabReportDeviceTestKit
+Title: "Combur Urin Test Streifen"
+Description: "Example of a laboratory Testkit"
+Usage: #example
+* id = "combur-test"
+* identifier.system = "http://www.labor-gantenbein.ch/devices/id"
+* identifier.value = "345111"
+* udiCarrier 
+  * deviceIdentifier = "TK040156333936001" // Unique device identifier (UDI) assigned to device label or package, same as GTIN. Fake Number !
+* status = #active
+* manufacturer = "Roche"
+* lotNumber = "lot.444555"
+* serialNumber = "1116787" // REF
+* deviceName
+  * name = "Combur-Test Teststreifen"  // Fake Name
+  * type = #udi-label-name
