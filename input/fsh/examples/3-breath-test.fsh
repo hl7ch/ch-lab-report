@@ -71,7 +71,7 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:075e3f2d-7ed8-4b6e-a3bb-9b784f5006c0"
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case Study Breath Test</div><div>      <h3>3-breath-test</h3>      <p>A patient, Emil Emmenegger, presents to Dr. med. Theo Tillmann at the Olten group practice on 09.03.2016. He complains of abdominal pain, which often occurs after consuming milk or milk products. He is referred to the laboratory Schildknecht, where Dr. med. Katrin Klauser performs a breath test with lactose provocation.</p>  </div></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case Study Breath Test</div><div>      <h3>3-breath-test</h3>      <p>A patient, Emil Emmenegger, presents to Dr. med. Theo Tillmann at the Olten group practice on 09.03.2024. He complains of abdominal pain, which often occurs after consuming milk or milk products. He is referred to the laboratory Schildknecht, where Dr. med. Katrin Klauser performs a breath test with lactose provocation.</p>  </div></div>"
 
 * status = #final
 * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
@@ -206,56 +206,42 @@ Usage: #inline
 // ╰────────────────╯
 * component[0]
   * code = $loinc#33490-4 "Hydrogen/Expired gas [Volume Fraction] in Exhaled gas --pre dose lactose PO"
-  // * valueString = "Hydrogen basic"
-  // * valueDateTime = "2024-03-13T01:00:00Z"
   * valueQuantity = 5 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
 
 * component[+]
   * code = $loinc#33491-2 "Hydrogen/Expired gas [Volume Fraction] in Exhaled gas --30 minutes post dose lactose PO"
-  // * valueString = "Hydrogen 30 Min."
-  // * valueDateTime = "2024-03-13T01:30:00Z"
   * valueQuantity = 9 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
 
 * component[+]
   * code = $loinc#33492-0 "Hydrogen/Expired gas [Volume Fraction] in Exhaled gas --1 hour post dose lactose PO"
-  // * valueString = "Hydrogen 60 Min."
-  // * valueDateTime = "2024-03-13T01:00:00Z"
   * valueQuantity = 27 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
 
 * component[+]
   * code = $loinc#33493-8 "Hydrogen/Expired gas [Volume Fraction] in Exhaled gas --1.5 hours post dose lactose PO"
-  // * valueString = "Hydrogen 90 Min."
-  // * valueDateTime = "2024-03-13T01:30:00Z"
   * valueQuantity = 47 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
 
 * component[+]
   * code = $loinc#33494-6 "Hydrogen/Expired gas [Volume Fraction] in Exhaled gas --2 hours post dose lactose PO"
-  // * valueString = "Hydrogen 120 Min."
-  // * valueDateTime = "2024-03-13T01:00:00Z"
   * valueQuantity = 76 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
 
 * component[+]
   * code = $loinc#33495-3 "Hydrogen/Expired gas [Volume Fraction] in Exhaled gas --2.5 hours post dose lactose PO"
-  // * valueString = "Hydrogen 150 Min."
-  // * valueDateTime = "2024-03-13T01:00:00Z"
   * valueQuantity = 96 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
 
 * component[+]
   * code = $loinc#33496-1 "Hydrogen/Expired gas [Volume Fraction] in Exhaled gas --3 hours post dose lactose PO"
-  // * valueString = "Hydrogen 180 Min."
-  // * valueDateTime = "2024-03-13T01:30:00Z"
   * valueQuantity = 59 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
@@ -265,59 +251,65 @@ Usage: #inline
 // ╰────────────────╯
 * component[+]
   * code = $loinc#33497-9 "Methane/Expired gas [Volume Fraction] in Exhaled gas --pre dose lactose PO"
-  // * valueString = "Methane basic"
-  // * valueDateTime = "2024-03-13T01:30:00Z"
   * valueQuantity = 3 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
 
 * component[+]
   * code = $loinc#33498-7 "Methane/Expired gas [Volume Fraction] in Exhaled gas --30 minutes post dose lactose PO"
-  // * valueString = "Methane 30 Min."
-  // * valueDateTime = "2024-03-13T01:30:00Z"
   * valueQuantity = 6 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
 
 * component[+]
   * code = $loinc#33499-5 "Methane/Expired gas [Volume Fraction] in Exhaled gas --1 hour post dose lactose PO"
-  // * valueString = "Methane 60 Min."
-  // * valueDateTime = "2024-03-13T01:00:00Z"
   * valueQuantity = 14 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
 
 * component[+]
   * code = $loinc#33500-0 "Methane/Expired gas [Volume Fraction] in Exhaled gas --1.5 hours post dose lactose PO"
-  // * valueString = "Methane 90 Min."
-  // * valueDateTime = "2024-03-13T01:30:00Z"
   * valueQuantity = 13 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
 
 * component[+]
   * code = $loinc#33480-5 "Methane/Expired gas [Volume Fraction] in Exhaled gas --2 hours post dose lactose PO"
-  // * valueString = "Methane 120 Min."
-  // * valueDateTime = "2024-03-13T01:00:00Z"
   * valueQuantity = 18 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
 
 * component[+]
   * code = $loinc#33481-3 "Methane/Expired gas [Volume Fraction] in Exhaled gas --2.5 hours post dose lactose PO"
-  // * valueString = "Methane 150 Min."
-  // * valueDateTime = "2024-03-13T01:00:00Z"
   * valueQuantity = 18 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
 
 * component[+]
   * code = $loinc#33482-1 "Methane/Expired gas [Volume Fraction] in Exhaled gas --3 hours post dose lactose PO"
-  // * valueString = "Methane 180 Min."
-  // * valueDateTime = "2024-03-13T01:30:00Z"
   * valueQuantity = 13 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
+
+// ╭──────────── Component ───────────────────────╮
+// │ clinical Observations during challenge test  │
+// │ note: valueBoolean is not supported, issue!  │
+// ╰──────────────────────────────────────────────╯
+* component[+]
+  * code = $sct#51197009 "Stomach cramps (finding)"
+  * valueBoolean = false
+
+* component[+]
+  * code = $sct#308698004 "Flatulence symptom (finding)"
+  * valueBoolean = false
+
+* component[+]
+  * code = $sct#422587007 "Nausea (finding)"
+  * valueBoolean = false
+
+* component[+]
+  * code = $sct#62315008 "Diarrhea (finding)"
+  * valueBoolean = false
 
 // * hasMember[+] = Reference(urn:uuid:d130cf00-e7bc-49f3-8de5-8341c740865b) "Observation-Albumin-abs"
 
