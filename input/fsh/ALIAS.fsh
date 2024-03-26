@@ -7,6 +7,7 @@ Alias: $v2-0131                       = http://terminology.hl7.org/CodeSystem/v2
 Alias: $v2-0203                       = http://terminology.hl7.org/CodeSystem/v2-0203 // identifierType
 Alias: $v2-0360                       = http://terminology.hl7.org/CodeSystem/v2-0360 // qualification Code
 Alias: $v2-0371                       = http://terminology.hl7.org/CodeSystem/v2-0371 // additivePreservative
+Alias: $v2-0487                       = http://terminology.hl7.org/CodeSystem/v2-0487 // specimenType
 Alias: $v2-0488                       = http://terminology.hl7.org/CodeSystem/v2-0488 // specimenCollectionMethod
 Alias: $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916 // relevanteClinicalInformation
 Alias: $organization-type             = http://terminology.hl7.org/CodeSystem/organization-type

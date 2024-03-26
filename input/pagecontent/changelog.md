@@ -19,3 +19,5 @@ All significant changes to this FHIR implementation guide will be documented on 
 * align Observation to EU Laboratory
 * use Devices on examples
 * use presentedForm to add base 64 encoded PDF
+* add 2 examples with image results: electrophoresis and H2-CH4 Breath Test
+* replace method $sct#82962001 "Protein electrophoresis (procedure)" with $sct#703450007 "Electrophoresis technique (qualifier value)"

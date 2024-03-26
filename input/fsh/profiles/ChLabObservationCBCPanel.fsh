@@ -1,22 +1,24 @@
 // ╭───────  profiles for CBC observations ──────╮
-// │  Container for all Single Tests of CBC      │
-// │         automated count                     │
+// │     CBC Panel and CBC Single Tests          │
+// │         observation profiles                │
 // ╰─────────────────────────────────────────────╯
 
-Profile: ChLabCBCPanelObsCtn
-Parent: ChLabObservationResultsLaboratory
-Id: ChLabCBC-panel-obs-ctn
-Title: "CBC Panel - Blood by Automated count, Observation Container"   // LOINC long common name
-Description: """This profile constrains the ChLabObservationResultsLaboratory profile to represent results produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project."""
+Profile: ChLabObservationCBCPanel
+Parent: ChLabObservationPanel
+Id: ChLabObservation-CBC-panel
+Title: "CBC Panel - Blood by Automated count"   // LOINC long common name
+Description: """This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the fotometry version of hemoglobin in this panel."""
 
 * ^publisher = "HL7 Switzerland"
 * ^contact.name = "HL7 Switzerland"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7.ch"
 * ^jurisdiction = $m49.htm#756 "Switzerland"
-* ^purpose = "This profile constrains the ChLabObservationResultsLaboratory profile to represent results produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project."
+* ^purpose = "This profile constrains the ChLabObservationPanel profile to represent results produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project. Their hasMember element contain References to CBC Single Test Observations. The CBC Panel represents the Haematogramm II from the Analysenliste, Pos.-Nr 1371.00"
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 
+* code = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* code.text = "CBC panel Auto (Bld)" // LOINC Display Name
 * hasMember ..12
 * hasMember ^slicing.discriminator.type = #value
 * hasMember ^slicing.discriminator.path = "resolve().hasMember"
@@ -90,17 +92,17 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 // ╰─────────────────────────────────────────────────╯
 
 Profile: ChLabCBCSingleTest
-Parent: ChLabObservationResultsLaboratory
+Parent: ChLabObservationSingleTest
 Id: ChLabCBC-single-test
 Title: "CBC Single Test - Blood by Automated count, Observation" 
-Description: """This profile constrains the ChLabObservationResultsLaboratory profile to represent a single result produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project."""
+Description: """This profile constrains the ChLabObservationSingleTest profile to represent a single result produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project."""
 
 * ^publisher = "HL7 Switzerland"
 * ^contact.name = "HL7 Switzerland"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7.ch"
 * ^jurisdiction = $m49.htm#756 "Switzerland"
-* ^purpose = "This profile constrains the ChLabObservationResultsLaboratory profile to represent results produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project."
+* ^purpose = "This profile constrains the ChLabObservationSingleTest profile to represent results produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project."
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
@@ -114,181 +116,118 @@ Profile: ChLabLeucocyteCount
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-wbc
 Title: "CH Lab Observation Results: LeucocyteCount"
-Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory leucocyte count."
+Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory leucocyte count."
 * . ^short = "CH Lab Observation Results: Laboratory Leucocyte Count"
 * code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
 * code.text = "WBC Auto (Bld) [#/Vol]" // LOINC Display Name
   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
-// * referenceRange.low.value = 4.5 
-// * referenceRange.low.unit = "10*3/uL"
-// * referenceRange.high.value = 11
-// * referenceRange.high.unit = "10*3/uL"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-// * referenceRange.type.text = "Normal Range"
 
 Profile: ChLabErythrocyteCount
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-rbc
 Title: "CH Lab Observation Results: ErythrocyteCount"
-Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory erythrocyte count."
+Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory erythrocyte count."
 * . ^short = "CH Lab Observation Results: Laboratory Erythrocyte Count"
 * code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 * code.text = "RBC Auto (Bld) [#/Vol]"
   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
-// * referenceRange.low.value = 4.1
-// * referenceRange.low.unit = "10*6/uL"
-// * referenceRange.high.value = 6.1
-// * referenceRange.high.unit = "10*6/uL"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-// * referenceRange.type.text = "Normal Range"
 
 Profile: ChLabHemoglobin
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-hb
 Title: "CH Lab Observation Results: Hemoglobin"
-Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory hemoglobin."
+Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory hemoglobin."
 * . ^short = "CH Lab Observation Results: Laboratory Hemoglobin"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]"
   * ^short = "LOINC Display Name"
 * method = $sct#83561000052101 "Photometry technique (qualifier value)"
 * specimen = Reference(BloodCBC)
-// * referenceRange.low.value = 8.7  // women 7.4
-//   * ^short = "women 7.4"
-// * referenceRange.low.unit = "umol/L"
-// * referenceRange.high.value = 11.2    // women 9.9
-//   * ^short = "women 9.9"
-// * referenceRange.high.unit = "umol/L"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-// * referenceRange.type.text = "Normal Range"
 
 Profile: ChLabHematocrit
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-ht
 Title: "CH Lab Observation Results: Hemotocrit"
-Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory hemotocrit in Switzerland."
+Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory hemotocrit in Switzerland."
 * . ^short = "CH Lab Observation Results: Laboratory Hematocrit"
 * code = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
 * code.text = "Hematocrit Auto (Bld) [Volume fraction]"
   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
 * specimen = Reference(BloodCBC)
-// * referenceRange.low.value = 41  // women 36
-//   * ^short = "women 36"
-// * referenceRange.low.unit = "%"
-// * referenceRange.high.value = 53    // women 46
-//   * ^short = "women 46"
-// * referenceRange.high.unit = "%"
 
 Profile: ChLabMeanCorpuscularVolume
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-mcv
 Title: "CH Lab Observation Results: MeanCorpuscularVolume"
-Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory MCV."
+Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCV."
 * . ^short = "CH Lab Observation Results: Laboratory MCV"
 * code = $loinc#787-2 "MCV [Entitic volume] by Automated count"
 * code.text = "MCV Auto (RBC) [Entitic vol]" 
   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
-// * referenceRange.low.value = 82.4
-// * referenceRange.low.unit = "fL"
-// * referenceRange.high.value = 87.3
-// * referenceRange.high.unit = "fL"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-// * referenceRange.type.text = "Normal Range"
 
 Profile: ChLabMeanCorpuscularHemoglobin
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-mch
 Title: "CH Lab Observation Results: Mean Corpuscular Hemoglobin"
-Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory MCH in Switzerland."
+Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCH in Switzerland."
 * . ^short = "CH Lab Observation Results: Laboratory MCH"
 * code = $loinc#785-6 "MCH [Entitic mass] by Automated count"
 * code.text = "MCH Auto (RBC) [Entitic mass]"
   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
-// * referenceRange.low.value = 38
-// * referenceRange.low.unit = "pg"
-// * referenceRange.high.value = 46
-// * referenceRange.high.unit = "pg"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-// * referenceRange.type.text = "Normal Range"
 
 Profile: ChLabMeanCorpuscularHemoglobinConcentration
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-mchc
 Title: "CH Lab Observation Results: Mean Corpuscular Hemoglobin Concentration"
-Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory MCHC in Switzerland."
+Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCHC in Switzerland."
 * . ^short = "CH Lab Observation Results: Laboratory MCHC"
 * code = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
 * code.text = "MCHC Auto (RBC) [Mass/Vol]"
   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
-// * referenceRange.low.value = 30
-// * referenceRange.low.unit = "g/dL"
-// * referenceRange.high.value = 34
-// * referenceRange.high.unit = "g/dL"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-// * referenceRange.type.text = "Normal Range"
 
 Profile: ChLabErythrocyteDistributionWidth
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-ery-distribution-width
 Title: "CH Lab Observation Results: Erythrocyte distribution width [Entitic volume] by Automated count"
-Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory Erythrocyte Distribuition Width in Switzerland."
+Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribuition Width in Switzerland."
 * . ^short = "CH Lab Observation Results: Laboratory Erythrocyte Distribution Width"
 * code = $loinc#21000-5 "Erythrocyte distribution width [Entitic volume] by Automated count"
 * code.text = "Erythrocyte distribution width Auto (RBC) [Entitic vol]"
   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
-// * referenceRange.low.value = 39
-// * referenceRange.low.unit = "fL"
-// * referenceRange.high.value = 46
-// * referenceRange.high.unit = "fL"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-// * referenceRange.type.text = "Normal Range"
 
 Profile: ChLabErythrocyteDistWidthRatio
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-ery-dist-width-ratio
 Title: "CH Lab Observation Results: Erythrocyte distribution width [Ratio] by Automated count"
-Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory Erythrocyte Distribution Width Ratio."
+Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribution Width Ratio."
 * . ^short = "CH Lab Observation Results: Laboratory Erythrocyte Distribution Width Ratio"
 * code = $loinc#788-0 "Erythrocyte distribution width [Ratio] by Automated count"
 * code.text = "Erythrocyte distribution width Auto (RBC) [Ratio]"
   * ^short = "LOINC Display Name"
-// * method = $sct#702659008 "Automated count technique (qualifier value)"
-// * referenceRange.low.value = 11.6
-// * referenceRange.low.unit = "%"
-// * referenceRange.high.value = 14.6
-// * referenceRange.high.unit = "%"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-// * referenceRange.type.text = "Normal Range"
 
 Profile: ChLabPlateletCount
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-platelets
 Title: "CH Lab Observation Results: Platelet Count"
-Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory platelet count."
+Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet count."
 * . ^short = "CH Lab Observation Results: Laboratory Platelet Count"
 * code = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
 * code.text = "Platelets Auto (Bld) [#/Vol]" 
   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
-// * referenceRange.low.value = 150
-// * referenceRange.low.unit = "10*3/uL"
-// * referenceRange.high.value = 450
-// * referenceRange.high.unit = "10*3/uL"
-// * referenceRange.type = $referencerange-meaning#normal "Normal Range"
-// * referenceRange.type.text = "Normal Range"
 
 Profile: ChLabPlateletDistributionWidth
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-platelets-distribution-width
 Title: "CH Lab Observation Results: Platelet Distribution With"
-Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory platelet count."
+Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet count."
 * . ^short = "CH Lab Observation Results: Laboratory Platelet Count"
 * code = $loinc#32207-3 "Platelet distribution width [Entitic volume] in Blood by Automated count"
 
@@ -296,7 +235,7 @@ Profile: ChLabPlateletMeanVolume
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-platelets-mean-volume
 Title: "CH Lab Observation Results: Platelet Mean Volume"
-Description: "This profile constrains the ChLabObservationResultsLaboratory profile for the purpose of laboratory platelet mean volume."
+Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet mean volume."
 * . ^short = "CH Lab Observation Results: Laboratory Platelet Count"
 * code = $loinc#32623-1 "Platelet mean volume [Entitic volume] in Blood by Automated count"
 
@@ -307,10 +246,3 @@ Description: "Example for Specimen for automated CBC Examination"
 Usage: #example
 * status = #available
 * type = $sct#119297000 "Blood specimen"
-/*
-* subject = Reference(JanSchmid) "Jan Schmid"
-* collection.collector = Reference(NathalieNuesch) "Dr. med. Nathalie Nüesch"
-* collection.collectedDateTime = "2023-08-16T06:40:17Z"
-* collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
-* container.type = $sct#706053007 "General specimen container"
-*/

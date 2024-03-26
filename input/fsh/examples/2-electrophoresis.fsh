@@ -111,7 +111,7 @@ Usage: #inline
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:075e3f2d-7ed8-4b6e-a3bb-9b784f5006c0"
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study 1</div><div>      <h3>Electrophoresis</h3>      <p>A patient, Garfield Testpatient, presents to Dr. med. Marc Mustermann at the Olten group practice on 09.03.2016. He complains of coughing, shortness of breath and shows an enlarged liver; look for Alpha-1-antitrypsin deficiency</p>  </div></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case study 2 Electrophoresis</div><div>      <h3>Electrophoresis</h3>      <p>A patient, Garfield Testpatient, presents to Dr. med. Marc Mustermann at the Olten group practice on 09.03.2016. He complains of coughing, shortness of breath and shows an enlarged liver; look for Alpha-1-antitrypsin deficiency</p>  </div></div>"
 
 * status = #final
 * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code
@@ -269,7 +269,7 @@ Usage: #inline
 * valueQuantity = 38.1 'g/L' "g/L"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "g/L"
-* method = $sct#82962001 "Protein electrophoresis (procedure)"
+* method = $sct#703450007 "Electrophoresis technique (qualifier value)"
 * referenceRange.low.value = 39.2 
 * referenceRange.low.unit = "g/L"
 * referenceRange.high.value = 48.3
@@ -304,7 +304,7 @@ Usage: #inline
 * valueQuantity = 59.5 '%' "%"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "%"
-* method = $sct#82962001 "Protein electrophoresis (procedure)"
+* method = $sct#703450007 "Electrophoresis technique (qualifier value)"
 * referenceRange.low.value = 56 
 * referenceRange.low.unit = "%"
 * referenceRange.high.value = 69
@@ -333,7 +333,7 @@ Usage: #inline
 * valueQuantity = 2.2 'g/L' "g/L"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "g/L"
-* method = $sct#82962001 "Protein electrophoresis (procedure)"
+* method = $sct#703450007 "Electrophoresis technique (qualifier value)"
 * referenceRange.low.value = 1.9 
 * referenceRange.low.unit = "g/L"
 * referenceRange.high.value = 3.8
@@ -368,7 +368,7 @@ Usage: #inline
 * valueQuantity = 3.2 '%' "%"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "%"
-* method = $sct#82962001 "Protein electrophoresis (procedure)"
+* method = $sct#703450007 "Electrophoresis technique (qualifier value)"
 * referenceRange.low.value = 2.7
 * referenceRange.low.unit = "%"
 * referenceRange.high.value = 5.4
@@ -396,7 +396,7 @@ Usage: #inline
 * valueQuantity = 5.7 'g/L' "g/L"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "g/L"
-* method = $sct#82962001 "Protein electrophoresis (procedure)"
+* method = $sct#703450007 "Electrophoresis technique (qualifier value)"
 * referenceRange.low.value = 4.6 
 * referenceRange.low.unit = "g/L"
 * referenceRange.high.value = 9.2
@@ -431,7 +431,7 @@ Usage: #inline
 * valueQuantity = 8.9 '%' "%"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "%"
-* method = $sct#82962001 "Protein electrophoresis (procedure)"
+* method = $sct#703450007 "Electrophoresis technique (qualifier value)"
 * referenceRange.low.value = 6.5
 * referenceRange.low.unit = "%"
 * referenceRange.high.value = 13.2
@@ -460,7 +460,7 @@ Usage: #inline
 * valueQuantity = 4 'g/L' "g/L"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "g/L"
-* method = $sct#82962001 "Protein electrophoresis (procedure)"
+* method = $sct#703450007 "Electrophoresis technique (qualifier value)"
 * referenceRange.low.value = 3.2 
 * referenceRange.low.unit = "g/L"
 * referenceRange.high.value = 4.8
@@ -495,7 +495,7 @@ Usage: #inline
 * valueQuantity = 6.2 '%' "%"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "%"
-* method = $sct#82962001 "Protein electrophoresis (procedure)"
+* method = $sct#703450007 "Electrophoresis technique (qualifier value)"
 * referenceRange.low.value = 4.6
 * referenceRange.low.unit = "%"
 * referenceRange.high.value = 6.9
@@ -523,7 +523,7 @@ Usage: #inline
 * valueQuantity = 3.1 'g/L' "g/L"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "g/L"
-* method = $sct#82962001 "Protein electrophoresis (procedure)"
+* method = $sct#703450007 "Electrophoresis technique (qualifier value)"
 * referenceRange.low.value = 2 
 * referenceRange.low.unit = "g/L"
 * referenceRange.high.value = 4.1
@@ -558,7 +558,7 @@ Usage: #inline
 * valueQuantity = 4.9 '%' "%"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "%"
-* method = $sct#82962001 "Protein electrophoresis (procedure)"
+* method = $sct#703450007 "Electrophoresis technique (qualifier value)"
 * referenceRange.low.value = 2.8
 * referenceRange.low.unit = "%"
 * referenceRange.high.value = 5.9
@@ -588,7 +588,7 @@ Usage: #inline
 * valueQuantity = 10.9 'g/L' "g/L"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "g/L"
-* method = $sct#82962001 "Protein electrophoresis (procedure)"
+* method = $sct#703450007 "Electrophoresis technique (qualifier value)"
 * referenceRange.low.value = 6.7 
 * referenceRange.low.unit = "g/L"
 * referenceRange.high.value = 12.3
@@ -623,7 +623,7 @@ Usage: #inline
 * valueQuantity = 17 '%' "%"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "%"
-* method = $sct#82962001 "Protein electrophoresis (procedure)"
+* method = $sct#703450007 "Electrophoresis technique (qualifier value)"
 * referenceRange.low.value = 9.6
 * referenceRange.low.unit = "%"
 * referenceRange.high.value = 17.5

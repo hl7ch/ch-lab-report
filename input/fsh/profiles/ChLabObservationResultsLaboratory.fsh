@@ -1,7 +1,7 @@
 Profile: ChLabObservationResultsLaboratory
 Parent: Observation
 Id: ch-lab-observation-results-laboratory
-Title: "CH Lab Observation Results: Laboratory"
+Title: "CH LAB-Observation"
 Description: "This profile constrains the Observation resource for the purpose of laboratory test reports in Switzerland."
 * . ^short = "CH Lab Observation Results: Laboratory"
 
@@ -9,7 +9,7 @@ Description: "This profile constrains the Observation resource for the purpose o
 
 * insert SetFmmandStatusRule ( 2, trial-use)
 * ^experimental = false
-* ^purpose = "This profile constrains the Observation resource to represent a laboratory in vitro diagnostic test or panel/study. In case of a panel/study, the results of the panel appear as sub-observations. In this case this top-level Observation acts as a grouper of all the observations belonging to the panel or study.  The top-level observation may carry a conclusion in the value element and or a global interpretation by the producer of the study, in the comment element."
+* ^purpose = "This profile constrains the Observation resource to represent a laboratory in vitro diagnostic test or panel/study. In case of a panel/study, the results of the panel appear as sub-observations. In this case this top-level Observation acts as a grouper of all the observations belonging to the panel or study.  The top-level observation may carry a conclusion in the note element and or a global interpretation by the producer of the study, in the interpretation element."
 * insert ObservationResultsEu
 * obeys eu-lab-1 and eu-lab-2
 * . ^short = "Laboratory result for a simple test or for a panel/study"
@@ -39,9 +39,11 @@ Description: "This profile constrains the Observation resource for the purpose o
 * category ^definition = "A code that classifies the general type of observation being made. In this profile, fixed to \"laboratory\"."
 * category ^comment = "\"laboratory\" includes laboratory medicine and pathology"
 * category contains
+//    grouper 0..1 and
     laboratory 1..1 and
     studyType 0..* and
     specialty 0..*
+// * category[grouper] = "isPanel" or "isSingleTest"
 * category[laboratory] = $observation-category#laboratory
 * category[studyType] from $lab-studyType-eu-lab (required)
 * category[studyType] ^short = "The way of grouping of the test results into clinically meaningful domains (e.g. hematology study, microbiology study, etc.)"
