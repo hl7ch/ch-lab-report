@@ -76,19 +76,19 @@ Id: ch-lab-albumin-urine
 Title: "CH Lab Observation Results: Albumin Urine"
 Description: "This profile constrains the ChLabObservationSingleTest profile determine the concentration of albumin in urine."
 * . ^short = "CH Lab Observation Results: Albumin Urine"
-// * labTestKit only Reference(Combur_Test)  // may be substituted with other Stripe tests
+// * labTestKit = Reference(Combur_Test)  // may be substituted with other Stripe tests
 * code = $loinc#1754-1 "Albumin [Mass/volume] in Urine"
 * code.text = "Albumin (U) [Mass/Vol]"
   * ^short = "LOINC Display Name"
 * method = $sct#702660003 "Test strip technique (qualifier value)"
 
+//  https://github.com/hl7-eu/laboratory/blob/master/input/fsh/examples/lab_report/Observation-result-ratio-example.fsh
 
-Instance: Combur_Test // must be linked in porfile above
-InstanceOf: ChLabReportDeviceTestKit
+Profile: Combur_Test // must be linked in porfile above
+Parent: ChLabReportDeviceTestKit
+Id: combur-test
 Title: "Combur Urin Test Streifen"
 Description: "Example of a laboratory Testkit"
-Usage: #example
-* id = "combur-test"
 * identifier.system = "http://www.labor-gantenbein.ch/devices/id"
 * identifier.value = "345111"
 * udiCarrier 
