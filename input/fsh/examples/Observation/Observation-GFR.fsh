@@ -17,17 +17,21 @@ Usage: #example
 
 * note.text = "GFR estimating equations developed by the Modification of Diet in Renal Disease (MDRD) Study Group and the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)...."
 * method = $sct#702668005 "MDRD"
+
 * component[0].code = $loinc#48643-1 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
 * component[=].valueQuantity.comparator = #>
 * component[=].valueQuantity = 60 'mL/min' 
 * component[=].valueQuantity.unit = "mL/min/1.73m2"
 * component[=].referenceRange.low = 60 'mL/min' "mL/min/1.73m2"
-* component[=].referenceRange.appliesTo.text = "non-black/african-american"
+* component[=].referenceRange.appliesTo.text = "black/african-american"
 * component[=].referenceRange.age.low = 18 'a' "yrs"
+
 * component[+].code = $loinc#48642-3 "Glomerular filtration rate/1.73 sq M.predicted among non-blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+* component[=].valueQuantity.comparator = #>
 * component[=].valueQuantity = 60 'mL/min'
 * component[=].valueQuantity.unit = "mL/min/1.73m2"
 * component[=].referenceRange.low = 60 'mL/min' "mL/min/1.73m2"
+* component[=].referenceRange.appliesTo.text = "non-black/african-american"
 * component[=].referenceRange.age.low = 18 'a' "yrs"
  
 * interpretation.coding = $v3-ObservationInterpretation#N "Normal"
