@@ -84,7 +84,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile det
 
 //  https://github.com/hl7-eu/laboratory/blob/master/input/fsh/examples/lab_report/Observation-result-ratio-example.fsh
 
-Profile: Combur_Test // must be linked in porfile above
+Profile: Combur_Test // must be linked in profile above
 Parent: ChLabReportDeviceTestKit
 Id: combur-test
 Title: "Combur Urin Test Streifen"
