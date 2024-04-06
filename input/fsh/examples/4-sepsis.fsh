@@ -337,7 +337,7 @@ Usage: #inline
 * communication.preferred = true
 
 Instance: HealthInsuranceCard
-InstanceOf: Coverage
+InstanceOf: CHCoreCoverage
 Title: "Health Insurance Card"
 Description: "Example for Insurance"
 Usage: #inline
