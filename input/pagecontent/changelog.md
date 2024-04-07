@@ -21,3 +21,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * use presentedForm to add base 64 encoded PDF
 * add 2 examples with image results: electrophoresis and H2-CH4 Breath Test
 * replace method $sct#82962001 "Protein electrophoresis (procedure)" with $sct#703450007 "Electrophoresis technique (qualifier value)"
+
+* [#71](https://github.com/hl7ch/ch-lab-report/issues/71) Example for renal Insufficiency #71
+  * add Observation-eGFR-MDRD examples and ChLabObservation_eGFR_MDRD profiles
+  * add Observation-eGFR-CKD-EPI examples and ChLabObservation_eGFR_CKD_EPI profiles
