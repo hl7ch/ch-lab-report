@@ -1,13 +1,13 @@
-// ╭──────  example eGFR for a male Patient  ───────────────╮
+// ╭──────  example eGFR-MDRD for a male Patient  ──────────╮
 // │ Observation with components for blacks and non-blacks  │
 // ╰────────────────────────────────────────────────────────╯
 
-Instance: Observation-eGFR-male
-InstanceOf: ChLabObservation_eGFR_male
+Instance: Observation-eGFR-MDRD-male
+InstanceOf: ChLabObservation_eGFR_MDRD_male
 Description: "Example of an Observation Instance with component.referenceRange"
 Usage: #example
 * identifier.system = "https://intranet.aumc.nl/labvalues"
-* identifier.value = "1304-03720-eGFR-male"
+* identifier.value = "1304-03720-eGFR-MDRD-male"
 * status = #final
 
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
@@ -34,16 +34,16 @@ Usage: #example
 * interpretation.coding = $v3-ObservationInterpretation#N "Normal"
 * interpretation.text = "interpretation of results should be assigned based upon the level of kindey function"
 
-// ╭──────  example eGFR for a female Patient  ────────────╮
+// ╭──────  example eGFR-MDRD for a female Patient  ───────╮
 // │ Observation with components for blacks and non-blacks │
 // ╰───────────────────────────────────────────────────────╯
 
-Instance: Observation-eGFR-female
-InstanceOf: ChLabObservation_eGFR_female
+Instance: Observation-eGFR-MDRD-female
+InstanceOf: ChLabObservation_eGFR_MDRD_female
 Description: "Example of an Observation Instance with component.referenceRange"
 Usage: #example
 * identifier.system = "https://examle.com/labvalues"
-* identifier.value = "1304-03720-eGFR-female"
+* identifier.value = "1304-03720-eGFR-MDRD-female"
 * status = #final
 
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
