@@ -5,7 +5,7 @@
 Profile:      ChLabObservation_eGFR_MDRD_male
 Id:           ch-lab-observation-egfr-mdrd-male
 Parent:       ChLabObservation_eGFR
-Title:        "eGFR_MDMR Profile for males"
+Title:        "eGFR MDMR Profile for males"
 Description:  "Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated."
 
 * code = $loinc#70969-1 "Glomerular filtration rate/1.73 sq M.predicted among males [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
@@ -61,7 +61,7 @@ Description:  "Renal function can be determined by laboratory measurement of ser
 Profile:      ChLabObservation_eGFR_MDRD_female
 Id:           ch-lab-observation-egfr-mdrd-female
 Parent:       ChLabObservation_eGFR
-Title:        "eGFR_MDMR Profile for females"
+Title:        "eGFR MDMR Profile for females"
 Description:  "Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated."
 
 * code = $loinc#50044-7 "Glomerular filtration rate/1.73 sq M.predicted among females [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
