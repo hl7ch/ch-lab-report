@@ -42,10 +42,10 @@ Description: """This panel collects the lab results in relation to renal insufie
 // │  Profiles for renal insufficiency Single Tests   │
 // ╰──────────────────────────────────────────────────╯
 
-Profile: ChLabObservationRISingleTest
+Profile: ChLabObservationRenalInsufficiencySingleTest
 Parent: ChLabObservationSingleTest
-Id: ChLabRI-single-test
-Title: "Renal insufficiency Single Test" 
+Id: ch-lab-observation-renal-insufficiency-single-test
+Title: "CH LAB Observation Renal insufficiency Single Test" 
 Description: """This profile constrains the ChLabObservationSingleTest profile to represent a single result to estimate Renal insufficiency for the  HL7 Swiss project."""
 
 * ^publisher = "HL7 Switzerland"
@@ -61,7 +61,7 @@ Description: """This profile constrains the ChLabObservationSingleTest profile t
 
 /*
 Profile: ChLabObservationCKD_EPI
-Parent: ChLabObservationRISingleTest
+Parent: ChLabObservationRenalInsufficiencySingleTest
 Id: ch-lab-ckd-epi
 Title: "CH LAB Observation Results: CKD-EPI"
 Description: "This profile constrains the ChLabObservationSingleTest profile to estimate GFR."
@@ -73,7 +73,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile to 
 */
 
 Profile: ChLabObservationAlbuminUrine
-Parent: ChLabObservationRISingleTest
+Parent: ChLabObservationRenalInsufficiencySingleTest
 Id: ch-lab-albumin-urine
 Title: "CH LAB Observation Results: Albumin Urine"
 Description: "This profile constrains the ChLabObservationSingleTest profile determine the concentration of albumin in urine."
