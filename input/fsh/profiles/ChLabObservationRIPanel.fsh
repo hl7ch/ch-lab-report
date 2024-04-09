@@ -6,7 +6,7 @@
 Profile: ChLabObservationRIPanel
 Parent: ChLabObservationPanel
 Id: ChLabObservation-RI-panel
-Title: "RI Panel - Blood by Automated count"   // LOINC long common name
+Title: "Renal Insufficiency Panel - Renal insufficiency (disorder)"   // SNOMED concept
 Description: """This panel collects the lab results in relation to renal insufiency."""
 
 * ^publisher = "HL7 Switzerland"
@@ -29,7 +29,7 @@ Description: """This panel collects the lab results in relation to renal insufie
   CKD-EPI 1..1 MS and // CKD-EPI for eGFR
   AlbuminUrine 1..1 MS 
 
-* hasMember[CKD-EPI] only Reference(ChLabObservationCKD_EPI)
+* hasMember[CKD-EPI] only Reference(ChLabObservation_eGFR_CKD_EPI_male or ChLabObservation_eGFR_CKD_EPI_female)
 * hasMember[CKD-EPI] ^label = "Label"
 * hasMember[CKD-EPI] ^short = "CKD-EPI"
 
@@ -59,6 +59,7 @@ Description: """This profile constrains the ChLabObservationSingleTest profile t
 * category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
 * hasMember ..0
 
+/*
 Profile: ChLabObservationCKD_EPI
 Parent: ChLabObservationRISingleTest
 Id: ch-lab-ckd-epi
@@ -69,6 +70,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile to 
 * code.text = "GFR/1.73 sq M.predicted CKD-EPI (S/P/Bld) [Vol rate/Area]" // LOINC Display Name
   * ^short = "LOINC Display Name"
 * method = $sct#702873001 "Calculation technique (qualifier value)"
+*/
 
 Profile: ChLabObservationAlbuminUrine
 Parent: ChLabObservationRISingleTest

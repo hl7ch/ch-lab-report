@@ -11,9 +11,9 @@ Usage: #example
 * status = #final
 
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* effectiveDateTime = "2023-09-14T07:34:00+01:00"
+* effectiveDateTime = "2023-03-27T11:24:26+01:00"
 * issued = "2023-09-14T14:34:00+01:00"
-* performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 
 // * component[blacks].code = $loinc#88293-6 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
 * component[blacks].valueQuantity.comparator = #>

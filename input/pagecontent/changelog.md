@@ -25,3 +25,5 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#71](https://github.com/hl7ch/ch-lab-report/issues/71) Example for renal Insufficiency #71
   * add Observation-eGFR-MDRD examples and ChLabObservation_eGFR_MDRD profiles
   * add Observation-eGFR-CKD-EPI examples and ChLabObservation_eGFR_CKD_EPI profiles
+
+* add simple example for a laboratory observation result: Observation-Ht
