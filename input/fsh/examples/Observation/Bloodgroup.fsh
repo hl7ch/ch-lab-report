@@ -16,6 +16,6 @@ Usage: #example
 * issued = "2023-09-14T14:34:00+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 
-* valueCodeableConcept.coding.system = "http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set"
 * valueCodeableConcept.coding.code = #278154007
-* valueCodeableConcept.coding.display = "Blood group AB Rh(D) negative (finding)"
+* valueCodeableConcept.coding.system = $sct
+* valueCodeableConcept.coding.display = "Blood group AB Rh(D) negative"
