@@ -1,7 +1,7 @@
 Profile:      ChLabObservation_eGFR_CKD_EPI_male
 Id:           ch-lab-observation-egfr-ckd-epi-male
 Parent:       ChLabObservation_eGFR
-Title:        "CH LAB Observation eGFR CKD-EPI Profile for males"
+Title:        "CH LAB Observation: eGFR - CKD-EPI Profile for males"
 Description:  "Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated."
 
 * code = $loinc#50044-7 "Glomerular filtration rate/1.73 sq M.predicted among females [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
@@ -53,7 +53,7 @@ Description:  "Renal function can be determined by laboratory measurement of ser
 Profile:      ChLabObservation_eGFR_CKD_EPI_female
 Id:           ch-lab-observation-egfr-female
 Parent:       ChLabObservationSingleTest
-Title:        "eGFR CKD-EPI Profile for females"
+Title:        "CH LAB Observation: eGFR - CKD-EPI Profile for females"
 Description:  "Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated."
 
 * code = $loinc#50044-7 "Glomerular filtration rate/1.73 sq M.predicted among females [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"

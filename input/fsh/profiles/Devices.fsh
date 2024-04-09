@@ -27,7 +27,7 @@ Description: "Holds Laboratory Test-Kit"
 // ╰──────────────────────╯
 Profile: ChLabReportDeviceAnalyzer
 Parent: Device
-Title: "Ch LabReport Device Analyzer"
+Title: "CH LAB Device - Analyzer"
 Id: ch-lab-report-device-analyzer
 Description: "Holds Laboratory Analyzer"
 

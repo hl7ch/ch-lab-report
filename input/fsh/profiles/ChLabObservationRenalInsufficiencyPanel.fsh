@@ -3,10 +3,10 @@
 // │         observation profiles          │
 // ╰───────────────────────────────────────╯
 
-Profile: ChLabObservationRIPanel
+Profile: ChLabObservationRenalInsufficiencyPanel
 Parent: ChLabObservationPanel
-Id: ChLabObservation-RI-panel
-Title: "Renal Insufficiency Panel - Renal insufficiency (disorder)"   // SNOMED concept
+Id: ch-lab-observation-renal-insufficiency-panel
+Title: "CH LAB Observation: Renal Insufficiency Panel"   // SNOMED concept
 Description: """This panel collects the lab results in relation to renal insufiency."""
 
 * ^publisher = "HL7 Switzerland"
@@ -89,7 +89,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile det
 Profile: Combur_Test // must be linked in profile above
 Parent: ChLabReportDeviceTestKit
 Id: combur-test
-Title: "Combur Urin Test Streifen"
+Title: "Combur Urin Test Streifen - Device"
 Description: "Example of a laboratory Testkit"
 * identifier.system = "http://www.labor-gantenbein.ch/devices/id"
 * identifier.value = "345111"
