@@ -1,9 +1,9 @@
 Profile: ChLabDiagnosticReport
 Parent: DiagnosticReport
 Id: ch-lab-diagnosticreport
-Title: "CH Lab DiagnosticReport: Laboratory Report"
+Title: "CH LAB DiagnosticReport: Laboratory Report"
 Description: "This profile constrains the DiagnosticReport resource for the purpose of laboratory test reports in Switzerland."
-* . ^short = "CH Lab DiagnosticReport: Laboratory Report"
+* . ^short = "CH LAB DiagnosticReport: Laboratory Report"
 * . ^definition = "Laboratory Report DiagnosticReport"
 * ^extension[$imposeProfile].valueCanonical = Canonical(DiagnosticReportLabEu)
 

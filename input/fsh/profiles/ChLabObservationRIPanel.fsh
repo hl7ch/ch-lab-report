@@ -63,9 +63,9 @@ Description: """This profile constrains the ChLabObservationSingleTest profile t
 Profile: ChLabObservationCKD_EPI
 Parent: ChLabObservationRISingleTest
 Id: ch-lab-ckd-epi
-Title: "CH Lab Observation Results: CKD-EPI"
+Title: "CH LAB Observation Results: CKD-EPI"
 Description: "This profile constrains the ChLabObservationSingleTest profile to estimate GFR."
-* . ^short = "CH Lab Observation Results: Laboratory Leucocyte Count"
+* . ^short = "CH LAB Observation Results: Laboratory Leucocyte Count"
 * code = $loinc#62238-1 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
 * code.text = "GFR/1.73 sq M.predicted CKD-EPI (S/P/Bld) [Vol rate/Area]" // LOINC Display Name
   * ^short = "LOINC Display Name"
@@ -75,9 +75,9 @@ Description: "This profile constrains the ChLabObservationSingleTest profile to 
 Profile: ChLabObservationAlbuminUrine
 Parent: ChLabObservationRISingleTest
 Id: ch-lab-albumin-urine
-Title: "CH Lab Observation Results: Albumin Urine"
+Title: "CH LAB Observation Results: Albumin Urine"
 Description: "This profile constrains the ChLabObservationSingleTest profile determine the concentration of albumin in urine."
-* . ^short = "CH Lab Observation Results: Albumin Urine"
+* . ^short = "CH LAB Observation Results: Albumin Urine"
 // * labTestKit = Reference(Combur_Test)  // may be substituted with other Stripe tests
 * code = $loinc#1754-1 "Albumin [Mass/volume] in Urine"
 * code.text = "Albumin (U) [Mass/Vol]"

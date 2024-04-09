@@ -6,7 +6,7 @@
 Profile: ChLabObservationCBCPanel
 Parent: ChLabObservationPanel
 Id: ChLabObservation-CBC-panel
-Title: "CBC Panel - Blood by Automated count"   // LOINC long common name
+Title: "CH LAB Observation - CBC Panel - Blood by Automated count"   // LOINC long common name
 Description: """This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the fotometry version of hemoglobin in this panel."""
 
 * ^publisher = "HL7 Switzerland"
@@ -94,7 +94,7 @@ Description: """This panel is the traditional hemogram plus platelet count which
 Profile: ChLabCBCSingleTest
 Parent: ChLabObservationSingleTest
 Id: ChLabCBC-single-test
-Title: "CBC Single Test - Blood by Automated count, Observation" 
+Title: "CH LAB Observation - CBC Single Test - Blood by Automated count" 
 Description: """This profile constrains the ChLabObservationSingleTest profile to represent a single result produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project."""
 
 * ^publisher = "HL7 Switzerland"
@@ -115,9 +115,9 @@ Description: """This profile constrains the ChLabObservationSingleTest profile t
 Profile: ChLabLeucocyteCount
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-wbc
-Title: "CH Lab Observation Results: LeucocyteCount"
+Title: "CH LAB Observation Results: LeucocyteCount"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory leucocyte count."
-* . ^short = "CH Lab Observation Results: Laboratory Leucocyte Count"
+* . ^short = "CH LAB Observation Results: Laboratory Leucocyte Count"
 * code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
 * code.text = "WBC Auto (Bld) [#/Vol]" // LOINC Display Name
   * ^short = "LOINC Display Name"
@@ -126,9 +126,9 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabErythrocyteCount
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-rbc
-Title: "CH Lab Observation Results: ErythrocyteCount"
+Title: "CH LAB Observation Results: ErythrocyteCount"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory erythrocyte count."
-* . ^short = "CH Lab Observation Results: Laboratory Erythrocyte Count"
+* . ^short = "CH LAB Observation Results: Laboratory Erythrocyte Count"
 * code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 * code.text = "RBC Auto (Bld) [#/Vol]"
   * ^short = "LOINC Display Name"
@@ -137,9 +137,9 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabHemoglobin
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-hb
-Title: "CH Lab Observation Results: Hemoglobin"
+Title: "CH LAB Observation Results: Hemoglobin"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory hemoglobin."
-* . ^short = "CH Lab Observation Results: Laboratory Hemoglobin"
+* . ^short = "CH LAB Observation Results: Laboratory Hemoglobin"
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]"
   * ^short = "LOINC Display Name"
@@ -149,9 +149,9 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabHematocrit
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-ht
-Title: "CH Lab Observation Results: Hemotocrit"
+Title: "CH LAB Observation Results: Hemotocrit"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory hemotocrit in Switzerland."
-* . ^short = "CH Lab Observation Results: Laboratory Hematocrit"
+* . ^short = "CH LAB Observation Results: Laboratory Hematocrit"
 * code = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
 * code.text = "Hematocrit Auto (Bld) [Volume fraction]"
   * ^short = "LOINC Display Name"
@@ -161,9 +161,9 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabMeanCorpuscularVolume
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-mcv
-Title: "CH Lab Observation Results: MeanCorpuscularVolume"
+Title: "CH LAB Observation Results: MeanCorpuscularVolume"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCV."
-* . ^short = "CH Lab Observation Results: Laboratory MCV"
+* . ^short = "CH LAB Observation Results: Laboratory MCV"
 * code = $loinc#787-2 "MCV [Entitic volume] by Automated count"
 * code.text = "MCV Auto (RBC) [Entitic vol]" 
   * ^short = "LOINC Display Name"
@@ -172,9 +172,9 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabMeanCorpuscularHemoglobin
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-mch
-Title: "CH Lab Observation Results: Mean Corpuscular Hemoglobin"
+Title: "CH LAB Observation Results: Mean Corpuscular Hemoglobin"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCH in Switzerland."
-* . ^short = "CH Lab Observation Results: Laboratory MCH"
+* . ^short = "CH LAB Observation Results: Laboratory MCH"
 * code = $loinc#785-6 "MCH [Entitic mass] by Automated count"
 * code.text = "MCH Auto (RBC) [Entitic mass]"
   * ^short = "LOINC Display Name"
@@ -183,9 +183,9 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabMeanCorpuscularHemoglobinConcentration
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-mchc
-Title: "CH Lab Observation Results: Mean Corpuscular Hemoglobin Concentration"
+Title: "CH LAB Observation Results: Mean Corpuscular Hemoglobin Concentration"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCHC in Switzerland."
-* . ^short = "CH Lab Observation Results: Laboratory MCHC"
+* . ^short = "CH LAB Observation Results: Laboratory MCHC"
 * code = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
 * code.text = "MCHC Auto (RBC) [Mass/Vol]"
   * ^short = "LOINC Display Name"
@@ -194,9 +194,9 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabErythrocyteDistributionWidth
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-ery-distribution-width
-Title: "CH Lab Observation Results: Erythrocyte distribution width [Entitic volume] by Automated count"
+Title: "CH LAB Observation Results: Erythrocyte distribution width [Entitic volume] by Automated count"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribuition Width in Switzerland."
-* . ^short = "CH Lab Observation Results: Laboratory Erythrocyte Distribution Width"
+* . ^short = "CH LAB Observation Results: Laboratory Erythrocyte Distribution Width"
 * code = $loinc#21000-5 "Erythrocyte distribution width [Entitic volume] by Automated count"
 * code.text = "Erythrocyte distribution width Auto (RBC) [Entitic vol]"
   * ^short = "LOINC Display Name"
@@ -205,9 +205,9 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabErythrocyteDistWidthRatio
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-ery-dist-width-ratio
-Title: "CH Lab Observation Results: Erythrocyte distribution width [Ratio] by Automated count"
+Title: "CH LAB Observation Results: Erythrocyte distribution width [Ratio] by Automated count"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribution Width Ratio."
-* . ^short = "CH Lab Observation Results: Laboratory Erythrocyte Distribution Width Ratio"
+* . ^short = "CH LAB Observation Results: Laboratory Erythrocyte Distribution Width Ratio"
 * code = $loinc#788-0 "Erythrocyte distribution width [Ratio] by Automated count"
 * code.text = "Erythrocyte distribution width Auto (RBC) [Ratio]"
   * ^short = "LOINC Display Name"
@@ -215,9 +215,9 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabPlateletCount
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-platelets
-Title: "CH Lab Observation Results: Platelet Count"
+Title: "CH LAB Observation Results: Platelet Count"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet count."
-* . ^short = "CH Lab Observation Results: Laboratory Platelet Count"
+* . ^short = "CH LAB Observation Results: Laboratory Platelet Count"
 * code = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
 * code.text = "Platelets Auto (Bld) [#/Vol]" 
   * ^short = "LOINC Display Name"
@@ -226,17 +226,17 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabPlateletDistributionWidth
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-platelets-distribution-width
-Title: "CH Lab Observation Results: Platelet Distribution With"
+Title: "CH LAB Observation Results: Platelet Distribution With"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet count."
-* . ^short = "CH Lab Observation Results: Laboratory Platelet Count"
+* . ^short = "CH LAB Observation Results: Laboratory Platelet Count"
 * code = $loinc#32207-3 "Platelet distribution width [Entitic volume] in Blood by Automated count"
 
 Profile: ChLabPlateletMeanVolume
 Parent: ChLabCBCSingleTest
 Id: ch-lab-observation-results-platelets-mean-volume
-Title: "CH Lab Observation Results: Platelet Mean Volume"
+Title: "CH LAB Observation Results: Platelet Mean Volume"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet mean volume."
-* . ^short = "CH Lab Observation Results: Laboratory Platelet Count"
+* . ^short = "CH LAB Observation Results: Laboratory Platelet Count"
 * code = $loinc#32623-1 "Platelet mean volume [Entitic volume] in Blood by Automated count"
 
 Instance: BloodCBC
