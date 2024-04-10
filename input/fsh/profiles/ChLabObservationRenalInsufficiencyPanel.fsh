@@ -86,19 +86,3 @@ Description: "This profile constrains the ChLabObservationSingleTest profile det
 
 //  https://github.com/hl7-eu/laboratory/blob/master/input/fsh/examples/lab_report/Observation-result-ratio-example.fsh
 
-Profile: Combur_Test // must be linked in profile above
-Parent: ChLabReportDeviceTestKit
-Id: combur-test
-Title: "Combur Urin Test Streifen - Device"
-Description: "Example of a laboratory Testkit"
-* identifier.system = "http://www.labor-gantenbein.ch/devices/id"
-* identifier.value = "345111"
-* udiCarrier 
-  * deviceIdentifier = "TK040156333936001" // Unique device identifier (UDI) assigned to device label or package, same as GTIN. Fake Number !
-* status = #active
-* manufacturer = "Roche"
-* lotNumber = "lot.444555"
-* serialNumber = "1116787" // REF
-* deviceName
-  * name = "Combur-Test Teststreifen"  // Fake Name
-  * type = #udi-label-name

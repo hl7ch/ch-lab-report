@@ -1106,6 +1106,7 @@ Usage: #inline
 // │  automated 3-part differential haematology analyser  │
 // │             LIS (additional LAN port)                │
 // ╰──────────────────────────────────────────────────────╯
+/*
 Instance: XP-300
 InstanceOf: ChLabReportDeviceAnalyzer
 Title: "Sysmex XP-300"
@@ -1159,3 +1160,5 @@ Usage: #example
 * deviceName
   * name = "Roche CARDIAC D-Dimer"  // Fake Name !
   * type = #udi-label-name
+
+*/
