@@ -26,7 +26,7 @@ Usage: #example
 * referenceRange[=].low.unit = "mL/min"
 * referenceRange[=].age.low.value = 31
 * referenceRange[=].age.low.unit = "a"
-//* referenceRange[=].age.high.value = 30
+//* referenceRange[=].age.high.value = 93
 //* referenceRange[=].age.high.unit = "a"
 * referenceRange[=].text = "Die Formel ist nur bis 93 Jahre validiert."
 
@@ -65,6 +65,21 @@ Usage: #example
 * effectiveDateTime = "2023-09-14T07:34:00+01:00"
 * issued = "2023-09-14T14:34:00+01:00"
 * performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
+
+* referenceRange[+].low.value = 90
+* referenceRange[=].low.unit = "mL/min"
+* referenceRange[=].age.low.value = 0
+* referenceRange[=].age.low.unit = "a"
+* referenceRange[=].age.high.value = 30
+* referenceRange[=].age.high.unit = "a"
+* referenceRange[=].text = "Die Formel ist nur ab 18 Jahre validiert."
+* referenceRange[+].low.value = 60
+* referenceRange[=].low.unit = "mL/min"
+* referenceRange[=].age.low.value = 31
+* referenceRange[=].age.low.unit = "a"
+//* referenceRange[=].age.high.value = 93
+//* referenceRange[=].age.high.unit = "a"
+* referenceRange[=].text = "Die Formel ist nur bis 93 Jahre validiert."
 
 // * component[blacks].code = $loinc#48643-1 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
 * component[blacks].valueQuantity.comparator = #>
