@@ -13,6 +13,9 @@ Description:  "Renal function can be determined by laboratory measurement of ser
 * code ^short = "eGFR_MDMR"
 * code ^definition = "GFR estimating equations developed by the Modification of Diet in Renal Disease (MDRD) Study Group and the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)...."
 
+* referenceRange.low.value = 60
+* referenceRange.low.unit = "mL/min"
+
 * component ..2 MS
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
@@ -68,6 +71,9 @@ Description:  "Renal function can be determined by laboratory measurement of ser
 * code MS
 * code ^short = "eGFR_MDMR"
 * code ^definition = "GFR estimating equations developed by the Modification of Diet in Renal Disease (MDRD) Study Group and the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)...."
+
+* referenceRange.low.value = 60
+* referenceRange.low.unit = "mL/min"
 
 * component ..2 MS
 * component ^slicing.discriminator.type = #value
