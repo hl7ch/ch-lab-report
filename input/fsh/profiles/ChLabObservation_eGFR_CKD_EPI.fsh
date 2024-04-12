@@ -61,7 +61,6 @@ Description:  "Renal function can be determined by laboratory measurement of ser
 * code ^short = "eGFR_CKD_EPI"
 * code ^definition = "GFR estimating equations developed by the Modification of Diet in Renal Disease (MDRD) Study Group and the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)...."
 
-
 * component ..2 MS
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
