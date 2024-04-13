@@ -6,7 +6,7 @@
 Profile: ChLabObservationRenalInsufficiencyPanel
 Parent: ChLabObservationPanel
 Id: ch-lab-observation-renal-insufficiency-panel
-Title: "CH LAB Observation: Renal Insufficiency Panel"   // SNOMED concept
+Title: "CH LAB Observation Results: Renal Insufficiency Panel"   // SNOMED concept
 Description: """This panel collects the lab results in relation to renal insufiency."""
 
 * ^publisher = "HL7 Switzerland"
