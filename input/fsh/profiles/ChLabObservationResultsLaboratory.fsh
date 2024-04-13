@@ -1,9 +1,9 @@
 Profile: ChLabObservationResultsLaboratory
 Parent: Observation
 Id: ch-lab-observation-results-laboratory
-Title: "CH LAB-Observation"
+Title: "CH LAB Observation: Laboratory Report"
 Description: "This profile constrains the Observation resource for the purpose of laboratory test reports in Switzerland."
-* . ^short = "CH Lab Observation Results: Laboratory"
+* . ^short = "CH LAB Observation Results: Laboratory"
 
 * ^extension[$imposeProfile].valueCanonical = Canonical(ObservationResultsLaboratoryEu)
 

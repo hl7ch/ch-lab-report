@@ -5,7 +5,7 @@ has to be compared with SR from CH LAB-Order
 Profile: ChLabReportServiceRequest
 Parent: ServiceRequest
 Id: ch-lab-report-servicerequest
-Title: "CH Lab ServiceRequest: Laboratory Order"
+Title: "CH LAB ServiceRequest: Laboratory Order"
 Description: "This profile constrains the ServiceRequest resource for the purpose of laboratory orders in Switzerland."
 
 * insert SetFmmandStatusRule ( 2, trial-use)

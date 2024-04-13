@@ -6,7 +6,7 @@
 Profile: ChLabObservationPanel
 Parent: ChLabObservationResultsLaboratory
 Id: ChLab-observation-panel
-Title: "CH LAB-Observation - Panel"
+Title: "CH LAB Observation: Panel"
 Description: """This profile constrains the ChLabObservationResultsLaboratory profile to represent only a panel / battery of laboratory test results for the HL7 Swiss project. The top-level observation contains only further observations-panels and observations-single-tests in the hasMember element. The observation-panels may carry a conclusion in the note element and/or a global interpretation by the producer of the study, in the interpretation element; value[x] and component elements are not allowed and have to be shown in the observation-single-test profile."""
 
 * ^publisher = "HL7 Switzerland"

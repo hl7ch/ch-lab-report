@@ -1,9 +1,9 @@
 Profile: ChLabReportDocument
 Parent: CHCoreDocument
 Id: ch-lab-report-document
-Title: "CH Lab Document: Laboratory Report"
+Title: "CH LAB Document: Laboratory Report"
 Description: "This profile constrains the Bundle resource for the purpose of laboratory test reports in Switzerland."
-* . ^short = "CH Lab Document: Laboratory Report"
+* . ^short = "CH LAB Document: Laboratory Report"
 * ^extension[$imposeProfile].valueCanonical = Canonical(BundleLabReportEu)
 
 * entry contains

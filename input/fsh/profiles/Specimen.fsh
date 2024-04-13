@@ -1,9 +1,8 @@
 Profile: ChLabSpecimen // Should be convenient in CH LAB-Order too
 Parent: Specimen
-Title: "CH LAB-Specimen"
+Title: "CH LAB Specimen"
 Id: ch-lab-specimen
 Description: "This profile constrains the Specimen resource for the purpose of laboratory test reports in Switzerland."
-
 * ^extension[$imposeProfile].valueCanonical = Canonical(SpecimenEu)
 
 * insert SetFmmandStatusRule ( 2, trial-use)
@@ -12,7 +11,6 @@ Description: "This profile constrains the Specimen resource for the purpose of l
 
 // * extension contains $specimen-feature-type-r5 named SpecimenFeatureTypeR5 0..*
 // * extension[SpecimenFeatureTypeR5].valueCodeableConcept
-
 * subject only Reference(ChLabPatient or PatientAnimalEu or Group  or Device or Substance or Location)
 
 * type from LabSpecimenTypesEuVs (preferred)
@@ -28,7 +26,6 @@ Otherwise the relationship is recorded in the Specimen.request element"""
 // ╭────────────── collection, container, processing  ───────────────────────╮
 // │ Additives are no more element of container, but Reference to processing │
 // ╰─────────────────────────────────────────────────────────────────────────╯
-
 * collection
   * bodySite from http://hl7.org/fhir/ValueSet/body-site (preferred)
     * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type"
@@ -40,9 +37,7 @@ Otherwise the relationship is recorded in the Specimen.request element"""
   * additive[x] 0..0
   * extension contains $specimen-container-device-r5 named device 0..1
   * extension[device].valueReference only Reference(Device)
-
 // ----------------------------------------
-
 Profile: SpecimenAdditiveSubstance
 Parent: Substance
 Id: specimen-additive-substance-eu-lab
