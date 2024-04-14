@@ -79,10 +79,10 @@ Title: "CH LAB Observation Results: Albumin/Creatinine Ratio in Urine"
 Description: "This profile constrains the ChLabObservationSingleTest profile determine ratio of the concentration of albumin and creatinine in urine."
 * . ^short = "CH LAB Observation Results: uACR"
 // * labTestKit = Reference(Combur_Test)  // may be substituted with other Stripe tests
-* code = $loinc#1754-1 "Albumin [Mass/volume] in Urine"
-* code.text = "Albumin (U) [Mass/Vol]"
+* code = $loinc#32294-1 "Albumin/Creatinine [Ratio] in Urine"
+* code.text = "Albumin/Creatinine (U) [Ratio]"
   * ^short = "LOINC Display Name"
-* method = $sct#702660003 "Test strip technique (qualifier value)"
+* method = $sct#271075006 "Urine albumin/creatinine ratio measurement (procedure)"
 
 //  https://github.com/hl7-eu/laboratory/blob/master/input/fsh/examples/lab_report/Observation-result-ratio-example.fsh
 
