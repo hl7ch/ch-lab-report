@@ -27,16 +27,16 @@ Description: """This panel collects the lab results in relation to renal insufie
 * hasMember ^slicing.ordered = true
 * hasMember contains
   CKD-EPI 1..1 MS and // CKD-EPI for eGFR
-  AlbuminUrine 1..1 MS 
+  uACR 1..1 MS 
 
 * hasMember[CKD-EPI] only Reference(ChLabObservation_eGFR_CKD_EPI_male or ChLabObservation_eGFR_CKD_EPI_female)
 * hasMember[CKD-EPI] ^label = "Label"
-* hasMember[CKD-EPI] ^short = "CKD-EPI"
+* hasMember[CKD-EPI] ^short = "eGFR crea, CKD-EPI 2021"
 
 
-* hasMember[AlbuminUrine] only Reference(ChLabObservationAlbuminUrine)
-* hasMember[AlbuminUrine] ^label = "Label"
-* hasMember[AlbuminUrine] ^short = "Albumin Urine"
+* hasMember[uACR] only Reference(ChLabObservationuACR)
+* hasMember[uACR] ^label = "Label"
+* hasMember[uACR] ^short = "uACR, Urin Albumin/Creatinin Quotient"
 
 // ╭─ profiles for renal insufficiency observations ──╮
 // │  Profiles for renal insufficiency Single Tests   │
@@ -72,12 +72,12 @@ Description: "This profile constrains the ChLabObservationSingleTest profile to 
 * method = $sct#702873001 "Calculation technique (qualifier value)"
 */
 
-Profile: ChLabObservationAlbuminUrine
+Profile: ChLabObservation_uACR
 Parent: ChLabObservationRenalInsufficiencySingleTest
-Id: ch-lab-albumin-urine
-Title: "CH LAB Observation Results: Albumin Urine"
-Description: "This profile constrains the ChLabObservationSingleTest profile determine the concentration of albumin in urine."
-* . ^short = "CH LAB Observation Results: Albumin Urine"
+Id: ch-lab-observation-albumin-creatinine-urine-ratio
+Title: "CH LAB Observation Results: Albumin/Creatinine Ratio in Urine"
+Description: "This profile constrains the ChLabObservationSingleTest profile determine ratio of the concentration of albumin and creatinine in urine."
+* . ^short = "CH LAB Observation Results: uACR"
 // * labTestKit = Reference(Combur_Test)  // may be substituted with other Stripe tests
 * code = $loinc#1754-1 "Albumin [Mass/volume] in Urine"
 * code.text = "Albumin (U) [Mass/Vol]"
