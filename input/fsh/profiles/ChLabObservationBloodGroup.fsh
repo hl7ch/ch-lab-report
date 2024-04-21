@@ -7,4 +7,4 @@ Description: "Simple Profile to report Blood Group and RhD"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
 * code = $loinc#883-9 "ABO group [Type] in Blood"
 * method = $sct#115678000 "Rh blood group system (qualifier value)"
-* valueCodeableConcept from $bg-ips-free-set (required)
+* valueCodeableConcept from $bg-ips-free-set (example)
