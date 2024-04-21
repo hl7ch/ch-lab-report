@@ -34,7 +34,7 @@ Description: """This panel collects the lab results in relation to renal insufie
 * hasMember[CKD-EPI] ^short = "eGFR crea, CKD-EPI 2021"
 
 
-* hasMember[uACR] only Reference(ChLabObservationuACR)
+* hasMember[uACR] only Reference(ChLabObservation_uACR)
 * hasMember[uACR] ^label = "Label"
 * hasMember[uACR] ^short = "uACR, Urin Albumin/Creatinin Quotient"
 
