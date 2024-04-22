@@ -2,9 +2,9 @@
 // │ Observation with components for blacks and non-blacks  │
 // ╰────────────────────────────────────────────────────────╯
 
-Instance: BloodGoup
+Instance: BloodGroup
 InstanceOf: ChLabObservationBloodGroup
-Title: "Observation BloodGoup"
+Title: "Observation BloodGroup"
 Description: "Simple Example reporting Blood Group and RhD"
 Usage: #example
 * identifier.system = "https://intranet.aumc.nl/labvalues"
