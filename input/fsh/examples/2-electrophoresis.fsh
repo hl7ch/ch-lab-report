@@ -1,5 +1,6 @@
 Instance: LabResultReport-2-electrophoresis
 InstanceOf: ChLabReportDocument
+Title: "Bundle 2-electrophoresis"
 Description: "Example of a Laboratory Report containing images"
 Usage: #example
 * meta.lastUpdated = "2024-03-13T01:43:30Z"

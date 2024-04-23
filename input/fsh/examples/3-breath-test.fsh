@@ -1,5 +1,6 @@
 Instance: LabResultReport-3-breath-test
 InstanceOf: ChLabReportDocument
+Title: "Bundle 3-breath-test"
 Description: "Example of a laboratory report containing scalar results in chronological order"
 Usage: #example
 * meta.lastUpdated = "2024-03-13T01:43:30Z"

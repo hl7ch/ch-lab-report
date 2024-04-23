@@ -1,7 +1,7 @@
 // ╭─── example Blood group Result ────────────╮
 // │ Observation with SNOMED CT coded value    │
 // ╰───────────────────────────────────────────╯
-Instance: BloodGroupRhSimple
+Instance: BloodGroupSimple
 InstanceOf: ChLabObservationBloodGroup
 Title: "Observation Result for blood group and rhesus factor combined"
 Description: "Example reporting Blood Group and RhD Result combined and coded with SNOMED CT"
@@ -26,7 +26,7 @@ Usage: #example
 // │ AB0 Result: component coded with LOINC, Result coded with SNOMED CT │
 // │ RhD Result: component coded with LOINC, Result coded with SNOMED CT │
 // ╰─────────────────────────────────────────────────────────────────────╯
-Instance: BloodGroupRh
+Instance: BloodGroup
 InstanceOf: ChLabObservationBloodGroup
 Title: "Observation Result for blood group and rhesus factor separately"
 Description: "Example reporting Blood Group and RhD Result separately and coded with SNOMED CT"

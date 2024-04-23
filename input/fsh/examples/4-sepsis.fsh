@@ -1,5 +1,6 @@
 Instance: LabResultReport-4-sepsis
 InstanceOf: ChLabReportDocument
+Title: "Bundle 4-sepsis"
 Description: "Example of a Laboratory Report for suspected sepsis"
 Usage: #example
 * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"

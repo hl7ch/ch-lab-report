@@ -30,6 +30,6 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 * [#73](https://github.com/hl7ch/ch-lab-report/issues/73) Results Blood Group
   * Profile CH LAB Observation Blood Group: Change ValueSet to [Results Blood Group - IPS](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-uv-ips), change binding to 'preferred'
-  * Example reporting Blood Group and RhD Result combined and coded with SNOMED CT: [BloodGroupRhSimple](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/Observation-BloodGroupRhSimple.html)
-  * Example reporting Blood Group and RhD Result separately and coded with SNOMED CT: [BloodGroupRh](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/Observation-BloodGroupRh.html)
-  * Example reporting the BloodGroup, Rhd and Coombs-Test Result as HTML Table: [BloodGroupFreeText](fhttps://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/Observation-BloodGroupFreeText.html)
+  * Example reporting Blood Group and RhD Result combined and coded with SNOMED CT: [BloodGroupRhSimple](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/Observation-BloodGroupSimple.html)
+  * Example reporting Blood Group and RhD Result separately and coded with SNOMED CT: [BloodGroupRh](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/Observation-BloodGroup.html)
+  * Example reporting the BloodGroup, Rhd and Coombs-Test Result as HTML Table: [BloodGroupFreeText](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/Observation-BloodGroupFreeText.html)

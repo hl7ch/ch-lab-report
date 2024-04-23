@@ -1,6 +1,7 @@
 Instance: LabResultReport-1-tvt
 InstanceOf: ChLabReportDocument
-Description: "Example of a Laboratory Report for scenario deep vein thrombosis"
+Title: "Bundle 1-tvt"
+Description: "Example of a Laboratory Report for scenario deep vein thrombosis, containing Results from Hematology, Coagulation and Clinical Chemistry"
 Usage: #example
 * meta.lastUpdated = "2023-08-18T01:43:30Z"
 * meta.profile = "http://hl7.eu/fhir/laboratory/StructureDefinition/Bundle-eu-lab"
