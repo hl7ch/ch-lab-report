@@ -240,7 +240,7 @@ Usage: #inline
 * code = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.text = "CBC panel Auto (Bld)" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 * specimen = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood Sample"
 * device = Reference(urn:uuid:3b9c6849-cf71-45e9-9d88-31f7879342f0) "Sysmex XP-300"
@@ -267,7 +267,7 @@ Usage: #inline
 * code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
 * code.text = "WBC Auto (Bld) [#/Vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 
 * valueQuantity = 10 '10*3/uL' "10*3/uL"
@@ -295,7 +295,7 @@ Usage: #inline
 * code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 * code.text =  "RBC Auto (Bld) [#/Vol]"  // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 
 * valueQuantity = 4.58 '10*6/uL' "10*6/uL"
@@ -322,7 +322,7 @@ Usage: #inline
 * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 * method = $sct#83561000052101 "Photometry technique (qualifier value)"
 * specimen = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood sammple"
@@ -348,7 +348,7 @@ Usage: #inline
 * code = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
 * code.text = "Hematocrit Auto (Bld) [Volume fraction]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * specimen = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood sammple"
@@ -375,7 +375,7 @@ Usage: #inline
 * code = $loinc#787-2 "MCV [Entitic volume] by Automated count"
 * code.text = "MCV Auto (RBC) [Entitic vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 85 'fL' "fL"
@@ -401,7 +401,7 @@ Usage: #inline
 * code = $loinc#785-6 "MCH [Entitic mass] by Automated count"
 * code.text = "MCH Auto (RBC) [Entitic mass]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 30 'pg' "pg"
@@ -428,7 +428,7 @@ Usage: #inline
 * code = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
 * code.text = "MCHC Auto (RBC) [Mass/Vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 34.7 'g/dL' "g/dL"
@@ -455,7 +455,7 @@ Usage: #inline
 * code = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
 * code.text = "Platelets Auto (Bld) [#/Vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 200 '10*3/uL' "10*3/uL"
@@ -484,7 +484,7 @@ Usage: #inline
 * code = $loinc#1988-5 "C reactive protein [Mass/volume] in Serum or Plasma" // subset of loinc
 * code.text = "CRP [Mass/Vol]" // display name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 8 'mg/L' "mg/L"
@@ -508,7 +508,7 @@ Usage: #inline
 * code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* effectiveDateTime = "2023-03-27T11:24:26+01:00"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 // TODO values
 * valueQuantity = 1.8 'mg/L' "mg/L"

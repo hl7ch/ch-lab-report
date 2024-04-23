@@ -6,13 +6,13 @@ Instance: Observation-eGFR-MDRD-male
 InstanceOf: ChLabObservation_eGFR_MDRD_male
 Description: "Example of an Observation Instance with component.referenceRange"
 Usage: #example
-* identifier.system = "https://intranet.aumc.nl/labvalues"
+* identifier.system = "https://labor.pipette.com/labvalues"
 * identifier.value = "1304-03720-eGFR-MDRD-male"
 * status = #final
 
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2023-09-14T07:34:00+01:00"
-* issued = "2023-09-14T14:34:00+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
 
 // * component[blacks].code = $loinc#48643-1 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
@@ -48,7 +48,7 @@ Usage: #example
 
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2023-09-14T07:34:00+01:00"
-* issued = "2023-09-14T14:34:00+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
 
 // * component[blacks].code = $loinc#48643-1 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
