@@ -34,7 +34,8 @@ Alias: $lab-studyType-eu-lab          = http://hl7.eu/fhir/laboratory/ValueSet/l
 Alias: $lab-specialty-eu-lab          = http://hl7.eu/fhir/laboratory/ValueSet/lab-specialty-eu-lab
 Alias: $lab-obsCode-eu-lab            = http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab
 Alias: $lab-technique-eu-lab          = http://hl7.eu/fhir/laboratory/ValueSet/lab-technique-eu-lab
-Alias: $bg-ips-free-set                  = http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set
+Alias: $bg-ips-free-set               = http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set
+Alias: $bg-ips                        = http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-uv-ips
 
 // External Profiles
 Alias: $CodeableConcept-uv-ips        = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
