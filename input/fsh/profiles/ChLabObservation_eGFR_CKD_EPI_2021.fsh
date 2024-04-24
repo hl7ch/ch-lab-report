@@ -53,7 +53,7 @@ used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimat
 Profile: ChLabObservation_eGFRcr_cys_CKD_EPI_2001
 Parent: ChLabObservation_eGFR
 Id: ch-lab-observation-egfr-cr-cys-ckd-epi-2001
-Title: "CH LAB Observation Results: eGFR - CKD-EPI(AS) Creatinin and Cystatin-C based Profile"
+Title: "CH LAB Observation Results: eGFRcr-cys - CKD-EPI(AS) Creatinin and Cystatin-C based Profile"
 Description: """Glomerular filtration rate (GFR) is considered the best overall index of kidney function;
 however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate
 (eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation
