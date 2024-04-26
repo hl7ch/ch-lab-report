@@ -1,7 +1,7 @@
 Profile: ChLabObservationBloodGroup
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-blood-group
-Title: "CH LAB Observation Blood Group"
+Title: "CH LAB Observation Results: Blood Group"
 Description: "Simple Profile to report Blood Group and RhD"
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
