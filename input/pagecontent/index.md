@@ -13,6 +13,7 @@ The specification herewith documented is work in progress. No liability can be i
 ### Foundation
 
 This implementation guide is based on the [HL7 Europe Laboratory Report](https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html) and the [European eHealth Network](https://health.ec.europa.eu/document/download/9ab6711a-b4b3-4254-85c1-5204e9e9a594_en?filename=ehealth_ehn-lab-results-guideline_releasenotes_en.pdf). It enables the cross-border exchange of laboratory Results in Europe. The aim of the interoperability of electronic laboratory records is to ensure the uniform processing of information between health information systems, regardless of their technology, application or platform, so that it can be meaningfully interpreted by the recipient. Citizens should have better control over their health data, especially their laboratory data, just as healthcare professionals should have easy and secure access to their patients' laboratory data.
+The Implementation guide uses the Swiss Core profiles from [CH Core](http://fhir.ch/ig/ch-core/index.html) and the terminology from [CH Term](http://fhir.ch/ig/ch-epr-term/index.html)
 
 ### Management Summary
 
@@ -37,6 +38,8 @@ This implementation guide specifies the exchange format for the comprehensive an
 * Interpretation or Comments: Include any additional comments or interpretations provided by the laboratory. This can help healthcare providers understand the clinical significance of the results.
 
 * Date and Time of Analysis: Provide the date and time when the laboratory tests were conducted.
+
+* Observation Profiles: We have proposed some profiles hoping they are useful for the laboratories. These profiles represent laboratory result panels, like CBC panel for automated blood cell count, which corresponds to hematogram II of the 'Analysenliste (AL)'. The use of these panels is not mandatory, they are intended as an aid and template and should be adapted to your own requirements.
 
 **Download**: You can download this implementation guide in [NPM format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](package.tgz).
 

@@ -22,10 +22,6 @@ All significant changes to this FHIR implementation guide will be documented on 
 * add 2 examples with image results: electrophoresis and H2-CH4 Breath Test
 * replace method $sct#82962001 "Protein electrophoresis (procedure)" with $sct#703450007 "Electrophoresis technique (qualifier value)"
 
-* [#71](https://github.com/hl7ch/ch-lab-report/issues/71) Example for renal Insufficiency #71
-  * add Observation-eGFR-MDRD examples and ChLabObservation_eGFR_MDRD profiles
-  * add Observation-eGFR-CKD-EPI examples and ChLabObservation_eGFR_CKD_EPI profiles
-
 * add simple example for a laboratory observation result: Observation-Ht
 
 * [#73](https://github.com/hl7ch/ch-lab-report/issues/73) Results Blood Group
@@ -33,3 +29,11 @@ All significant changes to this FHIR implementation guide will be documented on 
   * Example reporting Blood Group and RhD Result combined and coded with SNOMED CT: [BloodGroupRhSimple](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/Observation-BloodGroupSimple.html)
   * Example reporting Blood Group and RhD Result separately and coded with SNOMED CT: [BloodGroupRh](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/Observation-BloodGroup.html)
   * Example reporting the BloodGroup, Rhd and Coombs-Test Result as HTML Table: [BloodGroupFreeText](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/Observation-BloodGroupFreeText.html)
+* [#71](https://github.com/hl7ch/ch-lab-report/issues/71) Example for renal Insufficiency:
+  * [CH LAB Observation Results: Renal Insufficiency Panel](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
+* [#76](https://github.com/hl7ch/ch-lab-report/issues/76) eGFR CKD-EPI 2009 or 2021 formula:
+  *  [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for females](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-egfr-female.html)
+  * [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for males](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-egfr-ckd-epi-male.html)
+  * [CH LAB Observation Results: eGFRcr - CKD-EPI(AS) Creatinin based Profile](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-egfr-cr-ckd-epi-2001.html)
+  * [CH LAB Observation Results: eGFRcr-cys - CKD-EPI(AS) Creatinin and Cystatin-C based Profile](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-egfr-cr-cys-ckd-epi-2001.html)
+
