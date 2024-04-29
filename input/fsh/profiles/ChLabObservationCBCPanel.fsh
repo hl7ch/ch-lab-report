@@ -14,7 +14,7 @@ Description: """This panel is the traditional hemogram plus platelet count which
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7.ch"
 * ^jurisdiction = $m49.htm#756 "Switzerland"
-* ^purpose = "This profile constrains the ChLabObservationPanel profile to represent results produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project. Their hasMember element contain References to CBC Single Test Observations. The CBC Panel represents the Haematogramm II from the Analysenliste, Pos.-Nr 1371.00"
+* ^purpose = "This profile constrains the ChLabObservationPanel profile to represent results produced by automated CBC (count of Blood-Cells)for the  HL7 Swiss project. Their 'hasMember' elements contain References to CBC Single Test Observations. The CBC Panel represents the Haematogramm II from the Analysenliste, Pos.-Nr 1371.00"
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 
 * code = $loinc#58410-2 "CBC panel - Blood by Automated count"
