@@ -22,7 +22,7 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 * hasMember ^slicing.discriminator.path = "resolve().hasMember"
 * hasMember ^slicing.rules = #open
 * hasMember ^slicing.description = ""
-* hasMember ^slicing.ordered = false
+* hasMember ^slicing.ordered = true
 * hasMember only Reference(ChLabObservationPanel or ChLabObservationSingleTest)
 // set all x from value[x] to 0 to avoid sushi warning
 * valueString ..0
