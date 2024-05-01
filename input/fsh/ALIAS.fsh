@@ -25,7 +25,6 @@ Alias: $device-categorie              = http://hl7.org/fhir/device-category
 Alias: $observation-category          = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $resource-types                = http://hl7.org/fhir/fhir-types
 Alias: $ucum                          = http://unitsofmeasure.org
-Alias: $observation-category          = http://terminology.hl7.org/CodeSystem/observation-category
 
 // Value Sets
 Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips
