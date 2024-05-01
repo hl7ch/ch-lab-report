@@ -40,9 +40,10 @@ Description:  "Renal function can be determined by laboratory measurement of ser
     PlateletMeanVolume 0..1 MS
 * component[WhiteBloodCellCount] ^short = "Leucocyte count"
 * component[WhiteBloodCellCount].code 1..1 MS
-* component[WhiteBloodCellCount].code ^short = "Leucocyte count"
-* component[WhiteBloodCellCount].code = $loinc#6690-2
+* component[WhiteBloodCellCount].code ^short = "Leucocyte count code"
+* component[WhiteBloodCellCount].code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
 * component[WhiteBloodCellCount].code.text = "WBC Auto (Bld) [#/Vol]"
+* component[WhiteBloodCellCount].code.text ^short = "LOINC Display Name"
 
 * component[WhiteBloodCellCount].valueQuantity only QuantityEuLab
 * component[WhiteBloodCellCount].valueQuantity MS
@@ -57,10 +58,28 @@ Description:  "Renal function can be determined by laboratory measurement of ser
 * component[WhiteBloodCellCount].valueQuantity.code 1..1 MS
 * component[WhiteBloodCellCount].valueQuantity.code only code
 * component[WhiteBloodCellCount].valueQuantity.code = #10*3/uL (exactly)
+// +++++++
+* component[RedBloodCellCount] ^short = "Erythrocyte count"
+* component[RedBloodCellCount].code 1..1 MS
+* component[RedBloodCellCount].code ^short = "Leucocyte count code"
+* component[RedBloodCellCount].code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
+* component[RedBloodCellCount].code.text = "RBC Auto (Bld) [#/Vol]"
+* component[RedBloodCellCount].code.text ^short = "LOINC Display Name"
 
-
-
-
+* component[RedBloodCellCount].valueQuantity only QuantityEuLab
+* component[RedBloodCellCount].valueQuantity MS
+* component[RedBloodCellCount].valueQuantity ^short = "automated CBC Profile component value"
+* component[RedBloodCellCount].valueQuantity.value 1..1 MS
+* component[RedBloodCellCount].valueQuantity.value only decimal
+* component[RedBloodCellCount].valueQuantity.unit 1..1 MS
+* component[RedBloodCellCount].valueQuantity.unit only string
+* component[RedBloodCellCount].valueQuantity.system 1..1 MS
+* component[RedBloodCellCount].valueQuantity.system only uri
+* component[RedBloodCellCount].valueQuantity.system = "http://unitsofmeasure.org" (exactly)
+* component[RedBloodCellCount].valueQuantity.code 1..1 MS
+* component[RedBloodCellCount].valueQuantity.code only code
+* component[RedBloodCellCount].valueQuantity.code = #10*3/uL (exactly)
+// ++++++++++++
 * component[RedBloodCellCount] ^short = "Erythrocyte count"
 * component[Hemoglobin] ^short = "Hemoglobin"
 * component[Hematocrit] ^short = "Hematocrit"
