@@ -6,7 +6,7 @@
 Profile: ChLabObservationCBCPanel
 Parent: ChLabObservationResultsLaboratory
 Id: ch-lab-observation-cbc-panel
-Title: "CH LAB Observation Results: CBC Panel - Blood by Automated count"   // LOINC long common name
+Title: "CH LAB Observation Results CBC Panel - Blood by Automated count, Results in nested Profiles"   // LOINC long common name
 Description: """This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the fotometry version of hemoglobin in this panel."""
 
 * ^publisher = "HL7 Switzerland"

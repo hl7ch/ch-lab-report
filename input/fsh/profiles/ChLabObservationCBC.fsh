@@ -1,9 +1,8 @@
 Profile:      ChLabObservation_CBC
 Id:           ch-lab-observation-cbc
 Parent:       ChLabObservationResultsLaboratory
-Title:        "CH LAB Observation Results: automated CBC Panel Profile"
-Description:  "Profile for observation laboratory result of automated Count of Blood Cells. We choose as Unit 10⁹/L or 10¹²/L for Cell Count. We use component slices which contain each Result"
-
+Title:        "CH LAB Observation Results CBC Panel - Blood by Automated count, Results in sliced component"
+Description:  "Profile for observation laboratory result of automated Count of Blood Cells. We choose as Unit 10⁹/L or 10¹²/L for Cell Count."
 * ^publisher = "HL7 Switzerland"
 * ^contact.name = "HL7 Switzerland"
 * ^contact.telecom.system = #url
