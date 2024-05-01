@@ -1,5 +1,5 @@
 Profile:      ChLabObservation_CBC
-Id:           ch-lab-observation-cpc
+Id:           ch-lab-observation-cbc
 Parent:       ChLabObservationResultsLaboratory
 Title:        "CH LAB Observation Results: automated CBC Profile"
 Description:  "Profile for observation laboratory result of automated Count of Blood Cells. We choose as Unit 10⁹/L or 10¹²/L"

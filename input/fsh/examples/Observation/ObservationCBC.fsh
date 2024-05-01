@@ -1,9 +1,7 @@
-
-/*
-Instance: ObservationCBC
+Instance: ExampleObservationCBC
 InstanceOf: ChLabObservationCBCPanel
 Usage: #example
-Title: "Observation_CBC"
+Title: "Example Observation_CBC"
 Description: "Example to illustrate ChLabObservationCBCPanel"
 * identifier.system = "https://labor.pipette.com/labvalues"
 * identifier.value = "1304-03780-cbc-panel"
@@ -14,12 +12,136 @@ Description: "Example to illustrate ChLabObservationCBCPanel"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 
-* hasMember[WhiteBloodCell] = Reference(urn:uuid:5c1ceea1-2751-4ddc-afb5-4c28037ba1be) "Observation-WBC"
-* hasMember[RedBloodCellCount] = Reference(urn:uuid:04ec7690-a1e8-4fdf-be4f-6c92949e948a) "Observation-RBC"
-* hasMember[Hemoglobin] = Reference(urn:uuid:2565be07-47a0-4cca-926e-a57e1ac96fb8) "Observation-HGB"
-* hasMember[Hematocrit] = Reference(urn:uuid:c4d64c0a-aafb-4b41-ae0b-a620b2a6c08c) "Observation-HT"
-* hasMember[MeanCorpuscularVolume] = Reference(urn:uuid:857cfa10-66ea-45ae-b236-e6e03af4be3f) "Observation-MCV"
-* hasMember[MeanCorpuscularHemoglobin] = Reference(urn:uuid:3b263f29-44d8-468f-b612-e748442e1845) "Observation-MCH"
-* hasMember[MeanCorpuscularHemoglobinConcentration] = Reference(urn:uuid:735c9244-497a-420d-b006-15a57be365b1) "Observation-MCHC"
-* hasMember[PlateletCount] = Reference(urn:uuid:32a7d6fb-dc8a-4673-8cef-c59c1c5397db) "Observation-Platelet"
-*/
+* hasMember[WhiteBloodCellCount] = Reference(Observation/ExampleObservationWBC) "Observation-WBC"
+* hasMember[RedBloodCellCount] = Reference(Observation/ExampleObservationRBC) "Observation-RBC"
+* hasMember[Hemoglobin] = Reference(Observation/ExampleObservationHb) "Observation-HGB"
+* hasMember[Hematocrit] = Reference(Observation/ExampleObservationHt) "Observation-HT"
+* hasMember[MeanCorpuscularVolume] = Reference(Observation/ExampleObservationMCV) "Observation-MCV"
+* hasMember[MeanCorpuscularHemoglobin] = Reference(Observation/ExampleObservationMCH) "Observation-MCH"
+* hasMember[MeanCorpuscularHemoglobinConcentration] = Reference(Observation/ExampleObservationMCHC) "Observation-MCHC"
+* hasMember[PlateletCount] = Reference(Observation/ExampleObservationPlateletCount) "Observation-Platelet-Count"
+* hasMember[ErythrocyteDistributionWidth] = Reference(Observation/ExampleObservationRDW-SD)
+* hasMember[ErythrocyteDistWidthRatio] = Reference(Observation/ExampleObservationRDW-CV)
+
+Instance: ExampleObservationWBC
+InstanceOf: ChLabLeucocyteCount
+Usage: #example
+Title: "Example Observation Leucocyte Count"
+Description: "White blood Cells Result"
+* status = #final
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* valueQuantity = 2.90 '10*9/L' "10*9U/L"
+
+Instance: ExampleObservationRBC
+InstanceOf: ChLabErythrocyteCount
+Usage: #example
+Title: "Example Observation Erythrocyte Count"
+Description: "Red blood Cells Result"
+* status = #final
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* valueQuantity = 4.35 '10*12/L' "10*12U/L"
+
+Instance: ExampleObservationHb
+InstanceOf: ChLabHemoglobin
+Usage: #example
+Title: "Example Observation Hemoglobin"
+Description: "Hemoglobin Result"
+* status = #final
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* valueQuantity = 107 'g/L' "g/L"
+
+Instance: ExampleObservationHt
+InstanceOf: ChLabHematocrit
+Usage: #example
+Title: "Example Observation Hematocrit"
+Description: "Hematocrit Result"
+* status = #final
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* valueQuantity = 33 '%' "%"
+
+// ++++++++++++++++++++++++++++++++
+Instance: ExampleObservationMCV
+InstanceOf: ChLabMeanCorpuscularVolume
+Usage: #example
+Title: "Example Observation MCV"
+Description: "MCV Result"
+* status = #final
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* valueQuantity = 75.9 'fL' "fL"
+
+Instance: ExampleObservationMCH
+InstanceOf: ChLabMeanCorpuscularHemoglobin
+Usage: #example
+Title: "Example Observation MCH"
+Description: "MCH Result"
+* status = #final
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* valueQuantity = 24.6 'pg' "pg"
+
+Instance: ExampleObservationMCHC
+InstanceOf: ChLabMeanCorpuscularHemoglobinConcentration
+Usage: #example
+Title: "Example Observation MCHC"
+Description: "MCHC Result"
+* status = #final
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* valueQuantity = 324 'g/L' "g/L"
+
+// ++++++++++++++++++++++++++++++
+
+Instance: ExampleObservationRDW-SD // Anisocytose
+InstanceOf: ChLabErythrocyteDistributionWidth
+Usage: #example
+Title: "Example Observation Erythrocyte Distribution Width"
+Description: "RDW-SD Result"
+* status = #final
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* valueQuantity = 41.5 'fL' "fL"
+
+Instance: ExampleObservationRDW-CV
+InstanceOf: ChLabErythrocyteDistWidthRatio
+Usage: #example
+Title: "Example Observation Erythrocyte Distribution Width Ratio"
+Description: "RDW-CV Result"
+* status = #final
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* valueQuantity = 15.2 '%' "%"
+
+Instance: ExampleObservationPlateletCount
+InstanceOf: ChLabPlateletCount
+Usage: #example
+Title: "Example Observation Platelet Count"
+Description: "Platelet Count Result"
+* status = #final
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* valueQuantity = 113 '10*9/L' "10*9U/L"
