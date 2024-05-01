@@ -4,8 +4,8 @@
 // ╰─────────────────────────────────────────────╯
 
 Profile: ChLabObservationCBCPanel
-Parent: ChLabObservationPanel
-Id: ChLabObservation-CBC-panel
+Parent: ChLabObservationResultsLaboratory
+Id: ch-lab-observation-cbc-panel
 Title: "CH LAB Observation Results: CBC Panel - Blood by Automated count"   // LOINC long common name
 Description: """This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the fotometry version of hemoglobin in this panel."""
 
@@ -14,19 +14,19 @@ Description: """This panel is the traditional hemogram plus platelet count which
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://hl7.ch"
 * ^jurisdiction = $m49.htm#756 "Switzerland"
-* ^purpose = "This profile constrains the ChLabObservationPanel profile to represent results produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project. Their hasMember element contain References to CBC Single Test Observations. The CBC Panel represents the Haematogramm II from the Analysenliste, Pos.-Nr 1371.00"
+* ^purpose = "This profile constrains the ChLabObservationPanel profile to represent results produced by automated CBC (count of Blood-Cells)for the  HL7 Swiss project. Their 'hasMember' elements contain References to CBC Single Test Observations. The CBC Panel represents the Haematogramm II from the Analysenliste, Pos.-Nr 1371.00"
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 
 * code = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.text = "CBC panel Auto (Bld)" // LOINC Display Name
 * hasMember ..12
-* hasMember ^slicing.discriminator.type = #value
-* hasMember ^slicing.discriminator.path = "resolve().hasMember"
-* hasMember ^slicing.rules = #closed
+* hasMember ^slicing.discriminator.type = #profile
+* hasMember ^slicing.discriminator.path = "resolve()"
+* hasMember ^slicing.rules = #open
 * hasMember ^slicing.description = ""
-* hasMember ^slicing.ordered = true
+* hasMember ^slicing.ordered = false
 * hasMember contains
-  WhiteBloodCell 1..1 MS and
+  WhiteBloodCellCount 1..1 MS and
   RedBloodCellCount 1..1 MS and
   Hemoglobin 1..1 MS and
   Hematocrit 1..1 MS and
@@ -39,9 +39,9 @@ Description: """This panel is the traditional hemogram plus platelet count which
   PlateletDistributionWidth 0..1 MS and
   PlateletMeanVolume 0..1 MS
 
-* hasMember[WhiteBloodCell] only Reference(ChLabLeucocyteCount)
-* hasMember[WhiteBloodCell] ^label = "Label"
-* hasMember[WhiteBloodCell] ^short = "White Blood Cell Count"
+* hasMember[WhiteBloodCellCount] only Reference(ChLabLeucocyteCount)
+* hasMember[WhiteBloodCellCount] ^label = "Label"
+* hasMember[WhiteBloodCellCount] ^short = "White Blood Cell Count"
 
 * hasMember[RedBloodCellCount] only Reference(ChLabErythrocyteCount)
 * hasMember[RedBloodCellCount] ^label = "Label"
