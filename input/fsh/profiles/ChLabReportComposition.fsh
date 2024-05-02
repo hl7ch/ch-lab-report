@@ -15,14 +15,20 @@ Description: "This profile constrains the Composition resource for the purpose o
 // ╰──────────────────────────────────────────────────────────────────╯
 * ^extension[$imposeProfile].valueCanonical = Canonical(CompositionLabReportEu)
 
-* extension contains CDVersionNumber named versionNumber 0..1 // deprecated
-* extension[versionNumber].valueString only string
+* extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
+* extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabEu)
 
 * extension contains InformationRecipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(ChLabPractitioner or Device or ChLabPatient or RelatedPerson or ChLabPractitionerRole or CHCoreOrganization)
 
-* extension contains $basedOn-order-or-requisition named basedOn-order-or-requisition 0..*
-* extension[basedOn-order-or-requisition].valueReference only Reference(ChLabReportServiceRequest)
+// * extension contains CDVersionNumber named versionNumber 0..1 // deprecated
+// * extension[versionNumber].valueString only string
+
+// * extension contains InformationRecipient named information-recipient 0..*
+// * extension[information-recipient].valueReference only Reference(ChLabPractitioner or Device or ChLabPatient or RelatedPerson or ChLabPractitionerRole or CHCoreOrganization)
+
+// * extension contains $basedOn-order-or-requisition named basedOn-order-or-requisition 0..*
+// * extension[basedOn-order-or-requisition].valueReference only Reference(ChLabReportServiceRequest)
 
 * extension contains DiagnosticReportReference named diagnosticReport-reference 0..1
 * extension[diagnosticReport-reference].valueReference only Reference(ChLabDiagnosticReport)

@@ -1,6 +1,6 @@
 Profile:      ChLabObservation_CBC
+Parent:       ChLabObservationSingleTest
 Id:           ch-lab-observation-cbc
-Parent:       ChLabObservationResultsLaboratory
 Title:        "CH LAB Observation Results CBC Panel - Blood by Automated count, Results in sliced component"
 Description:  "Profile for observation laboratory result of automated Count of Blood Cells. We choose as Unit 10⁹/L or 10¹²/L for Cell Count."
 * ^publisher = "HL7 Switzerland"

@@ -1,6 +1,6 @@
-Profile: ChLabObservation_eGFRcr_CKD_EPI_2001
+Profile: ChLabObservation_eGFRcr_CKD_EPI_2021
 Parent: ChLabObservation_eGFR
-Id: ch-lab-observation-egfr-cr-ckd-epi-2001
+Id: ch-lab-observation-egfr-cr-ckd-epi-2021
 Title: "CH LAB Observation Results: eGFRcr - CKD-EPI(AS) Creatinin based Profile"
 Description: """Glomerular filtration rate (GFR) is considered the best overall index of kidney function;
 however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate
@@ -50,9 +50,9 @@ used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimat
 * referenceRange[adult].age.high.unit = "a"
 * referenceRange[adult].text = "Die Formel ist nur bis 93 Jahre validiert."
 
-Profile: ChLabObservation_eGFRcr_cys_CKD_EPI_2001
+Profile: ChLabObservation_eGFRcr_cys_CKD_EPI_2021
 Parent: ChLabObservation_eGFR
-Id: ch-lab-observation-egfr-cr-cys-ckd-epi-2001
+Id: ch-lab-observation-egfr-cr-cys-ckd-epi-2021
 Title: "CH LAB Observation Results: eGFRcr-cys - CKD-EPI(AS) Creatinin and Cystatin-C based Profile"
 Description: """Glomerular filtration rate (GFR) is considered the best overall index of kidney function;
 however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate

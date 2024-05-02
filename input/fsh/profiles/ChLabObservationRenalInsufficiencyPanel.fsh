@@ -18,16 +18,16 @@ Description: """This panel collects the lab results in relation to renal insufie
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 
 * code = $sct#723188008 "Renal insufficiency (disorder)"
-* code.text = "Collection of Laboratory results in relation to renal insufficiency" // 
-* hasMember ..12
-* hasMember ^slicing.discriminator.type = #value
-* hasMember ^slicing.discriminator.path = "resolve().hasMember"
-* hasMember ^slicing.rules = #closed
-* hasMember ^slicing.description = ""
-* hasMember ^slicing.ordered = true
+* code.text = "Collection of Laboratory results in relation to renal insufficiency" //
+// * hasMember 8..12
+// * hasMember ^slicing.discriminator.type = #value
+// * hasMember ^slicing.discriminator.path = "resolve().hasMember"
+// * hasMember ^slicing.rules = #open
+// * hasMember ^slicing.description = ""
+// * hasMember ^slicing.ordered = false
 * hasMember contains
   CKD-EPI 1..1 MS and // CKD-EPI for eGFR
-  uACR 1..1 MS 
+  uACR 1..1 MS
 
 * hasMember[CKD-EPI] only Reference(ChLabObservation_eGFR_CKD_EPI_male or ChLabObservation_eGFR_CKD_EPI_female)
 * hasMember[CKD-EPI] ^label = "Label"
@@ -45,7 +45,7 @@ Description: """This panel collects the lab results in relation to renal insufie
 Profile: ChLabObservationRenalInsufficiencySingleTest
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-renal-insufficiency-single-test
-Title: "CH LAB Observation Renal insufficiency Single Test" 
+Title: "CH LAB Observation Renal insufficiency Single Test"
 Description: """This profile constrains the ChLabObservationSingleTest profile to represent a single result to estimate Renal insufficiency for the  HL7 Swiss project."""
 
 * ^publisher = "HL7 Switzerland"
@@ -84,5 +84,28 @@ Description: "This profile constrains the ChLabObservationSingleTest profile det
   * ^short = "LOINC Display Name"
 * method = $sct#271075006 "Urine albumin/creatinine ratio measurement (procedure)"
 
-//  https://github.com/hl7-eu/laboratory/blob/master/input/fsh/examples/lab_report/Observation-result-ratio-example.fsh
 
+// https://github.com/hl7-eu/laboratory/blob/master/input/fsh/examples/lab_report/Observation-result-ratio-example.fsh
+
+Instance: AlbuminCreatininRatioUrin
+InstanceOf: ChLabObservation_uACR
+Usage: #example
+Title: "Albumin Creatinin Ratio Urin"
+Description: "Example of Laboratory Test Result"
+* status = #final
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "BeatBunsen"
+* valueQuantity = 2.8 'mg/mmol' "mg/mmol"
+* specimen = Reference(Urin)
+* referenceRange.high.value = 3
+* referenceRange.high.unit = "mg/mol"
+
+Instance: Urin
+InstanceOf: Specimen-eu-lab
+Usage: #example
+Title: "Urin"
+Description: "Speciment EU Laboratory"
+* type = $sct#122575003 "Urine specimen (specimen)"
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
+* container.type = $sct#706054001 "Urine specimen container (physical object)"
