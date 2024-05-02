@@ -20,7 +20,7 @@ Description: "This extension provides a link to the order [(Reference(ServiceReq
 * ^url = "http://fhir.ch/ig/ch-lab-report/StructureDefinition/composition-basedOn-order-or-requisition"
 * value[x] only Reference(ChLabReportServiceRequest) or Identifier
 */
-
+/*
 Extension: ObservationInstantiatesR5
 Id:   observation-instantiates
 Title:  "Observation instantiates an ObservationDefinition"
@@ -32,3 +32,4 @@ Description: "This extension provides a reference that this observation is an in
 * value[x] only Reference (ChLabObservationDefinition)
 // * instantiatesReference only Reference (ObservationDefinition)
 // * instantiatesCanonical only 
+*/
