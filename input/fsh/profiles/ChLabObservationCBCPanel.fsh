@@ -4,27 +4,27 @@
 // ╰─────────────────────────────────────────────╯
 
 Profile: ChLabObservationCBCPanel
-Parent: ChLabObservationResultsLaboratory
+Parent: ChLabObservationPanel
 Id: ch-lab-observation-cbc-panel
 Title: "CH LAB Observation Results CBC Panel - Blood by Automated count, Results in nested Profiles"   // LOINC long common name
 Description: """This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the fotometry version of hemoglobin in this panel."""
 
-* ^publisher = "HL7 Switzerland"
-* ^contact.name = "HL7 Switzerland"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://hl7.ch"
-* ^jurisdiction = $m49.htm#756 "Switzerland"
-* ^purpose = "This profile constrains the ChLabObservationPanel profile to represent results produced by automated CBC (count of Blood-Cells)for the  HL7 Swiss project. Their 'hasMember' elements contain References to CBC Single Test Observations. The CBC Panel represents the Haematogramm II from the Analysenliste, Pos.-Nr 1371.00"
-* ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
+// * ^publisher = "HL7 Switzerland"
+// * ^contact.name = "HL7 Switzerland"
+// * ^contact.telecom.system = #url
+// * ^contact.telecom.value = "http://hl7.ch"
+// * ^jurisdiction = $m49.htm#756 "Switzerland"
+// * ^purpose = "This profile constrains the ChLabObservationPanel profile to represent results produced by automated CBC (count of Blood-Cells)for the  HL7 Swiss project. Their 'hasMember' elements contain References to CBC Single Test Observations. The CBC Panel represents the Haematogramm II from the Analysenliste, Pos.-Nr 1371.00"
+// * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 
 * code = $loinc#58410-2 "CBC panel - Blood by Automated count"
 * code.text = "CBC panel Auto (Bld)" // LOINC Display Name
-* hasMember ..12
-* hasMember ^slicing.discriminator.type = #profile
-* hasMember ^slicing.discriminator.path = "resolve()"
-* hasMember ^slicing.rules = #open
-* hasMember ^slicing.description = ""
-* hasMember ^slicing.ordered = false
+// * hasMember 8..12
+// * hasMember ^slicing.discriminator.type = #profile
+// * hasMember ^slicing.discriminator.path = "resolve()"
+// * hasMember ^slicing.rules = #open
+// * hasMember ^slicing.description = ""
+// * hasMember ^slicing.ordered = false
 * hasMember contains
   WhiteBloodCellCount 1..1 MS and
   RedBloodCellCount 1..1 MS and
@@ -106,7 +106,7 @@ Description: """This profile constrains the ChLabObservationSingleTest profile t
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
-* hasMember ..0
+// * hasMember ..0
 
 // ╭───── result profiles of CBC observations ───────╮
 // │  WBC, RBC, HGB, HT, MCV, MCH, MCHC, Platelets   │

@@ -18,11 +18,11 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 
 * hasMember 1..*
-* hasMember ^slicing.discriminator.type = #value
-* hasMember ^slicing.discriminator.path = "resolve().hasMember"
+* hasMember ^slicing.discriminator.type = #profile
+* hasMember ^slicing.discriminator.path = "resolve()"
 * hasMember ^slicing.rules = #open
 * hasMember ^slicing.description = ""
-* hasMember ^slicing.ordered = true
+* hasMember ^slicing.ordered = false
 * hasMember only Reference(ChLabObservationPanel or ChLabObservationSingleTest)
 // set all x from value[x] to 0 to avoid sushi warning
 * valueString ..0
