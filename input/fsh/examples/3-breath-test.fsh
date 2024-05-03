@@ -65,7 +65,6 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report         │
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
-* extension[versionNumber].valueString = "V1" // 0
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:3771d254-cee2-498e-a448-c5660ccd583d) "TheoTillmannGruppenpraxis"  //  1
 
 // Composition Identifier must be same as in DiagnosticReport

@@ -124,7 +124,6 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report         │
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
-* extension[versionNumber].valueString = "V1" // 0
 
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "MarcMustermannArztpraxis"  //  1
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"        //  2
