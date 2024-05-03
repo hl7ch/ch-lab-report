@@ -185,8 +185,6 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report         │
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
-* extension[versionNumber].valueString = "V1"   //  0
-
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f) "Hans Hauser at Kantonsspital"  //  1
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller, patient"      //  2
 

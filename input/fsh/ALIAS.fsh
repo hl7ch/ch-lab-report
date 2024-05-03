@@ -22,6 +22,7 @@ Alias: $v3-ParticipationType          = http://terminology.hl7.org/CodeSystem/v3
 Alias: $v3-ReligiousAffiliation       = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation
 Alias: $v3-RoleCode                   = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $device-categorie              = http://hl7.org/fhir/device-category
+Alias: $substance-category            = http://terminology.hl7.org/CodeSystem/substance-category
 Alias: $observation-category          = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $resource-types                = http://hl7.org/fhir/fhir-types
 Alias: $ucum                          = http://unitsofmeasure.org
@@ -50,10 +51,7 @@ Alias: $Range-uv-ips                  = http://hl7.org/fhir/uv/ips/StructureDefi
 Alias: $Ratio-eu-lab                  = http://hl7.eu/fhir/laboratory/StructureDefinition/Ratio-eu-lab
 
 // Extensions
-Alias: $basedOn-order-or-requisition  = http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
 Alias: $bodySite                      = http://hl7.org/fhir/StructureDefinition/bodySite
-// Alias: $cd-version-number             = http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
-// Alias: $information-recipient         = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $extension-DiagnosticReport.composition  = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
 Alias: $observation.triggeredBy       = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $event-performerFunction       = http://hl7.org/fhir/StructureDefinition/event-performerFunction

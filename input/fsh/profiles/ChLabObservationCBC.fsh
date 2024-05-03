@@ -18,7 +18,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
 
-* component 1..12 MS    // 8..12
+* component 8..12 MS    // 8..12
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.ordered = false
@@ -287,3 +287,29 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[PlateletMeanVolume].valueQuantity.code only code
 * component[PlateletMeanVolume].valueQuantity.code = #fL (exactly)
 // ++++++++++++
+
+Instance: Result-CBC
+InstanceOf: ChLabObservation_CBC
+Usage: #example
+Title: "Result CBC Panel - Blood by Automated count, Results in sliced component"
+Description: "laboratory result of automated Count of Blood Cells, Sysmex XN RunScreen"
+* status = #final
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "BeatBunsen"
+* component[WhiteBloodCellCount].valueQuantity.value = 2.90
+* component[WhiteBloodCellCount].valueQuantity.unit = "10*9/L"
+* component[RedBloodCellCount].valueQuantity.value = 4.35
+* component[RedBloodCellCount].valueQuantity.unit = "10*12/L"
+* component[Hemoglobin].valueQuantity.value = 107
+* component[Hemoglobin].valueQuantity.unit = "g/L"
+* component[Hematocrit].valueQuantity.value = 33
+* component[Hematocrit].valueQuantity.unit = "%"
+* component[MeanCorpuscularVolume].valueQuantity.value = 75.9
+* component[MeanCorpuscularVolume].valueQuantity.unit = "fL"
+* component[MeanCorpuscularHemoglobin].valueQuantity.value = 24.6
+* component[MeanCorpuscularHemoglobin].valueQuantity.unit = "pg"
+* component[MeanCorpuscularHemoglobinConcentration].valueQuantity.value = 324
+* component[MeanCorpuscularHemoglobinConcentration].valueQuantity.unit = "g/L"
+* component[PlateletCount].valueQuantity.value = 113
+* component[PlateletCount].valueQuantity.unit = "10*9/L"
