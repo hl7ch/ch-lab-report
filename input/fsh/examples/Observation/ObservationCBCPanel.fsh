@@ -1,4 +1,4 @@
-Instance: ExampleObservationCBC
+Instance: ExampleObservationCBCPanel
 InstanceOf: ChLabObservationCBCPanel
 Usage: #example
 Title: "Observation CBC panel using 'hasMember'"

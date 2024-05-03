@@ -34,7 +34,6 @@ Description: """This panel collects the lab results in relation to renal insufie
 * hasMember[CKD-EPI] ^label = "Label"
 * hasMember[CKD-EPI] ^short = "eGFR crea, CKD-EPI 2021"
 
-
 * hasMember[uACR] only Reference(ChLabObservation_uACR)
 * hasMember[uACR] ^label = "Label"
 * hasMember[uACR] ^short = "uACR, Urin Albumin/Creatinin Quotient"
@@ -59,19 +58,6 @@ Description: """This profile constrains the ChLabObservationSingleTest profile t
 * category[specialty] = $sct#394596001 "Chemical pathology (qualifier value)"
 * category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
 * hasMember ..0
-
-/*
-Profile: ChLabObservationCKD_EPI
-Parent: ChLabObservationRenalInsufficiencySingleTest
-Id: ch-lab-ckd-epi
-Title: "CH LAB Observation Results: CKD-EPI"
-Description: "This profile constrains the ChLabObservationSingleTest profile to estimate GFR."
-* . ^short = "CH LAB Observation Results: Laboratory Leucocyte Count"
-* code = $loinc#62238-1 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
-* code.text = "GFR/1.73 sq M.predicted CKD-EPI (S/P/Bld) [Vol rate/Area]" // LOINC Display Name
-  * ^short = "LOINC Display Name"
-* method = $sct#702873001 "Calculation technique (qualifier value)"
-*/
 
 Profile: ChLabObservation_uACR
 Parent: ChLabObservationRenalInsufficiencySingleTest
