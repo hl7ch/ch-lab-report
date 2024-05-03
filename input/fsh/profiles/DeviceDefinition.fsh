@@ -1,3 +1,4 @@
+/*
 Profile: ChLabReportDeviceDefinition  // Test-Kit or Analyzer
 Parent: DeviceDefinition
 Title: "CH LAB Device Definition"
@@ -17,3 +18,4 @@ Description: "Holds udiDeviceIdentifier from Test , regulatoryIdentifier,"
 // $sct#30234008 -> Medical laboratory analyzer, device (physical object)
 // $sct272181003 -> Clinical equipment and/or device (physical object)
 * parentDevice 0..1 // 
+*/
