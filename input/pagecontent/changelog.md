@@ -38,3 +38,11 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#68 Do we need Observation Panel Profiles?](https://github.com/hl7ch/ch-lab-report/issues/68):
   * [CH LAB Observation Results CBC Panel - Blood by Automated count, Results in sliced component](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-cbc.html)Profile for observation laboratory result of automated Count of Blood Cells. We choose as Unit 10⁹/L or 10¹²/L for Cell Count. We use component slices which contain each Result.
   * [CH LAB Observation Results CBC Panel - Blood by Automated count, Results in nested Profiles](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-cbc-panel.html) We use SingleTest Profiles for each CBC Result slicing 'hasMember' element.
+
+  * added examples for Profiles: 
+    * StructureDefinition​/ch-lab-observation-cbc
+    * StructureDefinition​/ch-lab-observation-egfr-cr-ckd-epi-2021
+    * StructureDefinition​/ch-lab-observation-egfr-cr-cys-ckd-epi-2021
+    * StructureDefinition-specimen-additive-substance
+    * StructureDefininion-ch-lab-observation-albumin-creatinine-urine-ratio
+
