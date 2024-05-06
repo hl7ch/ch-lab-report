@@ -17,7 +17,7 @@ Entry 'urn:uuid:aa659dd8-28be-4c7e-ab27-286c5beff53c' isn't reachable by travers
 
 # TODO remove after Profiling
 # The Implementation Guide contains no examples for this profile
-The Implementation Guide contains no examples for this extension
+# The Implementation Guide contains no examples for this extension
 
 # Examples implemented as bundles
 The Implementation Guide contains no explicitly linked examples for this profile
