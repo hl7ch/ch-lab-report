@@ -53,7 +53,7 @@ RuleSet: ReportCategoryRule
   * ^short = "Report Category"
   * ^definition = "Specifies the Report Category: usually Laboratory"
   * ^comment = "DiagnosticReport.category and Composition.category shall be aligned"
-* category only $CodeableConcept-uv-ips
+
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open

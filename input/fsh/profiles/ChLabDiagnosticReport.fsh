@@ -23,7 +23,7 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 * basedOn only Reference(ChLabReportServiceRequest)
 * status ^short = "Status of the Report"
 * status ^comment = "DiagnosticReport.status and Composition.status shall be aligned, based on the http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus mapping"
-* category only $CodeableConcept-uv-ips
+
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open

@@ -32,7 +32,7 @@ Description: "This profile constrains the Observation resource for the purpose o
 // ╭─────── category ──────────────────╮
 // │  laboratoy, studyType, specialty  │
 // ╰───────────────────────────────────╯
-* category only $CodeableConcept-uv-ips
+
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
