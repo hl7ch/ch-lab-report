@@ -15,7 +15,7 @@ Usage: #example
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 
-* method = $sct#264788002 "Biotyping (qualifier value)"
+* method = $sct#726528006 "Genotyping (qualifier value)"
 
 * valueCodeableConcept.coding.code = #278154007
 * valueCodeableConcept.coding.system = $sct
@@ -72,6 +72,7 @@ Usage: #example
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 
 * method = $sct#258075003 "Serotyping (qualifier value)"
+// * method = $sct# 726528006 "Genotyping (qualifier value)"
 
 * valueCodeableConcept.text = """<table>
     <tr>
