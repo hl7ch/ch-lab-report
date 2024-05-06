@@ -53,7 +53,7 @@ Description: "This profile constrains the Observation resource for the purpose o
 // ╭──────────── code ─────────────────╮
 // │  laboratoy, studyType, specialty  │
 // ╰───────────────────────────────────╯
-* code only $CodeableConcept-uv-ips
+// * code only $CodeableConcept-uv-ips
 * code from LaboratoryResultStandardEuVs (preferred) //  http://hl7.eu/fhir/laboratory/ValueSet/lab-obsCode-eu-lab : NPU and LOINC
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".  In this profile this code represents either a simple laboratory test or a laboratory study with multiple child observations"
 * code ^comment = "In the context of this Observation-laboratory-uv-ips profile, when the observation plays the role of a grouper of member sub-observations, the code represent the group (for instance a panel code). In case no code is available, at least a text shall be provided."
@@ -65,7 +65,7 @@ Description: "This profile constrains the Observation resource for the purpose o
 
 * dataAbsentReason ^short = "Provides a reason why the expected value is missing."
 * insert ObservationResultsValueEu // ruleSet
-* interpretation only $CodeableConcept-uv-ips
+// * interpretation only $CodeableConcept-uv-ips
 
 // ╭───────────────── method ───────────────────╮
 // │ $CodeableConcept-uv-ips, LabTechniqueEuVs  │
@@ -73,7 +73,7 @@ Description: "This profile constrains the Observation resource for the purpose o
 * method ^definition = "Laboratory technigue that has been used"
 * method ^comment = "Laboratory technique (method of measurement) are integral parts of the test specification of some laboratory test coding systems (e.g. NPU), in LOINC hovewer measurement principle is not always present in the test definition. In some cases however knowledge of the used measurment techique is important for proper interpretation of the test result.
 That's why it is important to explicitly include informaiton about measurement method is such cases."
-* method only $CodeableConcept-uv-ips
+// * method only $CodeableConcept-uv-ips
 * method from LabTechniqueEuVs (preferred) // added binding to an agreed eu lab measurement method value set
 
 * specimen only Reference(ChLabSpecimen)
@@ -89,8 +89,8 @@ That's why it is important to explicitly include informaiton about measurement m
 * issued ^short = "Date/Time this result was made available"
 
 * component
-  * code only $CodeableConcept-uv-ips
-  * code from $results-laboratory-observations-uv-ips (preferred)
+  // * code only $CodeableConcept-uv-ips
+  // * code from $results-laboratory-observations-uv-ips (preferred)
   * insert ObservationResultsValueEu
 
 Invariant: eu-lab-1

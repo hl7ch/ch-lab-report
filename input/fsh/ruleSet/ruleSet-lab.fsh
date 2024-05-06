@@ -20,7 +20,7 @@ RuleSet: SectionComRules (short, def, code)
 * ^definition = "{def}"
 * title 1..
 * code 1..
-* code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+// * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * code = {code} (exactly)
 * text 1..
 * text only Narrative
