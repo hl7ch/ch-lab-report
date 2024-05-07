@@ -3,7 +3,7 @@
 // ╰───────────────────────────────────────────╯
 Instance: BloodGroupSimple
 InstanceOf: ChLabObservationSingleTest
-Title: "Observation Result for blood group and rhesus factor combined"
+Title: "Blood Group Rh combined"
 Description: "Example reporting Blood Group and RhD Result combined and coded with SNOMED CT"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -31,7 +31,7 @@ Usage: #example
 // ╰─────────────────────────────────────────────────────────────────────╯
 Instance: BloodGroupComponent
 InstanceOf: ChLabObservationSingleTest
-Title: "Blood Group Component ABO and Component Rh"
+Title: "Blood Group Panel with Component ABO and Component Rh"
 Description: "Example reporting Blood Group and RhD Result separately in a component and coded with SNOMED CT"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -133,7 +133,7 @@ Title: "Blood Group Rh as free text"
 Description: "Example reporting weak D-positiv"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
-* identifier.value = "1304-03740-blood-group "
+* identifier.value = "1304-03740-blood-group-free-text "
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
