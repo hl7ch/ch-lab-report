@@ -5,7 +5,7 @@ Profile: ChLabReportDeviceTestKit
 Parent: Device
 Title: "CH LAB Device: TestKit"
 Id: ch-lab-report-device-test-kit
-Description: "Holds Laboratory Test-Kit"
+Description: "Holds Laboratory Test-Kit Data"
 * definition MS
 * udiCarrier 0..1 MS
   * deviceIdentifier 1..1 // UDI-DI
@@ -29,7 +29,7 @@ Profile: ChLabReportDeviceAnalyzer
 Parent: Device
 Title: "CH LAB Device: Analyzer"
 Id: ch-lab-report-device-analyzer
-Description: "Holds Laboratory Analyzer"
+Description: "Holds Laboratory Analyzer Data"
 
 * udiCarrier 0..1 MS
   * deviceIdentifier 1..1 // UDI-DI

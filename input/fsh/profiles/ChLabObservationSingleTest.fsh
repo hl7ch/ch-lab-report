@@ -6,7 +6,7 @@
 Profile: ChLabObservationSingleTest
 Parent: ChLabObservationResultsLaboratory
 Id: ChLab-observation-single-test
-Title: "CH LAB Observation: Single Test" 
+Title: "CH LAB Observation Results: Single Test" 
 Description: """This profile constrains the ChLabObservationResultsLaboratory profile to represent single test results for the  HL7 Swiss project. The profile enables only value[x] and component elements, hasMemer elemens are not allowed"""
 
 * ^publisher = "HL7 Switzerland"
@@ -17,3 +17,4 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 * ^purpose = "This profile constrains the ChLabObservationResultsLaboratory profile to represent a single Test result or a component for the  HL7 Swiss project."
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 * hasMember ..0
+

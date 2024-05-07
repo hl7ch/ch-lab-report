@@ -23,7 +23,7 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 * basedOn only Reference(ChLabReportServiceRequest)
 * status ^short = "Status of the Report"
 * status ^comment = "DiagnosticReport.status and Composition.status shall be aligned, based on the http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus mapping"
-* category only $CodeableConcept-uv-ips
+
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
@@ -41,7 +41,7 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 * category[specialty] ^short = "The clinical domain of the laboratory performing the observation (e.g. microbiology, toxicology, chemistry)"
 * category[specialty] ^definition = "Laboratory specialty is an attribute of any laboratory setting representing professional qualification of the laboratory to execute certain kind of laboratory tests."
 * category[specialty] ^comment = "Specialty could be used as parameter for searching/querying of laboratory test results."
-* code only $CodeableConcept-uv-ips
+// * code only $CodeableConcept-uv-ips
 * code from LabReportTypesEuVs (preferred)
 * code ^short = "Type of (Laboratory) Report"
 * code ^definition = "Specifies that it refers to a Laboratory Report"

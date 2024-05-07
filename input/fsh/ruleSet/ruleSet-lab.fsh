@@ -1,5 +1,5 @@
 RuleSet: ReportIdentifierRule
-* identifier /* obeys labRpt-id */
+* identifier //  obeys labRpt-id
   * ^short = "Report identifier"
   * ^definition = "Identifiers assigned to this Laboratory Report by the performer or other systems. It shall be common to several report versions"
   * ^comment = "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
@@ -20,7 +20,7 @@ RuleSet: SectionComRules (short, def, code)
 * ^definition = "{def}"
 * title 1..
 * code 1..
-* code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+// * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * code = {code} (exactly)
 * text 1..
 * text only Narrative
@@ -49,11 +49,11 @@ RuleSet: SectionEntrySliceComRules (short, def)
 //--------------------------------------------
 
 RuleSet: ReportCategoryRule
-* category /* obeys labRpt-category */
+* category // obeys labRpt-category
   * ^short = "Report Category"
   * ^definition = "Specifies the Report Category: usually Laboratory"
   * ^comment = "DiagnosticReport.category and Composition.category shall be aligned"
-* category only $CodeableConcept-uv-ips
+
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open

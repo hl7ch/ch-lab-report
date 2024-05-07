@@ -1,5 +1,6 @@
 Instance: LabResultReport-3-breath-test
 InstanceOf: ChLabReportDocument
+Title: "Bundle 3-breath-test"
 Description: "Example of a laboratory report containing scalar results in chronological order"
 Usage: #example
 * meta.lastUpdated = "2024-03-13T01:43:30Z"
@@ -64,7 +65,6 @@ Usage: #inline
 // │ (i.e., 'Request.groupIdentifier')] that this report         │
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
-* extension[versionNumber].valueString = "V1" // 0
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:3771d254-cee2-498e-a448-c5660ccd583d) "TheoTillmannGruppenpraxis"  //  1
 
 // Composition Identifier must be same as in DiagnosticReport
@@ -153,11 +153,11 @@ Usage: #inline
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Zürich"
 * extension[=].valueAddress.country = "Schweiz"
-// * extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
-// * extension[=].valueAddress.city = "Breitenbach"
-// * extension[=].valueAddress.state = "BL"
-// * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
-// * extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
+* extension[+].url = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient-ech-11-placeoforigin"
+* extension[=].valueAddress.city = "Breitenbach"
+* extension[=].valueAddress.state = "BL"
+* extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
+* extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
 * identifier.type = $v2-0203#MR
 * identifier.system = "urn:oid:2.16.756.5.30.999999.1"
 * identifier.value = "012/08.111222"

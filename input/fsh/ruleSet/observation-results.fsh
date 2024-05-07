@@ -1,8 +1,8 @@
 RuleSet: ObservationResultsEu
 //  insert SetFmmandStatusRule ( 2, trial-use)
 * status ^short = "Status of this observation (e.g. preliminary, final,...)"
-* category only $CodeableConcept-uv-ips
-* code only $CodeableConcept-uv-ips
+
+// * code only $CodeableConcept-uv-ips
 // * code MS
 * subject 1..
 // * subject only Reference(Patient or PatientEuLab or Group or Device or Location)
@@ -51,7 +51,7 @@ RuleSet: ObservationResultsValueEu
 * valueQuantity only Quantity-eu-lab
 // * valueQuantity MS
 * valueQuantity ^sliceName = "valueQuantity"
-* valueCodeableConcept only $CodeableConcept-uv-ips
+// * valueCodeableConcept only $CodeableConcept-uv-ips
 // * valueCodeableConcept MS
 * valueCodeableConcept from $results-coded-values-laboratory-uv-ips (preferred)
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"

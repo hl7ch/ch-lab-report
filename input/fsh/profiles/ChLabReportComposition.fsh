@@ -15,13 +15,16 @@ Description: "This profile constrains the Composition resource for the purpose o
 // ╰──────────────────────────────────────────────────────────────────╯
 * ^extension[$imposeProfile].valueCanonical = Canonical(CompositionLabReportEu)
 
-* extension contains CDVersionNumber named versionNumber 0..1 // deprecated
-* extension[versionNumber].valueString only string
+// * extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
+// * extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabEu)
 
 * extension contains InformationRecipient named information-recipient 0..*
 * extension[information-recipient].valueReference only Reference(ChLabPractitioner or Device or ChLabPatient or RelatedPerson or ChLabPractitionerRole or CHCoreOrganization)
 
-* extension contains $basedOn-order-or-requisition named basedOn-order-or-requisition 0..*
+// * extension contains InformationRecipient named information-recipient 0..*
+// * extension[information-recipient].valueReference only Reference(ChLabPractitioner or Device or ChLabPatient or RelatedPerson or ChLabPractitionerRole or CHCoreOrganization)
+
+* extension contains CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition].valueReference only Reference(ChLabReportServiceRequest)
 
 * extension contains DiagnosticReportReference named diagnosticReport-reference 0..1
@@ -72,7 +75,7 @@ Description: "This profile constrains the Composition resource for the purpose o
 * section[lab-subsections]
   * ^short = "Variant 2: EU Laboratory Report section with one to many subsections Laboratory Report Item"
   * ^definition = """Variant 2: With this option, this top level section doesn't include NEITHER a top level text NOR entry elements. Each Report Item is contained in a corresponding sub-sections which contains the Lab Report Data Entry."""
-  * code only $CodeableConcept-uv-ips
+  // * code only $CodeableConcept-uv-ips
   * code from LabStudyTypesEuVs (preferred)
   * text 0..0
   * entry 0..0

@@ -44,3 +44,15 @@ Id: specimen-additive-substance-eu-lab
 Title: "Substance: Specimen Additive Substance"
 Description: """This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide."""
 * code from LabSpecimenAdditiveEu (preferred)
+
+Instance: EDTA
+InstanceOf: SpecimenAdditiveSubstance
+Usage: #example
+Title: "Dipotassium EDTA (ethylenediaminetetraacetate)"
+Description: "Specimen Additive Substance EDTA"
+* identifier.system = "http://intranet.pipette.ch/identifiers/substances"
+* identifier.value = "1234333"
+* category = $substance-category#chemical "Chemical"
+* code.coding.code = #1256100007
+* code.coding.system = $sct
+* code.coding.display = "Edetate dipotassium (substance)"
