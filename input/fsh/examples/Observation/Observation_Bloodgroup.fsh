@@ -67,7 +67,7 @@ Usage: #example
 Instance: BloodGroupPanel
 InstanceOf: ChLabObservationPanel
 Usage: #example
-Title: "Blood Group Panel"
+Title: "Blood Group ABO Rh Panel"
 Description: "Example reporting Blood Group and RhD Result separately in a member and coded with SNOMED CT"
 * identifier.system = "https://labor.pipette.com/labvalues"
 * identifier.value = "1304-03760-blood-group-panel"
