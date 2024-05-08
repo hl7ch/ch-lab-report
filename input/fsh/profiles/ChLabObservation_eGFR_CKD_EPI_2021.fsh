@@ -127,3 +127,4 @@ Description: "eGFR-cr-cys CKD-EPI 2021"
 * valueQuantity = 74 'mL/min' "mL/min"
 * referenceRange[adult].low.value = 60
 * referenceRange[adult].low.unit = "mL/min"
+//  https://www.swissnephrology.ch/wp/wp-content/uploads/2023/01/161121_SGN_Pocketguide_CKD_Web_A4_d_WZ.pdf

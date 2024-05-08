@@ -61,11 +61,7 @@ This implementation guide contains and references intellectual property owned by
 
 #### Dependency Overview
 
-This overview illustrates the relevant dependencies of CH ELM to the [Swiss implementation guides](https://fhir.ch/) and the [European laboratory project](https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html).
-
-{% include img.html img="Dependency Overview.png" caption="Fig. 1: Dependency Overview" width="40%" %}
-
-#### Dependency Table
+A graphic overview of the dependencies, in particular with regard to the exchange format of reportable laboratory results in Switzerland, can be found [here](https://fhir.ch/ig/ch-elm/index.html). It also shows the dependency on the European laboratory project.
 
 {% include dependency-table.xhtml %}
 

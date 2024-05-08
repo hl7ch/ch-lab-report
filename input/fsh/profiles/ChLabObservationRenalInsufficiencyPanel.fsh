@@ -42,25 +42,6 @@ Description: """This panel collects the lab results in relation to renal insufie
 // │  Profiles for renal insufficiency Single Tests   │
 // ╰──────────────────────────────────────────────────╯
 
-/*
-Profile: ChLabObservationRenalInsufficiencySingleTest
-Parent: ChLabObservationSingleTest
-Id: ch-lab-observation-renal-insufficiency-single-test
-Title: "CH LAB Observation Renal insufficiency Single Test"
-Description: """This profile constrains the ChLabObservationSingleTest profile to represent a single result to estimate Renal insufficiency for the  HL7 Swiss project."""
-
-* ^publisher = "HL7 Switzerland"
-* ^contact.name = "HL7 Switzerland"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://hl7.ch"
-* ^jurisdiction = $m49.htm#756 "Switzerland"
-* ^purpose = "This profile constrains the ChLabObservationSingleTest profile to represent single Tests in relation to renal insufficiency for the  HL7 Swiss project."
-* ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
-* category[specialty] = $sct#394596001 "Chemical pathology (qualifier value)"
-* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
-* hasMember ..0
-*/
-
 Profile: ChLabObservation_uACR
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-albumin-creatinine-urine-ratio
@@ -84,5 +65,5 @@ Description: "This profile constrains the ChLabObservationSingleTest profile det
   * ^short = "LOINC Display Name"
 * method = $sct#271075006 "Urine albumin/creatinine ratio measurement (procedure)"
 
-
 // https://github.com/hl7-eu/laboratory/blob/master/input/fsh/examples/lab_report/Observation-result-ratio-example.fsh
+// https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3919350/

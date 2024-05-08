@@ -9,9 +9,6 @@ Description: "Panel containing Laboratory Results in case of Renal Insufficiency
 * hasMember[CKD-EPI] = Reference(Observation/Result-egfr-cr-ckd-epi-2021)
 * hasMember[uACR] = Reference(Observation/AlbuminCreatininRatioUrin)
 
-
-
-
 Instance: AlbuminCreatininRatioUrin
 InstanceOf: ChLabObservation_uACR
 Usage: #example
@@ -24,7 +21,7 @@ Description: "Example of Laboratory Test Result"
 * valueQuantity = 2.8 'mg/mmol' "mg/mmol"
 * specimen = Reference(Urin)
 * referenceRange.high.value = 3
-* referenceRange.high.unit = "mg/mol"
+* referenceRange.high.unit = "mg/mmol"
 
 Instance: Urin
 InstanceOf: Specimen-eu-lab
