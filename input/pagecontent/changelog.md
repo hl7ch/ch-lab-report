@@ -46,3 +46,14 @@ All significant changes to this FHIR implementation guide will be documented on 
     * StructureDefinition-specimen-additive-substance
     * StructureDefininion-ch-lab-observation-albumin-creatinine-urine-ratio
 
+* [#78 CH LAB Observation Blood Group - Definitions (Corina von Känel CISTEC)](https://github.com/hl7ch/ch-lab-report/issues/78) 
+  * removed Observation Profile Bloodgroup
+  * added examples Bloodgroup
+    * [Blood Group ABO Rh Panel](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupPanel.html)
+    * [Blood Group Panel with Component ABO and Component Rh](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupComponent.html)
+    * [Blood Group Rh as free text](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupFreeText.html)
+    * [Blood Group Rh combined](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupSimple.html)
+
+
+
+

@@ -4,6 +4,14 @@
 
 {% include img.html img="Resource Overview.svg" caption="Fig. 1: Resource Overview" width="80%" %}
 
+### Laboratory Test Panels (also called batteries)
+
+
+
+#### Use Case Renal Insufficiency
+
+#### Use Case Count of Blood Cells (automated CPC)
+
 ### Use Cases from HL7 Europe Laboratory Report
 
 The DiagnosticReport status decides the Use Case. [ValueSet URL](http://hl7.org/fhir/diagnostic-report-status)
