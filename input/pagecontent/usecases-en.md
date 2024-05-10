@@ -6,7 +6,7 @@
 
 ### Laboratory Result Documents
 
-Based on HL7 Europe Laboratory Report, the laboratory results are shown here as FHIR bundle of type document. The first entry element is therefore the composition, which defines the structure of the document.
+Based on 'HL7 Europe Laboratory Report', the laboratory results are shown here as FHIR bundle of type document. The first entry element is therefore the composition, which defines the structure of the document.
 The bundle contains exactly one DiagnosticReport (Laboratory Report), which references the composition. It also references the results of the laboratory tests. These can be preseneted in the form of several observations and also as a PDF document. The 'result' element contains the results as references to observations. 
 
 #### Use case Suspected deep vein thrombosis with common laboratory results, 1-tvt
@@ -35,28 +35,36 @@ The breath test is a provocation test to find intolerances to certain types of s
 
 #### Use case sepsis, 4-sepsis
 
-The results of microbiological tests differ from other laboratory results in that not only numerical return values are available, but also identifiers of pathogens, semi-quantitative growth in cultures or attributes of resistance tests. In addition to LOINC coding, SNOMET CT terminology is used here.
+The results of microbiological tests differ from other laboratory results in that not only numerical return values are available, but also identifiers of pathogens, semi-quantitative growth in cultures or attributes of resistance tests. In addition to LOINC coding, SNOMET CT terminology is often used here.
 
 [Laboratory Result Document](Bundle-LabResultReport-4-sepsis.html)
 
-### Laboratory Test Panels (also called batteries)
+### Laboratory Test Panels (also called test batteries)
 
-++++++++++++++++++++++++
+Laboratory test panels are the aggregation of several laboratory tests, as they are often commissioned in a clinical context and presented as results. In principle, we have shown with the above examples that laboratory results as well as test panels can be represented with the resources as defined here. Nevertheless, test panels offer certain advantages.
 
-#### Use Case Renal Insufficiency
+* Comprehensive analysis: They provide an efficient way to order and examine multiple analytes simultaneously and display the results clearly. This is particularly useful in the diagnosis of complex clinical pictures where several parameters play a role.
+* Increased efficiency: By combining multiple tests in one panel, laboratory efficiency can be increased and resources optimally utilized. Instead of testing each analyte individually, multiple parameters can be tested simultaneously, reducing time and labor.
+* Cost efficiency: Test panels can also be more cost-effective than individual tests, as they are often offered at a reduced price. This can be particularly advantageous when a comprehensive analysis is required.
+* Clinical relevance in the treatment context: Test panels are often designed to cover a range of analytes that are clinically relevant to specific diseases or health conditions. This facilitates the interpretation of results and enables a faster and more accurate diagnosis.
+* Standardization: By using test panels, laboratories can implement a standardized approach for testing specific analytes. This promotes consistency and comparability of results both within a laboratory and between different laboratories.
 
-Profile: [CH LAB Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
-
-Example: [Observation Results: Renal Insufficiency Panel](Observation-ObservationRenalInsufficiencyPanel.html)
+In our healthcare systems, there is high competitive pressure between laboratories and the ability to offer differentiated services can be an important competitive advantage. A mandatory standardized test panel can affect a laboratory's ability to differentiate itself from the competition by offering specialized tests or customized services. The test panels proposed here are therefore not a mandatory standard, but should be optional where this makes sense. The automated CBC panel and the renal insufficiency panel [screening test](https://www.swissnephrology.ch/wp/wp-content/uploads/2023/01/161121_SGN_Pocketguide_CKD_Web_A4_e_WZ.pdf) are intended as examples of observation profiles.
+The test panels listed here also serve as examples of how laboratories can implement their own test panels as Observation Profiles.
 
 #### Use Case Count of Blood Cells (automated CBC)
 
-Profile: [CH LAB Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-cbc-panel.html)
+The hematogram II of the [analysis list(https://www.bag.admin.ch/dam/bag/de/dokumente/kuv-leistungen/leistungen-und-tarife/Analysenliste/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx.download.xlsx/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx)]  is the template for this test panel. 
 
-Example: [Observation Results: Renal Insufficiency Panel](Observation-ExampleObservationCBCPanel.html)
+Profile: [CH LAB Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
 
+Example: [Observation Results: Count of Blood Cells (automated CBC)](Observation-ExampleObservationCBCPanel.html)
 
-#### Use Case Graphical Results, Breath Tests
+#### Use Case Renal Insufficiency
+
+Chronic diseases such as diabetes or hypertension are sometimes accompanied by chronic kidney disease. They therefore require monitoring of kidney function. The glomerular filtration rate (GFR) and albumin excretion in 24-hour urine have proven to be useful parameters for kidney function. The GFR is very difficult to determine. Therefore, formulas have been used which allow approximations with the help of measurements of endogenous markers, creatinine or cystatin-C. The most frequently used formula is CKD-EPI, which takes into account additional patient characteristics such as age and gender. In addition, several adjustments have been made to the formula over time, most recently in 2021, when skin color was omitted as a parameter. The results of the CKD-EPI formulas always refer to people with a body surface area of 1.73 m².
+
+The second indicator of kidney function is albumin excretion in 24 h urine. To simplify the determination procedure, the albumin/creatinine ratio in urine is used.
 
 Profile: [CH LAB Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
 
@@ -64,49 +72,21 @@ Example: [Observation Results: Renal Insufficiency Panel](Observation-Observatio
 
 #### Use Case Blood Bank
 
-Examples:
+Standardization in the area of blood bank results would improve safety in the transmission of laboratory results. HL7 Europe Laboratory Report has included two ValueSets with the binding 'preferred':
+
+1. [ValueSet: Results Blood Group - IPS](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-uv-ips) with 207 concepts
+
+2. [ValueSet: Results Blood Group - SNOMED CT IPS Free Set ](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set) with 13 concepts
+
+This guide contains 2 further possible ValueSets:
+
+1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) with the LOINC codes of the blood group antibody screening tests.
+
+2. [ValueSet: CH Lab Results Blood Group Antibody (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-vs.html) with the SNOMED CT codes of the blood group antibodies
+
+Standardization in the blood bank sector requires the cooperation and approval of the professional association (Schweizerische Vereinigung für Transfusionsmedizin), which could not be obtained in the short time available. This guideline is therefore limited to 4 possible forms of presentation as examples of blood bank results: 
 
 * [Blood Group Panel ABO Rh simple](Observation-BloodGroupSimple.html)
 * [Blood Group Panel ABO Rh Panel](Observation-BloodGroupPanel.html)
 * [Blood Group Panel ABO Rh using Component](Observation-BloodGroupPanel.html)
 * [Blood Group Panel using free text](Observation-BloodGroupFreeText.html)
-
-
-
-
-### Use Cases from HL7 Europe Laboratory Report
-
-The DiagnosticReport status decides the Use Case. [ValueSet URL](http://hl7.org/fhir/diagnostic-report-status)
-
-{% include img.html img="DiagnosticReport_state.png" caption="Fig. 2: DiagnosticReport state machine diagram" width="60%" %}
-
-#### Laboratory Report Scenarios
-
-##### Complete Laboratory Report
-
-A Laboratory, after performing its internal testing workflow, forms a complete result report, according to the requirements and query parameters formulated by the ordering entity. Internal testing workflow includes consolidation of all test result orders or order groups and all steps of data quality assurance and validation.
-Then, depending on its internal organization, may inform the application of the clinical practice (known as Order Result Tracker), send the report to the intended recipients included in the Laboratory test order; store a report copy in an EHR-system; etc.
-In this case:
-
-* the Laboratory report status is set to _“final”_;
-* all individual test results which are included in the final laboratory report should be also marked as _"final"_ or _"cancelled"_
-
-##### Partial Laboratory Report
-
-In some cases, a laboratory might release a laboratory report which is either incomplete (not all results are available or marked as “final”) or unverified.
-This usually occurs when some of the results are known to be produced later, but others need to be communicated to report recipients due to specific organizational and/or process rules; or because of the urgency of some results. Note: the ‘delay’ in the results availability may be due to the nature of the test, or to organizational or technical reasons.
-In such cases:
-
-* the report status should be set to _“preliminary”_ or _“partial”_
-
-##### Appended Laboratory Report
-
-As described in the example 1-tvt the practitioner Marc Mustermann may request further request for coagulation tests from the same sample of citrate tubes after having received the confirmation of a deep vein thrombose. After the fullfillment of these request the laboratory may send an additional laboratory report. Subsequent to being final, the report will be modified by adding new content. The existing content is unchanged.
-
-* In this case the Laboratory Report status is set to _"appended"_.
-
-##### Cancelled Laboratory Report
-
-The report is unavailable because the measurement was not started or not completed (also sometimes called "aborted").
-
-* In this case the Laboratory Report status is set to _"cancelled"_.
