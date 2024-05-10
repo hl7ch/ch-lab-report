@@ -67,8 +67,9 @@ menu:
   Home: index.html
   Use Cases: #usecases.html
     Use Cases English: usecases-en.html
-    ##Use Cases German: usecases-ge.html
-    ##Use Cases French: usecases-fr.html
+    Use Cases German: usecases-ge.html
+    Use Cases French: usecases-fr.html
+    Use Cases Italian: usecases-it.html
   Document: document.html
   Profiles: profiles.html
   Terminology: terminology.html
