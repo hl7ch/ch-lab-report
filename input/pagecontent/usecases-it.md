@@ -30,7 +30,7 @@ Questo caso d'uso riguarda la riproduzione di diverse frazioni proteiche del sie
 
 #### Caso d'uso test del respiro, 3-breath-test
 
-Il breath test è un test di provocazione per verificare l'intolleranza ad alcuni tipi di zucchero (lattosio, fruttosio). La concentrazione di idrogeno e metano nell'aria espirata viene misurata a intervalli di mezz'ora dopo la somministrazione di una certa quantità del tipo di zucchero da testare. Il risultato è un grafico bidimensionale con le misurazioni, che devono essere registrate insieme ai risultati numerici. Anche in questo caso è stata utilizzata la codifica 'base64'.
+Il test del respiro è un test di provocazione per verificare l'intolleranza ad alcuni tipi di zucchero (lattosio, fruttosio). La concentrazione di idrogeno e metano nell'aria espirata viene misurata a intervalli di mezz'ora dopo la somministrazione di una certa quantità del tipo di zucchero da testare. Il risultato è un grafico bidimensionale con le misurazioni, che devono essere registrate insieme ai risultati numerici. Anche in questo caso è stata utilizzata la codifica 'base64'.
 
 [Documento sui risultati di laboratorio](Bundle-LabResultReport-3-breath-test.html)
 
