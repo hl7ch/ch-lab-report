@@ -12,7 +12,7 @@ Description: "ValueSet Blood Group Antibody"
 * ^contact.telecom.value = "https://www.hl7.ch/"
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 // look at: https://hl7.org/fhir/STU3/valueset-filter-operator.html 
-* include codes from system http://snomed.info/sct where concept is-a #19830006 "Blood group antibody"
+* include codes from system $sct where concept descendent-of #19830006 "Blood group antibody"
 
 ValueSet: ChLabBloodGroupAntibodyScreen
 Id: ch-lab-bloodgroup-antibody-screen
@@ -29,4 +29,4 @@ Description: "Detects atypical IgG antibodies prior to transfusion or during pre
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 // look at: https://hl7.org/fhir/STU3/valueset-filter-operator.html 
 //  de-DE	German (Germany)	Blutgruppen-Antikörpersuchtest:Titer:Zeitpunkt:Serum oder Plasma:Semiquantitativ:
-* include codes from system $sct where concept is-a #252315008 "Blood group antibody screening (procedure)"
+* include codes from system $sct where concept descendent-of #252315008 "Blood group antibody screening (procedure)"
