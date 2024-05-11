@@ -1,60 +1,92 @@
 <!-- markdownlint-disable MD001 MD041 -->
 
-### Laborbefunde aus verschiedenen Fachgebieten
+### Diagram der Resourcen
 
-Da häufig Laborresultate aus mehreren Fachgebieten desselben Labors zusammen verschickt werden, muss der Laborreport diese als ganzes Dokument (FHIR bundle) zusammentragen.
+{% include img.html img="Resource Overview.svg" caption="Fig. 1: Resourcen Übersicht" width="80%" %}
 
-#### Fallbeispiel 1: Verdacht auf tiefe Venenthrombose
+### Laborergebnis-Dokumente
+
+In Anlehnung an 'HL7 Europe Laboratory Report' werden hier die Laborergebnisse als FHIR-Bundle vom Typ Dokument dargestellt. Das erste Einstiegselement ist also die Composition, die die Struktur des Dokuments definiert.
+Das Bundle enthält genau einen DiagnosticReport (Laborbericht), der auf die Composition verweist. Es verweist auch auf die Ergebnisse der Laboruntersuchungen. Diese können in Form von mehreren Beobachtungen und auch als PDF-Dokument dargestellt werden. Das Element „result“ enthält die Ergebnisse als Verweise auf Beobachtungen. 
+
+#### Anwendungsfall Verdacht auf tiefe Venenthrombose mit gängigen Laborresultaten, 1-tvt
 
 Ein Patient, Hans Guggindieluft, erscheint am 09.03.2016 in der Gruppenpraxis Olten bei Dr. med. Marc Mustermann. Er identifiziert sich mündlich über seine Stammdaten als Hans Guggindieluft, 01.01.1981. Er berichtet über unklare Beinschmerzen im linken Unterschenkel sowie gleichzeitig aufgetretene atemabhängige Schmerzen und Husten. Der Arzt führt die Anamnese und körperliche Untersuchung durch und verordnet folgende Laborparameter:
 
-* Blutbild inkl. Differenzierung
+* Blutbild mit automatischer Zählung, Hämatogramm
 * CRP
 * D-Dimer
-  
-Der Arzt führt selber das Blutbild und die CRP-Bestimmung mittels Point of care Diagnostik durch, die D-Dimer-Diagnostik wird als Quantitative Diagnostik in einem externen Einsendelabor verordnet. Zur Gewinnung der Probe wird eine Blutentnahme im Liegen durchgeführt (1 EDTA-Röhrchen, 2 Citrat-Röhrchen zu 5 ml). Der Auftrag wird an das externe Labor übermittelt und die Probe wird mittels telefonisch geordertem Kurier in das externe Versandlabor geschickt. Die Resultate der internen Point of Care-Diagnostik (Blutbild und CRP) werden im Laborblatt des Patienten in der Arztpraxis-Software eingetragen (händisch oder über lokal installierte elektronische Schnittstellen). Es erfolgt daher eine Verordnung des Arztes an den Patienten zur Selbstverabreichung eines thrombosehemmenden Mittels. Die Resultate des Einsendelabors treffen am gleichen Abend elektronisch beim Hausarzt ein und werden ebenfalls im Laborblatt des Patienten eingetragen. Durch den Einsatz des vorliegenden Austauschformats kann dieser Prozess vollautomatisch erfolgen. Nach telefonischer Rückfrage des Arztes beim Einsendelabor auf Grund eines grenzwertigen D-Dimer-Befundes erfolgt die Auskunft, dass mittels D-Dimer in dieser Situation eine tiefe Venenthrombose nicht ausgeschlossen werden kann und es erfolgt daher eine telefonische Wiedereinbestellung des Patienten am nächsten Tag zur Durchführung einer Sonographie der Beine.
+ 
+Dieses Labordokument gibt die Resultate von 3 Laborresultaten wieder: Dem automatischen Zähltest für Blutzellen, dem C-reaktiven Protein im Serum, sowie dem Fibrin D-Dimer im Blut, somit drei sehr gängige Labortest. Der Zähltest für Blutzellen referenziert dann wieder auf die einzelnen Resultate der Zählungen und Messungen, die als Observations vorliegen, mithin sehr häufige Laboruntersuchungen.
 
-Dazu passender FHIR Laborbefund -> TODO Link
+[Laboratory Result Document](Bundle-LabResultReport-1-tvt.html)
 
-### Probe (Rachenabstrich und Blutaustrich) im externen Labor entnehmen oder beurteilen
+#### Anwendungsfall Serum-Elektrophorese, 2-electrophoresis
 
-#### Fallbeispiel 2: Verdacht auf Keuchhusten
+Bei diesem Anwendungsfall geht es um die Wiedergabe von mehreren Eiweiss-Fraktionen im Serum, die mittels Elektrophorese-Technik aufgetrennt wurden. Die einzelnen Fraktionen sind als 'hasMember Observation' mit jeweiligen Referenzbereichen aufgeführt. Das Ergebnis liegt nebst in Zahlenform auch als 2-dimensionale Grafik vor, und muss ebenfalls im Dokument wiedergegeben werden. Die Grafik wurde 'base64' encodiert und somit als grösseres Textfeld im Dokument integriert. Es ist hier zu beachten, dass die Datenmenge der Grafik nicht zu gross wird. Wir würden eine Obergrenze von 20 Mbytes empfehlen. 
 
-Eine Mutter sucht mit ihrem 6-jährigen Sohn Emil Kummer, geb. 5. Mai 2014, den Hausarzt Peter Presto der Gruppenpraxis Olten auf, weil das Kind seit zwei Wochen zunehmend hustet, mit krampfartigen Hustenanfällen, und Fieber hat. Die MPA der Arztpraxis misst das Fieber, macht bereits eine Fingerkuppen-Blutentnahme beim Sohn, bestimmt das CRP und fertigt einen Blutausstrich an. Der Arzt vermutet einen viralen Infekt, möchte aber Keuchhusten ausschliessen, obwohl das Kind dagegen geimpft ist. Da er wegen eines Notfalles unter Zeitdruck ist, möchte er den dazu nötigen Rachenabstrich nicht selbst durchführen, sondern bittet die Mutter, das Kind ins nahegelegene Labor zu begleiten, um den Abstrich anfertigen zu lassen. Er erstellt einen Laborauftrag zur Durchführung einer Pertussis-PCR im Rachenabstrich des Kindes und gibt den Auftrag der Mutter mit. Die Mutter selbst ist nicht sicher, ob sie selbst gegen Keuchhusten geimpft ist. Demzufolge nimmt der Hausarzt Peter Presto die Pertussis-Impfung bei ihr gleich vor und empfiehlt, dasselbe beim Kindsvater und bei den Grosseltern durchzuführen. Die MPA hat inzwischen den Blutausstrich des Sohnes im Mikroskop angeschaut und findet ausgesprochen viele reaktive Lymphozyten, die ihr verdächtig erscheinen. Sie ist unsicher und fragt den Arzt, welcher den Auftrag gibt, die Blutausstriche des Kindes der Mutter mitzugeben und ebenfalls im Labor genauer untersuchen zu lassen. Die Mutter findet sich mit ihrem Sohn im Labor ein, wo auf Grund des Untersuchungsauftrages des Arztes vorerst die Identität des Sohnes festgestellt wird. Anschliessend wird im Blutentnahmeraum des Labors beim Kind ein Rachenabstrich sowie eine Venenpunktion cubital rechts durchgeführt und zusammen mit den mitgebrachten Blutausstrichen und dem Untersuchungsauftrag des Arztes ins Labor weitergegeben.
+[Laboratory Result Document](Bundle-LabResultReport-2-electrophoresis.html)
 
-Dazu passende FHIR Laborbefunde -> TODO Ergebnisse Arzt und Labor kommen als 2 Befunde auf Repository
+#### Anwendungsfall Atemtest, 3-breath-test
 
-### Vorsorgeuntersuchung Zytologie, Streifentest, Screening Panel
+Der Atemtest ist ein Provokationstest, um Intoleranzen gegenüber gewissen Zuckerarten (Lactose, Fructose) zu testen. Es wird die Konzentration von Wasserstoff und Methan in der Ausatmungsluft in halbstündigen Intervallen gemessen, nachdem eine bestimmte Menge der zu testenden Zuckerart verabreicht wurde. Als Ergebnis liegt eine 2 dimensionale Grafik mit den Messungen vor, die ebenfalls nebst den Zahlenergebnissen festgehalten werden muss. Auch hier ist die 'base64' Encodierung zur Anwendung gekommen.
 
-#### Fallbeispiel 3: Gynäkologische Jahreskontrolle
+[Laboratory Result Document](Bundle-LabResultReport-3-breath-test.html)
 
-Die MPA der Gynäkologie in der Gruppenpraxis Olten, Dr. Peter Pap bereitet die Konsultationen des nächsten Tages vor. Da die Praxis nur ein minimales eigenes Labor betreibt, werden gewisse Patientinnen vor dem Besuchstermin ins nahe gelegene Ambulatorium des Labors Pipette geschickt, so auch die junge Patientin Frau Marina Rubella, geb. 8. 8. 1992. Die MPA verordnet in ihrer Praxis-Software für die Patientin Rubella die mit dem Labor vereinbarten Standard-Analysen für die gynäkologische 3-Jahreskontrolle. Dazu gehört auch die Blutentnahme für die Serothek für allfällige Nachverordnungen. Das Labor übermittelt die Resultate spätestens 90 Minuten nach der Blutentnahme in die Praxis. Dr. Pap verordnet während der Konsultation folgende Aufträge:
+#### Anwendungsfall Sepsis, 4-sepsis
 
-* Gynäkologische Zervix Zytologie: Pap-Abstrich - falls indiziert soll auch der Nachweis und die Typisierung von HPV (Humane Papillomaviren) durchgeführt werden. Entnahmematerial gemäss Angaben des Labors. Die zytologische Untersuchung wird im Labor Pipette durchgeführt. Die allfällige Typisierung führt das Labor Pipette nicht selber durch.
-* Urin-Teilstatus (Combur9 Test): Wird durch die MPA in der Praxis durchgeführt: folgende Parameter werden untersucht: ph, Leukozyten, Erythrozyten, Nitrit, Protein, Glucose, Ketone, Urobilinogen, Bilirubin (halbquantitative Untersuchungen, Resultate werden wahrscheinlich von Hand ins Praxis-Laborsystem eingetragen)
-* Urin-Bakteriologie: Entnahmematerial gemäss Angaben des Labors Allgemeine Bakt, inkl. Sprosspilze ans Labor Pipette Die Übermittlung des Auftrags wird durch die MPA ausgelöst (Entnahmezeitpunkt)
-* Nachverordnung "Screening vor Schwangerschaft": Alle Untersuchungen können aus den vorgängig im Ambulatorium entnommenen Materialien (Serum, EDTA-Blut) durchgeführt werden (Hepatitis-Bc Antikörper, HIV 1+2 (Ak+p24), Röteln IgG, Lues-/Syphilis-Suchtest)
+Die Resultate von mikrobiologischen Untersuchungen unterscheiden sich von anderen Laborresulteten, indem nicht nur numerische Rückgabewerte vorliegen, sondern Bezeichner von Krankheitserregern, semiquantitatives Wachstum in Kulturen oder Attribute von Resistenztests. Hier wird nebst den LOINC Codierungen oft die SNOMET CT Terminologie verwendet.
 
-Dazu passende FHIR Laborbefunde -> TODO Ergebnisse Arzt und Labor kommen als 2 Befunde auf Repository
+[Laboratory Result Document](Bundle-LabResultReport-4-sepsis.html)
 
-### Bakteriologische Abklärung mit Typisierung und Resistenz
+### Labor Test Panels (auch Test-Batterien oder Test-Profile genannt)
 
-#### Fallbeispiel 4: Verdacht auf eine Sepsis
+Unter Labor Testpanels versteht man die Aggregierung mehrerer Laboruntersuchungen, wie sie gerne in einem klinischen Kontext in Auftrag gegeben und als Resultate dargestellt werden. Grundsätzlich haben wir mit obigen Beispielen gezeigt, dass sich Laborresultate wie auch Test-Panels mit den Resourcen, wie sie hier definiert sind abbilden lassen. Trotzdem bieten Testpanels gewisse Vorteile.
 
-Die Patientin Klebsiella Keller, geb. 12. 12. 1975, ist schon seit längerer Zeit im Kantonsspital. In der vergangenen Nacht hat sich ihr Allgemeinzustand massiv verschlechtert. Da ein Verdacht auf eine Sepsis besteht, ordnet der zuständige Oberarzt, Dr. Hans Hauser, an, dass ihr am Morgen Blut für eine Blutkultur entnommen wird. 30 Minuten später wird nochmals eine aerobe und eine anaerobe Blutkultur angelegt, sowie eine Urinprobe gewonnen. Alle fünf Proben werden im externen Labor Pipette weiter bearbeitet. Dort werden in allen Materialien Keime nachgewiesen und dann mittels Massenspektrometrie identifiziert. In den vier Blutkulturflaschen konnten die Erreger „Klebsiella pneumoniae“ und „Escherichia coli“ nachgewiesen werden, in einer aeroben Flasche noch zusätzlich das Bakterium „Streptococcus mitis“. Der in der Urinprobe identifizierte Keim ist normalerweise nicht pathogen. Von allen drei im Blut nachgewiesenen Erreger wird ein Antibiogramm erstellt. Dabei zeigt sich, dass die beiden Wirkstoffe “Amoxicillin+Clavulansäure“ und „Ceftriaxon“ bei allen drei Keimen wirksam sind. Der Mikrobiologe informiert Dr. Hans Hauser regelmässig über die verschiedenen Teilresultate.
+* Umfassende Analyse: Sie bieten eine effiziente Möglichkeit, mehrere Analyte gleichzeitig zu bestellen, zu untersuchen und die Ergebnisse übersichtlich darzustellen. Dies ist besonders nützlich bei der Diagnose komplexer Krankheitsbilder, bei denen mehrere Parameter eine Rolle spielen.
+* Erhöhte Effizienz: Durch die Kombination mehrerer Tests in einem Panel kann die Effizienz des Labors gesteigert und die Ressourcen optimal genutzt werden. Anstatt jeden Analyten einzeln zu testen, können mehrere Parameter gleichzeitig getestet werden, was Zeit und Arbeitsaufwand reduziert.
+* Kosteneffizienz: Testpanels können auch kostengünstiger sein als Einzeltests, da sie oft zu einem reduzierten Preis angeboten werden. Dies kann besonders vorteilhaft sein, wenn eine umfassende Analyse erforderlich ist.
+* Klinische Relevanz im Behandlungskontext: Testpanels sind oft so konzipiert, dass sie eine Reihe von Analyten abdecken, die für bestimmte Krankheiten oder Gesundheitszustände klinisch relevant sind. Dies erleichtert die Interpretation der Ergebnisse und ermöglicht eine schnellere und genauere Diagnose.
+* Standardisierung: Durch die Verwendung von Testpanels können Labors einen standardisierten Ansatz für die Untersuchung spezifischer Analyte umsetzen. Dies fördert die Konsistenz und Vergleichbarkeit der Ergebnisse sowohl innerhalb eines Labors als auch zwischen verschiedenen Labors.
 
-Dazu passende FHIR Laborbefunde -> TODO Ergebnisse Arzt und Labor kommen als 2 Befunde auf Repository
+In unseren Gesundheitssystemen herrscht ein hoher Wettbewerbsdruck zwischen Laboren, und die Fähigkeit, differenzierte Dienstleistungen anzubieten, kann ein wichtiger Wettbewerbsvorteil sein. Ein obligates standardisiertes Test-Panel kann die Fähigkeit eines Labors beeinträchtigen, sich durch spezialisierte Tests oder massgeschneiderte Dienstleistungen von der Konkurrenz abzuheben. Die hier vorgeschlagenen Testpanels sind deshalb nicht zwingender Standard, sondern sollen optional eingesetzt werden können, wo dies Sinn macht. Das automated CBC Panel und auch das Niereninsuffizienzpanel [Screeningtest](https://www.swissnephrology.ch/wp/wp-content/uploads/2023/01/161121_SGN_Pocketguide_CKD_Web_A4_e_WZ.pdf) sind als Beispiele für Observation Profiles gedacht.
+Die hier aufgeführten Testpanels dienen auch als Beispiele, wie Labore eigene Testpanels als Observation Profile implementieren können.
 
-### Sammelbefunde von Arbeitnehmern
+#### Use Case Count of Blood Cells (automated CBC)
 
-#### Fallbeispiel 5: Sammelauftrag „Biologisches Monitoring SUVA“
+Das Hämatogramm II der [Analysenliste](https://www.bag.admin.ch/dam/bag/de/dokumente/kuv-leistungen/leistungen-und-tarife/Analysenliste/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx.download.xlsx/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx) ist die Vorlage für dieses Testpanel. 
 
-Die Patientin Klebsiella Keller, geb. 12. 12. 1975, ist schon seit längerer Zeit im Kantonsspital. In der vergangenen Nacht hat sich ihr Allgemeinzustand massiv verschlechtert. Da ein Verdacht auf eine Sepsis besteht, ordnet der zuständige Oberarzt, Dr. Hans Hauser, an, dass ihr am Morgen Blut für eine Blutkultur entnommen wird. 30 Minuten später wird nochmals eine aerobe und eine anaerobe Blutkultur angelegt, sowie eine Urinprobe gewonnen. Alle fünf Proben werden im externen Labor Pipette weiter bearbeitet. Dort werden in allen Materialien Keime nachgewiesen und dann mittels Massenspektrometrie identifiziert. In den vier Blutkulturflaschen konnten die Erreger „Klebsiella pneumoniae“ und „Escherichia coli“ nachgewiesen werden, in einer aeroben Flasche noch zusätzlich das Bakterium „Streptococcus mitis“. Der in der Urinprobe identifizierte Keim ist normalerweise nicht pathogen. Von allen drei im Blut nachgewiesenen Erreger wird ein Antibiogramm erstellt. Dabei zeigt sich, dass die beiden Wirkstoffe “Amoxicillin+Clavulansäure“ und „Ceftriaxon“ bei allen drei Keimen wirksam sind. Der Mikrobiologe informiert Dr. Hans Hauser regelmässig über die verschiedenen Teilresultate.
+Profile: [CH LAB Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
 
-* Betrieb (Name, Adresse, Betriebs-Nummer)
-* Anzahl Arbeitnehmende für das Biologische Monitoring
-* durchzuführende Untersuchungen (z.B. Arsen, Blei, Quecksilber, Mandelsäure)
+Example: [Observation Results: Count of Blood Cells (automated CBC)](Observation-ExampleObservationCBCPanel.html)
 
-Die Betriebe erhalten von der AMV eine Liste inkl. Etiketten mit den betroffenen Arbeitnehmenden. Hier nehmen wir als Beispiel für einen Arbeitnehmer Beat Borer, geb. 6. 6. 1986. Das Labor bedruckt die Auftragsformulare mit der Betriebsnummer und sendet den Betrieben die notwendige Anzahl Urinbecher und Auftragsformulare zu. Im Betrieb werden Auftragsformulare und Urinbecher mit den von der AMV gelieferten Etiketten versehen und an die Arbeitnehmenden abgegeben. Die Proben inkl. Auftragsformular werden vom Betrieb ans Labor gesendet.
+#### Use Case Renal Insufficiency
 
-Dazu passende FHIR Laborbefunde -> TODO Ergebnisse Labor kommen als 1 Befund auf Repository
+Chronische Erkrankungen wie Diabetes oder Hypertonie gehen manchmal mit chronischen Nierenkrankheiten einher. Deshalb brauchen sie eine Überwachung der Nierenfunktion. Als Parameter für die Nierenfunktion haben sich die Glomerulumfiltrationsrate (GFR) und die Albumin-Ausscheidung im 24h Urin bewährt. Die GFR lässt sich nur sehr aufwendig bestimmen. Deshalb wurden Formeln verwendet, welche Annäherungen mit Hilfe von Messung von endogenen Markern, Creatinin oder Cystatin-C zulassen. Die häufig verwendete Formel ist CKD-EPI, welche zusätzliche Eigenschaften von Patienten berücksichtigt, wie Alter und Geschlecht. Zudem wurden im zeitlichen Verlauf mehrere Anpassungen der Formel vorgenommen, zuletzt im Jahr 2021, indem die Hautfarbe als Parameter weggelassen wurde. Die Resultate der CKD-EPI Formeln beziehen sich immer auf Menschen mit einer Körperoberfläche von 1.73 m².
+
+Der zweite Indikator für die Nierenfunktion ist die Albumin-Ausscheidung im 24 h Urin. Um das Bestimmungsverfahren zu vereinfachen wird die Albumin/Creatinin Ratio im Urin verwendet.
+
+Profile: [CH LAB Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
+
+Example: [Observation Results: Renal Insufficiency Panel](Observation-ObservationRenalInsufficiencyPanel.html)
+
+#### Use Case Blood Bank
+
+Eine Standardisierung im Bereich der Blutbank Resultate würde die Sicherheit bei der Übertragung von Laborresultaten verbessern. HL7 Europe Laboratory Report hat zwei ValueSets mit der Bindung 'preferred' einbezogen:
+
+1. [ValueSet: Results Blood Group - IPS](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-uv-ips) mit 207 Konzepten
+
+2. [ValueSet: Results Blood Group - SNOMED CT IPS Free Set ](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set) mit 13 Konzepten
+
+Dieser Leitfaden enthält 2 weitere mögliche ValueSets:
+
+1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) mit den LOINC Codes der Blutgruppen Antikörper Screening Tests
+
+2. [ValueSet: CH Lab Results Blood Group Antibody (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper
+
+Für die Standardisierung in Bereich Blutbank braucht es Mitarbeit und Zustimmung der Fachgesellschaft (Schweizerische Vereinigung für Transfusionsmedizin), die in der kurzen Zeit nicht erlangt werden konnte. Somit beschränkt sich dieser Leitfaden auf 4 mögliche Darstellungsformen als Beispiele von Blutbank Resultaten: 
+
+* [Blood Group Panel ABO Rh simple](Observation-BloodGroupSimple.html)
+* [Blood Group Panel ABO Rh Panel](Observation-BloodGroupPanel.html)
+* [Blood Group Panel ABO Rh using Component](Observation-BloodGroupPanel.html)
+* [Blood Group Panel using free text](Observation-BloodGroupFreeText.html)

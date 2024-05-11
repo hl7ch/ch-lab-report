@@ -133,7 +133,7 @@ Title: "Blood Group Rh as free text"
 Description: "Example reporting weak D-positiv"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
-* identifier.value = "1304-03740-blood-group-free-text "
+* identifier.value = "1304-03740-blood-group-free-text"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"

@@ -2,7 +2,7 @@
 
 ### Introduction
 
-The examination of blood, urine, tissue samples, cerebrospinal fluid, exhaled air and wound secretions using modern medical laboratory methods helps clinicians to diagnose, prevent and treat diseases. In order for the results to be evaluated correctly, a number of requirements must be met, including the correct reproduction of the results of clinical laboratory tests.
+Modern medical laboratory techniques aid clinicians in diagnosing, preventing, and treating diseases by analyzing blood, urine, tissue samples, cerebrospinal fluid, exhaled air, and wound secretions utilizing contemporary medical laboratory techniques. In order for the results to be evaluated correctly, a number of requirements must be met, including the correct reproduction of the results of clinical laboratory tests.
 
 <div markdown="1" class="stu-note">
 
@@ -24,14 +24,14 @@ This implementation guide specifies the exchange format for the comprehensive an
 * Patient Information: Include the patient's name, age, sex, date of birth, and any other relevant identification details.
 * Order Data: Ordering practitioner, organization, ordering date, recipients
 * Laboratory Information: Include details about the laboratory that performed the analysis, such as the name, address, and contact information.
-* Authorised Signatures: Include the signatures or electronic authentication of the laboratory personnel responsible for conducting and validating the tests.
+* Authorized Signatures: Include the signatures or electronic authentication of the laboratory personnel responsible for conducting and validating the tests.
 
 #### Laboratory Analytic-Test Data
 
 * Specimen Information: Specification of the preanalytic conditions, the type of specimen collected for analysis. This could include details like the date and time of collection.
 * Test Request Details: Information about the tests requested are provided by the requester. It includes the name of the test, mostly in form of a code, the reason for the test, and any specific instructions given.
 * Test Results: The results of each test performed must be presented. Appropriate units of measurement and reference ranges for comparison must be presented. Any values that fall outside the normal range are highlighted.
-* Reference Ranges: Normal or expected range of values for each test are included. This helps healthcare providers interpret the results in the context of the patient's health. Since these data may be dependent from the used test-kits, the identification of the test-kits (UDI) might be useful. Alternatively the likelihood ratio of the test, if available, can be used for the interpretation of the results. The likelihood ratio is not dependent on the kind of used test-kit.
+* Reference Ranges: Normal or expected range of values for each test are included. This helps healthcare providers interpret the results in the context of the patient's health. Since these data may be dependent from the used test-kits, the identification of the test-kits (UDI) might be useful. Alternatively, the likelihood ratio of the test, if available, can be used for the interpretation of the results. The likelihood ratio is not dependent on the kind of used test-kit.
 
 * Certain results are shown in the form of images, e.g. electrophoresis of haemoglobin, haematology scatter-plots, microbiological cultures, or MALDI-TOF mass spectrometry.
 
@@ -39,7 +39,7 @@ This implementation guide specifies the exchange format for the comprehensive an
 
 * Date and Time of Analysis: Provide the date and time when the laboratory tests were conducted.
 
-* Observation Profiles: We have proposed some profiles hoping they are useful for the laboratories. These profiles represent laboratory result panels, like CBC panel for automated blood cell count, which corresponds to hematogram II of the 'Analysenliste (AL)'. The use of these panels is not mandatory, they are intended as an aid and template and should be adapted to your own requirements.
+* Observation Profiles: We have proposed some profiles hoping they are useful for the laboratories. These profiles represent laboratory result panels, like CBC panel for automated blood cell count, which corresponds to haematogram II of the 'Analysenliste (AL)'. The use of these panels is not mandatory, they are intended as an aid and template and should be adapted to your own requirements.
 
 **Download**: You can download this implementation guide in [NPM format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](package.tgz).
 
@@ -61,11 +61,7 @@ This implementation guide contains and references intellectual property owned by
 
 #### Dependency Overview
 
-This overview illustrates the relevant dependencies of CH ELM to the [Swiss implementation guides](https://fhir.ch/) and the [European laboratory project](https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html).
-
-{% include img.html img="Dependency Overview.png" caption="Fig. 1: Dependency Overview" width="40%" %}
-
-#### Dependency Table
+A graphic overview of the dependencies, in particular with regard to the exchange format of reportable laboratory results in Switzerland, can be found [here](https://fhir.ch/ig/ch-elm/index.html). It also shows the dependency on the [European laboratory project(https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html)].
 
 {% include dependency-table.xhtml %}
 

@@ -12,10 +12,10 @@ status: active
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2024-03-20
+date: 2024-05-10
 version: 1.0.0-ci-build
 fhirVersion: 4.0.1
-copyrightYear: 2023+
+copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: HL7 Switzerland
@@ -41,12 +41,12 @@ pages:
   usecases.md:
     usecases-en.md:
       title: Use Cases in English
-    ##usecases-fr.md:
-    ##  title: Use Cases in French
-    ##usecases-ge.md:
-    ##  title: Use Cases in German
-    ##usecases-it.md:
-    ##  title: Use Cases in Italian
+    usecases-fr.md:
+      title: Use Cases in French
+    usecases-ge.md:
+      title: Use Cases in German
+    usecases-it.md:
+      title: Use Cases in Italian
   document.md:
     title: Document
   profiles.md:
@@ -67,8 +67,9 @@ menu:
   Home: index.html
   Use Cases: #usecases.html
     Use Cases English: usecases-en.html
-    ##Use Cases German: usecases-ge.html
-    ##Use Cases French: usecases-fr.html
+    Use Cases German: usecases-ge.html
+    Use Cases French: usecases-fr.html
+    Use Cases Italian: usecases-it.html
   Document: document.html
   Profiles: profiles.html
   Terminology: terminology.html
