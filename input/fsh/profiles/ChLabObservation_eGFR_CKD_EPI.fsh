@@ -1,6 +1,6 @@
 Profile:      ChLabObservation_eGFR_CKD_EPI_male
-Id:           ch-lab-observation-egfr-ckd-epi-male
 Parent:       ChLabObservation_eGFR
+Id:           ch-lab-observation-egfr-ckd-epi-male
 Title:        "CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for males"
 Description:  "Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated."
 
