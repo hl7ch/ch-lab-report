@@ -6,12 +6,12 @@
 
 ### Laborergebnis-Dokumente
 
-In Anlehnung an 'HL7 Europe Laboratory Report' werden hier die Laborergebnisse als FHIR-Bundle vom Typ Dokument dargestellt. Das erste Einstiegselement ist also die Composition, die die Struktur des Dokuments definiert.
+In Anlehnung an 'HL7 Europe Laboratory Report' werden hier die Laborergebnisse als FHIR-Bundle vom Typ Dokument dargestellt. Das erste entry Element ist also die Composition, die die Struktur des Dokuments definiert.
 Das Bundle enthält genau einen DiagnosticReport (Laborbericht), der auf die Composition verweist. Es verweist auch auf die Ergebnisse der Laboruntersuchungen. Diese können in Form von mehreren Beobachtungen und auch als PDF-Dokument dargestellt werden. Das Element „result“ enthält die Ergebnisse als Verweise auf Beobachtungen. 
 
 #### Anwendungsfall Verdacht auf tiefe Venenthrombose mit gängigen Laborresultaten, 1-tvt
 
-Ein Patient, Hans Guggindieluft, erscheint am 09.03.2016 in der Gruppenpraxis Olten bei Dr. med. Marc Mustermann. Er identifiziert sich mündlich über seine Stammdaten als Hans Guggindieluft, 01.01.1981. Er berichtet über unklare Beinschmerzen im linken Unterschenkel sowie gleichzeitig aufgetretene atemabhängige Schmerzen und Husten. Der Arzt führt die Anamnese und körperliche Untersuchung durch und verordnet folgende Laborparameter:
+Ein Patient, Hans Guggindieluft, erscheint in der Gruppenpraxis Olten bei Dr. med. Marc Mustermann. Er identifiziert sich mündlich über seine Stammdaten als Hans Guggindieluft, 01.01.1981. Er berichtet über unklare Beinschmerzen im linken Unterschenkel sowie gleichzeitig aufgetretene atemabhängige Schmerzen und Husten. Der Arzt führt die Anamnese und körperliche Untersuchung durch und verordnet folgende Laborparameter:
 
 * Blutbild mit automatischer Zählung, Hämatogramm
 * CRP
@@ -23,7 +23,7 @@ Dieses Labordokument gibt die Resultate von 3 Laborresultaten wieder: Dem automa
 
 #### Anwendungsfall Serum-Elektrophorese, 2-electrophoresis
 
-Bei diesem Anwendungsfall geht es um die Wiedergabe von mehreren Eiweiss-Fraktionen im Serum, die mittels Elektrophorese-Technik aufgetrennt wurden. Die einzelnen Fraktionen sind als 'hasMember Observation' mit jeweiligen Referenzbereichen aufgeführt. Das Ergebnis liegt nebst in Zahlenform auch als 2-dimensionale Grafik vor, und muss ebenfalls im Dokument wiedergegeben werden. Die Grafik wurde 'base64' encodiert und somit als grösseres Textfeld im Dokument integriert. Es ist hier zu beachten, dass die Datenmenge der Grafik nicht zu gross wird. Wir würden eine Obergrenze von 20 Mbytes empfehlen. 
+Bei diesem Anwendungsfall geht es um die Wiedergabe von mehreren Eiweiss-Fraktionen im Serum, die mittels Elektrophorese-Technik aufgetrennt wurden. Die einzelnen Fraktionen sind als 'hasMember Observation' mit jeweiligen Referenzbereichen aufgeführt. Das Ergebnis liegt nebst in Zahlenform auch als 2-dimensionale Grafik vor, und muss ebenfalls im Dokument wiedergegeben werden. Die Grafik wurde 'base64' encodiert und somit als grösseres Textfeld im Dokument integriert. Es ist hier zu beachten, dass die Datenmenge der Grafik nicht zu gross wird. Wir würden eine Obergrenze von 20 Megabytes empfehlen. 
 
 [Laboratory Result Document](Bundle-LabResultReport-2-electrophoresis.html)
 
@@ -41,7 +41,7 @@ Die Resultate von mikrobiologischen Untersuchungen unterscheiden sich von andere
 
 ### Labor Test Panels (auch Test-Batterien oder Test-Profile genannt)
 
-Unter Labor Testpanels versteht man die Aggregierung mehrerer Laboruntersuchungen, wie sie gerne in einem klinischen Kontext in Auftrag gegeben und als Resultate dargestellt werden. Grundsätzlich haben wir mit obigen Beispielen gezeigt, dass sich Laborresultate wie auch Test-Panels mit den Resourcen, wie sie hier definiert sind abbilden lassen. Trotzdem bieten Testpanels gewisse Vorteile.
+Unter Labor Testpanels versteht man die Aggregierung mehrerer Laboruntersuchungen, wie sie gerne in einem klinischen Kontext in Auftrag gegeben und als Resultate dargestellt werden. Grundsätzlich haben wir mit obigen Beispielen gezeigt, dass sich Laborresultate wie auch Test-Panels mit den Resourcen, wie sie hier definiert sind abbilden lassen. Trotzdem bieten Testpanels als Observation Profile gewisse Vorteile.
 
 * Umfassende Analyse: Sie bieten eine effiziente Möglichkeit, mehrere Analyte gleichzeitig zu bestellen, zu untersuchen und die Ergebnisse übersichtlich darzustellen. Dies ist besonders nützlich bei der Diagnose komplexer Krankheitsbilder, bei denen mehrere Parameter eine Rolle spielen.
 * Erhöhte Effizienz: Durch die Kombination mehrerer Tests in einem Panel kann die Effizienz des Labors gesteigert und die Ressourcen optimal genutzt werden. Anstatt jeden Analyten einzeln zu testen, können mehrere Parameter gleichzeitig getestet werden, was Zeit und Arbeitsaufwand reduziert.
@@ -88,5 +88,5 @@ Für die Standardisierung in Bereich Blutbank braucht es Mitarbeit und Zustimmun
 
 * [Blood Group Panel ABO Rh simple](Observation-BloodGroupSimple.html)
 * [Blood Group Panel ABO Rh Panel](Observation-BloodGroupPanel.html)
-* [Blood Group Panel ABO Rh using Component](Observation-BloodGroupPanel.html)
+* [Blood Group Panel ABO Rh mit 'Component'](Observation-BloodGroupComponent.html)
 * [Blood Group Panel using free text](Observation-BloodGroupFreeText.html)

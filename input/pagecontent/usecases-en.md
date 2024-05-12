@@ -11,7 +11,7 @@ The bundle contains exactly one DiagnosticReport (Laboratory Report), which refe
 
 #### Use case Suspected deep vein thrombosis with common laboratory results, 1-tvt
 
-A patient, Hans Guggindieluft, appears on 09.03.2016 in the Olten group practice with Dr. Marc Mustermann. He identifies himself verbally via his master data as Hans Guggindieluft, 01.01.1981. He reports vague leg pain in the left lower leg as well as simultaneous respiratory pain and coughing. The doctor performs a medical history and physical examination and prescribes the following laboratory parameters:
+A patient, Hans Guggindieluft, appears at Dr. med. Marc Mustermann, Gruppenpraxis Olten. He identifies himself verbally via his master data as Hans Guggindieluft, 01.01.1981. He reports vague leg pain in the left lower leg as well as simultaneous respiratory pain and coughing. The doctor performs a medical history and physical examination and prescribes the following laboratory parameters:
 
 * Blood count with automatic counting, hematogram
 * CRP
@@ -23,7 +23,7 @@ This laboratory document shows the results of 3 laboratory results: the automati
 
 #### Use case serum electrophoresis, 2-electrophoresis
 
-This use case involves the reproduction of several protein fractions in serum that have been separated using electrophoresis technology. The individual fractions are listed as 'hasMember Observation' with respective reference ranges. The result is available as a 2-dimensional graph as well as in numerical form and must also be reproduced in the document. The graphic was encoded in 'base64' and thus integrated into the document as a larger text field. It is important to ensure that the data volume of the graphic is not too large. We would recommend an upper limit of 20 Mbytes. 
+This use case involves the reproduction of several protein fractions in serum that have been separated using electrophoresis technology. The individual fractions are listed as 'hasMember Observation' with respective reference ranges. The result is available as a 2-dimensional graph as well as in numerical form and must also be reproduced in the document. The graphic was encoded in 'base64' and thus integrated into the document as a larger text field. It is important to ensure that the data volume of the graphic is not too large. We would recommend an upper limit of 20 Megabytes. 
 
 [Laboratory Result Document](Bundle-LabResultReport-2-electrophoresis.html)
 
@@ -41,7 +41,7 @@ The results of microbiological tests differ from other laboratory results in tha
 
 ### Laboratory Test Panels (also called test batteries)
 
-Laboratory test panels are the aggregation of several laboratory tests, as they are often commissioned in a clinical context and presented as results. In principle, we have shown with the above examples that laboratory results as well as test panels can be represented with the resources as defined here. Nevertheless, test panels offer certain advantages.
+Laboratory test panels are the aggregation of several laboratory tests, as they are often commissioned in a clinical context and presented as results. In principle, we have shown with the above examples that laboratory results as well as test panels can be represented with the resources as defined here. Nevertheless, test panels as observation profiles offer certain advantages.
 
 * Comprehensive analysis: They provide an efficient way to order and examine multiple analytes simultaneously and display the results clearly. This is particularly useful in the diagnosis of complex clinical pictures where several parameters play a role.
 * Increased efficiency: By combining multiple tests in one panel, laboratory efficiency can be increased and resources optimally utilized. Instead of testing each analyte individually, multiple parameters can be tested simultaneously, reducing time and labor.
@@ -88,5 +88,5 @@ Standardization in the blood bank sector requires the cooperation and approval o
 
 * [Blood Group Panel ABO Rh simple](Observation-BloodGroupSimple.html)
 * [Blood Group Panel ABO Rh Panel](Observation-BloodGroupPanel.html)
-* [Blood Group Panel ABO Rh using Component](Observation-BloodGroupPanel.html)
+* [Blood Group Panel ABO Rh using 'Component'](Observation-BloodGroupComponent.html)
 * [Blood Group Panel using free text](Observation-BloodGroupFreeText.html)
