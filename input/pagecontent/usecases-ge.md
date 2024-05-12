@@ -4,7 +4,7 @@
 
 {% include img.html img="Resource Overview.svg" caption="Fig. 1: Resourcen Übersicht" width="80%" %}
 
-### Laborergebnis-Dokumente
+### Laborergebnis Dokumente
 
 In Anlehnung an 'HL7 Europe Laboratory Report' werden hier die Laborergebnisse als FHIR-Bundle vom Typ Dokument dargestellt. Das erste entry Element ist also die Composition, die die Struktur des Dokuments definiert.
 Das Bundle enthält genau einen DiagnosticReport (Laborbericht), der auf die Composition verweist. Es verweist auch auf die Ergebnisse der Laboruntersuchungen. Diese können in Form von mehreren Beobachtungen und auch als PDF-Dokument dargestellt werden. Das Element „result“ enthält die Ergebnisse als Verweise auf Beobachtungen. 
@@ -19,25 +19,25 @@ Ein Patient, Hans Guggindieluft, erscheint in der Gruppenpraxis Olten bei Dr. me
  
 Dieses Labordokument gibt die Resultate von 3 Laborresultaten wieder: Dem automatischen Zähltest für Blutzellen, dem C-reaktiven Protein im Serum, sowie dem Fibrin D-Dimer im Blut, somit drei sehr gängige Labortest. Der Zähltest für Blutzellen referenziert dann wieder auf die einzelnen Resultate der Zählungen und Messungen, die als Observations vorliegen, mithin sehr häufige Laboruntersuchungen.
 
-[Laboratory Result Document](Bundle-LabResultReport-1-tvt.html)
+[Laborergebnis Dokument](Bundle-LabResultReport-1-tvt.html)
 
 #### Anwendungsfall Serum-Elektrophorese, 2-electrophoresis
 
 Bei diesem Anwendungsfall geht es um die Wiedergabe von mehreren Eiweiss-Fraktionen im Serum, die mittels Elektrophorese-Technik aufgetrennt wurden. Die einzelnen Fraktionen sind als 'hasMember Observation' mit jeweiligen Referenzbereichen aufgeführt. Das Ergebnis liegt nebst in Zahlenform auch als 2-dimensionale Grafik vor, und muss ebenfalls im Dokument wiedergegeben werden. Die Grafik wurde 'base64' encodiert und somit als grösseres Textfeld im Dokument integriert. Es ist hier zu beachten, dass die Datenmenge der Grafik nicht zu gross wird. Wir würden eine Obergrenze von 20 Megabytes empfehlen. 
 
-[Laboratory Result Document](Bundle-LabResultReport-2-electrophoresis.html)
+[Laborergebnis Dokument](Bundle-LabResultReport-2-electrophoresis.html)
 
 #### Anwendungsfall Atemtest, 3-breath-test
 
 Der Atemtest ist ein Provokationstest, um Intoleranzen gegenüber gewissen Zuckerarten (Lactose, Fructose) zu testen. Es wird die Konzentration von Wasserstoff und Methan in der Ausatmungsluft in halbstündigen Intervallen gemessen, nachdem eine bestimmte Menge der zu testenden Zuckerart verabreicht wurde. Als Ergebnis liegt eine 2 dimensionale Grafik mit den Messungen vor, die ebenfalls nebst den Zahlenergebnissen festgehalten werden muss. Auch hier ist die 'base64' Encodierung zur Anwendung gekommen.
 
-[Laboratory Result Document](Bundle-LabResultReport-3-breath-test.html)
+[Laborergebnis Dokument](Bundle-LabResultReport-3-breath-test.html)
 
 #### Anwendungsfall Sepsis, 4-sepsis
 
 Die Resultate von mikrobiologischen Untersuchungen unterscheiden sich von anderen Laborresulteten, indem nicht nur numerische Rückgabewerte vorliegen, sondern Bezeichner von Krankheitserregern, semiquantitatives Wachstum in Kulturen oder Attribute von Resistenztests. Hier wird nebst den LOINC Codierungen oft die SNOMET CT Terminologie verwendet.
 
-[Laboratory Result Document](Bundle-LabResultReport-4-sepsis.html)
+[Laborergebnis Dokument](Bundle-LabResultReport-4-sepsis.html)
 
 ### Labor Test Panels (auch Test-Batterien oder Test-Profile genannt)
 

@@ -19,25 +19,25 @@ Un patient, Hans Guggindieluft, se présente au cabinet de groupe d'Olten chez l
  
 Ce document de laboratoire donne les résultats de 3 résultats de laboratoire : le test de comptage automatique des cellules sanguines, la protéine C-réactive dans le sérum, ainsi que les D-dimères de fibrine dans le sang, donc trois tests de laboratoire très courants. Le test de comptage des cellules sanguines renvoie à nouveau aux résultats individuels des comptages et des mesures, qui sont disponibles sous forme d'observations, c'est-à-dire des examens de laboratoire très fréquents.
 
-[Laboratory Result Document](Bundle-LabResultReport-1-tvt.html)
+[Résultat du laboratoire Document](Bundle-LabResultReport-1-tvt.html)
 
 #### Cas d'application électrophorèse du sérum, 2-electrophoresis
 
 Ce cas d'application concerne la reproduction de plusieurs fractions de protéines dans le sérum qui ont été séparées par la technique de l'électrophorèse. Les différentes fractions sont présentées comme 'hasMember Observation' avec leurs plages de référence respectives. Le résultat est disponible non seulement sous forme de chiffres, mais aussi sous forme de graphique bidimensionnel, qui doit également être reproduit dans le document. Le graphique a été encodé en 'base64' et ainsi intégré dans le document sous la forme d'un champ de texte plus grand. Il faut veiller ici à ce que la quantité de données du graphique ne soit pas trop importante. Nous recommandons une limite supérieure de 20 Moctets. 
 
-[Laboratory Result Document](Bundle-LabResultReport-2-electrophoresis.html)
+[Résultat du laboratoire Document](Bundle-LabResultReport-2-electrophoresis.html)
 
 #### Cas d'application Test respiratoire, 3-breath-test
 
 Le test respiratoire est un test de provocation permettant de tester les intolérances à certains sucres (lactose, fructose). La concentration d'hydrogène et de méthane dans l'air expiré est mesurée à intervalles d'une demi-heure après l'administration d'une certaine quantité du type de sucre à tester. Le résultat est un graphique à deux dimensions avec les mesures, qui doit également être enregistré avec les résultats chiffrés. Ici aussi, l'encodage 'base64' a été utilisé.
 
-[Laboratory Result Document](Bundle-LabResultReport-3-breath-test.html)
+[Résultat du laboratoire Document](Bundle-LabResultReport-3-breath-test.html)
 
 #### Cas d'application Sepsis, 4-sepsis
 
 Les résultats des analyses microbiologiques se distinguent des autres résultats de laboratoire par le fait qu'ils ne contiennent pas seulement des valeurs numériques de retour, mais aussi des identificateurs d'agents pathogènes, une croissance semi-quantitative dans les cultures ou des attributs de tests de résistance. Dans ce cas, la terminologie SNOMET CT est souvent utilisée en plus des codages LOINC.
 
-[Laboratory Result Document](Bundle-LabResultReport-4-sepsis.html)
+[Résultat du laboratoire Document](Bundle-LabResultReport-4-sepsis.html)
 
 ### Panneaux d'essai de laboratoire (également appelés batteries d'essai)
 
