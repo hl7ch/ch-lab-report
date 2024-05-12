@@ -532,7 +532,7 @@ Usage: #inline
 * type = $sct#119297000 "Blood specimen"
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * collection.collector = Reference(urn:uuid:e23d6fa1-88bc-497c-a4df-eb3fa60eaa37) "Dr. med. Marc Mustermann"
-* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.collectedDateTime = "2024-04-16T06:40:17Z"
 * collection.bodySite = $sct#721029009 "Structure of superficial vein of left upper limb (body structure)"
 * container.type = $sct#706053007 "General specimen container"
 * note.text = "Specimen is grossly lipemic"
@@ -551,9 +551,9 @@ Usage: #inline
 * receivedTime = "2020-08-16T16:40:17Z"
 // * request = Reference(Lab) Why the specimen was collected
 * collection.collector = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
-* collection.collectedDateTime = "2015-08-16T06:40:17Z"
-* processing.timePeriod.start = "2015-08-16T06:40:17Z" // usually same time as collectedDateTime
-* processing.timePeriod.end = "2015-08-17T06:40:17Z" // when processing should be terminated
+* collection.collectedDateTime = "2024-04-16T06:40:17Z"
+* processing.timePeriod.start = "2024-04-16T06:40:17Z" // usually same time as collectedDateTime
+* processing.timePeriod.end = "2024-04-17T06:40:17Z" // when processing should be terminated
 * container.identifier.value = "4e88a-bc987-dd888-00001-bcoag"
 * container.description = "S-Monovette grün"
 * container.type = $sct#702296009 "Non-evacuated blood collection tube, sodium citrate (physical object)"
@@ -572,7 +572,7 @@ Usage: #inline
 * type = $sct#119364003 "Serum specimen"
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * collection.collector = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
-* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.collectedDateTime = "2024-04-16T06:40:17Z"
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
 * collection.fastingStatusCodeableConcept = $v2-0916#F "Patient was fasting prior to the procedure."
 * container.type = $sct#706053007 "General specimen container"

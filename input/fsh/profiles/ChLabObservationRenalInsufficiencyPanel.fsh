@@ -32,7 +32,7 @@ Description: """This panel collects the lab results in relation to renal insufie
 * hasMember[CKD-EPI] only Reference(ChLabObservation_eGFRcr_CKD_EPI_2021 or ChLabObservation_eGFRcr_cys_CKD_EPI_2021)
 // * hasMember[CKD-EPI] only Reference(ChLabObservation_eGFR_CKD_EPI_male or ChLabObservation_eGFR_CKD_EPI_female)
 * hasMember[CKD-EPI] ^label = "Label"
-* hasMember[CKD-EPI] ^short = "eGFR crea, CKD-EPI 2021"
+* hasMember[CKD-EPI] ^short = "eGFR crea, CKD-EPI 2021 or eGFR crea cystatin, CKD-EPI 2021"
 
 * hasMember[uACR] only Reference(ChLabObservation_uACR)
 * hasMember[uACR] ^label = "Label"

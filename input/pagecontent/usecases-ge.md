@@ -52,7 +52,7 @@ Unter Labor Testpanels versteht man die Aggregierung mehrerer Laboruntersuchunge
 In unseren Gesundheitssystemen herrscht ein hoher Wettbewerbsdruck zwischen Laboren, und die Fähigkeit, differenzierte Dienstleistungen anzubieten, kann ein wichtiger Wettbewerbsvorteil sein. Ein obligates standardisiertes Test-Panel kann die Fähigkeit eines Labors beeinträchtigen, sich durch spezialisierte Tests oder massgeschneiderte Dienstleistungen von der Konkurrenz abzuheben. Die hier vorgeschlagenen Testpanels sind deshalb nicht zwingender Standard, sondern sollen optional eingesetzt werden können, wo dies Sinn macht. Das automated CBC Panel und auch das Niereninsuffizienzpanel [Screeningtest](https://www.swissnephrology.ch/wp/wp-content/uploads/2023/01/161121_SGN_Pocketguide_CKD_Web_A4_e_WZ.pdf) sind als Beispiele für Observation Profiles gedacht.
 Die hier aufgeführten Testpanels dienen auch als Beispiele, wie Labore eigene Testpanels als Observation Profile implementieren können.
 
-#### Use Case Count of Blood Cells (automated CBC)
+#### Use Case Kleines Blutbild Automatisierte Zählung
 
 Das Hämatogramm II der [Analysenliste](https://www.bag.admin.ch/dam/bag/de/dokumente/kuv-leistungen/leistungen-und-tarife/Analysenliste/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx.download.xlsx/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx) ist die Vorlage für dieses Testpanel. 
 
@@ -60,7 +60,7 @@ Profile: [CH LAB Observation Results: Count of Blood Cells (automated CBC)](Stru
 
 Example: [Observation Results: Count of Blood Cells (automated CBC)](Observation-ExampleObservationCBCPanel.html)
 
-#### Use Case Renal Insufficiency
+#### Use Case Niereninsuffizienz
 
 Chronische Erkrankungen wie Diabetes oder Hypertonie gehen manchmal mit chronischen Nierenkrankheiten einher. Deshalb brauchen sie eine Überwachung der Nierenfunktion. Als Parameter für die Nierenfunktion haben sich die Glomerulumfiltrationsrate (GFR) und die Albumin-Ausscheidung im 24h Urin bewährt. Die GFR lässt sich nur sehr aufwendig bestimmen. Deshalb wurden Formeln verwendet, welche Annäherungen mit Hilfe von Messung von endogenen Markern, Creatinin oder Cystatin-C zulassen. Die häufig verwendete Formel ist CKD-EPI, welche zusätzliche Eigenschaften von Patienten berücksichtigt, wie Alter und Geschlecht. Zudem wurden im zeitlichen Verlauf mehrere Anpassungen der Formel vorgenommen, zuletzt im Jahr 2021, indem die Hautfarbe als Parameter weggelassen wurde. Die Resultate der CKD-EPI Formeln beziehen sich immer auf Menschen mit einer Körperoberfläche von 1.73 m².
 
@@ -80,11 +80,11 @@ Eine Standardisierung im Bereich der Blutbank Resultate würde die Sicherheit be
 
 Dieser Leitfaden enthält 2 weitere mögliche ValueSets:
 
-1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) mit den LOINC Codes der Blutgruppen Antikörper Screening Tests
+1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) mit den SNOMED CT Codes der Blutgruppen Antikörper Screening Tests
 
 2. [ValueSet: CH Lab Results Blood Group Antibody (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper
 
-Für die Standardisierung in Bereich Blutbank braucht es Mitarbeit und Zustimmung der Fachgesellschaft (Schweizerische Vereinigung für Transfusionsmedizin), die in der kurzen Zeit nicht erlangt werden konnte. Somit beschränkt sich dieser Leitfaden auf 4 mögliche Darstellungsformen als Beispiele von Blutbank Resultaten: 
+Für die Standardisierung in Bereich Blutbank braucht es Mitarbeit und Zustimmung der Fachgesellschaft (Schweizerische Vereinigung für Transfusionsmedizin), die in der kurzen Zeit nicht erlangt werden konnte. Somit beschränkt sich dieser Leitfaden auf 4 mögliche Darstellungsformen als Beispiele von Blutbank Resultate: 
 
 * [Blood Group Panel ABO Rh simple](Observation-BloodGroupSimple.html)
 * [Blood Group Panel ABO Rh Panel](Observation-BloodGroupPanel.html)

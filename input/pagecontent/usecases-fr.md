@@ -62,7 +62,7 @@ Exemple : [Résultats de l'observation : Numération des cellules sanguines (NFS
 
 #### Cas d'utilisation Insuffisance rénale
 
-Les maladies chroniques telles que le diabète ou l'hypertension s'accompagnent parfois d'une maladie rénale chronique. Elles nécessitent donc un suivi de la fonction rénale. Le débit de filtration glomérulaire (DFG) et l'excrétion d'albumine dans les urines de 24 heures se sont avérés être des paramètres utiles pour la fonction rénale. Le TFG est très difficile à déterminer. C'est pourquoi des formules ont été utilisées, qui permettent des approximations à l'aide de mesures de marqueurs endogènes, la créatinine ou la cystatine-C. La formule la plus fréquemment utilisée est la CKD-EPI, qui prend en compte des caractéristiques supplémentaires du patient telles que l'âge et le sexe. En outre, plusieurs ajustements ont été apportés à la formule au fil du temps, le plus récent datant de 2021, lorsque la couleur de la peau a été supprimée en tant que paramètre. Les résultats des formules CKD-EPI se rapportent toujours à des personnes dont la surface corporelle est de 1,73 m².
+Les maladies chroniques telles que le diabète ou l'hypertension s'accompagnent parfois d'une maladie rénale chronique. Elles nécessitent donc un suivi de la fonction rénale. Le débit de filtration glomérulaire (DFG) et l'excrétion d'albumine dans les urines de 24 heures se sont avérés être des paramètres utiles pour la fonction rénale. Le DFG est assez difficile à déterminer. C'est pourquoi des formules ont été utilisées, qui permettent des approximations à l'aide de mesures de marqueurs endogènes, la créatinine ou la cystatine-C. La formule la plus fréquemment utilisée est la CKD-EPI, qui prend en compte des caractéristiques supplémentaires du patient telles que l'âge et le sexe. En outre, plusieurs ajustements ont été apportés à la formule au fil du temps, le plus récent datant de 2021, lorsque la couleur de la peau a été supprimée en tant que paramètre. Les résultats des formules CKD-EPI se rapportent toujours à des personnes dont la surface corporelle est de 1,73 m².
 
 Le deuxième indicateur de la fonction rénale est l'excrétion d'albumine dans les urines de 24 heures. Pour simplifier la procédure de détermination, on utilise le rapport albumine/créatinine dans l'urine.
 
@@ -80,7 +80,7 @@ La normalisation dans le domaine des résultats des banques de sang améliorerai
 
 Ce guide contient 2 autres ValueSets possibles :
 
-1. [ValueSet : ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) avec les codes LOINC des tests de dépistage des anticorps de groupe sanguin.
+1. [ValueSet : ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) avec les codes SNOMED CT des tests de dépistage des anticorps de groupe sanguin.
 
 2. [ValueSet : CH Lab Results Blood Group Antibody (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-vs.html) avec les codes SNOMED CT des anticorps de groupe sanguin.
 

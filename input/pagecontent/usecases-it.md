@@ -63,7 +63,7 @@ Esempio: [Risultati dell'osservazione: conteggio delle cellule del sangue (emocr
 
 #### Caso d'uso Insufficienza renale
 
-Malattie croniche come il diabete o l'ipertensione sono talvolta accompagnate da una malattia renale cronica. Richiedono quindi il monitoraggio della funzione renale. La velocità di filtrazione glomerulare (GFR) e l'escrezione di albumina nelle urine delle 24 ore si sono rivelati parametri utili per la funzione renale. Il GFR è molto difficile da determinare. Per questo motivo, sono state utilizzate formule che consentono approssimazioni con l'aiuto di misurazioni di marcatori endogeni, creatinina o cistatina-C. La formula più utilizzata è la CKD-EPI, che tiene conto di altre caratteristiche del paziente, come l'età e il sesso. Inoltre, nel corso del tempo sono stati apportati diversi aggiustamenti alla formula, l'ultimo dei quali nel 2021, quando il colore della pelle è stato omesso come parametro. I risultati delle formule CKD-EPI si riferiscono sempre a persone con una superficie corporea di 1,73 m².
+Malattie croniche come il diabete o l'ipertensione sono talvolta accompagnate da una malattia renale cronica. Richiedono quindi il monitoraggio della funzione renale. La velocità di filtrazione glomerulare (GFR) e l'escrezione di albumina nelle urine delle 24 ore si sono rivelati parametri utili per la funzione renale. Il GFR è abbastanza difficile da determinare. Per questo motivo, sono state utilizzate formule che consentono approssimazioni con l'aiuto di misurazioni di marcatori endogeni, creatinina o cistatina-C. La formula più utilizzata è la CKD-EPI, che tiene conto di altre caratteristiche del paziente, come l'età e il sesso. Inoltre, nel corso del tempo sono stati apportati diversi aggiustamenti alla formula, l'ultimo dei quali nel 2021, quando il colore della pelle è stato omesso come parametro. I risultati delle formule CKD-EPI si riferiscono sempre a persone con una superficie corporea di 1,73 m².
 
 Il secondo indicatore della funzione renale è l'escrezione di albumina nelle urine delle 24 ore. Per semplificare la procedura di determinazione, si utilizza il rapporto albumina/creatinina nelle urine.
 
@@ -81,7 +81,7 @@ La standardizzazione nell'area dei risultati delle banche del sangue migliorereb
 
 Questa guida contiene altri 2 possibili ValueSet:
 
-1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) con i codici LOINC dei test di screening degli anticorpi del gruppo sanguigno.
+1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) con i codici SNOMED CT dei test di screening degli anticorpi del gruppo sanguigno.
 
 2. [ValueSet: CH Lab Results Blood Group Antibody (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-vs.html) con i codici SNOMED CT degli anticorpi del gruppo sanguigno.
 

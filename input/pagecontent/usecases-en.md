@@ -62,7 +62,7 @@ Example: [Observation Results: Count of Blood Cells (automated CBC)](Observation
 
 #### Use Case Renal Insufficiency
 
-Chronic diseases such as diabetes or hypertension are sometimes accompanied by chronic kidney disease. They therefore require monitoring of kidney function. The glomerular filtration rate (GFR) and albumin excretion in 24-hour urine have proven to be useful parameters for kidney function. The GFR is very difficult to determine. Therefore, formulas have been used which allow approximations with the help of measurements of endogenous markers, creatinine or cystatin-C. The most frequently used formula is CKD-EPI, which takes into account additional patient characteristics such as age and gender. In addition, several adjustments have been made to the formula over time, most recently in 2021, when skin color was omitted as a parameter. The results of the CKD-EPI formulas always refer to people with a body surface area of 1.73 m².
+Chronic diseases such as diabetes or hypertension are sometimes accompanied by chronic kidney disease. They therefore require monitoring of kidney function. The glomerular filtration rate (GFR) and albumin excretion in 24-hour urine have proven to be useful parameters for kidney function. The GFR is quite difficult to determine. Therefore, formulas have been used which allow approximations with the help of measurements of endogenous markers, creatinine or cystatin-C. The most frequently used formula is CKD-EPI, which takes into account additional patient characteristics such as age and gender. In addition, several adjustments have been made to the formula over time, most recently in 2021, when skin color was omitted as a parameter. The results of the CKD-EPI formulas always refer to people with a body surface area of 1.73 m².
 
 The second indicator of kidney function is albumin excretion in 24 h urine. To simplify the determination procedure, the albumin/creatinine ratio in urine is used.
 
@@ -80,7 +80,7 @@ Standardization in the area of blood bank results would improve safety in the tr
 
 This guide contains 2 further possible ValueSets:
 
-1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) with the LOINC codes of the blood group antibody screening tests.
+1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) with the SNOMED CT codes of the blood group antibody screening tests.
 
 2. [ValueSet: CH Lab Results Blood Group Antibody (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-vs.html) with the SNOMED CT codes of the blood group antibodies
 
