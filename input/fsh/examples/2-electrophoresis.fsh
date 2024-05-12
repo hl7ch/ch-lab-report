@@ -647,7 +647,7 @@ Usage: #inline
 * type = $sct#119364003 "Serum specimen"
 * subject = Reference(urn:uuid:d4b28882-e138-4dcd-8315-323768917d23) "Garfield Testpatient"
 * collection.collector = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048)
-* collection.collectedDateTime = "2015-08-16T06:40:17Z"
+* collection.collectedDateTime = "2024-04-16T06:40:17Z"
 * collection.bodySite = $sct#49852007 "Structure of median cubital vein (body structure)"
 * collection.fastingStatusCodeableConcept = $v2-0916#F "Patient was fasting prior to the procedure."
 * container.type = $sct#706053007 "General specimen container"
