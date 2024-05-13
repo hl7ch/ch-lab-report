@@ -146,7 +146,7 @@ Usage: #example
 
 * method = $sct#258075003 "Serotyping (qualifier value)"
 // * method = $sct# 726528006 "Genotyping (qualifier value)"
-* valueCodeableConcept.text = "Der Patient besitzt ein sog. weak D, hat damit eine verminderte Konzentration des D-Proteins auf der erythrocytären Oberfläche"
+* valueCodeableConcept.text = "AB, weak D"
 
 /*
 * valueCodeableConcept.text = """<table>
