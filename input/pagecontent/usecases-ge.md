@@ -89,4 +89,4 @@ Für die Standardisierung in Bereich Blutbank braucht es Mitarbeit und Zustimmun
 * [Blood Group Panel ABO Rh simple](Observation-BloodGroupSimple.html)
 * [Blood Group Panel ABO Rh Panel](Observation-BloodGroupPanel.html)
 * [Blood Group Panel ABO Rh mit 'Component'](Observation-BloodGroupComponent.html)
-* [Blood Group Panel using free text](Observation-BloodGroupFreeText.html)
+

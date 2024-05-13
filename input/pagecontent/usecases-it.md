@@ -90,4 +90,4 @@ La standardizzazione nel settore delle banche del sangue richiede la collaborazi
 * [Pannello gruppi sanguigni ABO Rh semplice](Observation-BloodGroupSimple.html)
 * [Pannello gruppi sanguigni ABO Rh](Observation-BloodGroupPanel.html)
 * [Pannello gruppi sanguigni ABO Rh usando 'Component'](Observation-BloodGroupComponent.html)
-* [Pannello gruppi sanguigni usando il testo libero](Observation-BloodGroupFreeText.html)
+
