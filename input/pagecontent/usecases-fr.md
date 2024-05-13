@@ -89,4 +89,3 @@ La standardisation dans le secteur des banques de sang nécessite la coopératio
 * [Groupe sanguin ABO Rh simple](Observation-BloodGroupSimple.html)
 * [Groupe sanguin ABO Rh Panel](Observation-BloodGroupPanel.html)
 * [Groupe sanguin ABO Rh utilisant 'Component'](Observation-BloodGroupComponent.html)
-* [Groupe sanguin en texte libre](Observation-BloodGroupFreeText.html)

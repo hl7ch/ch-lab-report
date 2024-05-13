@@ -26,8 +26,7 @@ All significant changes to this FHIR implementation guide will be documented on 
   * Profile CH LAB Observation Blood Group: Change ValueSet to [Results Blood Group - IPS](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-uv-ips), change binding to 'preferred'
   * Example reporting Blood Group and RhD Result combined and coded with SNOMED CT: [BloodGroupRhSimple](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/Observation-BloodGroupSimple.html)
   * Example reporting Blood Group and RhD Result separately and coded with SNOMED CT: [BloodGroupRh](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/Observation-BloodGroup.html)
-  * Example reporting the BloodGroup, Rhd and Coombs-Test Result as HTML Table: [BloodGroupFreeText](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/Observation-BloodGroupFreeText.html)
-* [#71](https://github.com/hl7ch/ch-lab-report/issues/71) Example for renal Insufficiency:
+  * [#71](https://github.com/hl7ch/ch-lab-report/issues/71) Example for renal Insufficiency:
   * [CH LAB Observation Results: Renal Insufficiency Panel](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
 * [#76](https://github.com/hl7ch/ch-lab-report/issues/76) eGFR CKD-EPI 2009 or 2021 formula:
   *  [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for females](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-egfr-female.html)
@@ -51,7 +50,6 @@ All significant changes to this FHIR implementation guide will be documented on 
   * added examples Bloodgroup
     * [Blood Group ABO Rh Panel](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupPanel.html)
     * [Blood Group Panel with Component ABO and Component Rh](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupComponent.html)
-    * [Blood Group Rh as free text](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupFreeText.html)
     * [Blood Group Rh combined](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupSimple.html)
 
 
