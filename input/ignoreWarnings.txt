@@ -27,4 +27,3 @@ The repeating element has a pattern. The pattern will apply to all the repeats (
 
 # StructureDefinition​.snapshot​.element[38]​.pattern​.ofType(CodeableConcept) INFO
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/observation-category|1.0.0
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/referencerange-meaning|1.0.0
