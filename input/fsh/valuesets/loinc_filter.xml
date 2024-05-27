@@ -1,0 +1,26 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      [some html that identifies that this value set 
+      includes all LOINC codes subsumed by the identified 
+      Multi-Axial Heirarchy Part Code]
+    </div>
+  </text>
+  <identifier value="http://loinc.org/vs/LP67167-4"/>
+  <version value="2.77"/>
+  <name value="LOINC Value Set from Multi-Axial Heirarchy code [partcode]"/>
+  <description value="All LOINC codes for LP67167-4"/>
+  <status value="active"/>
+  <date value="[optional date of LOINC release]"/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="ancestor"/>
+        <op value="="/>
+        <value value="LP67167-4"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>
