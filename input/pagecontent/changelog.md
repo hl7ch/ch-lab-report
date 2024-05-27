@@ -52,6 +52,8 @@ All significant changes to this FHIR implementation guide will be documented on 
     * [Blood Group Panel with Component ABO and Component Rh](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupComponent.html)
     * [Blood Group Rh combined](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupSimple.html)
 
-
-
-
+[#92 Profile: ChLabObservationBloodGroup](https://github.com/hl7ch/ch-lab-report/issues/92)
+  * Add Antibody ValueSets:
+    * ValueSet: ChLabBloodGroupAntibody
+    * ValueSet: ChLabBloodGroupAntibodyScreen
+    * ValueSet: ChLabBloodGroupAntibodyScreenResult
