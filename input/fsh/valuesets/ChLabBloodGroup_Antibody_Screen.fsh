@@ -1,5 +1,5 @@
 ValueSet: ChLabBloodGroupAntibodyScreen
-Id: ch-lab-bloodgroup-antibody-screen
+Id: ch-lab-bloodgroup-antibody-screen-vs
 Title: "CH LAB BloodGroup Antibody Screen Tests (SNOMED CT coded procedures)"
 Description: "Screening procedures to detect antibodies of ABO and Rho(D) systems"
 * ^version = "0.1.0"
@@ -17,7 +17,7 @@ Description: "Screening procedures to detect antibodies of ABO and Rho(D) system
 
 // ValueSet based on local LOINC ancestor
 ValueSet: ChLabBloodGroupAntibodyScreenResult
-Id: ch-lab-bloodgroup-antibody-screen-result
+Id: ch-lab-bloodgroup-antibody-screen-result-vs
 Title: "CH LAB BloodGroup Antibody Screen Tests Result (LOINC codes)"
 Description: "Detects atypical IgG antibodies prior to transfusion or during pregnancy. The screening test is designed specifically to detect IgG antibodies and some IgM antibodies (non ABO) may also be detected. Antibodies detected by the antibody screen should then be identified, and a titer performed if the antibody identified is considered to be clinically significant during pregnancy."
 * ^version = "0.1.0"
