@@ -1,7 +1,7 @@
-ValueSet: ChLabBloodGroupAntibodyScreen
-Id: ch-lab-bloodgroup-antibody-screen-vs
-Title: "CH LAB BloodGroup Antibody Screen Tests (SNOMED CT coded procedures)"
-Description: "Screening procedures to detect antibodies of ABO and Rho(D) systems"
+ValueSet: ChLabBloodGroupImmunoHematology
+Id: ch-lab-bloodgroup-immuno-hematology-vs
+Title: "CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures)"
+Description: "Laboratory test related to immunohematology"
 * ^version = "0.1.0"
 * ^status = #active
 * ^experimental = true
@@ -13,7 +13,7 @@ Description: "Screening procedures to detect antibodies of ABO and Rho(D) system
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 // look at: https://hl7.org/fhir/STU3/valueset-filter-operator.html 
 //  de-DE	German (Germany)	Blutgruppen-Antikörpersuchtest:Titer:Zeitpunkt:Serum oder Plasma:Semiquantitativ:
-* include codes from system $sct where concept descendent-of #252315008 "Blood group antibody screening (procedure)"
+* include codes from system $sct where concept descendent-of #127795003 "Laboratory test related to immunohematology (procedure)"
 
 // ValueSet based on local LOINC ancestor
 ValueSet: ChLabBloodGroupAntibodyScreenResult
