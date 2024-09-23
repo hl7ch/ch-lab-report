@@ -1,5 +1,19 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
+### STU 1 Sequence - v1.0.0
+
+#### Added
+
+#### Changed / Updated
+
+
+#### Fixed
+
+
+#### Issues resolved without amendment (in IG)
+
+* [#97](https://github.com/hl7ch/ch-lab-report/issues/97): Typo generated in narrative (tooling side)
+
 ### STU 1 Sequence - v1.0.0-ballot (2024-05-17)
 
 * [#48](https://github.com/hl7ch/ch-lab-report/issues/48): Exchange the conformsTo rules with the imposeProfile extension
