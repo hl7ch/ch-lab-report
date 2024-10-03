@@ -71,7 +71,7 @@ Profilo: [CH LAB Observation Results: Renal Insufficiency Panel](StructureDefini
 
 Esempio: [Risultati dell'osservazione: pannello di insufficienza renale](Observation-ObservationRenalInsufficiencyPanel.html)
 
-#### Caso d'uso Banca del sangue
+#### Caso d'uso Banca del sangue -> Todo
 
 La standardizzazione nell'area dei risultati delle banche del sangue migliorerebbe la sicurezza nella trasmissione dei risultati di laboratorio. HL7 Europe Laboratory Report ha incluso due ValueSet con il binding 'preferred':
 
@@ -79,13 +79,7 @@ La standardizzazione nell'area dei risultati delle banche del sangue migliorereb
 
 2. [ValueSet: Results Blood Group - SNOMED CT IPS Free Set ](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set) con 13 concetti.
 
-Questa guida contiene altri 3 possibili ValueSet:
-
-1. [ValueSet: CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) con i codici SNOMED CT dei test di screening degli anticorpi del gruppo sanguigno.
-
-2. [ValueSet: CH LAB BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-result-vs.html) con i codici LOINC dei resultati dei test di screening degli anticorpi del gruppo sanguigno.
-
-3. [ValueSet: CH LAB BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) con i codici SNOMED CT degli anticorpi del gruppo sanguigno.
+Questa guida contiene esempio
 
 La standardizzazione nel settore delle banche del sangue richiede la collaborazione e l'approvazione dell'associazione professionale (Schweizerische Vereinigung für Transfusionsmedizin), che non è stato possibile ottenere nel breve tempo a disposizione. La presente linea guida si limita pertanto a 4 possibili forme di presentazione come esempi di risultati delle banche del sangue: 
 

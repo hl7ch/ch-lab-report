@@ -76,3 +76,30 @@ RuleSet: ObservationResultsValueEu
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a microorganisms value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+
+// // added VS for Bloodbank
+// * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
+// * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
+// * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
+// * valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://fhir.ch/ig/ch-lab-report/ValueSet/ch-lab-bloodgroup-antibody-vs"
+// * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
+// * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a blood group findings value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
+// * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+// 
+// // added VS for Bloodbank
+// * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
+// * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
+// * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
+// * valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://fhir.ch/ig/ch-lab-report/ValueSet/ch-lab-bloodgroup-immuno-hematology-vs"
+// * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
+// * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a blood group findings value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
+// * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+// 
+// // added VS for Bloodbank: Bloodgroup 
+// * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
+// * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
+// * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
+// * valueCodeableConcept ^binding.extension[=].extension[=].valueCanonical = "http://fhir.ch/ig/ch-lab-report/ValueSet/ch-lab-bloodgroup-antibody-screen-result-vs"
+// * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
+// * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a blood group findings value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
+// * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
