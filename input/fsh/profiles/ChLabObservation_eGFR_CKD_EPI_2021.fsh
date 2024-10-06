@@ -2,15 +2,7 @@ Profile: ChLabObservation_eGFRcr_CKD_EPI_2021
 Parent: ChLabObservation_eGFR
 Id: ch-lab-observation-egfr-cr-ckd-epi-2021
 Title: "CH LAB Observation Results: eGFRcr - CKD-EPI(AS) Creatinin based Profile"
-Description: """Glomerular filtration rate (GFR) is considered the best overall index of kidney function;
-however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate
-(eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation
-incorporating the patient's age, gender, and measured serum/plasma/blood creatinine only (eGFRcr)
-(this term) or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [LOINC: 98980-6].
-The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope
-dilution mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations
-used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace.
-[https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953]"""
+Description: """Glomerular filtration rate (GFR) is considered the best overall index of kidney function; however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate (eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation incorporating the patient's age, gender, and measured serum/plasma/blood creatinine only (eGFRcr) (this term) or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [LOINC: 98979-8](https://loinc.org/98979-8/). The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope dilution mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace. [https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953)"""
 
 * code = $loinc#98979-8 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)"
 * code MS
@@ -73,15 +65,7 @@ Profile: ChLabObservation_eGFRcr_cys_CKD_EPI_2021
 Parent: ChLabObservation_eGFR
 Id: ch-lab-observation-egfr-cr-cys-ckd-epi-2021
 Title: "CH LAB Observation Results: eGFRcr-cys - CKD-EPI(AS) Creatinin and Cystatin-C based Profile"
-Description: """Glomerular filtration rate (GFR) is considered the best overall index of kidney function;
-however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate
-(eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation
-incorporating the patient's age, gender, and measured serum/plasma/blood creatinine only (eGFRcr)
-(this term) or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [LOINC: 98980-6].
-The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope
-dilution mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations
-used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace.
-[https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953]"""
+Description: """Glomerular filtration rate (GFR) is considered the best overall index of kidney function; however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate (eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation incorporating the patient's age, gender, and measured serum/plasma/blood creatinine only (eGFRcr) (this term) or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [LOINC: 98980-6](https://loinc.org/98980-6/). The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope dilution mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace. [https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953)"""
 
 * code = $loinc#98980-6 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine and Cystatin C-based formula (CKD-EPI 2021)"
 * code MS
