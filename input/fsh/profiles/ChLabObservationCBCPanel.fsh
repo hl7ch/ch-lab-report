@@ -231,6 +231,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * code = $loinc#788-0 "Erythrocyte distribution width [Ratio] by Automated count"
 * code.text = "Erythrocyte distribution width Auto (RBC) [Ratio]"
   * ^short = "LOINC Display Name"
+* method = $sct#702659008 "Automated count technique (qualifier value)"
 
 Profile: ChLabPlateletCount
 Parent: ChLabObservationSingleTest
