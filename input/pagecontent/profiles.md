@@ -14,6 +14,23 @@ This profile constrains the DiagnosticReport resource for the purpose of laborat
 This profile constrains the Bundle resource for the purpose of laboratory test reports in Switzerland.
 * [CH LAB Observation Results: Laboratory Report](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-results-laboratory.html)
 This profile constrains the Observation resource for the purpose of laboratory test reports in Switzerland.
+* [CH LAB Patient](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-patient.html)
+This profile constrains the Patient resource for the purpose of laboratory test reports in Switzerland.
+
+* [CH LAB Practitioner](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-practitioner.html)
+This profile constrains the Practitioner resource for the purpose of laboratory test reports in Switzerland.
+
+* [CH LAB PractitionerRole](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-practitionerrole.html)
+This profile constrains the PractitionerRole resource for the purpose of laboratory test reports in Switzerland.
+
+* [CH LAB ServiceRequest: Laboratory Order](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-report-servicerequest.html)
+This profile constrains the ServiceRequest resource for the purpose of laboratory orders in Switzerland.
+
+* [CH LAB Specimen](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-specimen.html)
+This profile constrains the Specimen resource for the purpose of laboratory test reports in Switzerland.
+
+* [Substance: Specimen Additive Substance](https://fhir.ch/ig/ch-lab-report/StructureDefinition-specimen-additive-substance-eu-lab.html)
+This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide.
 
 ### Panels
 
@@ -21,11 +38,11 @@ In the laboratory field, we often use panels as a container for a group of labor
 It is the task of the individual medical laboratories to offer the user meaningful panels. Some laboratories also offer their customers the opportunity to create their own panels. This results in a wide range of panels that serve different purposes and differ from laboratory to laboratory. 
 The implementation guide contains a narrow selection of panels that can be optionally used by laboratories and that can cover common needs.
 
-[CH LAB Observation Results: Panel](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ChLab-observation-panel.html)
+* [CH LAB Observation Results: Panel](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ChLab-observation-panel.html)
 This profile constrains the ChLabObservationResultsLaboratory profile to represent only a panel / battery of laboratory test results for the HL7 Swiss project. The top-level observation contains only further observations-panels and observations-single-tests in the hasMember element. The observation-panels may carry a conclusion in the note element and/or a global interpretation by the producer of the study, in the interpretation element; value[x] and component elements are not allowed and have to be shown in the observation-single-test profile.
 
-[CH LAB Observation Results: Single Test](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ChLab-observation-single-test.html)
-This profile constrains the ChLabObservationResultsLaboratory profile to represent single test results for the HL7 Swiss project. The profile enables only value[x] and component elements, hasMemer elemens are not allowed
+* [CH LAB Observation Results: Single Test](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ChLab-observation-single-test.html)
+This profile constrains the ChLabObservationResultsLaboratory profile to represent single test results for the HL7 Swiss project. The profile enables only value[x] and component elements, hasMemer elements are not allowed.
 
 #### Panels for automated blood cell count
 
@@ -61,6 +78,32 @@ This profile constrains the ChLabObservationSingleTest profile for the purpose o
 
 * [CH LAB Observation Results: MeanCorpuscularVolume](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-results-mcv.html)
 This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCV.
+
+#### Panels for renal insufficiency and eGFR (estimated Glomerulum Filtration Rate) 
+
+* [CH LAB Observation Results: Renal Insufficiency Panel](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
+This panel collects the lab results in relation to renal insufficiency.
+
+* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for females](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-female.html)
+Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
+
+* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for males](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-ckd-epi-male.html)
+Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
+
+* [CH LAB Observation Results: eGFR - MDRD Profile for females](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-mdrd-female.html)
+Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated.
+
+* [CH LAB Observation Results: eGFR - MDRD Profile for males](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-mdrd-male.html)
+Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated.
+
+* [CH LAB Observation Results: eGFR Profiles](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr.html)
+Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular filtration rate (eGFR) can be calculated.
+
+* [CH LAB Observation Results: eGFRcr - CKD-EPI(AS) Creatinin based Profile](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-cr-ckd-epi-2021.html)
+Glomerular filtration rate (GFR) is considered the best overall index of kidney function; however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate (eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation incorporating the patient's age, gender, and measured serum/plasma/blood creatinine only (eGFRcr) (this term) or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [LOINC: 98979-8](https://loinc.org/98979-8/). The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope dilution mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace. [https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953)
+
+* [CH LAB Observation Results: eGFRcr-cys - CKD-EPI(AS) Creatinin and Cystatin-C based Profile](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-cr-cys-ckd-epi-2021.html)
+Glomerular filtration rate (GFR) is considered the best overall index of kidney function; however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate (eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation incorporating the patient's age, gender, and measured serum/plasma/blood creatinine only (eGFRcr) (this term) or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [LOINC: 98980-6](https://loinc.org/98980-6/). The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope dilution mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace. [https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953)
 
 <!--- 
 ### Data Type Profiles
