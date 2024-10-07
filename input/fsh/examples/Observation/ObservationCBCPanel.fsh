@@ -113,23 +113,25 @@ Usage: #example
 Title: "Erythrocyte Distribution Width"
 Description: "RDW-SD Result"
 * status = #final
+* code.coding[ENTITICVOLUME]
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 * valueQuantity = 41.5 'fL' "fL"
 
-// Instance: ExampleObservationRDW-CV
-// InstanceOf: ChLabErythrocyteDistWidthRatio
-// Usage: #example
-// Title: "Erythrocyte Distribution Width Ratio"
-// Description: "RDW-CV Result"
-// * status = #final
-// * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-// * effectiveDateTime = "2024-04-23T11:24:26+01:00"
-// * issued = "2024-04-24T11:24:26+01:00"
-// * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// * valueQuantity = 15.2 '%' "%"
+Instance: ExampleObservationRDW-CV
+InstanceOf: ChLabErythrocyteDistributionWidth
+Usage: #example
+Title: "Erythrocyte Distribution Width Ratio"
+Description: "RDW-CV Result"
+* status = #final
+* code.coding[RATIO]
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* valueQuantity = 15.2 '%' "%"
 
 Instance: ExampleObservationPlateletCount
 InstanceOf: ChLabPlateletCount

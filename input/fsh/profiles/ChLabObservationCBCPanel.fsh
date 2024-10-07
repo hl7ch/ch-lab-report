@@ -215,7 +215,36 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * . ^short = "CH LAB Observation Results: Laboratory Erythrocyte Distribution Width"
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#21000-5 "Erythrocyte distribution width [Entitic volume] by Automated count"
+
+* code.coding ^slicing.discriminator.type = #value
+* code.coding ^slicing.discriminator.path = "code"
+* code.coding ^slicing.rules = #closed
+* code.coding ^short = "Code of erythrocyte distribution width"
+* code.coding contains 
+    ENTITICVOLUME 0..* and
+    RATIO 0..* 
+
+// * code.coding[ENTITICVOLUME] ^short = "Erythrocyte distribution width [Entitic volume] by Automated count"
+// * code.coding[ENTITICVOLUME] ^mustSupport = true
+* code.coding[ENTITICVOLUME].system 1..1
+* code.coding[ENTITICVOLUME].system = $loinc
+* code.coding[ENTITICVOLUME].code = #21000-5
+// * code.coding[EniticVolume].code = #21000-5
+// * code.coding[EniticVolume].display = "Erythrocyte distribution width [Entitic volume] by Automated count"
+
+// * code.coding[RATIO] = ^short = "Erythrocyte distribution width [Ratio] by Automated count"
+// * code.coding[RATIO] = ^mustSupport = true
+* code.coding[RATIO].system 1..1
+* code.coding[RATIO].system = $loinc
+* code.coding[RATIO].code = #788-0
+
+
+
+ "Erythrocyte distribution width [Ratio] by Automated count"
+// * code.coding[Ratio].system = $loinc
+// * code.coding[Ratio].code = #788-0
+// * code.coding[Ratio].display = "Erythrocyte distribution width [Ratio] by Automated count"
+
 // * code.text = "Erythrocyte distribution width Auto (RBC) [Entitic vol]"
 //   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
