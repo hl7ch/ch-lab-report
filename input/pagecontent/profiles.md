@@ -78,31 +78,30 @@ This profile constrains the ChLabObservationSingleTest profile for the purpose o
 * [CH LAB Observation Results: MeanCorpuscularVolume](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-results-mcv.html)\
 This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCV.
 
-#### Panels for renal insufficiency and eGFR (estimated Glomerulum Filtration Rate) 
-
-
+#### Panels for renal insufficiency and eGFR (estimated Glomerulum Filtration Rate)
 
 * [CH LAB Observation Results: Renal Insufficiency Panel](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)\
 This panel collects the lab results in relation to renal insufficiency.
 
-* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for females](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-female.html)\
-Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
-
-* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for males](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-ckd-epi-male.html)\
-Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
-
-* [CH LAB Observation Results: eGFR - MDRD Profile for females](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-mdrd-female.html)\
-Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated.
-
-* [CH LAB Observation Results: eGFR - MDRD Profile for males](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-mdrd-male.html)\
-Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated.
-
 * [CH LAB Observation Results: eGFR Profiles](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr.html)\
 Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular filtration rate (eGFR) can be calculated.
 
+The estimated glomerular filtration rate (eGFR) is a critical measure used to assess kidney function. Several formulas and approaches have been developed to calculate eGFR, with variations based on available patient information:
+* eGFR_MDRD and eGFR_CKD_EPI are based on serum creatinine, age, gender, race.
+* eGFRcr_CKD_EPI_2021 are based on serum creatinine, serum creatinine and cystatin-C, age, gender. 
+
+* [CH LAB Observation Results: eGFR - MDRD Profile for females](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-mdrd-female.html)\
+Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated.
+* [CH LAB Observation Results: eGFR - MDRD Profile for males](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-mdrd-male.html)\
+Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated.
+
+* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for females](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-female.html)\
+Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
+* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for males](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-ckd-epi-male.html)\
+Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
+
 * [CH LAB Observation Results: eGFRcr - CKD-EPI(AS) Creatinin based Profile](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-cr-ckd-epi-2021.html)\
 Glomerular filtration rate (GFR) is considered the best overall index of kidney function; however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate (eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation incorporating the patient's age, gender, and measured serum/plasma/blood creatinine only (eGFRcr) (this term) or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [LOINC: 98979-8](https://loinc.org/98979-8/). The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope dilution mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace. [https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953)
-
 * [CH LAB Observation Results: eGFRcr-cys - CKD-EPI(AS) Creatinin and Cystatin-C based Profile](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-cr-cys-ckd-epi-2021.html)\
 Glomerular filtration rate (GFR) is considered the best overall index of kidney function; however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate (eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation incorporating the patient's age, gender, and measured serum/plasma/blood creatinine only (eGFRcr) (this term) or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [LOINC: 98980-6](https://loinc.org/98980-6/). The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope dilution mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace. [https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953)
 
