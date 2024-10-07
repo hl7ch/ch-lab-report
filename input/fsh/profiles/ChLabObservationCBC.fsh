@@ -33,7 +33,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
     MeanCorpuscularHemoglobin 1..1 MS and
     MeanCorpuscularHemoglobinConcentration 1..1 MS and
     ErythrocyteDistWidth 0..1 MS and
-    ErythrocyteDistWidthRatio 0..1 MS and
+//     ErythrocyteDistWidthRatio 0..1 MS and
     PlateletCount 1..1 MS and
     PlateletDistWidth 0..1 MS and
     PlateletMeanVolume 0..1 MS
@@ -204,25 +204,25 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[ErythrocyteDistWidth].valueQuantity.code = #fL (exactly)
 
 // +++++++
-* component[ErythrocyteDistWidthRatio] ^short = "Erythrocyte distribution width [Ratio]"
-* component[ErythrocyteDistWidthRatio].code 1..1 MS
-* component[ErythrocyteDistWidthRatio].code ^short = "ErythrocyteDistWidthRatio code"
-* component[ErythrocyteDistWidthRatio].code = $loinc#788-0 "Erythrocyte distribution width [Ratio] by Automated count"
-// * component[ErythrocyteDistWidthRatio].code.text = "Erythrocyte distribution width Auto (RBC) [Ratio]"
-// * component[ErythrocyteDistWidthRatio].code.text ^short = "LOINC Display Name"
-// * component[ErythrocyteDistWidthRatio].valueQuantity only QuantityEuLab
-* component[ErythrocyteDistWidthRatio].valueQuantity MS
-* component[ErythrocyteDistWidthRatio].valueQuantity ^short = "automated CBC Profile component value"
-* component[ErythrocyteDistWidthRatio].valueQuantity.value 1..1 MS
-* component[ErythrocyteDistWidthRatio].valueQuantity.value only decimal
-* component[ErythrocyteDistWidthRatio].valueQuantity.unit 1..1 MS
-* component[ErythrocyteDistWidthRatio].valueQuantity.unit only string
-* component[ErythrocyteDistWidthRatio].valueQuantity.system 1..1 MS
-* component[ErythrocyteDistWidthRatio].valueQuantity.system only uri
-* component[ErythrocyteDistWidthRatio].valueQuantity.system = "http://unitsofmeasure.org" (exactly)
-* component[ErythrocyteDistWidthRatio].valueQuantity.code 1..1 MS
-* component[ErythrocyteDistWidthRatio].valueQuantity.code only code
-* component[ErythrocyteDistWidthRatio].valueQuantity.code = #% (exactly)
+// * component[ErythrocyteDistWidthRatio] ^short = "Erythrocyte distribution width [Ratio]"
+// * component[ErythrocyteDistWidthRatio].code 1..1 MS
+// * component[ErythrocyteDistWidthRatio].code ^short = "ErythrocyteDistWidthRatio code"
+// * component[ErythrocyteDistWidthRatio].code = $loinc#788-0 "Erythrocyte distribution width [Ratio] by Automated count"
+// // * component[ErythrocyteDistWidthRatio].code.text = "Erythrocyte distribution width Auto (RBC) [Ratio]"
+// // * component[ErythrocyteDistWidthRatio].code.text ^short = "LOINC Display Name"
+// // * component[ErythrocyteDistWidthRatio].valueQuantity only QuantityEuLab
+// * component[ErythrocyteDistWidthRatio].valueQuantity MS
+// * component[ErythrocyteDistWidthRatio].valueQuantity ^short = "automated CBC Profile component value"
+// * component[ErythrocyteDistWidthRatio].valueQuantity.value 1..1 MS
+// * component[ErythrocyteDistWidthRatio].valueQuantity.value only decimal
+// * component[ErythrocyteDistWidthRatio].valueQuantity.unit 1..1 MS
+// * component[ErythrocyteDistWidthRatio].valueQuantity.unit only string
+// * component[ErythrocyteDistWidthRatio].valueQuantity.system 1..1 MS
+// * component[ErythrocyteDistWidthRatio].valueQuantity.system only uri
+// * component[ErythrocyteDistWidthRatio].valueQuantity.system = "http://unitsofmeasure.org" (exactly)
+// * component[ErythrocyteDistWidthRatio].valueQuantity.code 1..1 MS
+// * component[ErythrocyteDistWidthRatio].valueQuantity.code only code
+// * component[ErythrocyteDistWidthRatio].valueQuantity.code = #% (exactly)
 
 // +++++++
 * component[PlateletCount] ^short = "Platelet Count"
