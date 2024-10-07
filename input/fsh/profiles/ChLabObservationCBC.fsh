@@ -41,8 +41,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[WhiteBloodCellCount].code 1..1 MS
 * component[WhiteBloodCellCount].code ^short = "Leucocyte count code"
 * component[WhiteBloodCellCount].code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
-* component[WhiteBloodCellCount].code.text = "WBC Auto (Bld) [#/Vol]"
-* component[WhiteBloodCellCount].code.text ^short = "LOINC Display Name"
+// * component[WhiteBloodCellCount].code.text = "WBC Auto (Bld) [#/Vol]"
+// * component[WhiteBloodCellCount].code.text ^short = "LOINC Display Name"
 // * component[WhiteBloodCellCount].valueQuantity only QuantityEuLab
 * component[WhiteBloodCellCount].valueQuantity MS
 * component[WhiteBloodCellCount].valueQuantity ^short = "automated CBC Profile component value"
@@ -61,8 +61,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[RedBloodCellCount].code 1..1 MS
 * component[RedBloodCellCount].code ^short = "Leucocyte count code"
 * component[RedBloodCellCount].code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
-* component[RedBloodCellCount].code.text = "RBC Auto (Bld) [#/Vol]"
-* component[RedBloodCellCount].code.text ^short = "LOINC Display Name"
+// * component[RedBloodCellCount].code.text = "RBC Auto (Bld) [#/Vol]"
+// * component[RedBloodCellCount].code.text ^short = "LOINC Display Name"
 // * component[RedBloodCellCount].valueQuantity only QuantityEuLab
 * component[RedBloodCellCount].valueQuantity MS
 * component[RedBloodCellCount].valueQuantity ^short = "automated CBC Profile component value"
@@ -82,8 +82,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[Hemoglobin].code 1..1 MS
 * component[Hemoglobin].code ^short = "Hemoglobin code"
 * component[Hemoglobin].code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
-* component[Hemoglobin].code.text = "Hemoglobin (Bld) [Mass/Vol]"
-* component[Hemoglobin].code.text ^short = "LOINC Display Name"
+// * component[Hemoglobin].code.text = "Hemoglobin (Bld) [Mass/Vol]"
+// * component[Hemoglobin].code.text ^short = "LOINC Display Name"
 // * component[Hemoglobin].valueQuantity only QuantityEuLab
 * component[Hemoglobin].valueQuantity MS
 * component[Hemoglobin].valueQuantity ^short = "automated CBC Profile component value"
@@ -103,8 +103,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[Hematocrit].code 1..1 MS
 * component[Hematocrit].code ^short = "Hematocrit code"
 * component[Hematocrit].code = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
-* component[Hematocrit].code.text = "Hematocrit Auto (Bld) [Volume fraction]"
-* component[Hematocrit].code.text ^short = "LOINC Display Name"
+// * component[Hematocrit].code.text = "Hematocrit Auto (Bld) [Volume fraction]"
+// * component[Hematocrit].code.text ^short = "LOINC Display Name"
 // * component[Hematocrit].valueQuantity only QuantityEuLab
 * component[Hematocrit].valueQuantity MS
 * component[Hematocrit].valueQuantity ^short = "automated CBC Profile component value"
@@ -124,8 +124,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[MeanCorpuscularVolume].code 1..1 MS
 * component[MeanCorpuscularVolume].code ^short = "MeanCorpuscularVolume code"
 * component[MeanCorpuscularVolume].code = $loinc#787-2 "MCV [Entitic volume] by Automated count"
-* component[MeanCorpuscularVolume].code.text = "MCV Auto (RBC) [Entitic vol]"
-* component[MeanCorpuscularVolume].code.text ^short = "LOINC Display Name"
+// * component[MeanCorpuscularVolume].code.text = "MCV Auto (RBC) [Entitic vol]"
+// * component[MeanCorpuscularVolume].code.text ^short = "LOINC Display Name"
 // * component[MeanCorpuscularVolume].valueQuantity only QuantityEuLab
 * component[MeanCorpuscularVolume].valueQuantity MS
 * component[MeanCorpuscularVolume].valueQuantity ^short = "automated CBC Profile component value"
@@ -145,8 +145,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[MeanCorpuscularHemoglobin].code 1..1 MS
 * component[MeanCorpuscularHemoglobin].code ^short = "MeanCorpuscularHemoglobin code"
 * component[MeanCorpuscularHemoglobin].code = $loinc#785-6 "MCH [Entitic mass] by Automated count"
-* component[MeanCorpuscularHemoglobin].code.text = "MCH Auto (RBC) [Entitic mass]"
-* component[MeanCorpuscularHemoglobin].code.text ^short = "LOINC Display Name"
+// * component[MeanCorpuscularHemoglobin].code.text = "MCH Auto (RBC) [Entitic mass]"
+// * component[MeanCorpuscularHemoglobin].code.text ^short = "LOINC Display Name"
 // * component[MeanCorpuscularHemoglobin].valueQuantity only QuantityEuLab
 * component[MeanCorpuscularHemoglobin].valueQuantity MS
 * component[MeanCorpuscularHemoglobin].valueQuantity ^short = "automated CBC Profile component value"
@@ -166,8 +166,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[MeanCorpuscularHemoglobinConcentration].code 1..1 MS
 * component[MeanCorpuscularHemoglobinConcentration].code ^short = "MeanCorpuscularHemoglobinConcentration code"
 * component[MeanCorpuscularHemoglobinConcentration].code = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
-* component[MeanCorpuscularHemoglobinConcentration].code.text = "MCHC Auto (RBC) [Mass/Vol]"
-* component[MeanCorpuscularHemoglobinConcentration].code.text ^short = "LOINC Display Name"
+// * component[MeanCorpuscularHemoglobinConcentration].code.text = "MCHC Auto (RBC) [Mass/Vol]"
+// * component[MeanCorpuscularHemoglobinConcentration].code.text ^short = "LOINC Display Name"
 // * component[MeanCorpuscularHemoglobinConcentration].valueQuantity only QuantityEuLab
 * component[MeanCorpuscularHemoglobinConcentration].valueQuantity MS
 * component[MeanCorpuscularHemoglobinConcentration].valueQuantity ^short = "automated CBC Profile component value"
@@ -187,8 +187,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[ErythrocyteDistWidth].code 1..1 MS
 * component[ErythrocyteDistWidth].code ^short = "ErythrocyteDistWidth code"
 * component[ErythrocyteDistWidth].code = $loinc#21000-5 "Erythrocyte distribution width [Entitic volume] by Automated count"
-* component[ErythrocyteDistWidth].code.text = "Erythrocyte distribution width Auto (RBC) [Entitic vol]"
-* component[ErythrocyteDistWidth].code.text ^short = "LOINC Display Name"
+// * component[ErythrocyteDistWidth].code.text = "Erythrocyte distribution width Auto (RBC) [Entitic vol]"
+// * component[ErythrocyteDistWidth].code.text ^short = "LOINC Display Name"
 // * component[ErythrocyteDistWidth].valueQuantity only QuantityEuLab
 * component[ErythrocyteDistWidth].valueQuantity MS
 * component[ErythrocyteDistWidth].valueQuantity ^short = "automated CBC Profile component value"
@@ -208,8 +208,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[ErythrocyteDistWidthRatio].code 1..1 MS
 * component[ErythrocyteDistWidthRatio].code ^short = "ErythrocyteDistWidthRatio code"
 * component[ErythrocyteDistWidthRatio].code = $loinc#788-0 "Erythrocyte distribution width [Ratio] by Automated count"
-* component[ErythrocyteDistWidthRatio].code.text = "Erythrocyte distribution width Auto (RBC) [Ratio]"
-* component[ErythrocyteDistWidthRatio].code.text ^short = "LOINC Display Name"
+// * component[ErythrocyteDistWidthRatio].code.text = "Erythrocyte distribution width Auto (RBC) [Ratio]"
+// * component[ErythrocyteDistWidthRatio].code.text ^short = "LOINC Display Name"
 // * component[ErythrocyteDistWidthRatio].valueQuantity only QuantityEuLab
 * component[ErythrocyteDistWidthRatio].valueQuantity MS
 * component[ErythrocyteDistWidthRatio].valueQuantity ^short = "automated CBC Profile component value"
@@ -229,8 +229,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[PlateletCount].code 1..1 MS
 * component[PlateletCount].code ^short = "PlateletCount code"
 * component[PlateletCount].code = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
-* component[PlateletCount].code.text = "Platelets Auto (Bld) [#/Vol]"
-* component[PlateletCount].code.text ^short = "LOINC Display Name"
+// * component[PlateletCount].code.text = "Platelets Auto (Bld) [#/Vol]"
+// * component[PlateletCount].code.text ^short = "LOINC Display Name"
 // * component[PlateletCount].valueQuantity only QuantityEuLab
 * component[PlateletCount].valueQuantity MS
 * component[PlateletCount].valueQuantity ^short = "automated CBC Profile component value"
@@ -250,8 +250,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[PlateletDistWidth].code 1..1 MS
 * component[PlateletDistWidth].code ^short = "PlateletDistWidth code"
 * component[PlateletDistWidth].code = $loinc#32207-3 "Platelet distribution width [Entitic volume] in Blood by Automated count"
-* component[PlateletDistWidth].code.text = "Platelet distribution width Auto (Bld) [Entitic vol]"
-* component[PlateletDistWidth].code.text ^short = "LOINC Display Name"
+// * component[PlateletDistWidth].code.text = "Platelet distribution width Auto (Bld) [Entitic vol]"
+// * component[PlateletDistWidth].code.text ^short = "LOINC Display Name"
 // * component[PlateletDistWidth].valueQuantity only QuantityEuLab
 * component[PlateletDistWidth].valueQuantity MS
 * component[PlateletDistWidth].valueQuantity ^short = "automated CBC Profile component value"
@@ -271,8 +271,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[PlateletMeanVolume].code 1..1 MS
 * component[PlateletMeanVolume].code ^short = "PlateletMeanVolume code"
 * component[PlateletMeanVolume].code = $loinc#32623-1 "Platelet mean volume [Entitic volume] in Blood by Automated count"
-* component[PlateletMeanVolume].code.text = "Platelet mean volume Auto (Bld) [Entitic vol]"
-* component[PlateletMeanVolume].code.text ^short = "LOINC Display Name"
+// * component[PlateletMeanVolume].code.text = "Platelet mean volume Auto (Bld) [Entitic vol]"
+// * component[PlateletMeanVolume].code.text ^short = "LOINC Display Name"
 // * component[PlateletMeanVolume].valueQuantity only QuantityEuLab
 * component[PlateletMeanVolume].valueQuantity MS
 * component[PlateletMeanVolume].valueQuantity ^short = "automated CBC Profile component value"

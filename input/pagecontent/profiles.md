@@ -45,11 +45,17 @@ This profile constrains the ChLabObservationResultsLaboratory profile to represe
 
 #### Panels for automated blood cell count
 
-* [CH LAB Observation Results CBC Panel - Blood by Automated count, Results in nested Profiles](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-cbc-panel.html)\
-This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the fotometry version of hemoglobin in this panel.
+We have two possibilities to structure the data for an automated blood cell count. We can use a profile with contains each cell count in a component. Or we pack the results in a container profile with nested cell count profiles.
+
+##### CBC in sliced component
 
 * [CH LAB Observation Results CBC Panel - Blood by Automated count, Results in sliced component](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-cbc.html)\
 Profile for observation laboratory result of automated Count of Blood Cells. We choose as Unit 10⁹/L or 10¹²/L for Cell Count.
+
+##### CBC in nested profiles
+
+* [CH LAB Observation Results CBC Panel - Blood by Automated count, Results in nested Profiles](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-cbc-panel.html)\
+This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the fotometry version of hemoglobin in this panel.
 
 * [CH LAB Observation Results: Erythrocyte distribution width [Entitic volume] by Automated count](https://fhir.ch/ig/ch-lab-report/StructureDefinition-ch-lab-observation-results-ery-distribution-width.html)\
 This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribuition Width in Switzerland.
