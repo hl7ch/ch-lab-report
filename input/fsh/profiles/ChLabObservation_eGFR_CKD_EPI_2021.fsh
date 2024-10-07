@@ -10,37 +10,37 @@ Description: """Glomerular filtration rate (GFR) is considered the best overall 
 * code ^definition = "GFR/1.73 sq M.predicted Creatinine-based formula (CKD-EPI 2021) (S/P/Bld) [Vol rate/Area]"   //  LOINC Display Name
 
 // attention: Reference Ranges have to be validated
-* referenceRange 1..3  // 3..3
-* referenceRange ^slicing.discriminator.type = #value
-* referenceRange ^slicing.discriminator.path = "age.low.value"
-* referenceRange ^slicing.rules = #open
-* referenceRange ^slicing.description = "Reference range by age"
-* referenceRange ^slicing.ordered = false
-* referenceRange contains 
-    child 0..1 MS and
-    youth 0..1 MS and
-    adult 0..1 MS
-* referenceRange[child].low.value = 90
-* referenceRange[child].low.unit = "mL/min"
-* referenceRange[child].age.low.value = 0
-* referenceRange[child].age.low.unit = "a"
-* referenceRange[child].age.high.value = 30
-* referenceRange[child].age.high.unit = "a"
-* referenceRange[child].text = "Die Formel ist nur ab 18 Jahre validiert."
-* referenceRange[youth].low.value = 90
-* referenceRange[youth].low.unit = "mL/min"
-* referenceRange[youth].age.low.value = 18
-* referenceRange[youth].age.low.unit = "a"
-* referenceRange[youth].age.high.value = 30
-* referenceRange[youth].age.high.unit = "a"
-* referenceRange[youth].text = "Die Formel ist ab 18 bis 93 Jahre validiert."
-* referenceRange[adult].low.value = 60
-* referenceRange[adult].low.unit = "mL/min"
-* referenceRange[adult].age.low.value = 31
-* referenceRange[adult].age.low.unit = "a"
-* referenceRange[adult].age.high.value = 100
-* referenceRange[adult].age.high.unit = "a"
-* referenceRange[adult].text = "Die Formel ist nur bis 93 Jahre validiert."
+// * referenceRange 1..3  // 3..3
+// * referenceRange ^slicing.discriminator.type = #value
+// * referenceRange ^slicing.discriminator.path = "age.low.value"
+// * referenceRange ^slicing.rules = #open
+// * referenceRange ^slicing.description = "Reference range by age"
+// * referenceRange ^slicing.ordered = false
+// * referenceRange contains 
+//     child 0..1 MS and
+//     youth 0..1 MS and
+//     adult 0..1 MS
+// * referenceRange[child].low.value = 90
+// * referenceRange[child].low.unit = "mL/min"
+// * referenceRange[child].age.low.value = 0
+// * referenceRange[child].age.low.unit = "a"
+// * referenceRange[child].age.high.value = 30
+// * referenceRange[child].age.high.unit = "a"
+// * referenceRange[child].text = "Die Formel ist nur ab 18 Jahre validiert."
+// * referenceRange[youth].low.value = 90
+// * referenceRange[youth].low.unit = "mL/min"
+// * referenceRange[youth].age.low.value = 18
+// * referenceRange[youth].age.low.unit = "a"
+// * referenceRange[youth].age.high.value = 30
+// * referenceRange[youth].age.high.unit = "a"
+// * referenceRange[youth].text = "Die Formel ist ab 18 bis 93 Jahre validiert."
+// * referenceRange[adult].low.value = 60
+// * referenceRange[adult].low.unit = "mL/min"
+// * referenceRange[adult].age.low.value = 31
+// * referenceRange[adult].age.low.unit = "a"
+// * referenceRange[adult].age.high.value = 100
+// * referenceRange[adult].age.high.unit = "a"
+// * referenceRange[adult].text = "Die Formel ist nur bis 93 Jahre validiert."
 
 Instance: Result-egfr-cr-ckd-epi-2021
 InstanceOf: ChLabObservation_eGFRcr_CKD_EPI_2021
@@ -53,13 +53,13 @@ Description: "eGFR-cr CKD-EPI 2021"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "BeatBunsen"
 * valueQuantity = 74 'mL/min' "mL/min"
 
-* referenceRange[adult].low.value = 60
-* referenceRange[adult].low.unit = "mL/min"
-* referenceRange[adult].age.low.value = 31
-* referenceRange[adult].age.low.unit = "a"
-* referenceRange[adult].age.high.value = 100
-* referenceRange[adult].age.high.unit = "a"
-* referenceRange[adult].text = "Die Formel ist nur bis 93 Jahre validiert."
+* referenceRange.low.value = 60
+* referenceRange.low.unit = "mL/min"
+* referenceRange.age.low.value = 31
+* referenceRange.age.low.unit = "a"
+* referenceRange.age.high.value = 100
+* referenceRange.age.high.unit = "a"
+* referenceRange.text = "Die Formel ist nur bis 93 Jahre validiert."
 
 Profile: ChLabObservation_eGFRcr_cys_CKD_EPI_2021
 Parent: ChLabObservation_eGFR
@@ -73,37 +73,37 @@ Description: """Glomerular filtration rate (GFR) is considered the best overall 
 * code ^definition = "GFR/1.73 sq M.predicted Creatinine and Cystatin C-based formula (CKD-EPI 2021) (S/P/Bld) [Vol rate/Area]"   //  LOINC Display Name
 
 // attention: Reference Ranges have to be validated
-* referenceRange 1..3  // 3..3
-* referenceRange ^slicing.discriminator.type = #value
-* referenceRange ^slicing.discriminator.path = "age.low.value"
-* referenceRange ^slicing.rules = #open
-* referenceRange ^slicing.description = "Reference range by age"
-* referenceRange ^slicing.ordered = false
-* referenceRange contains 
-    child 0..1 MS and
-    youth 0..1 MS and
-    adult 0..1 MS
-* referenceRange[child].low.value = 90
-* referenceRange[child].low.unit = "mL/min"
-* referenceRange[child].age.low.value = 0
-* referenceRange[child].age.low.unit = "a"
-* referenceRange[child].age.high.value = 30
-* referenceRange[child].age.high.unit = "a"
-* referenceRange[child].text = "Die Formel ist nur ab 18 Jahre validiert."
-* referenceRange[youth].low.value = 90
-* referenceRange[youth].low.unit = "mL/min"
-* referenceRange[youth].age.low.value = 18
-* referenceRange[youth].age.low.unit = "a"
-* referenceRange[youth].age.high.value = 30
-* referenceRange[youth].age.high.unit = "a"
-* referenceRange[youth].text = "Die Formel ist ab 18 bis 93 Jahre validiert."
-* referenceRange[adult].low.value = 60
-* referenceRange[adult].low.unit = "mL/min"
-* referenceRange[adult].age.low.value = 31
-* referenceRange[adult].age.low.unit = "a"
-* referenceRange[adult].age.high.value = 100
-* referenceRange[adult].age.high.unit = "a"
-* referenceRange[adult].text = "Die Formel ist nur bis 93 Jahre validiert."
+// * referenceRange 1..3  // 3..3
+// * referenceRange ^slicing.discriminator.type = #value
+// * referenceRange ^slicing.discriminator.path = "age.low.value"
+// * referenceRange ^slicing.rules = #open
+// * referenceRange ^slicing.description = "Reference range by age"
+// * referenceRange ^slicing.ordered = false
+// * referenceRange contains 
+//     child 0..1 MS and
+//     youth 0..1 MS and
+//     adult 0..1 MS
+// * referenceRange[child].low.value = 90
+// * referenceRange[child].low.unit = "mL/min"
+// * referenceRange[child].age.low.value = 0
+// * referenceRange[child].age.low.unit = "a"
+// * referenceRange[child].age.high.value = 30
+// * referenceRange[child].age.high.unit = "a"
+// * referenceRange[child].text = "Die Formel ist nur ab 18 Jahre validiert."
+// * referenceRange[youth].low.value = 90
+// * referenceRange[youth].low.unit = "mL/min"
+// * referenceRange[youth].age.low.value = 18
+// * referenceRange[youth].age.low.unit = "a"
+// * referenceRange[youth].age.high.value = 30
+// * referenceRange[youth].age.high.unit = "a"
+// * referenceRange[youth].text = "Die Formel ist ab 18 bis 93 Jahre validiert."
+// * referenceRange[adult].low.value = 60
+// * referenceRange[adult].low.unit = "mL/min"
+// * referenceRange[adult].age.low.value = 31
+// * referenceRange[adult].age.low.unit = "a"
+// * referenceRange[adult].age.high.value = 100
+// * referenceRange[adult].age.high.unit = "a"
+// * referenceRange[adult].text = "Die Formel ist nur bis 93 Jahre validiert."
 
 Instance: Result-egfr-cr-cys-ckd-epi-2021
 InstanceOf: ChLabObservation_eGFRcr_cys_CKD_EPI_2021
@@ -115,15 +115,12 @@ Description: "eGFR-cr-cys CKD-EPI 2021"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "BeatBunsen"
 * valueQuantity = 74 'mL/min' "mL/min"
-* referenceRange[adult].low.value = 60
-* referenceRange[adult].low.unit = "mL/min"
-
-* referenceRange[adult].low.value = 60
-* referenceRange[adult].low.unit = "mL/min"
-* referenceRange[adult].age.low.value = 31
-* referenceRange[adult].age.low.unit = "a"
-* referenceRange[adult].age.high.value = 100
-* referenceRange[adult].age.high.unit = "a"
-* referenceRange[adult].text = "Die Formel ist nur bis 93 Jahre validiert."
+* referenceRange.low.value = 60
+* referenceRange.low.unit = "mL/min"
+* referenceRange.age.low.value = 31
+* referenceRange.age.low.unit = "a"
+* referenceRange.age.high.value = 100
+* referenceRange.age.high.unit = "a"
+* referenceRange.text = "Die Formel ist nur bis 93 Jahre validiert."
 
 //  https://www.swissnephrology.ch/wp/wp-content/uploads/2023/01/161121_SGN_Pocketguide_CKD_Web_A4_d_WZ.pdf
