@@ -31,7 +31,7 @@ This profile constrains the Specimen resource for the purpose of laboratory test
 * [Substance: Specimen Additive Substance](https://fhir.ch/ig/ch-lab-report/StructureDefinition-specimen-additive-substance-eu-lab.html)\
 This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide.
 
-### Panels (optional)
+### Profile for specific purposes, Panels (optional)
 
 In the laboratory field, we often use panels as a container for a group of laboratory analyses that belong together in terms of content, e.g. the group of analyses that quantify cardiovascular risks or that stand for a liver disease.
 It is the task of the individual medical laboratories to offer the user meaningful panels. Some laboratories also offer their customers the opportunity to create their own panels. This results in a wide range of panels that serve different purposes and differ from laboratory to laboratory. 
