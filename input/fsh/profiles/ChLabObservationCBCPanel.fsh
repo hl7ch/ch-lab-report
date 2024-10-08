@@ -1,30 +1,77 @@
-// ╭───────  profiles for CBC observations ──────╮
-// │     CBC Panel and CBC Single Tests          │
-// │         observation profiles                │
-// ╰─────────────────────────────────────────────╯
-
 Profile: ChLabObservationCBCPanel
 Parent: ChLabObservationPanel
 Id: ch-lab-observation-cbc-panel
-Title: "CH LAB Observation Results CBC Panel - Blood by Automated count, Results in nested Profiles"   // LOINC long common name
-Description: """This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the fotometry version of hemoglobin in this panel."""
-
-// * ^publisher = "HL7 Switzerland"
-// * ^contact.name = "HL7 Switzerland"
-// * ^contact.telecom.system = #url
-// * ^contact.telecom.value = "http://hl7.ch"
-// * ^jurisdiction = $m49.htm#756 "Switzerland"
-// * ^purpose = "This profile constrains the ChLabObservationPanel profile to represent results produced by automated CBC (count of Blood-Cells)for the  HL7 Swiss project. Their 'hasMember' elements contain References to CBC Single Test Observations. The CBC Panel represents the Haematogramm II from the Analysenliste, Pos.-Nr 1371.00"
-// * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
-
+Title: "CH LAB Observation Results CBC Panel - Blood by Automated count, Results in a nested Profile"
+Description: """This panel is the traditional hemogram plus platelet count ."""
+* category[specialty] = $sct#394916005 "Hematopathology"
+* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#58410-2 "CBC panel - Blood by Automated count"
-* code.text = "CBC panel Auto (Bld)" // LOINC Display Name
+* hasMember only Reference(ChLabObservationCBCcollection)
+
+
+
+// ╭───────  profile for CBC observations  ──────╮
+// │     CBC Panel and CBC code.coding           │
+// │                                             │
+// ╰─────────────────────────────────────────────╯
+
+Profile: ChLabObservationCBCcollection
+Parent: ChLabObservationSingleTest
+Id: ch-lab-observation-cbc-collection
+Title: "CH LAB Observation Results CBC Panel - Blood by Automated count, coded Results"
+Description: """This collection is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the fotometry version of hemoglobin in this panel."""
+
+* code.coding ^slicing.discriminator.type = #value
+* code.coding ^slicing.discriminator.path = "code"
+* code.coding ^slicing.rules = #open
+* code.coding ^short = "Codes automated blood cell counts"
+* code.coding contains
+    WBC 1..1 and
+    RBC 1..1 and
+    HB 1..1 and
+    HT 1..1 and
+    ENTITICVOL 0..1 and
+    RATIO 0..1 and
+    MCV 1..1 and
+    MCH 1..1 and
+    MCHC 1..1 and
+    PLATELETS 1..1 and
+    PLATWITH 0..1 and
+    PLATVOL 0..1
+
+* code.coding[WBC].code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
+* code.coding[RBC].code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
+* code.coding[HB].code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
+* code.coding[HT].code = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
+* code.coding[MCV].code = $loinc#787-2 "MCV [Entitic volume] by Automated count"
+* code.coding[MCH].code = $loinc#785-6 "MCH [Entitic mass] by Automated count"
+* code.coding[MCHC].code = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
+* code.coding[ENTITICVOL].code = $loinc#21000-5 "Erythrocyte distribution width [Entitic volume] by Automated count"
+* code.coding[RATIO].code = $loinc#788-0 "Erythrocyte distribution width [Ratio] by Automated count"
+* code.coding[PLATELETS].code = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
+* code.coding[PLATWITH].code = $loinc#32207-3 "Platelet distribution width [Entitic volume] in Blood by Automated count"
+* code.coding[PLATVOL].code = $loinc#32623-1 "Platelet mean volume [Entitic volume] in Blood by Automated count"
+
+* method = $sct#702659008 "Automated count technique (qualifier value)"
+* specimen = Reference(BloodCBC)
+
+
+Instance: BloodCBC
+InstanceOf: ChLabSpecimen
+Title: "Blood CBC Sample"
+Description: "Example for Specimen for automated CBC Examination"
+Usage: #example
+* status = #available
+* type = $sct#119297000 "Blood specimen"
+
+// * code.text = "CBC panel Auto (Bld)" // LOINC Display Name
 // * hasMember 8..12
 // * hasMember ^slicing.discriminator.type = #profile
 // * hasMember ^slicing.discriminator.path = "resolve()"
 // * hasMember ^slicing.rules = #open
 // * hasMember ^slicing.description = ""
 // * hasMember ^slicing.ordered = false
+/*
 * hasMember contains
   WhiteBloodCellCount 1..1 MS and
   RedBloodCellCount 1..1 MS and
@@ -87,6 +134,8 @@ Description: """This panel is the traditional hemogram plus platelet count which
 * hasMember[PlateletMeanVolume] ^label = "Label"
 * hasMember[PlateletMeanVolume] ^short = "Platelet Mean Volume"
 
+*/
+
 /*
 // ╭───────── profiles for CBC observations ─────────╮
 // │  Profile for CBC Single Tests                   │
@@ -114,6 +163,7 @@ Description: """This profile constrains the ChLabObservationSingleTest profile t
 // │  WBC, RBC, HGB, HT, MCV, MCH, MCHC, Platelets   │
 // ╰─────────────────────────────────────────────────╯
 
+/*
 Profile: ChLabLeucocyteCount
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-results-wbc
@@ -139,6 +189,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 // * code.text = "RBC Auto (Bld) [#/Vol]"
 //   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
+* specimen = Reference(BloodCBC)
 
 Profile: ChLabHemoglobin
 Parent: ChLabObservationSingleTest
@@ -210,7 +261,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabErythrocyteDistributionWidth
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-results-ery-distribution-width
-Title: "CH LAB Observation Results: Erythrocyte distribution width [Entitic volume] by Automated count"
+Title: "CH LAB Observation Results: Erythrocyte distribution width by automated count"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribuition Width in Switzerland."
 * . ^short = "CH LAB Observation Results: Laboratory Erythrocyte Distribution Width"
 * category[specialty] = $sct#394916005 "Hematopathology"
@@ -220,34 +271,35 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * code.coding ^slicing.discriminator.path = "code"
 * code.coding ^slicing.rules = #closed
 * code.coding ^short = "Code of erythrocyte distribution width"
-* code.coding contains 
-    ENTITICVOLUME 0..* and
-    RATIO 0..* 
+* code.coding.system = $loinc
+* code.coding contains
+    WBC 1..1 and
+    RBC 1..1 and
+    HB 1..1 and
+    HT 1..1 and
+    ENTITICVOLUME 0..1 and
+    RATIO 0..1 
 
-// * code.coding[ENTITICVOLUME] ^short = "Erythrocyte distribution width [Entitic volume] by Automated count"
-// * code.coding[ENTITICVOLUME] ^mustSupport = true
-* code.coding[ENTITICVOLUME].system 1..1
-* code.coding[ENTITICVOLUME].system = $loinc
+* code.coding[WBC].code = #6690-2 "Leukocytes [#/volume] in Blood by Automated count"
+// * code.coding[WBC].display = "Leukocytes [#/volume] in Blood by Automated count"
+
+* code.coding[RBC].code = #789-8
+* code.coding[RBC].display = "Erythrocytes [#/volume] in Blood by Automated count"
+
+* code.coding[HB].code = #718-7
+* code.coding[HB].display = "Hemoglobin [Mass/volume] in Blood"
+
+* code.coding[HT] = #4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
+
 * code.coding[ENTITICVOLUME].code = #21000-5
-// * code.coding[EniticVolume].code = #21000-5
-// * code.coding[EniticVolume].display = "Erythrocyte distribution width [Entitic volume] by Automated count"
+* code.coding[ENTITICVOLUME].display = "Erythrocyte distribution width [Entitic volume] by Automated count"
 
-// * code.coding[RATIO] = ^short = "Erythrocyte distribution width [Ratio] by Automated count"
-// * code.coding[RATIO] = ^mustSupport = true
-* code.coding[RATIO].system 1..1
-* code.coding[RATIO].system = $loinc
 * code.coding[RATIO].code = #788-0
+* code.coding[RATIO].display = "Erythrocyte distribution width [Ratio] by Automated count"
 
 
-
- "Erythrocyte distribution width [Ratio] by Automated count"
-// * code.coding[Ratio].system = $loinc
-// * code.coding[Ratio].code = #788-0
-// * code.coding[Ratio].display = "Erythrocyte distribution width [Ratio] by Automated count"
-
-// * code.text = "Erythrocyte distribution width Auto (RBC) [Entitic vol]"
-//   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
+* specimen = Reference(BloodCBC)
 
 // Profile: ChLabErythrocyteDistWidthRatio
 // Parent: ChLabObservationSingleTest
@@ -295,10 +347,6 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code = $loinc#32623-1 "Platelet mean volume [Entitic volume] in Blood by Automated count"
 
-Instance: BloodCBC
-InstanceOf: ChLabSpecimen
-Title: "Blood CBC Sample"
-Description: "Example for Specimen for automated CBC Examination"
-Usage: #example
-* status = #available
-* type = $sct#119297000 "Blood specimen"
+
+
+*/
