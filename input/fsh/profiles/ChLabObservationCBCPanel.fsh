@@ -34,7 +34,7 @@ Description: """This panel is the traditional hemogram plus platelet count which
   MeanCorpuscularHemoglobin 1..1 MS and
   MeanCorpuscularHemoglobinConcentration 1..1 MS and
   ErythrocyteDistributionWidth 0..1 MS and
-  ErythrocyteDistWidthRatio 0..1 MS and
+  // ErythrocyteDistWidthRatio 0..1 MS and
   PlateletCount 1..1 MS and
   PlateletDistributionWidth 0..1 MS and
   PlateletMeanVolume 0..1 MS
@@ -71,9 +71,9 @@ Description: """This panel is the traditional hemogram plus platelet count which
 * hasMember[ErythrocyteDistributionWidth] ^label = "Label"
 * hasMember[ErythrocyteDistributionWidth] ^short = "Erythrocyte Distribution Width"
 
-* hasMember[ErythrocyteDistWidthRatio] only Reference(ChLabErythrocyteDistWidthRatio)
-* hasMember[ErythrocyteDistWidthRatio] ^label = "Label"
-* hasMember[ErythrocyteDistWidthRatio] ^short = "Erythrocyte Distribution Width Ratio"
+// * hasMember[ErythrocyteDistWidthRatio] only Reference(ChLabErythrocyteDistWidthRatio)
+// * hasMember[ErythrocyteDistWidthRatio] ^label = "Label"
+// * hasMember[ErythrocyteDistWidthRatio] ^short = "Erythrocyte Distribution Width Ratio"
 
 * hasMember[PlateletCount] only Reference(ChLabPlateletCount)
 * hasMember[PlateletCount] ^label = "Label"
@@ -220,17 +220,17 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
 
-Profile: ChLabErythrocyteDistWidthRatio
-Parent: ChLabObservationSingleTest
-Id: ch-lab-observation-results-ery-dist-width-ratio
-Title: "CH LAB Observation Results: Erythrocyte distribution width [Ratio] by Automated count"
-Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribution Width Ratio."
-* . ^short = "CH LAB Observation Results: Laboratory Erythrocyte Distribution Width Ratio"
-* category[specialty] = $sct#394916005 "Hematopathology"
-* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#788-0 "Erythrocyte distribution width [Ratio] by Automated count"
-* code.text = "Erythrocyte distribution width Auto (RBC) [Ratio]"
-  * ^short = "LOINC Display Name"
+// Profile: ChLabErythrocyteDistWidthRatio
+// Parent: ChLabObservationSingleTest
+// Id: ch-lab-observation-results-ery-dist-width-ratio
+// Title: "CH LAB Observation Results: Erythrocyte distribution width [Ratio] by Automated count"
+// Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribution Width Ratio."
+// * . ^short = "CH LAB Observation Results: Laboratory Erythrocyte Distribution Width Ratio"
+// * category[specialty] = $sct#394916005 "Hematopathology"
+// * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+// * code = $loinc#788-0 "Erythrocyte distribution width [Ratio] by Automated count"
+// * code.text = "Erythrocyte distribution width Auto (RBC) [Ratio]"
+//   * ^short = "LOINC Display Name"
 
 Profile: ChLabPlateletCount
 Parent: ChLabObservationSingleTest

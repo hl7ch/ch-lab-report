@@ -21,7 +21,7 @@ Description: "Example to illustrate ChLabObservationCBCPanel"
 * hasMember[MeanCorpuscularHemoglobinConcentration] = Reference(Observation/ExampleObservationMCHC)
 * hasMember[PlateletCount] = Reference(Observation/ExampleObservationPlateletCount)
 * hasMember[ErythrocyteDistributionWidth] = Reference(Observation/ExampleObservationRDW-SD)
-* hasMember[ErythrocyteDistWidthRatio] = Reference(Observation/ExampleObservationRDW-CV)
+// * hasMember[ErythrocyteDistWidthRatio] = Reference(Observation/ExampleObservationRDW-CV)
 
 Instance: ExampleObservationWBC
 InstanceOf: ChLabLeucocyteCount
@@ -119,6 +119,7 @@ Description: "RDW-SD Result"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 * valueQuantity = 41.5 'fL' "fL"
 
+/*
 Instance: ExampleObservationRDW-CV
 InstanceOf: ChLabErythrocyteDistWidthRatio
 Usage: #example
@@ -130,6 +131,7 @@ Description: "RDW-CV Result"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 * valueQuantity = 15.2 '%' "%"
+*/
 
 Instance: ExampleObservationPlateletCount
 InstanceOf: ChLabPlateletCount
