@@ -2,7 +2,7 @@
 
 ValueSet: ObservationCodeEntvolRatio
 Id: observation-code-entsvol-ratio
-Title: "Two LOINC Test Codes for Erythrocyte Distribuiton Width"
+Title: "CH LAB Codes for Erythrocyte Distribuiton Width Test"
 Description: "ValueSet for the allowed codes ENTVOL and RATIO"
 * ^version = "1.0.0"
 * ^status = #draft
