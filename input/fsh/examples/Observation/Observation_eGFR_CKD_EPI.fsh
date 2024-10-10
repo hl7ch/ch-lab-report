@@ -14,13 +14,13 @@ Usage: #example
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 
-* referenceRange[youth].low.value = 90
-* referenceRange[youth].low.unit = "mL/min"
-* referenceRange[youth].age.low.value = 18
-* referenceRange[youth].age.low.unit = "a"
-* referenceRange[youth].age.high.value = 30
-* referenceRange[youth].age.high.unit = "a"
-* referenceRange[youth].text = "Die Formel ist ab 18 bis 93 Jahre validiert."
+* referenceRange.low.value = 90
+* referenceRange.low.unit = "mL/min"
+* referenceRange.age.low.value = 18
+* referenceRange.age.low.unit = "a"
+* referenceRange.age.high.value = 30
+* referenceRange.age.high.unit = "a"
+* referenceRange.text = "Die Formel ist ab 18 bis 93 Jahre validiert."
 
 // * component[blacks].code = $loinc#88293-6 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
 * component[blacks].valueQuantity.comparator = #>
@@ -68,13 +68,13 @@ Usage: #example
 * referenceRange[child].text = "Die Formel ist nur ab 18 Jahre validiert."
 */
 
-* referenceRange[youth].low.value = 90
-* referenceRange[youth].low.unit = "mL/min"
-* referenceRange[youth].age.low.value = 18
-* referenceRange[youth].age.low.unit = "a"
-* referenceRange[youth].age.high.value = 30
-* referenceRange[youth].age.high.unit = "a"
-* referenceRange[youth].text = "Die Formel ist ab 18 bis 93 Jahre validiert."
+* referenceRange.low.value = 90
+* referenceRange.low.unit = "mL/min"
+* referenceRange.age.low.value = 18
+* referenceRange.age.low.unit = "a"
+* referenceRange.age.high.value = 30
+* referenceRange.age.high.unit = "a"
+* referenceRange.text = "Die Formel ist ab 18 bis 93 Jahre validiert."
 
 /*
 * referenceRange[adult].low.value = 60
