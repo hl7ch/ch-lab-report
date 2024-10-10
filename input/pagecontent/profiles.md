@@ -57,13 +57,8 @@ Profile for observation laboratory result of automated Count of Blood Cells. We 
 * [CH LAB Observation Results CBC Panel - Blood by Automated count, Results in nested Profiles](StructureDefinition-ch-lab-observation-cbc-panel.html)\
 This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the fotometry version of hemoglobin in this panel.
 
-* [CH LAB Observation Results: Erythrocyte distribution width [Entitic volume] by Automated count](StructureDefinition-ch-lab-observation-results-ery-distribution-width.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribuition Width in Switzerland.
-
-<!--
-* [CH LAB Observation Results: Erythrocyte distribution width [Ratio] by Automated count](StructureDefinition-ch-lab-observation-results-ery-dist-width-ratio.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribution Width Ratio.
--->
+* [CH LAB Observation Results: LeucocyteCount](StructureDefinition-ch-lab-observation-results-wbc.html)\
+This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory leucocyte count.
 
 * [CH LAB Observation Results: ErythrocyteCount](StructureDefinition-ch-lab-observation-results-rbc.html)\
 This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory erythrocyte count.
@@ -74,9 +69,6 @@ This profile constrains the ChLabObservationSingleTest profile for the purpose o
 * [CH LAB Observation Results: Hemotocrit](StructureDefinition-ch-lab-observation-results-ht.html)\
 This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory hemotocrit in Switzerland.
 
-* [CH LAB Observation Results: LeucocyteCount](StructureDefinition-ch-lab-observation-results-wbc.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory leucocyte count.
-
 * [CH LAB Observation Results: Mean Corpuscular Hemoglobin](StructureDefinition-ch-lab-observation-results-mch.html)\
 This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCH in Switzerland.
 
@@ -85,6 +77,19 @@ This profile constrains the ChLabObservationSingleTest profile for the purpose o
 
 * [CH LAB Observation Results: MeanCorpuscularVolume](StructureDefinition-ch-lab-observation-results-mcv.html)\
 This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCV.
+
+* [CH LAB Observation Results: Erythrocyte distribution by Automated count](StructureDefinition-ch-lab-observation-results-ery-distribution-width.html)\
+This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribuition Width in Switzerland.
+
+* [CH LAB Observation Results: Platelet Count](StructureDefinition-ch-lab-observation-results-platelets.html)
+This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet count.
+
+* [CH LAB Observation Results: Platelet Distribution With](StructureDefinition-ch-lab-observation-results-platelets-distribution-width.html)
+This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet count.
+
+* CH [LAB Observation Results: Platelet Mean Volume](StructureDefinition-ch-lab-observation-results-platelets-mean-volume.html)
+This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet mean volume.
+
 
 #### Panels for renal insufficiency and eGFR (estimated Glomerulum Filtration Rate)
 
