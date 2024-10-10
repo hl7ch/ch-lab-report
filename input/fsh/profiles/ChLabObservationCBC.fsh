@@ -246,7 +246,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[PlateletCount].valueQuantity.code = #10^9/L (exactly)
 
 // +++++++
-* component[PlateletDistWidth] ^short = "Platelet Distribution With"
+* component[PlateletDistWidth] ^short = "Platelet Distribution Width"
 * component[PlateletDistWidth].code 1..1 MS
 * component[PlateletDistWidth].code ^short = "PlateletDistWidth code"
 * component[PlateletDistWidth].code = $loinc#32207-3 "Platelet distribution width [Entitic volume] in Blood by Automated count"
