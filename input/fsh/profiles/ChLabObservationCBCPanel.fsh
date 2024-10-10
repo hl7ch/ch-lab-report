@@ -34,7 +34,6 @@ Description: """This panel is the traditional hemogram plus platelet count which
   MeanCorpuscularHemoglobin 1..1 MS and
   MeanCorpuscularHemoglobinConcentration 1..1 MS and
   ErythrocyteDistributionWidth 0..1 MS and
-  // ErythrocyteDistWidthRatio 0..1 MS and
   PlateletCount 1..1 MS and
   PlateletDistributionWidth 0..1 MS and
   PlateletMeanVolume 0..1 MS
@@ -216,7 +215,6 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code from ObservationCodeEntvolRatio (required)
-
 * method = $sct#702659008 "Automated count technique (qualifier value)"
 
 // Profile: ChLabErythrocyteDistWidthRatio
