@@ -181,7 +181,7 @@ Id: ch-lab-observation-results-ery-distribution-width
 Title: "CH LAB Observation Results: Erythrocyte distribution width [Entitic volume] by Automated count"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribuition Width in Switzerland."
 * . ^short = "CH LAB Observation Results: Laboratory Erythrocyte Distribution Width"
-* ^experimental = true
+* ^experimental = false
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 * code from ObservationCodeEntvolRatio (required)

@@ -3,8 +3,8 @@ Id: ch-lab-bloodgroup-immuno-hematology-vs
 Title: "CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures)"
 Description: "Laboratory test related to immunohematology"
 * ^version = "0.1.0"
-* ^status = #active
-* ^experimental = true
+* ^status = #draft
+* ^experimental = false
 * ^date = "2024-05-10T10:21:46+00:00"
 * ^publisher = "HL7 Switzerland"
 * ^contact.name = "HL7 Switzerland"
@@ -21,8 +21,8 @@ Id: ch-lab-bloodgroup-antibody-screen-result-vs
 Title: "CH LAB BloodGroup Antibody Screen Tests Result (LOINC codes)"
 Description: "Detects atypical IgG antibodies prior to transfusion or during pregnancy. The screening test is designed specifically to detect IgG antibodies and some IgM antibodies (non ABO) may also be detected. Antibodies detected by the antibody screen should then be identified, and a titer performed if the antibody identified is considered to be clinically significant during pregnancy."
 * ^version = "0.1.0"
-* ^status = #active
-* ^experimental = true
+* ^status = #draft
+* ^experimental = false
 * ^date = "2024-05-10T10:21:46+00:00"
 * ^publisher = "HL7 Switzerland"
 * ^contact.name = "HL7 Switzerland"
@@ -65,7 +65,7 @@ Description: "Detects atypical IgG antibodies prior to transfusion or during pre
 // Description: "Detects atypical IgG antibodies prior to transfusion or during pregnancy. The screening test is designed specifically to detect IgG antibodies and some IgM antibodies (non ABO) may also be detected. Antibodies detected by the antibody screen should then be identified, and a titer performed if the antibody identified is considered to be clinically significant during pregnancy."
 // * ^version = "0.1.0"
 // * ^status = #active
-// * ^experimental = true
+// * ^experimental = false
 // * ^date = "2024-05-10T10:21:46+00:00"
 // * ^publisher = "HL7 Switzerland"
 // * ^contact.name = "HL7 Switzerland"
