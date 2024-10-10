@@ -215,9 +215,8 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * . ^short = "CH LAB Observation Results: Laboratory Erythrocyte Distribution Width"
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#21000-5 "Erythrocyte distribution width [Entitic volume] by Automated count"
-* code.text = "Erythrocyte distribution width Auto (RBC) [Entitic vol]"
-  * ^short = "LOINC Display Name"
+* code from ObservationCodeEntvolRatio (required)
+
 * method = $sct#702659008 "Automated count technique (qualifier value)"
 
 // Profile: ChLabErythrocyteDistWidthRatio
