@@ -87,14 +87,20 @@ This profile constrains the ChLabObservationSingleTest profile to get the ratio 
 
 ##### eGFR_MDRD and eGFR_CKD_EPI based on serum creatinine, age, gender, race
 
-* [CH LAB Observation Results: eGFR - MDRD Profile for females](StructureDefinition-ch-lab-observation-egfr-mdrd-female.html)\
+* [CH LAB Observation Results: eGFR - MDRD Profile](StructureDefinition-ch-lab-observation-egfr-mdrd.html)\
 Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated.
-* [CH LAB Observation Results: eGFR - MDRD Profile for males](StructureDefinition-ch-lab-observation-egfr-mdrd-male.html)\
+
 Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated.
+
+<!--
 * [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for females](StructureDefinition-ch-lab-observation-egfr-female.html)\
 Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
+-->
+
+<!--
 * [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for males](StructureDefinition-ch-lab-observation-egfr-ckd-epi-male.html)\
 Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
+-->
 
 ##### eGFRcr_CKD_EPI_2021 based on serum creatinine, serum creatinine and cystatin-C, age, gender
 
