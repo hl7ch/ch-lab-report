@@ -1,7 +1,7 @@
 // Alias: $custom-observation-codes = http://example.org/fhir/CodeSystem/custom-observation-codes
 
-ValueSet: ObservationCodeCr_Crcys
-Id: observation-code-cr-crcys
+ValueSet: ObservationCode_CDK_EPI_2021
+Id: observation-code-cdk-epi-2021
 Title: "CH LAB Codes for eGFR in CKD-EPI 2021"
 Description: "ValueSet for the allowed eGFRcr and eGFRcr-cys codes"
 * ^version = "1.0.0"

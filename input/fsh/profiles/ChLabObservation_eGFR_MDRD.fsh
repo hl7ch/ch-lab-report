@@ -8,7 +8,7 @@ Parent:       ChLabObservation_eGFR
 Title:        "CH LAB Observation Results: eGFR - MDRD Profile for males"
 Description:  "Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated."
 
-* code from ObservationCode_MDRD_Male_Female (required)
+* code from ObservationCodeMDRD (required)
   * ^short = "ValueSet for the allowed LOINC codes for eGFR MDRD among males and females"
 
 // * code = $loinc#70969-1 "Glomerular filtration rate/1.73 sq M.predicted among males [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
