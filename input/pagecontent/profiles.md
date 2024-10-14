@@ -90,11 +90,8 @@ This profile constrains the ChLabObservationSingleTest profile to get the ratio 
 * [CH LAB Observation Results: eGFR - MDRD Profile](StructureDefinition-ch-lab-observation-egfr-mdrd.html)\
 Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated.
 
-Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated.
-
-
 * [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile](StructureDefinition-ch-lab-observation-egfr-ckd-epi.html)\
-Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
+Renal function can be determined by laboratory measurement of serum creatinine and serum cystatin C, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
 
 
 <!--
