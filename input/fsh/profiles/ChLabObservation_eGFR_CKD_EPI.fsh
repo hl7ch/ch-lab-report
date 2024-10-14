@@ -2,7 +2,9 @@ Profile:      ChLabObservation_eGFR_CKD_EPI
 Parent:       ChLabObservation_eGFR
 Id:           ch-lab-observation-egfr-ckd-epi
 Title:        "CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for blacks and non-blacks"
-Description:  "Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated."
+Description:  """Renal function can be determined by laboratory measurement of serum creatinine, from 
+which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated. Use  
+[this formula:](https://nierenrechner.de/index.php?page=egfr-ckd-rechner)"""
 
 * code from ObservationCode_CDK_EPI (required)
   * ^short = "ValueSet for the allowed LOINC codes for eGFR MDRD among blacks and non-blacks"
