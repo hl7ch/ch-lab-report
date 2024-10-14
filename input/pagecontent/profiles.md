@@ -92,13 +92,13 @@ Renal function can be determined by laboratory measurement of serum creatinine, 
 
 Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated.
 
-<!--
-* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for females](StructureDefinition-ch-lab-observation-egfr-female.html)\
+
+* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile](StructureDefinition-ch-lab-observation-egfr-ckd-epi.html)\
 Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
--->
+
 
 <!--
-* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for males](StructureDefinition-ch-lab-observation-egfr-ckd-epi-male.html)\
+* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for males](StructureDefinition-ch-lab-observation-egfr-ckd-epi.html)\
 Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
 -->
 
