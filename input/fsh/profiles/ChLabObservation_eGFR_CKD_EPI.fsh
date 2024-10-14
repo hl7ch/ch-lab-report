@@ -1,13 +1,16 @@
 Profile:      ChLabObservation_eGFR_CKD_EPI
 Parent:       ChLabObservation_eGFR
 Id:           ch-lab-observation-egfr-ckd-epi
-Title:        "CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for males"
+Title:        "CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for blacks and non-blacks"
 Description:  "Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated."
 
-* code = $loinc#50044-7 "Glomerular filtration rate/1.73 sq M.predicted among females [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
-* code MS
-* code ^short = "eGFR_CKD_EPI"
-* code ^definition = "GFR estimating equations developed by the Modification of Diet in Renal Disease (MDRD) Study Group and the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)...."
+* code from ObservationCode_CDK_EPI (required)
+  * ^short = "ValueSet for the allowed LOINC codes for eGFR MDRD among blacks and non-blacks"
+
+// * code = $loinc#50044-7 "Glomerular filtration rate/1.73 sq M.predicted among females [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+// * code MS
+// * code ^short = "eGFR_CKD_EPI"
+// * code ^definition = "GFR estimating equations developed by the Modification of Diet in Renal Disease (MDRD) Study Group and the Chronic Kidney Disease Epidemiology Collaboration (CKD-EPI)...."
 
 // * referenceRange 1..3  // 3..3
 // * referenceRange ^slicing.discriminator.type = #value
@@ -48,8 +51,8 @@ Description:  "Renal function can be determined by laboratory measurement of ser
 * component ^slicing.description = "2 possibilities: blacks - non-blacks"
 * component ^slicing.ordered = false
 * component contains
-    blacks 1..1 MS and
-    non-blacks 1..1 MS
+    blacks 1..1 and
+    non-blacks 1..1
 * component[blacks] ^short = "eGFR_CKD_EPI among blacks"
 * component[blacks].code = $loinc#88293-6 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
 * component[blacks].code ^short = "eGFR_CKD_EPI among blacks code"

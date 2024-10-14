@@ -115,7 +115,7 @@ Instance: Result-egfr-cr-cys-ckd-epi-2021
 InstanceOf: ChLabObservation_eGFR_CKD_EPI_2021
 Usage: #example
 Title: "Example of Result eGFR-cr-cys CKD-EPI 2021"
-Description: "eGFR-cr-cys CKD-EPI 2021 based on Creatinin and Cystatin C"
+Description: "eGFR-cr-cys CKD-EPI 2021 based on Creatinine and Cystatin C"
 * code = $loinc#98980-6 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine and Cystatin C-based formula (CKD-EPI 2021)"
 * status = #final
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"

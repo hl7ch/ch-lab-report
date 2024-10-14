@@ -1,12 +1,14 @@
-// ╭─── example eGFR_CKD_EPI for a male Patient ────────────╮
+// ╭─── example eGFR_CKD_EPI by Creatinine-based formula ───╮
 // │ Observation with components for blacks and non-blacks  │
 // ╰────────────────────────────────────────────────────────╯
-Instance: Observation-eGFR-CKD-EPI-male
+Instance: Observation-eGFR-CKD-EPI-cr
 InstanceOf: ChLabObservation_eGFR_CKD_EPI
 Description: "Example of an Observation Instance with component.referenceRange"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
-* identifier.value = "1304-03720-eGFR_CKD_EPI-male"
+* identifier.value = "1304-03720-eGFR_CKD_EPI-cr"
+* code = $loinc#62238-1 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
+
 * status = #final
 
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
@@ -41,15 +43,16 @@ Usage: #example
 * interpretation.coding = $v3-ObservationInterpretation#N "Normal"
 * interpretation.text = "interpretation of results should be assigned based upon the level of kindey function"
 
-// ╭── example eGFR_CKD_EPI for a female Patient  ─────────╮
-// │ Observation with components for blacks and non-blacks │
-// ╰───────────────────────────────────────────────────────╯
-Instance: Observation-eGFR-CKD-EPI-female
+// ╭─ example eGFR_CKD_EPI by Creatinine/Cystatin-C-based formula ──╮
+// │      Observation with components for blacks and non-blacks     │
+// ╰────────────────────────────────────────────────────────────────╯
+Instance: Observation-eGFR-CKD-EPI-cr-cys
 InstanceOf: ChLabObservation_eGFR_CKD_EPI
 Description: "Example of an Observation Instance with component.referenceRange"
 Usage: #example
 * identifier.system = "https://examle.com/labvalues"
-* identifier.value = "1304-03720-eGFR_CKD_EPI-female"
+* identifier.value = "1304-03720-eGFR_CKD_EPI-cr-cys"
+* code = $loinc#94677-2 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine and Cystatin C-based formula (CKD-EPI)"
 * status = #final
 
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
