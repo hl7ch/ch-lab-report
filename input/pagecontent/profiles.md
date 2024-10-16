@@ -51,28 +51,28 @@ Profile for observation laboratory result of automated Count of Blood Cells. We 
 
 * [CH LAB Observation Results CBC Panel - Blood by Automated count, Results in nested Profiles](StructureDefinition-ch-lab-observation-cbc-panel.html)\
 This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the fotometry version of hemoglobin in this panel.
-* [CH LAB Observation Results: LeucocyteCount](StructureDefinition-ch-lab-observation-results-wbc.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory leucocyte count.
-* [CH LAB Observation Results: ErythrocyteCount](StructureDefinition-ch-lab-observation-results-rbc.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory erythrocyte count.
-* [CH LAB Observation Results: Hemoglobin](StructureDefinition-ch-lab-observation-results-hb.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory hemoglobin.
-* [CH LAB Observation Results: Hemotocrit](StructureDefinition-ch-lab-observation-results-ht.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory hemotocrit in Switzerland.
-* [CH LAB Observation Results: MeanCorpuscularVolume](StructureDefinition-ch-lab-observation-results-mcv.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCV.
-* [CH LAB Observation Results: Mean Corpuscular Hemoglobin](StructureDefinition-ch-lab-observation-results-mch.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCH in Switzerland.
-* [CH LAB Observation Results: Mean Corpuscular Hemoglobin Concentration](StructureDefinition-ch-lab-observation-results-mchc.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCHC in Switzerland.
-* [CH LAB Observation Results: Erythrocyte distribution by Automated count](StructureDefinition-ch-lab-observation-results-ery-distribution-width.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribuition Width in Switzerland.
-* [CH LAB Observation Results: Platelet Count](StructureDefinition-ch-lab-observation-results-platelets.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet count.
-* [CH LAB Observation Results: Platelet Distribution Width](StructureDefinition-ch-lab-observation-results-platelets-distribution-width.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet count.
-* CH [LAB Observation Results: Platelet Mean Volume](StructureDefinition-ch-lab-observation-results-platelets-mean-volume.html)\
-This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet mean volume.
+  - [CH LAB Observation Results: LeucocyteCount](StructureDefinition-ch-lab-observation-results-wbc.html)\
+  This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory leucocyte count.
+  - [CH LAB Observation Results: ErythrocyteCount](StructureDefinition-ch-lab-observation-results-rbc.html)\
+  This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory erythrocyte count.
+  - [CH LAB Observation Results: Hemoglobin](StructureDefinition-ch-lab-observation-results-hb.html)\
+  This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory hemoglobin.
+  - [CH LAB Observation Results: Hemotocrit](StructureDefinition-ch-lab-observation-results-ht.html)\
+  This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory hemotocrit in Switzerland.
+  - [CH LAB Observation Results: MeanCorpuscularVolume](StructureDefinition-ch-lab-observation-results-mcv.html)\
+  This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCV.
+  - [CH LAB Observation Results: Mean Corpuscular Hemoglobin](StructureDefinition-ch-lab-observation-results-mch.html)\
+  This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCH in Switzerland.
+  - [CH LAB Observation Results: Mean Corpuscular Hemoglobin Concentration](StructureDefinition-ch-lab-observation-results-mchc.html)\
+  This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCHC in Switzerland.
+  - [CH LAB Observation Results: Erythrocyte distribution by Automated count](StructureDefinition-ch-lab-observation-results-ery-distribution-width.html)\
+  This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribuition Width in Switzerland.
+  - [CH LAB Observation Results: Platelet Count](StructureDefinition-ch-lab-observation-results-platelets.html)\
+  This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet count.
+  - [CH LAB Observation Results: Platelet Distribution Width](StructureDefinition-ch-lab-observation-results-platelets-distribution-width.html)\
+  This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet count.
+  - CH [LAB Observation Results: Platelet Mean Volume](StructureDefinition-ch-lab-observation-results-platelets-mean-volume.html)\
+  This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet mean volume.
 
 #### Panels for renal insufficiency and eGFR (estimated Glomerulum Filtration Rate)
 
@@ -80,24 +80,20 @@ The estimated glomerular filtration rate (eGFR) is a critical measure used to as
 
 * [CH LAB Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)\
 This panel collects the lab results in relation to renal insufficiency.\
-* [CH LAB Observation Results: eGFR](StructureDefinition-ch-lab-observation-egfr.html)\
-Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular filtration rate (eGFR) can be calculated.
-* [CH LAB Observation Results: Albumin/Creatinine Ratio in Urine](StructureDefinition-ch-lab-observation-albumin-creatinine-urine-ratio.html)\
-This profile constrains the ChLabObservationSingleTest profile to get the ratio of laboratory albumin/creatinin concentration.\
+  - [CH LAB Observation Results: eGFR](StructureDefinition-ch-lab-observation-egfr.html)\
+  Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular filtration rate (eGFR) can be calculated.
+  - [CH LAB Observation Results: Albumin/Creatinine Ratio in Urine](StructureDefinition-ch-lab-observation-albumin-creatinine-urine-ratio.html)\
+  This profile constrains the ChLabObservationSingleTest profile to get the ratio of laboratory albumin/creatinin concentration.\
 
-##### eGFR_MDRD and eGFR_CKD_EPI based on serum creatinine, age, gender, race
+##### eGFR_MDRD based on serum creatinine, age, gender, race
 
 * [CH LAB Observation Results: eGFR - MDRD Profile](StructureDefinition-ch-lab-observation-egfr-mdrd.html)\
 Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated.
 
+##### eGFR_CKD_EPI based on serum creatinine, age, gender, race
+
 * [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile](StructureDefinition-ch-lab-observation-egfr-ckd-epi.html)\
 Renal function can be determined by laboratory measurement of serum creatinine and serum cystatin C, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
-
-
-<!--
-* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for males](StructureDefinition-ch-lab-observation-egfr-ckd-epi.html)\
-Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
--->
 
 ##### eGFRcr_CKD_EPI_2021 based on serum creatinine, serum creatinine and cystatin-C, age, gender
 

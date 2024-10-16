@@ -10,9 +10,9 @@ or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [
 The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope dilution
 mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations used for 
 eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace.
-[https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953)\
-There is a [corresponding calculator](https://www.kidney.org/professionals/gfr_calculator)
-
+[https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953)\n
+There is a [corresponding calculator](https://www.kidney.org/professionals/gfr_calculator)\n
+For children below 18 y there is a [Pediatric GFR Calculator](https://www.kidney.org/professionals/kdoqi/gfr_calculatorPed)
 """
 
 * code from ObservationCode_CDK_EPI_2021 (required)
