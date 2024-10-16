@@ -65,7 +65,7 @@ This panel is the traditional hemogram plus platelet count which must now be rep
   This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCH in Switzerland.
   - [CH LAB Observation Results: Mean Corpuscular Hemoglobin Concentration](StructureDefinition-ch-lab-observation-results-mchc.html)\
   This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCHC in Switzerland.
-  - [CH LAB Observation Results: Erythrocyte distribution by Automated count](StructureDefinition-ch-lab-observation-results-ery-distribution-width.html)\
+  - [CH LAB Observation Results: Erythrocyte distribution Width by Automated count](StructureDefinition-ch-lab-observation-results-ery-distribution-width.html)\
   This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribuition Width in Switzerland.
   - [CH LAB Observation Results: Platelet Count](StructureDefinition-ch-lab-observation-results-platelets.html)\
   This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet count.
