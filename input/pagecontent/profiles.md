@@ -2,6 +2,8 @@
 
 ### General Profiles for CH LAB-Report
 
+To provide a better overview, this implementation guide has divided the profiles into <i>General Profiles</i> and <i>Profiles for specific purposes</i>, the 
+
 * [CH LAB Composition: Laboratory Report](StructureDefinition-ch-lab-report-composition.html)\
 This profile constrains the Composition resource for the purpose of laboratory test reports in Switzerland.
 * [CH LAB Device: Analyzer](StructureDefinition-ch-lab-report-device-analyzer.html)\
@@ -29,9 +31,24 @@ This profile defines how to represent Specimen Additive Substances in HL7 FHIR f
 
 ### Profile for specific purposes, Panels (optional)
 
-In the laboratory field, we often use panels as a container for a group of laboratory analyses that belong together in terms of content, e.g. the group of analyses that quantify cardiovascular risks or that stand for a liver disease.
-It is the task of the individual medical laboratories to offer the user meaningful panels. Some laboratories also offer their customers the opportunity to create their own panels. This results in a wide range of panels that serve different purposes and differ from laboratory to laboratory. 
+In the laboratory field, we often use panels for grouping laboratory analyses that belong together in terms of content, e.g. the group of analyses that quantify cardiovascular risks or that stand for a liver disease.
+It is the task of the individual medical laboratories to offer the user meaningful panels. Some laboratories also offer their customers the opportunity to create their own panels. This results in a wide range of panels that serve different purposes and differ from laboratory to laboratory. However it 
 The implementation guide contains a narrow selection of panels that can be optionally used by laboratories and that can cover common needs.
+
+<div markdown="5" class="dragon">
+    <p>
+    In FHIR, we have various options for displaying test panels in the laboratory area:<br>
+      1. sliced component: we use the element <i>component</i> as an array in the Observation resource.<br>
+      2. nestet profiles: we can use the element <i>hasMember</i> to create test panels with any number of branches. The two profiles <i>CH LAB Observation Results Panel</i>> and <i>>CH LAB Observation Results Single Test</i> are provided for this purpose.
+    </p>
+    <p>
+    The implementers are asked here to communicate ... Or feedback on whether these dosage forms are sufficient would be helpful.
+    </p>
+    <p>
+    Please add your feedback via the 'Propose a change'-link in the footer of the page.
+    </p>
+</div>
+<br>
 
 * [CH LAB Observation Results: Panel](StructureDefinition-ChLab-observation-panel.html)\
 This profile constrains the ChLabObservationResultsLaboratory profile to represent only a panel / battery of laboratory test results for the HL7 Swiss project. The top-level observation contains only further observations-panels and observations-single-tests in the hasMember element. The observation-panels may carry a conclusion in the note element and/or a global interpretation by the producer of the study, in the interpretation element; value[x] and component elements are not allowed and have to be shown in the observation-single-test profile.
