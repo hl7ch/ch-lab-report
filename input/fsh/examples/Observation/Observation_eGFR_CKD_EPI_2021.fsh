@@ -11,6 +11,8 @@ Description: "eGFR-cr CKD-EPI 2021 based on Creatinin"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "BeatBunsen"
+* note.text = "All estimation formulas have their limitations: Only valid in steady state, i.e. not in acute renal failure, with abnormal muscle mass of the patient, with
+heavy meat consumption, dialysis and other conditions."
 * valueQuantity = 74 'mL/min' "mL/min"
 * referenceRange.low.value = 60
 * referenceRange.low.unit = "mL/min"
@@ -33,6 +35,8 @@ Description: "eGFR-cr-cys CKD-EPI 2021 based on Creatinine and Cystatin C"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "BeatBunsen"
+* note.text = "All estimation formulas have their limitations: Only valid in steady state, i.e. not in acute renal failure, with abnormal muscle mass of the patient, with
+heavy meat consumption, dialysis and other conditions."
 * valueQuantity = 74 'mL/min' "mL/min"
 * referenceRange.low.value = 60
 * referenceRange.low.unit = "mL/min"

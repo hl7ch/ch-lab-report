@@ -8,7 +8,6 @@ Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
 * identifier.value = "1304-03720-eGFR_CKD_EPI-cr"
 * code = $loinc#62238-1 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
-
 * status = #final
 
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
@@ -16,14 +15,8 @@ Usage: #example
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 * performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
-
-* referenceRange.low.value = 90
-* referenceRange.low.unit = "mL/min"
-* referenceRange.age.low.value = 18
-* referenceRange.age.low.unit = "a"
-* referenceRange.age.high.value = 30
-* referenceRange.age.high.unit = "a"
-* referenceRange.text = "Die Formel ist ab 18 bis 93 Jahre validiert."
+* note.text = "All estimation formulas have their limitations: Only valid in steady state, i.e. not in acute renal failure, with abnormal muscle mass of the patient, with
+heavy meat consumption, dialysis and other conditions."
 
 // * component[blacks].code = $loinc#88293-6 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
 * component[blacks].valueQuantity.comparator = #>
@@ -62,7 +55,8 @@ Usage: #example
 * performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "BeatBunsen"
 * performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
-
+* note.text = "All estimation formulas have their limitations: Only valid in steady state, i.e. not in acute renal failure, with abnormal muscle mass of the patient, with
+heavy meat consumption, dialysis and other conditions."
 /*
 * referenceRange[child].low.value = 90
 * referenceRange[child].low.unit = "mL/min"
@@ -72,14 +66,6 @@ Usage: #example
 * referenceRange[child].age.high.unit = "a"
 * referenceRange[child].text = "Die Formel ist nur ab 18 Jahre validiert."
 */
-
-* referenceRange.low.value = 90
-* referenceRange.low.unit = "mL/min"
-* referenceRange.age.low.value = 18
-* referenceRange.age.low.unit = "a"
-* referenceRange.age.high.value = 30
-* referenceRange.age.high.unit = "a"
-* referenceRange.text = "Die Formel ist ab 18 bis 93 Jahre validiert."
 
 /*
 * referenceRange[adult].low.value = 60
