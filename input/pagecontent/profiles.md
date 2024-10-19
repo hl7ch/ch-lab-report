@@ -38,12 +38,18 @@ The implementation guide contains a narrow selection of panels that can be optio
 <div markdown="5" class="dragon">
     <p>
     In FHIR, we have various options for displaying test panels in the laboratory area:<br>
-      1. sliced component: we use the element *component* as an array in the Observation resource. The disadvantage is that component cannot be structured.<br>
-      2. nested profiles: we can use the element *hasMember* to create test panels with any number of branches, which can be nested. The two profiles *CH LAB Observation Results Panel* and *CH LAB Observation Results Single Test* are provided for this purpose.
+      1. sliced component: we use the element <i>component</i> as an array in the Observation resource. The disadvantage is that component cannot be structured.<br>
+      2. nested profiles: we can use the element <i>hasMember</i> to create test panels with any number of branches, which can be nested. The two profiles <i>CH LAB Observation Results Panel</i> and <i>CH LAB Observation Results Single Test</i> are provided for this purpose.
     </p>
     <p>
-    The implementers are asked here to communicate ... Or feedback on whether these dosage forms are sufficient would be helpful.
+    The profile for estimated GFR is a particular challenge. There are different ways to calculate this GFR based on age, gender, race, creatinine, creatinine combined with cystatin-C. The implementation guide contains 3 profiles for this: 
+      <ol>
+        <li>eGFR-MDRD Profile</li>
+        <li>eGFR-CKD-EPI(ASR) 2009 Profile</li>
+        <li>eGFR-CKD-EPI(ASR) 2021 Profile</li>
+      </ol>
     </p>
+    <p>As long as different estimation formulas are still in use, the implementation guide should be able to map these. </p>
     <p>
     Please add your feedback via the 'Propose a change'-link in the footer of the page.
     </p>
@@ -104,18 +110,18 @@ This panel collects the lab results in relation to renal insufficiency.
 
 ##### eGFR_MDRD based on serum creatinine, age, gender, race
 
-* [CH LAB Observation Results: eGFR - MDRD Profile](StructureDefinition-ch-lab-observation-egfr-mdrd.html)  
+* [CH LAB Observation Results: eGFR-MDRD Profile](StructureDefinition-ch-lab-observation-egfr-mdrd.html)  
 Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated. Further input parameters are age, race and gender.  
 note: The MDRD equation is hardly used any more and is replaced by the CKD-EPI equation.
 
 ##### eGFR_CKD_EPI 2009 based on serum creatinine, age, gender, race
 
-* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) 2009 Profile](StructureDefinition-ch-lab-observation-egfr-ckd-epi-2009.html)  
+* [CH LAB Observation Results: eGFR-CKD-EPI(ASR) 2009 Profile](StructureDefinition-ch-lab-observation-egfr-ckd-epi-2009.html)  
 Renal function can be determined by laboratory measurement of serum creatinine and serum cystatin C, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
 
 ##### eGFR_CKD_EPI 2021 based on serum creatinine, serum creatinine and cystatin-C, age, gender
 
-* [CH LAB Observation Results: eGFR - CKD-EPI(AS) 2021 Profile](StructureDefinition-ch-lab-observation-egfr-ckd-epi-2021.html)  
+* [CH LAB Observation Results: eGFR-CKD-EPI(ASR) 2021 Profile](StructureDefinition-ch-lab-observation-egfr-ckd-epi-2021.html)  
 Glomerular filtration rate (GFR) is considered the best overall index of kidney function; however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate (eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation incorporating the patient's age, gender, and measured serum/plasma/blood creatinine only (eGFRcr) (this term) or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [LOINC: 98979-8](https://loinc.org/98979-8/). The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope dilution mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace. [https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953)
 
 <!--- 
