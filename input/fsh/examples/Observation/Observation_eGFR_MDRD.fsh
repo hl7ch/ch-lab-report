@@ -15,6 +15,7 @@ Usage: #example
 * effectiveDateTime = "2023-09-14T07:34:00+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
+* valueQuantity = 74 'mL/min' "mL/min"
 
 // * component[blacks].code = $loinc#48643-1 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
 * component[blacks].valueQuantity.comparator = #>
@@ -53,6 +54,8 @@ Usage: #example
 * effectiveDateTime = "2023-09-14T07:34:00+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
+* performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
+* valueQuantity = 74 'mL/min' "mL/min"
 
 // * component[blacks].code = $loinc#48643-1 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
 * component[blacks].valueQuantity.comparator = #>

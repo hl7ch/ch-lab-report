@@ -15,6 +15,8 @@ Usage: #example
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
+* valueQuantity = 74 'mL/min' "mL/min"
 
 * referenceRange.low.value = 90
 * referenceRange.low.unit = "mL/min"
@@ -60,6 +62,8 @@ Usage: #example
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "BeatBunsen"
+* performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
+* valueQuantity = 74 'mL/min' "mL/min"
 
 /*
 * referenceRange[child].low.value = 90

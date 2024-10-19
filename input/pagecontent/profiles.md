@@ -110,12 +110,12 @@ note: The MDRD equation is hardly used any more and is replaced by the CKD-EPI e
 
 ##### eGFR_CKD_EPI 2009 based on serum creatinine, age, gender, race
 
-* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile](StructureDefinition-ch-lab-observation-egfr-ckd-epi-2009.html)  
+* [CH LAB Observation Results: eGFR - CKD-EPI(ASR) 2009 Profile](StructureDefinition-ch-lab-observation-egfr-ckd-epi-2009.html)  
 Renal function can be determined by laboratory measurement of serum creatinine and serum cystatin C, from which the estimated glomerular (eGFR_CKD_EPI) filtration rate can be calculated.
 
-##### eGFRcr_CKD_EPI_2021 based on serum creatinine, serum creatinine and cystatin-C, age, gender
+##### eGFR_CKD_EPI 2021 based on serum creatinine, serum creatinine and cystatin-C, age, gender
 
-* [CH LAB Observation Results: eGFR - CKD-EPI(AS) Creatinin based Profile](StructureDefinition-ch-lab-observation-egfr-ckd-epi-2021.html)  
+* [CH LAB Observation Results: eGFR - CKD-EPI(AS) 2021 Profile](StructureDefinition-ch-lab-observation-egfr-ckd-epi-2021.html)  
 Glomerular filtration rate (GFR) is considered the best overall index of kidney function; however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate (eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation incorporating the patient's age, gender, and measured serum/plasma/blood creatinine only (eGFRcr) (this term) or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [LOINC: 98979-8](https://loinc.org/98979-8/). The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope dilution mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace. [https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953)
 
 <!--- 

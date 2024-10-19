@@ -12,7 +12,6 @@ Description: "eGFR-cr CKD-EPI 2021 based on Creatinin"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "BeatBunsen"
 * valueQuantity = 74 'mL/min' "mL/min"
-
 * referenceRange.low.value = 60
 * referenceRange.low.unit = "mL/min"
 * referenceRange.age.low.value = 31
