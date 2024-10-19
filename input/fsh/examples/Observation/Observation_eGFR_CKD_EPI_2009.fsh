@@ -1,8 +1,8 @@
 // ╭─── example eGFR_CKD_EPI by Creatinine-based formula ───╮
 // │ Observation with components for blacks and non-blacks  │
 // ╰────────────────────────────────────────────────────────╯
-Instance: Observation-eGFR-CKD-EPI-cr
-InstanceOf: ChLabObservation_eGFR_CKD_EPI
+Instance: Observation-eGFR-CKD-EPI-2009-cr
+InstanceOf: ChLabObservation_eGFR_CKD_EPI_2009
 Description: "Example of an Observation Instance with component.referenceRange"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -46,8 +46,8 @@ Usage: #example
 // ╭─ example eGFR_CKD_EPI by Creatinine/Cystatin-C-based formula ──╮
 // │      Observation with components for blacks and non-blacks     │
 // ╰────────────────────────────────────────────────────────────────╯
-Instance: Observation-eGFR-CKD-EPI-cr-cys
-InstanceOf: ChLabObservation_eGFR_CKD_EPI
+Instance: Observation-eGFR-CKD-EPI-2009-cr-cys
+InstanceOf: ChLabObservation_eGFR_CKD_EPI_2009
 Description: "Example of an Observation Instance with component.referenceRange"
 Usage: #example
 * identifier.system = "https://examle.com/labvalues"
