@@ -17,7 +17,7 @@ note: The MDRD equation is hardly used any more and is replaced by the CKD-EPI e
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #closed
-* component ^slicing.description = "2 possibilities: black - non-black"
+* component ^slicing.description = "2 possibilities: blacks - non-blacks"
 * component ^slicing.ordered = false
 * component contains
     blacks 1..1 MS and
