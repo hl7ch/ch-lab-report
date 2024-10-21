@@ -32,8 +32,7 @@ This profile defines how to represent Specimen Additive Substances in HL7 FHIR f
 ### Profile for specific purposes, Panels (optional)
 
 In the laboratory field, we often use panels for grouping laboratory analyses that belong together in terms of content, e.g. the group of analyses that quantify cardiovascular risks or that stand for a liver disease.
-It is the task of the individual medical laboratories to offer the user meaningful panels. Some laboratories also offer their customers the opportunity to create their own panels. This results in a wide range of panels that serve different purposes and differ from laboratory to laboratory. However it 
-The implementation guide contains a narrow selection of panels that can be optionally used by laboratories and that can cover common needs.
+It is the task of the individual medical laboratories to offer the user meaningful panels. Some laboratories also offer their customers the opportunity to create their own panels. All this results in a wide range of panels that serve different purposes and differ from laboratory to laboratory. The implementation guide contains a narrow selection of panels that can be optionally used by laboratories and that can cover common needs.
 
 <div markdown="5" class="dragon">
     <p>
@@ -112,7 +111,7 @@ This panel collects the lab results in relation to renal insufficiency.
 
 * [CH LAB Observation Results: eGFR-MDRD Profile](StructureDefinition-ch-lab-observation-egfr-mdrd.html)  
 Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular (eGFR_MDMR) filtration rate can be calculated. Further input parameters are age, race and gender.  
-note: The MDRD equation is hardly used any more and is replaced by the CKD-EPI equation.
+Note: The MDRD equation is hardly used any more and is replaced by the CKD-EPI equation.
 
 ##### eGFR_CKD_EPI 2009 based on serum creatinine, age, gender, race
 
