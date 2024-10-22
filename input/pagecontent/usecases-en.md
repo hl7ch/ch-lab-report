@@ -1,9 +1,5 @@
 <!--  markdownlint-disable MD001 MD041 -->
 
-### Diagram of Resources
-
-{% include img.html img="Resource Overview.svg" caption="Fig. 1: Resource Overview" width="80%" %}
-
 ### Laboratory Result Documents
 
 Based on 'HL7 Europe Laboratory Report', the laboratory results are shown here as FHIR bundle of type document. The first entry element is therefore the composition, which defines the structure of the document.
