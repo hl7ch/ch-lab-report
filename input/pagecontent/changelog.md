@@ -1,4 +1,9 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
+### STU 1 Ballot (2024)
+
+* [#102](https://github.com/hl7ch/ch-lab-report/issues/102) Move referenceRanges from dGFR profiles into examples
+* [#103](https://github.com/hl7ch/ch-lab-report/issues/103) Merge CDK-EPI profiles for males and females, parent is ChLabObservation_eGFR
+* [#104](https://github.com/hl7ch/ch-lab-report/issues/104) Merge Erythrocytes distribuition width, MDRD and CDK-EPI profiles, take codes from valueSet. eGFR calculation uses different formulas with different parameters, the implementation guide uses 3 calculation methods. Hopefully the professional organzation and the laboratories can 
 
 ### STU 1 Sequence - v1.0.0
 
@@ -44,7 +49,7 @@ All significant changes to this FHIR implementation guide will be documented on 
   * [CH LAB Observation Results: Renal Insufficiency Panel](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
 * [#76](https://github.com/hl7ch/ch-lab-report/issues/76) eGFR CKD-EPI 2009 or 2021 formula:
   *  [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for females](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-egfr-female.html)
-  * [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for males](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-egfr-ckd-epi-male.html)
+  * [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for males](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-egfr-ckd-epi-2009-male.html)
   * [CH LAB Observation Results: eGFRcr - CKD-EPI(AS) Creatinin based Profile](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-egfr-cr-ckd-epi-2001.html)
   * [CH LAB Observation Results: eGFRcr-cys - CKD-EPI(AS) Creatinin and Cystatin-C based Profile](https://build.fhir.org/ig/hl7ch/ch-lab-report/branches/develop/StructureDefinition-ch-lab-observation-egfr-cr-cys-ckd-epi-2001.html)
 
@@ -66,6 +71,8 @@ All significant changes to this FHIR implementation guide will be documented on 
     * [Blood Group Panel with Component ABO and Component Rh](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupComponent.html)
     * [Blood Group Rh combined](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupSimple.html)
 
-
-
-
+[#92 Profile: ChLabObservationBloodGroup](https://github.com/hl7ch/ch-lab-report/issues/92)
+  * Add Antibody ValueSets:
+    * ValueSet: ChLabBloodGroupAntibody
+    * ValueSet: ChLabBloodGroupAntibodyScreen
+    * ValueSet: ChLabBloodGroupAntibodyScreenResult

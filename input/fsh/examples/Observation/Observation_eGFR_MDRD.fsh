@@ -1,19 +1,22 @@
-// ╭──────  example eGFR-MDRD for a male Patient  ──────────╮
-// │ Observation with components for blacks and non-blacks  │
-// ╰────────────────────────────────────────────────────────╯
+// ╭────── example eGFR-MDRD for a male Patient ───────────╮
+// │ Observation with components for blacks and non-blacks │
+// ╰───────────────────────────────────────────────────────╯
 
 Instance: Observation-eGFR-MDRD-male
-InstanceOf: ChLabObservation_eGFR_MDRD_male
+InstanceOf: ChLabObservation_eGFR_MDRD
 Description: "Example of an Observation Instance with component.referenceRange"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
 * identifier.value = "1304-03720-eGFR-MDRD-male"
+* code = $loinc#70969-1 "Glomerular filtration rate/1.73 sq M.predicted among males [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
 * status = #final
 
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2023-09-14T07:34:00+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
+* note.text = "All estimation formulas have their limitations: Only valid in steady state, i.e. not in acute renal failure, with abnormal muscle mass of the patient, with
+heavy meat consumption, dialysis and other conditions."
 
 // * component[blacks].code = $loinc#48643-1 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
 * component[blacks].valueQuantity.comparator = #>
@@ -39,17 +42,20 @@ Usage: #example
 // ╰───────────────────────────────────────────────────────╯
 
 Instance: Observation-eGFR-MDRD-female
-InstanceOf: ChLabObservation_eGFR_MDRD_female
+InstanceOf: ChLabObservation_eGFR_MDRD
 Description: "Example of an Observation Instance with component.referenceRange"
 Usage: #example
 * identifier.system = "https://examle.com/labvalues"
 * identifier.value = "1304-03720-eGFR-MDRD-female"
-* status = #final
+* code = $loinc#50044-7 "Glomerular filtration rate/1.73 sq M.predicted among females [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
 
+* status = #final
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2023-09-14T07:34:00+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "Marc Mustermann"
+* note.text = "All estimation formulas have their limitations: Only valid in steady state, i.e. not in acute renal failure, with abnormal muscle mass of the patient, with
+heavy meat consumption, dialysis and other conditions."
 
 // * component[blacks].code = $loinc#48643-1 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
 * component[blacks].valueQuantity.comparator = #>

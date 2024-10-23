@@ -78,11 +78,17 @@ Eine Standardisierung im Bereich der Blutbank Resultate würde die Sicherheit be
 
 2. [ValueSet: Results Blood Group - SNOMED CT IPS Free Set ](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set) mit 13 Konzepten
 
-Dieser Leitfaden enthält 2 weitere mögliche ValueSets:
+Dieser Leitfaden enthält 3 weitere mögliche ValueSets:
 
-1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) mit den SNOMED CT Codes der Blutgruppen Antikörper Screening Tests
+1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper Screening Tests
 
 2. [ValueSet: CH Lab Results Blood Group Antibody (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper
+
+1. [ValueSet: CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) mit den SNOMED CT Codes der Blutgruppen-Antikörper screening tests
+
+2. [ValueSet: CH LAB BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-result-vs.html) mit den LOINC Codes der Resultate der Blutgruppen Antikörper screening Tests
+
+3. [ValueSet: CH LAB BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper Screening Tests
 
 Für die Standardisierung in Bereich Blutbank braucht es Mitarbeit und Zustimmung der Fachgesellschaft (Schweizerische Vereinigung für Transfusionsmedizin), die in der kurzen Zeit nicht erlangt werden konnte. Somit beschränkt sich dieser Leitfaden auf 4 mögliche Darstellungsformen als Beispiele von Blutbank Resultate: 
 

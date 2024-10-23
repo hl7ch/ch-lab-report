@@ -79,11 +79,13 @@ La standardizzazione nell'area dei risultati delle banche del sangue migliorereb
 
 2. [ValueSet: Results Blood Group - SNOMED CT IPS Free Set ](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set) con 13 concetti.
 
-Questa guida contiene altri 2 possibili ValueSet:
+Questa guida contiene altri 3 possibili ValueSet:
 
-1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) con i codici SNOMED CT dei test di screening degli anticorpi del gruppo sanguigno.
+1. [ValueSet: CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) con i codici SNOMED CT dei test di screening degli anticorpi del gruppo sanguigno.
 
-2. [ValueSet: CH Lab Results Blood Group Antibody (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-vs.html) con i codici SNOMED CT degli anticorpi del gruppo sanguigno.
+2. [ValueSet: CH LAB BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-result-vs.html) con i codici LOINC dei resultati dei test di screening degli anticorpi del gruppo sanguigno.
+
+3. [ValueSet: CH LAB BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) con i codici SNOMED CT degli anticorpi del gruppo sanguigno.
 
 La standardizzazione nel settore delle banche del sangue richiede la collaborazione e l'approvazione dell'associazione professionale (Schweizerische Vereinigung für Transfusionsmedizin), che non è stato possibile ottenere nel breve tempo a disposizione. La presente linea guida si limita pertanto a 4 possibili forme di presentazione come esempi di risultati delle banche del sangue: 
 
