@@ -8,7 +8,7 @@ Use [this calculator:](https://nierenrechner.de/index.php?page=egfr-ckd-rechner)
 or [GFR Calculators:](http://www.mdrd.com/)"""
 
 * code from ObservationCode_CDK_EPI_2009 (required)
-  * ^short = "ValueSet for the allowed LOINC codes for eGFR MDRD among blacks and non-blacks"
+  * ^short = "ValueSet for the allowed LOINC codes for eGFR CDK_EPI among blacks and non-blacks"
 
 // * code = $loinc#50044-7 "Glomerular filtration rate/1.73 sq M.predicted among females [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
 // * code MS
