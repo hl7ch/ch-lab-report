@@ -5,7 +5,7 @@ Id: ch-lab-specimen
 Description: "This profile constrains the Specimen resource for the purpose of laboratory test reports in Switzerland."
 * ^extension[$imposeProfile].valueCanonical = Canonical(SpecimenEu)
 
-* insert SetFmmandStatusRule ( 2, trial-use)
+// * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Specimen"
 * . ^definition = "Laboratory specimen"
 
