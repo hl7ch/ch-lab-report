@@ -4,7 +4,7 @@ Parent: CHCoreComposition
 Id: ch-lab-report-composition
 Title: "CH LAB Composition: Laboratory Report"
 Description: "This profile constrains the Composition resource for the purpose of laboratory test reports in Switzerland."
-* insert SetFmmandStatusRule ( 2, trial-use)
+// * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Report composition"
 * . ^definition = "Laboratory Report composition.
 \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."

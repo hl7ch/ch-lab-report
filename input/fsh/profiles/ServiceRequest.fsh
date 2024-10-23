@@ -8,7 +8,7 @@ Id: ch-lab-report-servicerequest
 Title: "CH LAB ServiceRequest: Laboratory Order"
 Description: "This profile constrains the ServiceRequest resource for the purpose of laboratory orders in Switzerland."
 
-* insert SetFmmandStatusRule ( 2, trial-use)
+// * insert SetFmmandStatusRule ( 2, trial-use)
 
 * identifier 1..
 * code from LabOrderCodesEuVs (preferred)
