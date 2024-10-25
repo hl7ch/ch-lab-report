@@ -1,6 +1,8 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 ### STU 1 Ballot (2024)
 * [#93](https://github.com/hl7ch/ch-lab-report/issues/93) Outcomment SetFmmandStatusRule in all profiles to set them to active.
+* [#94](https://github.com/hl7ch/ch-lab-report/issues/94) No amendments
+* [#95](https://github.com/hl7ch/ch-lab-report/issues/95) Reduce the minimum cardinality of Specimen.type to 0
 
 
 * [#102](https://github.com/hl7ch/ch-lab-report/issues/102) Move referenceRanges from dGFR profiles into examples
