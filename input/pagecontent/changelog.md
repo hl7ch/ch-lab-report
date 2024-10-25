@@ -3,7 +3,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#93](https://github.com/hl7ch/ch-lab-report/issues/93) Outcomment SetFmmandStatusRule in all profiles to set them to active.
 * [#94](https://github.com/hl7ch/ch-lab-report/issues/94) No amendments
 * [#95](https://github.com/hl7ch/ch-lab-report/issues/95) Reduce the minimum cardinality of Specimen.type to 0
-
+* [#96](https://github.com/hl7ch/ch-lab-report/issues/96) No amendments, because duplicate
 
 * [#102](https://github.com/hl7ch/ch-lab-report/issues/102) Move referenceRanges from dGFR profiles into examples
 * [#103](https://github.com/hl7ch/ch-lab-report/issues/103) Merge CDK-EPI profiles for males and females, parent is ChLabObservation_eGFR
