@@ -14,7 +14,7 @@ Description: "This profile constrains the Specimen resource for the purpose of l
 * subject only Reference(ChLabPatient or PatientAnimalEu or Group  or Device or Substance or Location)
 
 * type from LabSpecimenTypesEuVs (preferred)
-* type 0..1
+* type 0..1 // use case where specimen cannot be typed, so min. cardinality is 0
   * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite is present it shall be coherent with the type."
 * parent only Reference(ChLabSpecimen)
 * request
