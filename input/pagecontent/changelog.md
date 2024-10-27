@@ -5,8 +5,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#99](https://github.com/hl7ch/ch-lab-report/issues/99) Insert  'imposeProfile extension (to EU LAB) is missing for the ServiceRequest', replace parent of ChLabReportServiceRequest with ServiceRequestLabEu.
 * [#102](https://github.com/hl7ch/ch-lab-report/issues/102) Move referenceRanges from dGFR profiles into examples
 * [#103](https://github.com/hl7ch/ch-lab-report/issues/103) Merge CDK-EPI profiles for males and females, parent is ChLabObservation_eGFR
-* [#104](https://github.com/hl7ch/ch-lab-report/issues/104) Merge Erythrocytes distribuition width, MDRD and CDK-EPI profiles, take codes from valueSet. eGFR calculation uses different formulas with different parameters, the implementation guide uses 3 calculation methods. Hopefully the professional organzation and the laboratories can 
-
+* [#104](https://github.com/hl7ch/ch-lab-report/issues/104) Merge Erythrocytes distribuition width, MDRD and CDK-EPI profiles, take codes from valueSet. eGFR calculation uses different formulas with different parameters, the implementation guide uses 3 calculation methods.
 ### STU 1 Sequence - v1.0.0-ballot
 
 * [#48](https://github.com/hl7ch/ch-lab-report/issues/48): Exchange the conformsTo rules with the imposeProfile extension
