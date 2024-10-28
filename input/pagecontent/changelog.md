@@ -1,7 +1,9 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 ### STU 1 Ballot (2024)
 
-* [#77](https://github.com/hl7ch/ch-lab-report/issues/77) The graphic 'Resoure Overview' has been removed and displayed as a link to the Profiles page.
+* [#77](https://github.com/hl7ch/ch-lab-report/issues/77) The graphic 'Resoure Overview' has been removed.
+* [#78](https://github.com/hl7ch/ch-lab-report/issues/78) Add Examples: CH LAB Observation Blood Group - Definitions
+[Blood Group Panel with Component ABO and Component Rh resulting Weak D](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupComponentWeakD.html)
 
 * [#102](https://github.com/hl7ch/ch-lab-report/issues/102) Move referenceRanges from dGFR profiles into examples
 * [#103](https://github.com/hl7ch/ch-lab-report/issues/103) Merge CDK-EPI profiles for males and females, parent is ChLabObservation_eGFR
