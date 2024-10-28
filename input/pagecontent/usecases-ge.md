@@ -1,9 +1,5 @@
 <!-- markdownlint-disable MD001 MD041 -->
 
-### Diagram der Resourcen
-
-{% include img.html img="Resource Overview.svg" caption="Fig. 1: Resourcen Übersicht" width="80%" %}
-
 ### Laborergebnis Dokumente
 
 In Anlehnung an 'HL7 Europe Laboratory Report' werden hier die Laborergebnisse als FHIR-Bundle vom Typ Dokument dargestellt. Das erste entry Element ist also die Composition, die die Struktur des Dokuments definiert.
