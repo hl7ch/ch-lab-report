@@ -1,5 +1,7 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 ### STU 1 Ballot (2024)
+* [#93](https://github.com/hl7ch/ch-lab-report/issues/93) Outcomment SetFmmandStatusRule in all profiles to set them to active.
+
 
 * [#102](https://github.com/hl7ch/ch-lab-report/issues/102) Move referenceRanges from dGFR profiles into examples
 * [#103](https://github.com/hl7ch/ch-lab-report/issues/103) Merge CDK-EPI profiles for males and females, parent is ChLabObservation_eGFR
