@@ -1,10 +1,5 @@
 <!-- markdownlint-disable MD001 MD041 -->
 
-### Diagramma delle risorse
-
-{% include img.html img="Resource Overview.svg" caption="Fig. 1: Panoramica delle risorse" width="80%" %}
-
-
 ### Documenti dei risultati di laboratorio
 
 In linea con il 'HL7 Europe Laboratory Report', i risultati di laboratorio sono visualizzati qui come un bundle FHIR del tipo di documento. Il primo elemento di ingresso è quindi la composizione, che definisce la struttura del documento.
