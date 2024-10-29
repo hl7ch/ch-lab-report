@@ -2,6 +2,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### STU 1 Ballot (2024)
 * [#93](https://github.com/hl7ch/ch-lab-report/issues/93) Outcomment SetFmmandStatusRule in all profiles to set them to active.
 
+* [#99](https://github.com/hl7ch/ch-lab-report/issues/99) Insert 'imposeProfile extension (to EU LAB)' into the ChLabReportServiceRequest profile'
 
 * [#77](https://github.com/hl7ch/ch-lab-report/issues/77) The graphic 'Resoure Overview' has been removed.
 * [#78](https://github.com/hl7ch/ch-lab-report/issues/78) Add Examples: CH LAB Observation Blood Group - Definitions
@@ -9,8 +10,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 * [#102](https://github.com/hl7ch/ch-lab-report/issues/102) Move referenceRanges from dGFR profiles into examples
 * [#103](https://github.com/hl7ch/ch-lab-report/issues/103) Merge CDK-EPI profiles for males and females, parent is ChLabObservation_eGFR
-* [#104](https://github.com/hl7ch/ch-lab-report/issues/104) Merge Erythrocytes distribuition width, MDRD and CDK-EPI profiles, take codes from valueSet. eGFR calculation uses different formulas with different parameters, the implementation guide uses 3 calculation methods. Hopefully the professional organzation and the laboratories can 
-
+* [#104](https://github.com/hl7ch/ch-lab-report/issues/104) Merge Erythrocytes distribuition width, MDRD and CDK-EPI profiles, take codes from valueSet. eGFR calculation uses different formulas with different parameters, the implementation guide uses 3 calculation methods.
 ### STU 1 Sequence - v1.0.0-ballot
 
 * [#48](https://github.com/hl7ch/ch-lab-report/issues/48): Exchange the conformsTo rules with the imposeProfile extension

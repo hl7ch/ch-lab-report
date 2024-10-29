@@ -3,10 +3,10 @@ Parent: Observation
 Id: ch-lab-observation-results-laboratory
 Title: "CH LAB Observation Results: Laboratory Report"
 Description: "This profile constrains the Observation resource for the purpose of laboratory test reports in Switzerland."
+
 * . ^short = "CH LAB Observation Results: Laboratory"
 
 * ^extension[$imposeProfile].valueCanonical = Canonical(ObservationResultsLaboratoryEu)
-
 // * insert SetFmmandStatusRule ( 2, trial-use)
 * ^experimental = false
 * ^purpose = "This profile constrains the Observation resource to represent a laboratory in vitro diagnostic test or panel/study. In case of a panel/study, the results of the panel appear as sub-observations. In this case this top-level Observation acts as a grouper of all the observations belonging to the panel or study.  The top-level observation may carry a conclusion in the note element and or a global interpretation by the producer of the study, in the interpretation element."
