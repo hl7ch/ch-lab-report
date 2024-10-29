@@ -1,12 +1,19 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 ### STU 1 Ballot (2024)
-* [#93](https://github.com/hl7ch/ch-lab-report/issues/93) Outcomment SetFmmandStatusRule in all profiles to set them to active.
 
-* [#99](https://github.com/hl7ch/ch-lab-report/issues/99) Insert 'imposeProfile extension (to EU LAB)' into the ChLabReportServiceRequest profile'
-
-* [#77](https://github.com/hl7ch/ch-lab-report/issues/77) The graphic 'Resoure Overview' has been removed.
-* [#78](https://github.com/hl7ch/ch-lab-report/issues/78) Add Examples: CH LAB Observation Blood Group - Definitions
+* [#77](https://github.com/hl7ch/ch-lab-report/issues/77): The graphic 'Resoure Overview' has been removed and been replaced by link to ch-elm
+* [#78](https://github.com/hl7ch/ch-lab-report/issues/78): Add Examples: CH LAB Observation Blood Group - Definitions
 [Blood Group Panel with Component ABO and Component Rh resulting Weak D](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupComponentWeakD.html)
+* [#93](https://github.com/hl7ch/ch-lab-report/issues/93): Outcomment SetFmmandStatusRule in all profiles to set them to active.
+* [#94](https://github.com/hl7ch/ch-lab-report/issues/94): Bundle 2-electrophoresis – JSON: section "Laboratory examinations" empty? no amendment: contains subsection "Chemistry studies (set)
+* [#95](https://github.com/hl7ch/ch-lab-report/issues/95): Specimen.type: reduce the minimum cardinality of Specimen.type to 0.
+* [#96](https://github.com/hl7ch/ch-lab-report/issues/96): Duplicate from #95, no amendment
+
+* [#99](https://github.com/hl7ch/ch-lab-report/issues/99): Insert 'imposeProfile extension (to EU LAB)' into the ChLabReportServiceRequest profile'
+* [#100](https://github.com/hl7ch/ch-lab-report/issues/100)
+
+
+
 
 * [#102](https://github.com/hl7ch/ch-lab-report/issues/102) Move referenceRanges from dGFR profiles into examples
 * [#103](https://github.com/hl7ch/ch-lab-report/issues/103) Merge CDK-EPI profiles for males and females, parent is ChLabObservation_eGFR
