@@ -2,7 +2,7 @@
 // │ Observation with SNOMED CT coded value    │
 // ╰───────────────────────────────────────────╯
 Instance: BloodGroupSimple
-InstanceOf: ChLabObservationSingleTest
+InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group Rh combined"
 Description: "Example reporting Blood Group and RhD Result combined and coded with SNOMED CT"
 Usage: #example
@@ -30,7 +30,7 @@ Usage: #example
 // │ RhD Result: component coded with LOINC, Result coded with SNOMED CT │
 // ╰─────────────────────────────────────────────────────────────────────╯
 Instance: BloodGroupComponent
-InstanceOf: ChLabObservationSingleTest
+InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group Panel with Component ABO and Component Rh"
 Description: "Example reporting ABO group [Type] and Rh [Type] separately in a component and coded with SNOMED CT"
 Usage: #example
@@ -66,7 +66,7 @@ Usage: #example
 // │ RhD Result: component coded with LOINC, Result coded with SNOMED CT │
 // ╰─────────────────────────────────────────────────────────────────────╯
 Instance: BloodGroupComponentWeakD
-InstanceOf: ChLabObservationSingleTest
+InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group Panel with Component ABO and Component Rh resulting Weak D"
 Description: "Example reporting ABO group [Type] and Rh [Type] separately in a component and coded with SNOMED CT, the latter proving weak D is in VS"
 Usage: #example

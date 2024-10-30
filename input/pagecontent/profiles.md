@@ -65,6 +65,9 @@ This profile constrains the ChLabObservationResultsLaboratory profile to represe
 * [CH LAB Observation Results: Single Test](StructureDefinition-ChLab-observation-single-test.html)  
 This profile constrains the ChLabObservationResultsLaboratory profile to represent single test results for the HL7 Swiss project. The profile enables only value[x] and component elements, hasMemer elements are not allowed.
 
+* [CH LAB Observation Results: Blood Group](StructureDefinition-ch-lab-observation-blood-group.html)  
+This profile enables the value vets from EU laboratory, and in addition the value sets of the antibody screen tests and the other immunohematology tests.
+
 #### Panels for automated blood cell count
 
 We have two possibilities to structure the data for an automated blood cell count. We can use a profile with contains each cell count in a component. Or we pack the results in a container profile with nested cell count profiles.
