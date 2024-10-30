@@ -1,6 +1,9 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 ### STU 1 Ballot (2024)
 * [#93](https://github.com/hl7ch/ch-lab-report/issues/93) Outcomment SetFmmandStatusRule in all profiles to set them to active.
+* [#94](https://github.com/hl7ch/ch-lab-report/issues/94) Bundle 2-electrophoresis – JSON: section "Laboratory examinations" empty? no amendment: contains subsection "Chemistry studies (set)
+* [#95](https://github.com/hl7ch/ch-lab-report/issues/95) Specimen.type: reduce the minimum cardinality of Specimen.type to 0.
+* [#96](https://github.com/hl7ch/ch-lab-report/issues/96) Duplicate from #95, no amendment
 
 * [#99](https://github.com/hl7ch/ch-lab-report/issues/99) Insert 'imposeProfile extension (to EU LAB)' into the ChLabReportServiceRequest profile'
 
