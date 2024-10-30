@@ -162,4 +162,46 @@ Description: "Example reporting just blood group Rh System"
 * valueCodeableConcept.coding.system = $sct
 * valueCodeableConcept.coding.display = "RhD positive (finding)"
 
+Instance: BloodGroupDAT
+InstanceOf: ChLab-observation-single-test
+Usage: #example
+Title: "Blood Group Rh with direct Coombs-Test"
+Description: "Example reporting blood group Rh System and Coombs-Test"
+* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.value = "1304-03760-blood-group-Rh"
+* status = #final
+* category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
+* category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
+* code = $loinc#10331-7 "Rh [Type] in Blood"
+* code = $loinc#1007-4 "Direct antiglobulin test.polyspecific reagent [Presence] on Red Blood Cells"
+* code.text = "Direct Antiglobulin Test (DAT; Direct Coombs), Red blood cells"   // Consumer Name
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* valueCodeableConcept.coding.code = #309300003 // is there a more specific code?
+* valueCodeableConcept.coding.system = $sct
+* valueCodeableConcept.coding.display = "Negative laboratory finding (navigational concept)"
+
+Instance: BloodGroupAntibodies
+InstanceOf: ChLab-observation-single-test
+Usage: #example
+Title: "Blood Group Antibody Test"
+Description: "Example reporting Antibodies"
+* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.value = "1304-03760-blood-group-Rh"
+* status = #final
+* category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
+* category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
+// * code = $loinc#10331-7 "Rh [Type] in Blood"
+* code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
+* code.text = "Blood group antibody screen, Blood"   // Consumer Name
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+* valueCodeableConcept.coding.code = #309300003 // is there a more specific code?
+* valueCodeableConcept.coding.system = $sct
+* valueCodeableConcept.coding.display = "Negative laboratory finding (navigational concept)"
+
 // * valueCodeableConcept.text = "text from LIS"
