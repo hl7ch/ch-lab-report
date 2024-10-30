@@ -6,7 +6,10 @@ Modern medical laboratory techniques aid clinicians in diagnosing, preventing, a
 
 <div markdown="1" class="stu-note">
 
-The specification herewith documented is work in progress. No liability can be inferred from the use or misuse of this specification, or its consequences.
+This implementation guide is under STU ballot by [HL7 Switzerland](https://www.hl7.ch/) until September 30th, 2024 midnight.   
+Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments. 
+
+[Significant changes, open and closed issues.](changelog.html)
 
 </div>
 

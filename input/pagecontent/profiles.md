@@ -53,7 +53,8 @@ It is the task of the individual medical laboratories to offer the user meaningf
         <li>eGFR-CKD-EPI(ASR) 2021 Profile</li>
       </ol>
     </p>
-    <p>As long as different estimation formulas are still in use, the implementation guide should be able to map these. </p>
+    <p>Michael Dickenmann, Co-Chief Physician Transplantation Immunology & Nephrology University Hospital Basel says: "Well, the fact is that there is explicitly <strong>no standard</strong> in Switzerland. The professional association allows both formulas, for various reasons (history, custom, politics (“factor for blacks”)). Likewise the statement of both formulas is virtually identical, they are both equally meaningful. He recommends that we map both formulas and mention that it is decided per institution, which is used. However, the discussion in Switzerland, Europe and worldwide is probably heated and ongoing."
+</p>
     <p>
     Please add your feedback via the 'Propose a change'-link in the footer of the page.
     </p>
@@ -64,6 +65,9 @@ It is the task of the individual medical laboratories to offer the user meaningf
 This profile constrains the ChLabObservationResultsLaboratory profile to represent only a panel / battery of laboratory test results for the HL7 Swiss project. The top-level observation contains only further observations-panels and observations-single-tests in the hasMember element. The observation-panels may carry a conclusion in the note element and/or a global interpretation by the producer of the study, in the interpretation element; value[x] and component elements are not allowed and have to be shown in the observation-single-test profile.
 * [CH LAB Observation Results: Single Test](StructureDefinition-ChLab-observation-single-test.html)  
 This profile constrains the ChLabObservationResultsLaboratory profile to represent single test results for the HL7 Swiss project. The profile enables only value[x] and component elements, hasMemer elements are not allowed.
+
+* [CH LAB Observation Results: Blood Group](StructureDefinition-ch-lab-observation-blood-group.html)  
+This profile enables the value vets from EU laboratory, and in addition the value sets of the antibody screen tests and the other immunohematology tests.
 
 #### Panels for automated blood cell count
 
