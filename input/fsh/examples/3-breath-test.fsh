@@ -200,6 +200,32 @@ Usage: #inline
 // * 443661003 "Hydrogen breath test using lactose (procedure)"
 * method = $sct#252233000 "Hydrogen breath test (procedure)"
 * device = Reference(urn:uuid:b2b5e406-02d0-46de-85bb-561fe37040bb) "Breath-Test System"
+* hasMember[+] = Reference(Observation-3-breath-test-hydrogen)
+* hasMember[+] = Reference(Observation-3-breath-test-methane)
+
+
+Instance: Observation-3-breath-test-hydrogen
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "H2 breath Test"
+Description: "The overall interpretation for a hydrogen or methane breath test (HBT) post dose a lactose sugar challenge. An HBT is performed to diagnose a lactose malabsorption or abnormal growth of bacteria in the intestine."
+Usage: #inline
+* id = "f36365f1-4b7e-4458-99af-d950b8608ea7"
+* status = #final
+
+* category[specialty] = $sct#394596001 "Chemical pathology (qualifier value)"
+* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
+* code = $loinc#105751-2 "Lactose challenge panel-hydrogen - Exhaled gas"
+* code.text = "Lactose challenge (hydrogen breath test) panel (Exhl gas)" // LOINC Display Name
+* subject = Reference(urn:uuid:9b3d24a2-9d79-4d3a-b3e2-7dd8fdde5eff) "Emil Emmenegger"
+* effectiveDateTime = "2024-03-13T01:43:30Z"
+* performer = Reference(urn:uuid:49f8e829-1242-47a9-b958-32be38d09e5b) "Katrin Klauser"
+* specimen = Reference(urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10) "Gas-3-breath-test"
+
+// ---- TODO SNOMED CT has no concept 'Hydrogen breath test (qualifier value)'
+
+// * 443661003 "Hydrogen breath test using lactose (procedure)"
+* method = $sct#252233000 "Hydrogen breath test (procedure)"
+* device = Reference(urn:uuid:b2b5e406-02d0-46de-85bb-561fe37040bb) "Breath-Test System"
 
 // ╭─── Component ──╮
 // │    Hydrogen    │
@@ -245,6 +271,50 @@ Usage: #inline
   * valueQuantity = 59 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
+
+// ╭──────────── Component ───────────────────────╮
+// │ clinical Observations during challenge test  │
+// │ note: valueBoolean is not supported, issue!  │
+// ╰──────────────────────────────────────────────╯
+* component[+]
+  * code = $sct#51197009 "Stomach cramps (finding)"
+  * valueBoolean = false
+
+* component[+]
+  * code = $sct#308698004 "Flatulence symptom (finding)"
+  * valueBoolean = false
+
+* component[+]
+  * code = $sct#422587007 "Nausea (finding)"
+  * valueBoolean = false
+
+* component[+]
+  * code = $sct#62315008 "Diarrhea (finding)"
+  * valueBoolean = false
+
+
+Instance: Observation-3-breath-test-methane
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "CH4 breath Test"
+Description: "When ingested sugars are not completely absorbed, bacteria within the large bowel produce hydrogen and/or methane gas that will be detected in the breath test. The poor absorption of an orally ingested sugar is indicated by amounts larger than normal and above baseline levels of exhaled hydrogen or methane in your breath."
+Usage: #inline
+* id = "f36365f1-4b7e-4458-99af-d950b8608ea7"
+* status = #final
+
+* category[specialty] = $sct#394596001 "Chemical pathology (qualifier value)"
+* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
+* code = $loinc#105750-4 "Lactose challenge (methane breath test) panel - Exhaled gas"
+* code.text = "Lactose challenge (methane breath test) panel (Exhl gas)" // LOINC Display Name
+* subject = Reference(urn:uuid:9b3d24a2-9d79-4d3a-b3e2-7dd8fdde5eff) "Emil Emmenegger"
+* effectiveDateTime = "2024-03-13T01:43:30Z"
+* performer = Reference(urn:uuid:49f8e829-1242-47a9-b958-32be38d09e5b) "Katrin Klauser"
+* specimen = Reference(urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10) "Gas-3-breath-test"
+
+// ---- TODO SNOMED CT has no concept 'Hydrogen breath test (qualifier value)'
+
+// * 443661003 "Hydrogen breath test using lactose (procedure)"
+* method = $sct#252233000 "Hydrogen breath test (procedure)"
+* device = Reference(urn:uuid:b2b5e406-02d0-46de-85bb-561fe37040bb) "Breath-Test System"
 
 // ╭─── Component ──╮
 // │    Methane     │
@@ -310,8 +380,6 @@ Usage: #inline
 * component[+]
   * code = $sct#62315008 "Diarrhea (finding)"
   * valueBoolean = false
-
-// * hasMember[+] = Reference(urn:uuid:d130cf00-e7bc-49f3-8de5-8341c740865b) "Observation-Albumin-abs"
 
 // ╭─── specimen 3-breath-test ─────╮
 // │     exhaled gas                │

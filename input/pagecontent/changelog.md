@@ -4,6 +4,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#70](https://github.com/hl7ch/ch-lab-report/issues/70) Limit image size to 20 megabytes: Add menu point and page 'Guidance'.
 * [#71](https://github.com/hl7ch/ch-lab-report/issues/71) Example for renal Insufficiency
 * [#73](https://github.com/hl7ch/ch-lab-report/issues/73) Results Blood Group: Add more examples
+* [#74](https://github.com/hl7ch/ch-lab-report/issues/74) Missing loinc codes for CH4 breath tests: split the instance Observation-3-breath-test into 2 observations and assign each the correspondent LOINC code.
 * [#77](https://github.com/hl7ch/ch-lab-report/issues/77) The graphic 'Resoure Overview' has been removed.
 * [#78](https://github.com/hl7ch/ch-lab-report/issues/78) Add Examples: CH LAB Observation Blood Group - Definitions
 [Blood Group Panel with Component ABO and Component Rh resulting Weak D](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupComponentWeakD.html)
