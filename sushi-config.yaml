@@ -49,6 +49,8 @@ pages:
       title: Use Cases in Italian
   document.md:
     title: Document
+  guidance.md:
+    title: Guidance
   profiles.md:
     title: Profiles
   extensions.md:
@@ -71,6 +73,7 @@ menu:
     Use Cases French: usecases-fr.html
     Use Cases Italian: usecases-it.html
   Document: document.html
+  Guidance: guidance.html
   Profiles: profiles.html
   Terminology: terminology.html
   Artifacts: artifacts.html

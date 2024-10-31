@@ -1,6 +1,7 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 ### STU 1 Ballot (2024)
 
+* [#70](https://github.com/hl7ch/ch-lab-report/issues/70) Limit image size to 20 megabytes: Add menu point and page 'Guidance'.
 * [#71](https://github.com/hl7ch/ch-lab-report/issues/71) Example for renal Insufficiency
 * [#73](https://github.com/hl7ch/ch-lab-report/issues/73) Results Blood Group: Add more examples
 * [#77](https://github.com/hl7ch/ch-lab-report/issues/77) The graphic 'Resoure Overview' has been removed.
