@@ -64,7 +64,7 @@ This implementation guide contains and references intellectual property owned by
 
 #### Dependency Overview
 
-A graphic overview of the dependencies, in particular with regard to the exchange format of reportable laboratory results in Switzerland, can be found [here](https://fhir.ch/ig/ch-elm/index.html). It also shows the dependency on the [European laboratory project(https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html)].
+A graphic overview of the dependencies, in particular with regard to the exchange format of reportable laboratory results in Switzerland, can be found [here](https://fhir.ch/ig/ch-elm/index.html#dependency-overview). It also shows the dependency on the [European laboratory project(https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html)].
 
 {% include dependency-table.xhtml %}
 
