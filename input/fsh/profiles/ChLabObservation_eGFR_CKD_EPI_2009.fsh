@@ -25,7 +25,7 @@ or [GFR Calculators:](http://www.mdrd.com/)"""
     blacks 1..1 and
     non-blacks 1..1
 * component[blacks] ^short = "eGFR_CKD_EPI among blacks"
-* component[blacks].code = $loinc#88293-6 "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
+* component[blacks].code = $loinc#88293-6 // "Glomerular filtration rate/1.73 sq M.predicted among blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
 * component[blacks].code ^short = "eGFR_CKD_EPI among blacks code"
 * component[blacks].valueQuantity only QuantityEuLab
 * component[blacks].valueQuantity MS
@@ -41,7 +41,7 @@ or [GFR Calculators:](http://www.mdrd.com/)"""
 * component[blacks].valueQuantity.code = #mL/min (exactly)
 
 * component[non-blacks] ^short = "eGFR_CKD_EPI among non-blacks"
-* component[non-blacks].code = $loinc#88294-4 "Glomerular filtration rate/1.73 sq M.predicted among non-blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
+* component[non-blacks].code = $loinc#88294-4 // "Glomerular filtration rate/1.73 sq M.predicted among non-blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)"
 * component[non-blacks].code ^short = "eGFR_CKD_EPI among non-blacks code"
 * component[non-blacks].valueQuantity only QuantityEuLab
 * component[non-blacks].valueQuantity MS

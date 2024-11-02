@@ -55,4 +55,4 @@ Description: "Specimen Additive Substance EDTA"
 * category = $substance-category#chemical "Chemical"
 * code.coding.code = #1256100007
 * code.coding.system = $sct
-* code.coding.display = "Edetate dipotassium (substance)"
+// * code.coding.display = "Edetate dipotassium (substance)"
