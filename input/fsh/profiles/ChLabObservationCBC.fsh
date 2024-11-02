@@ -14,9 +14,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 
 * code = $loinc#58410-2 // "CBC panel - Blood by Automated count"
-  // * text = "CBC panel Auto (Bld)"
-  * ^short = "LOINC Display Name"
-* method = $sct#702659008 "Automated count technique (qualifier value)"
+* method = $sct#702659008 // "Automated count technique (qualifier value)"
 
 * component 8..12 MS    // 8..12
 * component ^slicing.discriminator.type = #value
@@ -250,8 +248,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 // +++++++
 * component[PlateletDistWidth] ^short = "Platelet Distribution Width"
 * component[PlateletDistWidth].code 1..1 MS
-* component[PlateletDistWidth].code ^short = // "PlateletDistWidth code"
-* component[PlateletDistWidth].code = $loinc#32207-3 "Platelet distribution width [Entitic volume] in Blood by Automated count"
+* component[PlateletDistWidth].code ^short = "Platelet distribution width [Entitic volume] in Blood by Automated count"
+* component[PlateletDistWidth].code = $loinc#32207-3
 // * component[PlateletDistWidth].code.text = "Platelet distribution width Auto (Bld) [Entitic vol]"
 // * component[PlateletDistWidth].code.text ^short = "LOINC Display Name"
 // * component[PlateletDistWidth].valueQuantity only QuantityEuLab

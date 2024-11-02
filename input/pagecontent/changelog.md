@@ -20,6 +20,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#104](https://github.com/hl7ch/ch-lab-report/issues/104) Merge Erythrocytes distribuition width, MDRD and CDK-EPI profiles, take codes from valueSet. eGFR calculation uses different formulas with different parameters, the implementation guide uses 3 calculation methods.
 
 * [#105](https://github.com/hl7ch/ch-lab-report/issues/105) Fixed coding including display: remove code.coding.display from all profiles
+* [#106](https://github.com/hl7ch/ch-lab-report/issues/106) CodeableConcept.text with fixed value: remove code.text from all profiles
 
 * [#113](https://github.com/hl7ch/ch-lab-report/issues/113) ChLab BloodGroup Antibody Screen Tests; 3 Value Sets are used by the Blood Group profile: CH LAB BloodGroup Antibody Result (SNOMED CT coded substances), CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures), CH LAB BloodGroup Antibody Screen Test Result (LOINC codes)
 

@@ -210,7 +210,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * . ^short = "CH LAB Observation Results: Laboratory Platelet Count"
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#32207-3 "Platelet distribution width [Entitic volume] in Blood by Automated count"
+* code = $loinc#32207-3  // "Platelet distribution width [Entitic volume] in Blood by Automated count"
 * method = $sct#702659008
 * specimen = Reference(BloodCBC)
 

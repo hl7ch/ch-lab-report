@@ -18,7 +18,7 @@ Description: """This panel collects the lab results in relation to renal insufie
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 
 * code = $sct#723188008 // "Renal insufficiency (disorder)"
-* code.text = "Collection of Laboratory results in relation to renal insufficiency" //
+// * code.text = "Collection of Laboratory results in relation to renal insufficiency" //
 // * hasMember 8..12
 // * hasMember ^slicing.discriminator.type = #value
 // * hasMember ^slicing.discriminator.path = "resolve().hasMember"
@@ -61,8 +61,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile det
 * hasMember ..0
 // * labTestKit = Reference(Combur_Test)  // may be substituted with other Stripe tests
 * code = $loinc#32294-1 // "Albumin/Creatinine [Ratio] in Urine"
-* code.text = "Albumin/Creatinine (U) [Ratio]"
-  * ^short = "LOINC Display Name"
+  * ^short = "Albumin/Creatinine (U) [Ratio]"
 * method = $sct#271075006 "Urine albumin/creatinine ratio measurement (procedure)"
 
 // https://github.com/hl7-eu/laboratory/blob/master/input/fsh/examples/lab_report/Observation-result-ratio-example.fsh
