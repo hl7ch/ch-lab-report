@@ -240,6 +240,6 @@ Description: "Example reporting Antibodies"
 * valueCodeableConcept.coding.code = #309300003 // is there a more specific code?
 * valueCodeableConcept.coding.system = $sct
 * valueCodeableConcept.coding.display = "Negative laboratory finding (navigational concept)"
-V
+*/
 
 // * valueCodeableConcept.text = "text from LIS"
