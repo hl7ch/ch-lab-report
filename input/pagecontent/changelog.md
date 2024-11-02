@@ -11,6 +11,8 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#78](https://github.com/hl7ch/ch-lab-report/issues/78) Add Examples: CH LAB Observation Blood Group - Definitions
 [Blood Group Panel with Component ABO and Component Rh resulting Weak D](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupComponentWeakD.html)
 
+* [#100](https://github.com/hl7ch/ch-lab-report/issues/100) Remove Fig. 1 Resource Overview diagram and place a link to the diagram Resource Overview of CH ELM on the profiles page.
+
 * [#102](https://github.com/hl7ch/ch-lab-report/issues/102) Move referenceRanges from dGFR profiles into examples
 * [#103](https://github.com/hl7ch/ch-lab-report/issues/103) Merge CDK-EPI profiles for males and females, parent is ChLabObservation_eGFR
 * [#104](https://github.com/hl7ch/ch-lab-report/issues/104) Merge Erythrocytes distribuition width, MDRD and CDK-EPI profiles, take codes from valueSet. eGFR calculation uses different formulas with different parameters, the implementation guide uses 3 calculation methods.
