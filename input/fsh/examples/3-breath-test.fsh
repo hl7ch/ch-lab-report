@@ -14,7 +14,7 @@ Usage: #example
 // │  Scenario 3-Carbohydrate malabsorption of Lactose     │
 // ╰───────────────────────────────────────────────────────╯
 
-* entry[Composition].fullUrl = "urn:uuid:1c437141-1784-4c8f-8f69-6deaea948a4d"
+* entry[Composition].fullUrl = "urn:uuid:1c437141-1784-4c8f-8f69-6deaea948a4d"   // entry[1]
 * entry[Composition].resource = Composition-3-breath-test
 * entry[DiagnosticReport].fullUrl = "urn:uuid:aa659dd8-28be-4c7e-ab27-286c5beff53c"
 * entry[DiagnosticReport].resource = DiagnosticReport-3-breath-test
@@ -28,11 +28,11 @@ Usage: #example
 * entry[Observation][=].resource = Observation-3-breath-test
 
 //================== Specimen ================================0
-* entry[Specimen][+].fullUrl = "urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10"
+* entry[Specimen][+].fullUrl = "urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10"   // entry[5]
 * entry[Specimen][=].resource = Gas-3-breath-test
 
 //=============== practitioner, organization =============================0
-* entry[PractitionerRole][+].fullUrl = "urn:uuid:3771d254-cee2-498e-a448-c5660ccd583d"   // entry[30]
+* entry[PractitionerRole][+].fullUrl = "urn:uuid:3771d254-cee2-498e-a448-c5660ccd583d"
 * entry[PractitionerRole][=].resource = TheoTillmannGruppenpraxis
 
 * entry[Practitioner][+].fullUrl = "urn:uuid:d55425b0-406c-4dde-9ea8-6b0dffbd75ab"
@@ -44,7 +44,7 @@ Usage: #example
 * entry[Practitioner][+].fullUrl = "urn:uuid:49f8e829-1242-47a9-b958-32be38d09e5b"
 * entry[Practitioner][=].resource = KatrinKlauser
 
-* entry[PractitionerRole][+].fullUrl = "urn:uuid:525e02f3-cac3-4cdc-a497-ce6e441b8a80"
+* entry[PractitionerRole][+].fullUrl = "urn:uuid:525e02f3-cac3-4cdc-a497-ce6e441b8a80"   // entry[10]
 * entry[PractitionerRole][=].resource = KatrinKlauserLaborSchildknecht
 
 * entry[Organization][+].fullUrl = "urn:uuid:8030393e-d1c2-409f-841b-0c3af4e68494"
@@ -70,8 +70,8 @@ Usage: #inline
 // Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:075e3f2d-7ed8-4b6e-a3bb-9b784f5006c0"
-* text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case Study Breath Test</div><div>      <h3>3-breath-test</h3>      <p>A patient, Emil Emmenegger, presents to Dr. med. Theo Tillmann at the Olten group practice on 09.03.2024. He complains of abdominal pain, which often occurs after consuming milk or milk products. He is referred to the laboratory Schildknecht, where Dr. med. Katrin Klauser performs a breath test with lactose provocation.</p>  </div></div>"
+// * text.status = #additional
+// * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><div>Case Study Breath Test</div><div>      <h3>3-breath-test</h3>      <p>A patient, Emil Emmenegger, presents to Dr. med. Theo Tillmann at the Olten group practice on 09.03.2024. He complains of abdominal pain, which often occurs after consuming milk or milk products. He is referred to the laboratory Schildknecht, where Dr. med. Katrin Klauser performs a breath test with lactose provocation.</p>  </div></div>"
 
 * status = #final
 * type = $loinc#11502-2 "Laboratory report" // must be the same as in DiagnosticReport.code

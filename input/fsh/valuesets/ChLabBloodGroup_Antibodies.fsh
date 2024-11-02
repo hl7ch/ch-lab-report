@@ -1,7 +1,8 @@
+/*
 ValueSet: ChLabBloodGroupAntibody
 Id: ch-lab-bloodgroup-antibody-vs
 Title: "CH LAB BloodGroup Antibody Result (SNOMED CT coded substances)"
-Description: "ValueSet of Blood Group Antibodies (substance) coded with SNOMED CT"
+Description: "ValueSet of Blood Group Antibodies (substance) coded with SNOMED CT. It is used in the ChLabObservationBloodGroup profile"
 * ^version = "0.1.0"
 * ^status = #active
 * ^experimental = false
@@ -13,4 +14,4 @@ Description: "ValueSet of Blood Group Antibodies (substance) coded with SNOMED C
 * ^jurisdiction = urn:iso:std:iso:3166#CH
 // look at: https://hl7.org/fhir/STU3/valueset-filter-operator.html 
 * include codes from system $sct where concept descendent-of #19830006 "Blood group antibody"
-
+*/

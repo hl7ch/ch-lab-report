@@ -12,7 +12,7 @@ status: active
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2024-05-10
+date: 2024-05-17
 version: 1.0.0-ci-build
 fhirVersion: 4.0.1
 copyrightYear: 2024+
@@ -49,6 +49,8 @@ pages:
       title: Use Cases in Italian
   document.md:
     title: Document
+  guidance.md:
+    title: Guidance
   profiles.md:
     title: Profiles
   extensions.md:
@@ -71,6 +73,7 @@ menu:
     Use Cases French: usecases-fr.html
     Use Cases Italian: usecases-it.html
   Document: document.html
+  Guidance: guidance.html
   Profiles: profiles.html
   Terminology: terminology.html
   Artifacts: artifacts.html

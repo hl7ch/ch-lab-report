@@ -6,7 +6,10 @@ Modern medical laboratory techniques aid clinicians in diagnosing, preventing, a
 
 <div markdown="1" class="stu-note">
 
-The specification herewith documented is work in progress. No liability can be inferred from the use or misuse of this specification, or its consequences.
+This implementation guide is under STU ballot by [HL7 Switzerland](https://www.hl7.ch/) until September 30th, 2024 midnight.   
+Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments. 
+
+[Significant changes, open and closed issues.](changelog.html)
 
 </div>
 
@@ -61,7 +64,7 @@ This implementation guide contains and references intellectual property owned by
 
 #### Dependency Overview
 
-A graphic overview of the dependencies, in particular with regard to the exchange format of reportable laboratory results in Switzerland, can be found [here](https://fhir.ch/ig/ch-elm/index.html). It also shows the dependency on the [European laboratory project(https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html)].
+A graphic overview of the dependencies, in particular with regard to the exchange format of reportable laboratory results in Switzerland, can be found [here](https://fhir.ch/ig/ch-elm/index.html#dependency-overview). It also shows the dependency on the [European laboratory project(https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html)].
 
 {% include dependency-table.xhtml %}
 
