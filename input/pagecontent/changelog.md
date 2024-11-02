@@ -18,6 +18,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#102](https://github.com/hl7ch/ch-lab-report/issues/102) Move referenceRanges from dGFR profiles into examples
 * [#103](https://github.com/hl7ch/ch-lab-report/issues/103) Merge CDK-EPI profiles for males and females, parent is ChLabObservation_eGFR
 * [#104](https://github.com/hl7ch/ch-lab-report/issues/104) Merge Erythrocytes distribuition width, MDRD and CDK-EPI profiles, take codes from valueSet. eGFR calculation uses different formulas with different parameters, the implementation guide uses 3 calculation methods.
+* [#106](https://github.com/hl7ch/ch-lab-report/issues/106) CodeableConcept.text with fixed value: remove code.text from all profiles
 
 * [#113](https://github.com/hl7ch/ch-lab-report/issues/113) ChLab BloodGroup Antibody Screen Tests; 3 Value Sets are used by the Blood Group profile: CH LAB BloodGroup Antibody Result (SNOMED CT coded substances), CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures), CH LAB BloodGroup Antibody Screen Test Result (LOINC codes)
 
