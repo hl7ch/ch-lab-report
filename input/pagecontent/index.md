@@ -15,14 +15,14 @@ Please add your feedback via the ‘Propose a change’-link in the footer on th
 
 ### Foundation
 
-This implementation guide is based on the [HL7 Europe Laboratory Report](https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html) and the [European eHealth Network](https://health.ec.europa.eu/document/download/9ab6711a-b4b3-4254-85c1-5204e9e9a594_en?filename=ehealth_ehn-lab-results-guideline_releasenotes_en.pdf). It enables the cross-border exchange of laboratory Results in Europe. The aim of the interoperability of electronic laboratory records is to ensure the uniform processing of information between health information systems, regardless of their technology, application or platform, so that it can be meaningfully interpreted by the recipient. Citizens should have better control over their health data, especially their laboratory data, just as healthcare professionals should have easy and secure access to their patients' laboratory data.
-The Implementation guide uses the Swiss Core profiles from [CH Core](http://fhir.ch/ig/ch-core/index.html) and the terminology from [CH Term](http://fhir.ch/ig/ch-epr-term/index.html)
+This implementation guide is based on the [HL7 Europe Laboratory Report](https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html) and the [European eHealth Network](https://health.ec.europa.eu/document/download/9ab6711a-b4b3-4254-85c1-5204e9e9a594_en?filename=ehealth_ehn-lab-results-guideline_releasenotes_en.pdf). It enables the cross-border exchange of laboratory results in Europe. The aim of the interoperability of electronic laboratory records is to ensure the uniform processing of information between health information systems, regardless of their technology, application or platform, so that it can be meaningfully interpreted by the recipient. Citizens should have better control over their health data, especially their laboratory data, just as healthcare professionals should have easy and secure access to their patients' laboratory data.
+The Implementation guide uses the Swiss Core profiles from [CH Core](http://fhir.ch/ig/ch-core/index.html) and the terminology from [CH Term](http://fhir.ch/ig/ch-epr-term/index.html).
 
 ### Management Summary
 
 This implementation guide specifies the exchange format for the comprehensive and correct reproduction of clinical laboratory results. These consist of the following data in detail:
 
-#### Administrative data
+#### Administrative Data
 
 * Patient Information: Include the patient's name, age, gender, date of birth, and any other relevant identification details.
 * Order Data: Ordering practitioner, organization, ordering date, recipients
