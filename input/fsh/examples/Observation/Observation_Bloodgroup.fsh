@@ -104,7 +104,7 @@ Usage: #example
 // ╰─────────────────────────────────────────────────────────────────────╯
 Instance: BloodGroupCompAB0CompRhDAT
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group Panel with Component Antibodies"
+Title: "Blood Group Panel with Component Antibody screen test and DAT test"
 Description: "Example reporting Anti-C and Anti-K"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -213,7 +213,7 @@ Description: "Example reporting just blood group Rh System"
 
 Instance: BloodGroupCompAB0CompRhDAntibodies  // B neg
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group Panel with Component ABO and Component Rh"
+Title: "Blood Group Panel with Component ABO, Component RhD, Rh Genotype and Result Antibodies"
 Description: "Example reporting ABO group [Type] and Rh [Type] separately in a component and coded with SNOMED CT"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
