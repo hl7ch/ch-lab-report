@@ -84,6 +84,6 @@ Ce guide contient 3 autres ValueSets possibles :
 
 La standardisation dans le secteur des banques de sang nécessite la coopération et l'approbation de l'association professionnelle (Schweizerische Vereinigung für Transfusionsmedizin), ce qui n'a pas pu être obtenu dans le court laps de temps disponible. Cette directive se limite donc à 4 formes possibles de présentation des résultats de la banque de sang à titre d'exemple : 
 
-* [Groupe sanguin ABO Rh simple](Observation-BloodGroupSimple.html)
+* [Groupe sanguin ABO Rh simple](Observation-BloodGroupAB0RhD.html)
 * [Groupe sanguin ABO Rh Panel](Observation-BloodGroupPanel.html)
-* [Groupe sanguin ABO Rh utilisant 'Component'](Observation-BloodGroupComponent.html)
+* [Groupe sanguin ABO Rh utilisant 'Component'](Observation-BloodGroupCompAB0CompRhD.html)

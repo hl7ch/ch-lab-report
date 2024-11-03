@@ -1,7 +1,8 @@
 // ╭─── example Blood group Result ────────────╮
+// │ Surface Antigen on Erythrocytes           │
 // │ Observation with SNOMED CT coded value    │
 // ╰───────────────────────────────────────────╯
-Instance: BloodGroupSimple
+Instance: BloodGroupAB0RhD  // AB neg
 InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group Rh combined"
 Description: "Example reporting Blood Group and RhD Result combined and coded with SNOMED CT"
@@ -11,8 +12,8 @@ Usage: #example
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
-* code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
-* code.text = "ABO and Rh group panel (Bld)"   // Display Name
+* category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
+// * code = $loinc#34530-6 "ABO and Rh group panel - Blood"
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
@@ -29,7 +30,7 @@ Usage: #example
 // │ AB0 Result: component coded with LOINC, Result coded with SNOMED CT │
 // │ RhD Result: component coded with LOINC, Result coded with SNOMED CT │
 // ╰─────────────────────────────────────────────────────────────────────╯
-Instance: BloodGroupComponent
+Instance: BloodGroupCompAB0CompRhD  // AB pos
 InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group Panel with Component ABO and Component Rh"
 Description: "Example reporting ABO group [Type] and Rh [Type] separately in a component and coded with SNOMED CT"
@@ -39,7 +40,7 @@ Usage: #example
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
-* code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
+// * code = $loinc#34530-6 "ABO and Rh group panel - Blood"
 * code.text = "ABO and Rh group panel (Bld)"   // Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
@@ -65,7 +66,7 @@ Usage: #example
 // │ AB0 Result: component coded with LOINC, Result coded with SNOMED CT │
 // │ RhD Result: component coded with LOINC, Result coded with SNOMED CT │
 // ╰─────────────────────────────────────────────────────────────────────╯
-Instance: BloodGroupComponentWeakD
+Instance: BloodGroupCompAB0CompRhDWeakD
 InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group Panel with Component ABO and Component Rh resulting Weak D"
 Description: "Example reporting ABO group [Type] and Rh [Type] separately in a component and coded with SNOMED CT, the latter proving weak D is in VS"
@@ -75,7 +76,7 @@ Usage: #example
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
-* code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
+// * code = $loinc#34530-6 "ABO and Rh group panel - Blood"
 * code.text = "ABO and Rh group panel (Bld)"   // Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
@@ -101,7 +102,7 @@ Usage: #example
 // │ AB0 Result: component coded with LOINC, Result coded with SNOMED CT │
 // │ RhD Result: component coded with LOINC, Result coded with SNOMED CT │
 // ╰─────────────────────────────────────────────────────────────────────╯
-Instance: BloodGroupComponentAB
+Instance: BloodGroupCompAB0CompRhDAT
 InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group Panel with Component Antibodies"
 Description: "Example reporting Anti-C and Anti-K"
@@ -111,7 +112,7 @@ Usage: #example
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
-* code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
+// * code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
 * code.text = "ABO and Rh group panel (Bld)"   // Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
@@ -120,17 +121,30 @@ Usage: #example
 
 * method = $sct#258075003 "Serotyping (qualifier value)"
 
-* component[0]
+* component[0]  // A pos
   * code = $loinc#883-9 "ABO group [Type] in Blood"
-  * valueCodeableConcept.coding.code = #278153001
+  * valueCodeableConcept.coding.code = #278149003
   * valueCodeableConcept.coding.system = $sct
-  * valueCodeableConcept.coding.display = "Blood group B Rh(D) negative (finding)"
+  * valueCodeableConcept.coding.display = "Blood group A Rh(D) positive"
 
-* component[1]
-  * code = $loinc#10331-7 "Rh [Type] in Blood"
-  * valueCodeableConcept.coding[+].code = #115763002
-  * valueCodeableConcept.coding[=].system = $sct
-  * valueCodeableConcept.coding[=].display = "Trans weak D phenotype"
+* component[1]  // Antikörper Suchtest neg
+  * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
+  * valueCodeableConcept.coding.code = #568111000005107
+  * valueCodeableConcept.coding.system = $sct
+  * valueCodeableConcept.coding.display = "Irregular blood group antibody not detected"
+
+
+* component[2]  // DAT (IgG) neg
+  * code = $loinc#55776-9 "Direct antiglobulin test.IgG specific reagent [Presence] on Red Blood Cells"
+  * valueCodeableConcept.coding.code = #260415000
+  * valueCodeableConcept.coding.system = $sct
+  * valueCodeableConcept.coding.display = "Not detected"
+
+* component[3]  // DAT (C3d) neg
+  * code = $loinc#55774-4 "Direct antiglobulin test.complement C3d specific reagent [Presence] on Red Blood Cells"
+  * valueCodeableConcept.coding.code = #260415000
+  * valueCodeableConcept.coding.system = $sct
+  * valueCodeableConcept.coding.display = "Not detected"
 
 // ╭─── example Blood group Result ────────────╮
 // │ Result as free Text in HTML Table         │

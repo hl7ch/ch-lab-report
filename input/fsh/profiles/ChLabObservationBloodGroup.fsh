@@ -6,8 +6,8 @@ Title: "CH LAB Observation Results: Blood Group"
 Description: "Simple Profile to report Blood Group and RhD"
 * category[specialty] = $sct#421661004 // "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 // "Blood bank studies (set)"
-* code = $loinc#882-1 // "ABO and Rh group [Type] in Blood"
-// * code.text = "ABO and Rh group panel (Bld)"   // Display Name
+* category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
+* code = $loinc#34530-6 "ABO and Rh group panel - Blood"
 
 // NOTE: EU LAB auch aufführen, wird sonst überschrieben...
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"

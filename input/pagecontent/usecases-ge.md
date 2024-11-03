@@ -88,7 +88,7 @@ Dieser Leitfaden enthält 3 weitere mögliche ValueSets:
 
 Für die Standardisierung in Bereich Blutbank braucht es Mitarbeit und Zustimmung der Fachgesellschaft (Schweizerische Vereinigung für Transfusionsmedizin), die in der kurzen Zeit nicht erlangt werden konnte. Somit beschränkt sich dieser Leitfaden auf 4 mögliche Darstellungsformen als Beispiele von Blutbank Resultate: 
 
-* [Blood Group Panel ABO Rh simple](Observation-BloodGroupSimple.html)
+* [Blood Group Panel ABO Rh simple](Observation-BloodGroupAB0RhD.html)
 * [Blood Group Panel ABO Rh Panel](Observation-BloodGroupPanel.html)
-* [Blood Group Panel ABO Rh mit 'Component'](Observation-BloodGroupComponent.html)
+* [Blood Group Panel ABO Rh mit 'Component'](Observation-BloodGroupCompAB0CompRhD.html)
 

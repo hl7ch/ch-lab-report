@@ -84,7 +84,7 @@ Questa guida contiene altri 3 possibili ValueSet:
 
 La standardizzazione nel settore delle banche del sangue richiede la collaborazione e l'approvazione dell'associazione professionale (Schweizerische Vereinigung für Transfusionsmedizin), che non è stato possibile ottenere nel breve tempo a disposizione. La presente linea guida si limita pertanto a 4 possibili forme di presentazione come esempi di risultati delle banche del sangue: 
 
-* [Pannello gruppi sanguigni ABO Rh semplice](Observation-BloodGroupSimple.html)
+* [Pannello gruppi sanguigni ABO Rh semplice](Observation-BloodGroupAB0RhD.html)
 * [Pannello gruppi sanguigni ABO Rh](Observation-BloodGroupPanel.html)
-* [Pannello gruppi sanguigni ABO Rh usando 'Component'](Observation-BloodGroupComponent.html)
+* [Pannello gruppi sanguigni ABO Rh usando 'Component'](Observation-BloodGroupCompAB0CompRhD.html)
 

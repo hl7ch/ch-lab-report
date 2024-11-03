@@ -80,6 +80,6 @@ This guide contains 3 further possible ValueSets:
 
 Standardization in the blood bank sector requires the cooperation and approval of the professional association (Schweizerische Vereinigung für Transfusionsmedizin), which could not be obtained in the short time available. This guideline is therefore limited to 4 possible forms of presentation as examples of blood bank results: 
 
-* [Blood Group Panel ABO Rh simple](Observation-BloodGroupSimple.html)
+* [Blood Group Panel ABO Rh simple](Observation-BloodGroupAB0RhD.html)
 * [Blood Group Panel ABO Rh Panel](Observation-BloodGroupPanel.html)
-* [Blood Group Panel ABO Rh using 'Component'](Observation-BloodGroupComponent.html)
+* [Blood Group Panel ABO Rh using 'Component'](Observation-BloodGroupCompAB0CompRhD.html)
