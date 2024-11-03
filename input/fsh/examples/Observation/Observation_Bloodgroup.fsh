@@ -53,7 +53,7 @@ Usage: #example
   * code = $loinc#883-9 "ABO group [Type] in Blood"
   * valueCodeableConcept.coding.code = #165743006
   * valueCodeableConcept.coding.system = $sct
-  * valueCodeableConcept.coding.display = "Blood group AB (finding)"
+  * valueCodeableConcept.coding.display = "Blood group AB"
 
 * component[1]
   * code = $loinc#10331-7 "Rh [Type] in Blood"
@@ -133,7 +133,6 @@ Usage: #example
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Irregular blood group antibody not detected"
 
-
 * component[2]  // DAT (IgG) neg
   * code = $loinc#55776-9 "Direct antiglobulin test.IgG specific reagent [Presence] on Red Blood Cells"
   * valueCodeableConcept.coding.code = #260415000
@@ -146,9 +145,9 @@ Usage: #example
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Not detected"
 
-// ╭─── example Blood group Result ────────────╮
-// │ Result as free Text in HTML Table         │
-// ╰───────────────────────────────────────────╯
+// ╭─── example Blood group Result ─────────╮
+// │   Panel hasMembers ABO and RhD         │
+// ╰────────────────────────────────────────╯
 
 Instance: BloodGroupPanel
 InstanceOf: ChLabObservationPanel
@@ -212,48 +211,52 @@ Description: "Example reporting just blood group Rh System"
 * valueCodeableConcept.coding.system = $sct
 * valueCodeableConcept.coding.display = "RhD positive (finding)"
 
-Instance: BloodGroupDAT
-InstanceOf: ChLab-observation-single-test
+Instance: BloodGroupCompAB0CompRhDAntibodies  // B neg
+InstanceOf: ChLabObservationBloodGroup
+Title: "Blood Group Panel with Component ABO and Component Rh"
+Description: "Example reporting ABO group [Type] and Rh [Type] separately in a component and coded with SNOMED CT"
 Usage: #example
-Title: "Blood Group Rh with direct Coombs-Test"
-Description: "Example reporting blood group Rh System and Coombs-Test"
 * identifier.system = "https://labor.pipette.com/labvalues"
-* identifier.value = "1304-03760-blood-group-Rh"
+* identifier.value = "1304-03760-blood-group-component"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
-* code = $loinc#10331-7 "Rh [Type] in Blood"
-* code = $loinc#1007-4 "Direct antiglobulin test.polyspecific reagent [Presence] on Red Blood Cells"
-* code.text = "Direct Antiglobulin Test (DAT; Direct Coombs), Red blood cells"   // Consumer Name
+// * code = $loinc#34530-6 "ABO and Rh group panel - Blood"
+* code.text = "ABO and Rh group panel (Bld)"   // Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-* valueCodeableConcept.coding.code = #309300003 // is there a more specific code?
-* valueCodeableConcept.coding.system = $sct
-* valueCodeableConcept.coding.display = "Negative laboratory finding (navigational concept)"
 
-/*
-Instance: BloodGroupAntibodies
-InstanceOf: ChLab-observation-single-test
-Usage: #example
-Title: "Blood Group Antibody Test"
-Description: "Example reporting Antibodies"
-* identifier.system = "https://labor.pipette.com/labvalues"
-* identifier.value = "1304-03760-blood-group-Rh"
-* status = #final
-* category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
-* category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
-// * code = $loinc#10331-7 "Rh [Type] in Blood"
-* code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
-* code.text = "Blood group antibody screen, Blood"   // Consumer Name
-* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
-* effectiveDateTime = "2024-04-23T11:24:26+01:00"
-* issued = "2024-04-24T11:24:26+01:00"
-* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-* valueCodeableConcept.coding.code = #309300003 // is there a more specific code?
-* valueCodeableConcept.coding.system = $sct
-* valueCodeableConcept.coding.display = "Negative laboratory finding (navigational concept)"
-*/
+* method = $sct#258075003 "Serotyping (qualifier value)"
 
-// * valueCodeableConcept.text = "text from LIS"
+* component[0]  // B 
+  * code = $loinc#883-9 "ABO group [Type] in Blood"
+  * valueCodeableConcept.coding.code = #112149005
+  * valueCodeableConcept.coding.system = $sct
+  * valueCodeableConcept.coding.display = "Blood group B"
+
+* component[1]  // RhD neg
+  * code = $loinc#10331-7 "Rh [Type] in Blood"
+  * valueCodeableConcept.coding.code = #165746003
+  * valueCodeableConcept.coding.system = $sct
+  * valueCodeableConcept.coding.display = "RhD negative"
+
+* component[2]  // Rhesus-Phänotyp, sollte eigentlich Rhesus-Genotyp sein: ccddee 
+  * code = $loinc#10331-7 "Rh [Type] in Blood"
+  // * valueCodeableConcept.coding.code = #112149005
+  // * valueCodeableConcept.coding.system = $sct
+  // * valueCodeableConcept.coding.display = "ccddee"
+  * valueCodeableConcept.text = "ccddee"  // Rhesus Genotyp
+
+* component[3]  // Antikörper: Anti-C
+  * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
+  * valueCodeableConcept.coding.code = #35068008 // Anti-C
+  * valueCodeableConcept.coding.system = $sct
+  * valueCodeableConcept.coding.display = "Blood group antibody C"
+
+* component[4]  // Antikörper: Anti-K
+  * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
+  * valueCodeableConcept.coding.code = #83404001  // Anti-K, Kell-System
+  * valueCodeableConcept.coding.system = $sct
+  * valueCodeableConcept.coding.display = "Blood group antibody K"
