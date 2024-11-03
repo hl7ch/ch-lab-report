@@ -27,6 +27,8 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 * [#113](https://github.com/hl7ch/ch-lab-report/issues/113) ChLab BloodGroup Antibody Screen Tests; 3 Value Sets are used by the Blood Group profile: CH LAB BloodGroup Antibody Result (SNOMED CT coded substances), CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures), CH LAB BloodGroup Antibody Screen Test Result (LOINC codes)
 
+* [#114](https://github.com/hl7ch/ch-lab-report/issues/114) Profiles: insert links for references to 
+
 ### STU 1 Sequence - v1.0.0-ballot
 
 * [#48](https://github.com/hl7ch/ch-lab-report/issues/48): Exchange the conformsTo rules with the imposeProfile extension
