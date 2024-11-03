@@ -31,7 +31,7 @@ This profile constrains the PractitionerRole resource for the purpose of laborat
 This profile constrains the ServiceRequest resource for the purpose of laboratory orders in Switzerland.
 * [CH LAB Specimen](StructureDefinition-ch-lab-specimen.html)  
 This profile constrains the Specimen resource for the purpose of laboratory test reports in Switzerland.
-* [Substance: Specimen Additive Substance](StructureDefinition-specimen-additive-substance-eu-lab.html)  
+* [Substance: Specimen Additive Substance](StructureDefinition-ch-lab-specimen-additive-substance-eu-lab.html)  
 This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide.
 
 ### Profile for specific purposes, Panels (optional)
