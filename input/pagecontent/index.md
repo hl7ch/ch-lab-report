@@ -24,7 +24,7 @@ This implementation guide specifies the exchange format for the comprehensive an
 
 #### Administrative data
 
-* Patient Information: Include the patient's name, age, sex, date of birth, and any other relevant identification details.
+* Patient Information: Include the patient's name, age, gender, date of birth, and any other relevant identification details.
 * Order Data: Ordering practitioner, organization, ordering date, recipients
 * Laboratory Information: Include details about the laboratory that performed the analysis, such as the name, address, and contact information.
 * Authorized Signatures: Include the signatures or electronic authentication of the laboratory personnel responsible for conducting and validating the tests.
