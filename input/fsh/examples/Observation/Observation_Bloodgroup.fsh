@@ -96,6 +96,42 @@ Usage: #example
   * valueCodeableConcept.coding[=].system = $sct
   * valueCodeableConcept.coding[=].display = "Trans weak D phenotype"
 
+// ╭─── example Blood group Rhesus-Phenotyp, Antibodies  ────────────────╮
+// │ ABO and Rh group panel coded with LOINC                             │
+// │ AB0 Result: component coded with LOINC, Result coded with SNOMED CT │
+// │ RhD Result: component coded with LOINC, Result coded with SNOMED CT │
+// ╰─────────────────────────────────────────────────────────────────────╯
+Instance: BloodGroupComponentAB
+InstanceOf: ChLabObservationBloodGroup
+Title: "Blood Group Panel with Component Antibodies"
+Description: "Example reporting Anti-C and Anti-K"
+Usage: #example
+* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.value = "1304-03760-blood-group-component"
+* status = #final
+* category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
+* category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
+* code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
+* code.text = "ABO and Rh group panel (Bld)"   // Display Name
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+
+* method = $sct#258075003 "Serotyping (qualifier value)"
+
+* component[0]
+  * code = $loinc#883-9 "ABO group [Type] in Blood"
+  * valueCodeableConcept.coding.code = #278153001
+  * valueCodeableConcept.coding.system = $sct
+  * valueCodeableConcept.coding.display = "Blood group B Rh(D) negative (finding)"
+
+* component[1]
+  * code = $loinc#10331-7 "Rh [Type] in Blood"
+  * valueCodeableConcept.coding[+].code = #115763002
+  * valueCodeableConcept.coding[=].system = $sct
+  * valueCodeableConcept.coding[=].display = "Trans weak D phenotype"
+
 // ╭─── example Blood group Result ────────────╮
 // │ Result as free Text in HTML Table         │
 // ╰───────────────────────────────────────────╯
@@ -183,6 +219,7 @@ Description: "Example reporting blood group Rh System and Coombs-Test"
 * valueCodeableConcept.coding.system = $sct
 * valueCodeableConcept.coding.display = "Negative laboratory finding (navigational concept)"
 
+/*
 Instance: BloodGroupAntibodies
 InstanceOf: ChLab-observation-single-test
 Usage: #example
@@ -203,5 +240,6 @@ Description: "Example reporting Antibodies"
 * valueCodeableConcept.coding.code = #309300003 // is there a more specific code?
 * valueCodeableConcept.coding.system = $sct
 * valueCodeableConcept.coding.display = "Negative laboratory finding (navigational concept)"
+V
 
 // * valueCodeableConcept.text = "text from LIS"
