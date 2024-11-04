@@ -13,8 +13,8 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#95](https://github.com/hl7ch/ch-lab-report/issues/95): Specimen.type: reduce the minimum cardinality of Specimen.type to 0.
 * [#96](https://github.com/hl7ch/ch-lab-report/issues/96): Duplicate from #95, no amendment
 
-* [#99](https://github.com/hl7ch/ch-lab-report/issues/99): Insert 'imposeProfile extension (to EU LAB)' into the ChLabReportServiceRequest profile'
-* [#100](https://github.com/hl7ch/ch-lab-report/issues/100)
+* [#100](https://github.com/hl7ch/ch-lab-report/issues/100) Remove Fig. 1 Resource Overview diagram and place a link to the diagram Resource Overview of CH ELM on the profiles page.
+
 * [#102](https://github.com/hl7ch/ch-lab-report/issues/102) Move referenceRanges from dGFR profiles into examples
 * [#103](https://github.com/hl7ch/ch-lab-report/issues/103) Merge CDK-EPI profiles for males and females, parent is ChLabObservation_eGFR
 * [#104](https://github.com/hl7ch/ch-lab-report/issues/104) Merge Erythrocytes distribuition width, MDRD and CDK-EPI profiles, take codes from valueSet. eGFR calculation uses different formulas with different parameters, the implementation guide uses 3 calculation methods.
