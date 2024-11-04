@@ -27,8 +27,13 @@ Usage: #example
 * entry[Observation][+].fullUrl = "urn:uuid:f36365f1-4b7e-4458-99af-d950b8608ea7"
 * entry[Observation][=].resource = Observation-3-breath-test
 
+* entry[Observation][+].fullUrl = "urn:uuid:f57378f6-738b-4f2c-8ab7-03341eac9518"   // entry[5]
+* entry[Observation][=].resource = Observation-3-breath-test-hydrogen
+* entry[Observation][+].fullUrl = "urn:uuid:57c1026b-6e7d-4172-9c74-cdb87dfeedb9"
+* entry[Observation][=].resource = Observation-3-breath-test-methane
+
 //================== Specimen ================================0
-* entry[Specimen][+].fullUrl = "urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10"   // entry[5]
+* entry[Specimen][+].fullUrl = "urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10"
 * entry[Specimen][=].resource = Gas-3-breath-test
 
 //=============== practitioner, organization =============================0
@@ -38,13 +43,13 @@ Usage: #example
 * entry[Practitioner][+].fullUrl = "urn:uuid:d55425b0-406c-4dde-9ea8-6b0dffbd75ab"
 * entry[Practitioner][=].resource = TheoTillmann
 
-* entry[Organization][+].fullUrl = "urn:uuid:8816b3f6-376f-4e2d-b83f-53e69e2b7ffb"
+* entry[Organization][+].fullUrl = "urn:uuid:8816b3f6-376f-4e2d-b83f-53e69e2b7ffb"  // entry[10]
 * entry[Organization][=].resource = Gruppenpraxis
 
 * entry[Practitioner][+].fullUrl = "urn:uuid:49f8e829-1242-47a9-b958-32be38d09e5b"
 * entry[Practitioner][=].resource = KatrinKlauser
 
-* entry[PractitionerRole][+].fullUrl = "urn:uuid:525e02f3-cac3-4cdc-a497-ce6e441b8a80"   // entry[10]
+* entry[PractitionerRole][+].fullUrl = "urn:uuid:525e02f3-cac3-4cdc-a497-ce6e441b8a80"
 * entry[PractitionerRole][=].resource = KatrinKlauserLaborSchildknecht
 
 * entry[Organization][+].fullUrl = "urn:uuid:8030393e-d1c2-409f-841b-0c3af4e68494"
@@ -99,9 +104,17 @@ Usage: #inline
 * section[lab-subsections].code  = $loinc#26436-6 "Laboratory studies (set)"
 * section[lab-subsections].code.text = "Laboratory studies"
 
-* section[lab-subsections].section[0].title = "Chemistry studies (set)"
+* section[lab-subsections].section[+].title = "Chemistry studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#18719-5
 * section[lab-subsections].section[=].entry = Reference(urn:uuid:f36365f1-4b7e-4458-99af-d950b8608ea7) "Observation-3-breath-test"
+
+* section[lab-subsections].section[+].title = "Chemistry studies (set)"
+* section[lab-subsections].section[=].code  = $loinc#18719-5
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:f57378f6-738b-4f2c-8ab7-03341eac9518) "Observation-3-breath-test-hydrogen"
+
+* section[lab-subsections].section[+].title = "Chemistry studies (set)"
+* section[lab-subsections].section[=].code  = $loinc#18719-5
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:57c1026b-6e7d-4172-9c74-cdb87dfeedb9) "Observation-3-breath-test-methane"
 
 // ╭────── DiagnosticReport 3-breath-test Panel ─────────╮
 // │ basedOnSR, code, result Ref, presentedForm PDF      │
@@ -130,7 +143,9 @@ Usage: #inline
 * performer = Reference(urn:uuid:525e02f3-cac3-4cdc-a497-ce6e441b8a80)
 * performer.display = "Dr. Katrin Klauser"
 * specimen = Reference(urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10) "Gas-3-breath-test"
-* result = Reference(urn:uuid:f36365f1-4b7e-4458-99af-d950b8608ea7) "Observation-3-breath-test"
+* result[+] = Reference(urn:uuid:f36365f1-4b7e-4458-99af-d950b8608ea7) "Observation-3-breath-test"
+* result[+] = Reference(urn:uuid:f57378f6-738b-4f2c-8ab7-03341eac9518) "Observation-3-breath-test-hydrogen"
+* result[+] = Reference(urn:uuid:57c1026b-6e7d-4172-9c74-cdb87dfeedb9) "Observation-3-breath-test-mathane"
 // * media.link = Reference(urn:uuid:19ca50e3-fef9-494c-856c-881a59c7bfed)
 // * media.comment = "Serum-Elektrophorese Protein"
 * presentedForm.contentType = #application/pdf
@@ -200,6 +215,32 @@ Usage: #inline
 // * 443661003 "Hydrogen breath test using lactose (procedure)"
 * method = $sct#252233000 "Hydrogen breath test (procedure)"
 * device = Reference(urn:uuid:b2b5e406-02d0-46de-85bb-561fe37040bb) "Breath-Test System"
+* hasMember[+] = Reference(urn:uuid:f57378f6-738b-4f2c-8ab7-03341eac9518)  // Observation-3-breath-test-hydrogen
+* hasMember[+] = Reference(urn:uuid:57c1026b-6e7d-4172-9c74-cdb87dfeedb9)  // Observation-3-breath-test-methane
+
+
+Instance: Observation-3-breath-test-hydrogen
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "H2 breath Test"
+Description: "The overall interpretation for a hydrogen or methane breath test (HBT) post dose a lactose sugar challenge. An HBT is performed to diagnose a lactose malabsorption or abnormal growth of bacteria in the intestine."
+Usage: #inline
+* id = "f57378f6-738b-4f2c-8ab7-03341eac9518"
+* status = #final
+
+* category[specialty] = $sct#394596001 "Chemical pathology (qualifier value)"
+* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
+* code = $loinc#105751-2 "Lactose challenge panel-hydrogen - Exhaled gas"
+* code.text = "Lactose challenge (hydrogen breath test) panel (Exhl gas)" // LOINC Display Name
+* subject = Reference(urn:uuid:9b3d24a2-9d79-4d3a-b3e2-7dd8fdde5eff) "Emil Emmenegger"
+* effectiveDateTime = "2024-03-13T01:43:30Z"
+* performer = Reference(urn:uuid:49f8e829-1242-47a9-b958-32be38d09e5b) "Katrin Klauser"
+* specimen = Reference(urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10) "Gas-3-breath-test"
+
+// ---- TODO SNOMED CT has no concept 'Hydrogen breath test (qualifier value)'
+
+// * 443661003 "Hydrogen breath test using lactose (procedure)"
+* method = $sct#252233000 "Hydrogen breath test (procedure)"
+* device = Reference(urn:uuid:b2b5e406-02d0-46de-85bb-561fe37040bb) "Breath-Test System"
 
 // ╭─── Component ──╮
 // │    Hydrogen    │
@@ -245,6 +286,50 @@ Usage: #inline
   * valueQuantity = 59 '[ppm]' "[ppm]"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "[ppm]"
+
+// ╭──────────── Component ───────────────────────╮
+// │ clinical Observations during challenge test  │
+// │ note: valueBoolean is not supported, issue!  │
+// ╰──────────────────────────────────────────────╯
+* component[+]
+  * code = $sct#51197009 "Stomach cramps (finding)"
+  * valueBoolean = false
+
+* component[+]
+  * code = $sct#308698004 "Flatulence symptom (finding)"
+  * valueBoolean = false
+
+* component[+]
+  * code = $sct#422587007 "Nausea (finding)"
+  * valueBoolean = false
+
+* component[+]
+  * code = $sct#62315008 "Diarrhea (finding)"
+  * valueBoolean = false
+
+
+Instance: Observation-3-breath-test-methane
+InstanceOf: ChLabObservationResultsLaboratory
+Title: "CH4 breath Test"
+Description: "When ingested sugars are not completely absorbed, bacteria within the large bowel produce hydrogen and/or methane gas that will be detected in the breath test. The poor absorption of an orally ingested sugar is indicated by amounts larger than normal and above baseline levels of exhaled hydrogen or methane in your breath."
+Usage: #inline
+* id = "57c1026b-6e7d-4172-9c74-cdb87dfeedb9"
+* status = #final
+
+* category[specialty] = $sct#394596001 "Chemical pathology (qualifier value)"
+* category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
+* code = $loinc#105750-4 "Lactose challenge (methane breath test) panel - Exhaled gas"
+* code.text = "Lactose challenge (methane breath test) panel (Exhl gas)" // LOINC Display Name
+* subject = Reference(urn:uuid:9b3d24a2-9d79-4d3a-b3e2-7dd8fdde5eff) "Emil Emmenegger"
+* effectiveDateTime = "2024-03-13T01:43:30Z"
+* performer = Reference(urn:uuid:49f8e829-1242-47a9-b958-32be38d09e5b) "Katrin Klauser"
+* specimen = Reference(urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10) "Gas-3-breath-test"
+
+// ---- TODO SNOMED CT has no concept 'Hydrogen breath test (qualifier value)'
+
+// * 443661003 "Hydrogen breath test using lactose (procedure)"
+* method = $sct#252233000 "Hydrogen breath test (procedure)"
+* device = Reference(urn:uuid:b2b5e406-02d0-46de-85bb-561fe37040bb) "Breath-Test System"
 
 // ╭─── Component ──╮
 // │    Methane     │
@@ -310,8 +395,6 @@ Usage: #inline
 * component[+]
   * code = $sct#62315008 "Diarrhea (finding)"
   * valueBoolean = false
-
-// * hasMember[+] = Reference(urn:uuid:d130cf00-e7bc-49f3-8de5-8341c740865b) "Observation-Albumin-abs"
 
 // ╭─── specimen 3-breath-test ─────╮
 // │     exhaled gas                │
