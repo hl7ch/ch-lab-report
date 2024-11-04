@@ -78,7 +78,7 @@ Ce guide contient 3 autres ValueSets possibles :
 
 1. [ValueSet: CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) avec les codes SNOMED CT des tests de dépistage des anticorps de groupe sanguin.
 
-2. [ValueSet: CH LAB BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-result-vs.html) avec les codes LOINC des résultats de dépistage des anticorps de groupe sanguin.
+2. [ValueSet: CH LAB BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-vs.html) avec les codes LOINC des résultats de dépistage des anticorps de groupe sanguin.
 
 3. [ValueSet: CH LAB BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) avec les codes SNOMED CT des anticorps de groupe sanguin.
 

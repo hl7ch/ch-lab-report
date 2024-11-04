@@ -74,4 +74,4 @@ All significant changes to this FHIR implementation guide will be documented on 
   * Add Antibody ValueSets:
     * ValueSet: ChLabBloodGroupAntibody
     * ValueSet: ChLabBloodGroupAntibodyScreen
-    * ValueSet: ChLabBloodGroupAntibodyScreenResult
+    * ValueSet: ChLabBloodGroupAntibodyScreen
