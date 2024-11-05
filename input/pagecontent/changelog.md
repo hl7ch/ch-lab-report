@@ -23,6 +23,8 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#108](https://github.com/hl7ch/ch-lab-report/issues/108) Home: replace sex with (administrative) gender.
 
 * [#109](https://github.com/hl7ch/ch-lab-report/issues/109) external links to FHIR spec: replace https://www.hl7.org/fhir/ with https://www.hl7.org/fhir/r4/
+* [#110](https://github.com/hl7ch/ch-lab-report/issues/110) Terminology: empty sections: outcomment empty sections in terminology page
+* [#111](https://github.com/hl7ch/ch-lab-report/issues/111) Terminology: Replace Profile name SpecimenAdditiveSubstance with ChLabSpecimenAdditiveSubstance
 
 * [#113](https://github.com/hl7ch/ch-lab-report/issues/113) ChLab BloodGroup Antibody Screen Tests; 3 Value Sets are used by the Blood Group profile: CH LAB BloodGroup Antibody Result (SNOMED CT coded substances), CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures), CH LAB BloodGroup Antibody Screen Test Result (LOINC codes)
 
