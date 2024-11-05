@@ -78,12 +78,12 @@ Ce guide contient 3 autres ValueSets possibles :
 
 1. [ValueSet: CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) avec les codes SNOMED CT des tests de dépistage des anticorps de groupe sanguin.
 
-2. [ValueSet: CH LAB BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-result-vs.html) avec les codes LOINC des résultats de dépistage des anticorps de groupe sanguin.
+2. [ValueSet: CH LAB BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-vs.html) avec les codes LOINC des résultats de dépistage des anticorps de groupe sanguin.
 
 3. [ValueSet: CH LAB BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) avec les codes SNOMED CT des anticorps de groupe sanguin.
 
 La standardisation dans le secteur des banques de sang nécessite la coopération et l'approbation de l'association professionnelle (Schweizerische Vereinigung für Transfusionsmedizin), ce qui n'a pas pu être obtenu dans le court laps de temps disponible. Cette directive se limite donc à 4 formes possibles de présentation des résultats de la banque de sang à titre d'exemple : 
 
-* [Groupe sanguin ABO Rh simple](Observation-BloodGroupSimple.html)
+* [Groupe sanguin ABO Rh simple](Observation-BloodGroupAB0RhD.html)
 * [Groupe sanguin ABO Rh Panel](Observation-BloodGroupPanel.html)
-* [Groupe sanguin ABO Rh utilisant 'Component'](Observation-BloodGroupComponent.html)
+* [Groupe sanguin ABO Rh utilisant 'Component'](Observation-BloodGroupCompAB0CompRhD.html)
