@@ -1,37 +1,13 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 ### STU 1 Ballot (2024)
 
-* [#70](https://github.com/hl7ch/ch-lab-report/issues/70): Example for renal Insufficiency
-* [#73](https://github.com/hl7ch/ch-lab-report/issues/73): Results Blood Group: Add more examples
-* [#77](https://github.com/hl7ch/ch-lab-report/issues/77): The graphic 'Resoure Overview' has been removed.
-* [#78](https://github.com/hl7ch/ch-lab-report/issues/78): CH LAB Observation Blood Group - Definitions
-  * add example Bloodgroup panel with 2 dependent hasMember elements
-    * [Blood Group ABO Rh Panel](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupPanel.html)
-    * [Blood Group Panel ABO](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupABO.html)
-    * [Blood Group RhD](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupRh.html)
 * [#92](https://github.com/hl7ch/ch-lab-report/issues/92): Add Profile ChLabObservationBloodGroup with additional valueSets as candidates
 * [#93](https://github.com/hl7ch/ch-lab-report/issues/93): Outcomment SetFmmandStatusRule in all profiles to set them to active.
 * [#94](https://github.com/hl7ch/ch-lab-report/issues/94): Bundle 2-electrophoresis – JSON: section "Laboratory examinations" empty? no amendment: contains subsection "Chemistry studies (set)
 * [#95](https://github.com/hl7ch/ch-lab-report/issues/95): Specimen.type: reduce the minimum cardinality of Specimen.type to 0.
 * [#96](https://github.com/hl7ch/ch-lab-report/issues/96): Duplicate from #95, no amendment
-
-* [#99](https://github.com/hl7ch/ch-lab-report/issues/99): Insert 'imposeProfile extension (to EU LAB)' into the ChLabReportServiceRequest profile'
-* [#100](https://github.com/hl7ch/ch-lab-report/issues/100): Use Cases in English and other langs: Remove Fig. 1 Resource Overview diagram and place a link to Resource Overview in CH ELM on the profiles page.
-* [#102](https://github.com/hl7ch/ch-lab-report/issues/102): Move referenceRanges from dGFR profiles into examples
-* [#103](https://github.com/hl7ch/ch-lab-report/issues/103): Merge CDK-EPI profiles for males and females, parent is ChLabObservation_eGFR
-* [#104](https://github.com/hl7ch/ch-lab-report/issues/104): Merge Erythrocytes distribuition width, MDRD and CDK-EPI profiles, take codes from valueSet. eGFR calculation uses different formulas with different parameters, the implementation guide uses 3 calculation methods.
-* [#106](https://github.com/hl7ch/ch-lab-report/issues/106): CodeableConcept.text with fixed value: remove code.text from all profiles
-* [#108](https://github.com/hl7ch/ch-lab-report/issues/108): Home: replace sex with (administrative) gender.
-
-* [#109](https://github.com/hl7ch/ch-lab-report/issues/109): External links to FHIR spec: replace https://www.hl7.org/fhir/ with https://www.hl7.org/fhir/r4/
-* [#110](https://github.com/hl7ch/ch-lab-report/issues/110): Terminology: empty sections: outcomment empty sections in terminology page
-* [#111](https://github.com/hl7ch/ch-lab-report/issues/111): Terminology: Replace Profile name SpecimenAdditiveSubstance with ChLabSpecimenAdditiveSubstance
-
-* [#113](https://github.com/hl7ch/ch-lab-report/issues/113): ChLab BloodGroup Antibody Screen Tests; 3 Value Sets are used by the Blood Group profile: CH LAB BloodGroup Antibody Result (SNOMED CT coded substances), CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures), CH LAB BloodGroup Antibody Screen Test Result (LOINC codes)
-
 * [#114](https://github.com/hl7ch/ch-lab-report/issues/114): Profiles: add links to LOINC Codes and NEJM in text of eGFR-CKD-EPI(ASR) 2021 Profile
 * [#115](https://github.com/hl7ch/ch-lab-report/issues/115): Use Cases in English: No amendment, duplicate of [#100](https://github.com/hl7ch/ch-lab-report/issues/100)
-
 * [#116](https://github.com/hl7ch/ch-lab-report/issues/116): Changelog, refactor bloodgroup examples
 
 ### STU 1 Sequence - v1.0.0-ballot
