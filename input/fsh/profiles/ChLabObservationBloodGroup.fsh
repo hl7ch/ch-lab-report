@@ -10,7 +10,7 @@ defined situations."""
 * category[specialty] = $sct#421661004 // "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 // "Blood bank studies (set)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
-* code = $loinc#34530-6 "ABO and Rh group panel - Blood"
+* code = $loinc#34530-6 // "ABO and Rh group panel - Blood"
 
 // NOTE: EU LAB auch aufführen, wird sonst überschrieben...
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"

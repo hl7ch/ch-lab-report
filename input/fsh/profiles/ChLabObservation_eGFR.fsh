@@ -13,7 +13,7 @@ Usage: #example
 Title: "Example of estimated Glomerulum Filtration Rate"
 Description: "eGFR"
 * status = #final
-* code = $loinc#69405-9 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood"
+* code = $loinc#69405-9 // "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood"
 * code.text = "GFR/1.73 sq M.predicted (S/P/Bld) [Vol rate/Area]"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
