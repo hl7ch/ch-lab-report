@@ -1,6 +1,6 @@
 ValueSet: ChLabBloodGroupImmunoHematology
 Id: ch-lab-bloodgroup-immuno-hematology-vs
-Title: "CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures)"
+Title: "CH LAB-Report BloodGroup Immunohematology Tests (SNOMED CT coded procedures)"
 Description: "This value set is used in the ChLabObservationBloodGroup profile. It contains Laboratory tests related to immunohematology"
 * ^version = "0.1.0"
 * ^status = #draft
@@ -17,7 +17,7 @@ Description: "This value set is used in the ChLabObservationBloodGroup profile. 
 
 ValueSet: ChLabBloodGroupAntibody
 Id: ch-lab-bloodgroup-antibody-vs
-Title: "CH LAB BloodGroup Antibody Result (SNOMED CT coded substances)"
+Title: "CH LAB-Report BloodGroup Antibody Result (SNOMED CT coded substances)"
 Description: "This value set is used in the ChLabObservationBloodGroup profile. It contains results of Blood Group Antibodies
 (substance) coded with SNOMED CT. It is used in the ChLabObservationBloodGroup profile"
 * ^version = "0.1.0"
@@ -35,7 +35,7 @@ Description: "This value set is used in the ChLabObservationBloodGroup profile. 
 // ValueSet based on local LOINC ancestor
 ValueSet: ChLabBloodGroupAntibodyScreen
 Id: ch-lab-bloodgroup-antibody-screen-vs
-Title: "CH LAB BloodGroup Antibody Screen Test (LOINC codes)"
+Title: "CH LAB-Report BloodGroup Antibody Screen Test (LOINC codes)"
 Description: "This value set is used in the ChLabObservationBloodGroup profile. It represents
 atypical IgG antibodies prior to transfusion or during pregnancy. The screening test is designed
 specifically to detect IgG antibodies and some IgM antibodies (non ABO) may also be detected.
