@@ -18,7 +18,7 @@ Description: "Holds Laboratory Test-Kit Data"
 //   * type 1..1
 
 // * category = $device-categorie#in-vitro	"Tests done on samples such as blood or tissue that have been taken from the human body."
-* type = $sct#303607000 "Biomedical equipment (physical object)"
+* type = $sct#303607000  // "Biomedical equipment (physical object)"
 /* This SNOMED CT code doesn't mean exactly the adequate concept, it's not enough granular.  Therefore, the concept of the laboratory analyzer is part of it! */
 * parent MS
 
@@ -42,7 +42,7 @@ Description: "Holds Laboratory Analyzer Data"
 //   * type 1..1
 
 // * category = $device-categorie#in-vitro	"Tests done on samples such as blood or tissue that have been taken from the human body."
-* type = $sct#30234008 "Medical laboratory analyzer, device (physical object)"
+* type = $sct#30234008  // "Medical laboratory analyzer, device (physical object)"
 
 /* 
 For further examples look at

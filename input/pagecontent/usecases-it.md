@@ -76,15 +76,15 @@ La standardizzazione nell'area dei risultati delle banche del sangue migliorereb
 
 Questa guida contiene altri 3 possibili ValueSet:
 
-1. [ValueSet: CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) con i codici SNOMED CT dei test di screening degli anticorpi del gruppo sanguigno.
+1. [ValueSet: CH LAB-Report BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) con i codici SNOMED CT dei test di screening degli anticorpi del gruppo sanguigno.
 
-2. [ValueSet: CH LAB BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-result-vs.html) con i codici LOINC dei resultati dei test di screening degli anticorpi del gruppo sanguigno.
+2. [ValueSet: CH LAB-Report BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-vs.html) con i codici LOINC dei resultati dei test di screening degli anticorpi del gruppo sanguigno.
 
-3. [ValueSet: CH LAB BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) con i codici SNOMED CT degli anticorpi del gruppo sanguigno.
+3. [ValueSet: CH LAB-Report BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) con i codici SNOMED CT degli anticorpi del gruppo sanguigno.
 
 La standardizzazione nel settore delle banche del sangue richiede la collaborazione e l'approvazione dell'associazione professionale (Schweizerische Vereinigung für Transfusionsmedizin), che non è stato possibile ottenere nel breve tempo a disposizione. La presente linea guida si limita pertanto a 4 possibili forme di presentazione come esempi di risultati delle banche del sangue: 
 
-* [Pannello gruppi sanguigni ABO Rh semplice](Observation-BloodGroupSimple.html)
+* [Pannello gruppi sanguigni ABO Rh semplice](Observation-BloodGroupAB0RhD.html)
 * [Pannello gruppi sanguigni ABO Rh](Observation-BloodGroupPanel.html)
-* [Pannello gruppi sanguigni ABO Rh usando 'Component'](Observation-BloodGroupComponent.html)
+* [Pannello gruppi sanguigni ABO Rh usando 'Component'](Observation-BloodGroupCompAB0CompRhD.html)
 

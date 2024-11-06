@@ -80,15 +80,15 @@ Dieser Leitfaden enthält 3 weitere mögliche ValueSets:
 
 2. [ValueSet: CH Lab Results Blood Group Antibody (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper
 
-1. [ValueSet: CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) mit den SNOMED CT Codes der Blutgruppen-Antikörper screening tests
+1. [ValueSet: CH LAB-Report BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) mit den SNOMED CT Codes der Blutgruppen-Antikörper screening tests
 
-2. [ValueSet: CH LAB BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-result-vs.html) mit den LOINC Codes der Resultate der Blutgruppen Antikörper screening Tests
+2. [ValueSet: CH LAB-Report BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-vs.html) mit den LOINC Codes der Resultate der Blutgruppen Antikörper screening Tests
 
-3. [ValueSet: CH LAB BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper Screening Tests
+3. [ValueSet: CH LAB-Report BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper Screening Tests
 
 Für die Standardisierung in Bereich Blutbank braucht es Mitarbeit und Zustimmung der Fachgesellschaft (Schweizerische Vereinigung für Transfusionsmedizin), die in der kurzen Zeit nicht erlangt werden konnte. Somit beschränkt sich dieser Leitfaden auf 4 mögliche Darstellungsformen als Beispiele von Blutbank Resultate: 
 
-* [Blood Group Panel ABO Rh simple](Observation-BloodGroupSimple.html)
+* [Blood Group Panel ABO Rh simple](Observation-BloodGroupAB0RhD.html)
 * [Blood Group Panel ABO Rh Panel](Observation-BloodGroupPanel.html)
-* [Blood Group Panel ABO Rh mit 'Component'](Observation-BloodGroupComponent.html)
+* [Blood Group Panel ABO Rh mit 'Component'](Observation-BloodGroupCompAB0CompRhD.html)
 

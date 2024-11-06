@@ -17,7 +17,11 @@ Description: """This panel is the traditional hemogram plus platelet count which
 // * ^purpose = "This profile constrains the ChLabObservationPanel profile to represent results produced by automated CBC (count of Blood-Cells)for the  HL7 Swiss project. Their 'hasMember' elements contain References to CBC Single Test Observations. The CBC Panel represents the Haematogramm II from the Analysenliste, Pos.-Nr 1371.00"
 // * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 
+<<<<<<< HEAD
 * code = $loinc#58410-2
+=======
+* code = $loinc#58410-2 // "CBC panel - Blood by Automated count"
+>>>>>>> develop
   * ^short = "CBC panel Auto (Bld)" // LOINC Display Name
 
 * hasMember contains
@@ -90,7 +94,11 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * . ^short = "CH LAB Observation Results: Laboratory Leucocyte Count"
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+<<<<<<< HEAD
 * code = $loinc#6690-2
+=======
+* code = $loinc#6690-2 // "Leukocytes [#/volume] in Blood by Automated count"
+>>>>>>> develop
   * ^short = "WBC Auto (Bld) [#/Vol]"  // LOINC Display Name
 * method = $sct#702659008
 * specimen = Reference(BloodCBC)
@@ -103,7 +111,11 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * . ^short = "CH LAB Observation Results: Laboratory Erythrocyte Count"
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+<<<<<<< HEAD
 * code = $loinc#789-8
+=======
+* code = $loinc#789-8 // "Erythrocytes [#/volume] in Blood by Automated count"
+>>>>>>> develop
   * ^short = "RBC Auto (Bld) [#/Vol]"   // LOINC Display Name
 * method = $sct#702659008
 * specimen = Reference(BloodCBC)
@@ -129,7 +141,11 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * . ^short = "CH LAB Observation Results: Laboratory Hematocrit"
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+<<<<<<< HEAD
 * code = $loinc#4544-3
+=======
+* code = $loinc#4544-3 // "Hematocrit [Volume Fraction] of Blood by Automated count"
+>>>>>>> develop
   * ^short = "Hematocrit Auto (Bld) [Volume fraction]"  // LOINC Display Name
 * method = $sct#702659008
 * specimen = Reference(BloodCBC)
@@ -155,7 +171,11 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * . ^short = "CH LAB Observation Results: Laboratory MCH"
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+<<<<<<< HEAD
 * code = $loinc#785-6
+=======
+* code = $loinc#785-6 // "MCH [Entitic mass] by Automated count"
+>>>>>>> develop
   * ^short = "MCH Auto (RBC) [Entitic mass]"  // LOINC Display Name
 * method = $sct#702659008
 * specimen = Reference(BloodCBC)
@@ -169,7 +189,11 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * . ^short = "CH LAB Observation Results: Laboratory MCHC"
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+<<<<<<< HEAD
 * code = $loinc#786-4
+=======
+* code = $loinc#786-4 // "MCHC [Mass/volume] by Automated count"
+>>>>>>> develop
   * ^short = "MCHC Auto (RBC) [Mass/Vol]" // LOINC Display Name
 * method = $sct#702659008
 * specimen = Reference(BloodCBC)
@@ -197,7 +221,11 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * . ^short = "CH LAB Observation Results: Laboratory Platelet Count"
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+<<<<<<< HEAD
 * code = $loinc#777-3
+=======
+* code = $loinc#777-3 // "Platelets [#/volume] in Blood by Automated count"
+>>>>>>> develop
   * ^short = "Platelets Auto (Bld) [#/Vol]"   // LOINC Display Name
 * method = $sct#702659008
 * specimen = Reference(BloodCBC)
@@ -210,8 +238,13 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * . ^short = "CH LAB Observation Results: Laboratory Platelet Count"
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+<<<<<<< HEAD
 * code = $loinc#32207-3  // "Platelet distribution width [Entitic volume] in Blood by Automated count"
 * method = $sct#702659008
+=======
+* code = $loinc#32207-3 // "Platelet distribution width [Entitic volume] in Blood by Automated count"
+* method = $sct#702659008 "Automated count technique (qualifier value)"
+>>>>>>> develop
 * specimen = Reference(BloodCBC)
 
 Profile: ChLabPlateletMeanVolume
@@ -222,8 +255,13 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * . ^short = "CH LAB Observation Results: Laboratory Platelet Count"
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+<<<<<<< HEAD
 * code = $loinc#32623-1
 * method = $sct#702659008
+=======
+* code = $loinc#32623-1 // "Platelet mean volume [Entitic volume] in Blood by Automated count"
+* method = $sct#702659008 "Automated count technique (qualifier value)"
+>>>>>>> develop
 * specimen = Reference(BloodCBC)
 
 Instance: BloodCBC

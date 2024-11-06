@@ -31,22 +31,22 @@ Otherwise the relationship is recorded in the Specimen.request element"""
     * ^comment = "If the specimen.type conveys information about the site the specimen has been collected from, then, if the bodySite if present it shall be coherent with the type"
   * extension contains BodyStructureReference named bodySite 0..1
   * extension[bodySite].valueReference only Reference(BodyStructureEuLab)
-* processing.additive only Reference(Substance or SpecimenAdditiveSubstance)
+* processing.additive only Reference(Substance or ChLabSpecimenAdditiveSubstance)
 * container
   * type from LabSpecimenContainerEu (preferred)
   * additive[x] 0..0
   * extension contains $specimen-container-device-r5 named device 0..1
   * extension[device].valueReference only Reference(Device)
 // ----------------------------------------
-Profile: SpecimenAdditiveSubstance
+Profile: ChLabSpecimenAdditiveSubstance
 Parent: Substance
-Id: specimen-additive-substance-eu-lab
-Title: "Substance: Specimen Additive Substance"
+Id: ch-lab-specimen-additive-substance
+Title: "CH LAB Additive Substance"
 Description: """This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide."""
 * code from LabSpecimenAdditiveEu (preferred)
 
 Instance: EDTA
-InstanceOf: SpecimenAdditiveSubstance
+InstanceOf: ChLabSpecimenAdditiveSubstance
 Usage: #example
 Title: "Dipotassium EDTA (ethylenediaminetetraacetate)"
 Description: "Specimen Additive Substance EDTA"

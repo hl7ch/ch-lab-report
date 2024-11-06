@@ -31,7 +31,7 @@ This profile constrains the PractitionerRole resource for the purpose of laborat
 This profile constrains the ServiceRequest resource for the purpose of laboratory orders in Switzerland.
 * [CH LAB Specimen](StructureDefinition-ch-lab-specimen.html)  
 This profile constrains the Specimen resource for the purpose of laboratory test reports in Switzerland.
-* [Substance: Specimen Additive Substance](StructureDefinition-specimen-additive-substance-eu-lab.html)  
+* [CH LAB Additive Substance](StructureDefinition-ch-lab-specimen-additive-substance.html)  
 This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide.
 
 ### Profile for specific purposes, Panels (optional)
@@ -67,7 +67,8 @@ This profile constrains the ChLabObservationResultsLaboratory profile to represe
 This profile constrains the ChLabObservationResultsLaboratory profile to represent single test results for the HL7 Swiss project. The profile enables only value[x] and component elements, hasMemer elements are not allowed.
 
 * [CH LAB Observation Results: Blood Group](StructureDefinition-ch-lab-observation-blood-group.html)  
-This profile enables the value vets from EU laboratory, and in addition the value sets of the antibody screen tests and the other immunohematology tests.
+Profile to report Blood Group and RhD data. In addition to the code element valuesets delivered from EU Laboratory we have added 3 supplement value sets: CH LAB-Report BloodGroup Antibody Screen Test Result, CH LAB-Report BloodGroup Antibody Result, CH LAB-Report BloodGroup Immunohematology Tests. These value sets have a candidate binding, i.e. they are candidates to substitute general value sets in some
+defined situations.
 
 #### Panels for automated blood cell count
 
@@ -130,7 +131,7 @@ Renal function can be determined by laboratory measurement of serum creatinine a
 ##### eGFR_CKD_EPI 2021 based on serum creatinine, serum creatinine and cystatin-C, age, gender
 
 * [CH LAB Observation Results: eGFR-CKD-EPI(ASR) 2021 Profile](StructureDefinition-ch-lab-observation-egfr-ckd-epi-2021.html)  
-Glomerular filtration rate (GFR) is considered the best overall index of kidney function; however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate (eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation incorporating the patient's age, gender, and measured serum/plasma/blood creatinine only (eGFRcr) (this term) or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [LOINC: 98979-8](https://loinc.org/98979-8/). The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope dilution mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace. [https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953)
+Glomerular filtration rate (GFR) is considered the best overall index of kidney function; however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate (eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation incorporating the patient's age, gender, and measured serum/plasma/blood creatinine only (eGFRcr) [LOINC: 98979-8](https://loinc.org/98979-8/) or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [LOINC: 98980-6](https://loinc.org/98980-6/). The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope dilution mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace. [https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953)
 
 <!--- 
 ### Data Type Profiles

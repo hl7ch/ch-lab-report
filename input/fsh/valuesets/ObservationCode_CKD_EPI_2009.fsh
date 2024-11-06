@@ -2,7 +2,7 @@
 
 ValueSet: ObservationCode_CDK_EPI_2009
 Id: observation-code-cdk-epi-2009
-Title: "CH LAB Codes for eGFR in CKD-EPI"
+Title: "CH LAB-Report Codes for eGFR in CKD-EPI"
 Description: "ValueSet for the allowed eGFRcr and eGFRcr-cys codes among non-blacks"
 * ^version = "1.0.0"
 * ^status = #draft
