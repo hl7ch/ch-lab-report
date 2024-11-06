@@ -67,7 +67,8 @@ This profile constrains the ChLabObservationResultsLaboratory profile to represe
 This profile constrains the ChLabObservationResultsLaboratory profile to represent single test results for the HL7 Swiss project. The profile enables only value[x] and component elements, hasMemer elements are not allowed.
 
 * [CH LAB Observation Results: Blood Group](StructureDefinition-ch-lab-observation-blood-group.html)  
-This profile enables the value vets from EU laboratory, and in addition the value sets of the antibody screen tests and the other immunohematology tests.
+Profile to report Blood Group and RhD data. In addition to the code element valuesets delivered from EU Laboratory we have added 3 supplement value sets: CH LAB BloodGroup Antibody Screen Test Result, CH LAB BloodGroup Antibody Result, CH LAB BloodGroup Immunohematology Tests. These value sets have a candidate binding, i.e. they are candidates to substitute general value sets in some
+defined situations.
 
 #### Panels for automated blood cell count
 

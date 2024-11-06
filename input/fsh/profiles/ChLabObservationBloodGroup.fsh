@@ -5,7 +5,8 @@ Id: ch-lab-observation-blood-group
 Title: "CH LAB Observation Results: Blood Group"
 Description: """Profile to report Blood Group and RhD data. In addition to the code element valuesets delivered from EU Laboratory we have added
 3 supplement value sets: CH LAB BloodGroup Antibody Screen Test Result, CH LAB BloodGroup Antibody Result, CH LAB BloodGroup Immunohematology
-Tests. These value sets have a candidate binding"""
+Tests. These value sets have a candidate binding, i.e. they are candidates to substitute general value sets in some
+defined situations."""
 * category[specialty] = $sct#421661004 // "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 // "Blood bank studies (set)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
