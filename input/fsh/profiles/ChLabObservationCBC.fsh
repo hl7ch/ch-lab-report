@@ -13,7 +13,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 
-* code = $loinc#58410-2 "CBC panel - Blood by Automated count"
+* code = $loinc#58410-2 // "CBC panel - Blood by Automated count"
   * text = "CBC panel Auto (Bld)"
   * ^short = "LOINC Display Name"
 * method = $sct#702659008 "Automated count technique (qualifier value)"
