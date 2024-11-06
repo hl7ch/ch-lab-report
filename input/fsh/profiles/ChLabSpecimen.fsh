@@ -41,7 +41,7 @@ Otherwise the relationship is recorded in the Specimen.request element"""
 Profile: ChLabSpecimenAdditiveSubstance
 Parent: Substance
 Id: ch-lab-specimen-additive-substance-eu-lab
-Title: "Substance: Specimen Additive Substance"
+Title: "CH LAB Additive Substance"
 Description: """This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide."""
 * code from LabSpecimenAdditiveEu (preferred)
 
