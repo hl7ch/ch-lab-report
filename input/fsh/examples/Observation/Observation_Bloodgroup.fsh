@@ -100,11 +100,11 @@ Usage: #example
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "RhD positive (finding)"
 
-// ╭─── example Blood group Result ────────────╮
-// │ Surface Antigen on Erythrocytes           │
-// │ Observation with SNOMED CT coded value    │
-// ╰───────────────────────────────────────────╯
-Instance: BloodGroupAB0RhD  // AB neg
+// ╭─── example Blood group Result from blood bank───────╮
+// │          Surface Antigen on Erythrocytes            │
+// │        Observation with SNOMED CT coded value       │
+// ╰─────────────────────────────────────────────────────╯
+Instance: BloodGroupAB0RhD  // O neg
 InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group Rh combined"
 Description: "Example reporting Blood Group and RhD Result combined and coded with SNOMED CT"
@@ -114,7 +114,7 @@ Usage: #example
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
-* category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
+
 // * code = $loinc#34530-6 "ABO and Rh group panel - Blood"
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
