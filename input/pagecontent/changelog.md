@@ -24,7 +24,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#106](https://github.com/hl7ch/ch-lab-report/issues/106): CodeableConcept.text with fixed value: remove code.text from all profiles
 * [#110](https://github.com/hl7ch/ch-lab-report/issues/110): Terminology: empty sections: outcomment empty sections in terminology page
 * [#111](https://github.com/hl7ch/ch-lab-report/issues/111): Terminology: Replace Profile name SpecimenAdditiveSubstance with ChLabSpecimenAdditiveSubstance
-* [#113](https://github.com/hl7ch/ch-lab-report/issues/113): ChLab BloodGroup Antibody Screen Tests; 3 Value Sets are used by the Blood Group profile: CH LAB BloodGroup Antibody Result (SNOMED CT coded substances), CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures), CH LAB BloodGroup Antibody Screen Test Result (LOINC codes)
+* [#113](https://github.com/hl7ch/ch-lab-report/issues/113): ChLab BloodGroup Antibody Screen Tests; 3 Value Sets are used by the Blood Group profile: CH LAB-Report BloodGroup Antibody Result (SNOMED CT coded substances), CH LAB-Report BloodGroup Immunohematology Tests (SNOMED CT coded procedures), CH LAB-Report BloodGroup Antibody Screen Test Result (LOINC codes)
 * [#114](https://github.com/hl7ch/ch-lab-report/issues/114): Profiles: add links to LOINC Codes and NEJM in text of eGFR-CKD-EPI(ASR) 2021 Profile
 * [#115](https://github.com/hl7ch/ch-lab-report/issues/115): Use Cases in English: No amendment, duplicate of [#100](https://github.com/hl7ch/ch-lab-report/issues/100)
 * [#116](https://github.com/hl7ch/ch-lab-report/issues/116): Changelog, refactor bloodgroup examples

@@ -1,7 +1,7 @@
 /*
 ValueSet: ChLabBloodGroupAntibody
 Id: ch-lab-bloodgroup-antibody-vs
-Title: "CH LAB BloodGroup Antibody Result (SNOMED CT coded substances)"
+Title: "CH LAB-Report BloodGroup Antibody Result (SNOMED CT coded substances)"
 Description: "ValueSet of Blood Group Antibodies (substance) coded with SNOMED CT. It is used in the ChLabObservationBloodGroup profile"
 * ^version = "0.1.0"
 * ^status = #active

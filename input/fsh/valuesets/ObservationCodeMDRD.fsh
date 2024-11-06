@@ -2,7 +2,7 @@
 
 ValueSet: ObservationCodeMDRD
 Id: observation-code-mdrd-male-female
-Title: "CH LAB Codes for eGFR (MDRD)"
+Title: "CH LAB-Report Codes for eGFR (MDRD)"
 Description: "ValueSet for the allowed eGFR among males and eGFR among females codes"
 * ^version = "1.0.0"
 * ^status = #draft

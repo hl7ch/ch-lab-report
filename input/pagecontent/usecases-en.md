@@ -72,11 +72,11 @@ Standardization in the area of blood bank results would improve safety in the tr
 
 This guide contains 3 further possible ValueSets:
 
-1. [ValueSet: CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) with the SNOMED CT codes of the blood group antibody screening tests.
+1. [ValueSet: CH LAB-Report BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) with the SNOMED CT codes of the blood group antibody screening tests.
 
-2. [ValueSet: CH LAB BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-vs.html) with LOINC codes of the result of bloodgroup antibody screening tests.
+2. [ValueSet: CH LAB-Report BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-vs.html) with LOINC codes of the result of bloodgroup antibody screening tests.
 
-3. [ValueSet: CH LAB BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) with the SNOMED CT codes of the blood group antibodies
+3. [ValueSet: CH LAB-Report BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) with the SNOMED CT codes of the blood group antibodies
 
 Standardization in the blood bank sector requires the cooperation and approval of the professional association (Schweizerische Vereinigung für Transfusionsmedizin), which could not be obtained in the short time available. This guideline is therefore limited to 4 possible forms of presentation as examples of blood bank results: 
 

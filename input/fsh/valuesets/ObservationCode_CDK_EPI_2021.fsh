@@ -2,7 +2,7 @@
 
 ValueSet: ObservationCode_CDK_EPI_2021
 Id: observation-code-cdk-epi-2021
-Title: "CH LAB Codes for eGFR in CKD-EPI 2021"
+Title: "CH LAB-Report Codes for eGFR in CKD-EPI 2021"
 Description: "ValueSet for the allowed eGFRcr and eGFRcr-cys codes, has no race term"
 * ^version = "1.0.0"
 * ^status = #draft
