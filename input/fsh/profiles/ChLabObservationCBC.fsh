@@ -14,13 +14,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
 
 * code = $loinc#58410-2 // "CBC panel - Blood by Automated count"
-<<<<<<< HEAD
 * method = $sct#702659008 // "Automated count technique (qualifier value)"
-=======
-  * text = "CBC panel Auto (Bld)"
-  * ^short = "LOINC Display Name"
-* method = $sct#702659008 "Automated count technique (qualifier value)"
->>>>>>> develop
 
 * component 8..12 MS    // 8..12
 * component ^slicing.discriminator.type = #value
