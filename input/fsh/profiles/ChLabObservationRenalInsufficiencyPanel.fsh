@@ -62,7 +62,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile det
 // * labTestKit = Reference(Combur_Test)  // may be substituted with other Stripe tests
 * code = $loinc#32294-1 // "Albumin/Creatinine [Ratio] in Urine"
   * ^short = "Albumin/Creatinine (U) [Ratio]"
-* method = $sct#271075006 "Urine albumin/creatinine ratio measurement (procedure)"
+* method = $sct#271075006 // "Urine albumin/creatinine ratio measurement (procedure)"
 
 // https://github.com/hl7-eu/laboratory/blob/master/input/fsh/examples/lab_report/Observation-result-ratio-example.fsh
 // https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3919350/

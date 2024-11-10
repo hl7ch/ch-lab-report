@@ -73,7 +73,6 @@ Description: "This profile constrains the Observation resource for the purpose o
 * method ^definition = "Laboratory technigue that has been used"
 * method ^comment = "Laboratory technique (method of measurement) are integral parts of the test specification of some laboratory test coding systems (e.g. NPU), in LOINC hovewer measurement principle is not always present in the test definition. In some cases however knowledge of the used measurment techique is important for proper interpretation of the test result.
 That's why it is important to explicitly include informaiton about measurement method is such cases."
-// * method only $CodeableConcept-uv-ips
 * method from LabTechniqueEuVs (preferred) // added binding to an agreed eu lab measurement method value set
 
 * specimen only Reference(ChLabSpecimen)

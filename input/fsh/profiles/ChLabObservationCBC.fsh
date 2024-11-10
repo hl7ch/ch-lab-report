@@ -10,8 +10,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * ^jurisdiction = $m49.htm#756 "Switzerland"
 * ^purpose = "This profile constrains the ChLabObservationResultsLaboratoryt profile to represent results produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project."
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
-* category[specialty] = $sct#394916005 "Hematopathology"
-* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+* category[specialty] = $sct#394916005 // "Hematopathology"
+* category[studyType] = $loinc#18723-7 // "Hematology studies (set)"
 
 * code = $loinc#58410-2 // "CBC panel - Blood by Automated count"
 * method = $sct#702659008 // "Automated count technique (qualifier value)"

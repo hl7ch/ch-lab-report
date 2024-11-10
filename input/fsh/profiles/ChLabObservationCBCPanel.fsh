@@ -118,7 +118,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * category[studyType] = $loinc#18723-7 // "Hematology studies (set)"
 * code = $loinc#718-7 // "Hemoglobin [Mass/volume] in Blood"
   * ^short = "Hemoglobin (Bld) [Mass/Vol]"  // LOINC Display Name
-* method = $sct#83561000052101 "Photometry technique (qualifier value)"
+* method = $sct#83561000052101 // "Photometry technique (qualifier value)"
 * specimen = Reference(BloodCBC)
 
 Profile: ChLabHematocrit
