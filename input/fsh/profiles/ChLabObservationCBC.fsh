@@ -10,13 +10,11 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * ^jurisdiction = $m49.htm#756 "Switzerland"
 * ^purpose = "This profile constrains the ChLabObservationResultsLaboratoryt profile to represent results produced by automated CBC (count of Blood-Cells) for the  HL7 Swiss project."
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
-* category[specialty] = $sct#394916005 "Hematopathology"
-* category[studyType] = $loinc#18723-7 "Hematology studies (set)"
+* category[specialty] = $sct#394916005 // "Hematopathology"
+* category[studyType] = $loinc#18723-7 // "Hematology studies (set)"
 
-* code = $loinc#58410-2 "CBC panel - Blood by Automated count"
-  * text = "CBC panel Auto (Bld)"
-  * ^short = "LOINC Display Name"
-* method = $sct#702659008 "Automated count technique (qualifier value)"
+* code = $loinc#58410-2 // "CBC panel - Blood by Automated count"
+* method = $sct#702659008 // "Automated count technique (qualifier value)"
 
 * component 8..12 MS    // 8..12
 * component ^slicing.discriminator.type = #value
@@ -40,7 +38,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[WhiteBloodCellCount] ^short = "Leucocyte count"
 * component[WhiteBloodCellCount].code 1..1 MS
 * component[WhiteBloodCellCount].code ^short = "Leucocyte count code"
-* component[WhiteBloodCellCount].code = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
+* component[WhiteBloodCellCount].code = $loinc#6690-2 // "Leukocytes [#/volume] in Blood by Automated count"
 // * component[WhiteBloodCellCount].code.text = "WBC Auto (Bld) [#/Vol]"
 // * component[WhiteBloodCellCount].code.text ^short = "LOINC Display Name"
 // * component[WhiteBloodCellCount].valueQuantity only QuantityEuLab
@@ -60,7 +58,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[RedBloodCellCount] ^short = "Erythrocyte count"
 * component[RedBloodCellCount].code 1..1 MS
 * component[RedBloodCellCount].code ^short = "Leucocyte count code"
-* component[RedBloodCellCount].code = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
+* component[RedBloodCellCount].code = $loinc#789-8 // "Erythrocytes [#/volume] in Blood by Automated count"
 // * component[RedBloodCellCount].code.text = "RBC Auto (Bld) [#/Vol]"
 // * component[RedBloodCellCount].code.text ^short = "LOINC Display Name"
 // * component[RedBloodCellCount].valueQuantity only QuantityEuLab
@@ -81,7 +79,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[Hemoglobin] ^short = "Hemoglobin"
 * component[Hemoglobin].code 1..1 MS
 * component[Hemoglobin].code ^short = "Hemoglobin code"
-* component[Hemoglobin].code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
+* component[Hemoglobin].code = $loinc#718-7 // "Hemoglobin [Mass/volume] in Blood"
 // * component[Hemoglobin].code.text = "Hemoglobin (Bld) [Mass/Vol]"
 // * component[Hemoglobin].code.text ^short = "LOINC Display Name"
 // * component[Hemoglobin].valueQuantity only QuantityEuLab
@@ -102,7 +100,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[Hematocrit] ^short = "Hematocrit"
 * component[Hematocrit].code 1..1 MS
 * component[Hematocrit].code ^short = "Hematocrit code"
-* component[Hematocrit].code = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
+* component[Hematocrit].code = $loinc#4544-3 // "Hematocrit [Volume Fraction] of Blood by Automated count"
 // * component[Hematocrit].code.text = "Hematocrit Auto (Bld) [Volume fraction]"
 // * component[Hematocrit].code.text ^short = "LOINC Display Name"
 // * component[Hematocrit].valueQuantity only QuantityEuLab
@@ -123,7 +121,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[MeanCorpuscularVolume] ^short = "Mean Corpuscular Volume"
 * component[MeanCorpuscularVolume].code 1..1 MS
 * component[MeanCorpuscularVolume].code ^short = "MeanCorpuscularVolume code"
-* component[MeanCorpuscularVolume].code = $loinc#787-2 "MCV [Entitic volume] by Automated count"
+* component[MeanCorpuscularVolume].code = $loinc#787-2 // "MCV [Entitic volume] by Automated count"
 // * component[MeanCorpuscularVolume].code.text = "MCV Auto (RBC) [Entitic vol]"
 // * component[MeanCorpuscularVolume].code.text ^short = "LOINC Display Name"
 // * component[MeanCorpuscularVolume].valueQuantity only QuantityEuLab
@@ -144,7 +142,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[MeanCorpuscularHemoglobin] ^short = "Mean Corpuscular Hemoglobin"
 * component[MeanCorpuscularHemoglobin].code 1..1 MS
 * component[MeanCorpuscularHemoglobin].code ^short = "MeanCorpuscularHemoglobin code"
-* component[MeanCorpuscularHemoglobin].code = $loinc#785-6 "MCH [Entitic mass] by Automated count"
+* component[MeanCorpuscularHemoglobin].code = $loinc#785-6 // "MCH [Entitic mass] by Automated count"
 // * component[MeanCorpuscularHemoglobin].code.text = "MCH Auto (RBC) [Entitic mass]"
 // * component[MeanCorpuscularHemoglobin].code.text ^short = "LOINC Display Name"
 // * component[MeanCorpuscularHemoglobin].valueQuantity only QuantityEuLab
@@ -165,7 +163,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[MeanCorpuscularHemoglobinConcentration] ^short = "Mean Corpuscular Hemoglobin Concentration"
 * component[MeanCorpuscularHemoglobinConcentration].code 1..1 MS
 * component[MeanCorpuscularHemoglobinConcentration].code ^short = "MeanCorpuscularHemoglobinConcentration code"
-* component[MeanCorpuscularHemoglobinConcentration].code = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
+* component[MeanCorpuscularHemoglobinConcentration].code = $loinc#786-4 // "MCHC [Mass/volume] by Automated count"
 // * component[MeanCorpuscularHemoglobinConcentration].code.text = "MCHC Auto (RBC) [Mass/Vol]"
 // * component[MeanCorpuscularHemoglobinConcentration].code.text ^short = "LOINC Display Name"
 // * component[MeanCorpuscularHemoglobinConcentration].valueQuantity only QuantityEuLab
@@ -230,7 +228,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[PlateletCount] ^short = "Platelet Count"
 * component[PlateletCount].code 1..1 MS
 * component[PlateletCount].code ^short = "PlateletCount code"
-* component[PlateletCount].code = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
+* component[PlateletCount].code = $loinc#777-3 // "Platelets [#/volume] in Blood by Automated count"
 // * component[PlateletCount].code.text = "Platelets Auto (Bld) [#/Vol]"
 // * component[PlateletCount].code.text ^short = "LOINC Display Name"
 // * component[PlateletCount].valueQuantity only QuantityEuLab
@@ -250,8 +248,8 @@ Description:  "Profile for observation laboratory result of automated Count of B
 // +++++++
 * component[PlateletDistWidth] ^short = "Platelet Distribution Width"
 * component[PlateletDistWidth].code 1..1 MS
-* component[PlateletDistWidth].code ^short = "PlateletDistWidth code"
-* component[PlateletDistWidth].code = $loinc#32207-3 "Platelet distribution width [Entitic volume] in Blood by Automated count"
+* component[PlateletDistWidth].code ^short = "Platelet distribution width [Entitic volume] in Blood by Automated count"
+* component[PlateletDistWidth].code = $loinc#32207-3
 // * component[PlateletDistWidth].code.text = "Platelet distribution width Auto (Bld) [Entitic vol]"
 // * component[PlateletDistWidth].code.text ^short = "LOINC Display Name"
 // * component[PlateletDistWidth].valueQuantity only QuantityEuLab
@@ -272,7 +270,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[PlateletMeanVolume] ^short = "Platelet Mean Volume"
 * component[PlateletMeanVolume].code 1..1 MS
 * component[PlateletMeanVolume].code ^short = "PlateletMeanVolume code"
-* component[PlateletMeanVolume].code = $loinc#32623-1 "Platelet mean volume [Entitic volume] in Blood by Automated count"
+* component[PlateletMeanVolume].code = $loinc#32623-1 // "Platelet mean volume [Entitic volume] in Blood by Automated count"
 // * component[PlateletMeanVolume].code.text = "Platelet mean volume Auto (Bld) [Entitic vol]"
 // * component[PlateletMeanVolume].code.text ^short = "LOINC Display Name"
 // * component[PlateletMeanVolume].valueQuantity only QuantityEuLab

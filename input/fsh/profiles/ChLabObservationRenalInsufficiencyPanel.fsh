@@ -17,8 +17,8 @@ Description: """This panel collects the lab results in relation to renal insufie
 * ^purpose = "This profile constrains the ChLabObservationPanel profile to represent results in relation to renal insufficiency for the  HL7 Swiss project. Their hasMember element contain References to estimated GFR and Albumin Urine Test Observations."
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 
-* code = $sct#723188008 "Renal insufficiency (disorder)"
-* code.text = "Collection of Laboratory results in relation to renal insufficiency" //
+* code = $sct#723188008 // "Renal insufficiency (disorder)"
+// * code.text = "Collection of Laboratory results in relation to renal insufficiency" //
 // * hasMember 8..12
 // * hasMember ^slicing.discriminator.type = #value
 // * hasMember ^slicing.discriminator.path = "resolve().hasMember"
@@ -60,10 +60,9 @@ Description: "This profile constrains the ChLabObservationSingleTest profile det
 * category[studyType] = $loinc#18719-5 "Chemistry studies (set)"
 * hasMember ..0
 // * labTestKit = Reference(Combur_Test)  // may be substituted with other Stripe tests
-* code = $loinc#32294-1 "Albumin/Creatinine [Ratio] in Urine"
-* code.text = "Albumin/Creatinine (U) [Ratio]"
-  * ^short = "LOINC Display Name"
-* method = $sct#271075006 "Urine albumin/creatinine ratio measurement (procedure)"
+* code = $loinc#32294-1 // "Albumin/Creatinine [Ratio] in Urine"
+  * ^short = "Albumin/Creatinine (U) [Ratio]"
+* method = $sct#271075006 // "Urine albumin/creatinine ratio measurement (procedure)"
 
 // https://github.com/hl7-eu/laboratory/blob/master/input/fsh/examples/lab_report/Observation-result-ratio-example.fsh
 // https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3919350/
