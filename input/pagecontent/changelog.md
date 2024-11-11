@@ -14,19 +14,6 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#94](https://github.com/hl7ch/ch-lab-report/issues/94): Bundle 2-electrophoresis – JSON: section "Laboratory examinations" empty? no amendment: contains subsection "Chemistry studies (set)
 * [#95](https://github.com/hl7ch/ch-lab-report/issues/95): Specimen.type: reduce the minimum cardinality of Specimen.type to 0.
 * [#96](https://github.com/hl7ch/ch-lab-report/issues/96): Duplicate from #95, no amendment
-<<<<<<< HEAD
-
-* [#100](https://github.com/hl7ch/ch-lab-report/issues/100) Remove Fig. 1 Resource Overview diagram and place a link to the diagram Resource Overview of CH ELM on the profiles page.
-
-* [#102](https://github.com/hl7ch/ch-lab-report/issues/102) Move referenceRanges from dGFR profiles into examples
-* [#103](https://github.com/hl7ch/ch-lab-report/issues/103) Merge CDK-EPI profiles for males and females, parent is ChLabObservation_eGFR
-* [#104](https://github.com/hl7ch/ch-lab-report/issues/104) Merge Erythrocytes distribuition width, MDRD and CDK-EPI profiles, take codes from valueSet. eGFR calculation uses different formulas with different parameters, the implementation guide uses 3 calculation methods.
-
-* [#105](https://github.com/hl7ch/ch-lab-report/issues/105) Fixed coding including display: remove code.coding.display from all profiles
-* [#106](https://github.com/hl7ch/ch-lab-report/issues/106) CodeableConcept.text with fixed value: remove code.text from all profiles
-
-* [#113](https://github.com/hl7ch/ch-lab-report/issues/113) ChLab BloodGroup Antibody Screen Tests; 3 Value Sets are used by the Blood Group profile: CH LAB BloodGroup Antibody Result (SNOMED CT coded substances), CH LAB BloodGroup Immunohematology Tests (SNOMED CT coded procedures), CH LAB BloodGroup Antibody Screen Test Result (LOINC codes)
-=======
 * [#99](https://github.com/hl7ch/ch-lab-report/issues/99): Insert 'imposeProfile extension (to EU LAB)' into the ChLabReportServiceRequest profile'
 * [#100](https://github.com/hl7ch/ch-lab-report/issues/100): Use Cases in English and other langs: Remove Fig. 1 Resource Overview diagram and place a link to Resource Overview in CH ELM on the profiles page.
 * [#102](https://github.com/hl7ch/ch-lab-report/issues/102): Move referenceRanges from dGFR profiles into examples
@@ -41,7 +28,6 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#114](https://github.com/hl7ch/ch-lab-report/issues/114): Profiles: add links to LOINC Codes and NEJM in text of eGFR-CKD-EPI(ASR) 2021 Profile
 * [#115](https://github.com/hl7ch/ch-lab-report/issues/115): Use Cases in English: No amendment, duplicate of [#100](https://github.com/hl7ch/ch-lab-report/issues/100)
 * [#116](https://github.com/hl7ch/ch-lab-report/issues/116): Changelog, refactor bloodgroup examples
->>>>>>> develop
 
 ### STU 1 Sequence - v1.0.0-ballot
 
@@ -67,17 +53,17 @@ All significant changes to this FHIR implementation guide will be documented on 
   * Example reporting ABO group [Type], Rh [Type], the Rhesus Genotyp as uncoded text, and the result of Antibody screen test : [BloodGroupCompAB0CompRhDAntibodies](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupCompAB0CompRhDAntibodies.html)
 
   * [#71](https://github.com/hl7ch/ch-lab-report/issues/71): Example for renal Insufficiency:
-  * [CH LAB Observation Results: Renal Insufficiency Panel](https://build.fhir.org/ig/hl7ch/ch-lab-report/StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
+  * [CH LAB-Report Observation Results: Renal Insufficiency Panel](https://build.fhir.org/ig/hl7ch/ch-lab-report/StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
 
 * [#76](https://github.com/hl7ch/ch-lab-report/issues/76): eGFR CKD-EPI 2009 or 2021 formula:
-  *  [CH LAB Observation Results: eGFR - CKD-EPI(ASR) Profile for females](https://build.fhir.org/ig/hl7ch/ch-lab-report/StructureDefinition-ch-lab-observation-egfr.html)
+  *  [CH LAB-Report Observation Results: eGFR - CKD-EPI(ASR) Profile for females](https://build.fhir.org/ig/hl7ch/ch-lab-report/StructureDefinition-ch-lab-observation-egfr.html)
   
-    * [CH LAB Observation Results: eGFRcr - CKD-EPI(AS) Creatinin based Profile](https://build.fhir.org/ig/hl7ch/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-cr-ckd-epi-2021.html)
-    * [CH LAB Observation Results: eGFRcr-cys - CKD-EPI(AS) Creatinin and Cystatin-C based Profile](https://build.fhir.org/ig/hl7ch/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-cr-cys-ckd-epi-2021.html)
+    * [CH LAB-Report Observation Results: eGFRcr - CKD-EPI(AS) Creatinin based Profile](https://build.fhir.org/ig/hl7ch/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-cr-ckd-epi-2021.html)
+    * [CH LAB-Report Observation Results: eGFRcr-cys - CKD-EPI(AS) Creatinin and Cystatin-C based Profile](https://build.fhir.org/ig/hl7ch/ch-lab-report/StructureDefinition-ch-lab-observation-egfr-cr-cys-ckd-epi-2021.html)
 
 * [#68 Do we need Observation Panel Profiles?](https://github.com/hl7ch/ch-lab-report/issues/68):
-  * [CH LAB Observation Results CBC Panel - Blood by Automated count, Results in sliced component](https://build.fhir.org/ig/hl7ch/ch-lab-report/StructureDefinition-ch-lab-observation-cbc.html)Profile for observation laboratory result of automated Count of Blood Cells. We choose as Unit 10⁹/L or 10¹²/L for Cell Count. We use component slices which contain each Result.
-  * [CH LAB Observation Results CBC Panel - Blood by Automated count, Results in nested Profiles](https://build.fhir.org/ig/hl7ch/ch-lab-report/StructureDefinition-ch-lab-observation-cbc-panel.html) We use SingleTest Profiles for each CBC Result slicing 'hasMember' element.
+  * [CH LAB-Report Observation Results CBC Panel - Blood by Automated count, Results in sliced component](https://build.fhir.org/ig/hl7ch/ch-lab-report/StructureDefinition-ch-lab-observation-cbc.html)Profile for observation laboratory result of automated Count of Blood Cells. We choose as Unit 10⁹/L or 10¹²/L for Cell Count. We use component slices which contain each Result.
+  * [CH LAB-Report Observation Results CBC Panel - Blood by Automated count, Results in nested Profiles](https://build.fhir.org/ig/hl7ch/ch-lab-report/StructureDefinition-ch-lab-observation-cbc-panel.html) We use SingleTest Profiles for each CBC Result slicing 'hasMember' element.
 
 * [#92 Profile: ChLabObservationBloodGroup](https://github.com/hl7ch/ch-lab-report/issues/92)
   * Add Antibody ValueSets:
