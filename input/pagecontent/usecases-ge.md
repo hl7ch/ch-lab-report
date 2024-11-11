@@ -52,7 +52,7 @@ Die hier aufgeführten Testpanels dienen auch als Beispiele, wie Labore eigene T
 
 Das Hämatogramm II der [Analysenliste](https://www.bag.admin.ch/dam/bag/de/dokumente/kuv-leistungen/leistungen-und-tarife/Analysenliste/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx.download.xlsx/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx) ist die Vorlage für dieses Testpanel. 
 
-Profile: [CH LAB Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
+Profile: [CH LAB-Report Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
 
 Example: [Observation Results: Count of Blood Cells (automated CBC)](Observation-ExampleObservationCBCPanel.html)
 
@@ -62,7 +62,7 @@ Chronische Erkrankungen wie Diabetes oder Hypertonie gehen manchmal mit chronisc
 
 Der zweite Indikator für die Nierenfunktion ist die Albumin-Ausscheidung im 24 h Urin. Um das Bestimmungsverfahren zu vereinfachen wird die Albumin/Creatinin Ratio im Urin verwendet.
 
-Profile: [CH LAB Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
+Profile: [CH LAB-Report Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
 
 Example: [Observation Results: Renal Insufficiency Panel](Observation-ObservationRenalInsufficiencyPanel.html)
 

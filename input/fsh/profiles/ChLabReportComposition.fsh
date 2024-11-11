@@ -2,7 +2,7 @@ Profile: ChLabReportComposition
 Parent: CHCoreComposition
 // Parent: CompositionLabReportEu
 Id: ch-lab-report-composition
-Title: "CH LAB Composition: Laboratory Report"
+Title: "CH LAB-Report Composition: Laboratory Report"
 Description: "This profile constrains the Composition resource for the purpose of laboratory test reports in Switzerland."
 // * insert SetFmmandStatusRule ( 2, trial-use)
 * . ^short = "Laboratory Report composition"

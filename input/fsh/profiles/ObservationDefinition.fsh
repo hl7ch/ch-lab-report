@@ -3,7 +3,7 @@
 /*
 Profile: ChLabObservationDefinition
 Parent: ObservationDefinition
-Title: "CH LAB ObservationDefinition"
+Title: "CH LAB-Report ObservationDefinition"
 Id: ch-lab-observation-definition
 Description: "Contains the Identifier for the Test-Kit and the Analyzer, the methods, the ranges"
 

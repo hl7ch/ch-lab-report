@@ -1,7 +1,7 @@
 Profile: ChLabDiagnosticReport
 Parent: DiagnosticReport
 Id: ch-lab-diagnosticreport
-Title: "CH LAB DiagnosticReport: Laboratory Report"
+Title: "CH LAB-Report DiagnosticReport: Laboratory Report"
 Description: "This profile constrains the DiagnosticReport resource for the purpose of laboratory test reports in Switzerland."
 * . ^short = "CH LAB DiagnosticReport: Laboratory Report"
 * . ^definition = "Laboratory Report DiagnosticReport"

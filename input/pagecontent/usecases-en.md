@@ -52,7 +52,7 @@ The test panels listed here also serve as examples of how laboratories can imple
 
 The hematogram II of the [analysis list(https://www.bag.admin.ch/dam/bag/de/dokumente/kuv-leistungen/leistungen-und-tarife/Analysenliste/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx.download.xlsx/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx)]  is the template for this test panel. 
 
-Profile: [CH LAB Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
+Profile: [CH LAB-Report Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
 
 Example: [Observation Results: Count of Blood Cells (automated CBC)](Observation-ExampleObservationCBCPanel.html)
 
@@ -62,7 +62,7 @@ Chronic diseases such as diabetes or hypertension are sometimes accompanied by c
 
 The second indicator of kidney function is albumin excretion in 24 h urine. To simplify the determination procedure, the albumin/creatinine ratio in urine is used.
 
-Profile: [CH LAB Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
+Profile: [CH LAB-Report Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
 
 Example: [Observation Results: Renal Insufficiency Panel](Observation-ObservationRenalInsufficiencyPanel.html)
 

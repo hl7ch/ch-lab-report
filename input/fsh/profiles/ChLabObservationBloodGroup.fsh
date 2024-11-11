@@ -2,7 +2,7 @@
 Profile: ChLabObservationBloodGroup
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-blood-group
-Title: "CH LAB Observation Results: Blood Group"
+Title: "CH LAB-Report Observation Results: Blood Group"
 Description: """Profile to report Blood Group and RhD data. In addition to the code element valuesets delivered from EU Laboratory we have added
 3 supplement value sets: CH LAB-Report BloodGroup Antibody Screen Test Result, CH LAB-Report BloodGroup Antibody Result, CH LAB-Report BloodGroup Immunohematology
 Tests. These value sets have a candidate binding, i.e. they are candidates to substitute general value sets in some

@@ -52,7 +52,7 @@ Les panels de tests énumérés ici servent également d'exemples de la manière
 
 L'hématogramme II de la [liste d'analyses(https://www.bag.admin.ch/dam/bag/de/dokumente/kuv-leistungen/leistungen-und-tarife/Analysenliste/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx.download.xlsx/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx)] est le modèle pour ce panel de tests. 
 
-Profil : [CH LAB Observation Results : Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
+Profil : [CH LAB-Report Observation Results : Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
 
 Exemple : [Résultats de l'observation : Numération des cellules sanguines (NFS automatisée)](Observation-ExampleObservationCBCPanel.html)
 
