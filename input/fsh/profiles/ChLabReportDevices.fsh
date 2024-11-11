@@ -3,7 +3,7 @@
 // ╰──────────────────────╯
 Profile: ChLabReportDeviceTestKit
 Parent: Device
-Title: "CH LAB Device: TestKit"
+Title: "CH LAB-Report Device: TestKit"
 Id: ch-lab-report-device-test-kit
 Description: "Holds Laboratory Test-Kit Data"
 * definition MS
@@ -27,7 +27,7 @@ Description: "Holds Laboratory Test-Kit Data"
 // ╰──────────────────────╯
 Profile: ChLabReportDeviceAnalyzer
 Parent: Device
-Title: "CH LAB Device: Analyzer"
+Title: "CH LAB-Report Device: Analyzer"
 Id: ch-lab-report-device-analyzer
 Description: "Holds Laboratory Analyzer Data"
 

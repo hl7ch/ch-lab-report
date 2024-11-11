@@ -1,7 +1,7 @@
 Profile: ChLabPatient
 Parent: CHCorePatient
 Id: ch-lab-patient
-Title: "CH LAB Patient"
+Title: "CH LAB-Report Patient"
 Description: "This profile constrains the Patient resource for the purpose of laboratory test reports in Switzerland."
 * . ^short = "CH LAB Patient"
 * ^extension[$imposeProfile].valueCanonical = Canonical(PatientEuLab)
@@ -9,7 +9,7 @@ Description: "This profile constrains the Patient resource for the purpose of la
 /*
 Instance: FranzMuster
 InstanceOf: ChLabPatient
-Title: "CH LAB Patient"
+Title: "CH LAB-Report Patient"
 Description: ""
 Usage: #example
 * meta.profile = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"

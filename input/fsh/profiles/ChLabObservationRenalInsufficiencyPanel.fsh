@@ -6,7 +6,7 @@
 Profile: ChLabObservationRenalInsufficiencyPanel
 Parent: ChLabObservationPanel
 Id: ch-lab-observation-renal-insufficiency-panel
-Title: "CH LAB Observation Results: Renal Insufficiency Panel"   // SNOMED concept
+Title: "CH LAB-Report Observation Results: Renal Insufficiency Panel"   // SNOMED concept
 Description: """This panel collects the lab results in relation to renal insufiency."""
 
 * ^publisher = "HL7 Switzerland"
@@ -45,7 +45,7 @@ Description: """This panel collects the lab results in relation to renal insufie
 Profile: ChLabObservation_uACR
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-albumin-creatinine-urine-ratio
-Title: "CH LAB Observation Results: Albumin/Creatinine Ratio in Urine"
+Title: "CH LAB-Report Observation Results: Albumin/Creatinine Ratio in Urine"
 Description: "This profile constrains the ChLabObservationSingleTest profile determine ratio of the concentration of albumin and creatinine in urine."
 * . ^short = "CH LAB Observation Results: uACR"
 
