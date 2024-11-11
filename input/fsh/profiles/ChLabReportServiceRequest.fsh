@@ -5,7 +5,7 @@ has to be compared with SR from CH LAB-Order
 Profile: ChLabReportServiceRequest
 Parent: ServiceRequest     // ChLabOrderSR | ChOrfServiceRequest
 Id: ch-lab-report-servicerequest
-Title: "CH LAB ServiceRequest: Laboratory Order"
+Title: "CH LAB-Report ServiceRequest: Laboratory Order"
 Description: "This profile constrains the ServiceRequest resource for the purpose of laboratory orders in Switzerland."
 * . ^short = "CH LAB Service Request: Laboratory"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ServiceRequestLabEu)

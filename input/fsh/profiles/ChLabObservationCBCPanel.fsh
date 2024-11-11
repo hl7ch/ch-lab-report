@@ -6,7 +6,7 @@
 Profile: ChLabObservationCBCPanel
 Parent: ChLabObservationPanel
 Id: ch-lab-observation-cbc-panel
-Title: "CH LAB Observation Results CBC Panel - Blood by Automated count, Results in nested Profiles"   // LOINC long common name
+Title: "CH LAB-Report Observation Results CBC Panel - Blood by Automated count, Results in nested Profiles"   // LOINC long common name
 Description: """This panel is the traditional hemogram plus platelet count which must now be reported with with hemograms according to current US re-imbursement rule The panel includes 2 different RDWs to accommodate the two different ways of reporting them. (Most automated instruments report as a percent ). The hemoglobin produced by the automatic counters does not use a counting method to generate the hemoglobin so we have used the fotometry version of hemoglobin in this panel."""
 
 // * ^publisher = "HL7 Switzerland"
@@ -85,7 +85,7 @@ Description: """This panel is the traditional hemogram plus platelet count which
 Profile: ChLabLeucocyteCount
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-results-wbc
-Title: "CH LAB Observation Results: LeucocyteCount"
+Title: "CH LAB-Report Observation Results: LeucocyteCount"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory leucocyte count."
 * . ^short = "CH LAB Observation Results: Laboratory Leucocyte Count"
 * category[specialty] = $sct#394916005   // "Hematopathology"
@@ -98,7 +98,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabErythrocyteCount
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-results-rbc
-Title: "CH LAB Observation Results: ErythrocyteCount"
+Title: "CH LAB-Report Observation Results: ErythrocyteCount"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory erythrocyte count."
 * . ^short = "CH LAB Observation Results: Laboratory Erythrocyte Count"
 * category[specialty] = $sct#394916005 // "Hematopathology"
@@ -111,7 +111,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabHemoglobin
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-results-hb
-Title: "CH LAB Observation Results: Hemoglobin"
+Title: "CH LAB-Report Observation Results: Hemoglobin"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory hemoglobin."
 * . ^short = "CH LAB Observation Results: Laboratory Hemoglobin"
 * category[specialty] = $sct#394916005 // "Hematopathology"
@@ -124,7 +124,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabHematocrit
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-results-ht
-Title: "CH LAB Observation Results: Hemotocrit"
+Title: "CH LAB-Report Observation Results: Hemotocrit"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory hemotocrit in Switzerland."
 * . ^short = "CH LAB Observation Results: Laboratory Hematocrit"
 * category[specialty] = $sct#394916005 // "Hematopathology"
@@ -137,7 +137,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabMeanCorpuscularVolume
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-results-mcv
-Title: "CH LAB Observation Results: MeanCorpuscularVolume MCV"
+Title: "CH LAB-Report Observation Results: MeanCorpuscularVolume MCV"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCV."
 * . ^short = "CH LAB Observation Results: Laboratory MCV"
 * category[specialty] = $sct#394916005 // "Hematopathology"
@@ -150,7 +150,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabMeanCorpuscularHemoglobin
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-results-mch
-Title: "CH LAB Observation Results: Mean Corpuscular Hemoglobin MCH"
+Title: "CH LAB-Report Observation Results: Mean Corpuscular Hemoglobin MCH"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCH in Switzerland."
 * . ^short = "CH LAB Observation Results: Laboratory MCH"
 * category[specialty] = $sct#394916005 // "Hematopathology"
@@ -164,7 +164,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabMeanCorpuscularHemoglobinConcentration
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-results-mchc
-Title: "CH LAB Observation Results: Mean Corpuscular Hemoglobin Concentration MCHC"
+Title: "CH LAB-Report Observation Results: Mean Corpuscular Hemoglobin Concentration MCHC"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory MCHC in Switzerland."
 * . ^short = "CH LAB Observation Results: Laboratory MCHC"
 * category[specialty] = $sct#394916005 // "Hematopathology"
@@ -178,7 +178,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabErythrocyteDistributionWidth
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-results-ery-distribution-width
-Title: "CH LAB Observation Results: Erythrocyte distribution width by Automated count"
+Title: "CH LAB-Report Observation Results: Erythrocyte distribution width by Automated count"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory Erythrocyte Distribuition Width in Switzerland."
 * . ^short = "CH LAB Observation Results: Laboratory Erythrocyte Distribution Width"
 * ^experimental = false
@@ -192,7 +192,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabPlateletCount
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-results-platelets
-Title: "CH LAB Observation Results: Platelet Count"
+Title: "CH LAB-Report Observation Results: Platelet Count"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet count."
 * . ^short = "CH LAB Observation Results: Laboratory Platelet Count"
 * category[specialty] = $sct#394916005 // "Hematopathology"
@@ -205,7 +205,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabPlateletDistributionWidth
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-results-platelets-distribution-width
-Title: "CH LAB Observation Results: Platelet Distribution Width"
+Title: "CH LAB-Report Observation Results: Platelet Distribution Width"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet count."
 * . ^short = "CH LAB Observation Results: Laboratory Platelet Count"
 * category[specialty] = $sct#394916005 // "Hematopathology"
@@ -217,7 +217,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 Profile: ChLabPlateletMeanVolume
 Parent: ChLabObservationSingleTest
 Id: ch-lab-observation-results-platelets-mean-volume
-Title: "CH LAB Observation Results: Platelet Mean Volume"
+Title: "CH LAB-Report Observation Results: Platelet Mean Volume"
 Description: "This profile constrains the ChLabObservationSingleTest profile for the purpose of laboratory platelet mean volume."
 * . ^short = "CH LAB Observation Results: Laboratory Platelet Count"
 * category[specialty] = $sct#394916005 // "Hematopathology"

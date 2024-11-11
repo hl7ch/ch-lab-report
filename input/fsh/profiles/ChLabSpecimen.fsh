@@ -1,6 +1,6 @@
 Profile: ChLabSpecimen // Should be convenient in CH LAB-Order too
 Parent: Specimen
-Title: "CH LAB Specimen"
+Title: "CH LAB-Report Specimen"
 Id: ch-lab-specimen
 Description: "This profile constrains the Specimen resource for the purpose of laboratory test reports in Switzerland."
 * ^extension[$imposeProfile].valueCanonical = Canonical(SpecimenEu)
@@ -41,7 +41,7 @@ Otherwise the relationship is recorded in the Specimen.request element"""
 Profile: ChLabSpecimenAdditiveSubstance
 Parent: Substance
 Id: ch-lab-specimen-additive-substance
-Title: "CH LAB Additive Substance"
+Title: "CH LAB-Report Additive Substance"
 Description: """This profile defines how to represent Specimen Additive Substances in HL7 FHIR for the purpose of this guide."""
 * code from LabSpecimenAdditiveEu (preferred)
 

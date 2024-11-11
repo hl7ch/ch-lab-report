@@ -6,7 +6,7 @@ This exchange format is defined as a [document type](https://www.hl7.org/fhir/r4
 
 {% include img.html img="LabReport.png" caption="Fig.: Laboratory Report" width="40%" %}
 
-* **Profile**: [CH LAB-Report](StructureDefinition-ch-lab-report-document.html)
+* **Profile**: [CH LAB-Report-Report](StructureDefinition-ch-lab-report-document.html)
 
 * **Example Deep Vein Thrombosis**: CH LAB-Report Document ([XML](Bundle-LabResultReport-1-tvt.xml.html), [JSON](Bundle-LabResultReport-1-tvt.json.html))
 

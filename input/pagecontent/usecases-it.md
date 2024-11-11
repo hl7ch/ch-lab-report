@@ -52,7 +52,7 @@ I pannelli di test qui elencati servono anche come esempi di come i laboratori p
 
 L'ematogramma II della [lista di analisi(https://www.bag.admin.ch/dam/bag/de/dokumente/kuv-leistungen/leistungen-und-tarife/Analysenliste/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx.download.xlsx/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx)] è il modello per questo pannello di test. 
 
-Profilo: [CH LAB Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
+Profilo: [CH LAB-Report Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
 
 Esempio: [Risultati dell'osservazione: conteggio delle cellule del sangue (emocromo automatico)](Observation-ExampleObservationCBCPanel.html)
 
@@ -62,7 +62,7 @@ Malattie croniche come il diabete o l'ipertensione sono talvolta accompagnate da
 
 Il secondo indicatore della funzione renale è l'escrezione di albumina nelle urine delle 24 ore. Per semplificare la procedura di determinazione, si utilizza il rapporto albumina/creatinina nelle urine.
 
-Profilo: [CH LAB Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
+Profilo: [CH LAB-Report Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
 
 Esempio: [Risultati dell'osservazione: pannello di insufficienza renale](Observation-ObservationRenalInsufficiencyPanel.html)
 
