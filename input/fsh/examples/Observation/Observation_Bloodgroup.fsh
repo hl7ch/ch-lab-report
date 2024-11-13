@@ -12,13 +12,12 @@ Description: "Example reporting Blood Group and RhD Result separately in a membe
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
-* code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
+* code = $loinc#34530-6 "ABO and Rh group panel - Blood"  // LHC Form
 * code.text = "ABO and Rh group panel (Bld)"   // Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-
 * method = $sct#258075003 "Serotyping (qualifier value)"
 * hasMember[+] = Reference(Observation/BloodGroupABO)
 * hasMember[+] = Reference(Observation/BloodGroupRh)
@@ -79,13 +78,12 @@ Usage: #example
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
-// * code = $loinc#34530-6 "ABO and Rh group panel - Blood"
+* code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
 * code.text = "ABO and Rh group panel (Bld)"   // Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-
 * method = $sct#258075003 "Serotyping (qualifier value)"
 
 * component[0]
@@ -114,19 +112,16 @@ Usage: #example
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
-
-// * code = $loinc#34530-6 "ABO and Rh group panel - Blood"
+* code = $loinc#34530-6 "ABO and Rh group panel - Blood"
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-
 * method = $sct#726528006 "Genotyping (qualifier value)"
 
 * valueCodeableConcept.coding[+].code = #278154007
 * valueCodeableConcept.coding[=].system = $sct
 * valueCodeableConcept.coding[=].display = "Blood group AB Rh(D) negative"
-
 
 // ╭─── example Blood group Result weak D ───────────────────────────────╮
 // │ ABO and Rh group panel coded with LOINC                             │
@@ -143,7 +138,7 @@ Usage: #example
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
 * category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
-// * code = $loinc#34530-6 "ABO and Rh group panel - Blood"
+* code = $loinc#34530-6 "ABO and Rh group panel - Blood"
 * code.text = "ABO and Rh group panel (Bld)"   // Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
@@ -164,12 +159,62 @@ Usage: #example
   * valueCodeableConcept.coding[=].system = $sct
   * valueCodeableConcept.coding[=].display = "Trans weak D phenotype"
 
-// ╭─── example Blood group Rhesus-Phenotyp, Antibodies  ────────────────╮
+
+// ####################################################################################
+// ╭── 3 examples from Corina: coded results ────────────────────────────╮
 // │ ABO and Rh group panel coded with LOINC                             │
 // │ AB0 Result: component coded with LOINC, Result coded with SNOMED CT │
 // │ RhD Result: component coded with LOINC, Result coded with SNOMED CT │
 // ╰─────────────────────────────────────────────────────────────────────╯
-Instance: BloodGroupCompAB0CompRhDAT
+Instance: BloodGroup-1-coded  // 1st example from Corina
+InstanceOf: ChLabObservationBloodGroup
+Title: "Blood Group Panel with Component ABO, Component RhD, Date, Period and Result Antibodies"
+Description: "Example reporting ABO group [Type], Rh [Type],  separately in a component and coded with SNOMED CT"
+Usage: #example
+* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.value = "1304-03760-blood-group-component"
+* status = #final
+* category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
+* category[studyType] = $loinc#18717-9 "Blood bank studies (set)"
+* code = $loinc#34530-6 "ABO and Rh group panel - Blood"
+* code.text = "ABO and Rh group panel (Bld)"   // Display Name
+* subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
+* effectiveDateTime = "2024-04-23T11:24:26+01:00"
+* issued = "2024-04-24T11:24:26+01:00"
+* performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
+
+* method = $sct#258075003 "Serotyping (qualifier value)"
+
+* component[0]  // O
+  * code = $loinc#883-9 "ABO group [Type] in Blood"
+  * valueCodeableConcept.coding.code = #58460004
+  * valueCodeableConcept.coding.system = $sct
+  * valueCodeableConcept.coding.display = "Blood group O"
+
+* component[1]  // -
+  * code = $loinc#10331-7 "Rh [Type] in Blood"
+  * valueCodeableConcept.coding.code = #165746003
+  * valueCodeableConcept.coding.system = $sct
+  * valueCodeableConcept.coding.display = "RhD negative"
+
+* component[2]  // 1. Bestimmungsdatum 01.07.2022
+  * code = $loinc#90089-4 "Date and time report was released"
+  * valueDateTime = "2022-07-01T11:24:26+01:00"
+
+* component[3]  // 2. Bestimmungsdatum 01.07.2022
+  * code = $loinc#90089-4 "Date and time report was released"
+  * valueDateTime = "2022-07-01T11:34:26+01:00"
+
+* component[4]  // Gültigkeit T+S
+  * code = $loinc#90089-4 "Date and time report was released"
+  * valuePeriod.start = "2022-07-01T11:34:26+01:00"
+  * valuePeriod.end = "2022-07-05T11:28:26+01:00"
+  
+* component[5]  // Antikörper: nein
+  * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
+  * valueBoolean = false
+
+Instance: BloodGroup-2-coded  // 2nd example from Corina
 InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group Panel with Component Antibody screen test and DAT test"
 Description: "Example reporting Anti-C and Anti-K"
@@ -213,7 +258,7 @@ Usage: #example
   * valueCodeableConcept.coding.display = "Not detected"
 
 
-Instance: BloodGroupCompAB0CompRhDAntibodies  // B neg
+Instance: BloodGroup-3-coded  // 3rd example from Corina
 InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group Panel with Component ABO, Component RhD, Rh Genotype and Result Antibodies"
 Description: "Example reporting ABO group [Type] and Rh [Type] separately in a component and coded with SNOMED CT"
@@ -244,12 +289,9 @@ Usage: #example
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "RhD negative"
 
-* component[2]  // Rhesus-Phänotyp, sollte eigentlich Rhesus-Genotyp sein: ccddee 
+* component[2]  // Rhesus-Phänotyp: ccddee 
   * code = $loinc#10331-7 "Rh [Type] in Blood"
-  // * valueCodeableConcept.coding.code = #112149005
-  // * valueCodeableConcept.coding.system = $sct
-  // * valueCodeableConcept.coding.display = "ccddee"
-  * valueCodeableConcept.text = "ccddee"  // Rhesus Genotyp
+  * valueString = "ccddee"  // Rhesus Genotyp
 
 * component[3]  // Antikörper: Anti-C
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
