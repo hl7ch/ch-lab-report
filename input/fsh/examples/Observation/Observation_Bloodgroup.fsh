@@ -362,7 +362,8 @@ Usage: #example
   * valueDateTime = "2022-07-01T11:34:26+01:00"
 
 * component[4]  // Gültigkeit T+S
-  * code = $loinc#90089-4 "Date and time report was released"
+  * code = $loinc#82607-3 "Clinical data [Date and Time Range]"
+  * code.text = "T + S"
   * valuePeriod.start = "2022-07-01T11:34:26+01:00"
   * valuePeriod.end = "2022-07-05T11:28:26+01:00"
   
