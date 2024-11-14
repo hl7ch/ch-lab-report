@@ -236,9 +236,9 @@ Usage: #example
 
 * component[0]  // A
   * code = $loinc#883-9 "ABO group [Type] in Blood"
-  * valueCodeableConcept.coding.code = #278149003
+  * valueCodeableConcept.coding.code = #112144000
   * valueCodeableConcept.coding.system = $sct
-  * valueCodeableConcept.coding.display = "Blood group A Rh(D) positive"
+  * valueCodeableConcept.coding.display = "Blood group A"
 
 * component[1]  // positiv
   * code = $loinc#10331-7 "Rh [Type] in Blood"
@@ -296,7 +296,7 @@ Usage: #example
   * code.text = "ABO and Rh group panel (Bld)"
   * valueCodeableConcept.coding.code = #278153001
   * valueCodeableConcept.coding.system = $sct
-  * valueCodeableConcept.text = "Blood group B Rh(D)"
+  * valueCodeableConcept.text = "Blood group B Rh(D) negative"
 
 
 * component[2]  // Rhesus-Phänotyp: ccddee 
@@ -344,7 +344,7 @@ Usage: #example
   // * valueCodeableConcept.coding.code = #58460004
   // * valueCodeableConcept.coding.system = $sct
   // * valueCodeableConcept.coding.display = "Blood group O"
-  * valueString = "Blood group O"
+  * valueString = "O"
 
 * component[1]  // -
   * code = $loinc#10331-7 "Rh [Type] in Blood"
@@ -390,9 +390,9 @@ Usage: #example
 
 * component[0]  // A pos
   * code = $loinc#883-9 "ABO group [Type] in Blood"
-  // * valueCodeableConcept.coding.code = #278149003
+  // * valueCodeableConcept.coding.code = #112144000
   // * valueCodeableConcept.coding.system = $sct
-  // * valueCodeableConcept.coding.display = "Blood group A Rh(D) positive"
+  // * valueCodeableConcept.coding.display = "Blood group A"
   * valueString = "A"
 
 * component[1]  // -
@@ -414,14 +414,14 @@ Usage: #example
   // * valueCodeableConcept.coding.code = #260415000
   // * valueCodeableConcept.coding.system = $sct
   // * valueCodeableConcept.coding.display = "Not detected"
-  * valueString = "negativ"
+  * valueString = "negativ, Reference Range negativ"
 
 * component[4]  // DAT (C3d) neg
   * code = $loinc#55774-4 "Direct antiglobulin test.complement C3d specific reagent [Presence] on Red Blood Cells"
   // * valueCodeableConcept.coding.code = #260415000
   // * valueCodeableConcept.coding.system = $sct
   // * valueCodeableConcept.coding.display = "Not detected"
-  * valueString = "negativ"
+  * valueString = "negativ, Reference Range negativ"
 
 Instance: BloodGroup-freeTextResult-3  // 3rd example from Corina
 InstanceOf: ChLabObservationBloodGroup
@@ -448,22 +448,24 @@ Usage: #example
   // * valueQuantity = 130 'g/L' "g/L"
   // * valueQuantity.system = "http://unitsofmeasure.org"
   // * valueQuantity.unit = "g/L"
-  * valueString = "B neg"
+  * valueString = "130 g/l, Reference Range 121-154"
 
 * component[1]  // B RhD neg 
   * code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
-  * code.text = "ABO and Rh group panel (Bld)"   // Display Name
+  * code.text = "ValBG"
   // * valueCodeableConcept.coding.code = #112149005
   // * valueCodeableConcept.coding.system = $sct
   // * valueCodeableConcept.coding.display = "Blood group B"
-  * valueString = "B neg"
+  * valueString = "B negativ"
 
 * component[2]  // Rhesus-Phänotyp: ccddee 
   * code = $loinc#10331-7 "Rh [Type] in Blood"
+  * code.text = "Rhesus-Phänotyp"
   * valueString = "ccddee"  // Rhesus Genotyp
 
 * component[3]  // Antikörper: Anti-C
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
+  * code.text = "Antikörper"
   // * valueCodeableConcept.coding.code = #35068008 // Anti-C
   // * valueCodeableConcept.coding.system = $sct
   // * valueCodeableConcept.coding.display = "Blood group antibody C"
@@ -471,6 +473,7 @@ Usage: #example
 
 * component[4]  // Antikörper: Anti-K
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
+  * code.text = "Antikörper"
   // * valueCodeableConcept.coding.code = #83404001  // Anti-K, Kell-System
   // * valueCodeableConcept.coding.system = $sct
   // * valueCodeableConcept.coding.display = "Blood group antibody K"
