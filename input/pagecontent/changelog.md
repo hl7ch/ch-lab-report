@@ -4,7 +4,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#70](https://github.com/hl7ch/ch-lab-report/issues/70): Limit image size to 20 megabytes: Add menu point and page 'Guidance'.
 * [#73](https://github.com/hl7ch/ch-lab-report/issues/73): Results Blood Group: Add more examples
 * [#77](https://github.com/hl7ch/ch-lab-report/issues/77): The graphic 'Resoure Overview' has been removed.
-* [#78](https://github.com/hl7ch/ch-lab-report/issues/78): CH LAB Observation Blood Group - Definitions
+* [#78](https://github.com/hl7ch/ch-lab-report/issues/78): CH LAB-Report Observation Blood Group - Definitions
   * add example Bloodgroup panel with 2 dependent hasMember elements
     * [Blood Group ABO Rh Panel](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupPanel.html)
     * [Blood Group Panel ABO](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupABO.html)
@@ -40,7 +40,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#52](https://github.com/hl7ch/ch-lab-report/issues/52): Update to Version 0.2.0-ci of HL7 Europe Laboratory Report
 
 * [#73](https://github.com/hl7ch/ch-lab-report/issues/73): Results Blood Group
-  * Profile CH LAB Observation Blood Group: Change ValueSet to [Results Blood Group - IPS](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-uv-ips), change binding to 'preferred'
+  * Profile CH LAB-Report Observation Blood Group: Change ValueSet to [Results Blood Group - IPS](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-uv-ips), change binding to 'preferred'
   * Example reporting Blood Group and RhD Result combined and coded with SNOMED CT: [BloodGroupAB0RhD](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupAB0RhD.html)
   * Example reporting Blood Group and RhD Result separately and coded with SNOMED CT: [BloodGroupCompAB0CompRhD](https://build.fhir.org/ig/hl7ch/ch-lab-report/Observation-BloodGroupCompAB0CompRhD.html)
 

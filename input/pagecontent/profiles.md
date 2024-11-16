@@ -43,7 +43,7 @@ It is the task of the individual medical laboratories to offer the user meaningf
     <p>
     In FHIR, we have various options for displaying test panels in the laboratory area:<br>
       1. sliced component: we use the element <i>component</i> as an array in the Observation resource. The disadvantage is that component cannot be structured.<br>
-      2. nested profiles: we can use the element <i>hasMember</i> to create test panels with any number of branches, which can be nested. The two profiles <i>CH LAB Observation Results Panel</i> and <i>CH LAB Observation Results Single Test</i> are provided for this purpose.
+      2. nested profiles: we can use the element <i>hasMember</i> to create test panels with any number of branches, which can be nested. The two profiles <i>CH LAB-Report Observation Results Panel</i> and <i>CH LAB-Report Observation Results Single Test</i> are provided for this purpose.
     </p>
     <p>
     The profile for estimated GFR is a particular challenge. There are different ways to calculate this GFR based on age, gender, race, creatinine, creatinine combined with cystatin-C. The implementation guide contains 3 profiles for this: 

@@ -5,7 +5,7 @@
 Profile:      ChLabObservation_eGFR_MDRD
 Id:           ch-lab-observation-egfr-mdrd
 Parent:       ChLabObservation_eGFR
-Title:        "CH LAB Observation Results: eGFR - MDRD Profile for male and female Patients, components for blacks and non-blacks"
+Title:        "CH LAB-Report Observation Results: eGFR - MDRD Profile for male and female Patients, components for blacks and non-blacks"
 Description:  """Renal function can be determined by laboratory measurement of serum creatinine, from which the estimated glomerular
 (eGFR_MDMR) filtration rate can be calculated. Further input parameters are age, race and gender.  
 Note: The MDRD equation is hardly used any more and is replaced by the CKD-EPI equation.  

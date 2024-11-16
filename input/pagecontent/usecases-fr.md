@@ -62,7 +62,7 @@ Les maladies chroniques telles que le diabète ou l'hypertension s'accompagnent 
 
 Le deuxième indicateur de la fonction rénale est l'excrétion d'albumine dans les urines de 24 heures. Pour simplifier la procédure de détermination, on utilise le rapport albumine/créatinine dans l'urine.
 
-Profil : [Résultats d'observation CH LAB : Panel d'insuffisance rénale](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
+Profil : [Résultats d'observation CH LAB-Report : Panel d'insuffisance rénale](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
 
 Exemple : [Résultats des observations : Panel d'insuffisance rénale](Observation-ObservationRenalInsufficiencyPanel.html)
 
