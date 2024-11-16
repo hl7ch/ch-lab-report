@@ -272,8 +272,7 @@ Usage: #example
   * valueCodeableConcept.coding.code = #260415000
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Not detected"
-
-
+ 
 Instance: BloodGroup-codedResult-3  // 3rd example from Corina
 InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group coded Result Panel with Component Hemoglobine, ABO, RhD, Rh Phenotype and Results Antibodies"
@@ -298,6 +297,9 @@ Usage: #example
   * valueQuantity = 130 'g/L' "g/L"
   * valueQuantity.system = "http://unitsofmeasure.org"
   * valueQuantity.unit = "g/L"
+  * referenceRange.low = 121 'g/L' "g/L"
+  * referenceRange.high = 154 'g/L' "g/L" 
+
 
 * component[1]  // B RhD neg
   * code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
@@ -414,17 +416,20 @@ Usage: #example
 * component[2]  // Antikörpersuchtest neg
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
   * code.text = "Antikörpersuchtest"
-  * valueString = "negativ, Referenzbereich negativ"
+  * valueString = "negativ"
+  * referenceRange.text = "negativ"
 
 * component[3]  // DAT (IgG) neg
   * code = $loinc#55776-9 "Direct antiglobulin test.IgG specific reagent [Presence] on Red Blood Cells"
   * code.text = "DAT (IgG)"
-  * valueString = "negativ, Referenzbereich negativ"
+  * valueString = "negativ"
+  * referenceRange.text = "negativ"
 
 * component[4]  // DAT (C3d) neg
   * code = $loinc#55774-4 "Direct antiglobulin test.complement C3d specific reagent [Presence] on Red Blood Cells"
   * code.text = "DAT (C3d)"
-  * valueString = "negativ, Referenzbereich negativ"
+  * valueString = "negativ"
+  * referenceRange.text = "negativ"
 
 Instance: BloodGroup-freeTextResult-3  // 3rd example from Corina
 InstanceOf: ChLabObservationBloodGroup
@@ -447,7 +452,9 @@ Usage: #example
 * component[0]  // Hb
   * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
   * code.text = "Hämoglobin"
-  * valueString = "130 g/l, Referenzbereich 121-154"
+  * valueString = "130 g/l"
+  * referenceRange.low = 121 'g/L' "g/L"
+  * referenceRange.high = 154 'g/L' "g/L" 
 
 * component[1]  // B RhD neg 
   * code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
