@@ -276,7 +276,7 @@ Usage: #example
 
 Instance: BloodGroup-codedResult-3  // 3rd example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group coded Result Panel with Component ABO and RhD, Component Rh Genotype and Component Result Antibodies"
+Title: "Blood Group coded Result Panel with Component Hemoglobine, ABO, RhD, Rh Phenotype and Results Antibodies"
 Description: "Example reporting Hemoglobin, ABO group [Type] and Rh [Type], Rhesus Phenotype and Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -428,7 +428,7 @@ Usage: #example
 
 Instance: BloodGroup-freeTextResult-3  // 3rd example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group free Text Result Panel with Component ABO and RhD, Component Rh Genotype and Component Result Antibodies"
+Title: "Blood Group free Text Result Panel with Component Hemoglobine, ABO, RhD, Rh Phenotype and Results Antibodies"
 Description: "Example reporting Hemoglobin, ABO group [Type] and Rh [Type], Rhesus Phenotype and Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
