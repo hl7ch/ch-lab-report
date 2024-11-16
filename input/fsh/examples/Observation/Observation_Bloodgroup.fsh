@@ -161,15 +161,16 @@ Usage: #example
 
 
 // ####################################################################################
-// ╭── 3 examples from Corina: coded results ────────────────────────────╮
-// │ ABO and Rh group panel coded with LOINC                             │
-// │ AB0 Result: component coded with LOINC, Result coded with SNOMED CT │
-// │ RhD Result: component coded with LOINC, Result coded with SNOMED CT │
-// ╰─────────────────────────────────────────────────────────────────────╯
+// ╭── 3 examples from Corina: coded tests and results ───────────────────────╮
+// │ ABO and Rh group panel: test coded with LOINC and SNOMED CT              │
+// │ AB0 Result: component test coded with LOINC, Result coded with SNOMED CT │
+// │ RhD Result: component test coded with LOINC, Result coded with SNOMED CT │
+// ╰──────────────────────────────────────────────────────────────────────────╯
+
 Instance: BloodGroup-codedResult-1  // 1st example from Corina
 InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group coded result Panel with Component ABO, Component RhD, Date, Period and Result Antibodies"
-Description: "Example reporting ABO group [Type], Rh [Type],  separately in a component and coded with SNOMED CT"
+Description: "Example reporting ABO group [Type], Rh [Type], T + S, Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
@@ -182,27 +183,30 @@ Usage: #example
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-
 * method = $sct#258075003 "Serotyping (qualifier value)"
 
 * component[0]  // O
   * code = $loinc#883-9 "ABO group [Type] in Blood"
+  * code.text = "Blutgruppe"
   * valueCodeableConcept.coding.code = #58460004
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Blood group O"
 
 * component[1]  // -
   * code = $loinc#10331-7 "Rh [Type] in Blood"
+  * code.text = "Rhesusfaktor"
   * valueCodeableConcept.coding.code = #165746003
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "RhD negative"
 
 * component[2]  // 1. Bestimmungsdatum 01.07.2022
   * code = $loinc#90089-4 "Date and time report was released"
+  * code.text = "1. Bestimmungsdatum"
   * valueDateTime = "2022-07-01T11:24:26+01:00"
 
 * component[3]  // 2. Bestimmungsdatum 01.07.2022
   * code = $loinc#90089-4 "Date and time report was released"
+  * code.text = "2. Bestimmungsdatum"
   * valueDateTime = "2022-07-01T11:34:26+01:00"
 
 * component[4]  // Gültigkeit T+S
@@ -213,12 +217,13 @@ Usage: #example
   
 * component[5]  // Antikörper: nein
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
+  * code.text = "Antikörper"
   * valueBoolean = false
 
 Instance: BloodGroup-codedResult-2  // 2nd example from Corina
 InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group coded result Panel with Component Antibody screen test and DAT test"
-Description: "Example reporting Anti-C and Anti-K"
+Description: "Example reporting ABO group [Type], Rh [Type], antibody screen test and DAT"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
@@ -231,35 +236,39 @@ Usage: #example
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-
 * method = $sct#258075003 "Serotyping (qualifier value)"
 
 * component[0]  // A
   * code = $loinc#883-9 "ABO group [Type] in Blood"
+  * code.text = "Blutgruppe"
   * valueCodeableConcept.coding.code = #112144000
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Blood group A"
 
 * component[1]  // positiv
   * code = $loinc#10331-7 "Rh [Type] in Blood"
+  * code.text = "Rhesus D / Untergruppe"
   * valueCodeableConcept.coding.code = #165747007
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "RhD positive"
 
 * component[2]  // Antikörper Suchtest neg
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
+  * code.text = "Antikörpersuchtest"
   * valueCodeableConcept.coding.code = #568111000005107
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Irregular blood group antibody not detected"
 
 * component[3]  // DAT (IgG) neg
   * code = $loinc#55776-9 "Direct antiglobulin test.IgG specific reagent [Presence] on Red Blood Cells"
+  * code.text = "DAT (IgG)"
   * valueCodeableConcept.coding.code = #260415000
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Not detected"
 
 * component[4]  // DAT (C3d) neg
   * code = $loinc#55774-4 "Direct antiglobulin test.complement C3d specific reagent [Presence] on Red Blood Cells"
+  * code.text = "DAT (C3d)"
   * valueCodeableConcept.coding.code = #260415000
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Not detected"
@@ -267,8 +276,8 @@ Usage: #example
 
 Instance: BloodGroup-codedResult-3  // 3rd example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group coded result Panel with Component ABO, Component RhD, Rh Genotype and Result Antibodies"
-Description: "Example reporting ABO group [Type] and Rh [Type] separately in a component and coded with SNOMED CT"
+Title: "Blood Group coded Result Panel with Component ABO and RhD, Component Rh Genotype and Component Result Antibodies"
+Description: "Example reporting Hemoglobin, ABO group [Type] and Rh [Type], Rhesus Phenotype and Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
@@ -281,7 +290,6 @@ Usage: #example
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-
 * method = $sct#258075003 "Serotyping (qualifier value)"
 
 * component[0]  // Hb
@@ -293,7 +301,7 @@ Usage: #example
 
 * component[1]  // B RhD neg
   * code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
-  * code.text = "ABO and Rh group panel (Bld)"
+  * code.text = "ValBG"
   * valueCodeableConcept.coding.code = #278153001
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.text = "Blood group B Rh(D) negative"
@@ -301,10 +309,12 @@ Usage: #example
 
 * component[2]  // Rhesus-Phänotyp: ccddee 
   * code = $loinc#10331-7 "Rh [Type] in Blood"
+  * code.text = "Rhesus-Phänotyp"
   * valueString = "ccddee"  // Rhesus Phänotyp
 
 * component[3]  // Antikörper: Anti-C
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
+  * code.text = "Antikörper"
   * valueCodeableConcept.coding.code = #35068008 // Anti-C
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Blood group antibody C"
@@ -312,18 +322,22 @@ Usage: #example
 * component[4]  // Antikörper: Anti-K
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
   * valueCodeableConcept.coding.code = #83404001  // Anti-K, Kell-System
+  * code.text = "Antikörper"
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Blood group antibody K"
 
 
 // ####################################################################################
-// ╭── 3 examples from Corina: free text results ───╮
-// │                                                │
-// ╰────────────────────────────────────────────────╯
+// ╭── 3 examples from Corina: coded tests, free text results ────────────────╮
+// │ ABO and Rh group panel: test coded with LOINC and SNOMED CT              │
+// │ AB0 Result: component test coded with LOINC, Result as free text         │
+// │ RhD Result: component test coded with LOINC, Result as free text         │
+// ╰──────────────────────────────────────────────────────────────────────────╯
+
 Instance: BloodGroup-freeTextResult-1  // 1st example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group free text result Panel with Component ABO, Component RhD, Date, Period and Result Antibodies"
-Description: "Example reporting ABO group [Type], Rh [Type], separately in a component and coded with SNOMED CT"
+Title: "Blood Group Free Text Tesult Panel with Component ABO, Component RhD, Date, Period and Result Antibodies"
+Description: "Example reporting ABO group [Type], Rh [Type], T + S, Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
@@ -336,29 +350,26 @@ Usage: #example
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-
 * method = $sct#258075003 "Serotyping (qualifier value)"
 
 * component[0]  // O
   * code = $loinc#883-9 "ABO group [Type] in Blood"
-  // * valueCodeableConcept.coding.code = #58460004
-  // * valueCodeableConcept.coding.system = $sct
-  // * valueCodeableConcept.coding.display = "Blood group O"
+  * code.text = "Blutgruppe"
   * valueString = "O"
 
 * component[1]  // -
   * code = $loinc#10331-7 "Rh [Type] in Blood"
-  // * valueCodeableConcept.coding.code = #165746003
-  // * valueCodeableConcept.coding.system = $sct
-  // * valueCodeableConcept.coding.display = "RhD negative"
+  * code.text = "Rhesusfaktor"
   * valueString = "-"
 
 * component[2]  // 1. Bestimmungsdatum 01.07.2022
   * code = $loinc#90089-4 "Date and time report was released"
+  * code.text = "1. Bestimmungsdatum"
   * valueDateTime = "2022-07-01T11:24:26+01:00"
 
 * component[3]  // 2. Bestimmungsdatum 01.07.2022
   * code = $loinc#90089-4 "Date and time report was released"
+  * code.text = "2. Bestimmungsdatum"
   * valueDateTime = "2022-07-01T11:34:26+01:00"
 
 * component[4]  // Gültigkeit T+S
@@ -369,12 +380,13 @@ Usage: #example
   
 * component[5]  // Antikörper: nein
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
-  * valueBoolean = false
+  * code.text = "Antikörper"
+  * valueString = "nein"
 
 Instance: BloodGroup-freeTextResult-2  // 2nd example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group free result text Panel with Component Antibody screen test and DAT test"
-Description: "Example reporting Anti-C and Anti-K"
+Title: "Blood Group free Text Result Panel with Component Antibody screen test and DAT test"
+Description: "Example reporting ABO group [Type], Rh [Type], antibody screen test and DAT"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
@@ -391,43 +403,33 @@ Usage: #example
 
 * component[0]  // A pos
   * code = $loinc#883-9 "ABO group [Type] in Blood"
-  // * valueCodeableConcept.coding.code = #112144000
-  // * valueCodeableConcept.coding.system = $sct
-  // * valueCodeableConcept.coding.display = "Blood group A"
+  * code.text = "Blutgruppe"
   * valueString = "A"
 
 * component[1]  // -
   * code = $loinc#10331-7 "Rh [Type] in Blood"
-  // * valueCodeableConcept.coding.code = #165746003
-  // * valueCodeableConcept.coding.system = $sct
-  // * valueCodeableConcept.coding.display = "RhD negative"
+  * code.text = "Rhesus D / Untergruppe"
   * valueString = "positiv"
 
-* component[2]  // Antikörper Suchtest neg
+* component[2]  // Antikörpersuchtest neg
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
-  // * valueCodeableConcept.coding.code = #568111000005107
-  // * valueCodeableConcept.coding.system = $sct
-  // * valueCodeableConcept.coding.display = "Irregular blood group antibody not detected"
-  * valueString = "negativ"
+  * code.text = "Antikörpersuchtest"
+  * valueString = "negativ, Referenzbereich negativ"
 
 * component[3]  // DAT (IgG) neg
   * code = $loinc#55776-9 "Direct antiglobulin test.IgG specific reagent [Presence] on Red Blood Cells"
-  // * valueCodeableConcept.coding.code = #260415000
-  // * valueCodeableConcept.coding.system = $sct
-  // * valueCodeableConcept.coding.display = "Not detected"
-  * valueString = "negativ, Reference Range negativ"
+  * code.text = "DAT (IgG)"
+  * valueString = "negativ, Referenzbereich negativ"
 
 * component[4]  // DAT (C3d) neg
   * code = $loinc#55774-4 "Direct antiglobulin test.complement C3d specific reagent [Presence] on Red Blood Cells"
-  // * valueCodeableConcept.coding.code = #260415000
-  // * valueCodeableConcept.coding.system = $sct
-  // * valueCodeableConcept.coding.display = "Not detected"
-  * valueString = "negativ, Reference Range negativ"
+  * code.text = "DAT (C3d)"
+  * valueString = "negativ, Referenzbereich negativ"
 
 Instance: BloodGroup-freeTextResult-3  // 3rd example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group free text result Panel with Component ABO, Component RhD, Rh Genotype and Result Antibodies"
-Description: "Example reporting ABO group [Type] and Rh [Type] separately in a component and coded with SNOMED CT"
+Title: "Blood Group free Text Result Panel with Component ABO and RhD, Component Rh Genotype and Component Result Antibodies"
+Description: "Example reporting Hemoglobin, ABO group [Type] and Rh [Type], Rhesus Phenotype and Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
@@ -440,23 +442,16 @@ Usage: #example
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-
 * method = $sct#258075003 "Serotyping (qualifier value)"
 
 * component[0]  // Hb
   * code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
   * code.text = "Hämoglobin"
-  // * valueQuantity = 130 'g/L' "g/L"
-  // * valueQuantity.system = "http://unitsofmeasure.org"
-  // * valueQuantity.unit = "g/L"
-  * valueString = "130 g/l, Reference Range 121-154"
+  * valueString = "130 g/l, Referenzbereich 121-154"
 
 * component[1]  // B RhD neg 
   * code = $loinc#882-1 "ABO and Rh group [Type] in Blood"
   * code.text = "ValBG"
-  // * valueCodeableConcept.coding.code = #112149005
-  // * valueCodeableConcept.coding.system = $sct
-  // * valueCodeableConcept.coding.display = "Blood group B"
   * valueString = "B negativ"
 
 * component[2]  // Rhesus-Phänotyp: ccddee 
@@ -467,15 +462,9 @@ Usage: #example
 * component[3]  // Antikörper: Anti-C
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
   * code.text = "Antikörper"
-  // * valueCodeableConcept.coding.code = #35068008 // Anti-C
-  // * valueCodeableConcept.coding.system = $sct
-  // * valueCodeableConcept.coding.display = "Blood group antibody C"
   * valueString = "Antikörper: Anti-C"
 
 * component[4]  // Antikörper: Anti-K
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
   * code.text = "Antikörper"
-  // * valueCodeableConcept.coding.code = #83404001  // Anti-K, Kell-System
-  // * valueCodeableConcept.coding.system = $sct
-  // * valueCodeableConcept.coding.display = "Blood group antibody K"
   * valueString = "Anti-K"
