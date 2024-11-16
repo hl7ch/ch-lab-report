@@ -10,11 +10,6 @@ Description: "This profile constrains the ServiceRequest resource for the purpos
 * . ^short = "CH LAB Service Request: Laboratory"
 * ^extension[$imposeProfile].valueCanonical = Canonical(ServiceRequestLabEu)
 
-// * . ^short = "CH LAB Document: Laboratory Order"
-// * ^extension[$imposeProfile].valueCanonical = Canonical(BundleLabReportEu)
-
-// * insert SetFmmandStatusRule ( 2, trial-use)
-
 * identifier 1..
 * code from LabOrderCodesEuVs (preferred)
 * subject 1..
