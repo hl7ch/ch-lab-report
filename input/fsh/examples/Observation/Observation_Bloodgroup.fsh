@@ -169,7 +169,7 @@ Usage: #example
 
 Instance: BloodGroup-codedResult-1  // 1st example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group coded result Panel with Component ABO, Component RhD, Date, Period and Result Antibodies"
+Title: "Blood Group coded Result Panel with Components ABO, RhD, Date, Period and Antibody Results"
 Description: "Example reporting ABO group [Type], Rh [Type], T + S, Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -222,7 +222,7 @@ Usage: #example
 
 Instance: BloodGroup-codedResult-2  // 2nd example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group coded result Panel with Component ABO, Component RhD,Component Antibody screen test and DAT"
+Title: "Blood Group coded Result Panel with Components ABO, RhD, Antibody Screen Test and DAT"
 Description: "Example reporting ABO group [Type], Rh [Type], antibody screen test and DAT"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -275,7 +275,7 @@ Usage: #example
  
 Instance: BloodGroup-codedResult-3  // 3rd example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group coded Result Panel with Component Hemoglobine, ABO, RhD, Rh Phenotype and Antibodie Results"
+Title: "Blood Group coded Result Panel with Components Hemoglobine, ABO, RhD, Rh Phenotype and Antibody Results"
 Description: "Example reporting Hemoglobin, ABO group [Type] and Rh [Type], Rhesus Phenotype and Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -338,7 +338,7 @@ Usage: #example
 
 Instance: BloodGroup-freeTextResult-1  // 1st example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group Free Text Tesult Panel with Component ABO, Component RhD, Date, Period and Result Antibodies"
+Title: "Blood Group Free Text Result Panel with Components ABO, RhD, Date, Period and Antibody Results"
 Description: "Example reporting ABO group [Type], Rh [Type], T + S, Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -387,7 +387,7 @@ Usage: #example
 
 Instance: BloodGroup-freeTextResult-2  // 2nd example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group free Text Result Panel with Component ABO, Component RhD,Component Antibody screen test and DAT"
+Title: "Blood Group free Text Result Panel with Components ABO, RhD, Antibody Screen Test and DAT"
 Description: "Example reporting ABO group [Type], Rh [Type], antibody screen test and DAT"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -433,7 +433,7 @@ Usage: #example
 
 Instance: BloodGroup-freeTextResult-3  // 3rd example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group free Text Result Panel with Component Hemoglobine, ABO, RhD, Rh Phenotype and Antibodie Results"
+Title: "Blood Group free Text Result Panel with Components Hemoglobine, ABO, RhD, Rh Phenotype and Antibody Results"
 Description: "Example reporting Hemoglobin, ABO group [Type] and Rh [Type], Rhesus Phenotype and Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
