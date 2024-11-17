@@ -222,7 +222,7 @@ Usage: #example
 
 Instance: BloodGroup-codedResult-2  // 2nd example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group coded result Panel with Component Antibody screen test and DAT test"
+Title: "Blood Group coded result Panel with Component ABO, Component RhD,Component Antibody screen test and DAT"
 Description: "Example reporting ABO group [Type], Rh [Type], antibody screen test and DAT"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -275,7 +275,7 @@ Usage: #example
  
 Instance: BloodGroup-codedResult-3  // 3rd example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group coded Result Panel with Component Hemoglobine, ABO, RhD, Rh Phenotype and Results Antibodies"
+Title: "Blood Group coded Result Panel with Component Hemoglobine, ABO, RhD, Rh Phenotype and Antibodie Results"
 Description: "Example reporting Hemoglobin, ABO group [Type] and Rh [Type], Rhesus Phenotype and Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -387,7 +387,7 @@ Usage: #example
 
 Instance: BloodGroup-freeTextResult-2  // 2nd example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group free Text Result Panel with Component Antibody screen test and DAT test"
+Title: "Blood Group free Text Result Panel with Component ABO, Component RhD,Component Antibody screen test and DAT"
 Description: "Example reporting ABO group [Type], Rh [Type], antibody screen test and DAT"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -433,7 +433,7 @@ Usage: #example
 
 Instance: BloodGroup-freeTextResult-3  // 3rd example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group free Text Result Panel with Component Hemoglobine, ABO, RhD, Rh Phenotype and Results Antibodies"
+Title: "Blood Group free Text Result Panel with Component Hemoglobine, ABO, RhD, Rh Phenotype and Antibodie Results"
 Description: "Example reporting Hemoglobin, ABO group [Type] and Rh [Type], Rhesus Phenotype and Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
