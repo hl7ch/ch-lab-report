@@ -338,7 +338,7 @@ Usage: #example
 
 Instance: BloodGroup-freeTextResult-1  // 1st example from Corina
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group Free Text Result Panel with Components ABO, RhD, Date, Period and Antibody Results"
+Title: "Blood Group free Text Result Panel with Components ABO, RhD, Date, Period and Antibody Results"
 Description: "Example reporting ABO group [Type], Rh [Type], T + S, Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
