@@ -209,7 +209,7 @@ Usage: #example
   * code.text = "2. Bestimmungsdatum"
   * valueDateTime = "2022-07-01T11:34:26+01:00"
 
-* component[4
+* component[4]
   * code = $loinc#82607-3 "Clinical data [Date and Time Range]"
   * code.text = "T + S"
   * valuePeriod.start = "2022-07-01T11:34:26+01:00"
