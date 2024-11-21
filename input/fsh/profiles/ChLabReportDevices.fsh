@@ -5,10 +5,7 @@ Profile: ChLabReportDeviceTestKit
 Parent: Device
 Title: "CH LAB-Report Device: TestKit"
 Id: ch-lab-report-device-test-kit
-Description: "Holds Laboratory Test-Kit Data. <br><br><b>Must support: </b> <br>Required if known. If the sending application 
-has data for the element, it is required to populate the element with a non-empty value. If the value is not known, the element may be 
-omitted. A receiving application may ignore the information conveyed by the element. A receiving application shall not raise an error 
-solely due to the presence or absence of the element." 
+Description: "Holds Laboratory Test-Kit Data." 
 * definition
 * udiCarrier 0..1 MS
   * deviceIdentifier 1..1 // UDI-DI
@@ -32,10 +29,7 @@ Profile: ChLabReportDeviceAnalyzer
 Parent: Device
 Title: "CH LAB-Report Device: Analyzer"
 Id: ch-lab-report-device-analyzer
-Description: "Holds Laboratory Analyzer Data. <br><br><b>Must support: </b> <br>Required if known. If the sending application 
-has data for the element, it is required to populate the element with a non-empty value. If the value is not known, the element may be 
-omitted. A receiving application may ignore the information conveyed by the element. A receiving application shall not raise an error 
-solely due to the presence or absence of the element."
+Description: "Holds Laboratory Analyzer Data."
 
 * udiCarrier 0..1 MS
   * deviceIdentifier 1..1 // UDI-DI
