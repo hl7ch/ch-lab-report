@@ -48,7 +48,7 @@ This implementation guide specifies the exchange format for the comprehensive an
 
 ### Must Support
 
-To fullfill the requirements of the [estimated glomerular filtration rate (eGFR)](https://www.zkidney.com/mdrd-main) formulas and the requirements of the [L4CHLAB Dataset ](https://www.famh.ch/qualitaet-sicherheit/l4chlab-dataset/) the corresponding FHIR elements 'mustSupport' flag have been set to true: Required if known. If the sending application has data for the element, it is required to populate the element with a non-empty value. If the value is not known, the element may be omitted. A receiving application may ignore the information conveyed by the element. A receiving application shall not raise an error solely due to the presence or absence of the element
+To fullfill the requirements of the [estimated glomerular filtration rate (eGFR)](https://www.zkidney.com/mdrd-main) formulas and the requirements of the [L4CHLAB Dataset ](https://www.famh.ch/qualitaet-sicherheit/l4chlab-dataset/) the corresponding FHIR elements 'mustSupport' flag have been set to true: Required if known. If the sending application has data for the element, it is required to populate the element with a non-empty value. If the value is not known, the element may be omitted. A receiving application may ignore the information conveyed by the element. A receiving application shall not raise an error solely due to the presence or absence of the element.
 
 ### IP Statements
 
