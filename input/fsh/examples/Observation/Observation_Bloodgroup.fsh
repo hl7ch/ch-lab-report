@@ -169,7 +169,7 @@ Usage: #example
 
 Instance: BloodGroup-codedResult-1
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group coded Result Panel with Components ABO, RhD, Date, Period and Antibody Results"
+Title: "Blood Group coded Result with Components ABO, RhD, Date, Period and Antibody Results"
 Description: "Example reporting ABO group [Type], Rh [Type], T + S, Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -191,6 +191,7 @@ Usage: #example
   * valueCodeableConcept.coding.code = #58460004
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Blood group O"
+  * valueCodeableConcept.text = "O"
 
 * component[1]
   * code = $loinc#10331-7 "Rh [Type] in Blood"
@@ -198,6 +199,7 @@ Usage: #example
   * valueCodeableConcept.coding.code = #165746003
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "RhD negative"
+  * valueCodeableConcept.text = "-"
 
 * component[2]
   * code = $loinc#90089-4 "Date and time report was released"
@@ -222,7 +224,7 @@ Usage: #example
 
 Instance: BloodGroup-codedResult-2
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group coded Result Panel with Components ABO, RhD, Antibody Screen Test and DAT"
+Title: "Blood Group coded Result with Components ABO, RhD, Antibody Screen Test and DAT"
 Description: "Example reporting ABO group [Type], Rh [Type], antibody screen test and DAT"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -244,6 +246,7 @@ Usage: #example
   * valueCodeableConcept.coding.code = #112144000
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Blood group A"
+  * valueCodeableConcept.text = "A"
 
 * component[1]
   * code = $loinc#10331-7 "Rh [Type] in Blood"
@@ -251,6 +254,7 @@ Usage: #example
   * valueCodeableConcept.coding.code = #165747007
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "RhD positive"
+  * valueCodeableConcept.text = "positiv"
 
 * component[2]
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
@@ -258,6 +262,7 @@ Usage: #example
   * valueCodeableConcept.coding.code = #568111000005107
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Irregular blood group antibody not detected"
+  * valueCodeableConcept.text = "negativ"
 
 * component[3]
   * code = $loinc#55776-9 "Direct antiglobulin test.IgG specific reagent [Presence] on Red Blood Cells"
@@ -265,6 +270,7 @@ Usage: #example
   * valueCodeableConcept.coding.code = #260415000
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Not detected"
+  * valueCodeableConcept.text = "negativ"
 
 * component[4]
   * code = $loinc#55774-4 "Direct antiglobulin test.complement C3d specific reagent [Presence] on Red Blood Cells"
@@ -272,10 +278,11 @@ Usage: #example
   * valueCodeableConcept.coding.code = #260415000
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Not detected"
+  * valueCodeableConcept.text = "negativ"
  
 Instance: BloodGroup-codedResult-3
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group coded Result Panel with Components Hemoglobine, ABO, RhD, Rh Phenotype and Antibody Results"
+Title: "Blood Group coded Result with Components Hemoglobine, ABO, RhD, Rh Phenotype and Antibody Results"
 Description: "Example reporting Hemoglobin, ABO group [Type] and Rh [Type], Rhesus Phenotype and Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -305,7 +312,8 @@ Usage: #example
   * code.text = "ValBG"
   * valueCodeableConcept.coding.code = #278153001
   * valueCodeableConcept.coding.system = $sct
-  * valueCodeableConcept.text = "Blood group B Rh(D) negative"
+  * valueCodeableConcept.coding.display = "Blood group B Rh(D) negative"
+  * valueCodeableConcept.text = "B negativ"
 
 * component[2]
   * code = $loinc#10331-7 "Rh [Type] in Blood"
@@ -318,24 +326,26 @@ Usage: #example
   * valueCodeableConcept.coding.code = #35068008 // Anti-C
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Blood group antibody C"
+  * valueCodeableConcept.text = "Antikörper: Anti-C"
 
 * component[4]
   * code = $loinc#890-4 "Blood group antibody screen [Presence] in Serum or Plasma"
-  * valueCodeableConcept.coding.code = #83404001  // Anti-K, Kell-System
   * code.text = "Antikörper"
+  * valueCodeableConcept.coding.code = #83404001  // Anti-K, Kell-System
   * valueCodeableConcept.coding.system = $sct
   * valueCodeableConcept.coding.display = "Blood group antibody K"
+  * valueCodeableConcept.text = "Antikörper: Anti-K"
 
 // ####################################################################################
 // ╭── 3 examples from Corina: coded tests, free text results ────────────────╮
-// │ ABO and Rh group panel: test coded with LOINC and SNOMED CT              │
+// │ ABO and Rh group: test coded with LOINC and SNOMED CT              │
 // │ AB0 Result: component test coded with LOINC, Result as free text         │
 // │ RhD Result: component test coded with LOINC, Result as free text         │
 // ╰──────────────────────────────────────────────────────────────────────────╯
 
 Instance: BloodGroup-freeTextResult-1
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group free Text Result Panel with Components ABO, RhD, Date, Period and Antibody Results"
+Title: "Blood Group free Text Result with Components ABO, RhD, Date, Period and Antibody Results"
 Description: "Example reporting ABO group [Type], Rh [Type], T + S, Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -384,7 +394,7 @@ Usage: #example
 
 Instance: BloodGroup-freeTextResult-2
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group free Text Result Panel with Components ABO, RhD, Antibody Screen Test and DAT"
+Title: "Blood Group free Text Result with Components ABO, RhD, Antibody Screen Test and DAT"
 Description: "Example reporting ABO group [Type], Rh [Type], antibody screen test and DAT"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
@@ -430,7 +440,7 @@ Usage: #example
 
 Instance: BloodGroup-freeTextResult-3
 InstanceOf: ChLabObservationBloodGroup
-Title: "Blood Group free Text Result Panel with Components Hemoglobine, ABO, RhD, Rh Phenotype and Antibody Results"
+Title: "Blood Group free Text Result with Components Hemoglobine, ABO, RhD, Rh Phenotype and Antibody Results"
 Description: "Example reporting Hemoglobin, ABO group [Type] and Rh [Type], Rhesus Phenotype and Antibodies"
 Usage: #example
 * identifier.system = "https://labor.pipette.com/labvalues"
