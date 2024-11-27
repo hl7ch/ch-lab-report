@@ -31,8 +31,11 @@ RuleSet: ObservationResultsValueEu
 * value[x] ^slicing.discriminator.path = "$this"
 * value[x] ^slicing.rules = #closed
 * valueString only string
-// * valueString MS
 * valueString ^sliceName = "valueString"
+
+* valueBoolean only boolean
+* valueBoolean ^sliceName = "valueBoolean"
+
 * valueRange only $Range-uv-ips
 // no practical examples found for the time being
 // reverted to the original statement
