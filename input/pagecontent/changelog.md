@@ -4,6 +4,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 #### open issue, enhancement
 * [#91](https://github.com/hl7ch/ch-lab-report/issues/91): missing slice of value[x] and component.value[x] in observation: value.ofType(boolean)
 
+#### Changed / Updated
 * [#70](https://github.com/hl7ch/ch-lab-report/issues/70): Limit image size to 20 megabytes: Add menu point and page 'Guidance'.
 * [#73](https://github.com/hl7ch/ch-lab-report/issues/73): Results Blood Group: Add more examples
 * [#77](https://github.com/hl7ch/ch-lab-report/issues/77): The graphic 'Resoure Overview' has been removed.
@@ -32,27 +33,14 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#115](https://github.com/hl7ch/ch-lab-report/issues/115): Use Cases in English: No amendment, duplicate of [#100](https://github.com/hl7ch/ch-lab-report/issues/100)
 * [#116](https://github.com/hl7ch/ch-lab-report/issues/116): Changelog, refactor bloodgroup examples
 
-### STU 1 Sequence - v1.0.0
-
-#### Added
-
-#### Changed / Updated
-
-
-#### Fixed
-
-
 #### Issues resolved without amendment (in IG)
-
 * [#97](https://github.com/hl7ch/ch-lab-report/issues/97): Typo generated in narrative (tooling side)
 
 ### STU 1 Sequence - v1.0.0-ballot (2024-05-17)
-
 * [#48](https://github.com/hl7ch/ch-lab-report/issues/48): Exchange the conformsTo rules with the imposeProfile extension
 * [#49](https://github.com/hl7ch/ch-lab-report/issues/49): Add the FHIR flame to the IG header
 
 ### DSTU 1 Sequence - v0.1.1 (2023-12-28)
-
 * [#270](https://github.com/hl7ch/ch-core/issues/270): Technical correction for invalid package
 * [#52](https://github.com/hl7ch/ch-lab-report/issues/52): Update to Version 0.2.0-ci of HL7 Europe Laboratory Report
 
