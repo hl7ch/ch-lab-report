@@ -1,9 +1,5 @@
 <!-- markdownlint-disable MD001 MD041 -->
 
-### Diagram der Resourcen
-
-{% include img.html img="Resource Overview.svg" caption="Fig. 1: Resourcen Übersicht" width="80%" %}
-
 ### Laborergebnis Dokumente
 
 In Anlehnung an 'HL7 Europe Laboratory Report' werden hier die Laborergebnisse als FHIR-Bundle vom Typ Dokument dargestellt. Das erste entry Element ist also die Composition, die die Struktur des Dokuments definiert.
@@ -56,7 +52,7 @@ Die hier aufgeführten Testpanels dienen auch als Beispiele, wie Labore eigene T
 
 Das Hämatogramm II der [Analysenliste](https://www.bag.admin.ch/dam/bag/de/dokumente/kuv-leistungen/leistungen-und-tarife/Analysenliste/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx.download.xlsx/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx) ist die Vorlage für dieses Testpanel. 
 
-Profile: [CH LAB Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
+Profile: [CH LAB-Report Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
 
 Example: [Observation Results: Count of Blood Cells (automated CBC)](Observation-ExampleObservationCBCPanel.html)
 
@@ -66,7 +62,7 @@ Chronische Erkrankungen wie Diabetes oder Hypertonie gehen manchmal mit chronisc
 
 Der zweite Indikator für die Nierenfunktion ist die Albumin-Ausscheidung im 24 h Urin. Um das Bestimmungsverfahren zu vereinfachen wird die Albumin/Creatinin Ratio im Urin verwendet.
 
-Profile: [CH LAB Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
+Profile: [CH LAB-Report Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
 
 Example: [Observation Results: Renal Insufficiency Panel](Observation-ObservationRenalInsufficiencyPanel.html)
 
@@ -78,15 +74,21 @@ Eine Standardisierung im Bereich der Blutbank Resultate würde die Sicherheit be
 
 2. [ValueSet: Results Blood Group - SNOMED CT IPS Free Set ](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set) mit 13 Konzepten
 
-Dieser Leitfaden enthält 2 weitere mögliche ValueSets:
+Dieser Leitfaden enthält 3 weitere mögliche ValueSets:
 
-1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) mit den SNOMED CT Codes der Blutgruppen Antikörper Screening Tests
+1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper Screening Tests
 
 2. [ValueSet: CH Lab Results Blood Group Antibody (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper
 
+1. [ValueSet: CH LAB-Report BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) mit den SNOMED CT Codes der Blutgruppen-Antikörper screening tests
+
+2. [ValueSet: CH LAB-Report BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-vs.html) mit den LOINC Codes der Resultate der Blutgruppen Antikörper screening Tests
+
+3. [ValueSet: CH LAB-Report BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper Screening Tests
+
 Für die Standardisierung in Bereich Blutbank braucht es Mitarbeit und Zustimmung der Fachgesellschaft (Schweizerische Vereinigung für Transfusionsmedizin), die in der kurzen Zeit nicht erlangt werden konnte. Somit beschränkt sich dieser Leitfaden auf 4 mögliche Darstellungsformen als Beispiele von Blutbank Resultate: 
 
-* [Blood Group Panel ABO Rh simple](Observation-BloodGroupSimple.html)
+* [Blood Group Panel ABO Rh simple](Observation-BloodGroupAB0RhD.html)
 * [Blood Group Panel ABO Rh Panel](Observation-BloodGroupPanel.html)
-* [Blood Group Panel ABO Rh mit 'Component'](Observation-BloodGroupComponent.html)
+* [Blood Group Panel ABO Rh mit 'Component'](Observation-BloodGroupCompAB0CompRhD.html)
 

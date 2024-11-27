@@ -27,7 +27,7 @@ Instance: Urin
 InstanceOf: Specimen-eu-lab
 Usage: #example
 Title: "Urin"
-Description: "Speciment EU Laboratory"
+Description: "Specimen EU Laboratory"
 * type = $sct#122575003 "Urine specimen (specimen)"
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * container.type = $sct#706054001 "Urine specimen container (physical object)"

@@ -1,13 +1,13 @@
 Profile: ChLabObservationResultsLaboratory
 Parent: Observation
 Id: ch-lab-observation-results-laboratory
-Title: "CH LAB Observation Results: Laboratory Report"
+Title: "CH LAB-Report Observation Results: Laboratory Report"
 Description: "This profile constrains the Observation resource for the purpose of laboratory test reports in Switzerland."
+
 * . ^short = "CH LAB Observation Results: Laboratory"
 
 * ^extension[$imposeProfile].valueCanonical = Canonical(ObservationResultsLaboratoryEu)
-
-* insert SetFmmandStatusRule ( 2, trial-use)
+// * insert SetFmmandStatusRule ( 2, trial-use)
 * ^experimental = false
 * ^purpose = "This profile constrains the Observation resource to represent a laboratory in vitro diagnostic test or panel/study. In case of a panel/study, the results of the panel appear as sub-observations. In this case this top-level Observation acts as a grouper of all the observations belonging to the panel or study.  The top-level observation may carry a conclusion in the note element and or a global interpretation by the producer of the study, in the interpretation element."
 * insert ObservationResultsEu
@@ -33,7 +33,7 @@ Description: "This profile constrains the Observation resource for the purpose o
 // │  laboratoy, studyType, specialty  │
 // ╰───────────────────────────────────╯
 
-* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^definition = "A code that classifies the general type of observation being made. In this profile, fixed to \"laboratory\"."
@@ -73,7 +73,6 @@ Description: "This profile constrains the Observation resource for the purpose o
 * method ^definition = "Laboratory technigue that has been used"
 * method ^comment = "Laboratory technique (method of measurement) are integral parts of the test specification of some laboratory test coding systems (e.g. NPU), in LOINC hovewer measurement principle is not always present in the test definition. In some cases however knowledge of the used measurment techique is important for proper interpretation of the test result.
 That's why it is important to explicitly include informaiton about measurement method is such cases."
-// * method only $CodeableConcept-uv-ips
 * method from LabTechniqueEuVs (preferred) // added binding to an agreed eu lab measurement method value set
 
 * specimen only Reference(ChLabSpecimen)

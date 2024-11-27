@@ -1,10 +1,5 @@
 <!-- markdownlint-disable MD001 MD041 -->
 
-### Diagramma delle risorse
-
-{% include img.html img="Resource Overview.svg" caption="Fig. 1: Panoramica delle risorse" width="80%" %}
-
-
 ### Documenti dei risultati di laboratorio
 
 In linea con il 'HL7 Europe Laboratory Report', i risultati di laboratorio sono visualizzati qui come un bundle FHIR del tipo di documento. Il primo elemento di ingresso è quindi la composizione, che definisce la struttura del documento.
@@ -57,7 +52,7 @@ I pannelli di test qui elencati servono anche come esempi di come i laboratori p
 
 L'ematogramma II della [lista di analisi(https://www.bag.admin.ch/dam/bag/de/dokumente/kuv-leistungen/leistungen-und-tarife/Analysenliste/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx.download.xlsx/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx)] è il modello per questo pannello di test. 
 
-Profilo: [CH LAB Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
+Profilo: [CH LAB-Report Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
 
 Esempio: [Risultati dell'osservazione: conteggio delle cellule del sangue (emocromo automatico)](Observation-ExampleObservationCBCPanel.html)
 
@@ -67,7 +62,7 @@ Malattie croniche come il diabete o l'ipertensione sono talvolta accompagnate da
 
 Il secondo indicatore della funzione renale è l'escrezione di albumina nelle urine delle 24 ore. Per semplificare la procedura di determinazione, si utilizza il rapporto albumina/creatinina nelle urine.
 
-Profilo: [CH LAB Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
+Profilo: [CH LAB-Report Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
 
 Esempio: [Risultati dell'osservazione: pannello di insufficienza renale](Observation-ObservationRenalInsufficiencyPanel.html)
 
@@ -79,15 +74,17 @@ La standardizzazione nell'area dei risultati delle banche del sangue migliorereb
 
 2. [ValueSet: Results Blood Group - SNOMED CT IPS Free Set ](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set) con 13 concetti.
 
-Questa guida contiene altri 2 possibili ValueSet:
+Questa guida contiene altri 3 possibili ValueSet:
 
-1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) con i codici SNOMED CT dei test di screening degli anticorpi del gruppo sanguigno.
+1. [ValueSet: CH LAB-Report BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) con i codici SNOMED CT dei test di screening degli anticorpi del gruppo sanguigno.
 
-2. [ValueSet: CH Lab Results Blood Group Antibody (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-vs.html) con i codici SNOMED CT degli anticorpi del gruppo sanguigno.
+2. [ValueSet: CH LAB-Report BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-vs.html) con i codici LOINC dei resultati dei test di screening degli anticorpi del gruppo sanguigno.
+
+3. [ValueSet: CH LAB-Report BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) con i codici SNOMED CT degli anticorpi del gruppo sanguigno.
 
 La standardizzazione nel settore delle banche del sangue richiede la collaborazione e l'approvazione dell'associazione professionale (Schweizerische Vereinigung für Transfusionsmedizin), che non è stato possibile ottenere nel breve tempo a disposizione. La presente linea guida si limita pertanto a 4 possibili forme di presentazione come esempi di risultati delle banche del sangue: 
 
-* [Pannello gruppi sanguigni ABO Rh semplice](Observation-BloodGroupSimple.html)
+* [Pannello gruppi sanguigni ABO Rh semplice](Observation-BloodGroupAB0RhD.html)
 * [Pannello gruppi sanguigni ABO Rh](Observation-BloodGroupPanel.html)
-* [Pannello gruppi sanguigni ABO Rh usando 'Component'](Observation-BloodGroupComponent.html)
+* [Pannello gruppi sanguigni ABO Rh usando 'Component'](Observation-BloodGroupCompAB0CompRhD.html)
 

@@ -1,9 +1,5 @@
 <!--  markdownlint-disable MD001 MD041 -->
 
-### Diagram of Resources
-
-{% include img.html img="Resource Overview.svg" caption="Fig. 1: Resource Overview" width="80%" %}
-
 ### Laboratory Result Documents
 
 Based on 'HL7 Europe Laboratory Report', the laboratory results are shown here as FHIR bundle of type document. The first entry element is therefore the composition, which defines the structure of the document.
@@ -56,7 +52,7 @@ The test panels listed here also serve as examples of how laboratories can imple
 
 The hematogram II of the [analysis list(https://www.bag.admin.ch/dam/bag/de/dokumente/kuv-leistungen/leistungen-und-tarife/Analysenliste/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx.download.xlsx/Analysenliste%20per%201.%20Januar%202024%20in%20Excel%20Format.xlsx)]  is the template for this test panel. 
 
-Profile: [CH LAB Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
+Profile: [CH LAB-Report Observation Results: Count of Blood Cells (automated CBC)](StructureDefinition-ch-lab-observation-cbc-panel.html)
 
 Example: [Observation Results: Count of Blood Cells (automated CBC)](Observation-ExampleObservationCBCPanel.html)
 
@@ -66,7 +62,7 @@ Chronic diseases such as diabetes or hypertension are sometimes accompanied by c
 
 The second indicator of kidney function is albumin excretion in 24 h urine. To simplify the determination procedure, the albumin/creatinine ratio in urine is used.
 
-Profile: [CH LAB Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
+Profile: [CH LAB-Report Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
 
 Example: [Observation Results: Renal Insufficiency Panel](Observation-ObservationRenalInsufficiencyPanel.html)
 
@@ -74,18 +70,16 @@ Example: [Observation Results: Renal Insufficiency Panel](Observation-Observatio
 
 Standardization in the area of blood bank results would improve safety in the transmission of laboratory results. HL7 Europe Laboratory Report has included two ValueSets with the binding 'preferred':
 
-1. [ValueSet: Results Blood Group - IPS](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-uv-ips) with 207 concepts
+This guide contains 3 further possible ValueSets:
 
-2. [ValueSet: Results Blood Group - SNOMED CT IPS Free Set ](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set) with 13 concepts
+1. [ValueSet: CH LAB-Report BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) with the SNOMED CT codes of the blood group antibody screening tests.
 
-This guide contains 2 further possible ValueSets:
+2. [ValueSet: CH LAB-Report BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-vs.html) with LOINC codes of the result of bloodgroup antibody screening tests.
 
-1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-screen.html) with the SNOMED CT codes of the blood group antibody screening tests.
-
-2. [ValueSet: CH Lab Results Blood Group Antibody (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-vs.html) with the SNOMED CT codes of the blood group antibodies
+3. [ValueSet: CH LAB-Report BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) with the SNOMED CT codes of the blood group antibodies
 
 Standardization in the blood bank sector requires the cooperation and approval of the professional association (Schweizerische Vereinigung für Transfusionsmedizin), which could not be obtained in the short time available. This guideline is therefore limited to 4 possible forms of presentation as examples of blood bank results: 
 
-* [Blood Group Panel ABO Rh simple](Observation-BloodGroupSimple.html)
+* [Blood Group Panel ABO Rh simple](Observation-BloodGroupAB0RhD.html)
 * [Blood Group Panel ABO Rh Panel](Observation-BloodGroupPanel.html)
-* [Blood Group Panel ABO Rh using 'Component'](Observation-BloodGroupComponent.html)
+* [Blood Group Panel ABO Rh using 'Component'](Observation-BloodGroupCompAB0CompRhD.html)

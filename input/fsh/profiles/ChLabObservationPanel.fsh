@@ -6,7 +6,7 @@
 Profile: ChLabObservationPanel
 Parent: ChLabObservationResultsLaboratory
 Id: ChLab-observation-panel
-Title: "CH LAB Observation Results: Panel"
+Title: "CH LAB-Report Observation Results: Panel"
 Description: """This profile constrains the ChLabObservationResultsLaboratory profile to represent only a panel / battery of laboratory test results for the HL7 Swiss project. The top-level observation contains only further observations-panels and observations-single-tests in the hasMember element. The observation-panels may carry a conclusion in the note element and/or a global interpretation by the producer of the study, in the interpretation element; value[x] and component elements are not allowed and have to be shown in the observation-single-test profile."""
 
 * ^publisher = "HL7 Switzerland"
@@ -46,7 +46,7 @@ Description: "Contains nested Laboratory observation results"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-* code = $loinc#24360-0 "Hemoglobin and Hematocrit panel - Blood"
+* code = $loinc#24360-0 // "Hemoglobin and Hematocrit panel - Blood"
 * code.text = "Hemoglobin and Hematocrit panel (Bld)"
 * hasMember[0] = Reference(Observation/Hemoglobin)
 * hasMember[+] = Reference(Observation/Hematocrit)
@@ -61,7 +61,7 @@ Description: "Single Laboratory Test Result"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-* code = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
+* code = $loinc#718-7 // "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin (Bld) [Mass/Vol]"
 * valueQuantity = 107 'g/L' "g/L"
 
@@ -75,6 +75,6 @@ Description: "Single Laboratory Test Result"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-* code = $loinc#20570-8 "Hematocrit [Volume Fraction] of Blood"
+* code = $loinc#20570-8 // "Hematocrit [Volume Fraction] of Blood"
 * code.text = "Hematocrit (Bld) [Mass/Vol]"
 * valueQuantity = 33 '%' "%"

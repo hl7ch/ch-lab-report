@@ -1,11 +1,11 @@
 Profile: ChLabPractitioner
 Parent: CHCorePractitioner
 Id: ch-lab-practitioner
-Title: "CH LAB Practitioner"
+Title: "CH LAB-Report Practitioner"
 Description: "This profile constrains the Practitioner resource for the purpose of laboratory test reports in Switzerland."
 * . ^short = "CH LAB Practitioner"
 * ^extension[$imposeProfile].valueCanonical = Canonical(PractitionerEu)
-* insert SetFmmandStatusRule ( 2, trial-use)
+// * insert SetFmmandStatusRule ( 2, trial-use)
 * identifier[GLN] 0..1
 * name 1..
 // * address 1..

@@ -9,23 +9,23 @@ Modern medical laboratory techniques aid clinicians in diagnosing, preventing, a
 This implementation guide is under STU ballot by [HL7 Switzerland](https://www.hl7.ch/) until September 30th, 2024 midnight.   
 Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments. 
 
-[Significant changes, open and closed issues.](changelog.html)
+[Significant changes, open and closed issues.](https://build.fhir.org/ig/hl7ch/ch-lab-report/changelog.html)
 
 </div>
 
 ### Foundation
 
-This implementation guide is based on the [HL7 Europe Laboratory Report](https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html) and the [European eHealth Network](https://health.ec.europa.eu/document/download/9ab6711a-b4b3-4254-85c1-5204e9e9a594_en?filename=ehealth_ehn-lab-results-guideline_releasenotes_en.pdf). It enables the cross-border exchange of laboratory Results in Europe. The aim of the interoperability of electronic laboratory records is to ensure the uniform processing of information between health information systems, regardless of their technology, application or platform, so that it can be meaningfully interpreted by the recipient. Citizens should have better control over their health data, especially their laboratory data, just as healthcare professionals should have easy and secure access to their patients' laboratory data.
-The Implementation guide uses the Swiss Core profiles from [CH Core](http://fhir.ch/ig/ch-core/index.html) and the terminology from [CH Term](http://fhir.ch/ig/ch-epr-term/index.html)
+This implementation guide is based on the [HL7 Europe Laboratory Report](https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html) and the [European eHealth Network](https://health.ec.europa.eu/document/download/9ab6711a-b4b3-4254-85c1-5204e9e9a594_en?filename=ehealth_ehn-lab-results-guideline_releasenotes_en.pdf). It enables the cross-border exchange of laboratory results in Europe. The aim of the interoperability of electronic laboratory records is to ensure the uniform processing of information between health information systems, regardless of their technology, application or platform, so that it can be meaningfully interpreted by the recipient. Citizens should have better control over their health data, especially their laboratory data, just as healthcare professionals should have easy and secure access to their patients' laboratory data.
+The Implementation guide uses the Swiss Core profiles from [CH Core](http://fhir.ch/ig/ch-core/index.html) and the terminology from [CH Term](http://fhir.ch/ig/ch-epr-term/index.html).
 
 ### Management Summary
 
 This implementation guide specifies the exchange format for the comprehensive and correct reproduction of clinical laboratory results. These consist of the following data in detail:
 
-#### Administrative data
+#### Administrative Data
 
-* Patient Information: Include the patient's name, age, sex, date of birth, and any other relevant identification details.
-* Order Data: Ordering practitioner, organization, ordering date, recipients
+* Patient Information: Include the patient's name, age, gender, date of birth, and any other relevant identification details.
+* Order Data: Ordering practitioner, organization, ordering date, recipients.
 * Laboratory Information: Include details about the laboratory that performed the analysis, such as the name, address, and contact information.
 * Authorized Signatures: Include the signatures or electronic authentication of the laboratory personnel responsible for conducting and validating the tests.
 
@@ -46,6 +46,10 @@ This implementation guide specifies the exchange format for the comprehensive an
 
 **Download**: You can download this implementation guide in [NPM format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](package.tgz).
 
+### Must Support
+
+To fullfill the requirements of the [estimated glomerular filtration rate (eGFR)](https://www.zkidney.com/mdrd-main) formulas and the requirements of the [L4CHLAB Dataset ](https://www.famh.ch/qualitaet-sicherheit/l4chlab-dataset/) the corresponding FHIR elements 'mustSupport' flag have been set to true: Required if known. If the sending application has data for the element, it is required to populate the element with a non-empty value. If the value is not known, the element may be omitted. A receiving application may ignore the information conveyed by the element. A receiving application shall not raise an error solely due to the presence or absence of the element.
+
 ### IP Statements
 
 This document is licensed under Creative Commons "No Rights Reserved" ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)).
@@ -64,7 +68,7 @@ This implementation guide contains and references intellectual property owned by
 
 #### Dependency Overview
 
-A graphic overview of the dependencies, in particular with regard to the exchange format of reportable laboratory results in Switzerland, can be found [here](https://fhir.ch/ig/ch-elm/index.html). It also shows the dependency on the [European laboratory project(https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html)].
+A graphic overview of the dependencies, in particular with regard to the exchange format of reportable laboratory results in Switzerland, can be found [here](https://fhir.ch/ig/ch-elm/index.html#dependency-overview). It also shows the dependency on the [European laboratory project(https://build.fhir.org/ig/hl7-eu/laboratory/branches/master/index.html)].
 
 {% include dependency-table.xhtml %}
 

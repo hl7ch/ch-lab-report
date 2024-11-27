@@ -1,9 +1,9 @@
 Profile: ChLabDiagnosticReport
 Parent: DiagnosticReport
 Id: ch-lab-diagnosticreport
-Title: "CH LAB DiagnosticReport: Laboratory Report"
+Title: "CH LAB-Report DiagnosticReport: Laboratory Report"
 Description: "This profile constrains the DiagnosticReport resource for the purpose of laboratory test reports in Switzerland."
-* . ^short = "CH LAB DiagnosticReport: Laboratory Report"
+* . ^short = "CH LAB-Report DiagnosticReport: Laboratory Report"
 * . ^definition = "Laboratory Report DiagnosticReport"
 * ^extension[$imposeProfile].valueCanonical = Canonical(DiagnosticReportLabEu)
 
@@ -24,7 +24,7 @@ Description: "This profile constrains the DiagnosticReport resource for the purp
 * status ^short = "Status of the Report"
 * status ^comment = "DiagnosticReport.status and Composition.status shall be aligned, based on the http://hl7.eu/fhir/laboratory/ConceptMap/ConceptMap-eu-diagRptStatus2CompStatus mapping"
 
-* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^short = "Report Category"
