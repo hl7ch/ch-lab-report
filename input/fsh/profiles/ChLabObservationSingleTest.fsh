@@ -18,3 +18,4 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
 * hasMember ..0
 
+* valueBoolean 0..1

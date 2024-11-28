@@ -64,7 +64,7 @@ Description: "This profile constrains the Observation resource for the purpose o
 * performer.extension[performerFunction]
 
 * dataAbsentReason ^short = "Provides a reason why the expected value is missing."
-* insert ObservationResultsValueEu // ruleSet
+* insert ObservationResultsValueCH // ruleSet
 // * interpretation only $CodeableConcept-uv-ips
 
 // ╭───────────────── method ───────────────────╮
@@ -90,7 +90,7 @@ That's why it is important to explicitly include informaiton about measurement m
 * component
   // * code only $CodeableConcept-uv-ips
   // * code from $results-laboratory-observations-uv-ips (preferred)
-  * insert ObservationResultsValueEu
+  * insert ObservationResultsValueCH
 
 Invariant: eu-lab-1
 Description: "If observation status is other then \"registered\" or \"cancelled\", at least one of these Observation elements shall be provided:  \"value\", \"dataAbsentReason\", \"hasMember\" or \"component\""
