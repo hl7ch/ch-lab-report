@@ -1,13 +1,11 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
 ### STU 1 Ballot (2024-12-17)
-
-#### Open issue
-* [#91](https://github.com/hl7ch/ch-lab-report/issues/91): Missing slice of value[x] and component.value[x] in observation: value.ofType(boolean)
-
+<!--
 See also open issues on [GitHub](https://github.com/hl7ch/ch-lab-report/issues).
-
+-->
 #### Changed / Updated
+* [#91](https://github.com/hl7ch/ch-lab-report/issues/91): Missing slice of value[x] and component.value[x] in observation: value.ofType(boolean)
 * [#70](https://github.com/hl7ch/ch-lab-report/issues/70): Limit image size to 20 megabytes: Add menu point and page 'Guidance'.
 * [#73](https://github.com/hl7ch/ch-lab-report/issues/73): Results Blood Group: Add more examples
 * [#77](https://github.com/hl7ch/ch-lab-report/issues/77): The graphic 'Resource Overview' has been removed.
