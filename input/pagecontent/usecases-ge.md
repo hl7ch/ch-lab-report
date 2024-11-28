@@ -37,7 +37,7 @@ Die Resultate von mikrobiologischen Untersuchungen unterscheiden sich von andere
 
 ### Labor Test Panels (auch Test-Batterien oder Test-Profile genannt)
 
-Unter Labor Testpanels versteht man die Aggregierung mehrerer Laboruntersuchungen, wie sie gerne in einem klinischen Kontext in Auftrag gegeben und als Resultate dargestellt werden. Grundsätzlich haben wir mit obigen Beispielen gezeigt, dass sich Laborresultate wie auch Test-Panels mit den Resourcen, wie sie hier definiert sind abbilden lassen. Trotzdem bieten Testpanels als Observation Profile gewisse Vorteile.
+Unter Labor Testpanels versteht man die Aggregierung mehrerer Laboruntersuchungen, wie sie gerne in einem klinischen Kontext in Auftrag gegeben und als Resultate dargestellt werden. Grundsätzlich haben wir mit obigen Beispielen gezeigt, dass sich Laborresultate wie auch Test-Panels mit den Resourcen, wie sie hier definiert sind, abbilden lassen. Trotzdem bieten Testpanels als Observation Profile gewisse Vorteile.
 
 * Umfassende Analyse: Sie bieten eine effiziente Möglichkeit, mehrere Analyte gleichzeitig zu bestellen, zu untersuchen und die Ergebnisse übersichtlich darzustellen. Dies ist besonders nützlich bei der Diagnose komplexer Krankheitsbilder, bei denen mehrere Parameter eine Rolle spielen.
 * Erhöhte Effizienz: Durch die Kombination mehrerer Tests in einem Panel kann die Effizienz des Labors gesteigert und die Ressourcen optimal genutzt werden. Anstatt jeden Analyten einzeln zu testen, können mehrere Parameter gleichzeitig getestet werden, was Zeit und Arbeitsaufwand reduziert.
@@ -76,17 +76,13 @@ Eine Standardisierung im Bereich der Blutbank Resultate würde die Sicherheit be
 
 Dieser Leitfaden enthält 3 weitere mögliche ValueSets:
 
-1. [ValueSet: ChLab BloodGroup Antibody Screen Tests (Experimental)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper Screening Tests
-
-2. [ValueSet: CH Lab Results Blood Group Antibody (Experimental)](ValueSet-ch-lab-bloodgroup-antibody-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper
-
 1. [ValueSet: CH LAB-Report BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) mit den SNOMED CT Codes der Blutgruppen-Antikörper screening tests
 
 2. [ValueSet: CH LAB-Report BloodGroup Antibody Screen Tests Result (LOINC codes)](ValueSet-ch-lab-bloodgroup-antibody-screen-vs.html) mit den LOINC Codes der Resultate der Blutgruppen Antikörper screening Tests
 
-3. [ValueSet: CH LAB-Report BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper Screening Tests
+3. [ValueSet: CH LAB-Report BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) mit den SNOMED CT Codes der Blutgruppen Antikörper
 
-Für die Standardisierung in Bereich Blutbank braucht es Mitarbeit und Zustimmung der Fachgesellschaft (Schweizerische Vereinigung für Transfusionsmedizin), die in der kurzen Zeit nicht erlangt werden konnte. Somit beschränkt sich dieser Leitfaden auf 4 mögliche Darstellungsformen als Beispiele von Blutbank Resultate: 
+Für die Standardisierung in Bereich Blutbank braucht es Mitarbeit und Zustimmung der Fachgesellschaft (Schweizerische Vereinigung für Transfusionsmedizin), die in der kurzen Zeit nicht erlangt werden konnte. Somit beschränkt sich dieser Leitfaden auf 3 mögliche Darstellungsformen als Beispiele von Blutbank Resultate: 
 
 * [Blood Group Panel ABO Rh simple](Observation-BloodGroupAB0RhD.html)
 * [Blood Group Panel ABO Rh Panel](Observation-BloodGroupPanel.html)

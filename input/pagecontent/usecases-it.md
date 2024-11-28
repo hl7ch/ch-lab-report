@@ -45,7 +45,7 @@ I pannelli di test di laboratorio sono l'aggregazione di diversi test di laborat
 * Rilevanza clinica nel contesto terapeutico: I pannelli di test sono spesso progettati per coprire una serie di analiti clinicamente rilevanti per specifiche malattie o condizioni di salute. Ciò facilita l'interpretazione dei risultati e consente una diagnosi più rapida e accurata.
 * Standardizzazione: Utilizzando i pannelli di test, i laboratori possono implementare un approccio standardizzato per testare analiti specifici. Ciò favorisce la coerenza e la comparabilità dei risultati sia all'interno di un laboratorio che tra laboratori diversi.
 
-Nei nostri sistemi sanitari, la pressione competitiva tra i laboratori è elevata e la capacità di offrire servizi differenziati può rappresentare un importante vantaggio competitivo. Un pannello di test standardizzato obbligatorio può compromettere la capacità di un laboratorio di differenziarsi dalla concorrenza offrendo test specializzati o servizi personalizzati. I pannelli di test qui proposti non sono quindi uno standard obbligatorio, ma dovrebbero essere facoltativi laddove ciò sia sensato. Il pannello CBC automatizzato e il pannello di insufficienza renale [test di screening] (https://www.swissnephrology.ch/wp/wp-content/uploads/2023/01/161121_SGN_Pocketguide_CKD_Web_A4_e_WZ.pdf) sono intesi come esempi di profili di osservazione.
+Nei nostri sistemi sanitari, la pressione competitiva tra i laboratori è elevata e la capacità di offrire servizi differenziati può rappresentare un importante vantaggio competitivo. Un pannello di test standardizzato obbligatorio può compromettere la capacità di un laboratorio di differenziarsi dalla concorrenza offrendo test specializzati o servizi personalizzati. I pannelli di test qui proposti non sono quindi uno standard obbligatorio, ma dovrebbero essere facoltativi laddove ciò sia sensato. Il pannello CBC automatizzato e il pannello di insufficienza renale [test di screening](https://www.swissnephrology.ch/wp/wp-content/uploads/2023/01/161121_SGN_Pocketguide_CKD_Web_A4_e_WZ.pdf) sono intesi come esempi di profili di osservazione.
 I pannelli di test qui elencati servono anche come esempi di come i laboratori possono implementare i propri pannelli di test come profili di osservazione.
 
 #### Caso d'uso Conteggio delle cellule del sangue (emocromo automatizzato)
@@ -82,7 +82,7 @@ Questa guida contiene altri 3 possibili ValueSet:
 
 3. [ValueSet: CH LAB-Report BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) con i codici SNOMED CT degli anticorpi del gruppo sanguigno.
 
-La standardizzazione nel settore delle banche del sangue richiede la collaborazione e l'approvazione dell'associazione professionale (Schweizerische Vereinigung für Transfusionsmedizin), che non è stato possibile ottenere nel breve tempo a disposizione. La presente linea guida si limita pertanto a 4 possibili forme di presentazione come esempi di risultati delle banche del sangue: 
+La standardizzazione nel settore delle banche del sangue richiede la collaborazione e l'approvazione dell'associazione professionale (Schweizerische Vereinigung für Transfusionsmedizin), che non è stato possibile ottenere nel breve tempo a disposizione. La presente linea guida si limita pertanto a 3 possibili forme di presentazione come esempi di risultati delle banche del sangue: 
 
 * [Pannello gruppi sanguigni ABO Rh semplice](Observation-BloodGroupAB0RhD.html)
 * [Pannello gruppi sanguigni ABO Rh](Observation-BloodGroupPanel.html)

@@ -82,7 +82,7 @@ Ce guide contient 3 autres ValueSets possibles :
 
 3. [ValueSet: CH LAB-Report BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) avec les codes SNOMED CT des anticorps de groupe sanguin.
 
-La standardisation dans le secteur des banques de sang nécessite la coopération et l'approbation de l'association professionnelle (Schweizerische Vereinigung für Transfusionsmedizin), ce qui n'a pas pu être obtenu dans le court laps de temps disponible. Cette directive se limite donc à 4 formes possibles de présentation des résultats de la banque de sang à titre d'exemple : 
+La standardisation dans le secteur des banques de sang nécessite la coopération et l'approbation de l'association professionnelle (Schweizerische Vereinigung für Transfusionsmedizin), ce qui n'a pas pu être obtenu dans le court laps de temps disponible. Cette directive se limite donc à 3 formes possibles de présentation des résultats de la banque de sang à titre d'exemple : 
 
 * [Groupe sanguin ABO Rh simple](Observation-BloodGroupAB0RhD.html)
 * [Groupe sanguin ABO Rh Panel](Observation-BloodGroupPanel.html)
