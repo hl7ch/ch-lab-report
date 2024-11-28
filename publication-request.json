@@ -1,9 +1,9 @@
 {
     "package-id" : "ch.fhir.ig.ch-lab-report",
-    "version" : "1.0.0-ballot",
-    "path" : "http://fhir.ch/ig/ch-lab-report/1.0.0-ballot",
+    "version" : "1.0.0",
+    "path" : "http://fhir.ch/ig/ch-lab-report/1.0.0",
     "mode" : "milestone",
-    "status" : "ballot",
+    "status" : "trial-use",
     "sequence" : "STU 1",
     "desc" : "HL7 Switzerland STU 1",
     "changes" : "changelog.html",
