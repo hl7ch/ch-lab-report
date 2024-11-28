@@ -70,6 +70,10 @@ Example: [Observation Results: Renal Insufficiency Panel](Observation-Observatio
 
 Standardization in the area of blood bank results would improve safety in the transmission of laboratory results. HL7 Europe Laboratory Report has included two ValueSets with the binding 'preferred':
 
+1. [ValueSet: Results Blood Group - IPS](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-uv-ips) with 207 concepts
+
+2. [ValueSet: Results Blood Group - SNOMED CT IPS Free Set ](http://hl7.org/fhir/uv/ips/ValueSet/results-blood-group-snomed-ct-ips-free-set) with 13 concepts
+
 This guide contains 3 further possible ValueSets:
 
 1. [ValueSet: CH LAB-Report BloodGroup Immunohematology Tests (SNOMED CT coded procedures)](ValueSet-ch-lab-bloodgroup-immuno-hematology-vs.html) with the SNOMED CT codes of the blood group antibody screening tests.
@@ -78,7 +82,7 @@ This guide contains 3 further possible ValueSets:
 
 3. [ValueSet: CH LAB-Report BloodGroup Antibody Result](ValueSet-ch-lab-bloodgroup-antibody-vs.html) with the SNOMED CT codes of the blood group antibodies
 
-Standardization in the blood bank sector requires the cooperation and approval of the professional association (Schweizerische Vereinigung für Transfusionsmedizin), which could not be obtained in the short time available. This guideline is therefore limited to 4 possible forms of presentation as examples of blood bank results: 
+Standardization in the blood bank sector requires the cooperation and approval of the professional association (Schweizerische Vereinigung für Transfusionsmedizin), which could not be obtained in the short time available. This guideline is therefore limited to 3 possible forms of presentation as examples of blood bank results: 
 
 * [Blood Group Panel ABO Rh simple](Observation-BloodGroupAB0RhD.html)
 * [Blood Group Panel ABO Rh Panel](Observation-BloodGroupPanel.html)

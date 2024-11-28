@@ -1,21 +1,19 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
 ### STU 1 Ballot (2024-12-17)
-
-#### Open issue
-* [#91](https://github.com/hl7ch/ch-lab-report/issues/91): Missing slice of value[x] and component.value[x] in observation: value.ofType(boolean)
-
+<!--
 See also open issues on [GitHub](https://github.com/hl7ch/ch-lab-report/issues).
-
+-->
 #### Changed / Updated
+* [#91](https://github.com/hl7ch/ch-lab-report/issues/91): Missing slice of value[x] and component.value[x] in observation: value.ofType(boolean)
 * [#70](https://github.com/hl7ch/ch-lab-report/issues/70): Limit image size to 20 megabytes: Add menu point and page 'Guidance'.
 * [#73](https://github.com/hl7ch/ch-lab-report/issues/73): Results Blood Group: Add more examples
 * [#77](https://github.com/hl7ch/ch-lab-report/issues/77): The graphic 'Resource Overview' has been removed.
 * [#78](https://github.com/hl7ch/ch-lab-report/issues/78): CH LAB-Report Observation Blood Group - Definitions
   * add example Bloodgroup panel with 2 dependent hasMember elements
     * [Blood Group ABO Rh Panel](Observation-BloodGroupPanel.html)
-    * [Blood Group Panel ABO](Observation-BloodGroupABO.html)
-    * [Blood Group RhD](Observation-BloodGroupRh.html)
+    * [Blood Group Panel ABO](Observation-BloodGroupMemberABO.html)
+    * [Blood Group RhD](Observation-BloodGroupMemberRh.html)
 * [#92](https://github.com/hl7ch/ch-lab-report/issues/92): Add Profile ChLabObservationBloodGroup with additional valueSets as candidates
 * [#93](https://github.com/hl7ch/ch-lab-report/issues/93): Outcomment SetFmmandStatusRule in all profiles to set them to active.
 * [#94](https://github.com/hl7ch/ch-lab-report/issues/94): Bundle 2-electrophoresis – JSON: section "Laboratory examinations" empty? no amendment: contains subsection "Chemistry studies (set)
@@ -53,15 +51,14 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-lab-report/issues).
   * Example reporting Blood Group and RhD Result combined and coded with SNOMED CT: [BloodGroupAB0RhD](Observation-BloodGroupAB0RhD.html)
   * Example reporting Blood Group and RhD Result separately and coded with SNOMED CT: [BloodGroupCompAB0CompRhD](Observation-BloodGroupCompAB0CompRhD.html)
   * Example reporting ABO group [Type] and Rh [Type] separately in a component and coded with SNOMED CT, the latter proving weak D is in VS: [BloodGroupCompAB0CompRhDWeakD](Observation-BloodGroupCompAB0CompRhDWeakD.html)
-  * Example reporting ABO group [Type], Rh [Type], the result of antibody screen test and the Result of DAT separately in a component and coded with SNOMED CT: [BloodGroupCompAB0CompRhDAT](Observation-BloodGroupCompAB0CompRhDAT.html)
+  * Example reporting ABO group [Type], Rh [Type], the result of antibody screen test and the Result of DAT separately in a component and coded with SNOMED CT: [BloodGroupCompAB0CompRhDAT](Observation-BloodGroup-codedResult-2.html)
   * Example reporting ABO group [Type] and Rh [Type] as a panel containing 2 hasMember elements: [BloodGroupPanel](Observation-BloodGroupPanel.html)
-  * Example reporting ABO group [Type], Rh [Type], the Rhesus Genotyp as uncoded text, and the result of Antibody screen test : [BloodGroupCompAB0CompRhDAntibodies](Observation-BloodGroupCompAB0CompRhDAntibodies.html)
+  * Example reporting ABO group [Type], Rh [Type], the Rhesus phenotyp as uncoded text, and the result of Antibody screen test : [BloodGroupCompAB0CompRhDAntibodies](Observation-BloodGroup-codedResult-3.html)
   * [#71](https://github.com/hl7ch/ch-lab-report/issues/71): Example for renal Insufficiency:
   * [CH LAB-Report Observation Results: Renal Insufficiency Panel](StructureDefinition-ch-lab-observation-renal-insufficiency-panel.html)
 * [#76](https://github.com/hl7ch/ch-lab-report/issues/76): eGFR CKD-EPI 2009 or 2021 formula:
   *  [CH LAB-Report Observation Results: eGFR - CKD-EPI(ASR) Profile for females](StructureDefinition-ch-lab-observation-egfr.html)
-    * [CH LAB-Report Observation Results: eGFRcr - CKD-EPI(AS) Creatinin based Profile](StructureDefinition-ch-lab-observation-egfr-cr-ckd-epi-2021.html)
-    * [CH LAB-Report Observation Results: eGFRcr-cys - CKD-EPI(AS) Creatinin and Cystatin-C based Profile](StructureDefinition-ch-lab-observation-egfr-cr-cys-ckd-epi-2021.html)
+    * [CH LAB-Report Observation Results: eGFRcr - CKD-EPI(AS) Creatinin/Cystatin-C based Profile](StructureDefinition-ch-lab-observation-egfr-ckd-epi-2021.html)
 * [#68](https://github.com/hl7ch/ch-lab-report/issues/68): Do we need Observation Panel Profiles?
   * [CH LAB-Report Observation Results CBC Panel - Blood by Automated count, Results in sliced component](StructureDefinition-ch-lab-observation-cbc.html)Profile for observation laboratory result of automated Count of Blood Cells. We choose as Unit 10⁹/L or 10¹²/L for Cell Count. We use component slices which contain each Result.
   * [CH LAB-Report Observation Results CBC Panel - Blood by Automated count, Results in nested Profiles](StructureDefinition-ch-lab-observation-cbc-panel.html) We use SingleTest Profiles for each CBC Result slicing 'hasMember' element.

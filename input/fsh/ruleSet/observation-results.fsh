@@ -20,7 +20,7 @@ RuleSet: ObservationResultsEu
 * hasMember only Reference(Observation or QuestionnaireResponse or MolecularSequence)
 * component ^short = "Laboratory result"
 
-RuleSet: ObservationResultsValueEu
+RuleSet: ObservationResultsValueCH
 //* value[x]
 * extension contains $observation-value-r5 named value-r5 0..1
 * extension[value-r5]
