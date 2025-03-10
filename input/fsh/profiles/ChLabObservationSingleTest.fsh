@@ -16,6 +16,7 @@ Description: """This profile constrains the ChLabObservationResultsLaboratory pr
 * ^jurisdiction = $m49.htm#756 "Switzerland"
 * ^purpose = "This profile constrains the ChLabObservationResultsLaboratory profile to represent a single Test result or a component for the  HL7 Swiss project."
 * ^copyright = "Used by permission of HL7 Switzerland, all rights reserved Creative Commons License"
+
 * hasMember ..0
 
 * valueBoolean 0..1

@@ -6,10 +6,10 @@ Alias: $v2-0074                       = http://terminology.hl7.org/CodeSystem/v2
 Alias: $v2-0131                       = http://terminology.hl7.org/CodeSystem/v2-0131
 Alias: $v2-0203                       = http://terminology.hl7.org/CodeSystem/v2-0203 // identifierType
 Alias: $v2-0360                       = http://terminology.hl7.org/CodeSystem/v2-0360 // qualification Code
-Alias: $v2-0371                       = http://terminology.hl7.org/CodeSystem/v2-0371 // additivePreservative
+Alias: $v2-0371                       = http://terminology.hl7.org/CodeSystem/v2-0371|2.9 // additivePreservative
 Alias: $v2-0487                       = http://terminology.hl7.org/CodeSystem/v2-0487 // specimenType
 Alias: $v2-0488                       = http://terminology.hl7.org/CodeSystem/v2-0488 // specimenCollectionMethod
-Alias: $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916 // relevanteClinicalInformation
+Alias: $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916|2.9 // relevanteClinicalInformation
 Alias: $organization-type             = http://terminology.hl7.org/CodeSystem/organization-type
 Alias: $referencerange-meaning        = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v3-ActCode
@@ -39,7 +39,7 @@ Alias: $bg-ips                        = http://hl7.org/fhir/uv/ips/ValueSet/resu
 
 // External Profiles
 Alias: $CodeableConcept-uv-ips        = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-Alias: $ext-data-absent-reason        = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+Alias: $ext-data-absent-reason        = http://hl7.org/fhir/StructureDefinition/data-absent-reason|4.0.1
 Alias: $imposeProfile                 = http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile
 Alias: $dr-eu-lab                     = http://hl7.eu/fhir/laboratory/StructureDefinition/DiagnosticReport-eu-lab
 Alias: $obs-resultslab-eu-lab         = http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab
@@ -47,14 +47,14 @@ Alias: $CodeableConcept-uv-ips        = http://hl7.org/fhir/uv/ips/StructureDefi
 Alias: $obs-interpretation            = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $Patient-animal-eu-lab         = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-animal-eu-lab
 Alias: $Quantity-eu-lab               = http://hl7.eu/fhir/laboratory/StructureDefinition/Quantity-eu-lab
-Alias: $Range-uv-ips                  = http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips
+Alias: $Range-uv-ips                  = http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips|1.1.0
 Alias: $Ratio-eu-lab                  = http://hl7.eu/fhir/laboratory/StructureDefinition/Ratio-eu-lab
 
 // Extensions
-Alias: $bodySite                      = http://hl7.org/fhir/StructureDefinition/bodySite
+Alias: $bodySite                      = http://hl7.org/fhir/StructureDefinition/bodySite|4.0.1
 Alias: $extension-DiagnosticReport.composition  = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
 Alias: $observation.triggeredBy       = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
-Alias: $event-performerFunction       = http://hl7.org/fhir/StructureDefinition/event-performerFunction
+Alias: $event-performerFunction       = http://hl7.org/fhir/StructureDefinition/event-performerFunction|4.0.1
 Alias: $observation-certifiedRefMaterialCodeable = http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialCodeable
 Alias: $observation-certifiedRefMaterialIdentifer = http://hl7.eu/fhir/laboratory/StructureDefinition/observation-certifiedRefMaterialIdentifer
 Alias: $observation-deviceLabTestKit  = http://hl7.eu/fhir/laboratory/StructureDefinition/observation-deviceLabTestKit
@@ -67,7 +67,7 @@ Alias: $observationDefinition-specimen-r5 = http://hl7.org/fhir/5.0/StructureDef
 Alias: $observation-triggeredBy-r5        = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $observation-value-r5              = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
 // Alias: $extension-Observation.value[x] = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
-Alias: $supportingInfo                    = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
+Alias: $supportingInfo                    = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo|4.0.1
 // Alias:   $diagnostic-report-result-r5  =  http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.result
 
 // CH Core Structure Definitions

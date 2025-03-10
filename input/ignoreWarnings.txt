@@ -7,6 +7,11 @@ Entry 'urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d' isn't reachable by travers
 Entry 'urn:uuid:6cf06200-6760-4fdc-a1ea-3ed7aff4ebe9' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
 Entry 'urn:uuid:aa659dd8-28be-4c7e-ab27-286c5beff53c' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
 
+# Caused by underlying extensions of https://hl7.eu/fhir/laboratory
+There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '5.2.0', found versions: 1.0.0, 4.0.1, 5.1.0, 5.2.0
+# There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '5.2.0', found versions: 1.0.0, 4.0.1, 5.1.0, 5.2.0
+There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer. Using version '5.2.0', found versions: 1.0.0, 4.0.1, 5.1.0, 5.2.0
+
 # Examples implemented as bundles
 The Implementation Guide contains no explicitly linked examples for this profile
 
