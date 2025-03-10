@@ -12,7 +12,7 @@ Alias: $v2-0488                       = http://terminology.hl7.org/CodeSystem/v2
 Alias: $v2-0916                       = http://terminology.hl7.org/CodeSystem/v2-0916|2.9 // relevanteClinicalInformation
 Alias: $organization-type             = http://terminology.hl7.org/CodeSystem/organization-type
 Alias: $referencerange-meaning        = http://terminology.hl7.org/CodeSystem/referencerange-meaning
-Alias: $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v3-ActCode
+Alias: $v3-ActCode                    = http://terminology.hl7.org/CodeSystem/v3-ActCode|3.0.0
 Alias: $v3-ObservationInterpretation  = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
 Alias: $v3-ParticipationType          = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $v3-MaritalStatus              = http://terminology.hl7.org/CodeSystem/v3-MaritalStatus
@@ -51,7 +51,7 @@ Alias: $Range-uv-ips                  = http://hl7.org/fhir/uv/ips/StructureDefi
 Alias: $Ratio-eu-lab                  = http://hl7.eu/fhir/laboratory/StructureDefinition/Ratio-eu-lab
 
 // Extensions
-Alias: $bodySite                      = http://hl7.org/fhir/StructureDefinition/bodySite|4.0.1
+Alias: $bodySite                      = http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0
 Alias: $extension-DiagnosticReport.composition  = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition // from eu-laboratory
 Alias: $observation.triggeredBy       = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $event-performerFunction       = http://hl7.org/fhir/StructureDefinition/event-performerFunction|4.0.1
