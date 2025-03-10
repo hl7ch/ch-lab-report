@@ -364,7 +364,7 @@ Usage: #inline
 
 Instance: Observation-MCV
 InstanceOf: ChLabObservationResultsLaboratory
-Title: "MCV [Entitic volume] by Automated count"   // LOINC Long Common Name
+Title: "MCV [Entitic mean volume] in Red Blood Cells by Automated count"   // LOINC Long Common Name
 Description: "The volume of packed red blood cells in a blood sample. The volume is measured by centrifugation in a tube with graduated markings, or with automated blood cell counters. It is an indicator of erythrocyte status in disease. For example, in anemia the volume is low and in polycythemia it is high."
 Usage: #inline
 * id = "857cfa10-66ea-45ae-b236-e6e03af4be3f"
@@ -372,7 +372,7 @@ Usage: #inline
 
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#787-2 "MCV [Entitic volume] by Automated count"
+* code = $loinc#787-2 "MCV [Entitic mean volume] in Red Blood Cells by Automated count"
 * code.text = "MCV Auto (RBC) [Entitic vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
@@ -417,7 +417,7 @@ Usage: #inline
 //// =================================================
 Instance: Observation-MCHC
 InstanceOf: ChLabObservationResultsLaboratory
-Title: "MCHC [Mass/volume] by Automated count"   // LOINC Long Common Name
+Title: "MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count"   // LOINC Long Common Name
 Description: "The mean corpuscular hemoglobin concentration, or MCHC, is a measure of the concentration of hemoglobin in a given volume of packed red blood cell. It is reported as part of a standard complete blood count."
 Usage: #inline
 * id = "735c9244-497a-420d-b006-15a57be365b1"
@@ -425,7 +425,7 @@ Usage: #inline
 
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
+* code = $loinc#786-4 "MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count"
 * code.text = "MCHC Auto (RBC) [Mass/Vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
@@ -505,7 +505,7 @@ Usage: #inline
 
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
+* code = $loinc#71427-9 "Fibrin D-dimer [Mass/volume] in Blood by Rapid immunoassay"
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
@@ -743,7 +743,7 @@ Usage: #inline
 
 Instance: ServiceRequest-MCV
 InstanceOf: ChLabReportServiceRequest
-Title: "LabOrder Service Request for MCV [Entitic volume] by Automated count"
+Title: "LabOrder Service Request for MCV [Entitic mean volume] in Red Blood Cells by Automated count"
 Description: "Example for Service Request of MCV in Blood"
 Usage: #inline
 * id = "6adcf650-19cb-4d58-b27c-3cf52aa32d86"
@@ -761,7 +761,7 @@ Usage: #inline
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#787-2 "MCV [Entitic volume] by Automated count"
+* code.coding[0] = $loinc#787-2 "MCV [Entitic mean volume] in Red Blood Cells by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
@@ -803,7 +803,7 @@ Usage: #inline
 
 Instance: ServiceRequest-MCHC
 InstanceOf: ChLabReportServiceRequest
-Title: "LabOrder Service Request for MCHC [Mass/volume] by Automated count"
+Title: "LabOrder Service Request for MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count"
 Description: "Example for Service Request of MCHC in Blood"
 Usage: #inline
 * id = "82db46b7-acef-49f4-9456-6e9cbd62a27b"
@@ -821,7 +821,7 @@ Usage: #inline
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
+* code.coding[0] = $loinc#786-4 "MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
@@ -919,7 +919,7 @@ Usage: #inline
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
+* code.coding[0] = $loinc#71427-9 "Fibrin D-dimer [Mass/volume] in Blood by Rapid immunoassay"
 
 // orderDetails: Additional order information, codeableConcept
 

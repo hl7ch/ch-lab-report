@@ -84,3 +84,4 @@ menu:
 # FHIR Tools IG: http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 parameters:
   allow-extensible-warnings: true
+  path-expansion-params: '../../expansion-params.json'  # for using SNOMED CT Swiss Extension

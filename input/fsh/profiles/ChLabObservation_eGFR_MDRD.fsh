@@ -39,7 +39,7 @@ Note: The MDRD equation is hardly used any more and is replaced by the CKD-EPI e
 * component[blacks].valueQuantity.code = #mL/min (exactly)
 
 * component[non-blacks] ^short = "eGFR_MDMR among non-blacks"
-* component[non-blacks].code = $loinc#48642-3  // "Glomerular filtration rate/1.73 sq M.predicted among non-blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+* component[non-blacks].code = $loinc#48642-3  // "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)/1.73 sq M among non black population"
 * component[non-blacks].code ^short = "eGFR_MDMR among non-blacks code"
 * component[non-blacks].valueQuantity only QuantityEuLab
 * component[non-blacks].valueQuantity MS
