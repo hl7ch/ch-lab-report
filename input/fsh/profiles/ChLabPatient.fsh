@@ -6,6 +6,7 @@ Description: "This profile constrains the Patient resource for the purpose of la
 * . ^short = "CH LAB Patient"
 * ^extension[$imposeProfile].valueCanonical = Canonical(PatientEuLab)
 
+
 /*
 Instance: FranzMuster
 InstanceOf: ChLabPatient
