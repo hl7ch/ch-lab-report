@@ -18,7 +18,7 @@ For children below 18 y there is a [Pediatric GFR Calculator](https://www.kidney
 * code from ObservationCode_CDK_EPI_2021 (required)
   * ^short = "ValueSet for the allowed LOINC codes aiming at Creatinin / Creatinin and Cystatin C based eGFR"
 
-// * code = $loinc#98979-8 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)"
+// * code = $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
 // * code MS
 // * code ^short = "eGFRcr SerPlBld CKD-EPI 2021"  //  LOINC Short Name
 // * code ^definition = "GFR/1.73 sq M.predicted Creatinine-based formula (CKD-EPI 2021) (S/P/Bld) [Vol rate/Area]"   //  LOINC Display Name
@@ -61,7 +61,7 @@ For children below 18 y there is a [Pediatric GFR Calculator](https://www.kidney
 // Usage: #example
 // Title: "Example of Result eGFR-cr CKD-EPI 2021"
 // Description: "eGFR-cr CKD-EPI 2021 based on Creatinin"
-// * code = $loinc#98979-8 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)"
+// * code = $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
 // * status = #final
 // * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 // * effectiveDateTime = "2024-04-23T11:24:26+01:00"
@@ -82,7 +82,7 @@ For children below 18 y there is a [Pediatric GFR Calculator](https://www.kidney
 // Title: "CH LAB-Report Observation Results: eGFRcr-cys - CKD-EPI(AS) Creatinin and Cystatin-C based Profile"
 // Description: """Glomerular filtration rate (GFR) is considered the best overall index of kidney function; however measured GFR is not practical in the routine clinical setting. Estimated glomerular filtration rate (eGFR) is a suitable alternative and can be calculated for adults >= 18 years using an equation incorporating the patient's age, gender, and measured serum/plasma/blood creatinine only (eGFRcr) (this term) or both serum/plasma/blood creatinine and serum/plasma cystatin C (eGFRcr-cys) [LOINC: 98980-6](https://loinc.org/98980-6/). The serum/plasma/blood creatinine value is based on a measurement procedure that is traceable to the isotope dilution mass spectrometry (IDMS) reference measurement procedure for creatinine. The 2021 CKD-EPI equations used for eGFRcr and eGFRcr-cys do not have a race term as does the older estimating equations that they replace. [https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953](https://www.nejm.org/doi/pdf/10.1056/NEJMoa2102953)"""
 // 
-// * code = $loinc#98980-6 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine and Cystatin C-based formula (CKD-EPI 2021)"
+// * code = $loinc#98980-6 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine and Cystatin C-based formula (CKD-EPI 2021)/1.73 sq M"
 // * code MS
 // * code ^short = "eGFRcr-cys SerPlBld CKD-EPI 2021"
 // * code ^definition = "GFR/1.73 sq M.predicted Creatinine and Cystatin C-based formula (CKD-EPI 2021) (S/P/Bld) [Vol rate/Area]"   //  LOINC Display Name
@@ -126,7 +126,7 @@ For children below 18 y there is a [Pediatric GFR Calculator](https://www.kidney
 // Usage: #example
 // Title: "Example of Result eGFR-cr-cys CKD-EPI 2021"
 // Description: "eGFR-cr-cys CKD-EPI 2021 based on Creatinine and Cystatin C"
-// * code = $loinc#98980-6 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine and Cystatin C-based formula (CKD-EPI 2021)"
+// * code = $loinc#98980-6 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine and Cystatin C-based formula (CKD-EPI 2021)/1.73 sq M"
 // * status = #final
 // * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 // * effectiveDateTime = "2024-04-23T11:24:26+01:00"

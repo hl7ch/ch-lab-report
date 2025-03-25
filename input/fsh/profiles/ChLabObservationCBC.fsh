@@ -121,7 +121,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[MeanCorpuscularVolume] ^short = "Mean Corpuscular Volume"
 * component[MeanCorpuscularVolume].code 1..1 MS
 * component[MeanCorpuscularVolume].code ^short = "MeanCorpuscularVolume code"
-* component[MeanCorpuscularVolume].code = $loinc#787-2 // "MCV [Entitic volume] by Automated count"
+* component[MeanCorpuscularVolume].code = $loinc#787-2 // "MCV [Entitic mean volume] in Red Blood Cells by Automated count"
 // * component[MeanCorpuscularVolume].code.text = "MCV Auto (RBC) [Entitic vol]"
 // * component[MeanCorpuscularVolume].code.text ^short = "LOINC Display Name"
 // * component[MeanCorpuscularVolume].valueQuantity only QuantityEuLab
@@ -163,7 +163,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[MeanCorpuscularHemoglobinConcentration] ^short = "Mean Corpuscular Hemoglobin Concentration"
 * component[MeanCorpuscularHemoglobinConcentration].code 1..1 MS
 * component[MeanCorpuscularHemoglobinConcentration].code ^short = "MeanCorpuscularHemoglobinConcentration code"
-* component[MeanCorpuscularHemoglobinConcentration].code = $loinc#786-4 // "MCHC [Mass/volume] by Automated count"
+* component[MeanCorpuscularHemoglobinConcentration].code = $loinc#786-4 // "MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count"
 // * component[MeanCorpuscularHemoglobinConcentration].code.text = "MCHC Auto (RBC) [Mass/Vol]"
 // * component[MeanCorpuscularHemoglobinConcentration].code.text ^short = "LOINC Display Name"
 // * component[MeanCorpuscularHemoglobinConcentration].valueQuantity only QuantityEuLab
@@ -184,7 +184,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[ErythrocyteDistWidth] ^short = "Erythrocyte distribution width"
 * component[ErythrocyteDistWidth].code 1..1 MS
 * component[ErythrocyteDistWidth].code ^short = "ErythrocyteDistWidth code"
-// * component[ErythrocyteDistWidth].code = $loinc#21000-5 "Erythrocyte distribution width [Entitic volume] by Automated count"
+// * component[ErythrocyteDistWidth].code = $loinc#788-0 "Erythrocyte [DistWidth] in Red Blood Cells by Automated count"
 * component[ErythrocyteDistWidth].code from ObservationCodeEntvolRatio (required)
 
 // * component[ErythrocyteDistWidth].code.text = "Erythrocyte distribution width Auto (RBC) [Entitic vol]"
@@ -207,7 +207,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 // * component[ErythrocyteDistWidthRatio] ^short = "Erythrocyte distribution width [Ratio]"
 // * component[ErythrocyteDistWidthRatio].code 1..1 MS
 // * component[ErythrocyteDistWidthRatio].code ^short = "ErythrocyteDistWidthRatio code"
-// * component[ErythrocyteDistWidthRatio].code = $loinc#788-0 "Erythrocyte distribution width [Ratio] by Automated count"
+// * component[ErythrocyteDistWidthRatio].code = $loinc#788-0 "Erythrocyte [DistWidth] in Red Blood Cells by Automated count"
 // // * component[ErythrocyteDistWidthRatio].code.text = "Erythrocyte distribution width Auto (RBC) [Ratio]"
 // // * component[ErythrocyteDistWidthRatio].code.text ^short = "LOINC Display Name"
 // // * component[ErythrocyteDistWidthRatio].valueQuantity only QuantityEuLab
