@@ -1,7 +1,7 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
 #### Fixed (2024-03-10)
-* [#156](https://github.com/hl7ch/ch-lab-report/issues): add SCT edition in the expansion parameters
+* [#156](https://github.com/hl7ch/ch-lab-report/issues): add SCT edition in the expansion parameters for usage of Swiss Extensions
 
 ### STU 1 Sequence - v1.0.0 (2024-12-17)
 <!--
@@ -36,6 +36,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-lab-report/issues).
 * [#114](https://github.com/hl7ch/ch-lab-report/issues/114): Profiles: add links to LOINC Codes and NEJM in text of eGFR-CKD-EPI(ASR) 2021 Profile
 * [#115](https://github.com/hl7ch/ch-lab-report/issues/115): Use Cases in English: No amendment, duplicate of [#100](https://github.com/hl7ch/ch-lab-report/issues/100)
 * [#116](https://github.com/hl7ch/ch-lab-report/issues/116): Changelog, refactor bloodgroup examples
+* [#159](https://github.com/hl7ch/ch-lab-report/issues/159): Fix dependency to hl7.terminology
 
 #### Issues resolved without amendment (in IG)
 * [#97](https://github.com/hl7ch/ch-lab-report/issues/97): Typo generated in narrative (tooling side)

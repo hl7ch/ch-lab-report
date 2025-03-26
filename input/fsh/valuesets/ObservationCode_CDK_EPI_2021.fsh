@@ -7,5 +7,5 @@ Description: "ValueSet for the allowed eGFRcr and eGFRcr-cys codes, has no race 
 * ^version = "1.0.0"
 * ^status = #draft
 * ^experimental = false
-* $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M'"
+* $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
 * $loinc#98980-6 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine and Cystatin C-based formula (CKD-EPI 2021)/1.73 sq M"

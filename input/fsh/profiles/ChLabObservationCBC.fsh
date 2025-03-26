@@ -184,7 +184,7 @@ Description:  "Profile for observation laboratory result of automated Count of B
 * component[ErythrocyteDistWidth] ^short = "Erythrocyte distribution width"
 * component[ErythrocyteDistWidth].code 1..1 MS
 * component[ErythrocyteDistWidth].code ^short = "ErythrocyteDistWidth code"
-// * component[ErythrocyteDistWidth].code = $loinc#30385-9 "Erythrocyte [DistWidth] in Red Blood Cells"
+* component[ErythrocyteDistWidth].code = $loinc#788-0 "Erythrocyte [DistWidth] in Red Blood Cells by Automated count"
 * component[ErythrocyteDistWidth].code from ObservationCodeEntvolRatio (required)
 
 // * component[ErythrocyteDistWidth].code.text = "Erythrocyte distribution width Auto (RBC) [Entitic vol]"

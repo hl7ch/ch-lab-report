@@ -7,5 +7,4 @@ Description: "ValueSet for the allowed codes ENTVOL and RATIO"
 * ^version = "1.0.0"
 * ^status = #draft
 * ^experimental = false
-* $loinc#30385-9 "Erythrocyte [DistWidth] in Red Blood Cells"
 * $loinc#788-0 "Erythrocyte [DistWidth] in Red Blood Cells by Automated count"
