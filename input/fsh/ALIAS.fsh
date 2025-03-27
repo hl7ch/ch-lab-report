@@ -67,7 +67,7 @@ Alias: $observationDefinition-specimen-r5 = http://hl7.org/fhir/5.0/StructureDef
 Alias: $observation-triggeredBy-r5        = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $observation-value-r5              = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
 // Alias: $extension-Observation.value[x] = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
-Alias: $supportingInfo                    = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
+Alias: $supportingInfo                    = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo|4.0.1
 // Alias:   $diagnostic-report-result-r5  =  http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.result
 
 // CH Core Structure Definitions
