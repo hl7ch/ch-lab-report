@@ -71,7 +71,7 @@ Usage: #inline
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:3771d254-cee2-498e-a448-c5660ccd583d) "TheoTillmannGruppenpraxis"  //  1
-
+* extension[diagnosticReport-reference][+].valueReference = Reference(urn:uuid:aa659dd8-28be-4c7e-ab27-286c5beff53c) "DiagnosticReport-3-breath-test"  //  3
 // Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:075e3f2d-7ed8-4b6e-a3bb-9b784f5006c0"

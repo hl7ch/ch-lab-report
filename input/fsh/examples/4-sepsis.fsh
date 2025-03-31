@@ -187,7 +187,7 @@ Usage: #inline
 // ╰─────────────────────────────────────────────────────────────╯
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f) "Hans Hauser at Kantonsspital"  //  1
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller, patient"      //  2
-
+* extension[diagnosticReport-reference][+].valueReference = Reference(urn:uuid:1e56bbe9-ee25-45db-a887-987090f89810) "DiagnosticReport-4-sepsis"  //  3
 * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7) "ServiceRequest-gram-stain"        //  3
 * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b) "ServiceRequest-anaerobe-culture"  //  4
 * extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8) "ServiceRequest-aerobe-culture"    //  5

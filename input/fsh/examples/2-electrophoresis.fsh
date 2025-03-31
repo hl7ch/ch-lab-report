@@ -106,7 +106,7 @@ Usage: #inline
 // ╰─────────────────────────────────────────────────────────────╯
 
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "MarcMustermannArztpraxis"  //  1
-
+* extension[diagnosticReport-reference][+].valueReference = Reference(urn:uuid:6cf06200-6760-4fdc-a1ea-3ed7aff4ebe9) "DiagnosticReport-2-electrophoresis"  // 3
 // Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:075e3f2d-7ed8-4b6e-a3bb-9b784f5006c0"
