@@ -3,7 +3,7 @@
 # Caused by the underlying profiles, look at https://hl7.eu/fhir/laboratory/design-choice.html
 # Entry 'urn:uuid:1e56bbe9-ee25-45db-a887-987090f89810' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
 # Entry 'urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
-Entry 'urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
+# Entry 'urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
 # Entry 'urn:uuid:6cf06200-6760-4fdc-a1ea-3ed7aff4ebe9' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
 # Entry 'urn:uuid:aa659dd8-28be-4c7e-ab27-286c5beff53c' isn't reachable by traversing forwards from the Composition. Only Provenance is approved to be used this way (R4 section 3.3.1)
 

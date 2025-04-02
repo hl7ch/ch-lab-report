@@ -2,6 +2,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Fixed (2024-03-10)
 * [#156](https://github.com/hl7ch/ch-lab-report/issues): add SCT edition in the expansion parameters for usage of Swiss Extensions
+* fix all not reacheble entries in Composition and remove correspondent warnings in ignoreWarnings file.
 
 ### STU 1 Sequence - v1.0.0 (2024-12-17)
 <!--
