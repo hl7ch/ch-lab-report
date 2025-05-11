@@ -4,11 +4,12 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#156](https://github.com/hl7ch/ch-lab-report/issues): add SCT edition in the expansion parameters for usage of Swiss Extensions
 * fix all not reacheble entries in Composition and remove correspondent warnings in ignoreWarnings file.
 
-### STU 2 Sequence - v2.0.0 (2024-12-17)
+### STU 2 Sequence - v2.0.0 (2025-05-19)
 * update to eu-laboratory 0.1.1
 * replace http://www.labor-gantenbein.ch with http://example.org/Labor-Gantenbein
 * replace https://labor.pipette.com with http://example.org/Labor-Pipette
 * add dependency CH Term (R4) to get the naming systems
+* replace requisition.system = "urn:oid:2.16.756.5.30" with requisition.system = "http://example.org/ProviderNumber/Requisition
 
 ### STU 1 Sequence - v1.0.0 (2024-12-17)
 <!--
