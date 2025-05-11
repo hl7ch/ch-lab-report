@@ -50,7 +50,7 @@ InstanceOf: ChLabSpecimenAdditiveSubstance
 Usage: #example
 Title: "Dipotassium EDTA (ethylenediaminetetraacetate)"
 Description: "Specimen Additive Substance EDTA"
-* identifier.system = "http://intranet.pipette.ch/identifiers/substances"
+* identifier.system = "http://example.org/pipette/identifiers/substances"
 * identifier.value = "1234333"
 * category = $substance-category#chemical "Chemical"
 * code.coding.code = #1256100007

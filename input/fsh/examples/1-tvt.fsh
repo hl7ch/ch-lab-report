@@ -602,7 +602,7 @@ Usage: #inline
 
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -633,7 +633,7 @@ Usage: #inline
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -663,7 +663,7 @@ Usage: #inline
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -693,7 +693,7 @@ Usage: #inline
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -723,7 +723,7 @@ Usage: #inline
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -753,7 +753,7 @@ Usage: #inline
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -783,7 +783,7 @@ Usage: #inline
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -813,7 +813,7 @@ Usage: #inline
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -843,7 +843,7 @@ Usage: #inline
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -874,7 +874,7 @@ Usage: #inline
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 
 * status = #active
@@ -909,7 +909,7 @@ Usage: #inline
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 
 * status = #active

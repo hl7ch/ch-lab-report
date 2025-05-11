@@ -6,6 +6,9 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 ### STU 2 Sequence - v2.0.0 (2024-12-17)
 * update to eu-laboratory 0.1.1
+* replace http://www.labor-gantenbein.ch with http://example.org/Labor-Gantenbein
+* replace https://labor.pipette.com with http://example.org/Labor-Pipette
+* add dependency CH Term (R4) to get the naming systems
 
 ### STU 1 Sequence - v1.0.0 (2024-12-17)
 <!--

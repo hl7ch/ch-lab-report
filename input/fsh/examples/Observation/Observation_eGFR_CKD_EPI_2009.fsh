@@ -5,7 +5,7 @@ Instance: Observation-eGFR-CKD-EPI-2009-cr
 InstanceOf: ChLabObservation_eGFR_CKD_EPI_2009
 Description: "Example of an Observation Instance with component.referenceRange"
 Usage: #example
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03720-eGFR_CKD_EPI-cr"
 * code = $loinc#62238-1 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI)/1.73 sq M"
 * status = #final
@@ -44,7 +44,7 @@ Instance: Observation-eGFR-CKD-EPI-2009-cr-cys
 InstanceOf: ChLabObservation_eGFR_CKD_EPI_2009
 Description: "Example of an Observation Instance with component.referenceRange"
 Usage: #example
-* identifier.system = "https://examle.com/labvalues"
+* identifier.system = "https://example.org/labvalues"
 * identifier.value = "1304-03720-eGFR_CKD_EPI-cr-cys"
 * code = $loinc#94677-2 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine and Cystatin C-based formula (CKD-EPI)/1.73 sq M"
 * status = #final

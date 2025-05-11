@@ -3,7 +3,7 @@ InstanceOf: ChLabObservationCBCPanel
 Usage: #example
 Title: "Observation CBC panel using 'hasMember'"
 Description: "Example to illustrate ChLabObservationCBCPanel"
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03780-cbc-panel"
 * status = #final
 

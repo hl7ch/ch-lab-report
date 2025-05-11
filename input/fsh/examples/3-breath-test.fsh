@@ -173,9 +173,8 @@ Usage: #inline
 // * extension[=].valueAddress.state = "BL"
 // * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 // * extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.16.756.5.30.999999.1"
-* identifier.value = "012/08.111222"
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400111"
 * name.text = "Emil Emmenegger"
 * name.family = "Emmenegger"
 * name.given = "Emil"
@@ -563,7 +562,7 @@ Title: "Breath-Test System"
 Description: "Example for Breath analyzing Device"
 Usage: #inline
 * id = "b2b5e406-02d0-46de-85bb-561fe37040bb"
-* identifier.system = "http://www.labor-schildknecht.ch/devices/id"
+* identifier.system = "http://example.org/labor-schildknecht.ch/devices/id"
 * identifier.value = "345888"
 * status = #active
 * manufacturer = "QuinTron Instrument Company"

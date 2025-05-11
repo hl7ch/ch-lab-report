@@ -6,7 +6,7 @@ Instance: Observation-eGFR-MDRD-male
 InstanceOf: ChLabObservation_eGFR_MDRD
 Description: "Example of an Observation Instance with component.referenceRange"
 Usage: #example
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03720-eGFR-MDRD-male"
 * code = $loinc#70969-1 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)/1.73 sq M among male population"
 * status = #final
@@ -45,7 +45,7 @@ Instance: Observation-eGFR-MDRD-female
 InstanceOf: ChLabObservation_eGFR_MDRD
 Description: "Example of an Observation Instance with component.referenceRange"
 Usage: #example
-* identifier.system = "https://examle.com/labvalues"
+* identifier.system = "https://example.org/labvalues"
 * identifier.value = "1304-03720-eGFR-MDRD-female"
 * code = $loinc#50044-7 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)/1.73 sq M among female population"
 

@@ -7,7 +7,7 @@ InstanceOf: ChLabObservationPanel
 Usage: #example
 Title: "Blood Group ABO Rh Panel"
 Description: "Example reporting Blood Group and RhD Result separately in a member and coded with SNOMED CT"
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03760-blood-group-panel"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
@@ -27,7 +27,7 @@ InstanceOf: ChLab-observation-single-test
 Usage: #example
 Title: "Blood Group ABO"
 Description: "Example reporting just blood group ABO System"
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03760-blood-group-abo"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
@@ -48,7 +48,7 @@ InstanceOf: ChLab-observation-single-test
 Usage: #example
 Title: "Blood Group Rh"
 Description: "Example reporting just blood group Rh System"
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03760-blood-group-Rh"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
@@ -73,7 +73,7 @@ InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group Panel with Component ABO and Component Rh"
 Description: "Example reporting ABO group [Type] and Rh [Type] separately in a component and coded with SNOMED CT"
 Usage: #example
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
@@ -107,7 +107,7 @@ InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group Rh combined"
 Description: "Example reporting Blood Group and RhD Result combined and coded with SNOMED CT"
 Usage: #example
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03720-blood-group-simple"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
@@ -133,7 +133,7 @@ InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group Panel with Component ABO and Component Rh resulting Weak D"
 Description: "Example reporting ABO group [Type] and Rh [Type] separately in a component and coded with SNOMED CT, the latter proving weak D is in VS"
 Usage: #example
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
@@ -172,7 +172,7 @@ InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group coded Result with Components ABO, RhD, Date, Period and Antibody Results"
 Description: "Example reporting ABO group [Type], Rh [Type], T + S, Antibodies"
 Usage: #example
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
@@ -227,7 +227,7 @@ InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group coded Result with Components ABO, RhD, Antibody Screen Test and DAT"
 Description: "Example reporting ABO group [Type], Rh [Type], antibody screen test and DAT"
 Usage: #example
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
@@ -285,7 +285,7 @@ InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group coded Result with Components Hemoglobine, ABO, RhD, Rh Phenotype and Antibody Results"
 Description: "Example reporting Hemoglobin, ABO group [Type] and Rh [Type], Rhesus Phenotype and Antibodies"
 Usage: #example
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
@@ -348,7 +348,7 @@ InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group free Text Result with Components ABO, RhD, Date, Period and Antibody Results"
 Description: "Example reporting ABO group [Type], Rh [Type], T + S, Antibodies"
 Usage: #example
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
@@ -397,7 +397,7 @@ InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group free Text Result with Components ABO, RhD, Antibody Screen Test and DAT"
 Description: "Example reporting ABO group [Type], Rh [Type], antibody screen test and DAT"
 Usage: #example
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
@@ -443,7 +443,7 @@ InstanceOf: ChLabObservationBloodGroup
 Title: "Blood Group free Text Result with Components Hemoglobine, ABO, RhD, Rh Phenotype and Antibody Results"
 Description: "Example reporting Hemoglobin, ABO group [Type] and Rh [Type], Rhesus Phenotype and Antibodies"
 Usage: #example
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03760-blood-group-component"
 * status = #final
 * category[specialty] = $sct#421661004 "Blood banking and transfusion medicine (specialty) (qualifier value)"
