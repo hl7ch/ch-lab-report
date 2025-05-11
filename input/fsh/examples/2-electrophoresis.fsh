@@ -661,7 +661,7 @@ Description: "Example for Service Request of CBC panel"
 Usage: #inline
 * id = "40eaa087-a49e-444c-9dbd-d3bdef9efcad"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123123"
 
 // basedOn ...

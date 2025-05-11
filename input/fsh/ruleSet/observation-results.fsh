@@ -21,7 +21,6 @@ RuleSet: ObservationResultsEu
 * component ^short = "Laboratory result"
 
 RuleSet: ObservationResultsValueCH
-//* value[x]
 * extension contains $observation-value-r5 named value-r5 0..1
 * extension[value-r5]
   * value[x] only Attachment
@@ -31,6 +30,7 @@ RuleSet: ObservationResultsValueCH
 * value[x] ^slicing.discriminator.path = "$this"
 * value[x] ^slicing.rules = #closed
 * valueString only string
+// * valueString MS
 * valueString ^sliceName = "valueString"
 
 * valueBoolean only boolean
@@ -54,9 +54,11 @@ RuleSet: ObservationResultsValueCH
 * valueQuantity only Quantity-eu-lab
 // * valueQuantity MS
 * valueQuantity ^sliceName = "valueQuantity"
-// * valueCodeableConcept only $CodeableConcept-uv-ips
+* valueCodeableConcept only $CodeableConcept-uv-ips
 // * valueCodeableConcept MS
 * valueCodeableConcept from $results-coded-values-laboratory-uv-ips (preferred)
+
+/*
 * valueCodeableConcept ^sliceName = "valueCodeableConcept"
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
@@ -79,3 +81,4 @@ RuleSet: ObservationResultsValueCH
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding to a microorganisms value set for laboratory result values from the SNOMED CT IPS free set for use globally (in SNOMED member and non-member jurisdictions)."
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+*/

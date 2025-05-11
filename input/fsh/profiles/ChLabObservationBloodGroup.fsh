@@ -12,6 +12,7 @@ defined situations."""
 // * code = $loinc#34530-6 // "ABO and Rh group panel - Blood"
 
 // NOTE: EU LAB auch aufführen, wird sonst überschrieben...
+/*
 * valueCodeableConcept ^binding.extension[0].extension[0].url = "purpose"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueCode = #candidate
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "valueSet"
@@ -59,3 +60,4 @@ defined situations."""
 * valueCodeableConcept ^binding.extension[=].extension[+].url = "documentation"
 * valueCodeableConcept ^binding.extension[=].extension[=].valueMarkdown = "Additional conformance binding for CH LAB-Report."
 * valueCodeableConcept ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+*/

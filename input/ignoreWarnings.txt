@@ -12,3 +12,6 @@ The Implementation Guide contains no explicitly linked examples for this profile
 
 # Caused by the underlying profile CHCorePatient INFO
 The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+
+# eu laboratory doesn't allow
+The ImplementationGuide uses package hl7.terminology.r4#6.2.0 released on 2025-01-22, but the most recent appropriate version is 6.3.0. This reference is getting old and the more recent version should be considered

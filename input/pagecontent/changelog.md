@@ -10,6 +10,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * replace https://labor.pipette.com with http://example.org/Labor-Pipette
 * add dependency CH Term (R4) to get the naming systems
 * replace requisition.system = "urn:oid:2.16.756.5.30" with requisition.system = "http://example.org/ProviderNumber/Requisition
+* replace identifier.system = "urn:oid:2.16.756.5.30" with identifier.system = "http://example.org/labor-pipette"
 
 ### STU 1 Sequence - v1.0.0 (2024-12-17)
 <!--

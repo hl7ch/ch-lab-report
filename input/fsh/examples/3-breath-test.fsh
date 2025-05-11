@@ -437,7 +437,7 @@ Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050441"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[ZSR].value = "A123444"
+* identifier[ZSR].value = "Y274589"
 * name.use = #official
 * name.family = "Tillmann"
 * name.given = "Theo"
@@ -501,7 +501,7 @@ Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3" // GLN
 * identifier[GLN].value = "7601000050717"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[ZSR].value = "A123315"
+* identifier[ZSR].value = "L248519"
 * name.use = #official
 * name.family = "Klauser"
 * name.given = "Katrin"
