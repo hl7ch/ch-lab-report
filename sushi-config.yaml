@@ -35,11 +35,13 @@ dependencies:
   hl7.terminology.r4:
     uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
     version: 6.3.0
-  hl7.fhir.uv.ips: 1.1.0
-  hl7.fhir.eu.extensions: 0.1.0
-  hl7.fhir.eu.laboratory: 0.1.1
   ch.fhir.ig.ch-orf: current
   hl7.fhir.uv.order-catalog: 0.1.0
+
+  # Specific dependencies for the CH_LAB_REPORT
+  hl7.fhir.uv.ips: 1.1.0
+  hl7.fhir.eu.extensions: 0.1.0
+  hl7.fhir.eu.laboratory: 0.1.1 
   hl7.fhir.uv.extensions.r4: 5.2.0
   hl7.fhir.extensions.r5: 4.0.1
 
