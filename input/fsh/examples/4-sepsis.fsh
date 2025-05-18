@@ -1209,12 +1209,12 @@ Description: "Example for Service Request for Gram Stain of blood specimen"
 Usage: #inline
 * id = "21dbc37f-28b5-4ef8-9835-c79dbf7c99b7"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -1243,12 +1243,12 @@ Description: "Example for Service Request for anaerobic culture of blood specime
 Usage: #inline
 * id = "6bb29a10-2313-48b9-96ba-e903d0ae3c2b"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -1274,12 +1274,12 @@ Description: "Example for Service Request for aerobic culture of blood specimen"
 Usage: #inline
 * id = "a168c88a-f2c1-43d1-9dd7-611a64cd7be8"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -1306,12 +1306,12 @@ Description: "Example for Service Request for susceptibility"
 Usage: #inline
 * id = "3c58f6f4-3025-43e2-b97c-f6af4f9b4ab7"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -1340,12 +1340,12 @@ Description: "Example for Service Request for aerobic culture of urine specimen"
 Usage: #inline
 * id = "fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -1386,7 +1386,7 @@ Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050700"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[ZSR].value = "A123313"
+* identifier[ZSR].value = "L248519"
 * name.use = #official
 * name.family = "Hauser"
 * name.given = "Hans"
@@ -1446,7 +1446,7 @@ Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050717"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[ZSR].value = "A123316"
+* identifier[ZSR].value = "Y274589"
 * name.use = #official
 * name.family = "Bunsen"
 * name.given = "Beat"

@@ -173,9 +173,8 @@ Usage: #inline
 // * extension[=].valueAddress.state = "BL"
 // * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 // * extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.16.756.5.30.999999.1"
-* identifier.value = "012/08.111222"
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400111"
 * name.text = "Emil Emmenegger"
 * name.family = "Emmenegger"
 * name.given = "Emil"
@@ -438,7 +437,7 @@ Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050441"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[ZSR].value = "A123444"
+* identifier[ZSR].value = "Y274589"
 * name.use = #official
 * name.family = "Tillmann"
 * name.given = "Theo"
@@ -502,7 +501,7 @@ Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3" // GLN
 * identifier[GLN].value = "7601000050717"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[ZSR].value = "A123315"
+* identifier[ZSR].value = "L248519"
 * name.use = #official
 * name.family = "Klauser"
 * name.given = "Katrin"
@@ -563,7 +562,7 @@ Title: "Breath-Test System"
 Description: "Example for Breath analyzing Device"
 Usage: #inline
 * id = "b2b5e406-02d0-46de-85bb-561fe37040bb"
-* identifier.system = "http://www.labor-schildknecht.ch/devices/id"
+* identifier.system = "http://example.org/labor-schildknecht.ch/devices/id"
 * identifier.value = "345888"
 * status = #active
 * manufacturer = "QuinTron Instrument Company"

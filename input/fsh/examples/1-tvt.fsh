@@ -587,7 +587,7 @@ Description: "Example for Service Request of CBC panel"
 Usage: #inline
 * id = "9e180157-5a4e-4a8a-8ca9-9b09c2056666"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 
@@ -602,7 +602,7 @@ Usage: #inline
 
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -628,12 +628,12 @@ Description: "Example for Service Request of Hemoglobin Concentration in Blood"
 Usage: #inline
 * id = "1dcc636a-cc10-450d-9748-cfd760e2668f"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -658,12 +658,12 @@ Description: "Example for Service Request of RBC"
 Usage: #inline
 * id = "a64d92bf-8ca8-4e12-ae29-624c70ac0e26"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -688,12 +688,12 @@ Description: "Example for Service Request of Hemoglobin Concentration in Blood"
 Usage: #inline
 * id = "ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -718,12 +718,12 @@ Description: "Example for Service Request of Hematocrit in Blood"
 Usage: #inline
 * id = "e4072da7-a760-47ba-83e7-59796c59a944"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -748,12 +748,12 @@ Description: "Example for Service Request of MCV in Blood"
 Usage: #inline
 * id = "6adcf650-19cb-4d58-b27c-3cf52aa32d86"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -778,12 +778,12 @@ Description: "Example for Service Request of MCH in Blood"
 Usage: #inline
 * id = "3edb7f4c-e0c8-45c5-aee9-83d326aa61ab"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -808,12 +808,12 @@ Description: "Example for Service Request of MCHC in Blood"
 Usage: #inline
 * id = "82db46b7-acef-49f4-9456-6e9cbd62a27b"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -838,12 +838,12 @@ Description: "Example for Service Request of Platelet in Blood"
 Usage: #inline
 * id = "bfc054ce-704c-11ee-b962-0242ac120002"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -868,13 +868,13 @@ Description: "Example for Service Request of C reactive protein in Serum or Plas
 Usage: #inline
 * id = "8d98f9d1-581b-4495-93aa-4a522fa30a6c"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 
 * status = #active
@@ -903,13 +903,13 @@ Description: "Example for Service Request of Fibrin D-dimer FEU in Blood"
 Usage: #inline
 * id = "e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 
 * status = #active

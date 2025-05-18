@@ -195,9 +195,8 @@ Usage: #inline
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/patient-birthPlace"
 * extension[=].valueAddress.city = "Zürich"
 * extension[=].valueAddress.country = "Schweiz"
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.16.756.5.30.999999.1"
-* identifier.value = "012/08.111222"
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400110"
 * name.text = "Garfield Testpatient"
 * name.family = "Testpatient"
 * name.given = "Garfield"
@@ -662,14 +661,14 @@ Description: "Example for Service Request of CBC panel"
 Usage: #inline
 * id = "40eaa087-a49e-444c-9dbd-d3bdef9efcad"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123123"
 
 // basedOn ...
 
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-123123"
 * status = #active
 * intent = #original-order
@@ -697,7 +696,7 @@ Title: "Protein-Electrophoresis-System"
 Description: "Example for Device to execute Protein Electrophoresis"
 Usage: #inline
 * id = "d1fcb5ca-99bc-435f-947d-53481453ef25"
-* identifier.system = "http://www.labor-gantenbein.ch/devices/id"
+* identifier.system = "http://example.org/Labor-Gantenbein/devices/id"
 * identifier.value = "345677"
 * status = #active
 * manufacturer = "LubioScience GmbH"

@@ -7,7 +7,7 @@ InstanceOf: ChLabReportDeviceAnalyzer
 Title: "Afinion™ 2"
 Description: "Example of a Hematology Analyzer"
 Usage: #example
-* identifier.system = "http://www.labor-gantenbein.ch/devices/id"
+* identifier.system = "http://example.org/Labor-Gantenbein/devices/id"
 * identifier.value = "345675"
 * udiCarrier 
   * deviceIdentifier = "040156300936045" // Unique device identifier (UDI) assigned to device label or package, same as GTIN. Fake Number !
