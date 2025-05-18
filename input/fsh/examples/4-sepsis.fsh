@@ -322,7 +322,7 @@ Usage: #inline
     // │ Culture anaerob, Orange top Bottle, after 0 and 30 min.  │
     // ╰──────────────────────────────────────────────────────────╯
 
-Instance: Blood-anaerob-0-min // TODO must be adapted !!!!!
+Instance: Blood-anaerob-0-min
 InstanceOf: Specimen
 Usage: #inline
 * id = "4fcf2138-6def-4b6e-beaa-35ee09d9cba8" // -> is valuable
@@ -353,7 +353,7 @@ Usage: #inline
 //* container.additiveReference = Reference(hep)
 * note.text = "ok"
 
-Instance: Blood-anaerob-30-min // TODO must be adapted !!!!!
+Instance: Blood-anaerob-30-min
 InstanceOf: Specimen
 Usage: #inline
 * id = "4b37cb2b-b9fe-4742-aacd-b03259d3035a" // -> is valuable
@@ -392,7 +392,7 @@ Usage: #inline
 // ╭──── 4-sepsis Specimen blood  ────────────────────────────╮
 // │   Culture aerob, Blue top Bottle, after 0 and 30 min.    │
 // ╰──────────────────────────────────────────────────────────╯
-Instance: Blood-aerob-0-min // TODO must be adapted !!!!!
+Instance: Blood-aerob-0-min
 InstanceOf: Specimen
 Usage: #inline
 * id = "7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2" // -> is valuable
@@ -423,7 +423,7 @@ Usage: #inline
 // * container.additiveReference = Reference(hep)
 * note.text = "ok"
 
-Instance: Blood-aerob-30-min // TODO must be adapted !!!!!
+Instance: Blood-aerob-30-min
 InstanceOf: Specimen
 Usage: #inline
 * id = "b0871e3b-f378-4f07-90ff-f08a20e42c02" // -> is valuable

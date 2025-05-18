@@ -209,14 +209,12 @@ Usage: #inline
 * performer = Reference(urn:uuid:49f8e829-1242-47a9-b958-32be38d09e5b) "Katrin Klauser"
 * specimen = Reference(urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10) "Gas-3-breath-test"
 
-// ---- TODO SNOMED CT has no concept 'Hydrogen breath test (qualifier value)'
 
 // * 443661003 "Hydrogen breath test using lactose (procedure)"
 * method = $sct#252233000 "Hydrogen breath test (procedure)"
 * device = Reference(urn:uuid:b2b5e406-02d0-46de-85bb-561fe37040bb) "Breath-Test System"
 * hasMember[+] = Reference(urn:uuid:f57378f6-738b-4f2c-8ab7-03341eac9518)  // Observation-3-breath-test-hydrogen
 * hasMember[+] = Reference(urn:uuid:57c1026b-6e7d-4172-9c74-cdb87dfeedb9)  // Observation-3-breath-test-methane
-
 
 Instance: Observation-3-breath-test-hydrogen
 InstanceOf: ChLabObservationResultsLaboratory
@@ -235,7 +233,6 @@ Usage: #inline
 * performer = Reference(urn:uuid:49f8e829-1242-47a9-b958-32be38d09e5b) "Katrin Klauser"
 * specimen = Reference(urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10) "Gas-3-breath-test"
 
-// ---- TODO SNOMED CT has no concept 'Hydrogen breath test (qualifier value)'
 
 // * 443661003 "Hydrogen breath test using lactose (procedure)"
 * method = $sct#252233000 "Hydrogen breath test (procedure)"
@@ -324,7 +321,6 @@ Usage: #inline
 * performer = Reference(urn:uuid:49f8e829-1242-47a9-b958-32be38d09e5b) "Katrin Klauser"
 * specimen = Reference(urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10) "Gas-3-breath-test"
 
-// ---- TODO SNOMED CT has no concept 'Hydrogen breath test (qualifier value)'
 
 // * 443661003 "Hydrogen breath test using lactose (procedure)"
 * method = $sct#252233000 "Hydrogen breath test (procedure)"

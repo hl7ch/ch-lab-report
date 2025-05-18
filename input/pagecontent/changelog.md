@@ -5,7 +5,8 @@ All significant changes to this FHIR implementation guide will be documented on 
 * fix all not reacheble entries in Composition and remove correspondent warnings in ignoreWarnings file.
 
 ### STU 2 Sequence - v2.0.0 (2025-05-19)
-* update to eu-laboratory 0.1.1
+* update dependence to eu-laboratory 0.1.1
+* Newly issued warnings about multiple matches for URLs and about URLs not resolving with urn::oid are listed in the ignoreWarnings file. The sushi-config parameter 'pin-canonicals' causes the creation of the IG to be aborted. The cause is unclear. 
 * replace http://www.labor-gantenbein.ch with http://example.org/Labor-Gantenbein
 * replace https://labor.pipette.com with http://example.org/Labor-Pipette
 * add dependency CH Term (R4) to get the naming systems

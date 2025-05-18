@@ -326,7 +326,7 @@ Usage: #inline
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 * method = $sct#83561000052101 "Photometry technique (qualifier value)"
 * specimen = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood sammple"
-// TODO values
+
 * valueQuantity = 10.8 'umol/L' "umol/L"
 // * interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * referenceRange.low.value = 8.7  // women 7.4
@@ -350,7 +350,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * specimen = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood sammple"
 * valueQuantity = 43 '%' "%"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -377,7 +377,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * valueQuantity = 85 'fL' "fL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "fL"
@@ -403,7 +403,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * valueQuantity = 30 'pg' "pg"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "pg"
@@ -430,7 +430,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * valueQuantity = 34.7 'g/dL' "g/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "g/dL"
@@ -457,7 +457,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * valueQuantity = 200 '10*3/uL' "10*3/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "10*3/uL"
@@ -486,7 +486,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * valueQuantity = 8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#83611000052104 "Turbidimetry technique (qualifier value)"
@@ -510,7 +510,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * valueQuantity = 1.8 'mg/L' "mg/L"
 * interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#726449005 "Immunoassay technique (qualifier value)"
