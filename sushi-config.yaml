@@ -40,12 +40,11 @@ dependencies:
 
   # Specific dependencies for the CH_LAB_REPORT
   hl7.fhir.uv.ips: 1.1.0
-  hl7.fhir.eu.extensions: 0.1.0         #### is R5 !!
+  hl7.fhir.eu.extensions: 0.1.0
   hl7.fhir.eu.laboratory: 0.1.1 
-  # hl7.fhir.uv.extensions.r4: 5.2.0    #### is not needed, provided by the eu-laboratory
+  # hl7.fhir.uv.extensions.r4: 5.2.0  # not needed
   hl7.fhir.extensions.r5: 4.0.1
 
-  
 pages:
   index.md:
     title: Home
