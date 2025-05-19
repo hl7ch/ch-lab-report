@@ -24,7 +24,7 @@ Usage: #example
 * entry[Patient].resource = EmilEmmenegger
 
 //============== Observations Breath Test ==================0
-* entry[Observation][+].fullUrl = "urn:uuid:f36365f1-4b7e-4458-99af-d950b8608ea7"
+* entry[Observation][+].fullUrl = "urn:uuid:3318e76e-570d-48d5-b599-1110cf92ee86"
 * entry[Observation][=].resource = Observation-3-breath-test
 
 * entry[Observation][+].fullUrl = "urn:uuid:f57378f6-738b-4f2c-8ab7-03341eac9518"   // entry[5]
@@ -106,7 +106,7 @@ Usage: #inline
 
 * section[lab-subsections].section[+].title = "Chemistry studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#18719-5
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:f36365f1-4b7e-4458-99af-d950b8608ea7) "Observation-3-breath-test"
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:3318e76e-570d-48d5-b599-1110cf92ee86) "Observation-3-breath-test"
 
 * section[lab-subsections].section[+].title = "Chemistry studies (set)"
 * section[lab-subsections].section[=].code  = $loinc#18719-5
@@ -143,7 +143,7 @@ Usage: #inline
 * performer = Reference(urn:uuid:525e02f3-cac3-4cdc-a497-ce6e441b8a80)
 * performer.display = "Dr. Katrin Klauser"
 * specimen = Reference(urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10) "Gas-3-breath-test"
-* result[+] = Reference(urn:uuid:f36365f1-4b7e-4458-99af-d950b8608ea7) "Observation-3-breath-test"
+* result[+] = Reference(urn:uuid:3318e76e-570d-48d5-b599-1110cf92ee86) "Observation-3-breath-test"
 * result[+] = Reference(urn:uuid:f57378f6-738b-4f2c-8ab7-03341eac9518) "Observation-3-breath-test-hydrogen"
 * result[+] = Reference(urn:uuid:57c1026b-6e7d-4172-9c74-cdb87dfeedb9) "Observation-3-breath-test-mathane"
 // * media.link = Reference(urn:uuid:19ca50e3-fef9-494c-856c-881a59c7bfed)
