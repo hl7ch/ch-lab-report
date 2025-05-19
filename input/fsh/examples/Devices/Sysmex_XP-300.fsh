@@ -9,7 +9,7 @@ Title: "Sysmex XP-300"
 Description: "Example of a Hematology Analyzer"
 Usage: #example
 * id = "3b9c6849-cf71-45e9-9d88-31f7879342f0"
-* identifier.system = "http://www.labor-gantenbein.ch/devices/id"
+* identifier.system = "http://example.org/Labor-Gantenbein/devices/id"
 * identifier.value = "345675"
 * udiCarrier 
   * deviceIdentifier = "AN040156300934000" // Unique device identifier (UDI) assigned to device label or package, same as GTIN. Fake Number !

@@ -2,6 +2,15 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Fixed (2024-03-10)
 * [#156](https://github.com/hl7ch/ch-lab-report/issues): add SCT edition in the expansion parameters for usage of Swiss Extensions
+* fix all not reacheable entries in Composition and remove correspondent warnings in ignoreWarnings file.
+
+### STU 2 Sequence - v2.0.0 (2025-05-19)
+* update dependency to eu-laboratory 0.1.1
+* Newly issued warnings about multiple matches for URLs and about URLs not resolving with urn::oid are listed in the ignoreWarnings file. The sushi-config parameter 'pin-canonicals' causes the creation of the IG to be aborted. The cause is unclear. 
+* replace http://www.labor-gantenbein.ch with http://example.org/Labor-Gantenbein
+* replace https://labor.pipette.com with http://example.org/Labor-Pipette
+* replace requisition.system = "urn:oid:2.16.756.5.30" with requisition.system = "http://example.org/ProviderNumber/Requisition
+* replace identifier.system = "urn:oid:2.16.756.5.30" with identifier.system = "http://example.org/labor-pipette"
 
 ### STU 1 Sequence - v1.0.0 (2024-12-17)
 <!--

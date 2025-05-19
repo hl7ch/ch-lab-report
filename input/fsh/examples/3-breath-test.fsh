@@ -71,7 +71,7 @@ Usage: #inline
 // │                document is based on and fulfills            │
 // ╰─────────────────────────────────────────────────────────────╯
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:3771d254-cee2-498e-a448-c5660ccd583d) "TheoTillmannGruppenpraxis"  //  1
-
+* extension[diagnosticReport-reference][+].valueReference = Reference(urn:uuid:aa659dd8-28be-4c7e-ab27-286c5beff53c) "DiagnosticReport-3-breath-test"  //  3
 // Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:075e3f2d-7ed8-4b6e-a3bb-9b784f5006c0"
@@ -173,9 +173,8 @@ Usage: #inline
 // * extension[=].valueAddress.state = "BL"
 // * extension[+].url = "http://hl7.org/fhir/StructureDefinition/patient-religion"
 // * extension[=].valueCodeableConcept = $religiousAffiliation#1007 "Atheism"
-* identifier.type = $v2-0203#MR
-* identifier.system = "urn:oid:2.16.756.5.30.999999.1"
-* identifier.value = "012/08.111222"
+* identifier[insuranceCardNumber].system = "urn:oid:2.16.756.5.30.1.123.100.1.1.1"
+* identifier[insuranceCardNumber].value = "80756011110123400111"
 * name.text = "Emil Emmenegger"
 * name.family = "Emmenegger"
 * name.given = "Emil"
@@ -210,14 +209,12 @@ Usage: #inline
 * performer = Reference(urn:uuid:49f8e829-1242-47a9-b958-32be38d09e5b) "Katrin Klauser"
 * specimen = Reference(urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10) "Gas-3-breath-test"
 
-// ---- TODO SNOMED CT has no concept 'Hydrogen breath test (qualifier value)'
 
 // * 443661003 "Hydrogen breath test using lactose (procedure)"
 * method = $sct#252233000 "Hydrogen breath test (procedure)"
 * device = Reference(urn:uuid:b2b5e406-02d0-46de-85bb-561fe37040bb) "Breath-Test System"
 * hasMember[+] = Reference(urn:uuid:f57378f6-738b-4f2c-8ab7-03341eac9518)  // Observation-3-breath-test-hydrogen
 * hasMember[+] = Reference(urn:uuid:57c1026b-6e7d-4172-9c74-cdb87dfeedb9)  // Observation-3-breath-test-methane
-
 
 Instance: Observation-3-breath-test-hydrogen
 InstanceOf: ChLabObservationResultsLaboratory
@@ -236,7 +233,6 @@ Usage: #inline
 * performer = Reference(urn:uuid:49f8e829-1242-47a9-b958-32be38d09e5b) "Katrin Klauser"
 * specimen = Reference(urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10) "Gas-3-breath-test"
 
-// ---- TODO SNOMED CT has no concept 'Hydrogen breath test (qualifier value)'
 
 // * 443661003 "Hydrogen breath test using lactose (procedure)"
 * method = $sct#252233000 "Hydrogen breath test (procedure)"
@@ -325,7 +321,6 @@ Usage: #inline
 * performer = Reference(urn:uuid:49f8e829-1242-47a9-b958-32be38d09e5b) "Katrin Klauser"
 * specimen = Reference(urn:uuid:85c72094-e3e8-4d3a-8a18-c2812310fd10) "Gas-3-breath-test"
 
-// ---- TODO SNOMED CT has no concept 'Hydrogen breath test (qualifier value)'
 
 // * 443661003 "Hydrogen breath test using lactose (procedure)"
 * method = $sct#252233000 "Hydrogen breath test (procedure)"
@@ -438,7 +433,7 @@ Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050441"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[ZSR].value = "A123444"
+* identifier[ZSR].value = "Y274589"
 * name.use = #official
 * name.family = "Tillmann"
 * name.given = "Theo"
@@ -502,7 +497,7 @@ Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3" // GLN
 * identifier[GLN].value = "7601000050717"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1" // ZSR
-* identifier[ZSR].value = "A123315"
+* identifier[ZSR].value = "L248519"
 * name.use = #official
 * name.family = "Klauser"
 * name.given = "Katrin"
@@ -563,7 +558,7 @@ Title: "Breath-Test System"
 Description: "Example for Breath analyzing Device"
 Usage: #inline
 * id = "b2b5e406-02d0-46de-85bb-561fe37040bb"
-* identifier.system = "http://www.labor-schildknecht.ch/devices/id"
+* identifier.system = "http://example.org/labor-schildknecht.ch/devices/id"
 * identifier.value = "345888"
 * status = #active
 * manufacturer = "QuinTron Instrument Company"

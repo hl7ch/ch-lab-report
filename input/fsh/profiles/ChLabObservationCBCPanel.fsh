@@ -142,7 +142,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * . ^short = "CH LAB Observation Results: Laboratory MCV"
 * category[specialty] = $sct#394916005 // "Hematopathology"
 * category[studyType] = $loinc#18723-7 // "Hematology studies (set)"
-* code = $loinc#787-2 // "MCV [Entitic volume] by Automated count"
+* code = $loinc#787-2 // "MCV [Entitic mean volume] in Red Blood Cells by Automated count"
   * ^short = "MCV Auto (RBC) [Entitic vol]" // LOINC Display Name
 * method = $sct#702659008
 * specimen = Reference(BloodCBC)
@@ -169,7 +169,7 @@ Description: "This profile constrains the ChLabObservationSingleTest profile for
 * . ^short = "CH LAB Observation Results: Laboratory MCHC"
 * category[specialty] = $sct#394916005 // "Hematopathology"
 * category[studyType] = $loinc#18723-7 // "Hematology studies (set)"
-* code = $loinc#786-4 // "MCHC [Mass/volume] by Automated count"
+* code = $loinc#786-4 // "MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count"
   * ^short = "MCHC Auto (RBC) [Mass/Vol]" // LOINC Display Name
 * method = $sct#702659008
 * specimen = Reference(BloodCBC)

@@ -127,10 +127,10 @@ Usage: #inline
 
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:017e8e32-2f3b-4bef-baf1-92c7278a7048) "MarcMustermannArztpraxis"  //  1
 * extension[information-recipient][+].valueReference = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"        //  2
-
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666) "ServiceRequest-CBC-panel" //  3
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c) "ServiceRequest-CRP"       //  4
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14) "ServiceRequest-D-Dimer"   //  5
+* extension[diagnosticReport-reference][+].valueReference = Reference(urn:uuid:03464e4f-12f0-4d50-970d-f522b92a3f06) "DiagnosticReport-1-tvt"  //  3
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:9e180157-5a4e-4a8a-8ca9-9b09c2056666) "ServiceRequest-CBC-panel" //  4
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:8d98f9d1-581b-4495-93aa-4a522fa30a6c) "ServiceRequest-CRP"       //  5
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:e0330c6c-4f9b-46e7-8817-2ae5301f5d14) "ServiceRequest-D-Dimer"   //  6
 
 // Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
@@ -326,7 +326,7 @@ Usage: #inline
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
 * method = $sct#83561000052101 "Photometry technique (qualifier value)"
 * specimen = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood sammple"
-// TODO values
+
 * valueQuantity = 10.8 'umol/L' "umol/L"
 // * interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * referenceRange.low.value = 8.7  // women 7.4
@@ -350,7 +350,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * specimen = Reference(urn:uuid:3a98a13d-cf64-40bb-b7a0-87ef45193a74) "Blood sammple"
 * valueQuantity = 43 '%' "%"
 * valueQuantity.system = "http://unitsofmeasure.org"
@@ -364,7 +364,7 @@ Usage: #inline
 
 Instance: Observation-MCV
 InstanceOf: ChLabObservationResultsLaboratory
-Title: "MCV [Entitic volume] by Automated count"   // LOINC Long Common Name
+Title: "MCV [Entitic mean volume] in Red Blood Cells by Automated count"   // LOINC Long Common Name
 Description: "The volume of packed red blood cells in a blood sample. The volume is measured by centrifugation in a tube with graduated markings, or with automated blood cell counters. It is an indicator of erythrocyte status in disease. For example, in anemia the volume is low and in polycythemia it is high."
 Usage: #inline
 * id = "857cfa10-66ea-45ae-b236-e6e03af4be3f"
@@ -372,12 +372,12 @@ Usage: #inline
 
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#787-2 "MCV [Entitic volume] by Automated count"
+* code = $loinc#787-2 "MCV [Entitic mean volume] in Red Blood Cells by Automated count"
 * code.text = "MCV Auto (RBC) [Entitic vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * valueQuantity = 85 'fL' "fL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "fL"
@@ -403,7 +403,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * valueQuantity = 30 'pg' "pg"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "pg"
@@ -417,7 +417,7 @@ Usage: #inline
 //// =================================================
 Instance: Observation-MCHC
 InstanceOf: ChLabObservationResultsLaboratory
-Title: "MCHC [Mass/volume] by Automated count"   // LOINC Long Common Name
+Title: "MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count"   // LOINC Long Common Name
 Description: "The mean corpuscular hemoglobin concentration, or MCHC, is a measure of the concentration of hemoglobin in a given volume of packed red blood cell. It is reported as part of a standard complete blood count."
 Usage: #inline
 * id = "735c9244-497a-420d-b006-15a57be365b1"
@@ -425,12 +425,12 @@ Usage: #inline
 
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
+* code = $loinc#786-4 "MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count"
 * code.text = "MCHC Auto (RBC) [Mass/Vol]" // LOINC Display Name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * valueQuantity = 34.7 'g/dL' "g/dL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "g/dL"
@@ -457,7 +457,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * valueQuantity = 200 '10*3/uL' "10*3/uL"
 * valueQuantity.system = "http://unitsofmeasure.org"
 * valueQuantity.unit = "10*3/uL"
@@ -486,7 +486,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * valueQuantity = 8 'mg/L' "mg/L"
 //* interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#83611000052104 "Turbidimetry technique (qualifier value)"
@@ -505,12 +505,12 @@ Usage: #inline
 
 * category[specialty] = $sct#394916005 "Hematopathology"
 * category[studyType] = $loinc#18723-7 "Hematology studies (set)"
-* code = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
+* code = $loinc#71427-9 "Fibrin D-dimer [Mass/volume] in Blood by Rapid immunoassay"
 * code.text = "Fibrin D-dimer FEU IA (Bld) [Mass/Vol]" // display name
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-// TODO values
+
 * valueQuantity = 1.8 'mg/L' "mg/L"
 * interpretation = $v3-ObservationInterpretation#HH "Critical high"
 * method = $sct#726449005 "Immunoassay technique (qualifier value)"
@@ -587,7 +587,7 @@ Description: "Example for Service Request of CBC panel"
 Usage: #inline
 * id = "9e180157-5a4e-4a8a-8ca9-9b09c2056666"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 
@@ -602,7 +602,7 @@ Usage: #inline
 
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -628,12 +628,12 @@ Description: "Example for Service Request of Hemoglobin Concentration in Blood"
 Usage: #inline
 * id = "1dcc636a-cc10-450d-9748-cfd760e2668f"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -658,12 +658,12 @@ Description: "Example for Service Request of RBC"
 Usage: #inline
 * id = "a64d92bf-8ca8-4e12-ae29-624c70ac0e26"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -688,12 +688,12 @@ Description: "Example for Service Request of Hemoglobin Concentration in Blood"
 Usage: #inline
 * id = "ce16707a-b9bb-4c8d-8e4e-f8c135ed4a40"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -718,12 +718,12 @@ Description: "Example for Service Request of Hematocrit in Blood"
 Usage: #inline
 * id = "e4072da7-a760-47ba-83e7-59796c59a944"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -743,17 +743,17 @@ Usage: #inline
 
 Instance: ServiceRequest-MCV
 InstanceOf: ChLabReportServiceRequest
-Title: "LabOrder Service Request for MCV [Entitic volume] by Automated count"
+Title: "LabOrder Service Request for MCV [Entitic mean volume] in Red Blood Cells by Automated count"
 Description: "Example for Service Request of MCV in Blood"
 Usage: #inline
 * id = "6adcf650-19cb-4d58-b27c-3cf52aa32d86"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -761,7 +761,7 @@ Usage: #inline
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#787-2 "MCV [Entitic volume] by Automated count"
+* code.coding[0] = $loinc#787-2 "MCV [Entitic mean volume] in Red Blood Cells by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
@@ -778,12 +778,12 @@ Description: "Example for Service Request of MCH in Blood"
 Usage: #inline
 * id = "3edb7f4c-e0c8-45c5-aee9-83d326aa61ab"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -803,17 +803,17 @@ Usage: #inline
 
 Instance: ServiceRequest-MCHC
 InstanceOf: ChLabReportServiceRequest
-Title: "LabOrder Service Request for MCHC [Mass/volume] by Automated count"
+Title: "LabOrder Service Request for MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count"
 Description: "Example for Service Request of MCHC in Blood"
 Usage: #inline
 * id = "82db46b7-acef-49f4-9456-6e9cbd62a27b"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -821,7 +821,7 @@ Usage: #inline
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
+* code.coding[0] = $loinc#786-4 "MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count"
 // orderDetails: Additional order information, codeableConcept
 * priority = #urgent
 * subject = Reference(urn:uuid:6b8a0365-5022-403b-a5a5-8d8680d701ef) "Hans Guggindieluft"
@@ -838,12 +838,12 @@ Description: "Example for Service Request of Platelet in Blood"
 Usage: #inline
 * id = "bfc054ce-704c-11ee-b962-0242ac120002"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-HbHtBlood"
 // ---- grouperID, must be repeated in all basedOn SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -868,13 +868,13 @@ Description: "Example for Service Request of C reactive protein in Serum or Plas
 Usage: #inline
 * id = "8d98f9d1-581b-4495-93aa-4a522fa30a6c"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 
 * status = #active
@@ -903,13 +903,13 @@ Description: "Example for Service Request of Fibrin D-dimer FEU in Blood"
 Usage: #inline
 * id = "e0330c6c-4f9b-46e7-8817-2ae5301f5d14"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-potassium-serum"
 
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 
 * status = #active
@@ -919,7 +919,7 @@ Usage: #inline
 // What is being ordered
 // * basedOn = Reference(SR-example)
 // ---- Clinical Chemistry Tests ----
-* code.coding[0] = $loinc#71427-9 "Fibrin D-dimer FEU [Mass/volume] in Blood by Immunoassay"
+* code.coding[0] = $loinc#71427-9 "Fibrin D-dimer [Mass/volume] in Blood by Rapid immunoassay"
 
 // orderDetails: Additional order information, codeableConcept
 

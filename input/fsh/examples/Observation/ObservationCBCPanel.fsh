@@ -3,7 +3,7 @@ InstanceOf: ChLabObservationCBCPanel
 Usage: #example
 Title: "Observation CBC panel using 'hasMember'"
 Description: "Example to illustrate ChLabObservationCBCPanel"
-* identifier.system = "https://labor.pipette.com/labvalues"
+* identifier.system = "http://example.org/Labor-Pipette/labvalues"
 * identifier.value = "1304-03780-cbc-panel"
 * status = #final
 
@@ -117,7 +117,7 @@ Description: "RDW-SD Result"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-* code = $loinc#21000-5 "Erythrocyte distribution width [Entitic volume] by Automated count"
+* code = $loinc#788-0 "Erythrocyte [DistWidth] in Red Blood Cells by Automated count"
 * valueQuantity = 41.5 'fL' "fL"
 
 Instance: ExampleObservationRDW-CV
@@ -130,7 +130,7 @@ Description: "RDW-CV Result"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
 * issued = "2024-04-24T11:24:26+01:00"
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Eva Erlenmeyer"
-* code = $loinc#788-0 "Erythrocyte distribution width [Ratio] by Automated count"
+* code = $loinc#788-0 "Erythrocyte [DistWidth] in Red Blood Cells by Automated count"
 * valueQuantity = 15.2 '%' "%"
 
 Instance: ExampleObservationPlateletCount

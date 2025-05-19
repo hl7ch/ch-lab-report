@@ -31,6 +31,8 @@ Usage: #example
 * entry[ServiceRequest][=].resource = ServiceRequest-anaerobe-culture
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8"  // entry[5]
 * entry[ServiceRequest][=].resource = ServiceRequest-aerobe-culture
+* entry[ServiceRequest][+].fullUrl = "urn:uuid:3c58f6f4-3025-43e2-b97c-f6af4f9b4ab7"
+* entry[ServiceRequest][=].resource = ServiceRequest-susceptibility-panel
 * entry[ServiceRequest][+].fullUrl = "urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e"
 * entry[ServiceRequest][=].resource = ServiceRequest-urine-culture
 
@@ -56,14 +58,13 @@ Usage: #example
 * entry[Observation][+].fullUrl = "urn:uuid:cea62faa-60b7-442b-b76a-da70ed2d92b1"  // entry[15]
 * entry[Observation][=].resource = Observation-anaerobe-culture
 
-  // org-1
+  // org-1-culture-growth-anaerobe
 * entry[Observation][+].fullUrl = "urn:uuid:f89631cb-e973-4ba0-9f48-29b9472b9363"
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-1
 * entry[Observation][+].fullUrl = "urn:uuid:17a2d960-c34a-4276-be4a-e1e679fcf415"
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-1-growth
 
-
-    // org-1-susc-panel
+    // org-1-susc-panel-anaerobe
 * entry[Observation][+].fullUrl = "urn:uuid:3f40981d-f233-4315-b5c2-d6092d29ea95"
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-1-susc-panel
 * entry[Observation][+].fullUrl = "urn:uuid:af017871-32df-4823-972c-daa256db7eb0"
@@ -73,13 +74,13 @@ Usage: #example
 * entry[Observation][+].fullUrl = "urn:uuid:9a0233a6-4f0a-4022-9b4c-9a43c83e343e"
 * entry[Observation][=].resource = Observation-org-1-ceftriaxone
 
-  // org-2
+  // org-2-culture-growth-anaerobe
 * entry[Observation][+].fullUrl = "urn:uuid:5c774433-62ad-4d21-b230-6de2d138a02d"
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-2
 * entry[Observation][+].fullUrl = "urn:uuid:a4191434-87f5-4455-a3fd-e857fea50ea5"
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-2-growth
 
-    // org-2-susc-panel
+    // org-2-susc-panel-anaerobe
 * entry[Observation][+].fullUrl = "urn:uuid:531337e5-48ec-4ed7-a81f-d30d16b3d7cb"
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-2-susc-panel
 * entry[Observation][+].fullUrl = "urn:uuid:4f24af8e-00ae-417e-a87c-1c9a012b5e03"  // entry[25]
@@ -89,13 +90,13 @@ Usage: #example
 * entry[Observation][+].fullUrl = "urn:uuid:020c3f3d-a77b-42fa-a10a-c63ee7a5bd0f" //  entry[27]
 * entry[Observation][=].resource = Observation-org-2-ceftriaxone
 
-    // org-3
+    // org-3-culture-growth-anaerobe
 * entry[Observation][+].fullUrl = "urn:uuid:296e1564-39d6-497b-9b40-e60f884dd5e4" //  entry[28]
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-3
 * entry[Observation][+].fullUrl = "urn:uuid:8c885526-b6ed-4f99-bcc1-d294d79e0c7c"
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-3-growth
 
-    // org-3-susc-panel
+    // org-3-susc-panel-anaerobe
 * entry[Observation][+].fullUrl = "urn:uuid:8c8b2f58-4cc1-4c21-8a92-e65ce31e60b1" // entry[30]
 * entry[Observation][=].resource = Observation-anaerobe-culture-org-3-susc-panel
 * entry[Observation][+].fullUrl = "urn:uuid:6dbb348d-3ce5-451a-b7db-77c2e4d27bb3"
@@ -105,18 +106,23 @@ Usage: #example
 * entry[Observation][+].fullUrl = "urn:uuid:ad7dd57d-69c4-493f-bf4e-b919664757ba"
 * entry[Observation][=].resource = Observation-org-3-ceftriaxone
 
-
 //================== Observations aerobe culture ==========================0
 * entry[Observation][+].fullUrl = "urn:uuid:3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb"
 * entry[Observation][=].resource = Observation-aerobe-culture
+
+    // org-1-culture-growth aerobe
 * entry[Observation][+].fullUrl = "urn:uuid:8b07a6b9-fefd-4ee5-87e1-04cdc4a15327"  // entry[35]
 * entry[Observation][=].resource = Observation-aerobe-culture-org-1
 * entry[Observation][+].fullUrl = "urn:uuid:f251d8b4-54fb-4060-89fe-f17e54874124"
 * entry[Observation][=].resource = Observation-aerobe-culture-org-1-growth
+
+    // org-2-culture-growth aerobe
 * entry[Observation][+].fullUrl = "urn:uuid:dc20d7a8-a2ec-4291-b70e-b3049ea05cf3"
 * entry[Observation][=].resource = Observation-aerobe-culture-org-2
 * entry[Observation][+].fullUrl = "urn:uuid:e548aa0e-1662-4fda-838a-aa7d169ae44f"
 * entry[Observation][=].resource = Observation-aerobe-culture-org-2-growth
+
+    //  org-3-culture-growth aerobe
 * entry[Observation][+].fullUrl = "urn:uuid:230f9ed4-0ab0-456e-9161-f1c290e24c92"
 * entry[Observation][=].resource = Observation-aerobe-culture-org-3
 * entry[Observation][+].fullUrl = "urn:uuid:1c453ab3-8e39-4530-a581-d3f87e1459fc"  // entry[40]
@@ -128,7 +134,7 @@ Usage: #example
 
 //================== Observations susceptibility tests =====================0
 * entry[Observation][+].fullUrl = "urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d"
-* entry[Observation][=].resource = Observation-org-2-susc-panel
+* entry[Observation][=].resource = Observation-org-aerobe-culture-2-susc-panel
 * entry[Observation][+].fullUrl = "urn:uuid:9d3394c2-3b7b-4f88-9358-239adbeadba3"
 * entry[Observation][=].resource = Observation-org-2-carbapenem-susc
 * entry[Observation][+].fullUrl = "urn:uuid:4679fd4c-4ef3-4b91-b17c-8a97a25472fb"
@@ -179,19 +185,20 @@ Description: "Example of Composition in the scenario of deep vein thrombosis"
 Usage: #inline
 * id = "832c053d-e0a0-4467-9f85-4bde09b825af"
 
-// ╭────────────── Extension ────────────────────────────────────╮
-// │ provides a link to the order [(Reference(ServiceRequest)]   │
-// │               or requisition [ServiceRequest.requisition]   │
-// │ (i.e., 'Request.groupIdentifier')] that this report         │
-// │                document is based on and fulfills            │
-// ╰─────────────────────────────────────────────────────────────╯
-* extension[information-recipient][+].valueReference = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f) "Hans Hauser at Kantonsspital"  //  1
-* extension[information-recipient][+].valueReference = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller, patient"      //  2
-
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7) "ServiceRequest-gram-stain"        //  3
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b) "ServiceRequest-anaerobe-culture"  //  4
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8) "ServiceRequest-aerobe-culture"    //  5
-* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e) "ServiceRequest-urine-culture"     //  6
+// ╭────────────── Extensions ───────────────────────────────────────────────────────────────╮
+// │ provides a link                                                                         |
+// |   - to the information-recipient                                                        |
+// |   - to the order (Reference(ServiceRequest) or requisition [ServiceRequest.requisition] │
+// │   - to the diagnosticRepoert                                                            │
+// ╰─────────────────────────────────────────────────────────────────────────────────────────╯
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7) "ServiceRequest-gram-stain"           //  4
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b) "ServiceRequest-anaerobe-culture"     //  5
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8) "ServiceRequest-aerobe-culture"       //  6
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:3c58f6f4-3025-43e2-b97c-f6af4f9b4ab7) "ServiceRequest-susceptibility-panel" //  7
+* extension[basedOn-order-or-requisition][+].valueReference = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e) "ServiceRequest-urine-culture"        //  9
+* extension[information-recipient][+].valueReference = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f) "Hans Hauser at Kantonsspital"               //  1
+* extension[information-recipient][+].valueReference = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller, patient"                   //  2
+* extension[diagnosticReport-reference][+].valueReference = Reference(urn:uuid:1e56bbe9-ee25-45db-a887-987090f89810) "DiagnosticReport-4-sepsis"             //  3
 
 // Composition Identifier must be same as in DiagnosticReport
 * identifier.system = "urn:ietf:rfc:3986"
@@ -234,13 +241,9 @@ Usage: #inline
 * section[lab-subsections].section[=].code  = $sct#703751005
 * section[lab-subsections].section[=].entry = Reference(urn:uuid:cea62faa-60b7-442b-b76a-da70ed2d92b1) "Observation-anaerobe-culture"
 
-* section[lab-subsections].section[+].title = "Aerobic culture technique (qualifier value)"
-* section[lab-subsections].section[=].code  = $sct#703750006
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb) "Observation-aerobe-culture"
-
 * section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
 * section[lab-subsections].section[=].code  = $loinc#29576-6
-* section[lab-subsections].section[=].entry = Reference(urn:uuid:531337e5-48ec-4ed7-a81f-d30d16b3d7cb) "Observation-anaerobe-culture-org-1-susc-panel"
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:3f40981d-f233-4315-b5c2-d6092d29ea95) "Observation-anaerobe-culture-org-1-susc-panel"
 
 * section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
 * section[lab-subsections].section[=].code  = $loinc#29576-6
@@ -249,6 +252,14 @@ Usage: #inline
 * section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
 * section[lab-subsections].section[=].code  = $loinc#29576-6
 * section[lab-subsections].section[=].entry = Reference(urn:uuid:8c8b2f58-4cc1-4c21-8a92-e65ce31e60b1) "Observation-anaerobe-culture-org-3-susc-panel"
+
+* section[lab-subsections].section[+].title = "Aerobic culture technique (qualifier value)"
+* section[lab-subsections].section[=].code  = $sct#703750006
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:3184e9e2-4f12-43ce-9e83-f5c4a21c1eeb) "Observation-aerobe-culture"
+
+* section[lab-subsections].section[0].title = "Bacterial susceptibility panel"
+* section[lab-subsections].section[=].code  = $loinc#29576-6
+* section[lab-subsections].section[=].entry = Reference(urn:uuid:24f1a039-5146-4e51-8c07-dfd94bc7370d) "Observation-org-aerobe-culture-2-susc-panel"
 
 
 // ╭──────────── DiagnosticReport 4-sepsis ──────────────────╮
@@ -269,6 +280,7 @@ Usage: #inline
 * basedOn[+] = Reference(urn:uuid:21dbc37f-28b5-4ef8-9835-c79dbf7c99b7) "ServiceRequest-gram-stain"
 * basedOn[+] = Reference(urn:uuid:6bb29a10-2313-48b9-96ba-e903d0ae3c2b) "ServiceRequest-anaerobe-culture"
 * basedOn[+] = Reference(urn:uuid:a168c88a-f2c1-43d1-9dd7-611a64cd7be8) "ServiceRequest-aerobe-culture"
+* basedOn[+] = Reference(urn:uuid:3c58f6f4-3025-43e2-b97c-f6af4f9b4ab7) "ServiceRequest-susceptibility-panel"   
 * basedOn[+] = Reference(urn:uuid:fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e) "ServiceRequest-urine-culture"
 
 * status = #final
@@ -310,7 +322,7 @@ Usage: #inline
     // │ Culture anaerob, Orange top Bottle, after 0 and 30 min.  │
     // ╰──────────────────────────────────────────────────────────╯
 
-Instance: Blood-anaerob-0-min // TODO must be adapted !!!!!
+Instance: Blood-anaerob-0-min
 InstanceOf: Specimen
 Usage: #inline
 * id = "4fcf2138-6def-4b6e-beaa-35ee09d9cba8" // -> is valuable
@@ -341,7 +353,7 @@ Usage: #inline
 //* container.additiveReference = Reference(hep)
 * note.text = "ok"
 
-Instance: Blood-anaerob-30-min // TODO must be adapted !!!!!
+Instance: Blood-anaerob-30-min
 InstanceOf: Specimen
 Usage: #inline
 * id = "4b37cb2b-b9fe-4742-aacd-b03259d3035a" // -> is valuable
@@ -380,7 +392,7 @@ Usage: #inline
 // ╭──── 4-sepsis Specimen blood  ────────────────────────────╮
 // │   Culture aerob, Blue top Bottle, after 0 and 30 min.    │
 // ╰──────────────────────────────────────────────────────────╯
-Instance: Blood-aerob-0-min // TODO must be adapted !!!!!
+Instance: Blood-aerob-0-min
 InstanceOf: Specimen
 Usage: #inline
 * id = "7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2" // -> is valuable
@@ -411,7 +423,7 @@ Usage: #inline
 // * container.additiveReference = Reference(hep)
 * note.text = "ok"
 
-Instance: Blood-aerob-30-min // TODO must be adapted !!!!!
+Instance: Blood-aerob-30-min
 InstanceOf: Specimen
 Usage: #inline
 * id = "b0871e3b-f378-4f07-90ff-f08a20e42c02" // -> is valuable
@@ -507,6 +519,10 @@ Usage: #inline
 * valueCodeableConcept = $sct#2667000 "Absent"
 * valueCodeableConcept.text = "None observed"
 
+// ╭─────── observation  ────────────────────────────╮
+// │ Microscopic identification and semiquant. count │
+// │      org-1, org-2, org-3                        │
+// ╰─────────────────────────────────────────────────╯
 Instance: Observation-org-1
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
@@ -599,7 +615,6 @@ Usage: #inline
 // │  Anaerobe Culture: org-1, org-2, org-3     │
 // │  -> each: growth, susc panel               │
 // ╰────────────────────────────────────────────╯
-
 Instance: Observation-anaerobe-culture
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
@@ -739,8 +754,8 @@ Usage: #inline
 * performer = Reference(urn:uuid:12328339-f7d6-4bb6-80e4-89fd03ce5052) "Beat Bunsen, practitioner"
 * performer[+].display = "Beat Bunsen, practitioner"
 * valueCodeableConcept = $sct#112283007 "Escherichia coli (organism)"
-* hasMember[+] = Reference(urn:uuid:a4191434-87f5-4455-a3fd-e857fea50ea5) // Observation-aerobe-culture-org-2-growth
-* hasMember[+] = Reference(urn:uuid:531337e5-48ec-4ed7-a81f-d30d16b3d7cb) // Observation-aerobe-culture-org-2-susc-panel
+* hasMember[+] = Reference(urn:uuid:a4191434-87f5-4455-a3fd-e857fea50ea5) // Observation-anaerobe-culture-org-2-growth
+* hasMember[+] = Reference(urn:uuid:531337e5-48ec-4ed7-a81f-d30d16b3d7cb) // Observation-anaerobe-culture-org-2-susc-panel
 
         // -------------- org-2-growth --------------------
 Instance: Observation-anaerobe-culture-org-2-growth
@@ -1066,10 +1081,11 @@ Usage: #inline
 // ╰───────────────────────────────────────────────────────────────────╯
 
 
-Instance: Observation-org-2-susc-panel
+Instance: Observation-org-aerobe-culture-2-susc-panel
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "24f1a039-5146-4e51-8c07-dfd94bc7370d"
+* basedOn = Reference(urn:uuid:3c58f6f4-3025-43e2-b97c-f6af4f9b4ab7)  // ServiceRequest-susceptibility-panel
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
@@ -1087,6 +1103,7 @@ Instance: Observation-org-2-carbapenem-susc
 InstanceOf: ChLabObservationResultsLaboratory
 Usage: #inline
 * id = "9d3394c2-3b7b-4f88-9358-239adbeadba3"
+* basedOn = Reference(urn:uuid:3c58f6f4-3025-43e2-b97c-f6af4f9b4ab7)  // ServiceRequest-susceptibility-panel
 * status = #final
 * category[specialty] = $sct#408454008 "Clinical microbiology"
 * category[studyType] = $loinc#18725-2 "Microbiology studies (set)"
@@ -1192,12 +1209,12 @@ Description: "Example for Service Request for Gram Stain of blood specimen"
 Usage: #inline
 * id = "21dbc37f-28b5-4ef8-9835-c79dbf7c99b7"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -1226,12 +1243,12 @@ Description: "Example for Service Request for anaerobic culture of blood specime
 Usage: #inline
 * id = "6bb29a10-2313-48b9-96ba-e903d0ae3c2b"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -1257,12 +1274,12 @@ Description: "Example for Service Request for aerobic culture of blood specimen"
 Usage: #inline
 * id = "a168c88a-f2c1-43d1-9dd7-611a64cd7be8"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -1281,6 +1298,41 @@ Usage: #inline
 * specimen[0] = Reference(urn:uuid:7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2) "Blood-aerob-0-min"
 * specimen[+] = Reference(urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02) "Blood-aerob-30-min"
 
+
+Instance: ServiceRequest-susceptibility-panel
+InstanceOf: ChLabReportServiceRequest
+Title: "LabOrder Service Request for susceptibility of microorganisms in aerobic and anaerobic culture in Blood"
+Description: "Example for Service Request for susceptibility"
+Usage: #inline
+* id = "3c58f6f4-3025-43e2-b97c-f6af4f9b4ab7"
+* identifier[0].type = $v2-0203#PLAC "Placer Identifier"
+* identifier[=].system = "http://example.org/order-placer-organization"
+* identifier[=].value = "123"
+// * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
+// ---- grouperID, must be repeated in all dependent SR ----
+* requisition.type = $v2-0203#PRN "Provider number"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
+* requisition.value = "ReqID-1234567"
+* status = #active
+* intent = #original-order
+// * category = $sct#108252007 "Laboratory procedure"
+// What is being ordered
+// * basedOn = Reference(SR-example)
+// ---- Clinical Chemistry Tests ----
+* code.coding[0] = $loinc#29576-6 "Bacterial susceptibility panel"
+// orderDetails: Additional order information, codeableConcept
+* priority = #urgent
+* subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
+* requester = Reference(urn:uuid:10b95d3c-5402-4631-a404-e0d7e74c9a8f)
+* reasonCode = $sct#238150007
+* reasonCode.text = "Sepsis syndrome (disorder)"
+// * insurance = Reference(HealthInsuranceCard)
+* specimen[0] = Reference(urn:uuid:7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2) "Blood-aerob-0-min"
+* specimen[+] = Reference(urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02) "Blood-aerob-30-min"
+* specimen[+] = Reference(urn:uuid:7ba89b7b-9898-46cf-ad9d-6cc1f4be31c2) "Blood-aerob-0-min"
+* specimen[+] = Reference(urn:uuid:b0871e3b-f378-4f07-90ff-f08a20e42c02) "Blood-aerob-30-min"
+
+
 Instance: ServiceRequest-urine-culture
 InstanceOf: ChLabReportServiceRequest
 Title: "LabOrder Service Request for bacterial identification by aerobic culture in Urine"
@@ -1288,12 +1340,12 @@ Description: "Example for Service Request for aerobic culture of urine specimen"
 Usage: #inline
 * id = "fbcca2e1-3d0a-4cb8-9a02-c6f8b41a962e"
 * identifier[0].type = $v2-0203#PLAC "Placer Identifier"
-* identifier[=].system = "urn:oid:2.16.756.5.30"
+* identifier[=].system = "http://example.org/order-placer-organization"
 * identifier[=].value = "123"
 // * instantiatesCanonical = "http://fhir.ch/ig/ch-lab-order/lab-compendium/ActivityDefinition/procedure-white-bloodcell-count-blood"
 // ---- grouperID, must be repeated in all dependent SR ----
 * requisition.type = $v2-0203#PRN "Provider number"
-* requisition.system = "urn:oid:2.16.756.5.30"
+* requisition.system = "http://example.org/ProviderNumber/Requisition"
 * requisition.value = "ReqID-1234567"
 * status = #active
 * intent = #original-order
@@ -1334,7 +1386,7 @@ Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050700"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[ZSR].value = "A123313"
+* identifier[ZSR].value = "L248519"
 * name.use = #official
 * name.family = "Hauser"
 * name.given = "Hans"
@@ -1394,7 +1446,7 @@ Usage: #inline
 * identifier[GLN].system = "urn:oid:2.51.1.3"
 * identifier[GLN].value = "7601000050717"
 * identifier[ZSR].system = "urn:oid:2.16.756.5.30.1.123.100.2.1.1"
-* identifier[ZSR].value = "A123316"
+* identifier[ZSR].value = "Y274589"
 * name.use = #official
 * name.family = "Bunsen"
 * name.given = "Beat"

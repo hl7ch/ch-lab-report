@@ -6,7 +6,7 @@ InstanceOf: ChLabObservation_eGFR_CKD_EPI_2021
 Usage: #example
 Title: "Example of Result eGFR-cr CKD-EPI 2021"
 Description: "eGFR-cr CKD-EPI 2021 based on Creatinin"
-* code = $loinc#98979-8 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)"
+* code = $loinc#98979-8 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (CKD-EPI 2021)/1.73 sq M"
 * status = #final
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
@@ -30,7 +30,7 @@ InstanceOf: ChLabObservation_eGFR_CKD_EPI_2021
 Usage: #example
 Title: "Example of Result eGFR-cr-cys CKD-EPI 2021"
 Description: "eGFR-cr-cys CKD-EPI 2021 based on Creatinine and Cystatin C"
-* code = $loinc#98980-6 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine and Cystatin C-based formula (CKD-EPI 2021)"
+* code = $loinc#98980-6 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine and Cystatin C-based formula (CKD-EPI 2021)/1.73 sq M"
 * status = #final
 * subject = Reference(urn:uuid:14fbf29b-5dac-483e-b543-15031f12344b) "Katarina Keller"
 * effectiveDateTime = "2024-04-23T11:24:26+01:00"
@@ -64,7 +64,7 @@ heavy meat consumption, dialysis and other conditions."
 // * component[blacks].referenceRange.appliesTo.text = "black/african-american"
 // * component[blacks].referenceRange.age.low = 18 'a' "yrs"
 // 
-// // * component[non-blacks].code = $loinc#48642-3 "Glomerular filtration rate/1.73 sq M.predicted among non-blacks [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+// // * component[non-blacks].code = $loinc#48642-3 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)/1.73 sq M among non black population"
 // * component[non-blacks].valueQuantity.comparator = #>
 // * component[non-blacks].valueQuantity = 60 'mL/min'
 // * component[non-blacks].valueQuantity.unit = "mL/min/1.73m2"
