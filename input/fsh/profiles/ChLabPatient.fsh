@@ -1,3 +1,5 @@
+// this profile should be omitted from the IG
+// because it is not a real profile but a placeholder for the patient profile
 Profile: ChLabPatient
 Parent: CHCorePatient
 Id: ch-lab-patient
