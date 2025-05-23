@@ -19,7 +19,7 @@ Description: "This profile constrains the Composition resource for the purpose o
 // * extension[basedOn-order-or-requisition].valueReference only Reference(ServiceRequestLabEu)
 
 * extension contains InformationRecipient named information-recipient 0..*
-* extension[information-recipient].valueReference only Reference(ChLabPractitioner or Device or ChLabPatient or RelatedPerson or ChLabPractitionerRole or CHCoreOrganization)
+* extension[information-recipient].valueReference only Reference(ChLabPractitioner or ChLabPractitionerRole or CHCoreOrganization or Device or ChLabPatient or RelatedPerson)
 
 // * extension contains InformationRecipient named information-recipient 0..*
 // * extension[information-recipient].valueReference only Reference(ChLabPractitioner or Device or ChLabPatient or RelatedPerson or ChLabPractitionerRole or CHCoreOrganization)
