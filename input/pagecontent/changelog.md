@@ -1,13 +1,11 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
-### STU 2 Sequence - v2.0.0 (2025-05-19)
-#### Open Issues
+### STU 2 Sequence - v2.0.0
 
-During the ballot, the following comments came in, which will be taken into account in the further development of CH LAB-Report:
+#### Changed / Updated
+* [#170](https://github.com/hl7ch/ch-lab-report/issues/170): Changelog
 
-* [#165](https://github.com/hl7ch/ch-lab-report/issues/165): CH LAB-Report Composition: Laboratory Report
-
-See also open issues on [GitHub](https://github.com/hl7ch/ch-lab-report/issues).
+### STU 2 Sequence - v2.0.0-ballot (2025-05-19)
 
 #### Changed / Updated
 * update dependency to eu-laboratory 0.1.1
