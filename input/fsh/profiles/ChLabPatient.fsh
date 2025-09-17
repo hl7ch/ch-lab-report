@@ -4,7 +4,7 @@ Id: ch-lab-patient
 Title: "CH LAB-Report Patient"
 Description: "This profile constrains the Patient resource for the purpose of laboratory test reports in Switzerland."
 * . ^short = "CH LAB Patient"
-* ^extension[$imposeProfile].valueCanonical = Canonical(PatientEuLab)
+* ^extension[$imposeProfile].valueCanonical = Canonical(CHCorePatient)
 
 /*
 Instance: FranzMuster
