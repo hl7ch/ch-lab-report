@@ -1,8 +1,10 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
-### STU 2 Sequence - v2.0.0
+### STU 2 Sequence - v2.0.0 (2025-12)
 
 #### Changed / Updated
+
+#### Fixed
 * [#170](https://github.com/hl7ch/ch-lab-report/issues/170): Changelog
 
 ### STU 2 Sequence - v2.0.0-ballot (2025-05-19)
@@ -15,12 +17,10 @@ All significant changes to this FHIR implementation guide will be documented on 
 * replace requisition.system = "urn:oid:2.16.756.5.30" with requisition.system = "http://example.org/ProviderNumber/Requisition
 * replace identifier.system = "urn:oid:2.16.756.5.30" with identifier.system = "http://example.org/labor-pipette"
 * [#156](https://github.com/hl7ch/ch-lab-report/issues/156): add SCT edition in the expansion parameters for usage of Swiss Extensions
-* fix all not reacheable entries in Composition and remove correspondent warnings in ignoreWarnings file.
+* fix all not reachable entries in Composition and remove correspondent warnings in ignoreWarnings file.
 
 ### STU 1 Sequence - v1.0.0 (2024-12-17)
-<!--
-See also open issues on [GitHub](https://github.com/hl7ch/ch-lab-report/issues).
--->
+
 #### Changed / Updated
 * [#91](https://github.com/hl7ch/ch-lab-report/issues/91): Missing slice of value[x] and component.value[x] in observation: value.ofType(boolean)
 * [#70](https://github.com/hl7ch/ch-lab-report/issues/70): Limit image size to 20 megabytes: Add menu point and page 'Guidance'.
@@ -32,7 +32,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-lab-report/issues).
     * [Blood Group Panel ABO](Observation-BloodGroupMemberABO.html)
     * [Blood Group RhD](Observation-BloodGroupMemberRh.html)
 * [#92](https://github.com/hl7ch/ch-lab-report/issues/92): Add Profile ChLabObservationBloodGroup with additional valueSets as candidates
-* [#93](https://github.com/hl7ch/ch-lab-report/issues/93): Outcomment SetFmmandStatusRule in all profiles to set them to active.
+* [#93](https://github.com/hl7ch/ch-lab-report/issues/93): Comment out SetFmmandStatusRule in all profiles to set them to active.
 * [#94](https://github.com/hl7ch/ch-lab-report/issues/94): Bundle 2-electrophoresis – JSON: section "Laboratory examinations" empty? no amendment: contains subsection "Chemistry studies (set)
 * [#95](https://github.com/hl7ch/ch-lab-report/issues/95): Specimen.type: reduce the minimum cardinality of Specimen.type to 0.
 * [#96](https://github.com/hl7ch/ch-lab-report/issues/96): Duplicate from #95, no amendment
@@ -40,11 +40,11 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-lab-report/issues).
 * [#100](https://github.com/hl7ch/ch-lab-report/issues/100): Use Cases in English and other langs: Remove Fig. 1 Resource Overview diagram and place a link to Resource Overview in CH ELM on the profiles page.
 * [#102](https://github.com/hl7ch/ch-lab-report/issues/102): Move referenceRanges from dGFR profiles into examples
 * [#103](https://github.com/hl7ch/ch-lab-report/issues/103): Merge CDK-EPI profiles for males and females, parent is ChLabObservation_eGFR
-* [#104](https://github.com/hl7ch/ch-lab-report/issues/104): Merge Erythrocytes distribuition width, MDRD and CDK-EPI profiles, take codes from valueSet. eGFR calculation uses different formulas with different parameters, the implementation guide uses 3 calculation methods.
+* [#104](https://github.com/hl7ch/ch-lab-report/issues/104): Merge Erythrocytes distribution width, MDRD and CDK-EPI profiles, take codes from valueSet. eGFR calculation uses different formulas with different parameters, the implementation guide uses 3 calculation methods.
 * [#108](https://github.com/hl7ch/ch-lab-report/issues/108): Home: replace sex with (administrative) gender.
 * [#109](https://github.com/hl7ch/ch-lab-report/issues/109): External links to FHIR spec: replace https://www.hl7.org/fhir/ with https://www.hl7.org/fhir/r4/
 * [#106](https://github.com/hl7ch/ch-lab-report/issues/106): CodeableConcept.text with fixed value: remove code.text from all profiles
-* [#110](https://github.com/hl7ch/ch-lab-report/issues/110): Terminology: empty sections: outcomment empty sections in terminology page
+* [#110](https://github.com/hl7ch/ch-lab-report/issues/110): Terminology: empty sections: Comment out empty sections in terminology page
 * [#111](https://github.com/hl7ch/ch-lab-report/issues/111): Terminology: Replace Profile name SpecimenAdditiveSubstance with ChLabSpecimenAdditiveSubstance
 * [#113](https://github.com/hl7ch/ch-lab-report/issues/113): ChLab BloodGroup Antibody Screen Tests; 3 Value Sets are used by the Blood Group profile: CH LAB-Report BloodGroup Antibody Result (SNOMED CT coded substances), CH LAB-Report BloodGroup Immunohematology Tests (SNOMED CT coded procedures), CH LAB-Report BloodGroup Antibody Screen Test Result (LOINC codes)
 * [#114](https://github.com/hl7ch/ch-lab-report/issues/114): Profiles: add links to LOINC Codes and NEJM in text of eGFR-CKD-EPI(ASR) 2021 Profile

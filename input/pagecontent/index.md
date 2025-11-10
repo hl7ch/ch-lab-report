@@ -6,9 +6,6 @@ Modern medical laboratory techniques aid clinicians in diagnosing, preventing, a
 
 <div markdown="1" class="stu-note">
 
-This implementation guide is under STU ballot by [HL7 Switzerland](https://www.hl7.ch/de/) until September 30th, 2025 midnight.   
-Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
-
 [Changelog](changelog.html) with significant changes, open and closed issues.
 
 </div>
@@ -31,7 +28,7 @@ This implementation guide specifies the exchange format for the comprehensive an
 
 #### Laboratory Analytic-Test Data
 
-* Specimen Information: Specification of the preanalytic conditions, the type of specimen collected for analysis. This could include details like the date and time of collection.
+* Specimen Information: Specification of the pre-analytical conditions, the type of specimen collected for analysis. This could include details like the date and time of collection.
 * Test Request Details: Information about the tests requested are provided by the requester. It includes the name of the test, mostly in form of a code, the reason for the test, and any specific instructions given.
 * Test Results: The results of each test performed must be presented. Appropriate units of measurement and reference ranges for comparison must be presented. Any values that fall outside the normal range are highlighted.
 * Reference Ranges: Normal or expected range of values for each test are included. This helps healthcare providers interpret the results in the context of the patient's health. Since these data may be dependent from the used test-kits, the identification of the test-kits (UDI) might be useful. Alternatively, the likelihood ratio of the test, if available, can be used for the interpretation of the results. The likelihood ratio is not dependent on the kind of used test-kit.
