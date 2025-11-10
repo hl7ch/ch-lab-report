@@ -7,6 +7,9 @@ All significant changes to this FHIR implementation guide will be documented on 
 #### Fixed
 * [#170](https://github.com/hl7ch/ch-lab-report/issues/170): Changelog
 
+#### Issues resolved without amendment (in IG)
+* [#165](https://github.com/hl7ch/ch-lab-report/issues/165): Clarification of which extension to use for information recipient
+
 ### STU 2 Sequence - v2.0.0-ballot (2025-05-19)
 
 #### Changed / Updated
