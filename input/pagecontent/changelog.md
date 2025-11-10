@@ -3,6 +3,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### STU 2 Sequence - v2.0.0 (2025-12)
 
 #### Changed / Updated
+* [#175](https://github.com/hl7ch/ch-lab-report/issues/175): Set parameter 'pin-canonicals'
 
 #### Fixed
 * [#170](https://github.com/hl7ch/ch-lab-report/issues/170): Changelog
