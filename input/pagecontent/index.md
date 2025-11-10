@@ -70,6 +70,8 @@ Illustration showing the dependencies of CH LAB-Report on the [Swiss implementat
 {% include dependencies-igs.svg %}
 *Fig.: Schematic overview of the dependencies between the IGs at the core (in red) and exchange format (in blue + orange) level*
 
+#### Dependency Table
+
 {% include dependency-table.xhtml %}
 
 ### Globals Table
