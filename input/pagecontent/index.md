@@ -12,7 +12,7 @@ Modern medical laboratory techniques aid clinicians in diagnosing, preventing, a
 
 ### Foundation
 
-This implementation guide is based on the [HL7 Europe Laboratory Report](https://hl7.eu/fhir/laboratory/0.1.0/) and the [European eHealth Network](https://health.ec.europa.eu/document/download/9ab6711a-b4b3-4254-85c1-5204e9e9a594_en?filename=ehealth_ehn-lab-results-guideline_releasenotes_en.pdf). It enables the cross-border exchange of laboratory results in Europe. The aim of the interoperability of electronic laboratory records is to ensure the uniform processing of information between health information systems, regardless of their technology, application or platform, so that it can be meaningfully interpreted by the recipient. Citizens should have better control over their health data, especially their laboratory data, just as healthcare professionals should have easy and secure access to their patients' laboratory data.
+This implementation guide is based on the [HL7 Europe Laboratory Report](https://hl7.eu/fhir/laboratory/0.1.0/). It enables the cross-border exchange of laboratory results in Europe. The aim of the interoperability of electronic laboratory records is to ensure the uniform processing of information between health information systems, regardless of their technology, application or platform, so that it can be meaningfully interpreted by the recipient. Citizens should have better control over their health data, especially their laboratory data, just as healthcare professionals should have easy and secure access to their patients' laboratory data.
 The implementation guide uses the Swiss Core profiles from [CH Core](http://fhir.ch/ig/ch-core/index.html) and the terminology from [CH Term](http://fhir.ch/ig/ch-term/index.html).
 
 ### Management Summary
@@ -65,7 +65,10 @@ This implementation guide contains and references intellectual property owned by
 
 #### Dependency Overview
 
-A graphic overview of the dependencies, in particular with regard to the exchange format of reportable laboratory results in Switzerland, can be found [here](https://fhir.ch/ig/ch-elm/index.html#dependency-overview). It also shows the dependency on the European laboratory project.
+Illustration showing the dependencies of CH LAB-Report on the [Swiss implementation guides](https://fhir.ch/) and the [European laboratory project](https://hl7.eu/fhir/laboratory/0.1.1/).
+
+{% include dependencies-igs.svg %}
+*Fig.: Schematic overview of the dependencies between the IGs at the core (in red) and exchange format (in blue + orange) level*
 
 {% include dependency-table.xhtml %}
 

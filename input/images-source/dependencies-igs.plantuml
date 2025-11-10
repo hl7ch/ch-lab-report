@@ -1,0 +1,15 @@
+@startuml
+
+skinparam componentStyle rectangle
+skinparam defaultTextAlignment center
+
+component "**CH Core**\nSwiss Core Profiles,\nEPR Concepts" as core #white;line:darkred;line.bold 
+component "**CH Term**\nSwiss Terminology" as term #white;line:darkred;line.bold 
+component "**CH LAB-Report**\nSwiss Exchange Format" as lab #white;line:navy;line.bold 
+component "**HL7 Europe Laboratory Report**\nEuropean Exchange Format" as hl7 #white;line:orange;line.bold 
+
+lab -up-> core #grey : <color:grey> derived</color>
+core -up-> term #grey : <color:grey> derived</color>
+lab -right-> hl7 #grey : <color:grey>imposeProfile Extension</color>
+
+@enduml

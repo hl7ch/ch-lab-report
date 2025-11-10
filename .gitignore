@@ -13,9 +13,3 @@ fsh-generated/**
 
 # editing files and folders
 .vscode/**
-input/images-source/**
-
-# publication folder
-www/*   
-!www/package-list.json   
-!www/publish.ini
