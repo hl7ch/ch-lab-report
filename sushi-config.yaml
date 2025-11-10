@@ -32,8 +32,8 @@ dependencies:
   hl7.fhir.extensions.r5: 4.0.1   
   # Specific dependencies for the CH_LAB_REPORT (list it separately is needed, checked at 10.11.2025)
   hl7.fhir.eu.laboratory: 0.1.1 
-  hl7.fhir.uv.ips: 1.1.0
-  hl7.fhir.eu.extensions: 0.1.0 
+  hl7.fhir.uv.ips: 1.1.0 # to update with updating the eu lab version (currently not possible)
+  hl7.fhir.eu.extensions: 0.1.0 # to update with updating the eu lab version (currently not possible)
 
 pages:
   index.md:
