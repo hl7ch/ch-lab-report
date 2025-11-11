@@ -8,7 +8,7 @@ Description: "ValueSet for the allowed eGFR among males and eGFR among females c
 * ^status = #draft
 * ^experimental = false
 
-* $loinc#77147-7 "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)"
+* $loinc#77147-7 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)/1.73 sq M"
 
 * $loinc#70969-1 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)/1.73 sq M among male population"
 * $loinc#50044-7 "Glomerular filtration rate [Volume Rate/Area] in Serum, Plasma or Blood by Creatinine-based formula (MDRD)/1.73 sq M among female population"

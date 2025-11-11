@@ -4,9 +4,13 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Changed / Updated
 * [#172](https://github.com/hl7ch/ch-lab-report/issues/172): Removed unused/historic dependencies and added graphical dependency overview
+* [#175](https://github.com/hl7ch/ch-lab-report/issues/175): Set parameter 'pin-canonicals'
 
 #### Fixed
 * [#170](https://github.com/hl7ch/ch-lab-report/issues/170): Cleaned up changelog ordering
+
+#### Issues resolved without amendment (in IG)
+* [#165](https://github.com/hl7ch/ch-lab-report/issues/165): Clarification of which extension to use for information recipient
 
 ### STU 2 Sequence - v2.0.0-ballot (2025-05-19)
 * Update dependency to eu-laboratory 0.1.1
