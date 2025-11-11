@@ -3,29 +3,26 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### STU 2 Sequence - v2.0.0 (2025-12)
 
 #### Changed / Updated
+* [#172](https://github.com/hl7ch/ch-lab-report/issues/172): Removed unused/historic dependencies and added graphical dependency overview
 * [#175](https://github.com/hl7ch/ch-lab-report/issues/175): Set parameter 'pin-canonicals'
 
 #### Fixed
-* [#170](https://github.com/hl7ch/ch-lab-report/issues/170): Changelog
+* [#170](https://github.com/hl7ch/ch-lab-report/issues/170): Cleaned up changelog ordering
 
 #### Issues resolved without amendment (in IG)
 * [#165](https://github.com/hl7ch/ch-lab-report/issues/165): Clarification of which extension to use for information recipient
 
 ### STU 2 Sequence - v2.0.0-ballot (2025-05-19)
-
-#### Changed / Updated
-* update dependency to eu-laboratory 0.1.1
+* Update dependency to eu-laboratory 0.1.1
 * Newly issued warnings about multiple matches for URLs and about URLs not resolving with urn::oid are listed in the ignoreWarnings file. The sushi-config parameter 'pin-canonicals' causes the creation of the IG to be aborted. The cause is unclear. 
-* replace http://www.labor-gantenbein.ch with http://example.org/Labor-Gantenbein
-* replace https://labor.pipette.com with http://example.org/Labor-Pipette
-* replace requisition.system = "urn:oid:2.16.756.5.30" with requisition.system = "http://example.org/ProviderNumber/Requisition
-* replace identifier.system = "urn:oid:2.16.756.5.30" with identifier.system = "http://example.org/labor-pipette"
-* [#156](https://github.com/hl7ch/ch-lab-report/issues/156): add SCT edition in the expansion parameters for usage of Swiss Extensions
-* fix all not reachable entries in Composition and remove correspondent warnings in ignoreWarnings file.
+* Replace http://www.labor-gantenbein.ch with http://example.org/Labor-Gantenbein
+* Replace https://labor.pipette.com with http://example.org/Labor-Pipette
+* Replace requisition.system = "urn:oid:2.16.756.5.30" with requisition.system = "http://example.org/ProviderNumber/Requisition
+* Replace identifier.system = "urn:oid:2.16.756.5.30" with identifier.system = "http://example.org/labor-pipette"
+* [#156](https://github.com/hl7ch/ch-lab-report/issues/156): Add SCT edition in the expansion parameters for usage of Swiss Extensions
+* Fix all not reachable entries in Composition and remove correspondent warnings in ignoreWarnings file.
 
 ### STU 1 Sequence - v1.0.0 (2024-12-17)
-
-#### Changed / Updated
 * [#91](https://github.com/hl7ch/ch-lab-report/issues/91): Missing slice of value[x] and component.value[x] in observation: value.ofType(boolean)
 * [#70](https://github.com/hl7ch/ch-lab-report/issues/70): Limit image size to 20 megabytes: Add menu point and page 'Guidance'.
 * [#73](https://github.com/hl7ch/ch-lab-report/issues/73): Results Blood Group: Add more examples
@@ -55,9 +52,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#115](https://github.com/hl7ch/ch-lab-report/issues/115): Use Cases in English: No amendment, duplicate of [#100](https://github.com/hl7ch/ch-lab-report/issues/100)
 * [#116](https://github.com/hl7ch/ch-lab-report/issues/116): Changelog, refactor bloodgroup examples
 * [#159](https://github.com/hl7ch/ch-lab-report/issues/159): Fix dependency to hl7.terminology
-
-#### Issues resolved without amendment (in IG)
-* [#97](https://github.com/hl7ch/ch-lab-report/issues/97): Typo generated in narrative (tooling side)
+* [#97](https://github.com/hl7ch/ch-lab-report/issues/97): Typo generated in narrative (tooling side: solved without amendment in IG)
 
 
 ### STU 1 Sequence - v1.0.0-ballot (2024-05-17)

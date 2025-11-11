@@ -1,10 +1,3 @@
-<!-- markdownlint-disable MD001 MD033 MD041 -->
-
-### Diagram of Resources
-
-The dependencies between the resources are shown in this diagram: 
-[Resource Overview](https://fhir.ch/ig/ch-elm/profiles.html#overview) 
-
 ### General Profiles for CH LAB-Report
 
 To provide a better overview, this profiles page is divided into *General Profiles* and  *Profiles for specific purposes*. The implementation guide offers specific profiles for **Panels for automated blood cell count** and profiles handling **Panels for renal insufficiency and eGFR (estimated Glomerulum Filtration Rate)**.

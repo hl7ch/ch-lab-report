@@ -17,5 +17,9 @@ The Implementation Guide contains no explicitly linked examples for this profile
 # Caused by the underlying profile CHCorePatient INFO
 The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
 
+# Dependencies and versions because of the EU LAB IG
+The ImplementationGuide uses package hl7.fhir.uv.ips#1.1.0 released on 2022-11-22, but the most recent appropriate version is 2.0.0. This reference is getting old and the more recent version should be considered
+The ImplementationGuide uses package hl7.fhir.eu.extensions#0.1.0 released on 2024-02-20, but the most recent appropriate version is 0.1.1. This reference is getting old and the more recent version should be considered
+
 # Info about pinned versions
 Pinned the version%
