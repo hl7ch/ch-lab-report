@@ -1,6 +1,6 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
-### STU 2 Sequence - v2.0.0 (2025-12)
+### STU 2 Sequence - v2.0.0 (2025-12-15)
 
 #### Changed / Updated
 * [#172](https://github.com/hl7ch/ch-lab-report/issues/172): Removed unused/historic dependencies and added graphical dependency overview
