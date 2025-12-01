@@ -23,3 +23,7 @@ The ImplementationGuide uses package hl7.fhir.eu.extensions#0.1.0 released on 20
 
 # Info about pinned versions
 Pinned the version%
+
+# Known IG Publisher issue (https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458)
+The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
+No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
